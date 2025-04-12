@@ -17,8 +17,11 @@ python ./build.py
 ## 发布
 
 ``` shell
+git pull github main
+git push --set-upstream github main
+
 git add .
-git commit -m "Recovery:不要慌，是技术性调整！"
+git commit -m "Dev:忽略资源检测"
 git tag v0.2.0
 git push
 ```

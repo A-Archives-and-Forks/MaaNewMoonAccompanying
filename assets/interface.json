@@ -1,9 +1,9 @@
 {
     "name": "MaaNewMoonAccompany",
     "url": "https://github.com/kqcoxn/MaaNewMoonAccompanying",
-    "custom_title": "MaaNewMoonAccompany - MFAWPF",
+    "custom_title": "新月同行小助手 - 超级秋千人(kqcoxn/MaaNewMoonAccompany) - MFA",
     "version": "0.2.0",
-    "message": "- 新 月 同 行 -",
+    "message": "- 新 月 同 行 -\n超!级!秋!千!人!",
     "controller": [
         {
             "name": "安卓端（模拟器）",

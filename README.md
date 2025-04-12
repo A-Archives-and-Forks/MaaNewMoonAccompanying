@@ -61,7 +61,7 @@
 - ~~抓了只秋千人当 icon~~
 
 <details>
-<summary>更早版本</summary>
+<summary>更早的版本</summary>
 
 ### v0.1.1
 

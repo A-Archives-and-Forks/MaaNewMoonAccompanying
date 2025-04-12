@@ -1,6 +1,6 @@
 <!-- markdownlint-disable MD033 MD041 -->
 <p align="center">
-  <img src="https://github.com/kqcoxn/MaaNewMoonAccompanying/blob/main/logo.png" width="256" height="256" />
+  <img src="https://github.com/kqcoxn/MaaNewMoonAccompanying/blob/main/logo.png?raw=true" width="256" height="256" />
 </p>
 
 <div align="center">
