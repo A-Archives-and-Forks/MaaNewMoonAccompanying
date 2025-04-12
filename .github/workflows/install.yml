@@ -122,6 +122,10 @@ jobs:
     needs: install
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
       - uses: actions/download-artifact@v4
         with:
           path: assets
@@ -131,11 +135,20 @@ jobs:
           for f in *; do
             (cd $f && zip -r ../$f-${{ needs.meta.outputs.tag }}.zip .)
           done
+          
+      - name: Create fixed tag
+        run: |
+          FIXED_TAG="latest"
+          echo "FIXED_TAG=$FIXED_TAG" >> $GITHUB_ENV
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git tag -f $FIXED_TAG
+          git push origin $FIXED_TAG -f
 
       - uses: softprops/action-gh-release@v2
         with:
           files: assets/*
-          tag_name: ${{ needs.meta.outputs.tag }}
+          tag_name: ${{ env.FIXED_TAG }}
           generate_release_notes: true
           draft: false
           name: "Latest Build"
