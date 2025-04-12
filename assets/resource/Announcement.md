@@ -1,15 +1,10 @@
-<!-- markdownlint-disable MD033 MD041 -->
-<p align="center">
-  <img src="https://s21.ax1x.com/2025/04/13/pER7PW4.png" width="256" height="256" />
-</p>
+![](./image/logo.png)
 
-<div align="center">
+# MNMA - 新月同行小助手  
+# MaaNewMoonAccompanying  
+# ✨ 组长们的超级秋千人✨  
 
-# MNMA - 新月同行小助手</br>MaaNewMoonAccompanying</br>✨ 组长们的超级秋千人✨ 
-
-项目正在绝赞开发中！
-
-</div>
+*项目正在绝赞开发中！*
 
 ## 开发进度
 
@@ -17,35 +12,35 @@
 
 开发计划：
 
-- [x] 自动登录（领取签到）
-- [x] 城市探索（资源收取、制造订单、设施管理、传闻调查）
-- [x] 每日采购（每日免费、构束银物资）
-- [x] 领取奖励（任务/手册）
-- [x] 友谊交换
-- [ ] 城市事件（**_下个版本！_**）
-- [ ] 自动清体力（**_下个版本！_**）
-- [ ] 自动站台肉鸽
+- [完成] 自动登录（领取签到）
+- [完成] 城市探索（资源收取、制造订单、设施管理、传闻调查）
+- [完成] 每日采购（每日免费、构束银物资）
+- [完成] 领取奖励（任务/手册）
+- [完成] 友谊交换
+- [待办] 城市事件（​**​下个版本！​**​）
+- [待办] 自动清体力（​**​下个版本！​**​）
+- [待办] 自动站台肉鸽
 - 更多活动功能适配（EX关卡、小游戏等，开发量较大，可能端上来比较慢）
 
-\* 若有其他功能需求请提交PR
+*若有其他功能需求请提交PR*
 
-**如果你也是开发者，可以瞅一眼我的另一个项目 [YAMaaPE](https://github.com/kqcoxn/YAMaaPE)，可以使用基于 Web 的流水线 GUI 编辑你的 Pipeline！**
+​**​如果你也是开发者，可以瞅一眼我的另一个项目 [YAMaaPE](https://github.com/kqcoxn/YAMaaPE)，可以使用基于 Web 的流水线 GUI 编辑你的 Pipeline！​**​
 
 ## 使用方式
 
 当前可以使用命令行或GUI运行，根据提示进行下一步操作即可。
 
-**每次版本更新后请手动把仅第一次出现的界面过一遍！**
+​**​每次版本更新后请手动把仅第一次出现的界面过一遍！​**​
 
 功能说明：
 
-|   功能   |  初始界面  |            注意事项            |
-| :------: | :--------: | :----------------------------: |
+| 功能     | 初始界面   | 注意事项                       |
+| -------- | ---------- | ------------------------------ |
 | 自动登录 | 进入游戏前 | 活动奖励可能出问题，请注意更新 |
-| 城市探索 |    首页    |               -                |
-| 每日采购 |    首页    |       请确保有充足构束银       |
-| 友谊交换 |    首页    |               -                |
-| 领取奖励 |    首页    | 每次手册更新后需要手动进入一次 |
+| 城市探索 | 首页       | -                              |
+| 每日采购 | 首页       | 请确保有充足构束银             |
+| 友谊交换 | 首页       | -                              |
+| 领取奖励 | 首页       | 每次手册更新后需要手动进入一次 |
 
 
 ## 更新记录
@@ -60,8 +55,7 @@
 - 将 GUI 迁移至 [MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia/tree/master)
 - ~~抓了只秋千人当 icon~~
 
-<details>
-<summary>更早版本</summary>
+更早版本：
 
 ### v0.1.1
 
@@ -79,11 +73,9 @@
 - 实装一键收菜功能
 - 实装自动爬塔功能
 
-</details>
-
 ## 鸣谢
 
-本项目由 **[MaaFramework](https://github.com/MaaXYZ/MaaFramework)** 强力驱动！
+本项目由 ​**​[MaaFramework](https://github.com/MaaXYZ/MaaFramework)​**​ 强力驱动！
 
 - GUI：[MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia/tree/master)
 - Pipeline 编辑器：[YAMaaPE](https://github.com/kqcoxn/YAMaaPE)
