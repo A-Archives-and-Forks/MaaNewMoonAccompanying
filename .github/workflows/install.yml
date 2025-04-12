@@ -2,6 +2,8 @@ name: install
 
 on:
   push:
+    tags:
+      - "v*"
     branches:
       - "**"
     paths:
@@ -26,6 +28,7 @@ jobs:
           fetch-depth: 0
       - id: set_tag
         run: |
+          is_release=${{ startsWith(github.ref, 'refs/tags/v') }}
           tag=$(git describe --tags --match "v*" ${{ github.ref }} || true)
           if [[ $tag != v* ]]; then
             tag=$(curl -sX GET "https://api.github.com/repos/${{ github.repository }}/releases/latest" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | awk '/tag_name/{print $4}' FS='["]')
@@ -34,9 +37,14 @@ jobs:
             fi
             tag=$(date "+$tag-%y%m%d-$(git rev-parse --short HEAD)")
           fi
+          if ! $($is_release) ; then
+            prefix=${tag%-*-*}
+            suffix=${tag#$prefix-}
+            tag="$prefix-ci.$suffix"
+          fi
 
           echo tag=$tag | tee -a $GITHUB_OUTPUT
-          echo is_release=true | tee -a $GITHUB_OUTPUT
+          echo is_release=$is_release | tee -a $GITHUB_OUTPUT
     outputs:
       tag: ${{ steps.set_tag.outputs.tag }}
       is_release: ${{ steps.set_tag.outputs.is_release }}
@@ -115,17 +123,14 @@ jobs:
         
       - uses: actions/upload-artifact@v4
         with:
-          name: MaaNewMoonAccompanying-${{ matrix.os }}-${{ matrix.arch }}
+          name: MaaNewMoonAccompany-${{ matrix.os }}-${{ matrix.arch }}
           path: "install"
 
   release:
+    if: ${{ needs.meta.outputs.is_release == 'true' }}
     needs: install
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
       - uses: actions/download-artifact@v4
         with:
           path: assets
@@ -135,20 +140,9 @@ jobs:
           for f in *; do
             (cd $f && zip -r ../$f-${{ needs.meta.outputs.tag }}.zip .)
           done
-          
-      - name: Create fixed tag
-        run: |
-          FIXED_TAG="latest"
-          echo "FIXED_TAG=$FIXED_TAG" >> $GITHUB_ENV
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-          git tag -f $FIXED_TAG
-          git push origin $FIXED_TAG -f
 
       - uses: softprops/action-gh-release@v2
         with:
           files: assets/*
-          tag_name: ${{ env.FIXED_TAG }}
+          tag_name: ${{ needs.meta.outputs.tag }}
           generate_release_notes: true
-          draft: false
-          name: "Latest Build"
