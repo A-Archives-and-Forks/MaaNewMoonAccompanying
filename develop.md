@@ -21,7 +21,8 @@ git pull github main
 git push --set-upstream github main
 
 git add .
-git commit -m "Dev:忽略资源检测"
+git commit -m "Fix:公告图片加载异常"
+
 git tag v0.2.0
-git push
+git push origin v0.2.0
 ```
