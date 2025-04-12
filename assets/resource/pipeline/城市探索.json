@@ -1,0 +1,496 @@
+{
+    "城市探索": {
+        "__yamaape": {
+            "position": {
+                "x": -147,
+                "y": -37
+            }
+        },
+        "next": [
+            "城市探索_城市探索"
+        ]
+    },
+    "城市探索_城市探索": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "城市探索"
+        ],
+        "post_delay": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 36,
+                "y": -82
+            }
+        },
+        "next": [
+            "城市探索_资源收取"
+        ]
+    },
+    "城市探索_资源收取": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "资源收取"
+        ],
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 47,
+                "y": 98
+            }
+        },
+        "next": [
+            "城市探索_获取资源"
+        ],
+        "on_error": [
+            "城市探索_制造订单",
+            "城市探索_设施管理"
+        ]
+    },
+    "城市探索_获取资源": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击以继续"
+        ],
+        "pre_delay": 200,
+        "__yamaape": {
+            "position": {
+                "x": 314,
+                "y": 245
+            }
+        },
+        "next": [
+            "城市探索_制造订单",
+            "城市探索_设施管理"
+        ]
+    },
+    "城市探索_制造订单": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "制造订单可领取"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 587,
+                "y": -168
+            }
+        },
+        "next": [
+            "城市探索_开始制造"
+        ]
+    },
+    "城市探索_设施管理": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "设施管理"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 604,
+                "y": 0
+            }
+        },
+        "next": [
+            "城市探索_一键入驻"
+        ]
+    },
+    "城市探索_开始制造": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "开始制造"
+        ],
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 837,
+                "y": -216
+            }
+        },
+        "next": [
+            "城市探索_跳过制造动画"
+        ]
+    },
+    "城市探索_一键入驻": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "一键入驻"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 854,
+                "y": 45
+            }
+        },
+        "next": [
+            "城市探索_物资类"
+        ]
+    },
+    "城市探索_跳过制造动画": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            25,
+            200,
+            1,
+            1
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1075,
+                "y": -216
+            }
+        },
+        "next": [
+            "城市探索_获取制造物品"
+        ]
+    },
+    "城市探索_物资类": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "物资类"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 612,
+                "y": 207
+            }
+        },
+        "next": [
+            "城市探索_矢量创品"
+        ]
+    },
+    "城市探索_获取制造物品": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击以继续"
+        ],
+        "timeout": 1000,
+        "pre_delay": 200,
+        "__yamaape": {
+            "position": {
+                "x": 957,
+                "y": -433
+            }
+        },
+        "next": [
+            "城市探索_开始制造"
+        ],
+        "on_error": [
+            "城市探索_从制造返回"
+        ]
+    },
+    "城市探索_矢量创品": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "矢量创品"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 868,
+                "y": 204
+            }
+        },
+        "next": [
+            "城市探索_进入矢量创品"
+        ]
+    },
+    "城市探索_从制造返回": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/back.png"
+        ],
+        "pre_delay": 200,
+        "__yamaape": {
+            "position": {
+                "x": 1320,
+                "y": -174
+            }
+        },
+        "next": [
+            "城市探索_设施管理"
+        ]
+    },
+    "城市探索_进入矢量创品": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "进入"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1131,
+                "y": 204
+            }
+        },
+        "next": [
+            "城市探索_设施加速"
+        ]
+    },
+    "城市探索_设施加速": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "加速"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 645,
+                "y": 376
+            }
+        },
+        "next": [
+            "城市探索_最高设施加速"
+        ]
+    },
+    "城市探索_最高设施加速": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "最多"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 898,
+                "y": 372
+            }
+        },
+        "next": [
+            "城市探索_确定设施加速"
+        ]
+    },
+    "城市探索_确定设施加速": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "确定"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1146,
+                "y": 368
+            }
+        },
+        "next": [
+            "城市探索_关闭设施加速"
+        ]
+    },
+    "城市探索_关闭设施加速": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            1,
+            1,
+            1,
+            1
+        ],
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 1405,
+                "y": 352
+            }
+        },
+        "next": [
+            "城市探索_收取设施物资"
+        ],
+        "on_error": [
+            "城市探索_从设施返回1"
+        ]
+    },
+    "城市探索_收取设施物资": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "收取"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 678,
+                "y": 563
+            }
+        },
+        "next": [
+            "城市探索_获取设施物资"
+        ]
+    },
+    "城市探索_从设施返回1": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "post_delay": 1000,
+        "template": [
+            "../image/back.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1188,
+                "y": 548
+            }
+        },
+        "next": [
+            "城市探索_从设施返回2"
+        ]
+    },
+    "城市探索_获取设施物资": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击以继续"
+        ],
+        "pre_delay": 200,
+        "__yamaape": {
+            "position": {
+                "x": 931,
+                "y": 563
+            }
+        },
+        "next": [
+            "城市探索_从设施返回1"
+        ]
+    },
+    "城市探索_从设施返回2": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "post_delay": 200,
+        "template": [
+            "../image/back.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1446,
+                "y": 545
+            }
+        },
+        "next": [
+            "城市探索_传闻调查"
+        ]
+    },
+    "城市探索_传闻调查": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "传闻调查"
+        ],
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 1718,
+                "y": -338
+            }
+        },
+        "next": [
+            "城市探索_开始审阅"
+        ],
+        "on_error": [
+            "城市探索_从调查返回"
+        ]
+    },
+    "城市探索_开始审阅": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "开始审阅"
+        ],
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 1975,
+                "y": -379
+            }
+        },
+        "next": [
+            "城市探索_归档"
+        ]
+    },
+    "城市探索_从调查返回": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/back.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 2225,
+                "y": -224
+            }
+        },
+        "next": [
+            "城市探索_TODO城市事件"
+        ]
+    },
+    "城市探索_归档": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "归档"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 2209,
+                "y": -376
+            }
+        },
+        "next": [
+            "城市探索_获取调查情报"
+        ]
+    },
+    "城市探索_TODO城市事件": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": 1780,
+                "y": -14
+            }
+        },
+        "next": [
+            "城市探索_返回主界面"
+        ]
+    },
+    "城市探索_获取调查情报": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击以继续"
+        ],
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 2099,
+                "y": -559
+            }
+        },
+        "next": [
+            "城市探索_开始审阅"
+        ],
+        "on_error": [
+            "城市探索_从调查返回"
+        ]
+    },
+    "城市探索_返回主界面": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            46,
+            36,
+            119,
+            18
+        ],
+        "post_delay": 5000,
+        "__yamaape": {
+            "position": {
+                "x": 1818,
+                "y": 129
+            }
+        }
+    }
+}

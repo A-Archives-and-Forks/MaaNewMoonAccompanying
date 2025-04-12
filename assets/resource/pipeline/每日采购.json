@@ -1,0 +1,675 @@
+{
+    "每日采购": {
+        "__yamaape": {
+            "position": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "next": [
+            "每日采购_采购中心"
+        ]
+    },
+    "每日采购_采购中心": {
+        "recognition": "OCR",
+        "action": "Click",
+        "post_delay": 2000,
+        "expected": [
+            "采购中心"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 180,
+                "y": -43
+            }
+        },
+        "next": [
+            "每日采购_补给包"
+        ]
+    },
+    "每日采购_补给包": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "补给包"
+        ],
+        "post_delay": 500,
+        "__yamaape": {
+            "position": {
+                "x": 457,
+                "y": -296
+            }
+        },
+        "next": [
+            "每日采购_特惠活动"
+        ]
+    },
+    "每日采购_特惠活动": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "特惠活动"
+        ],
+        "post_delay": 500,
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 702,
+                "y": -326
+            }
+        },
+        "next": [
+            "每日采购_每日补给包"
+        ],
+        "on_error": [
+            "每日采购_流动市场"
+        ]
+    },
+    "每日采购_每日补给包": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "免费"
+        ],
+        "post_delay": 500,
+        "__yamaape": {
+            "position": {
+                "x": 939,
+                "y": -397
+            }
+        },
+        "next": [
+            "每日采购_免费购买"
+        ]
+    },
+    "每日采购_流动市场": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "流动市场"
+        ],
+        "post_delay": 500,
+        "__yamaape": {
+            "position": {
+                "x": 1702,
+                "y": -269
+            }
+        },
+        "next": [
+            "每日采购_特价交易所"
+        ]
+    },
+    "每日采购_免费购买": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "免费购买"
+        ],
+        "post_delay": 500,
+        "__yamaape": {
+            "position": {
+                "x": 1185,
+                "y": -397
+            }
+        },
+        "next": [
+            "每日采购_获取每日补给包物品"
+        ]
+    },
+    "每日采购_获取每日补给包物品": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击以继续"
+        ],
+        "pre_delay": 200,
+        "__yamaape": {
+            "position": {
+                "x": 1435,
+                "y": -395
+            }
+        },
+        "next": [
+            "每日采购_流动市场"
+        ]
+    },
+    "每日采购_特价交易所": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "特价交易所"
+        ],
+        "post_delay": 500,
+        "__yamaape": {
+            "position": {
+                "x": 520,
+                "y": -89
+            }
+        },
+        "next": [
+            "每日采购_滑动至底部"
+        ]
+    },
+    "每日采购_滑动至底部": {
+        "recognition": "DirectHit",
+        "action": "Swipe",
+        "begin": [
+            764,
+            542,
+            0,
+            0
+        ],
+        "end": [
+            764,
+            211,
+            0,
+            0
+        ],
+        "post_delay": 200,
+        "__yamaape": {
+            "position": {
+                "x": 775,
+                "y": -91
+            }
+        },
+        "next": [
+            "每日采购_识别阵列"
+        ]
+    },
+    "每日采购_识别阵列": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 1036,
+                "y": -33
+            }
+        },
+        "next": [
+            "每日采购_构束银物资1-4",
+            "每日采购_构束银物资2-1",
+            "每日采购_构束银物资2-2",
+            "每日采购_构束银物资2-3",
+            "每日采购_构束银物资2-4"
+        ],
+        "on_error": [
+            "每日采购_矩阵结束"
+        ]
+    },
+    "每日采购_构束银物资1-4": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/silver.png"
+        ],
+        "roi": [
+            1004,
+            335,
+            192,
+            32
+        ],
+        "timeout": 20000,
+        "post_delay": 500,
+        "__yamaape": {
+            "position": {
+                "x": 1382,
+                "y": -31
+            }
+        },
+        "next": [
+            "每日采购_购买构束银物资1-4"
+        ],
+        "on_error": [
+            "每日采购_矩阵递归1-4"
+        ]
+    },
+    "每日采购_构束银物资2-1": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/silver.png"
+        ],
+        "roi": [
+            323,
+            578,
+            192,
+            32
+        ],
+        "timeout": 1000,
+        "post_delay": 500,
+        "__yamaape": {
+            "position": {
+                "x": 1383,
+                "y": 223
+            }
+        },
+        "next": [
+            "每日采购_购买构束银物资2-1"
+        ],
+        "on_error": [
+            "每日采购_矩阵递归2-1"
+        ]
+    },
+    "每日采购_构束银物资2-2": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/silver.png"
+        ],
+        "roi": [
+            548,
+            578,
+            192,
+            32
+        ],
+        "timeout": 1000,
+        "post_delay": 500,
+        "__yamaape": {
+            "position": {
+                "x": 1382,
+                "y": 475
+            }
+        },
+        "next": [
+            "每日采购_购买构束银物资2-2"
+        ],
+        "on_error": [
+            "每日采购_矩阵递归2-2"
+        ]
+    },
+    "每日采购_构束银物资2-3": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/silver.png"
+        ],
+        "roi": [
+            777,
+            578,
+            192,
+            32
+        ],
+        "timeout": 1000,
+        "post_delay": 500,
+        "__yamaape": {
+            "position": {
+                "x": 1382,
+                "y": 729
+            }
+        },
+        "next": [
+            "每日采购_购买构束银物资2-3"
+        ],
+        "on_error": [
+            "每日采购_矩阵递归2-3"
+        ]
+    },
+    "每日采购_构束银物资2-4": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/silver.png"
+        ],
+        "roi": [
+            1003,
+            578,
+            192,
+            32
+        ],
+        "timeout": 1000,
+        "post_delay": 500,
+        "__yamaape": {
+            "position": {
+                "x": 1383,
+                "y": 982
+            }
+        },
+        "next": [
+            "每日采购_购买构束银物资2-4"
+        ],
+        "on_error": [
+            "每日采购_矩阵递归2-4"
+        ]
+    },
+    "每日采购_矩阵结束": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": 1372,
+                "y": 1286
+            }
+        },
+        "next": [
+            "每日采购_回到主界面"
+        ]
+    },
+    "每日采购_购买构束银物资1-4": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/silver.png"
+        ],
+        "roi": [
+            768,
+            573,
+            29,
+            25
+        ],
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 1633,
+                "y": -32
+            }
+        },
+        "next": [
+            "每日采购_获取构束银物资1-4"
+        ]
+    },
+    "每日采购_矩阵递归1-4": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            25,
+            200,
+            0,
+            0
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 2152,
+                "y": 72
+            }
+        },
+        "next": [
+            "每日采购_构束银物资2-1",
+            "每日采购_构束银物资2-2",
+            "每日采购_构束银物资2-3",
+            "每日采购_构束银物资2-4"
+        ],
+        "on_error": [
+            "每日采购_回到主界面"
+        ]
+    },
+    "每日采购_购买构束银物资2-1": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/silver.png"
+        ],
+        "roi": [
+            768,
+            573,
+            29,
+            25
+        ],
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 1633,
+                "y": 224
+            }
+        },
+        "next": [
+            "每日采购_获取构束银物资2-1"
+        ]
+    },
+    "每日采购_矩阵递归2-1": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            25,
+            200,
+            0,
+            0
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 2151,
+                "y": 325
+            }
+        },
+        "next": [
+            "每日采购_构束银物资2-2",
+            "每日采购_构束银物资2-3",
+            "每日采购_构束银物资2-4"
+        ],
+        "on_error": [
+            "每日采购_回到主界面"
+        ]
+    },
+    "每日采购_购买构束银物资2-2": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/silver.png"
+        ],
+        "roi": [
+            768,
+            573,
+            29,
+            25
+        ],
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 1633,
+                "y": 475
+            }
+        },
+        "next": [
+            "每日采购_获取构束银物资2-2"
+        ]
+    },
+    "每日采购_矩阵递归2-2": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            25,
+            200,
+            0,
+            0
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 2150,
+                "y": 582
+            }
+        },
+        "next": [
+            "每日采购_构束银物资2-3",
+            "每日采购_构束银物资2-4"
+        ],
+        "on_error": [
+            "每日采购_回到主界面"
+        ]
+    },
+    "每日采购_购买构束银物资2-3": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/silver.png"
+        ],
+        "roi": [
+            768,
+            573,
+            29,
+            25
+        ],
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 1632,
+                "y": 728
+            }
+        },
+        "next": [
+            "每日采购_获取构束银物资2-3"
+        ]
+    },
+    "每日采购_矩阵递归2-3": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            25,
+            200,
+            0,
+            0
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 2143,
+                "y": 830
+            }
+        },
+        "next": [
+            "每日采购_构束银物资2-4"
+        ],
+        "on_error": [
+            "每日采购_回到主界面"
+        ]
+    },
+    "每日采购_购买构束银物资2-4": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/silver.png"
+        ],
+        "roi": [
+            768,
+            573,
+            29,
+            25
+        ],
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 1633,
+                "y": 981
+            }
+        },
+        "next": [
+            "每日采购_获取构束银物资2-4"
+        ]
+    },
+    "每日采购_矩阵递归2-4": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            25,
+            200,
+            0,
+            0
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 2141,
+                "y": 1085
+            }
+        },
+        "next": [
+            "每日采购_回到主界面"
+        ]
+    },
+    "每日采购_回到主界面": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/back.png"
+        ],
+        "post_delay": 5000,
+        "__yamaape": {
+            "position": {
+                "x": 2470,
+                "y": 1230
+            }
+        }
+    },
+    "每日采购_获取构束银物资1-4": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击以继续"
+        ],
+        "post_delay": 200,
+        "__yamaape": {
+            "position": {
+                "x": 1897,
+                "y": -29
+            }
+        },
+        "next": [
+            "每日采购_矩阵递归1-4"
+        ]
+    },
+    "每日采购_获取构束银物资2-1": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击以继续"
+        ],
+        "post_delay": 200,
+        "__yamaape": {
+            "position": {
+                "x": 1890,
+                "y": 224
+            }
+        },
+        "next": [
+            "每日采购_矩阵递归2-1"
+        ]
+    },
+    "每日采购_获取构束银物资2-2": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击以继续"
+        ],
+        "post_delay": 200,
+        "__yamaape": {
+            "position": {
+                "x": 1895,
+                "y": 475
+            }
+        },
+        "next": [
+            "每日采购_矩阵递归2-2"
+        ]
+    },
+    "每日采购_获取构束银物资2-3": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击以继续"
+        ],
+        "post_delay": 200,
+        "__yamaape": {
+            "position": {
+                "x": 1892,
+                "y": 728
+            }
+        },
+        "next": [
+            "每日采购_矩阵递归2-3"
+        ]
+    },
+    "每日采购_获取构束银物资2-4": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击以继续"
+        ],
+        "post_delay": 200,
+        "__yamaape": {
+            "position": {
+                "x": 1893,
+                "y": 984
+            }
+        },
+        "next": [
+            "每日采购_矩阵递归2-4"
+        ]
+    }
+}

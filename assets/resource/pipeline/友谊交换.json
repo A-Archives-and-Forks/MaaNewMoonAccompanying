@@ -1,0 +1,99 @@
+{
+    "友谊交换": {
+        "__yamaape": {
+            "position": {
+                "x": 46,
+                "y": -11
+            }
+        },
+        "next": [
+            "友谊交换_友谊界面"
+        ]
+    },
+    "友谊交换_友谊界面": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/friends.png"
+        ],
+        "post_delay": 2000,
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 255,
+                "y": -75
+            }
+        },
+        "next": [
+            "友谊交换_领取友谊",
+            "友谊交换_赠送友谊"
+        ],
+        "on_error": [
+            "友谊交换_返回主界面"
+        ]
+    },
+    "友谊交换_领取友谊": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "键领取"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 550,
+                "y": -244
+            }
+        },
+        "next": [
+            "友谊交换_获取情报点数"
+        ]
+    },
+    "友谊交换_获取情报点数": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击以继续"
+        ],
+        "pre_delay": 200,
+        "__yamaape": {
+            "position": {
+                "x": 797,
+                "y": -261
+            }
+        },
+        "next": [
+            "友谊交换_赠送友谊"
+        ]
+    },
+    "友谊交换_赠送友谊": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "键赠送"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1072,
+                "y": -92
+            }
+        },
+        "next": [
+            "友谊交换_返回主界面"
+        ]
+    },
+    "友谊交换_返回主界面": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "pre_delay": 200,
+        "template": [
+            "../image/back.png"
+        ],
+        "post_delay": 5000,
+        "__yamaape": {
+            "position": {
+                "x": 1352,
+                "y": -25
+            }
+        }
+    }
+}

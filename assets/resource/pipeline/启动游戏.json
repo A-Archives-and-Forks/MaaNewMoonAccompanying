@@ -1,0 +1,173 @@
+{
+    "启动游戏": {
+        "__yamaape": {
+            "position": {
+                "x": 65,
+                "y": 17
+            }
+        },
+        "next": [
+            "启动游戏_开始"
+        ]
+    },
+    "启动游戏_开始": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "timeout": 30000,
+        "__yamaape": {
+            "position": {
+                "x": 250,
+                "y": -33
+            }
+        },
+        "next": [
+            "启动游戏_更新游戏",
+            "启动游戏_校准现实",
+            "启动游戏_主界面"
+        ],
+        "interrupt": [
+            "启动游戏_启动游戏"
+        ]
+    },
+    "启动游戏_更新游戏": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "新版本资源"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 514,
+                "y": -186
+            }
+        },
+        "next": [
+            "启动游戏_确定更新"
+        ]
+    },
+    "启动游戏_校准现实": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "校准现实"
+        ],
+        "pre_delay": 2000,
+        "__yamaape": {
+            "position": {
+                "x": 1014,
+                "y": -79
+            }
+        },
+        "next": [
+            "启动游戏_获取签到奖励"
+        ]
+    },
+    "启动游戏_主界面": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "城市探索"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1895,
+                "y": 733
+            }
+        }
+    },
+    "启动游戏_启动游戏": {
+        "recognition": "DirectHit",
+        "action": "StartApp",
+        "package": "com.firewick.p42",
+        "post_delay": 10000,
+        "__yamaape": {
+            "position": {
+                "x": 558,
+                "y": 82
+            }
+        }
+    },
+    "启动游戏_确定更新": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "确定"
+        ],
+        "timeout": 600000,
+        "__yamaape": {
+            "position": {
+                "x": 754,
+                "y": -202
+            }
+        },
+        "next": [
+            "启动游戏_校准现实"
+        ]
+    },
+    "启动游戏_获取签到奖励": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            25,
+            200,
+            1,
+            1
+        ],
+        "post_delay": 200,
+        "__yamaape": {
+            "position": {
+                "x": 1289,
+                "y": 124
+            }
+        },
+        "next": [
+            "启动游戏_关闭签到界面"
+        ]
+    },
+    "启动游戏_关闭签到界面": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            25,
+            200,
+            1,
+            1
+        ],
+        "post_delay": 2000,
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 1559,
+                "y": 112
+            }
+        },
+        "next": [
+            "启动游戏_关闭活动公告"
+        ],
+        "on_error": [
+            "启动游戏_主界面"
+        ]
+    },
+    "启动游戏_关闭活动公告": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/close.png"
+        ],
+        "roi": [
+            1170,
+            23,
+            100,
+            100
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1347,
+                "y": 340
+            }
+        },
+        "next": [
+            "启动游戏_主界面"
+        ]
+    }
+}
