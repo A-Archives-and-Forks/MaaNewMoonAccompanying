@@ -2,8 +2,8 @@
     "城市探索": {
         "__yamaape": {
             "position": {
-                "x": -147,
-                "y": -37
+                "x": -438,
+                "y": 49
             }
         },
         "next": [
@@ -16,11 +16,11 @@
         "expected": [
             "城市探索"
         ],
-        "post_delay": 1000,
+        "post_delay": 2000,
         "__yamaape": {
             "position": {
-                "x": 36,
-                "y": -82
+                "x": -237,
+                "y": 17
             }
         },
         "next": [
@@ -33,11 +33,12 @@
         "expected": [
             "资源收取"
         ],
-        "timeout": 1000,
+        "timeout": 2000,
+        "post_delay": 2000,
         "__yamaape": {
             "position": {
-                "x": 47,
-                "y": 98
+                "x": 30,
+                "y": 95
             }
         },
         "next": [
@@ -54,7 +55,7 @@
         "expected": [
             "点击以继续"
         ],
-        "pre_delay": 200,
+        "pre_delay": 500,
         "__yamaape": {
             "position": {
                 "x": 314,
@@ -173,7 +174,7 @@
             "点击以继续"
         ],
         "timeout": 1000,
-        "pre_delay": 200,
+        "pre_delay": 500,
         "__yamaape": {
             "position": {
                 "x": 957,
@@ -209,7 +210,7 @@
         "template": [
             "../image/back.png"
         ],
-        "pre_delay": 200,
+        "pre_delay": 400,
         "__yamaape": {
             "position": {
                 "x": 1320,
@@ -288,8 +289,8 @@
         "recognition": "DirectHit",
         "action": "Click",
         "target": [
-            1,
-            1,
+            25,
+            200,
             1,
             1
         ],
@@ -346,7 +347,7 @@
         "expected": [
             "点击以继续"
         ],
-        "pre_delay": 200,
+        "pre_delay": 400,
         "__yamaape": {
             "position": {
                 "x": 931,
@@ -360,7 +361,7 @@
     "城市探索_从设施返回2": {
         "recognition": "TemplateMatch",
         "action": "Click",
-        "post_delay": 200,
+        "post_delay": 500,
         "template": [
             "../image/back.png"
         ],
@@ -417,6 +418,7 @@
         "template": [
             "../image/back.png"
         ],
+        "pre_delay": 200,
         "__yamaape": {
             "position": {
                 "x": 2225,
@@ -463,10 +465,11 @@
             "点击以继续"
         ],
         "timeout": 1000,
+        "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 2099,
-                "y": -559
+                "x": 2096,
+                "y": -596
             }
         },
         "next": [
@@ -485,7 +488,7 @@
             119,
             18
         ],
-        "post_delay": 5000,
+        "post_delay": 3000,
         "__yamaape": {
             "position": {
                 "x": 1818,

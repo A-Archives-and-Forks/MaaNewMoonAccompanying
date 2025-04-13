@@ -116,23 +116,6 @@
             "每日采购_获取每日补给包物品"
         ]
     },
-    "每日采购_获取每日补给包物品": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "点击以继续"
-        ],
-        "pre_delay": 200,
-        "__yamaape": {
-            "position": {
-                "x": 1435,
-                "y": -395
-            }
-        },
-        "next": [
-            "每日采购_流动市场"
-        ]
-    },
     "每日采购_特价交易所": {
         "recognition": "OCR",
         "action": "Click",
@@ -148,6 +131,23 @@
         },
         "next": [
             "每日采购_滑动至底部"
+        ]
+    },
+    "每日采购_获取每日补给包物品": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击以继续"
+        ],
+        "pre_delay": 300,
+        "__yamaape": {
+            "position": {
+                "x": 1435,
+                "y": -395
+            }
+        },
+        "next": [
+            "每日采购_流动市场"
         ]
     },
     "每日采购_滑动至底部": {
@@ -374,8 +374,8 @@
         "target": [
             25,
             200,
-            0,
-            0
+            1,
+            1
         ],
         "__yamaape": {
             "position": {
@@ -422,8 +422,8 @@
         "target": [
             25,
             200,
-            0,
-            0
+            1,
+            1
         ],
         "__yamaape": {
             "position": {
@@ -469,8 +469,8 @@
         "target": [
             25,
             200,
-            0,
-            0
+            1,
+            1
         ],
         "__yamaape": {
             "position": {
@@ -515,8 +515,8 @@
         "target": [
             25,
             200,
-            0,
-            0
+            1,
+            1
         ],
         "__yamaape": {
             "position": {
@@ -560,8 +560,8 @@
         "target": [
             25,
             200,
-            0,
-            0
+            1,
+            1
         ],
         "__yamaape": {
             "position": {
@@ -579,7 +579,7 @@
         "template": [
             "../image/back.png"
         ],
-        "post_delay": 5000,
+        "post_delay": 3000,
         "__yamaape": {
             "position": {
                 "x": 2470,
@@ -593,7 +593,7 @@
         "expected": [
             "点击以继续"
         ],
-        "post_delay": 200,
+        "post_delay": 300,
         "__yamaape": {
             "position": {
                 "x": 1897,
@@ -610,7 +610,7 @@
         "expected": [
             "点击以继续"
         ],
-        "post_delay": 200,
+        "post_delay": 300,
         "__yamaape": {
             "position": {
                 "x": 1890,
@@ -627,7 +627,7 @@
         "expected": [
             "点击以继续"
         ],
-        "post_delay": 200,
+        "post_delay": 300,
         "__yamaape": {
             "position": {
                 "x": 1895,
@@ -644,7 +644,7 @@
         "expected": [
             "点击以继续"
         ],
-        "post_delay": 200,
+        "post_delay": 300,
         "__yamaape": {
             "position": {
                 "x": 1892,
@@ -661,7 +661,7 @@
         "expected": [
             "点击以继续"
         ],
-        "post_delay": 200,
+        "post_delay": 300,
         "__yamaape": {
             "position": {
                 "x": 1893,

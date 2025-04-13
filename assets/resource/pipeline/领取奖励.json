@@ -55,6 +55,7 @@
             "../image/receive_all.png"
         ],
         "post_delay": 500,
+        "timeout": 2000,
         "__yamaape": {
             "position": {
                 "x": 723,
@@ -63,6 +64,9 @@
         },
         "next": [
             "领取奖励_获取每日任务奖励"
+        ],
+        "on_error": [
+            "领取奖励_每周任务"
         ]
     },
     "领取奖励_每周任务": {
@@ -74,8 +78,8 @@
         "timeout": 1000,
         "__yamaape": {
             "position": {
-                "x": 744,
-                "y": -67
+                "x": 767,
+                "y": 34
             }
         },
         "next": [
@@ -92,10 +96,11 @@
             "点击以继续"
         ],
         "post_delay": 200,
+        "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 962,
-                "y": -266
+                "x": 985,
+                "y": -294
             }
         },
         "next": [
@@ -111,7 +116,7 @@
         "post_delay": 500,
         "__yamaape": {
             "position": {
-                "x": 998,
+                "x": 1017,
                 "y": -71
             }
         },
@@ -127,8 +132,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 1512,
-                "y": 74
+                "x": 1519,
+                "y": 91
             }
         },
         "next": [
@@ -141,11 +146,12 @@
         "expected": [
             "点击以继续"
         ],
-        "post_delay": 200,
+        "post_delay": 400,
+        "pre_delay": 200,
         "__yamaape": {
             "position": {
-                "x": 1256,
-                "y": -68
+                "x": 1259,
+                "y": -70
             }
         },
         "next": [
@@ -167,6 +173,28 @@
         },
         "next": [
             "领取奖励_手册经验"
+        ]
+    },
+    "领取奖励_手册经验": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/manual_task_selected.png",
+            "../image/manual_task.png"
+        ],
+        "post_delay": 500,
+        "threshold": [
+            0.9,
+            0.9
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 825,
+                "y": 291
+            }
+        },
+        "next": [
+            "领取奖励_领取手册经验"
         ]
     },
     "领取奖励_确认升级1": {
@@ -212,9 +240,14 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
+            "../image/manual_reward_selected.png",
             "../image/manual_reward.png"
         ],
         "post_delay": 500,
+        "threshold": [
+            0.9,
+            0.9
+        ],
         "__yamaape": {
             "position": {
                 "x": 875,
@@ -242,6 +275,30 @@
             "领取奖励_关闭手册升级"
         ]
     },
+    "领取奖励_关闭手册升级": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            25,
+            200,
+            1,
+            1
+        ],
+        "post_delay": 200,
+        "timeout": 2000,
+        "__yamaape": {
+            "position": {
+                "x": 1417,
+                "y": 534
+            }
+        },
+        "next": [
+            "领取奖励_获取手册奖励"
+        ],
+        "on_error": [
+            "领取奖励_从手册返回"
+        ]
+    },
     "领取奖励_获取手册奖励": {
         "recognition": "OCR",
         "action": "Click",
@@ -249,10 +306,11 @@
             "点击以继续"
         ],
         "post_delay": 200,
+        "pre_delay": 400,
         "__yamaape": {
             "position": {
                 "x": 1687,
-                "y": 531
+                "y": 459
             }
         },
         "next": [
@@ -265,11 +323,11 @@
         "template": [
             "../image/back.png"
         ],
-        "post_delay": 5000,
+        "post_delay": 3000,
         "__yamaape": {
             "position": {
-                "x": 1978,
-                "y": 637
+                "x": 1961,
+                "y": 598
             }
         }
     },
@@ -279,7 +337,7 @@
         "expected": [
             "领取全部"
         ],
-        "pre_delay": 200,
+        "pre_delay": 400,
         "post_delay": 500,
         "__yamaape": {
             "position": {
@@ -289,43 +347,6 @@
         },
         "next": [
             "领取奖励_确认升级1"
-        ]
-    },
-    "领取奖励_手册经验": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "../image/manual_task.png"
-        ],
-        "post_delay": 500,
-        "__yamaape": {
-            "position": {
-                "x": 825,
-                "y": 291
-            }
-        },
-        "next": [
-            "领取奖励_领取手册经验"
-        ]
-    },
-    "领取奖励_关闭手册升级": {
-        "recognition": "DirectHit",
-        "action": "Click",
-        "target": [
-            25,
-            200,
-            1,
-            1
-        ],
-        "post_delay": 200,
-        "__yamaape": {
-            "position": {
-                "x": 1418,
-                "y": 532
-            }
-        },
-        "next": [
-            "领取奖励_获取手册奖励"
         ]
     }
 }

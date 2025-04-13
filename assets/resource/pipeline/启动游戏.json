@@ -13,7 +13,7 @@
     "启动游戏_开始": {
         "recognition": "DirectHit",
         "action": "DoNothing",
-        "timeout": 30000,
+        "timeout": 31000,
         "__yamaape": {
             "position": {
                 "x": 250,
@@ -51,27 +51,32 @@
         "expected": [
             "校准现实"
         ],
-        "pre_delay": 2000,
+        "pre_delay": 1000,
+        "timeout": 5000,
         "__yamaape": {
             "position": {
-                "x": 1014,
-                "y": -79
+                "x": 1015,
+                "y": -95
             }
         },
         "next": [
-            "启动游戏_获取签到奖励"
+            "启动游戏_获取签到奖励",
+            "启动游戏_关闭活动公告"
+        ],
+        "on_error": [
+            "启动游戏_主界面"
         ]
     },
     "启动游戏_主界面": {
         "recognition": "OCR",
-        "action": "Click",
+        "action": "DoNothing",
         "expected": [
             "城市探索"
         ],
         "__yamaape": {
             "position": {
-                "x": 1895,
-                "y": 733
+                "x": 1944,
+                "y": 620
             }
         }
     },
@@ -94,10 +99,11 @@
             "确定"
         ],
         "timeout": 600000,
+        "rate_limit": 5000,
         "__yamaape": {
             "position": {
-                "x": 754,
-                "y": -202
+                "x": 760,
+                "y": -221
             }
         },
         "next": [
@@ -105,19 +111,16 @@
         ]
     },
     "启动游戏_获取签到奖励": {
-        "recognition": "DirectHit",
+        "recognition": "OCR",
         "action": "Click",
-        "target": [
-            25,
-            200,
-            1,
-            1
+        "post_delay": 300,
+        "expected": [
+            "点击以继续"
         ],
-        "post_delay": 200,
         "__yamaape": {
             "position": {
-                "x": 1289,
-                "y": 124
+                "x": 1334,
+                "y": -176
             }
         },
         "next": [
@@ -137,8 +140,8 @@
         "timeout": 1000,
         "__yamaape": {
             "position": {
-                "x": 1559,
-                "y": 112
+                "x": 1598,
+                "y": -187
             }
         },
         "next": [
@@ -160,10 +163,11 @@
             100,
             100
         ],
+        "post_delay": 300,
         "__yamaape": {
             "position": {
-                "x": 1347,
-                "y": 340
+                "x": 1529,
+                "y": 43
             }
         },
         "next": [

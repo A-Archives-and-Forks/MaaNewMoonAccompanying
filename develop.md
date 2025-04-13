@@ -21,9 +21,9 @@ git pull github main
 git push --set-upstream github main
 
 git add .
-git commit -m "Fix:公告图片加载异常"
+git commit -m "v0.2.2"
 git push github main
 
-git tag v0.2.0
-git push github v0.2.0
+git tag v0.2.2
+git push github v0.2.2
 ```
