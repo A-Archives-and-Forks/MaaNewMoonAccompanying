@@ -1,5 +1,6 @@
 # others
-MFAAvalonia
+MFAAvalonia/*
+!MFAAvalonia/.gitkeep
 
 # docs
 docs/node_modules
@@ -443,7 +444,8 @@ enc_temp_folder/*
 .nuke/temp/*
 
 # Build
-deps
+deps/*
+!deps/.gitkeep
 build
 install
 

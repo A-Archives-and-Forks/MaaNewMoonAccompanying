@@ -2,14 +2,12 @@
     "json.schemas": [
         {
             "fileMatch": [
-                "/assets/resource/**/*.json",
                 "/install/resource/**/*.json"
             ],
             "url": "/deps/tools/pipeline.schema.json"
         },
         {
             "fileMatch": [
-                "/assets/interface.json",
                 "/install/interface.json"
             ],
             "url": "/deps/tools/interface.schema.json"
