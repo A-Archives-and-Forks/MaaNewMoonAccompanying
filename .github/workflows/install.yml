@@ -3,20 +3,20 @@ name: install
 on:
   push:
     tags:
-      - "v*"
-    branches:
-      - "**"
+      - "v*" # 仅在推送新 tag 时触发
+    # branches:
+    #   - "**"
     paths:
       - ".github/workflows/install.yml"
-      - "assets/**"
-      - "**.py"
-  pull_request:
-    branches:
-      - "**"
-    paths:
-      - ".github/workflows/install.yml"
-      - "assets/**"
-      - "**.py"
+      # - "assets/**"
+      # - "**.py"
+  # pull_request:
+  #   branches:
+  #     - "**"
+  #   paths:
+  #     - ".github/workflows/install.yml"
+  #     - "assets/**"
+  #     - "**.py"
   workflow_dispatch:
 
 jobs:
@@ -54,10 +54,13 @@ jobs:
     runs-on: macos-latest
     strategy:
       matrix:
-        os: [win, macos, linux, android]
-        arch: [x86_64, aarch64]
-        # os: [win]
-        # arch: [x86_64]
+        # os: [win, macos, linux, android]
+        # arch: [x86_64, aarch64]
+        include: # 指定需要的组合
+          - os: win
+            arch: x86_64
+          - os: macos
+            arch: aarch64
       fail-fast: false
       
     steps:

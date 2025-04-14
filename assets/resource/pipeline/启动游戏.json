@@ -53,15 +53,15 @@
         ],
         "pre_delay": 1000,
         "timeout": 5000,
+        "post_delay": 5000,
         "__yamaape": {
             "position": {
-                "x": 1015,
-                "y": -95
+                "x": 1037,
+                "y": -101
             }
         },
         "next": [
-            "启动游戏_获取签到奖励",
-            "启动游戏_关闭活动公告"
+            "启动游戏_关闭签到界面1"
         ],
         "on_error": [
             "启动游戏_主界面"
@@ -75,8 +75,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 1944,
-                "y": 620
+                "x": 1798,
+                "y": 302
             }
         }
     },
@@ -110,24 +110,7 @@
             "启动游戏_校准现实"
         ]
     },
-    "启动游戏_获取签到奖励": {
-        "recognition": "OCR",
-        "action": "Click",
-        "post_delay": 300,
-        "expected": [
-            "点击以继续"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 1334,
-                "y": -176
-            }
-        },
-        "next": [
-            "启动游戏_关闭签到界面"
-        ]
-    },
-    "启动游戏_关闭签到界面": {
+    "启动游戏_关闭签到界面1": {
         "recognition": "DirectHit",
         "action": "Click",
         "target": [
@@ -136,19 +119,15 @@
             1,
             1
         ],
-        "post_delay": 2000,
-        "timeout": 1000,
+        "post_delay": 200,
         "__yamaape": {
             "position": {
-                "x": 1598,
-                "y": -187
+                "x": 1334,
+                "y": -176
             }
         },
         "next": [
-            "启动游戏_关闭活动公告"
-        ],
-        "on_error": [
-            "启动游戏_主界面"
+            "启动游戏_关闭签到界面2"
         ]
     },
     "启动游戏_关闭活动公告": {
@@ -166,11 +145,55 @@
         "post_delay": 300,
         "__yamaape": {
             "position": {
-                "x": 1529,
-                "y": 43
+                "x": 1400,
+                "y": 8
             }
         },
         "next": [
+            "启动游戏_主界面"
+        ]
+    },
+    "启动游戏_关闭签到界面2": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            25,
+            200,
+            1,
+            1
+        ],
+        "post_delay": 200,
+        "__yamaape": {
+            "position": {
+                "x": 1594,
+                "y": -176
+            }
+        },
+        "next": [
+            "启动游戏_关闭签到界面3"
+        ]
+    },
+    "启动游戏_关闭签到界面3": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            25,
+            200,
+            1,
+            1
+        ],
+        "post_delay": 2000,
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 1859,
+                "y": -183
+            }
+        },
+        "next": [
+            "启动游戏_关闭活动公告"
+        ],
+        "on_error": [
             "启动游戏_主界面"
         ]
     }

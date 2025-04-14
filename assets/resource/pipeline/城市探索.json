@@ -34,7 +34,6 @@
             "资源收取"
         ],
         "timeout": 2000,
-        "post_delay": 2000,
         "__yamaape": {
             "position": {
                 "x": 30,
@@ -55,7 +54,7 @@
         "expected": [
             "点击以继续"
         ],
-        "pre_delay": 500,
+        "pre_delay": 1000,
         "__yamaape": {
             "position": {
                 "x": 314,

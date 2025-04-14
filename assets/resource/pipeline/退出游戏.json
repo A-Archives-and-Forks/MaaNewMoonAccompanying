@@ -1,0 +1,67 @@
+{
+    "退出游戏_检测主界面": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "城市探索"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 475,
+                "y": -19
+            }
+        },
+        "next": [
+            "退出游戏_退出游戏"
+        ]
+    },
+    "退出游戏_退出游戏": {
+        "recognition": "DirectHit",
+        "action": "StopApp",
+        "package": "com.firewick.p42",
+        "__yamaape": {
+            "position": {
+                "x": 786,
+                "y": 164
+            }
+        }
+    },
+    "退出游戏": {
+        "__yamaape": {
+            "position": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "next": [
+            "退出游戏_仅在主界面退出"
+        ]
+    },
+    "退出游戏_仅在主界面退出": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "timeout": 5000,
+        "__yamaape": {
+            "position": {
+                "x": 215,
+                "y": -19
+            }
+        },
+        "next": [
+            "退出游戏_检测主界面"
+        ],
+        "on_error": [
+            "退出游戏_TODO异常提醒"
+        ]
+    },
+    "退出游戏_TODO异常提醒": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": 470,
+                "y": 162
+            }
+        }
+    }
+}
