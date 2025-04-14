@@ -39,7 +39,7 @@ Bug反馈请提交 [issue](https://github.com/kqcoxn/MaaNewMoonAccompanying/issu
 | 每日采购 |    首页    |   首页   |               -                |
 | 友谊交换 |    首页    |   首页   |               -                |
 | 领取奖励 |    首页    |   首页   | 每次手册更新后需要手动进入一次 |
-| 领取奖励 |  任意界面  |    -     |               -                |
+| 退出游戏 |  任意界面  |    -     |               -                |
 
 ## 更新记录
 
