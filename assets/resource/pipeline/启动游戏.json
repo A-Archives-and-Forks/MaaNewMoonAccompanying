@@ -52,7 +52,7 @@
             "校准现实"
         ],
         "pre_delay": 1000,
-        "timeout": 5000,
+        "timeout": 10000,
         "post_delay": 5000,
         "__yamaape": {
             "position": {
@@ -61,10 +61,11 @@
             }
         },
         "next": [
-            "启动游戏_关闭签到界面1"
-        ],
-        "on_error": [
             "启动游戏_主界面"
+        ],
+        "interrupt": [
+            "启动游戏_关闭活动公告",
+            "启动游戏_关闭签到界面1"
         ]
     },
     "启动游戏_主界面": {
@@ -75,8 +76,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 1798,
-                "y": 302
+                "x": 1353,
+                "y": 143
             }
         }
     },
@@ -122,35 +123,12 @@
         "post_delay": 200,
         "__yamaape": {
             "position": {
-                "x": 1334,
-                "y": -176
+                "x": 1354,
+                "y": -66
             }
         },
         "next": [
             "启动游戏_关闭签到界面2"
-        ]
-    },
-    "启动游戏_关闭活动公告": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "../image/close.png"
-        ],
-        "roi": [
-            1170,
-            23,
-            100,
-            100
-        ],
-        "post_delay": 300,
-        "__yamaape": {
-            "position": {
-                "x": 1400,
-                "y": 8
-            }
-        },
-        "next": [
-            "启动游戏_主界面"
         ]
     },
     "启动游戏_关闭签到界面2": {
@@ -165,8 +143,8 @@
         "post_delay": 200,
         "__yamaape": {
             "position": {
-                "x": 1594,
-                "y": -176
+                "x": 1603,
+                "y": -70
             }
         },
         "next": [
@@ -186,15 +164,23 @@
         "timeout": 1000,
         "__yamaape": {
             "position": {
-                "x": 1859,
-                "y": -183
+                "x": 1855,
+                "y": -81
             }
-        },
-        "next": [
-            "启动游戏_关闭活动公告"
+        }
+    },
+    "启动游戏_关闭活动公告": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/close.png"
         ],
-        "on_error": [
-            "启动游戏_主界面"
-        ]
+        "post_delay": 300,
+        "__yamaape": {
+            "position": {
+                "x": 1351,
+                "y": -255
+            }
+        }
     }
 }
