@@ -17,7 +17,7 @@
             "../image/friends.png"
         ],
         "post_delay": 2000,
-        "timeout": 1000,
+        "timeout": 3000,
         "__yamaape": {
             "position": {
                 "x": 255,
@@ -30,6 +30,9 @@
         ],
         "on_error": [
             "友谊交换_返回主界面"
+        ],
+        "interrupt": [
+            "友谊交换_情报点数收取"
         ]
     },
     "友谊交换_领取友谊": {
@@ -74,8 +77,8 @@
         "post_delay": 3000,
         "__yamaape": {
             "position": {
-                "x": 1352,
-                "y": -25
+                "x": 1359,
+                "y": -26
             }
         }
     },
@@ -95,5 +98,19 @@
         "next": [
             "友谊交换_赠送友谊"
         ]
+    },
+    "友谊交换_情报点数收取": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击空白处关闭"
+        ],
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 542,
+                "y": 137
+            }
+        }
     }
 }
