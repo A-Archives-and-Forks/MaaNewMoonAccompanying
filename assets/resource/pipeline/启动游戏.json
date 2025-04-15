@@ -74,12 +74,20 @@
         "expected": [
             "城市探索"
         ],
+        "timeout": 3000,
+        "post_delay": 3000,
         "__yamaape": {
             "position": {
                 "x": 1353,
                 "y": 143
             }
-        }
+        },
+        "next": [
+            "启动游戏_防止公告延迟"
+        ],
+        "on_error": [
+            "启动游戏_确认结束"
+        ]
     },
     "启动游戏_启动游戏": {
         "recognition": "DirectHit",
@@ -110,6 +118,20 @@
         "next": [
             "启动游戏_校准现实"
         ]
+    },
+    "启动游戏_关闭活动公告": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/close.png"
+        ],
+        "post_delay": 300,
+        "__yamaape": {
+            "position": {
+                "x": 1351,
+                "y": -255
+            }
+        }
     },
     "启动游戏_关闭签到界面1": {
         "recognition": "DirectHit",
@@ -169,17 +191,29 @@
             }
         }
     },
-    "启动游戏_关闭活动公告": {
+    "启动游戏_防止公告延迟": {
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
             "../image/close.png"
         ],
-        "post_delay": 300,
         "__yamaape": {
             "position": {
-                "x": 1351,
-                "y": -255
+                "x": 1648,
+                "y": 127
+            }
+        },
+        "next": [
+            "启动游戏_确认结束"
+        ]
+    },
+    "启动游戏_确认结束": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": 1935,
+                "y": 239
             }
         }
     }

@@ -3,11 +3,11 @@ name: install
 on:
   push:
     tags:
-      - "v*" # 仅在推送新 tag 时触发
+      - "v*"
     # branches:
     #   - "**"
-    paths:
-      - ".github/workflows/install.yml"
+    # paths:
+      # - ".github/workflows/install.yml"
       # - "assets/**"
       # - "**.py"
   # pull_request:
@@ -56,11 +56,13 @@ jobs:
       matrix:
         # os: [win, macos, linux, android]
         # arch: [x86_64, aarch64]
-        include: # 指定需要的组合
+        include: 
           - os: win
             arch: x86_64
           - os: macos
             arch: aarch64
+          - os: linux
+            arch: x86_64
       fail-fast: false
       
     steps:
