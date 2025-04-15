@@ -1,0 +1,115 @@
+{
+    "旅行便签": {
+        "__yamaape": {
+            "position": {
+                "x": 34,
+                "y": -14
+            }
+        },
+        "next": [
+            "旅行便签_活动入口"
+        ]
+    },
+    "旅行便签_活动入口": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/禅世遗香/entry.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 243,
+                "y": -49
+            }
+        },
+        "next": [
+            "旅行便签_旅行便签"
+        ]
+    },
+    "旅行便签_旅行便签": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "旅行便签"
+        ],
+        "pre_delay": 200,
+        "__yamaape": {
+            "position": {
+                "x": 506,
+                "y": -70
+            }
+        },
+        "next": [
+            "旅行便签_领取奖励"
+        ]
+    },
+    "旅行便签_领取奖励": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "全部领取"
+        ],
+        "timeout": 3000,
+        "__yamaape": {
+            "position": {
+                "x": 767,
+                "y": -74
+            }
+        },
+        "next": [
+            "旅行便签_获取谛香"
+        ],
+        "on_error": [
+            "旅行便签_从旅行便签返回"
+        ]
+    },
+    "旅行便签_获取谛香": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击以继续"
+        ],
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 1051,
+                "y": -170
+            }
+        },
+        "next": [
+            "旅行便签_从旅行便签返回"
+        ]
+    },
+    "旅行便签_从旅行便签返回": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/back.png"
+        ],
+        "pre_delay": 200,
+        "__yamaape": {
+            "position": {
+                "x": 1322,
+                "y": -34
+            }
+        },
+        "next": [
+            "旅行便签_返回主界面"
+        ]
+    },
+    "旅行便签_返回主界面": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/back.png"
+        ],
+        "pre_delay": 200,
+        "post_delay": 3000,
+        "__yamaape": {
+            "position": {
+                "x": 1600,
+                "y": -48
+            }
+        }
+    }
+}
