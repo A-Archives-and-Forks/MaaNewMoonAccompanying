@@ -21,8 +21,9 @@ git pull github main
 git push --set-upstream github main
 
 git add .
-git commit -m "Update:v0.2.5"
-git tag -a v0.2.5 -m "Release version 0.2.5"
+git commit -m "Update:v0.2.6"
 git push github main
-git push github v0.2.5
+
+git tag -a v0.2.6 -m "Release v0.2.6"
+git push github v0.2.6
 ```
