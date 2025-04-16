@@ -1,7 +1,7 @@
 {
     "name": "MaaNewMoonAccompanying",
     "url": "https://github.com/kqcoxn/MaaNewMoonAccompanying",
-    "custom_title": "新月同行小助手(kqcoxn/MaaNewMoonAccompanying) - MFA | 游戏版本：禅世遗香·上",
+    "custom_title": "新月同行小助手(kqcoxn/MaaNewMoonAccompanying) - MFA | 游戏版本：禅世遗香·下",
     "message": "- 新 月 同 行 -",
     "controller": [
         {
@@ -42,7 +42,8 @@
             "name": "每日采购",
             "entry": "每日采购",
             "option": [
-                "是否购买数构银物资"
+                "是否购买数构银物资",
+                "启用构束银再确认"
             ],
             "doc": "**每日采购**：\n\n购买每日免费礼包与数构银物资\n\n开始界面：主界面\n\n结束界面：主界面\n\n注意事项：请确保有充足数构银",
             "check": true
@@ -120,6 +121,69 @@
                     "pipeline_override": {
                         "每日采购_购买数构银物资": {
                             "next": "每日采购_回到主界面"
+                        }
+                    }
+                }
+            ]
+        },
+        "启用构束银再确认": {
+            "cases": [
+                {
+                    "name": "是",
+                    "pipeline_override": {}
+                },
+                {
+                    "name": "否",
+                    "pipeline_override": {
+                        "每日采购_购买数构银物资1-4": {
+                            "recognition": "OCR",
+                            "expected": "购买",
+                            "roi": [
+                                0,
+                                0,
+                                0,
+                                0
+                            ]
+                        },
+                        "每日采购_购买数构银物资2-1": {
+                            "recognition": "OCR",
+                            "expected": "购买",
+                            "roi": [
+                                0,
+                                0,
+                                0,
+                                0
+                            ]
+                        },
+                        "每日采购_购买数构银物资2-2": {
+                            "recognition": "OCR",
+                            "expected": "购买",
+                            "roi": [
+                                0,
+                                0,
+                                0,
+                                0
+                            ]
+                        },
+                        "每日采购_购买数构银物资2-3": {
+                            "recognition": "OCR",
+                            "expected": "购买",
+                            "roi": [
+                                0,
+                                0,
+                                0,
+                                0
+                            ]
+                        },
+                        "每日采购_购买数构银物资2-4": {
+                            "recognition": "OCR",
+                            "expected": "购买",
+                            "roi": [
+                                0,
+                                0,
+                                0,
+                                0
+                            ]
                         }
                     }
                 }

@@ -29,7 +29,7 @@
 - [x] 【禅世遗香】领取每日奖励
 - 更多活动功能适配（EX关卡、小游戏等，开发量较大，可能端上来比较慢）
 
-\* 若有其他功能需求请提交[issue](https://github.com/kqcoxn/MaaNewMoonAccompanying/issues?q=is%3Aissue)
+\* 若有其他功能需求请提交 [issue](https://github.com/kqcoxn/MaaNewMoonAccompanying/issues?q=is%3Aissue)
 
 **如果你也是开发者，可以瞅一眼我的另一个项目 [YAMaaPE](https://github.com/kqcoxn/YAMaaPE)，可以使用基于 Web 的流水线 GUI 编辑你的 Pipeline！**
 

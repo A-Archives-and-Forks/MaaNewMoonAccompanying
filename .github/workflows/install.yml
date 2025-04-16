@@ -150,4 +150,11 @@ jobs:
         with:
           files: assets/*
           tag_name: ${{ needs.meta.outputs.tag }}
-          generate_release_notes: true
+          body: | 
+            ## 新增
+
+            - 新增功能
+
+            ## 优化修复
+
+            - 修复问题
