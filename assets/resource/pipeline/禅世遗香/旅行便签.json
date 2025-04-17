@@ -49,7 +49,7 @@
         "expected": [
             "全部领取"
         ],
-        "timeout": 3000,
+        "timeout": 2000,
         "__yamaape": {
             "position": {
                 "x": 767,
@@ -60,7 +60,7 @@
             "旅行便签_获取谛香"
         ],
         "on_error": [
-            "旅行便签_从旅行便签返回"
+            "旅行便签_返回主界面"
         ]
     },
     "旅行便签_获取谛香": {
@@ -77,23 +77,6 @@
             }
         },
         "next": [
-            "旅行便签_从旅行便签返回"
-        ]
-    },
-    "旅行便签_从旅行便签返回": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "../image/back.png"
-        ],
-        "pre_delay": 200,
-        "__yamaape": {
-            "position": {
-                "x": 1322,
-                "y": -34
-            }
-        },
-        "next": [
             "旅行便签_返回主界面"
         ]
     },
@@ -101,13 +84,13 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/back.png"
+            "../image/home.png"
         ],
         "pre_delay": 200,
         "post_delay": 3000,
         "__yamaape": {
             "position": {
-                "x": 1600,
+                "x": 1390,
                 "y": -48
             }
         }
