@@ -86,7 +86,7 @@
             "启动游戏_防止公告延迟"
         ],
         "on_error": [
-            "启动游戏_确认结束"
+            "启动游戏_确认结束1"
         ]
     },
     "启动游戏_启动游戏": {
@@ -108,11 +108,12 @@
             "确定"
         ],
         "timeout": 600000,
-        "rate_limit": 5000,
+        "rate_limit": 10000,
+        "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 760,
-                "y": -221
+                "x": 767,
+                "y": -240
             }
         },
         "next": [
@@ -153,6 +154,22 @@
             "启动游戏_关闭签到界面2"
         ]
     },
+    "启动游戏_防止公告延迟": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/close.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1648,
+                "y": 125
+            }
+        },
+        "next": [
+            "启动游戏_确认结束1"
+        ]
+    },
     "启动游戏_关闭签到界面2": {
         "recognition": "DirectHit",
         "action": "Click",
@@ -191,30 +208,360 @@
             }
         }
     },
-    "启动游戏_防止公告延迟": {
-        "recognition": "TemplateMatch",
+    "启动游戏_关闭其他界面1": {
+        "recognition": "DirectHit",
         "action": "Click",
-        "template": [
-            "../image/close.png"
+        "target": [
+            25,
+            200,
+            1,
+            1
         ],
+        "post_delay": 200,
+        "pre_delay": 5000,
         "__yamaape": {
             "position": {
-                "x": 1648,
-                "y": 127
+                "x": 2182,
+                "y": 198
             }
         },
         "next": [
-            "启动游戏_确认结束"
+            "启动游戏_关闭其他界面2"
         ]
     },
-    "启动游戏_确认结束": {
+    "启动游戏_关闭其他界面2": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            25,
+            200,
+            1,
+            1
+        ],
+        "post_delay": 200,
+        "__yamaape": {
+            "position": {
+                "x": 2439,
+                "y": 219
+            }
+        },
+        "next": [
+            "启动游戏_关闭其他界面3"
+        ]
+    },
+    "启动游戏_关闭其他界面3": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            25,
+            200,
+            1,
+            1
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 2715,
+                "y": 233
+            }
+        },
+        "next": [
+            "启动游戏_确认结束2"
+        ]
+    },
+    "启动游戏_确认结束2": {
         "recognition": "DirectHit",
         "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": 1935,
-                "y": 239
+                "x": 1933,
+                "y": 433
+            }
+        },
+        "next": [
+            "启动游戏_活动签到"
+        ]
+    },
+    "启动游戏_确认结束1": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": 1915,
+                "y": 237
+            }
+        },
+        "next": [
+            "启动游戏_关闭其他界面1"
+        ]
+    },
+    "启动游戏_领取今日奖励": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击以继续"
+        ],
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 3183,
+                "y": 1154
+            }
+        },
+        "next": [
+            "启动游戏_关闭签到界面"
+        ]
+    },
+    "启动游戏_关闭签到界面": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            25,
+            200,
+            1,
+            1
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3445,
+                "y": 1279
+            }
+        },
+        "next": [
+            "启动游戏_结束任务"
+        ]
+    },
+    "启动游戏_结束任务": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "post_delay": 3000,
+        "__yamaape": {
+            "position": {
+                "x": 4030,
+                "y": 518
             }
         }
+    },
+    "启动游戏_活动签到": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "签到"
+        ],
+        "pre_delay": 400,
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 2192,
+                "y": 433
+            }
+        },
+        "next": [
+            "启动游戏_日期矩阵"
+        ],
+        "on_error": [
+            "启动游戏_结束任务"
+        ]
+    },
+    "启动游戏_日期矩阵": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": 2460,
+                "y": 433
+            }
+        },
+        "next": [
+            "启动游戏_7"
+        ]
+    },
+    "启动游戏_7": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "07"
+        ],
+        "roi": [
+            135,
+            293,
+            1023,
+            78
+        ],
+        "pre_delay": 400,
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 2720,
+                "y": 433
+            }
+        },
+        "next": [
+            "启动游戏_领取今日奖励"
+        ],
+        "on_error": [
+            "启动游戏_6"
+        ]
+    },
+    "启动游戏_6": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "06"
+        ],
+        "roi": [
+            135,
+            293,
+            1023,
+            78
+        ],
+        "pre_delay": 400,
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 2721,
+                "y": 685
+            }
+        },
+        "on_error": [
+            "启动游戏_5"
+        ],
+        "next": [
+            "启动游戏_领取今日奖励"
+        ]
+    },
+    "启动游戏_5": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "05"
+        ],
+        "roi": [
+            135,
+            293,
+            1023,
+            78
+        ],
+        "pre_delay": 400,
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 2720,
+                "y": 934
+            }
+        },
+        "on_error": [
+            "启动游戏_4"
+        ],
+        "next": [
+            "启动游戏_领取今日奖励"
+        ]
+    },
+    "启动游戏_4": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "04"
+        ],
+        "roi": [
+            135,
+            293,
+            1023,
+            78
+        ],
+        "pre_delay": 400,
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 2719,
+                "y": 1180
+            }
+        },
+        "on_error": [
+            "启动游戏_3"
+        ],
+        "next": [
+            "启动游戏_领取今日奖励"
+        ]
+    },
+    "启动游戏_3": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "03"
+        ],
+        "roi": [
+            135,
+            293,
+            1023,
+            78
+        ],
+        "pre_delay": 400,
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 2720,
+                "y": 1433
+            }
+        },
+        "on_error": [
+            "启动游戏_2"
+        ],
+        "next": [
+            "启动游戏_领取今日奖励"
+        ]
+    },
+    "启动游戏_2": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "02"
+        ],
+        "roi": [
+            135,
+            293,
+            1023,
+            78
+        ],
+        "pre_delay": 400,
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 2719,
+                "y": 1688
+            }
+        },
+        "on_error": [
+            "启动游戏_1"
+        ],
+        "next": [
+            "启动游戏_领取今日奖励"
+        ]
+    },
+    "启动游戏_1": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "01"
+        ],
+        "roi": [
+            135,
+            293,
+            1023,
+            78
+        ],
+        "pre_delay": 400,
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 2717,
+                "y": 1937
+            }
+        },
+        "next": [
+            "启动游戏_领取今日奖励"
+        ],
+        "on_error": [
+            "启动游戏_关闭签到界面"
+        ]
     }
 }
