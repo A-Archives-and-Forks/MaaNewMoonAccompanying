@@ -66,7 +66,11 @@
 
 ## 更新记录
 
-### Next Release (Committed but Unreleased)
+<!-- ### Next Release (Committed but Unreleased) -->
+
+### v0.2.7
+
+> 2025.4.17
 
 - **新增**
   - 新增选项：启动游戏-防止版本资讯延迟、启动游戏-紧张刺激的七日签到、启动游戏-检查邮箱

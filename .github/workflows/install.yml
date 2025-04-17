@@ -75,7 +75,6 @@ jobs:
         with:
           repository: MaaXYZ/MaaFramework
           fileName: "MAA-${{ matrix.os }}-${{ matrix.arch }}*"
-          preRelease: true
           latest: true
           out-file-path: "deps"
           extract: true
@@ -150,11 +149,11 @@ jobs:
         with:
           files: assets/*
           tag_name: ${{ needs.meta.outputs.tag }}
-          body: | 
-            ## 新增
+          # body: | 
+          #   ## 新增
 
-            - 新增功能
+          #   - 新增功能
 
-            ## 优化修复
+          #   ## 优化修复
 
-            - 修复问题
+          #   - 修复问题
