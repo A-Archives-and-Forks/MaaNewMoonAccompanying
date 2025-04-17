@@ -1,3 +1,1140 @@
 {
-    "消耗现实度": {}
+    "清体力": {
+        "__yamaape": {
+            "position": {
+                "x": 53,
+                "y": -11
+            }
+        },
+        "next": [
+            "清体力_战略行动"
+        ]
+    },
+    "清体力_战略行动": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "战略行动"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 250,
+                "y": -48
+            }
+        },
+        "next": [
+            "清体力_关卡选择"
+        ]
+    },
+    "清体力_关卡选择": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "象征车厢"
+        ],
+        "pre_delay": 200,
+        "__yamaape": {
+            "position": {
+                "x": 543,
+                "y": -55
+            }
+        },
+        "next": [
+            "清体力_数构银与作战教材"
+        ]
+    },
+    "清体力_数构银与作战教材": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "象征车厢"
+        ],
+        "post_delay": 500,
+        "__yamaape": {
+            "position": {
+                "x": 887,
+                "y": 114
+            }
+        },
+        "next": [
+            "清体力_经验本"
+        ]
+    },
+    "清体力_经验本": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "前往"
+        ],
+        "order_by": "Vertical",
+        "index": 0,
+        "__yamaape": {
+            "position": {
+                "x": 1151,
+                "y": 116
+            }
+        },
+        "next": [
+            "清体力_倍率选择"
+        ]
+    },
+    "清体力_倍率选择": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "post_delay": 500,
+        "expected": [
+            "开始挑战"
+        ],
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 2645,
+                "y": 63
+            }
+        },
+        "next": [
+            "清体力_检查多倍战斗"
+        ],
+        "on_error": [
+            "清体力_倍率选择4"
+        ]
+    },
+    "清体力_检查多倍战斗": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/checkless.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 2918,
+                "y": 45
+            }
+        },
+        "next": [
+            "清体力_倍率选择4"
+        ]
+    },
+    "清体力_倍率选择4": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/cycle.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3181,
+                "y": 143
+            }
+        },
+        "next": [
+            "清体力_4X"
+        ]
+    },
+    "清体力_4X": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "x4",
+            "×4"
+        ],
+        "order_by": "Vertical",
+        "roi": [
+            848,
+            416,
+            118,
+            175
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3433,
+                "y": 138
+            }
+        },
+        "next": [
+            "清体力_开始挑战4"
+        ]
+    },
+    "清体力_数构银本": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "前往"
+        ],
+        "order_by": "Vertical",
+        "index": 1,
+        "__yamaape": {
+            "position": {
+                "x": 1150,
+                "y": 334
+            }
+        },
+        "next": [
+            "清体力_倍率选择"
+        ]
+    },
+    "清体力_作战认证书": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "分析车厢"
+        ],
+        "post_delay": 500,
+        "__yamaape": {
+            "position": {
+                "x": 889,
+                "y": 556
+            }
+        },
+        "next": [
+            "清体力_红本"
+        ]
+    },
+    "清体力_红本": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "前往"
+        ],
+        "order_by": "Vertical",
+        "index": 0,
+        "__yamaape": {
+            "position": {
+                "x": 1149,
+                "y": 560
+            }
+        },
+        "next": [
+            "清体力_倍率选择"
+        ]
+    },
+    "清体力_蓝本": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "前往"
+        ],
+        "order_by": "Vertical",
+        "index": 1,
+        "__yamaape": {
+            "position": {
+                "x": 1149,
+                "y": 781
+            }
+        },
+        "next": [
+            "清体力_倍率选择"
+        ]
+    },
+    "清体力_绿本": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "前往"
+        ],
+        "order_by": "Vertical",
+        "index": 2,
+        "__yamaape": {
+            "position": {
+                "x": 1148,
+                "y": 1005
+            }
+        },
+        "next": [
+            "清体力_倍率选择"
+        ]
+    },
+    "清体力_黄本": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "前往"
+        ],
+        "order_by": "Vertical",
+        "index": -2,
+        "__yamaape": {
+            "position": {
+                "x": 1405,
+                "y": 1227
+            }
+        },
+        "next": [
+            "清体力_倍率选择"
+        ]
+    },
+    "清体力_紫本": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "前往"
+        ],
+        "order_by": "Vertical",
+        "index": -1,
+        "__yamaape": {
+            "position": {
+                "x": 1401,
+                "y": 1451
+            }
+        },
+        "next": [
+            "清体力_倍率选择"
+        ]
+    },
+    "清体力_强攻本": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "前往"
+        ],
+        "order_by": "Vertical",
+        "index": 0,
+        "__yamaape": {
+            "position": {
+                "x": 1143,
+                "y": 1683
+            }
+        },
+        "next": [
+            "清体力_倍率选择"
+        ]
+    },
+    "清体力_特攻本": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "前往"
+        ],
+        "order_by": "Vertical",
+        "index": 1,
+        "__yamaape": {
+            "position": {
+                "x": 1141,
+                "y": 1915
+            }
+        },
+        "next": [
+            "清体力_倍率选择"
+        ]
+    },
+    "清体力_突击本": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "前往"
+        ],
+        "order_by": "Vertical",
+        "index": 3,
+        "__yamaape": {
+            "position": {
+                "x": 1137,
+                "y": 2142
+            }
+        },
+        "next": [
+            "清体力_倍率选择"
+        ]
+    },
+    "清体力_防护本": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "前往"
+        ],
+        "order_by": "Vertical",
+        "index": -2,
+        "__yamaape": {
+            "position": {
+                "x": 1390,
+                "y": 2369
+            }
+        },
+        "next": [
+            "清体力_倍率选择"
+        ]
+    },
+    "清体力_辅助本": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "前往"
+        ],
+        "order_by": "Vertical",
+        "index": -1,
+        "__yamaape": {
+            "position": {
+                "x": 1392,
+                "y": 2604
+            }
+        },
+        "next": [
+            "清体力_倍率选择"
+        ]
+    },
+    "清体力_演练卷": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "景观车厢"
+        ],
+        "post_delay": 500,
+        "__yamaape": {
+            "position": {
+                "x": 890,
+                "y": 1683
+            }
+        },
+        "next": [
+            "清体力_强攻本"
+        ]
+    },
+    "清体力_整流器本": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "前往"
+        ],
+        "order_by": "Vertical",
+        "index": 1,
+        "__yamaape": {
+            "position": {
+                "x": 1136,
+                "y": 2833
+            }
+        },
+        "next": [
+            "清体力_倍率选择"
+        ]
+    },
+    "清体力_卡带本": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "前往"
+        ],
+        "order_by": "Vertical",
+        "index": 0,
+        "__yamaape": {
+            "position": {
+                "x": 1136,
+                "y": 3068
+            }
+        },
+        "next": [
+            "清体力_选择卡带"
+        ]
+    },
+    "清体力_选择卡带": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "查看详情"
+        ],
+        "pre_delay": 400,
+        "post_delay": 500,
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 1394,
+                "y": 3068
+            }
+        },
+        "next": [
+            "清体力_冷酷者"
+        ],
+        "on_error": [
+            "清体力_卡带堆顶"
+        ]
+    },
+    "清体力_冷酷者": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "冷酷者产线"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1922,
+                "y": 3064
+            }
+        },
+        "next": [
+            "清体力_确认卡带"
+        ]
+    },
+    "清体力_卡带堆顶": {
+        "recognition": "DirectHit",
+        "action": "Swipe",
+        "begin": [
+            380,
+            220,
+            1,
+            1
+        ],
+        "end": [
+            380,
+            500,
+            1,
+            1
+        ],
+        "duration": 200,
+        "post_delay": 1500,
+        "timeout": 10000,
+        "__yamaape": {
+            "position": {
+                "x": 1643,
+                "y": 3067
+            }
+        },
+        "next": [
+            "清体力_冷酷者"
+        ],
+        "interrupt": [
+            "清体力_卡带下滑"
+        ]
+    },
+    "清体力_确认卡带": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "确定"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 2255,
+                "y": 1777
+            }
+        },
+        "next": [
+            "清体力_倍率选择"
+        ]
+    },
+    "清体力_卡带下滑": {
+        "recognition": "DirectHit",
+        "action": "Swipe",
+        "begin": [
+            380,
+            400,
+            1,
+            1
+        ],
+        "end": [
+            380,
+            300,
+            1,
+            1
+        ],
+        "duration": 200,
+        "__yamaape": {
+            "position": {
+                "x": 1376,
+                "y": 3370
+            }
+        },
+        "next": [
+            "清体力_卡带停住"
+        ]
+    },
+    "清体力_逆转合作": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/卡带/逆转合作.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1928,
+                "y": 1782
+            }
+        },
+        "next": [
+            "清体力_确认卡带"
+        ]
+    },
+    "清体力_顿悟者": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "顿悟者产线"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1926,
+                "y": 1948
+            }
+        },
+        "next": [
+            "清体力_确认卡带"
+        ]
+    },
+    "清体力_卡带停住": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            380,
+            220,
+            1,
+            1
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1643,
+                "y": 3366
+            }
+        }
+    },
+    "清体力_苦修者": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "苦修者产线"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1924,
+                "y": 2106
+            }
+        },
+        "next": [
+            "清体力_确认卡带"
+        ]
+    },
+    "清体力_隐世者": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "隐世者产线"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1925,
+                "y": 2265
+            }
+        },
+        "next": [
+            "清体力_确认卡带"
+        ]
+    },
+    "清体力_惊惧者": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "惊惧者产线"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1924,
+                "y": 2425
+            }
+        },
+        "next": [
+            "清体力_确认卡带"
+        ]
+    },
+    "清体力_改造者": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "改造者产线"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1924,
+                "y": 2585
+            }
+        },
+        "next": [
+            "清体力_确认卡带"
+        ]
+    },
+    "清体力_震荡者": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "震荡者产线"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1925,
+                "y": 2741
+            }
+        },
+        "next": [
+            "清体力_确认卡带"
+        ]
+    },
+    "清体力_扭曲者": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "扭曲者产线"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1923,
+                "y": 2901
+            }
+        },
+        "next": [
+            "清体力_确认卡带"
+        ]
+    },
+    "清体力_紫本下划": {
+        "recognition": "DirectHit",
+        "action": "Swipe",
+        "begin": [
+            760,
+            540,
+            1,
+            1
+        ],
+        "end": [
+            760,
+            210,
+            1,
+            1
+        ],
+        "post_delay": 500,
+        "__yamaape": {
+            "position": {
+                "x": 1141,
+                "y": 1451
+            }
+        },
+        "next": [
+            "清体力_紫本"
+        ]
+    },
+    "清体力_黄本下划": {
+        "recognition": "DirectHit",
+        "action": "Swipe",
+        "begin": [
+            760,
+            540,
+            1,
+            1
+        ],
+        "end": [
+            760,
+            210,
+            1,
+            1
+        ],
+        "post_delay": 500,
+        "__yamaape": {
+            "position": {
+                "x": 1150,
+                "y": 1230
+            }
+        },
+        "next": [
+            "清体力_黄本"
+        ]
+    },
+    "清体力_防护本下划": {
+        "recognition": "DirectHit",
+        "action": "Swipe",
+        "begin": [
+            760,
+            540,
+            1,
+            1
+        ],
+        "end": [
+            760,
+            210,
+            1,
+            1
+        ],
+        "post_delay": 500,
+        "__yamaape": {
+            "position": {
+                "x": 1136,
+                "y": 2372
+            }
+        },
+        "next": [
+            "清体力_防护本"
+        ]
+    },
+    "清体力_辅助本下划": {
+        "recognition": "DirectHit",
+        "action": "Swipe",
+        "begin": [
+            760,
+            540,
+            1,
+            1
+        ],
+        "end": [
+            760,
+            210,
+            1,
+            1
+        ],
+        "post_delay": 500,
+        "__yamaape": {
+            "position": {
+                "x": 1135,
+                "y": 2604
+            }
+        },
+        "next": [
+            "清体力_辅助本"
+        ]
+    },
+    "清体力_卡带": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "卡带车厢"
+        ],
+        "post_delay": 500,
+        "__yamaape": {
+            "position": {
+                "x": 881,
+                "y": 2835
+            }
+        },
+        "next": [
+            "清体力_整流器本"
+        ]
+    },
+    "清体力_开始挑战4": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "开始挑战"
+        ],
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 3681,
+                "y": 137
+            }
+        },
+        "on_error": [
+            "清体力_开始行动"
+        ],
+        "next": [
+            "清体力_返回倍率选择3"
+        ]
+    },
+    "清体力_TODO自动吃药": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": 2651,
+                "y": 1282
+            }
+        },
+        "next": [
+            "清体力_新增节点94"
+        ]
+    },
+    "清体力_新增节点94": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": 2898,
+                "y": 1286
+            }
+        }
+    },
+    "清体力_开始行动": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "行动开始"
+        ],
+        "pre_delay": 400,
+        "timeout": 300000,
+        "post_delay": 20000,
+        "__yamaape": {
+            "position": {
+                "x": 3991,
+                "y": 130
+            }
+        },
+        "next": [
+            "清体力_结束行动"
+        ]
+    },
+    "清体力_返回倍率选择3": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/close.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 2933,
+                "y": 359
+            }
+        },
+        "next": [
+            "清体力_倍率选择3"
+        ]
+    },
+    "清体力_倍率选择3": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/cycle.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3183,
+                "y": 361
+            }
+        },
+        "next": [
+            "清体力_3X"
+        ]
+    },
+    "清体力_3X": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "x3",
+            "×3"
+        ],
+        "order_by": "Vertical",
+        "roi": [
+            848,
+            416,
+            118,
+            175
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3435,
+                "y": 362
+            }
+        },
+        "next": [
+            "清体力_开始挑战3"
+        ]
+    },
+    "清体力_开始挑战3": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "开始挑战"
+        ],
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 3684,
+                "y": 366
+            }
+        },
+        "on_error": [
+            "清体力_开始行动"
+        ],
+        "next": [
+            "清体力_返回倍率选择2"
+        ]
+    },
+    "清体力_返回倍率选择2": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/close.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 2923,
+                "y": 583
+            }
+        },
+        "next": [
+            "清体力_倍率选择2"
+        ]
+    },
+    "清体力_倍率选择2": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/cycle.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3168,
+                "y": 580
+            }
+        },
+        "next": [
+            "清体力_2X"
+        ]
+    },
+    "清体力_2X": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "x2",
+            "×2"
+        ],
+        "order_by": "Vertical",
+        "roi": [
+            848,
+            416,
+            118,
+            175
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3430,
+                "y": 579
+            }
+        },
+        "next": [
+            "清体力_开始挑战2"
+        ]
+    },
+    "清体力_开始挑战2": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "开始挑战"
+        ],
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 3679,
+                "y": 587
+            }
+        },
+        "on_error": [
+            "清体力_开始行动"
+        ],
+        "next": [
+            "清体力_返回倍率选择1"
+        ]
+    },
+    "清体力_返回倍率选择1": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/close.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 2927,
+                "y": 820
+            }
+        },
+        "next": [
+            "清体力_倍率选择1"
+        ]
+    },
+    "清体力_倍率选择1": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/cycle.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3171,
+                "y": 825
+            }
+        },
+        "next": [
+            "清体力_1X"
+        ]
+    },
+    "清体力_1X": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "x1",
+            "×1"
+        ],
+        "order_by": "Vertical",
+        "roi": [
+            848,
+            416,
+            118,
+            175
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3429,
+                "y": 824
+            }
+        },
+        "next": [
+            "清体力_开始挑战1"
+        ]
+    },
+    "清体力_开始挑战1": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "开始挑战"
+        ],
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 3683,
+                "y": 827
+            }
+        },
+        "on_error": [
+            "清体力_开始行动"
+        ],
+        "next": [
+            "清体力_体力耗尽"
+        ]
+    },
+    "清体力_结束行动": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "确定"
+        ],
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 4263,
+                "y": 14
+            }
+        },
+        "next": [
+            "清体力_倍率选择4"
+        ]
+    },
+    "清体力_体力耗尽": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/close.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3959,
+                "y": 993
+            }
+        },
+        "next": [
+            "清体力_回到主页"
+        ]
+    },
+    "清体力_回到主页": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/home.png"
+        ],
+        "post_delay": 3000,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 4217,
+                "y": 998
+            }
+        }
+    }
 }

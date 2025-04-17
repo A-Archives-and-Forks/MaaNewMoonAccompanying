@@ -2,6 +2,7 @@
     "name": "MaaNewMoonAccompanying",
     "url": "https://github.com/kqcoxn/MaaNewMoonAccompanying",
     "custom_title": "新月同行小助手(kqcoxn/MaaNewMoonAccompanying) - MFA | 游戏版本：禅世遗香·下",
+    "version": "v0.3.0",
     "message": "- 新 月 同 行 -",
     "controller": [
         {
@@ -58,15 +59,16 @@
             "check": true
         },
         {
-            "name": "消耗现实度（开发中，暂不可用）",
-            "entry": "消耗现实度",
+            "name": "清体力",
+            "entry": "清体力",
             "option": [
                 "资源类型",
+                "自动使用稳定合剂",
                 "认证类型",
                 "演练卷类型",
                 "卡带类型"
             ],
-            "doc": "**消耗现实度**：\n\n即清体力\n\n开始界面：主界面\n\n结束界面：主界面",
+            "doc": "**清体力**：\n\n开始界面：主界面\n\n结束界面：主界面",
             "check": true
         },
         {
@@ -132,25 +134,21 @@
         "紧张刺激的七日签到": {
             "cases": [
                 {
-                    "name": "启用",
-                    "pipeline_override": {}
-                },
-                {
                     "name": "禁用",
                     "pipeline_override": {
                         "启动游戏_确认结束2": {
                             "next": "启动游戏_结束任务1"
                         }
                     }
+                },
+                {
+                    "name": "启用",
+                    "pipeline_override": {}
                 }
             ]
         },
         "检查邮箱": {
             "cases": [
-                {
-                    "name": "启用",
-                    "pipeline_override": {}
-                },
                 {
                     "name": "禁用",
                     "pipeline_override": {
@@ -158,6 +156,10 @@
                             "next": "启动游戏_结束任务2"
                         }
                     }
+                },
+                {
+                    "name": "启用",
+                    "pipeline_override": {}
                 }
             ]
         },
@@ -248,22 +250,53 @@
                 },
                 {
                     "name": "数构银",
-                    "pipeline_override": {}
+                    "pipeline_override": {
+                        "清体力_数构银与作战教材": {
+                            "next": "清体力_数构银本"
+                        }
+                    }
                 },
                 {
                     "name": "作战认证书（特工突破）",
-                    "pipeline_override": {}
+                    "pipeline_override": {
+                        "清体力_关卡选择": {
+                            "next": "清体力_作战认证书"
+                        }
+                    }
                 },
                 {
                     "name": "演练卷（技能升级）",
-                    "pipeline_override": {}
+                    "pipeline_override": {
+                        "清体力_关卡选择": {
+                            "next": "清体力_演练卷"
+                        }
+                    }
                 },
                 {
                     "name": "卡带",
-                    "pipeline_override": {}
+                    "pipeline_override": {
+                        "清体力_关卡选择": {
+                            "next": "清体力_卡带"
+                        },
+                        "清体力_卡带": {
+                            "next": "清体力_卡带本"
+                        }
+                    }
                 },
                 {
                     "name": "整流元件（卡带突破）",
+                    "pipeline_override": {
+                        "清体力_关卡选择": {
+                            "next": "清体力_卡带"
+                        }
+                    }
+                }
+            ]
+        },
+        "自动使用稳定合剂": {
+            "cases": [
+                {
+                    "name": "不使用（功能即将更新）",
                     "pipeline_override": {}
                 }
             ]
@@ -276,19 +309,35 @@
                 },
                 {
                     "name": "理（蓝）",
-                    "pipeline_override": {}
+                    "pipeline_override": {
+                        "清体力_作战认证书": {
+                            "next": "清体力_蓝本"
+                        }
+                    }
                 },
                 {
                     "name": "信（绿）",
-                    "pipeline_override": {}
+                    "pipeline_override": {
+                        "清体力_作战认证书": {
+                            "next": "清体力_绿本"
+                        }
+                    }
                 },
                 {
                     "name": "正（黄）",
-                    "pipeline_override": {}
+                    "pipeline_override": {
+                        "清体力_作战认证书": {
+                            "next": "清体力_黄本下划"
+                        }
+                    }
                 },
                 {
                     "name": "奇（紫）",
-                    "pipeline_override": {}
+                    "pipeline_override": {
+                        "清体力_作战认证书": {
+                            "next": "清体力_紫本下划"
+                        }
+                    }
                 }
             ]
         },
@@ -296,23 +345,43 @@
             "cases": [
                 {
                     "name": "强攻型",
-                    "pipeline_override": {}
+                    "pipeline_override": {
+                        "清体力_演练卷": {
+                            "next": "清体力_强攻本"
+                        }
+                    }
                 },
                 {
                     "name": "特攻型",
-                    "pipeline_override": {}
+                    "pipeline_override": {
+                        "清体力_演练卷": {
+                            "next": "清体力_特攻本"
+                        }
+                    }
                 },
                 {
                     "name": "突击型",
-                    "pipeline_override": {}
+                    "pipeline_override": {
+                        "清体力_演练卷": {
+                            "next": "清体力_突击本"
+                        }
+                    }
                 },
                 {
                     "name": "防护型",
-                    "pipeline_override": {}
+                    "pipeline_override": {
+                        "清体力_演练卷": {
+                            "next": "清体力_防护本下划"
+                        }
+                    }
                 },
                 {
                     "name": "辅助型",
-                    "pipeline_override": {}
+                    "pipeline_override": {
+                        "清体力_演练卷": {
+                            "next": "清体力_辅助本下划"
+                        }
+                    }
                 }
             ]
         },
@@ -320,39 +389,102 @@
             "cases": [
                 {
                     "name": "逆转言弹/合作厨房",
-                    "pipeline_override": {}
+                    "pipeline_override": {
+                        "清体力_卡带堆顶": {
+                            "next": "清体力_逆转合作"
+                        },
+                        "清体力_选择卡带": {
+                            "next": "清体力_逆转合作"
+                        }
+                    }
                 },
                 {
                     "name": "剪影格斗/宝塔奇兵",
-                    "pipeline_override": {}
+                    "pipeline_override": {
+                        "清体力_卡带堆顶": {
+                            "next": "清体力_顿悟者"
+                        },
+                        "清体力_选择卡带": {
+                            "next": "清体力_顿悟者"
+                        }
+                    }
                 },
                 {
                     "name": "拳如雨下/圣殿编年史",
-                    "pipeline_override": {}
+                    "pipeline_override": {
+                        "清体力_卡带堆顶": {
+                            "next": "清体力_苦修者"
+                        },
+                        "清体力_选择卡带": {
+                            "next": "清体力_苦修者"
+                        }
+                    }
                 },
                 {
                     "name": "毛球怪幸存者/红月圆舞曲",
-                    "pipeline_override": {}
+                    "pipeline_override": {
+                        "清体力_卡带堆顶": {
+                            "next": "清体力_隐世者"
+                        },
+                        "清体力_选择卡带": {
+                            "next": "清体力_隐世者"
+                        }
+                    }
                 },
                 {
                     "name": "粉色球形食堂/凶缘",
-                    "pipeline_override": {}
+                    "pipeline_override": {
+                        "清体力_卡带堆顶": {
+                            "next": "清体力_惊惧者"
+                        },
+                        "清体力_选择卡带": {
+                            "next": "清体力_惊惧者"
+                        }
+                    }
                 },
                 {
                     "name": "义体医生/无主禁野",
-                    "pipeline_override": {}
+                    "pipeline_override": {
+                        "清体力_卡带堆顶": {
+                            "next": "清体力_改造者"
+                        },
+                        "清体力_选择卡带": {
+                            "next": "清体力_改造者"
+                        }
+                    }
                 },
                 {
                     "name": "电音浪客/机甲核心",
-                    "pipeline_override": {}
+                    "pipeline_override": {
+                        "清体力_卡带堆顶": {
+                            "next": "清体力_震荡者"
+                        },
+                        "清体力_选择卡带": {
+                            "next": "清体力_震荡者"
+                        }
+                    }
                 },
                 {
                     "name": "恶灵公馆/日冕协议",
-                    "pipeline_override": {}
+                    "pipeline_override": {
+                        "清体力_卡带堆顶": {
+                            "next": "清体力_扭曲者"
+                        },
+                        "清体力_选择卡带": {
+                            "next": "清体力_扭曲者"
+                        }
+                    }
                 },
                 {
                     "name": "星河战士/绝北高墙",
-                    "pipeline_override": {}
+                    "pipeline_override": {
+                        "清体力_卡带堆顶": {
+                            "next": "清体力_冷酷者"
+                        },
+                        "清体力_选择卡带": {
+                            "next": "清体力_冷酷者"
+                        }
+                    }
                 }
             ]
         },

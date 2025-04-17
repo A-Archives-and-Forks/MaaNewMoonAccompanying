@@ -1,6 +1,7 @@
 # others
 MFAAvalonia/*
 !MFAAvalonia/.gitkeep
+测试/
 
 # docs
 docs/node_modules

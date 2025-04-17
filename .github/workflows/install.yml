@@ -63,6 +63,8 @@ jobs:
             arch: aarch64
           - os: linux
             arch: x86_64
+          - os: android
+            arch: aarch64
       fail-fast: false
       
     steps:
@@ -149,11 +151,4 @@ jobs:
         with:
           files: assets/*
           tag_name: ${{ needs.meta.outputs.tag }}
-          # body: | 
-          #   ## 新增
-
-          #   - 新增功能
-
-          #   ## 优化修复
-
-          #   - 修复问题
+          generate_release_notes: true

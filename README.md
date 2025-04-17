@@ -7,11 +7,21 @@
 
 # MNMA - 新月同行小助手</br>MaaNewMoonAccompanying</br>✨ 组长们的超级秋千人✨ 
 
-项目正在绝赞开发中！
+基于全新架构的 [**新月同行**](https://xytx.firewick.net/home) 小助手<br/>图像技术 + 模拟控制，解放双手，由 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 与 [MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia) 强力驱动！
+
+<p align="center">
+  <img alt="license" src="https://img.shields.io/github/license/kqcoxn/MaaNewMoonAccompanying">
+  <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white">
+  <img alt="platform" src="https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-blueviolet">
+  <img alt="commit" src="https://img.shields.io/github/commit-activity/m/kqcoxn/MaaNewMoonAccompanying">
+  <!-- <img alt="stars" src="https://img.shields.io/github/stars/kqcoxn/MaaNewMoonAccompanying?style=social"> -->
+</p>
+
+**项目正在绝赞开发中！**
 
 </div>
 
-## 开发进度
+## 开发计划
 
 > 在开发测试期间，可能会出现任何意想不到的问题，请谨慎使用！
 
@@ -19,11 +29,11 @@
 
 - [x] 自动登录（领取签到）
 - [x] 城市探索（资源收取、制造订单、设施管理、传闻调查）
-- [ ] 城市事件
+- [ ] 城市事件（**_v0.4.0即将上线！_**）
 - [x] 每日采购（每日免费、数构银物资）
 - [x] 领取奖励（任务/手册）
 - [x] 友谊交换
-- [ ] 消耗现实度（即清体力，支持任意材料）（**_v0.3.0即将上线！_**）
+- [x] 清体力（支持所有资源）
 - [ ] 自动卡带特征激活（游戏改版后开发）
 - [ ] 自动站台肉鸽
 - [x] 【禅世遗香】领取每日奖励
@@ -35,21 +45,42 @@
 
 ## 使用方式
 
+### 使用教程
+
+> 教程视频正在筹备中，预计正式版更新。
+
 当前可以使用命令行或GUI运行，根据提示进行下一步操作即可。
 
 **每次版本更新后请手动把仅第一次出现的界面过一遍！**
 
-功能说明：
+### 常驻功能
 
-|           功能           |    初始界面     | 结束界面 |              注意事项              |
-| :----------------------: | :-------------: | :------: | :--------------------------------: |
-|         自动登录         | 进入游戏前/首页 |   首页   |   活动奖励可能出问题，请注意更新   |
-|         城市探索         |      首页       |   首页   |                 -                  |
-|         每日采购         |      首页       |   首页   |                 -                  |
-|         友谊交换         |      首页       |   首页   |                 -                  |
-|         领取奖励         |      首页       |   首页   |   每次手册更新后需要手动进入一次   |
-| 【禅世遗香】领取每日奖励 |      首页       |   首页   | 版本更新后请先进入活动过完开场动画 |
-|         退出游戏         |  首页/任意界面  |    -     |        是否仅首页功能可配置        |
+|   功能   |    初始界面     | 结束界面 |            注意事项            |
+| :------: | :-------------: | :------: | :----------------------------: |
+| 自动登录 | 进入游戏前/首页 |   首页   | 活动奖励可能出问题，请注意更新 |
+| 每日采购 |      首页       |   首页   |               -                |
+| 友谊交换 |      首页       |   首页   |               -                |
+|  清体力  |      首页       |   首页   |               -                |
+| 城市探索 |      首页       |   首页   |               -                |
+| 领取奖励 |      首页       |   首页   | 每次手册更新后需要手动进入一次 |
+| 退出游戏 |  首页/任意界面  |    -     |               -                |
+
+### 活动功能
+
+**版本更新后请先进入活动过完开场动画！**
+
+#### 禅世遗香
+
+> 2025.4.3 - 2025.4.30
+
+|     功能     | 初始界面 | 结束界面 | 注意事项 |
+| :----------: | :------: | :------: | :------: |
+| 领取每日奖励 |   首页   |   首页   |    -     |
+
+<!-- <details>
+<summary>往期活动</summary>
+
+</details> -->
 
 ## 常见问题
 
@@ -67,6 +98,16 @@
 ## 更新记录
 
 <!-- ### Next Release (Committed but Unreleased) -->
+
+### v0.3.0
+
+> 2025.4.18
+
+- **新增**
+  - 实装自动战斗功能
+
+<details>
+<summary>更早的版本</summary>
 
 ### v0.2.7
 
@@ -137,9 +178,6 @@
 - 将 GUI 迁移至 [MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia/tree/master)
 - ~~抓了只秋千人当 icon~~
 
-<details>
-<summary>更早的版本</summary>
-
 ### v0.1.1
 
 > 2025.3.23
@@ -160,7 +198,8 @@
 
 ## 鸣谢
 
-本项目由 **[MaaFramework](https://github.com/MaaXYZ/MaaFramework)** 强力驱动！
-
+- 本项目由 **[MaaFramework](https://github.com/MaaXYZ/MaaFramework)** 强力驱动！
 - GUI：[MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia/tree/master)
 - Pipeline 编辑器：[YAMaaPE](https://github.com/kqcoxn/YAMaaPE)
+
+游戏官网：[烛薪网络-新月同行](https://xytx.firewick.net/home)
