@@ -1,0 +1,35 @@
+name: mirrorchyan
+
+on:
+  workflow_dispatch:
+
+jobs:
+  mirrorchyan:
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        # os: [win, macos, linux, android]
+        # arch: [x86_64, aarch64]
+        include: 
+          - os: win
+            arch: x86_64
+          - os: macos
+            arch: aarch64
+          - os: linux
+            arch: x86_64
+          - os: android
+            arch: aarch64
+      fail-fast: false
+    steps:
+      - uses: MirrorChyan/uploading-action@v1
+        with:
+          filetype: latest-release
+          filename: "*-${{ matrix.os }}-${{ matrix.arch }}-*.zip"
+          mirrorchyan_rid: MNMA
+
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          owner: ${{ github.repository_owner }}
+          repo: ${{ github.event.repository.name }}
+          upload_token: ${{ secrets.MirrorChyanUploadToken }}
+          os: ${{ matrix.os }}
+          arch: ${{ matrix.arch }}
