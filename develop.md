@@ -24,6 +24,6 @@ git add .
 git commit -m "Update:v0.3.1"
 git push github main
 
-git tag -a v0.3.1 -m "Release v0.3.1"
-git push github v0.3.1
+git tag -a v0.3.2 -m "Release v0.3.2"
+git push github v0.3.2
 ```

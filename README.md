@@ -77,6 +77,13 @@
 
 <!-- ### Next Release (Committed but Unreleased) -->
 
+### v0.3.2
+
+> 2025.4.19
+
+- **新增**
+  - [mirror 酱](https://mirrorchyan.com/zh/get-start) 支持！
+
 ### v0.3.1
 
 > 2025.4.18
@@ -188,6 +195,7 @@
 
 - 本项目由 **[MaaFramework](https://github.com/MaaXYZ/MaaFramework)** 强力驱动！
 - GUI：[MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia/tree/master)
+- 分发：[mirror酱](https://mirrorchyan.com/zh/get-start)
 - Pipeline 编辑器：[YAMaaPE](https://github.com/kqcoxn/YAMaaPE)
 
 游戏官网：[烛薪网络-新月同行](https://xytx.firewick.net/home)
