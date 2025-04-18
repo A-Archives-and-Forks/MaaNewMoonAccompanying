@@ -11,76 +11,52 @@
 
 <p align="center">
   <img src="https://img.shields.io/github/license/kqcoxn/MaaNewMoonAccompanying">
-  <img src="https://img.shields.io/badge/Pipeline-%23454545?logo=paddypower&logoColor=%23FFFFFF">
   <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white">
+  <img src="https://img.shields.io/badge/Pipeline-%23454545?logo=paddypower&logoColor=%23FFFFFF">
   <img src="https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS%20%7C%20android-blueviolet">
   <img src="https://img.shields.io/github/commit-activity/m/kqcoxn/MaaNewMoonAccompanying">
-  <img alt="stars" src="https://img.shields.io/github/stars/kqcoxn/MaaNewMoonAccompanying?style=social">
+  <img src="https://img.shields.io/github/stars/kqcoxn/MaaNewMoonAccompanying?style=social">
+  <img src="https://img.shields.io/badge/Group-993245868-0e80c1?logo=qq&logoColor=white&url=http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=VMC132QhbMDLi5U62MlDRvtCMj9WOXRr&authKey=yJNKO4sQ%2BBFHpBCLSSEvVOAyz%2FPjknNSl70W3ugg2%2BpELnKmEiHamj1emJMWcLwQ&noverify=0&group_code=993245868">
 </p>
-
-**项目正在绝赞开发中！**
 
 </div>
 
-## 开发计划
+## 功能列表
 
-> 在开发测试期间，可能会出现任何意想不到的问题，请谨慎使用！
-
-开发计划：
+### 常驻功能
 
 - [x] 自动登录（领取签到）
-- [x] 城市探索（资源收取、制造订单、设施管理、传闻调查）
-- [ ] 城市事件（**_即将上线！_**）
+- [x] 城市探索（资源收取、制造订单、设施管理、传闻调查、城市事件）
 - [x] 每日采购（每日免费、数构银物资）
 - [x] 领取奖励（任务/手册）
 - [x] 友谊交换
 - [x] 清体力（支持所有资源）
-- [ ] 自动卡带特征激活（游戏改版后开发）
 - [ ] 自动站台肉鸽
-- 更多活动功能适配（EX关卡、小游戏等，开发量较大，可能端上来比较慢）
+- [ ] 自动卡带特征激活（游戏改版后开发）
 
 \* 若有其他功能需求请提交 [issue](https://github.com/kqcoxn/MaaNewMoonAccompanying/issues?q=is%3Aissue)
 
-<!-- **如果你也是开发者，可以瞅一眼我的另一个项目 [YAMaaPE](https://github.com/kqcoxn/YAMaaPE)，可以使用基于 Web 的流水线 GUI 编辑你的 Pipeline！** -->
-
-## 使用方式
-
-### 使用教程
-
-> 教程视频正在筹备中，预计正式版更新。
-
-当前可以使用命令行或GUI运行，根据提示进行下一步操作即可。
-
-**每次版本更新后请手动把仅第一次出现的界面过一遍！**
-
-### 常驻功能
-
-|   功能   |    初始界面     | 结束界面 |                  注意事项                  |
-| :------: | :-------------: | :------: | :----------------------------------------: |
-| 自动登录 | 进入游戏前/首页 |   首页   |       活动奖励可能出问题，请注意更新       |
-| 每日采购 |      首页       |   首页   |                     -                      |
-| 友谊交换 |      首页       |   首页   |                     -                      |
-|  清体力  |      首页       |   首页   |                     -                      |
-| 城市探索 |      首页       |   首页   | 城市事件需都已完成，目前无法完成行动类事件 |
-| 领取奖励 |      首页       |   首页   |       每次手册更新后需要手动进入一次       |
-| 退出游戏 |  首页/任意界面  |    -     |                     -                      |
-
 ### 活动功能
 
-**版本更新后请先进入活动过完开场动画！**
+> 本期活动：禅世遗香 (2025.4.3 - 2025.4.30)
 
-#### 禅世遗香
+- [x] 领取每日禅香
 
-> 2025.4.3 - 2025.4.30
-
-|     功能     | 初始界面 | 结束界面 | 注意事项 |
-| :----------: | :------: | :------: | :------: |
-| 领取每日奖励 |   首页   |   首页   |    -     |
+\* 不在列表上的活动不会开发
 
 <!-- <details>
 <summary>往期活动</summary>
 
 </details> -->
+
+## 使用教程
+
+> 教程视频正在筹备中，预计随正式版更新。
+
+**每次版本更新后请手动把仅第一次出现的界面过一遍！**
+
+- [文图教程](/docs/zh_cn/使用教程.md)
+
 
 ## 常见问题
 
@@ -99,12 +75,17 @@
 
 ## 更新记录
 
-### Next Release (Committed but Unreleased)
+<!-- ### Next Release (Committed but Unreleased) -->
+
+### v0.3.1
+
+> 2025.4.18
 
 - **新增**
-  - 自动城市事件
+  - 新增功能：自动城市事件（测试）
+  - 新增选项：清体力-自动使用稳定合剂
 - **修复优化**
-  - 优化了清体力的倍速判断机制
+  - 优化了清体力的倍速判断机制，提高效率
 
 ### v0.3.0
 
@@ -210,3 +191,8 @@
 - Pipeline 编辑器：[YAMaaPE](https://github.com/kqcoxn/YAMaaPE)
 
 游戏官网：[烛薪网络-新月同行](https://xytx.firewick.net/home)
+
+## 加入我们
+
+- 🐧~~吹水~~交流群：[993245868](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=VMC132QhbMDLi5U62MlDRvtCMj9WOXRr&authKey=yJNKO4sQ%2BBFHpBCLSSEvVOAyz%2FPjknNSl70W3ugg2%2BpELnKmEiHamj1emJMWcLwQ&noverify=0&group_code=993245868)
+
