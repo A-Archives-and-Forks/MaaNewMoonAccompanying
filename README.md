@@ -10,11 +10,12 @@
 基于全新架构的 [**新月同行**](https://xytx.firewick.net/home) 小助手<br/>图像技术 + 模拟控制，解放双手，由 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 与 [MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia) 强力驱动！
 
 <p align="center">
-  <img alt="license" src="https://img.shields.io/github/license/kqcoxn/MaaNewMoonAccompanying">
-  <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white">
-  <img alt="platform" src="https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-blueviolet">
-  <img alt="commit" src="https://img.shields.io/github/commit-activity/m/kqcoxn/MaaNewMoonAccompanying">
-  <!-- <img alt="stars" src="https://img.shields.io/github/stars/kqcoxn/MaaNewMoonAccompanying?style=social"> -->
+  <img src="https://img.shields.io/github/license/kqcoxn/MaaNewMoonAccompanying">
+  <img src="https://img.shields.io/badge/Pipeline-%23454545?logo=paddypower&logoColor=%23FFFFFF">
+  <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white">
+  <img src="https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS%20%7C%20android-blueviolet">
+  <img src="https://img.shields.io/github/commit-activity/m/kqcoxn/MaaNewMoonAccompanying">
+  <img alt="stars" src="https://img.shields.io/github/stars/kqcoxn/MaaNewMoonAccompanying?style=social">
 </p>
 
 **项目正在绝赞开发中！**
@@ -40,7 +41,7 @@
 
 \* 若有其他功能需求请提交 [issue](https://github.com/kqcoxn/MaaNewMoonAccompanying/issues?q=is%3Aissue)
 
-**如果你也是开发者，可以瞅一眼我的另一个项目 [YAMaaPE](https://github.com/kqcoxn/YAMaaPE)，可以使用基于 Web 的流水线 GUI 编辑你的 Pipeline！**
+<!-- **如果你也是开发者，可以瞅一眼我的另一个项目 [YAMaaPE](https://github.com/kqcoxn/YAMaaPE)，可以使用基于 Web 的流水线 GUI 编辑你的 Pipeline！** -->
 
 ## 使用方式
 

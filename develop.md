@@ -10,7 +10,7 @@ python -m MaaDebugger
 ## 构建程序
 
 ``` shell
-python ./install.py
+python ./install_and_run.py
 python ./build.py
 ```
 
