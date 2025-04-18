@@ -17,6 +17,7 @@
   <img src="https://img.shields.io/github/commit-activity/m/kqcoxn/MaaNewMoonAccompanying">
   <img src="https://img.shields.io/github/stars/kqcoxn/MaaNewMoonAccompanying?style=social">
   <img src="https://img.shields.io/badge/Group-993245868-0e80c1?logo=qq&logoColor=white&url=http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=VMC132QhbMDLi5U62MlDRvtCMj9WOXRr&authKey=yJNKO4sQ%2BBFHpBCLSSEvVOAyz%2FPjknNSl70W3ugg2%2BpELnKmEiHamj1emJMWcLwQ&noverify=0&group_code=993245868">
+  <img src="https://img.shields.io/badge/mirror酱-mirror酱?logo=&logoColor=white&url=https://mirrorchyan.com/zh/projects?rid=MNMA">
 </p>
 
 </div>
@@ -57,13 +58,15 @@
 
 - [文图教程](/docs/zh_cn/使用教程.md)
 
-
 ## 常见问题
 
 在一切问题之前，请先确保你的`Python`与`MaaFw`框架环境正常，具体可参考这篇 [issue](https://github.com/kqcoxn/MaaNewMoonAccompanying/issues/4)
 
 请确保现有 [issue](https://github.com/kqcoxn/MaaNewMoonAccompanying/issues?q=is%3Aissue) 中还没有与您遇到的类似的问题
 
+- **更新问题**
+  - **如果更新失败，且无法使用代理，可以试一试 [mirror酱](https://mirrorchyan.com/zh/projects?rid=MNMA)**！参考说明：[【Bilibili】震惊！MAA开启收费功能？！](https://www.bilibili.com/video/BV1cZFreLEja)
+  - 或者在[ QQ 群]((http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=VMC132QhbMDLi5U62MlDRvtCMj9WOXRr&authKey=yJNKO4sQ%2BBFHpBCLSSEvVOAyz%2FPjknNSl70W3ugg2%2BpELnKmEiHamj1emJMWcLwQ&noverify=0&group_code=993245868))内群文件下载最新版本，每次手动替换
 - **程序运行类**
   - [任务停留在“正在启动 Agent(耗时可能较久)”](https://github.com/kqcoxn/MaaNewMoonAccompanying/issues/4)
   - [修改连接部分的控制器ADB地址会卡死](https://github.com/kqcoxn/MaaNewMoonAccompanying/issues/2)
@@ -77,12 +80,12 @@
 
 <!-- ### Next Release (Committed but Unreleased) -->
 
-### v0.3.2
+### v0.3.3
 
 > 2025.4.19
 
 - **新增**
-  - [mirror 酱](https://mirrorchyan.com/zh/get-start) 支持！
+  - [mirror酱](https://mirrorchyan.com/zh/get-start) 支持！
 
 ### v0.3.1
 
