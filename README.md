@@ -96,7 +96,7 @@
 
 ## 更新记录
 
-> v0.3主要更新：全面日活！
+> v0.3 版本主要更新内容：全面日活！
 
 ### Next Release (Committed but Unreleased)
 

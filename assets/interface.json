@@ -29,7 +29,7 @@
     "task": [
         {
             "name": "说明",
-            "entry": "说明",
+            "entry": "清体力_设定合剂消耗",
             "option": [
                 "自动使用稳定合剂"
             ],
@@ -341,13 +341,7 @@
             "cases": [
                 {
                     "name": "不使用",
-                    "pipeline_override": {
-                        "清体力_设定合剂消耗": {
-                            "custom_action_param": {
-                                "times": 0
-                            }
-                        }
-                    }
+                    "pipeline_override": {}
                 },
                 {
                     "name": "使用1次",

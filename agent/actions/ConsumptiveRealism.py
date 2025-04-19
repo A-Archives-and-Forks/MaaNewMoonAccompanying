@@ -18,8 +18,9 @@ class SetEatTimes(CustomAction):
         global expected_times, used_times
 
         args = json.loads(argv.custom_action_param)
-        if args["times"]:
+        if args and args["times"]:
             expected_times = args["times"]
+            print(f"即将开始战斗，将自动使用 {expected_times} 次稳定合剂")
         else:
             expected_times = 0
         used_times = 0
@@ -38,6 +39,8 @@ class SetEatTimes(CustomAction):
         if used_times > expected_times:
             return CustomAction.RunResult(success=False)
         else:
-            print(f"第 {used_times} 次使用稳定合剂，剩余 {expected_times - used_times} 次")
+            print(
+                f"第 {used_times} 次使用稳定合剂，剩余 {expected_times - used_times} 次"
+            )
 
         return CustomAction.RunResult(success=True)
