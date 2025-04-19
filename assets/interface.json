@@ -4,7 +4,7 @@
     "custom_title": "新月同行小助手(kqcoxn/MaaNewMoonAccompanying) - MFA | 游戏版本：禅世遗香·下",
     "mirrorchyan_rid": "MNMA",
     "mirrorchyan_multiplatform": true,
-    "version": "v0.3.2",
+    "version": "v0.3.4",
     "message": "- 新 月 同 行 -",
     "controller": [
         {
@@ -29,7 +29,7 @@
     "task": [
         {
             "name": "说明",
-            "entry": "清体力_自动使用稳定合剂",
+            "entry": "说明",
             "option": [
                 "自动使用稳定合剂"
             ],

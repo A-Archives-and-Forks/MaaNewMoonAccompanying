@@ -66,7 +66,7 @@
 
 - **更新问题**
   - **如果更新失败，且无法使用代理，可以试一试 [Mirror酱](https://mirrorchyan.com/zh/projects?rid=MNMA)**！参考说明：[【Bilibili】震惊！MAA开启收费功能？！](https://www.bilibili.com/video/BV1cZFreLEja)
-  - 或者在[ QQ 群]((http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=VMC132QhbMDLi5U62MlDRvtCMj9WOXRr&authKey=yJNKO4sQ%2BBFHpBCLSSEvVOAyz%2FPjknNSl70W3ugg2%2BpELnKmEiHamj1emJMWcLwQ&noverify=0&group_code=993245868))内群文件下载最新版本，每次手动替换
+  - 或者在 [QQ群](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=VMC132QhbMDLi5U62MlDRvtCMj9WOXRr&authKey=yJNKO4sQ%2BBFHpBCLSSEvVOAyz%2FPjknNSl70W3ugg2%2BpELnKmEiHamj1emJMWcLwQ&noverify=0&group_code=993245868) 群文件内下载最新版本，每次手动替换
 - **程序运行类**
   - [任务停留在“正在启动 Agent(耗时可能较久)”](https://github.com/kqcoxn/MaaNewMoonAccompanying/issues/4)
   - [修改连接部分的控制器ADB地址会卡死](https://github.com/kqcoxn/MaaNewMoonAccompanying/issues/2)
