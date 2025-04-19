@@ -2,6 +2,8 @@
 MFAAvalonia/*
 !MFAAvalonia/.gitkeep
 测试/
+/recording/
+/vision/
 
 # docs
 docs/node_modules

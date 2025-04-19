@@ -1,4 +1,8 @@
 {
+    "__yamaape_config_清体力": {
+        "version": "v0.3.1",
+        "export": ""
+    },
     "清体力": {
         "__yamaape": {
             "position": {
@@ -155,6 +159,20 @@
             "清体力_设定合剂消耗"
         ]
     },
+    "清体力_设定合剂消耗": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "set_eat_times",
+        "__yamaape": {
+            "position": {
+                "x": 3671,
+                "y": 139
+            }
+        },
+        "next": [
+            "清体力_开始挑战4"
+        ]
+    },
     "清体力_开始挑战4": {
         "recognition": "OCR",
         "action": "Click",
@@ -168,12 +186,48 @@
                 "y": 138
             }
         },
-        "on_error": [
-            "清体力_4X行动"
-        ],
         "next": [
             "清体力_没的吃了",
             "清体力_判断合剂余量"
+        ],
+        "on_error": [
+            "清体力_4X行动"
+        ]
+    },
+    "清体力_没的吃了": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "是否消耗40个超相尘"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 2675,
+                "y": 361
+            }
+        },
+        "next": [
+            "清体力_返回倍率选择3"
+        ]
+    },
+    "清体力_判断合剂余量": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "是否消耗1个"
+        ],
+        "timeout": 1,
+        "__yamaape": {
+            "position": {
+                "x": 2930,
+                "y": 359
+            }
+        },
+        "next": [
+            "清体力_判断设定余量"
+        ],
+        "on_error": [
+            "清体力_返回倍率选择3"
         ]
     },
     "清体力_4X行动": {
@@ -192,7 +246,90 @@
             }
         },
         "next": [
+            "清体力_4X升级",
             "清体力_结束行动并检查"
+        ]
+    },
+    "清体力_返回倍率选择3": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/close.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 2932,
+                "y": 564
+            }
+        },
+        "next": [
+            "清体力_倍率选择3"
+        ]
+    },
+    "清体力_判断设定余量": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "check_eat_times",
+        "__yamaape": {
+            "position": {
+                "x": 3180,
+                "y": 359
+            }
+        },
+        "next": [
+            "清体力_使用稳定合剂"
+        ],
+        "on_error": [
+            "清体力_返回倍率选择3"
+        ]
+    },
+    "清体力_倍率选择3": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/cycle.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3187,
+                "y": 563
+            }
+        },
+        "next": [
+            "清体力_3X"
+        ]
+    },
+    "清体力_使用稳定合剂": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "确定"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3430,
+                "y": 356
+            }
+        },
+        "next": [
+            "清体力_关闭合剂界面"
+        ]
+    },
+    "清体力_结束行动并检查": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "确定"
+        ],
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 4523,
+                "y": -52
+            }
+        },
+        "next": [
+            "清体力_开始挑战4"
         ]
     },
     "清体力_数构银本": {
@@ -839,39 +976,6 @@
             "清体力_整流器本"
         ]
     },
-    "清体力_结束行动并检查": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "确定"
-        ],
-        "pre_delay": 400,
-        "__yamaape": {
-            "position": {
-                "x": 4519,
-                "y": -52
-            }
-        },
-        "next": [
-            "清体力_开始挑战4"
-        ]
-    },
-    "清体力_倍率选择3": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "../image/cycle.png"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 3173,
-                "y": 559
-            }
-        },
-        "next": [
-            "清体力_3X"
-        ]
-    },
     "清体力_3X": {
         "recognition": "OCR",
         "action": "Click",
@@ -888,8 +992,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 3425,
-                "y": 560
+                "x": 3439,
+                "y": 564
             }
         },
         "next": [
@@ -905,8 +1009,8 @@
         "timeout": 1000,
         "__yamaape": {
             "position": {
-                "x": 3674,
-                "y": 564
+                "x": 3693,
+                "y": 566
             }
         },
         "next": [
@@ -924,8 +1028,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 2913,
-                "y": 781
+                "x": 2927,
+                "y": 785
             }
         },
         "next": [
@@ -943,11 +1047,12 @@
         "post_delay": 20000,
         "__yamaape": {
             "position": {
-                "x": 3980,
-                "y": 571
+                "x": 4250,
+                "y": 569
             }
         },
         "next": [
+            "清体力_3X及以下升级",
             "清体力_行动结束"
         ]
     },
@@ -959,8 +1064,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 3158,
-                "y": 778
+                "x": 3172,
+                "y": 782
             }
         },
         "next": [
@@ -983,8 +1088,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 3420,
-                "y": 777
+                "x": 3434,
+                "y": 781
             }
         },
         "next": [
@@ -1000,8 +1105,8 @@
         "timeout": 1000,
         "__yamaape": {
             "position": {
-                "x": 3669,
-                "y": 785
+                "x": 3688,
+                "y": 787
             }
         },
         "next": [
@@ -1019,8 +1124,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 2917,
-                "y": 1018
+                "x": 2931,
+                "y": 1022
             }
         },
         "next": [
@@ -1035,8 +1140,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 3161,
-                "y": 1023
+                "x": 3175,
+                "y": 1027
             }
         },
         "next": [
@@ -1059,8 +1164,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 3419,
-                "y": 1022
+                "x": 3433,
+                "y": 1026
             }
         },
         "next": [
@@ -1076,8 +1181,8 @@
         "timeout": 1000,
         "__yamaape": {
             "position": {
-                "x": 3673,
-                "y": 1025
+                "x": 3692,
+                "y": 1027
             }
         },
         "next": [
@@ -1095,8 +1200,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 3949,
-                "y": 1191
+                "x": 4250,
+                "y": 1004
             }
         },
         "next": [
@@ -1113,126 +1218,10 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 4639,
-                "y": 1126
+                "x": 4829,
+                "y": 946
             }
         }
-    },
-    "清体力_行动结束": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "确定"
-        ],
-        "pre_delay": 400,
-        "__yamaape": {
-            "position": {
-                "x": 4256,
-                "y": 574
-            }
-        },
-        "next": [
-            "清体力_回到主页"
-        ]
-    },
-    "清体力_判断合剂余量": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "是否消耗1个"
-        ],
-        "timeout": 1,
-        "__yamaape": {
-            "position": {
-                "x": 2930,
-                "y": 359
-            }
-        },
-        "next": [
-            "清体力_判断设定余量"
-        ],
-        "on_error": [
-            "清体力_返回倍率选择3"
-        ]
-    },
-    "清体力_判断设定余量": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "check_eat_times",
-        "__yamaape": {
-            "position": {
-                "x": 3180,
-                "y": 359
-            }
-        },
-        "on_error": [
-            "清体力_返回倍率选择3"
-        ],
-        "next": [
-            "清体力_使用稳定合剂"
-        ]
-    },
-    "清体力_设定合剂消耗": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "set_eat_times",
-        "__yamaape": {
-            "position": {
-                "x": 3671,
-                "y": 139
-            }
-        },
-        "next": [
-            "清体力_开始挑战4"
-        ]
-    },
-    "清体力_返回倍率选择3": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "../image/close.png"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 2918,
-                "y": 560
-            }
-        },
-        "next": [
-            "清体力_倍率选择3"
-        ]
-    },
-    "清体力_没的吃了": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "是否消耗40个超相尘"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 2675,
-                "y": 361
-            }
-        },
-        "next": [
-            "清体力_返回倍率选择3"
-        ]
-    },
-    "清体力_使用稳定合剂": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "确定"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 3430,
-                "y": 356
-            }
-        },
-        "next": [
-            "清体力_关闭合剂界面"
-        ]
     },
     "清体力_关闭合剂界面": {
         "recognition": "OCR",
@@ -1248,6 +1237,74 @@
         },
         "next": [
             "清体力_开始挑战4"
+        ]
+    },
+    "清体力_行动结束": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "确定"
+        ],
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 4521,
+                "y": 757
+            }
+        },
+        "next": [
+            "清体力_回到主页"
+        ]
+    },
+    "清体力_4X升级": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击空白处关闭"
+        ],
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 4525,
+                "y": 189
+            }
+        },
+        "next": [
+            "清体力_结束行动并检查"
+        ]
+    },
+    "清体力_3X及以下升级": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击空白处关闭"
+        ],
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 4523,
+                "y": 562
+            }
+        },
+        "next": [
+            "清体力_再动"
+        ]
+    },
+    "清体力_再动": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "确定"
+        ],
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 4827,
+                "y": 376
+            }
+        },
+        "next": [
+            "清体力_倍率选择2"
         ]
     }
 }

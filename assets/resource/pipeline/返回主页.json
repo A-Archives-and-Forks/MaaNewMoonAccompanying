@@ -1,9 +1,9 @@
 {
-    "__yamaape_config": {
+    "__yamaape_config_返回主页": {
         "version": "v0.3.1",
         "export": ""
     },
-    "回到主页": {
+    "返回主页": {
         "__yamaape": {
             "position": {
                 "x": 0,
@@ -11,10 +11,10 @@
             }
         },
         "next": [
-            "回到主页_紧急撤离"
+            "返回主页_紧急撤离"
         ]
     },
-    "回到主页_紧急撤离": {
+    "返回主页_紧急撤离": {
         "recognition": "DirectHit",
         "action": "DoNothing",
         "timeout": 60000,
@@ -26,15 +26,15 @@
             }
         },
         "next": [
-            "回到主页_撤离成功"
+            "返回主页_撤离成功"
         ],
         "interrupt": [
-            "回到主页_图像类",
-            "回到主页_文本类",
-            "回到主页_盲目尝试1"
+            "返回主页_图像类",
+            "返回主页_文本类",
+            "返回主页_盲目尝试1"
         ]
     },
-    "回到主页_撤离成功": {
+    "返回主页_撤离成功": {
         "recognition": "OCR",
         "action": "DoNothing",
         "expected": [
@@ -47,42 +47,7 @@
             }
         }
     },
-    "回到主页_盲目尝试1": {
-        "recognition": "DirectHit",
-        "action": "Key",
-        "key": [
-            111
-        ],
-        "pre_delay": 1,
-        "__yamaape": {
-            "position": {
-                "x": 585,
-                "y": 466
-            }
-        },
-        "next": [
-            "回到主页_盲目尝试2"
-        ]
-    },
-    "回到主页_盲目尝试2": {
-        "recognition": "DirectHit",
-        "action": "Click",
-        "target": [
-            5,
-            5,
-            1,
-            1
-        ],
-        "pre_delay": 1,
-        "post_delay": 1,
-        "__yamaape": {
-            "position": {
-                "x": 848,
-                "y": 461
-            }
-        }
-    },
-    "回到主页_图像类": {
+    "返回主页_图像类": {
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
@@ -107,7 +72,7 @@
             }
         }
     },
-    "回到主页_文本类": {
+    "返回主页_文本类": {
         "recognition": "OCR",
         "action": "Click",
         "expected": [
@@ -119,6 +84,41 @@
             "position": {
                 "x": 586,
                 "y": 275
+            }
+        }
+    },
+    "返回主页_盲目尝试1": {
+        "recognition": "DirectHit",
+        "action": "Key",
+        "key": [
+            111
+        ],
+        "pre_delay": 1,
+        "__yamaape": {
+            "position": {
+                "x": 585,
+                "y": 466
+            }
+        },
+        "next": [
+            "返回主页_盲目尝试2"
+        ]
+    },
+    "返回主页_盲目尝试2": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            5,
+            5,
+            1,
+            1
+        ],
+        "pre_delay": 1,
+        "post_delay": 1,
+        "__yamaape": {
+            "position": {
+                "x": 848,
+                "y": 461
             }
         }
     }
