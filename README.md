@@ -10,14 +10,15 @@
 基于全新架构的 [**新月同行**](https://xytx.firewick.net/home) 小助手<br/>图像技术 + 模拟控制，解放双手，由 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 与 [MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia) 强力驱动！
 
 <p align="center">
-  <img src="https://img.shields.io/github/license/kqcoxn/MaaNewMoonAccompanying">
   <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white">
   <img src="https://img.shields.io/badge/Pipeline-%23454545?logo=paddypower&logoColor=%23FFFFFF">
-  <img src="https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS%20%7C%20android-blueviolet">
+  <img src="https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-blueviolet">
+  <img src="https://img.shields.io/badge/proxy-Mirror酱-8fbd08?logo=&logoColor=white&url=https://mirrorchyan.com/zh/projects?rid=MNMA">
+  <br/>
+  <!-- <img src="https://img.shields.io/github/license/kqcoxn/MaaNewMoonAccompanying"> -->
   <img src="https://img.shields.io/github/commit-activity/m/kqcoxn/MaaNewMoonAccompanying">
   <img src="https://img.shields.io/github/stars/kqcoxn/MaaNewMoonAccompanying?style=social">
   <img src="https://img.shields.io/badge/Group-993245868-0e80c1?logo=qq&logoColor=white&url=http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=VMC132QhbMDLi5U62MlDRvtCMj9WOXRr&authKey=yJNKO4sQ%2BBFHpBCLSSEvVOAyz%2FPjknNSl70W3ugg2%2BpELnKmEiHamj1emJMWcLwQ&noverify=0&group_code=993245868">
-  <img src="https://img.shields.io/badge/Mirror酱-Mirror酱?logo=&logoColor=white&url=https://mirrorchyan.com/zh/projects?rid=MNMA">
 </p>
 
 </div>
@@ -43,7 +44,7 @@
 
 - [x] 领取每日禅香
 
-\* 不在列表上的活动不会开发
+\* 不在列表上的活动功能不会开发
 
 <!-- <details>
 <summary>往期活动</summary>
@@ -83,6 +84,7 @@
 - **修复优化**
   - 修复了启动游戏时有概率卡在校准现实界面的问题
   - 修复了新调查提醒会卡住的问题，优化了识别逻辑，提高稳定性
+  - 优化了城市事件相关逻辑
 
 ### v0.3.3
 

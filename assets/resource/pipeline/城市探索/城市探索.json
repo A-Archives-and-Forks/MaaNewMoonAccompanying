@@ -835,7 +835,7 @@
             500,
             100
         ],
-        "post_delay": 100,
+        "post_delay": 50,
         "pre_delay": 1,
         "__yamaape": {
             "position": {
@@ -1117,7 +1117,7 @@
             500,
             100
         ],
-        "post_delay": 100,
+        "post_delay": 50,
         "pre_delay": 1,
         "__yamaape": {
             "position": {
@@ -1135,7 +1135,7 @@
             500,
             100
         ],
-        "post_delay": 100,
+        "post_delay": 50,
         "pre_delay": 1,
         "__yamaape": {
             "position": {
@@ -1185,7 +1185,7 @@
             500,
             100
         ],
-        "post_delay": 100,
+        "post_delay": 50,
         "pre_delay": 1,
         "__yamaape": {
             "position": {
