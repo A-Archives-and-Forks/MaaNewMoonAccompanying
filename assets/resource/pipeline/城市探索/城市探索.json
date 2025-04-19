@@ -6,8 +6,8 @@
     "城市探索": {
         "__yamaape": {
             "position": {
-                "x": -438,
-                "y": 49
+                "x": -443,
+                "y": 569
             }
         },
         "next": [
@@ -23,8 +23,8 @@
         "post_delay": 2000,
         "__yamaape": {
             "position": {
-                "x": -237,
-                "y": 17
+                "x": -242,
+                "y": 537
             }
         },
         "next": [
@@ -40,8 +40,8 @@
         "timeout": 2000,
         "__yamaape": {
             "position": {
-                "x": 30,
-                "y": 95
+                "x": 25,
+                "y": 615
             }
         },
         "next": [
@@ -61,8 +61,8 @@
         "pre_delay": 1000,
         "__yamaape": {
             "position": {
-                "x": 314,
-                "y": 245
+                "x": 309,
+                "y": 765
             }
         },
         "next": [
@@ -78,8 +78,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 587,
-                "y": -168
+                "x": 582,
+                "y": 352
             }
         },
         "next": [
@@ -94,8 +94,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 604,
-                "y": 0
+                "x": 599,
+                "y": 520
             }
         },
         "next": [
@@ -111,8 +111,8 @@
         "timeout": 1000,
         "__yamaape": {
             "position": {
-                "x": 837,
-                "y": -216
+                "x": 832,
+                "y": 304
             }
         },
         "next": [
@@ -127,8 +127,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 854,
-                "y": 45
+                "x": 849,
+                "y": 565
             }
         },
         "next": [
@@ -146,8 +146,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 1075,
-                "y": -216
+                "x": 1070,
+                "y": 304
             }
         },
         "next": [
@@ -162,8 +162,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 612,
-                "y": 207
+                "x": 607,
+                "y": 727
             }
         },
         "next": [
@@ -180,8 +180,8 @@
         "pre_delay": 500,
         "__yamaape": {
             "position": {
-                "x": 957,
-                "y": -433
+                "x": 952,
+                "y": 87
             }
         },
         "next": [
@@ -199,8 +199,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 868,
-                "y": 204
+                "x": 863,
+                "y": 724
             }
         },
         "next": [
@@ -216,8 +216,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 1320,
-                "y": -174
+                "x": 1315,
+                "y": 346
             }
         },
         "next": [
@@ -232,8 +232,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 1131,
-                "y": 204
+                "x": 1126,
+                "y": 724
             }
         },
         "next": [
@@ -248,8 +248,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 645,
-                "y": 376
+                "x": 640,
+                "y": 896
             }
         },
         "next": [
@@ -264,8 +264,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 898,
-                "y": 372
+                "x": 893,
+                "y": 892
             }
         },
         "next": [
@@ -280,8 +280,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 1146,
-                "y": 368
+                "x": 1141,
+                "y": 888
             }
         },
         "next": [
@@ -300,8 +300,8 @@
         "timeout": 1000,
         "__yamaape": {
             "position": {
-                "x": 1405,
-                "y": 352
+                "x": 1400,
+                "y": 872
             }
         },
         "next": [
@@ -319,8 +319,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 678,
-                "y": 563
+                "x": 673,
+                "y": 1083
             }
         },
         "next": [
@@ -336,8 +336,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 1188,
-                "y": 548
+                "x": 1183,
+                "y": 1068
             }
         },
         "next": [
@@ -353,8 +353,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 931,
-                "y": 563
+                "x": 926,
+                "y": 1083
             }
         },
         "next": [
@@ -370,8 +370,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 1446,
-                "y": 545
+                "x": 1441,
+                "y": 1065
             }
         },
         "next": [
@@ -387,8 +387,8 @@
         "timeout": 2000,
         "__yamaape": {
             "position": {
-                "x": 1780,
-                "y": -477
+                "x": 464,
+                "y": 1397
             }
         },
         "next": [
@@ -411,8 +411,8 @@
         "timeout": 1000,
         "__yamaape": {
             "position": {
-                "x": 2037,
-                "y": -518
+                "x": 798,
+                "y": 1769
             }
         },
         "next": [
@@ -427,8 +427,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 2041,
-                "y": -339
+                "x": 781,
+                "y": 1372
             }
         }
     },
@@ -441,8 +441,8 @@
         "pre_delay": 200,
         "__yamaape": {
             "position": {
-                "x": 2038,
-                "y": -187
+                "x": 1444,
+                "y": 1441
             }
         },
         "next": [
@@ -458,8 +458,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 2271,
-                "y": -515
+                "x": 1032,
+                "y": 1772
             }
         },
         "next": [
@@ -516,8 +516,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 2153,
-                "y": -737
+                "x": 917,
+                "y": 1548
             }
         },
         "next": [
@@ -576,8 +576,8 @@
         "post_delay": 3000,
         "__yamaape": {
             "position": {
-                "x": 3140,
-                "y": -403
+                "x": 2971,
+                "y": -51
             }
         }
     },
@@ -777,6 +777,9 @@
         },
         "next": [
             "城市探索_获取事件奖励"
+        ],
+        "interrupt": [
+            "城市探索_确定跳过剧情"
         ]
     },
     "城市探索_新剧情": {
@@ -812,12 +815,17 @@
         "rate_limit": 2000,
         "__yamaape": {
             "position": {
-                "x": 3159,
-                "y": 763
+                "x": 3421,
+                "y": 704
             }
         },
         "next": [
             "城市探索_获取事件奖励"
+        ],
+        "interrupt": [
+            "城市探索_跳过战后剧情",
+            "城市探索_确定跳过战后剧情",
+            "城市探索_新战后剧情"
         ]
     },
     "城市探索_跳过战前剧情": {
@@ -829,10 +837,13 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 3161,
-                "y": 1034
+                "x": 3151,
+                "y": 882
             }
-        }
+        },
+        "interrupt": [
+            "城市探索_确定跳过战前剧情"
+        ]
     },
     "城市探索_新战前剧情": {
         "recognition": "TemplateMatch",
@@ -850,8 +861,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 3161,
-                "y": 1211
+                "x": 3151,
+                "y": 1059
             }
         }
     },
@@ -871,46 +882,7 @@
         },
         "next": [
             "城市探索_执行事件"
-        ],
-        "interrupt": [
-            "城市探索_跳过战后剧情",
-            "城市探索_新战后剧情"
         ]
-    },
-    "城市探索_跳过战后剧情": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "../image/jump.png"
-        ],
-        "pre_delay": 400,
-        "__yamaape": {
-            "position": {
-                "x": 4933,
-                "y": 123
-            }
-        }
-    },
-    "城市探索_新战后剧情": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "pre_delay": 1,
-        "post_delay": 100,
-        "target": [
-            25,
-            200,
-            1,
-            1
-        ],
-        "template": [
-            "../image/log.png"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 4934,
-                "y": 309
-            }
-        }
     },
     "城市探索_发言1": {
         "recognition": "TemplateMatch",
@@ -1212,8 +1184,85 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 2530,
-                "y": -515
+                "x": 1291,
+                "y": 1772
+            }
+        }
+    },
+    "城市探索_确定跳过剧情": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "确定"
+        ],
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 3421,
+                "y": 401
+            }
+        }
+    },
+    "城市探索_确定跳过战前剧情": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "确定"
+        ],
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 3419,
+                "y": 987
+            }
+        }
+    },
+    "城市探索_跳过战后剧情": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/jump.png"
+        ],
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 3719,
+                "y": 791
+            }
+        }
+    },
+    "城市探索_确定跳过战后剧情": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "确定"
+        ],
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 3719,
+                "y": 974
+            }
+        }
+    },
+    "城市探索_新战后剧情": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "pre_delay": 1,
+        "post_delay": 100,
+        "target": [
+            25,
+            200,
+            1,
+            1
+        ],
+        "template": [
+            "../image/log.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3719,
+                "y": 1153
             }
         }
     }
