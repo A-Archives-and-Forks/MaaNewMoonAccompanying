@@ -2,8 +2,8 @@
     "启动游戏": {
         "__yamaape": {
             "position": {
-                "x": 65,
-                "y": 17
+                "x": 38,
+                "y": 16
             }
         },
         "next": [
@@ -51,7 +51,7 @@
         "expected": [
             "校准现实"
         ],
-        "pre_delay": 1000,
+        "pre_delay": 2000,
         "timeout": 10000,
         "post_delay": 5000,
         "__yamaape": {
@@ -103,7 +103,7 @@
             "确定"
         ],
         "timeout": 600000,
-        "rate_limit": 10000,
+        "rate_limit": 3000,
         "pre_delay": 400,
         "__yamaape": {
             "position": {
@@ -149,6 +149,24 @@
             "启动游戏_关闭签到界面2"
         ]
     },
+    "启动游戏_防止公告延迟": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "timeout": 2000,
+        "post_delay": 3000,
+        "__yamaape": {
+            "position": {
+                "x": 1612,
+                "y": 137
+            }
+        },
+        "next": [
+            "启动游戏_关闭公告"
+        ],
+        "on_error": [
+            "启动游戏_确认结束1"
+        ]
+    },
     "启动游戏_关闭签到界面2": {
         "recognition": "DirectHit",
         "action": "Click",
@@ -168,6 +186,24 @@
         "next": [
             "启动游戏_关闭签到界面3"
         ]
+    },
+    "启动游戏_关闭签到界面3": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            25,
+            200,
+            1,
+            1
+        ],
+        "post_delay": 2000,
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 1855,
+                "y": -81
+            }
+        }
     },
     "启动游戏_关闭公告": {
         "recognition": "TemplateMatch",
@@ -198,24 +234,6 @@
         "next": [
             "启动游戏_关闭其他界面1"
         ]
-    },
-    "启动游戏_关闭签到界面3": {
-        "recognition": "DirectHit",
-        "action": "Click",
-        "target": [
-            25,
-            200,
-            1,
-            1
-        ],
-        "post_delay": 2000,
-        "timeout": 1000,
-        "__yamaape": {
-            "position": {
-                "x": 1855,
-                "y": -81
-            }
-        }
     },
     "启动游戏_关闭其他界面1": {
         "recognition": "DirectHit",
@@ -311,6 +329,32 @@
             "启动游戏_结束任务1"
         ]
     },
+    "启动游戏_日期矩阵": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": 2757,
+                "y": 396
+            }
+        },
+        "next": [
+            "启动游戏_7"
+        ]
+    },
+    "启动游戏_结束任务1": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": 4069,
+                "y": 505
+            }
+        },
+        "next": [
+            "启动游戏_领取邮件"
+        ]
+    },
     "启动游戏_领取今日奖励": {
         "recognition": "OCR",
         "action": "Click",
@@ -347,30 +391,22 @@
             "启动游戏_结束任务1"
         ]
     },
-    "启动游戏_结束任务1": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
+    "启动游戏_领取邮件": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/email.png"
+        ],
+        "pre_delay": 400,
+        "post_delay": 1000,
         "__yamaape": {
             "position": {
-                "x": 4069,
-                "y": 505
+                "x": 4328,
+                "y": 478
             }
         },
         "next": [
-            "启动游戏_领取邮件"
-        ]
-    },
-    "启动游戏_日期矩阵": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "__yamaape": {
-            "position": {
-                "x": 2757,
-                "y": 396
-            }
-        },
-        "next": [
-            "启动游戏_7"
+            "启动游戏_领取全部邮件"
         ]
     },
     "启动游戏_7": {
@@ -562,24 +598,6 @@
             "启动游戏_关闭签到界面"
         ]
     },
-    "启动游戏_领取邮件": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "../image/email.png"
-        ],
-        "pre_delay": 400,
-        "post_delay": 1000,
-        "__yamaape": {
-            "position": {
-                "x": 4328,
-                "y": 478
-            }
-        },
-        "next": [
-            "启动游戏_领取全部邮件"
-        ]
-    },
     "启动游戏_领取全部邮件": {
         "recognition": "OCR",
         "action": "Click",
@@ -635,22 +653,19 @@
             }
         }
     },
-    "启动游戏_防止公告延迟": {
+    "启动游戏_关闭游戏": {
         "recognition": "DirectHit",
-        "action": "DoNothing",
-        "timeout": 2000,
-        "post_delay": 3000,
+        "action": "StopApp",
+        "package": "com.firewick.p42",
+        "post_delay": 2000,
         "__yamaape": {
             "position": {
-                "x": 1612,
-                "y": 137
+                "x": 220,
+                "y": -223
             }
         },
         "next": [
-            "启动游戏_关闭公告"
-        ],
-        "on_error": [
-            "启动游戏_确认结束1"
+            "启动游戏_开始"
         ]
     }
 }
