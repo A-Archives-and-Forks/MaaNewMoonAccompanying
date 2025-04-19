@@ -1,0 +1,125 @@
+{
+    "__yamaape_config": {
+        "version": "v0.3.1",
+        "export": ""
+    },
+    "回到主页": {
+        "__yamaape": {
+            "position": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "next": [
+            "回到主页_紧急撤离"
+        ]
+    },
+    "回到主页_紧急撤离": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "timeout": 60000,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 210,
+                "y": -20
+            }
+        },
+        "next": [
+            "回到主页_撤离成功"
+        ],
+        "interrupt": [
+            "回到主页_图像类",
+            "回到主页_文本类",
+            "回到主页_盲目尝试1"
+        ]
+    },
+    "回到主页_撤离成功": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "城市探索"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 841,
+                "y": -45
+            }
+        }
+    },
+    "回到主页_盲目尝试1": {
+        "recognition": "DirectHit",
+        "action": "Key",
+        "key": [
+            111
+        ],
+        "pre_delay": 1,
+        "__yamaape": {
+            "position": {
+                "x": 585,
+                "y": 466
+            }
+        },
+        "next": [
+            "回到主页_盲目尝试2"
+        ]
+    },
+    "回到主页_盲目尝试2": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            5,
+            5,
+            1,
+            1
+        ],
+        "pre_delay": 1,
+        "post_delay": 1,
+        "__yamaape": {
+            "position": {
+                "x": 848,
+                "y": 461
+            }
+        }
+    },
+    "回到主页_图像类": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/home.png",
+            "../image/back.png",
+            "../image/close.png",
+            "../image/jump.png",
+            "../image/chat_room/close.png"
+        ],
+        "post_delay": 500,
+        "threshold": [
+            0.9,
+            0.9,
+            0.9,
+            0.9,
+            0.9
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 586,
+                "y": 67
+            }
+        }
+    },
+    "回到主页_文本类": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击",
+            "取消"
+        ],
+        "post_delay": 500,
+        "__yamaape": {
+            "position": {
+                "x": 586,
+                "y": 275
+            }
+        }
+    }
+}
