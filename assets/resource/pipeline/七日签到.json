@@ -1,0 +1,120 @@
+{
+    "__yamaape_config_七日签到": {
+        "version": "v0.3.1",
+        "export": ""
+    },
+    "七日签到_领取今日奖励": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击以继续"
+        ],
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 813,
+                "y": -253
+            }
+        },
+        "next": [
+            "七日签到_关闭签到界面"
+        ]
+    },
+    "七日签到_关闭签到界面": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            25,
+            200,
+            1,
+            1
+        ],
+        "post_delay": 3000,
+        "__yamaape": {
+            "position": {
+                "x": 1115,
+                "y": 81
+            }
+        }
+    },
+    "七日签到_活动签到": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "签到"
+        ],
+        "pre_delay": 400,
+        "timeout": 2000,
+        "__yamaape": {
+            "position": {
+                "x": 235,
+                "y": -108
+            }
+        },
+        "next": [
+            "七日签到_前六天"
+        ],
+        "on_error": [
+            "七日签到_第七天"
+        ]
+    },
+    "七日签到_前六天": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "明日可领"
+        ],
+        "pre_delay": 400,
+        "timeout": 2000,
+        "target_offset": [
+            -142,
+            -1,
+            1,
+            1
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 522,
+                "y": -227
+            }
+        },
+        "next": [
+            "七日签到_领取今日奖励"
+        ],
+        "on_error": [
+            "七日签到_关闭签到界面"
+        ]
+    },
+    "七日签到_第七天": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "07"
+        ],
+        "pre_delay": 400,
+        "timeout": 2000,
+        "__yamaape": {
+            "position": {
+                "x": 523,
+                "y": 17
+            }
+        },
+        "next": [
+            "七日签到_领取今日奖励"
+        ],
+        "on_error": [
+            "七日签到_关闭签到界面"
+        ]
+    },
+    "七日签到": {
+        "__yamaape": {
+            "position": {
+                "x": 27,
+                "y": -28
+            }
+        },
+        "next": [
+            "七日签到_活动签到"
+        ]
+    }
+}
