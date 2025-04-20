@@ -835,11 +835,6 @@
         },
         "next": [
             "城市探索_获取事件奖励"
-        ],
-        "interrupt": [
-            "城市探索_跳过战后剧情",
-            "城市探索_自动跳过战后剧情",
-            "城市探索_新战后剧情"
         ]
     },
     "城市探索_跳过战前剧情": {
@@ -935,7 +930,7 @@
             500,
             100
         ],
-        "post_delay": 50,
+        "post_delay": 20,
         "pre_delay": 1,
         "__yamaape": {
             "position": {
@@ -979,6 +974,11 @@
         },
         "next": [
             "城市探索_执行事件"
+        ],
+        "interrupt": [
+            "城市探索_跳过战后剧情",
+            "城市探索_自动跳过战后剧情",
+            "城市探索_新战后剧情"
         ]
     },
     "城市探索_自动跳过剧情": {
@@ -997,58 +997,6 @@
         "next": [
             "城市探索_确定跳过剧情"
         ]
-    },
-    "城市探索_跳过战后剧情": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "../image/jump.png"
-        ],
-        "pre_delay": 400,
-        "__yamaape": {
-            "position": {
-                "x": 3719,
-                "y": 791
-            }
-        }
-    },
-    "城市探索_自动跳过战后剧情": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "今天不再提醒"
-        ],
-        "pre_delay": 400,
-        "__yamaape": {
-            "position": {
-                "x": 3719,
-                "y": 974
-            }
-        },
-        "next": [
-            "城市探索_确定跳过战后剧情"
-        ]
-    },
-    "城市探索_新战后剧情": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "pre_delay": 1,
-        "post_delay": 100,
-        "target": [
-            25,
-            200,
-            1,
-            1
-        ],
-        "template": [
-            "../image/log.png"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 3719,
-                "y": 1153
-            }
-        }
     },
     "城市探索_发言2": {
         "recognition": "TemplateMatch",
@@ -1091,7 +1039,7 @@
             500,
             100
         ],
-        "post_delay": 50,
+        "post_delay": 20,
         "pre_delay": 1,
         "__yamaape": {
             "position": {
@@ -1132,6 +1080,23 @@
             }
         }
     },
+    "城市探索_自动跳过战后剧情": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "今天不再提醒"
+        ],
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 4953,
+                "y": 251
+            }
+        },
+        "next": [
+            "城市探索_确定跳过战后剧情"
+        ]
+    },
     "城市探索_确定跳过战后剧情": {
         "recognition": "OCR",
         "action": "Click",
@@ -1140,8 +1105,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 3962,
-                "y": 975
+                "x": 5196,
+                "y": 252
             }
         }
     },
@@ -1186,7 +1151,7 @@
             500,
             100
         ],
-        "post_delay": 50,
+        "post_delay": 20,
         "pre_delay": 1,
         "__yamaape": {
             "position": {
@@ -1220,7 +1185,7 @@
             500,
             100
         ],
-        "post_delay": 50,
+        "post_delay": 20,
         "pre_delay": 1,
         "__yamaape": {
             "position": {
@@ -1308,6 +1273,41 @@
             "position": {
                 "x": 3408,
                 "y": 1041
+            }
+        }
+    },
+    "城市探索_跳过战后剧情": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/jump.png"
+        ],
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 4953,
+                "y": 68
+            }
+        }
+    },
+    "城市探索_新战后剧情": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "pre_delay": 1,
+        "post_delay": 100,
+        "target": [
+            25,
+            200,
+            1,
+            1
+        ],
+        "template": [
+            "../image/log.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 4953,
+                "y": 430
             }
         }
     }
