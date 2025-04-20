@@ -98,7 +98,12 @@
 
 > v0.3 版本主要更新内容：全面日活！
 
-<!-- ### Next Release (Committed but Unreleased) -->
+### Next Release (Committed but Unreleased)
+
+- **新增**
+
+- **修复优化**
+  - 修复了城市探索 UI 可能与地图文字重叠影响识别的问题
 
 ### v0.3.5
 
