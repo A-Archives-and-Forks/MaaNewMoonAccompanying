@@ -426,6 +426,10 @@
             "../image/archive.png"
         ],
         "pre_delay": 400,
+        "timeout": 6000,
+        "threshold": [
+            0.8
+        ],
         "__yamaape": {
             "position": {
                 "x": 1032,
@@ -437,6 +441,9 @@
         ],
         "interrupt": [
             "城市探索_新档案提示"
+        ],
+        "on_error": [
+            "城市探索_从调查返回"
         ]
     },
     "城市探索_新案件提示": {
@@ -458,7 +465,7 @@
         "template": [
             "../image/back.png"
         ],
-        "pre_delay": 200,
+        "pre_delay": 800,
         "__yamaape": {
             "position": {
                 "x": 1444,
@@ -499,8 +506,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 1291,
-                "y": 1772
+                "x": 1366,
+                "y": 1802
             }
         }
     },
