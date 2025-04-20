@@ -18,7 +18,7 @@
   <!-- <img src="https://img.shields.io/github/license/kqcoxn/MaaNewMoonAccompanying"> -->
   <img src="https://img.shields.io/github/commit-activity/m/kqcoxn/MaaNewMoonAccompanying">
   <img src="https://img.shields.io/github/stars/kqcoxn/MaaNewMoonAccompanying?style=social">
-  <img src="https://img.shields.io/badge/Group-993245868-0e80c1?logo=qq&logoColor=white&url=http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=VMC132QhbMDLi5U62MlDRvtCMj9WOXRr&authKey=yJNKO4sQ%2BBFHpBCLSSEvVOAyz%2FPjknNSl70W3ugg2%2BpELnKmEiHamj1emJMWcLwQ&noverify=0&group_code=993245868">
+  <img src="https://img.shields.io/badge/QGroup-993245868-0e80c1?logo=qq&logoColor=white&url=http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=VMC132QhbMDLi5U62MlDRvtCMj9WOXRr&authKey=yJNKO4sQ%2BBFHpBCLSSEvVOAyz%2FPjknNSl70W3ugg2%2BpELnKmEiHamj1emJMWcLwQ&noverify=0&group_code=993245868">
 </p>
 
 </div>
@@ -27,32 +27,36 @@
 
 ### 常驻功能
 
-- [x] **自动登录**
+- **自动登录**
   - [x] 每日签到
-- [x] **检查邮件**
+- **检查邮件**
   - [x] 领取邮件奖励
   - [x] 删除已读邮件
-- [x] **城市探索**
+- **城市探索**
   - [x] 资源收取
   - [x] 制造订单
   - [x] 设施管理
   - [x] 传闻调查
-  - [x] 城市事件（测试）
-- [x] **每日采购**
+  - [x] 城市事件
+    - [ ] 行动类任务（`xxx4`类型）
+- **每日采购**
   - [x] 免费补给包
   - [x] 数构银物资
-- [x] **领取奖励**
+- **领取奖励**
   - [x] 每日/周任务
   - [x] 组长手册
-- [x] **友谊交换**
+- **友谊交换**
   - [x] 情报点互换
   - [x] 好友审批
   - [ ] 批量换新
-- [x] **清体力**
+- **清体力**
   - [x] 全种类资源
   - [x] 自动使用合剂
+- **冰饮大乱斗**
+  - [ ] 智能检测
+  - [ ] 助战~~牢金~~好友
 - [ ] **自动站台肉鸽**
-- [ ] **自动卡带特征激活**（游戏改版后开发）
+- [ ] **自动卡带特征激活**（待游戏改版后开发）
 
 \* 若有其他功能需求请提交 [issue](https://github.com/kqcoxn/MaaNewMoonAccompanying/issues?q=is%3Aissue)
 
@@ -107,7 +111,12 @@
 - **修复优化**
   -  -->
 
-<!-- ### Next Release (Committed but Unreleased) -->
+### Next Release (Committed but Unreleased)
+
+- **新增**
+  - 
+- **修复优化**
+  - 修复了调查第一次满进度时会卡住的问题
 
 ### v0.3.6
 
@@ -120,8 +129,6 @@
   - 修复了城市事件战后剧情无法跳过的问题
   - 修复了传闻调查可能卡在无报告界面的问题
   - 将检查邮件拆分为单独的任务
-
-
 
 <details>
 <summary>其他版本</summary>
