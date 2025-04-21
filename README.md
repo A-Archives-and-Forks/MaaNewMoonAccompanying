@@ -111,12 +111,15 @@
 - **修复优化**
   -  -->
 
-### Next Release (Committed but Unreleased)
+<!-- ### Next Release (Committed but Unreleased) -->
 
-- **新增**
-  - 
+### v0.3.7
+
+> 2025.4.21
+
 - **修复优化**
   - 修复了调查第一次满进度时会卡住的问题
+  - 修复了城市探索新剧情无法领取奖励的问题
 
 ### v0.3.6
 

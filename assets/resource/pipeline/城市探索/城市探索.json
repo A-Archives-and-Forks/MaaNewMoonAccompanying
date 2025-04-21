@@ -479,6 +479,20 @@
             "城市探索_城市事件"
         ]
     },
+    "城市探索_防止审阅失败": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "开始审阅"
+        ],
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1047,
+                "y": 2014
+            }
+        }
+    },
     "城市探索_获取调查情报": {
         "recognition": "OCR",
         "action": "Click",
@@ -598,10 +612,13 @@
             "../image/home.png"
         ],
         "post_delay": 3000,
+        "threshold": [
+            0.9
+        ],
         "__yamaape": {
             "position": {
-                "x": 2971,
-                "y": -51
+                "x": 2972,
+                "y": -67
             }
         }
     },
@@ -722,7 +739,8 @@
             }
         },
         "next": [
-            "城市探索_跳过剧情"
+            "城市探索_跳过剧情",
+            "城市探索_获取事件奖励"
         ],
         "interrupt": [
             "城市探索_新剧情"
@@ -1271,22 +1289,6 @@
             }
         }
     },
-    "城市探索_关闭聊天": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "点击空白区域关闭界面"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 4199,
-                "y": 1485
-            }
-        },
-        "next": [
-            "城市探索_获取事件奖励"
-        ]
-    },
     "城市探索_执行委托": {
         "recognition": "OCR",
         "action": "Click",
@@ -1302,6 +1304,22 @@
         },
         "next": [
             "城市探索_结算委托"
+        ]
+    },
+    "城市探索_关闭聊天": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击空白区域关闭界面"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 4199,
+                "y": 1485
+            }
+        },
+        "next": [
+            "城市探索_获取事件奖励"
         ]
     },
     "城市探索_结算委托": {
@@ -1320,19 +1338,5 @@
         "next": [
             "城市探索_获取事件奖励"
         ]
-    },
-    "城市探索_防止审阅失败": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "开始审阅"
-        ],
-        "pre_delay": 400,
-        "__yamaape": {
-            "position": {
-                "x": 1047,
-                "y": 2014
-            }
-        }
     }
 }
