@@ -106,21 +106,27 @@ jobs:
             PYTHON_PATH=$(python -c "import sys; print(sys.executable)")
             PYTHON_DIR=$(dirname "$PYTHON_PATH")
             cp -r "$PYTHON_DIR"/* python/
-            chmod +x python/python.exe
+            if [ -f "python/python.exe" ]; then
+              chmod +x python/python.exe
+            fi
           elif [ "${{ matrix.os }}" = "macos" ]; then
             python -m pip install --target=python -r requirements.txt
             python -m pip install --target=python -e .
             PYTHON_PATH=$(python -c "import sys; print(sys.executable)")
             PYTHON_DIR=$(dirname "$PYTHON_PATH")
             cp -r "$PYTHON_DIR"/* python/
-            chmod +x python/bin/python3
+            if [ -f "python/bin/python3" ]; then
+              chmod +x python/bin/python3
+            fi
           elif [ "${{ matrix.os }}" = "linux" ]; then
             python -m pip install --target=python -r requirements.txt
             python -m pip install --target=python -e .
             PYTHON_PATH=$(python -c "import sys; print(sys.executable)")
             PYTHON_DIR=$(dirname "$PYTHON_PATH")
             cp -r "$PYTHON_DIR"/* python/
-            chmod +x python/bin/python3
+            if [ -f "python/bin/python3" ]; then
+              chmod +x python/bin/python3
+            fi
           fi
         
       - name: Install
