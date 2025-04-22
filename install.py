@@ -3,6 +3,7 @@ from pathlib import Path
 import shutil
 import sys
 import json
+import os
 
 from configure import configure_ocr_model
 
@@ -79,9 +80,19 @@ def install_agent():
     )
 
 
+# 复制python环境
+def install_python():
+    shutil.copytree(
+        working_dir / "python",
+        install_path / "python",
+        dirs_exist_ok=True,
+    )
+
+
 # 指定python环境
 def build_env():
-    if sys.platform.startswith("win"):
+    target_os = os.environ.get("TARGET_OS", "")
+    if target_os == "win":
         with open(install_path / "interface.json", "r", encoding="utf-8") as f:
             interface = json.load(f)
         interface["agent"]["child_exec"] = r"{PROJECT_DIR}/python/python.exe"
@@ -94,6 +105,7 @@ if __name__ == "__main__":
     install_resource()
     install_chores()
     install_agent()
+    install_python()
     build_env()
 
     print(f"Install to {install_path} successfully.")

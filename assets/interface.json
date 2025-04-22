@@ -592,7 +592,7 @@
         "自动城市事件": {
             "cases": [
                 {
-                    "name": "启用（测试）",
+                    "name": "启用",
                     "pipeline_override": {}
                 },
                 {
