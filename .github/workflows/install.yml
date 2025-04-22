@@ -101,17 +101,26 @@ jobs:
         run: |
           mkdir -p python
           if [ "${{ matrix.os }}" = "win" ]; then
-            # Windows 特定配置
             python -m pip install --target=python -r requirements.txt
             python -m pip install --target=python -e .
+            PYTHON_PATH=$(python -c "import sys; print(sys.executable)")
+            PYTHON_DIR=$(dirname "$PYTHON_PATH")
+            cp -r "$PYTHON_DIR"/* python/
+            chmod +x python/python.exe
           elif [ "${{ matrix.os }}" = "macos" ]; then
-            # macOS 特定配置
             python -m pip install --target=python -r requirements.txt
             python -m pip install --target=python -e .
+            PYTHON_PATH=$(python -c "import sys; print(sys.executable)")
+            PYTHON_DIR=$(dirname "$PYTHON_PATH")
+            cp -r "$PYTHON_DIR"/* python/
+            chmod +x python/bin/python3
           elif [ "${{ matrix.os }}" = "linux" ]; then
-            # Linux 特定配置
             python -m pip install --target=python -r requirements.txt
             python -m pip install --target=python -e .
+            PYTHON_PATH=$(python -c "import sys; print(sys.executable)")
+            PYTHON_DIR=$(dirname "$PYTHON_PATH")
+            cp -r "$PYTHON_DIR"/* python/
+            chmod +x python/bin/python3
           fi
         
       - name: Install

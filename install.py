@@ -92,12 +92,18 @@ def install_python():
 # 指定python环境
 def build_env():
     target_os = os.environ.get("TARGET_OS", "")
+    with open(install_path / "interface.json", "r", encoding="utf-8") as f:
+        interface = json.load(f)
+
     if target_os == "win":
-        with open(install_path / "interface.json", "r", encoding="utf-8") as f:
-            interface = json.load(f)
         interface["agent"]["child_exec"] = r"{PROJECT_DIR}/python/python.exe"
-        with open(install_path / "interface.json", "w", encoding="utf-8") as f:
-            json.dump(interface, f, ensure_ascii=False, indent=4)
+    elif target_os == "macos":
+        interface["agent"]["child_exec"] = r"{PROJECT_DIR}/python/bin/python3"
+    elif target_os == "linux":
+        interface["agent"]["child_exec"] = r"{PROJECT_DIR}/python/bin/python3"
+
+    with open(install_path / "interface.json", "w", encoding="utf-8") as f:
+        json.dump(interface, f, ensure_ascii=False, indent=4)
 
 
 if __name__ == "__main__":

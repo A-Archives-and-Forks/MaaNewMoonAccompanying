@@ -101,16 +101,10 @@
 
 ## 更新记录
 
-<!-- ### v0.3.
+### Next Release (Committed but Unreleased)
 
-> 2025.4. -->
-
-<!-- - **新增**
-  - 
 - **修复优化**
-  -  -->
-
-<!-- ### Next Release (Committed but Unreleased) -->
+  - 修复了部分平台Python路径错误的问题
 
 ### v0.3.8
 
