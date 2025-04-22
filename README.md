@@ -111,7 +111,11 @@
 - **修复优化**
   -  -->
 
-### Next Release (Committed but Unreleased)
+<!-- ### Next Release (Committed but Unreleased) -->
+
+### v0.3.8
+
+> 2025.4.22
 
 - **新增**
   - 添加Python环境打包
