@@ -8,7 +8,7 @@ import os
 from configure import configure_ocr_model
 
 
-working_dir = Path(__file__).parent
+working_dir = Path(__file__).parent.parent
 install_path = working_dir / Path("install")
 version = len(sys.argv) > 1 and sys.argv[1] or "v0.0.1"
 
@@ -80,30 +80,18 @@ def install_agent():
     )
 
 
-# 复制python环境
-def install_python():
-    shutil.copytree(
-        working_dir / "python",
-        install_path / "python",
-        dirs_exist_ok=True,
-    )
-
-
 # 指定python环境
-def build_env():
-    target_os = os.environ.get("TARGET_OS", "")
-    with open(install_path / "interface.json", "r", encoding="utf-8") as f:
-        interface = json.load(f)
+def setup_python():
+    if sys.platform.startswith("win"):
 
-    if target_os == "win":
+        with open(install_path / "interface.json", "r", encoding="utf-8") as f:
+            interface = json.load(f)
+
         interface["agent"]["child_exec"] = r"{PROJECT_DIR}/python/python.exe"
-    elif target_os == "macos":
-        interface["agent"]["child_exec"] = r"{PROJECT_DIR}/python/bin/python3"
-    elif target_os == "linux":
-        interface["agent"]["child_exec"] = r"{PROJECT_DIR}/python/bin/python3"
 
-    with open(install_path / "interface.json", "w", encoding="utf-8") as f:
-        json.dump(interface, f, ensure_ascii=False, indent=4)
+        with open(install_path / "interface.json", "w", encoding="utf-8") as f:
+            json.dump(interface, f, ensure_ascii=False, indent=4)
+
 
 
 if __name__ == "__main__":
@@ -111,7 +99,6 @@ if __name__ == "__main__":
     install_resource()
     install_chores()
     install_agent()
-    install_python()
-    build_env()
+    setup_python()
 
     print(f"Install to {install_path} successfully.")

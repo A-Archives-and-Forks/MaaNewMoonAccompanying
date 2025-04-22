@@ -51,7 +51,7 @@ jobs:
 
   install:
     needs: meta
-    runs-on: macos-latest
+    runs-on: windows-latest
     strategy:
       matrix:
         # os: [win, macos, linux, android]
@@ -59,10 +59,10 @@ jobs:
         include: 
           - os: win
             arch: x86_64
-          - os: macos
-            arch: aarch64
-          - os: linux
-            arch: x86_64
+          # - os: macos
+          #   arch: aarch64
+          # - os: linux
+          #   arch: x86_64
           # - os: android
           #   arch: aarch64
       fail-fast: false
@@ -80,61 +80,18 @@ jobs:
           latest: true
           out-file-path: "deps"
           extract: true
-        
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: |
-            ${{ matrix.os == 'win' && '3.10' || '' }}
-            ${{ matrix.os == 'macos' && '3.10' || '' }}
-            ${{ matrix.os == 'linux' && '3.10' || '' }}
-          cache: 'pip'
-          
-      - name: Install Python dependencies
+
+      - name: Setup Embed Python
+        shell: powershell
         run: |
-          python -m pip install --upgrade pip
-          pip install --upgrade setuptools wheel
-          pip install -r requirements.txt
-          pip install -e .
-          
-      - name: Create Python environment directory
-        run: |
-          mkdir -p python
-          if [ "${{ matrix.os }}" = "win" ]; then
-            python -m pip install --target=python -r requirements.txt
-            python -m pip install --target=python -e .
-            PYTHON_PATH=$(python -c "import sys; print(sys.executable)")
-            PYTHON_DIR=$(dirname "$PYTHON_PATH")
-            cp -r "$PYTHON_DIR"/* python/
-            if [ -f "python/python.exe" ]; then
-              chmod +x python/python.exe
-            fi
-          elif [ "${{ matrix.os }}" = "macos" ]; then
-            python -m pip install --target=python -r requirements.txt
-            python -m pip install --target=python -e .
-            PYTHON_PATH=$(python -c "import sys; print(sys.executable)")
-            PYTHON_DIR=$(dirname "$PYTHON_PATH")
-            cp -r "$PYTHON_DIR"/* python/
-            if [ -f "python/bin/python3" ]; then
-              chmod +x python/bin/python3
-            fi
-          elif [ "${{ matrix.os }}" = "linux" ]; then
-            python -m pip install --target=python -r requirements.txt
-            python -m pip install --target=python -e .
-            PYTHON_PATH=$(python -c "import sys; print(sys.executable)")
-            PYTHON_DIR=$(dirname "$PYTHON_PATH")
-            cp -r "$PYTHON_DIR"/* python/
-            if [ -f "python/bin/python3" ]; then
-              chmod +x python/bin/python3
-            fi
-          fi
+          ./tools/ci/setup_embed_python.ps1
         
-      - name: Install
+      - name: Install Python
         shell: bash
         env:
           TARGET_OS: ${{ matrix.os }}
         run: |
-          python ./install.py ${{ needs.meta.outputs.tag }}
+          python ./ci/install.py ${{ needs.meta.outputs.tag }}
         
       - name: Set up MFAAvalonia naming
         id: mfa_naming
@@ -181,7 +138,8 @@ jobs:
           path: "install"
 
   release:
-    if: ${{ needs.meta.outputs.is_release == 'true' || github.event_name == 'workflow_dispatch' }}
+    # if: ${{ needs.meta.outputs.is_release == 'true' || github.event_name == 'workflow_dispatch' }}
+    if: ${{ needs.meta.outputs.is_release == 'true'}}
     needs: [meta, install]
     runs-on: ubuntu-latest
     steps:
@@ -206,9 +164,9 @@ jobs:
           tag_name: ${{ needs.meta.outputs.tag }}
           generate_release_notes: true
 
-      - name: Trigger MirrorChyanUploading
-        run: |
-          gh workflow run --repo $GITHUB_REPOSITORY mirrorchyan
-          gh workflow run --repo $GITHUB_REPOSITORY mirrorchyan_release_note
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Trigger MirrorChyanUploading
+      #   run: |
+      #     gh workflow run --repo $GITHUB_REPOSITORY mirrorchyan
+      #     gh workflow run --repo $GITHUB_REPOSITORY mirrorchyan_release_note
+      #   env:
+      #     GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
