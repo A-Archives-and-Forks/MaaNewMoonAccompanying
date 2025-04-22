@@ -739,10 +739,11 @@
             }
         },
         "next": [
-            "城市探索_跳过剧情",
-            "城市探索_获取事件奖励"
+            "城市探索_获取事件奖励",
+            "城市探索_跳过剧情"
         ],
         "interrupt": [
+            "城市探索_新剧情选项",
             "城市探索_新剧情"
         ]
     },
@@ -768,6 +769,7 @@
         "interrupt": [
             "城市探索_跳过战前剧情",
             "城市探索_自动跳过战前剧情",
+            "城市探索_新战前剧情选项",
             "城市探索_新战前剧情"
         ]
     },
@@ -804,46 +806,28 @@
             "城市探索_选择特工1"
         ]
     },
-    "城市探索_跳过剧情": {
-        "recognition": "TemplateMatch",
+    "城市探索_获取事件奖励": {
+        "recognition": "OCR",
         "action": "Click",
-        "template": [
-            "../image/jump.png"
+        "expected": [
+            "点击以继续"
         ],
-        "pre_delay": 400,
+        "pre_delay": 800,
         "__yamaape": {
             "position": {
-                "x": 3162,
-                "y": 322
+                "x": 4660,
+                "y": 52
             }
         },
         "next": [
-            "城市探索_获取事件奖励"
+            "城市探索_执行事件"
         ],
         "interrupt": [
-            "城市探索_自动跳过剧情"
+            "城市探索_跳过战后剧情",
+            "城市探索_自动跳过战后剧情",
+            "城市探索_新战后剧情选项",
+            "城市探索_新战后剧情"
         ]
-    },
-    "城市探索_新剧情": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "../image/log.png"
-        ],
-        "pre_delay": 1,
-        "post_delay": 100,
-        "target": [
-            25,
-            200,
-            1,
-            1
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 3159,
-                "y": 499
-            }
-        }
     },
     "城市探索_开始战斗": {
         "recognition": "OCR",
@@ -895,27 +879,6 @@
         "next": [
             "城市探索_确定跳过战前提醒"
         ]
-    },
-    "城市探索_新战前剧情": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "pre_delay": 1,
-        "post_delay": 100,
-        "target": [
-            25,
-            200,
-            1,
-            1
-        ],
-        "template": [
-            "../image/log.png"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 3146,
-                "y": 1219
-            }
-        }
     },
     "城市探索_发言1": {
         "recognition": "TemplateMatch",
@@ -986,27 +949,24 @@
             "城市探索_选择特工2"
         ]
     },
-    "城市探索_获取事件奖励": {
-        "recognition": "OCR",
+    "城市探索_跳过剧情": {
+        "recognition": "TemplateMatch",
         "action": "Click",
-        "expected": [
-            "点击以继续"
+        "template": [
+            "../image/jump.png"
         ],
-        "pre_delay": 800,
-        "post_delay": 1,
+        "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 4660,
-                "y": 52
+                "x": 3156,
+                "y": 318
             }
         },
         "next": [
-            "城市探索_执行事件"
+            "城市探索_获取事件奖励"
         ],
         "interrupt": [
-            "城市探索_跳过战后剧情",
-            "城市探索_自动跳过战后剧情",
-            "城市探索_新战后剧情"
+            "城市探索_自动跳过剧情"
         ]
     },
     "城市探索_自动跳过剧情": {
@@ -1018,8 +978,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 3421,
-                "y": 401
+                "x": 3420,
+                "y": 344
             }
         },
         "next": [
@@ -1114,11 +1074,12 @@
         "template": [
             "../image/jump.png"
         ],
-        "pre_delay": 400,
+        "post_delay": 400,
+        "pre_delay": 1,
         "__yamaape": {
             "position": {
-                "x": 4953,
-                "y": 68
+                "x": 4955,
+                "y": 51
             }
         }
     },
@@ -1131,34 +1092,13 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 4953,
-                "y": 251
+                "x": 4954,
+                "y": 259
             }
         },
         "next": [
             "城市探索_确定跳过战后剧情"
         ]
-    },
-    "城市探索_新战后剧情": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "pre_delay": 1,
-        "post_delay": 100,
-        "target": [
-            25,
-            200,
-            1,
-            1
-        ],
-        "template": [
-            "../image/log.png"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 4953,
-                "y": 430
-            }
-        }
     },
     "城市探索_确定跳过剧情": {
         "recognition": "OCR",
@@ -1168,8 +1108,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 3668,
-                "y": 400
+                "x": 3667,
+                "y": 343
             }
         }
     },
@@ -1250,8 +1190,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 5196,
-                "y": 252
+                "x": 5197,
+                "y": 260
             }
         }
     },
@@ -1338,5 +1278,110 @@
         "next": [
             "城市探索_获取事件奖励"
         ]
+    },
+    "城市探索_新战前剧情选项": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "post_delay": 1,
+        "template": [
+            "../image/chat_option.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3409,
+                "y": 1220
+            }
+        }
+    },
+    "城市探索_新战前剧情": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "pre_delay": 1,
+        "post_delay": 1,
+        "target": [
+            25,
+            200,
+            1,
+            1
+        ],
+        "template": [
+            "../image/log.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3146,
+                "y": 1219
+            }
+        }
+    },
+    "城市探索_新战后剧情选项": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "post_delay": 1,
+        "template": [
+            "../image/chat_option.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 5196,
+                "y": 441
+            }
+        }
+    },
+    "城市探索_新战后剧情": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "pre_delay": 1,
+        "post_delay": 1,
+        "target": [
+            25,
+            200,
+            1,
+            1
+        ],
+        "template": [
+            "../image/log.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 4954,
+                "y": 438
+            }
+        }
+    },
+    "城市探索_新剧情选项": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "post_delay": 1,
+        "template": [
+            "../image/chat_option.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3420,
+                "y": 522
+            }
+        }
+    },
+    "城市探索_新剧情": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/log.png"
+        ],
+        "pre_delay": 1,
+        "post_delay": 1,
+        "target": [
+            25,
+            200,
+            1,
+            1
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3159,
+                "y": 499
+            }
+        }
     }
 }
