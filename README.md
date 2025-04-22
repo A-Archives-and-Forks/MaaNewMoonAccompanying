@@ -111,7 +111,12 @@
 - **修复优化**
   -  -->
 
-<!-- ### Next Release (Committed but Unreleased) -->
+### Next Release (Committed but Unreleased)
+
+- **新增**
+  - 添加Python打包
+- **修复优化**
+  - 
 
 ### v0.3.7
 

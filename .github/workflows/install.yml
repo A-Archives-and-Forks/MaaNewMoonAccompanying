@@ -59,12 +59,18 @@ jobs:
         include: 
           - os: win
             arch: x86_64
+            python_os: windows
+            python_arch: amd64
           - os: macos
             arch: aarch64
+            python_os: macos
+            python_arch: arm64
           - os: linux
             arch: x86_64
-          # - os: android
-          #   arch: aarch64
+            python_os: linux
+            python_arch: x86_64
+        # - os: android
+        #   arch: aarch64
       fail-fast: false
       
     steps:
@@ -81,6 +87,34 @@ jobs:
           out-file-path: "deps"
           extract: true
         
+      - name: Download Python
+        run: |
+          mkdir -p python
+          if [ "${{ matrix.os }}" = "win" ]; then
+            curl -L "https://github.com/indygreg/python-build-standalone/releases/download/20240107/cpython-3.11.7+20240107-${{ matrix.python_os }}-${{ matrix.python_arch }}-pgo-full.tar.zst" -o python.tar.zst
+            zstd -d python.tar.zst
+            tar -xf python.tar
+            mv python/* python/
+          elif [ "${{ matrix.os }}" = "macos" ]; then
+            curl -L "https://github.com/indygreg/python-build-standalone/releases/download/20240107/cpython-3.11.7+20240107-${{ matrix.python_os }}-${{ matrix.python_arch }}-pgo-full.tar.zst" -o python.tar.zst
+            zstd -d python.tar.zst
+            tar -xf python.tar
+            mv python/* python/
+          else
+            curl -L "https://github.com/indygreg/python-build-standalone/releases/download/20240107/cpython-3.11.7+20240107-${{ matrix.python_os }}-${{ matrix.python_arch }}-pgo-full.tar.zst" -o python.tar.zst
+            zstd -d python.tar.zst
+            tar -xf python.tar
+            mv python/* python/
+          fi
+        
+      - name: Install Python dependencies
+        run: |
+          if [ "${{ matrix.os }}" = "win" ]; then
+            ./python/python.exe -m pip install -r requirements.txt
+          else
+            ./python/bin/python3 -m pip install -r requirements.txt
+          fi
+        
       - name: Install
         shell: bash
         run: |
@@ -90,7 +124,6 @@ jobs:
         id: mfa_naming
         shell: bash
         run: |
-          # Map OS names
           if [ "${{ matrix.os }}" = "win" ]; then
             echo "mfa_os=win" >> $GITHUB_OUTPUT
           elif [ "${{ matrix.os }}" = "macos" ]; then
@@ -101,7 +134,6 @@ jobs:
             echo "mfa_os=unknown" >> $GITHUB_OUTPUT
           fi
           
-          # Map arch names
           if [ "${{ matrix.arch }}" = "x86_64" ]; then
             echo "mfa_arch=x64" >> $GITHUB_OUTPUT
           elif [ "${{ matrix.arch }}" = "aarch64" ]; then
@@ -126,6 +158,7 @@ jobs:
         run: |
           rm -rf MFAAvalonia/resource/base/model
           cp -r MFAAvalonia/* install
+          cp -r python install/
         
       - uses: actions/upload-artifact@v4
         with:

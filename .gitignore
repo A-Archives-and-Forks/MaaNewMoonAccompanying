@@ -1,6 +1,6 @@
 # others
-MFAAvalonia/*
-!MFAAvalonia/.gitkeep
+/MFAAvalonia/*
+!/MFAAvalonia/.gitkeep
 测试/
 /recording/
 /vision/
