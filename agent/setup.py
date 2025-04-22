@@ -82,7 +82,7 @@ def install_requirements(req_file="requirements.txt", mirror=None) -> bool:
         if mirror:
             cmd.extend(["-i", mirror])
 
-        subprocess.check_call(cmd)
+        subprocess.check_call(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         return True
     except:
         return False

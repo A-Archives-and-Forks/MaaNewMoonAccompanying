@@ -97,26 +97,32 @@
 
 特别感谢 [@Yakir-George](https://github.com/Yakir-George) 在项目开发时期的测试与反馈！
 
-如果有其他问题，欢迎提交 [issue](https://github.com/kqcoxn/MaaNewMoonAccompanying/issues?q=is%3Aissue)，您的反馈将使更多组长受益！
+如果有其他问题，欢迎提交 [issue](https://github.com/kqcoxn/MaaNewMoonAccompanying/issues?q=is%3Aissue)，或在 [交流群](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=VMC132QhbMDLi5U62MlDRvtCMj9WOXRr&authKey=yJNKO4sQ%2BBFHpBCLSSEvVOAyz%2FPjknNSl70W3ugg2%2BpELnKmEiHamj1emJMWcLwQ&noverify=0&group_code=993245868) 内提问，您的反馈将使更多组长受益！
 
 ## 更新记录
 
-### Next Release (Committed but Unreleased)
+<!-- ### Next Release (Committed but Unreleased) -->
 
-- **修复优化**
-  - 修复了部分平台Python路径错误的问题
+### v0.3.9
+
+> 2025.4.22
+
+- **新增**
+  - 自带一份Python环境！
 
 ### v0.3.8
 
 > 2025.4.22
 
 - **新增**
-  - 添加Python环境打包
-  - 支持所有城市事件
+  - 支持所有城市事件！
 - **修复优化**
   - 修复了城市事件会造成补充体力界面打开的问题
   - 修复了城市事件遇到选项会卡住的问题
   - 修复了作战失败后会卡住的问题
+
+<details>
+<summary>其他版本</summary>
 
 ### v0.3.7
 
@@ -137,9 +143,6 @@
   - 修复了城市事件战后剧情无法跳过的问题
   - 修复了传闻调查可能卡在无报告界面的问题
   - 将检查邮件拆分为单独的任务
-
-<details>
-<summary>其他版本</summary>
 
 ### v0.3.5
 
