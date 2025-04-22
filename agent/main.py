@@ -3,6 +3,8 @@ import sys
 from maa.agent.agent_server import AgentServer
 from maa.toolkit import Toolkit
 
+from setup import check_and_install_dependencies
+
 import actions.ConsumptiveRealism
 
 
@@ -17,4 +19,5 @@ def main():
 
 
 if __name__ == "__main__":
+    check_and_install_dependencies()
     main()
