@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "MaaNewMoonAccompany"
+version = "0.1.0"
+description = "MaaNewMoonAccompany"
+requires-python = ">=3.10"
+dependencies = [
+    "maafw>=4.0.0"
+] 
