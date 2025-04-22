@@ -98,16 +98,5 @@ def check_and_install_dependencies():
     if enable_pip_install and (
         current_version != last_version or current_version == "unknown"
     ):
-        if last_version == "unknown":
-            print("正在首次加载依赖包，这可能需要一些时间，请耐心等待...")
-        else:
-            print(f"检测到新版本依赖({current_version})，请耐心等待更新...")
-
         if install_requirements(mirror=mirror):
             update_pip_config(current_version)
-            if last_version == "unknown":
-                print("依赖包安装完成！")
-            else:
-                print("依赖包更新完成！")
-        else:
-            print("依赖包安装/更新失败，请检查网络连接或手动安装依赖！")

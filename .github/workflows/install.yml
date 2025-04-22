@@ -59,10 +59,10 @@ jobs:
         include: 
           - os: win
             arch: x86_64
-          - os: macos
-            arch: aarch64
-          - os: linux
-            arch: x86_64
+          # - os: macos
+          #   arch: aarch64
+          # - os: linux
+          #   arch: x86_64
           # - os: android
           #   arch: aarch64
       fail-fast: false
