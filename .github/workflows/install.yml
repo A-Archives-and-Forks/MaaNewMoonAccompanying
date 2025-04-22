@@ -59,10 +59,10 @@ jobs:
         include: 
           - os: win
             arch: x86_64
-          # - os: macos
-          #   arch: aarch64
-          # - os: linux
-          #   arch: x86_64
+          - os: macos
+            arch: aarch64
+          - os: linux
+            arch: x86_64
           # - os: android
           #   arch: aarch64
       fail-fast: false
@@ -138,8 +138,8 @@ jobs:
           path: "install"
 
   release:
-    # if: ${{ needs.meta.outputs.is_release == 'true' || github.event_name == 'workflow_dispatch' }}
-    if: ${{ needs.meta.outputs.is_release == 'true'}}
+    if: ${{ needs.meta.outputs.is_release == 'true' || github.event_name == 'workflow_dispatch' }}
+    # if: ${{ needs.meta.outputs.is_release == 'true'}}
     needs: [meta, install]
     runs-on: ubuntu-latest
     steps:
