@@ -1,6 +1,15 @@
 import os
-import shutil
+import sys
 import subprocess
+import shutil
+
+current_file_path = os.path.abspath(__file__)
+current_dir = os.path.dirname(current_file_path)
+parent_dir = os.path.dirname(current_dir)
+os.chdir(parent_dir)
+
+if current_dir not in sys.path:
+    sys.path.insert(0, current_dir)
 
 
 def copy_files():
@@ -47,6 +56,18 @@ def copy_files():
         # 复制agent文件夹
         if os.path.exists("agent"):
             shutil.copytree("agent", "MFAAvalonia/agent", dirs_exist_ok=True)
+
+            # 修改main.py文件
+            main_py_path = "MFAAvalonia/agent/main.py"
+            if os.path.exists(main_py_path):
+                with open(main_py_path, "r", encoding="utf-8") as f:
+                    content = f.read()
+
+                # 删除check_and_install_dependencies()的调用
+                content = content.replace("check_and_install_dependencies()", "")
+
+                with open(main_py_path, "w", encoding="utf-8") as f:
+                    f.write(content)
         else:
             print("警告: agent 文件夹不存在")
 

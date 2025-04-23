@@ -10,6 +10,7 @@ def main():
     from maa.agent.agent_server import AgentServer
     from maa.toolkit import Toolkit
 
+    import actions.Logger
     import actions.ConsumptiveRealism
 
     Toolkit.init_option("./")
