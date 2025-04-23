@@ -101,7 +101,10 @@
 
 ## 更新记录
 
-<!-- ### Next Release (Committed but Unreleased) -->
+### Next Release (Committed but Unreleased)
+
+- **修复优化**
+  - 修复了城市事件部分行动类任务无法跳过的问题
 
 ### v0.3.9
 

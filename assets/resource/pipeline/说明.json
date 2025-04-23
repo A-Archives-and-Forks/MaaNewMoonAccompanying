@@ -9,21 +9,6 @@
                 "x": 0,
                 "y": 0
             }
-        },
-        "next": [
-            "说明_新增节点20"
-        ]
-    },
-    "说明_新增节点20": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "log",
-        "custom_action_param": "t=测试",
-        "__yamaape": {
-            "position": {
-                "x": 217,
-                "y": -65
-            }
         }
     }
 }
