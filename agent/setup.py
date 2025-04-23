@@ -85,6 +85,7 @@ def install_requirements(req_file="requirements.txt", mirror=None) -> bool:
         subprocess.check_call(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         return True
     except:
+        print("环境加载失败，请检查网络与环境后重新尝试！")
         return False
 
 
