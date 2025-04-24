@@ -57,6 +57,8 @@
 - [ ] **自动站台肉鸽**（_**v1.0.0即将上线**_！）
 - [ ] **自动卡带特征激活**（待游戏改版后开发）
 
+功能说明：[文档站-用户手册-任务说明](https://docs.codax.site/mnma/docs/users/funcs.html#%E4%BB%BB%E5%8A%A1%E8%AF%B4%E6%98%8E)
+
 \* 若有其他功能需求请提交 [issue](https://github.com/kqcoxn/MaaNewMoonAccompanying/issues?q=is%3Aissue)
 
 ### 活动功能
@@ -77,7 +79,7 @@
 
 **每次版本更新后请手动把仅第一次出现的界面过一遍！**
 
-- [文图教程](/docs/zh_cn/使用教程.md)
+- [文图教程](https://docs.codax.site/mnma/docs/users/start.html)
 
 ## 常见问题
 
@@ -85,13 +87,7 @@
 
 请确保现有 [issue](https://github.com/kqcoxn/MaaNewMoonAccompanying/issues?q=is%3Aissue) 中还没有与您遇到的类似的问题
 
-- **更新问题**
-  - **如果更新失败，且无法使用代理，可以试一试 [Mirror酱](https://mirrorchyan.com/zh/projects?rid=MNMA)**！参考说明：[【Bilibili】震惊！MAA开启收费功能？！](https://www.bilibili.com/video/BV1cZFreLEja)
-  - 或者在 [QQ群](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=VMC132QhbMDLi5U62MlDRvtCMj9WOXRr&authKey=yJNKO4sQ%2BBFHpBCLSSEvVOAyz%2FPjknNSl70W3ugg2%2BpELnKmEiHamj1emJMWcLwQ&noverify=0&group_code=993245868) 群文件内下载最新版本，每次手动替换
-- **程序运行类**
-  - [任务停留在“正在启动 Agent(耗时可能较久)”](https://github.com/kqcoxn/MaaNewMoonAccompanying/issues/4)
-  - [修改连接部分的控制器ADB地址会卡死](https://github.com/kqcoxn/MaaNewMoonAccompanying/issues/2)
-  - [在关闭MFAAvalonia.exe之后，左下状态栏依然会有MFA管理器图标，且点击无效](https://github.com/kqcoxn/MaaNewMoonAccompanying/issues/6)
+- [文档站-用户手册-问题排查](https://docs.codax.site/mnma/docs/users/errors.html)
 
 特别感谢 [@Yakir-George](https://github.com/Yakir-George) 在项目开发时期的测试与反馈！
 
@@ -102,6 +98,8 @@
 <!-- ### Next Release (Committed but Unreleased) -->
 
 ### v0.3.11
+
+> 2025.4.24
 
 - **新增**
   - 「列车长的见面礼」活动每日体力领取
