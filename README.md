@@ -99,7 +99,9 @@
 
 ## 更新记录
 
-### Next Release (Committed but Unreleased)
+<!-- ### Next Release (Committed but Unreleased) -->
+
+### v0.3.11
 
 - **新增**
   - 「列车长的见面礼」活动每日体力领取
