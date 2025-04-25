@@ -8,13 +8,19 @@
     "message": "- 新 月 同 行 -",
     "controller": [
         {
-            "name": "安卓端（模拟器）",
+            "name": "模拟器（Android）",
             "type": "Adb"
         }
     ],
     "resource": [
         {
             "name": "官服",
+            "path": [
+                "{PROJECT_DIR}/resource"
+            ]
+        },
+        {
+            "name": "B服",
             "path": [
                 "{PROJECT_DIR}/resource"
             ]
