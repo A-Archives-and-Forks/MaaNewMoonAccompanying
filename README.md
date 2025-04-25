@@ -95,7 +95,11 @@
 
 ## 更新记录
 
-### Next Release (Committed but Unreleased)
+<!-- ### Next Release (Committed but Unreleased) -->
+
+### v0.3.12
+
+> 2025.4.25
 
 - **修复优化**
   - 修复了战斗类事件有概率卡住的问题
