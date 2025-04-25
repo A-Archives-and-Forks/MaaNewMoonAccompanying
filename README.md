@@ -95,7 +95,10 @@
 
 ## 更新记录
 
-<!-- ### Next Release (Committed but Unreleased) -->
+### Next Release (Committed but Unreleased)
+
+- **修复优化**
+  -  更正了残余的数构银文本错误
 
 ### v0.3.12
 
