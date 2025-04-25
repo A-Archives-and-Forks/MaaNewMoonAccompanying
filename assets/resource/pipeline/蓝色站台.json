@@ -1,0 +1,652 @@
+{
+    "__yamaape_config_蓝色站台": {
+        "version": "v0.3.1",
+        "export": ""
+    },
+    "蓝色站台": {
+        "__yamaape": {
+            "position": {
+                "x": 31,
+                "y": -25
+            }
+        },
+        "next": [
+            "蓝色站台_开始探索"
+        ]
+    },
+    "蓝色站台_开始探索": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "开始探索"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 224,
+                "y": -65
+            }
+        },
+        "next": [
+            "蓝色站台_选择危险等级"
+        ]
+    },
+    "蓝色站台_选择危险等级": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "下一步"
+        ],
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 484,
+                "y": -65
+            }
+        },
+        "next": [
+            "蓝色站台_选择可移植现实"
+        ]
+    },
+    "蓝色站台_选择可移植现实": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "探知触角"
+        ],
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 744,
+                "y": -65
+            }
+        },
+        "next": [
+            "蓝色站台_进入站台"
+        ]
+    },
+    "蓝色站台_进入站台": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "下一步"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1004,
+                "y": -65
+            }
+        },
+        "next": [
+            "蓝色站台_选择角色"
+        ]
+    },
+    "蓝色站台_选择角色": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "开始探索"
+        ],
+        "pre_delay": 400,
+        "post_delay": 5000,
+        "__yamaape": {
+            "position": {
+                "x": 1264,
+                "y": -65
+            }
+        },
+        "next": [
+            "蓝色站台_节点判断"
+        ]
+    },
+    "蓝色站台_节点判断": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": 60,
+                "y": 224
+            }
+        },
+        "next": [
+            "蓝色站台_事件节点",
+            "蓝色站台_战斗节点"
+        ]
+    },
+    "蓝色站台_事件节点": {
+        "recognition": "FeatureMatch",
+        "action": "Click",
+        "template": [
+            "../image/platform/event.png"
+        ],
+        "order_by": "Score",
+        "post_delay": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 357,
+                "y": 581
+            }
+        },
+        "next": [
+            "蓝色站台_进入事件节点"
+        ]
+    },
+    "蓝色站台_战斗节点": {
+        "recognition": "FeatureMatch",
+        "action": "Click",
+        "template": [
+            "../image/platform/fight.png"
+        ],
+        "order_by": "Horizontal",
+        "index": -1,
+        "__yamaape": {
+            "position": {
+                "x": 352,
+                "y": 307
+            }
+        },
+        "next": [
+            "蓝色站台_进入战斗节点"
+        ]
+    },
+    "蓝色站台_进入战斗节点": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "进入节点"
+        ],
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 612,
+                "y": 307
+            }
+        },
+        "next": [
+            "蓝色站台_开始战斗"
+        ]
+    },
+    "蓝色站台_开始战斗": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "开始探索"
+        ],
+        "pre_delay": 400,
+        "timeout": 610000,
+        "post_delay": 20000,
+        "rate_limit": 2000,
+        "__yamaape": {
+            "position": {
+                "x": 872,
+                "y": 307
+            }
+        },
+        "interrupt": [
+            "蓝色站台_选择战斗奖励"
+        ]
+    },
+    "蓝色站台_选择战斗奖励": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/platform/select.png"
+        ],
+        "order_by": "Random",
+        "__yamaape": {
+            "position": {
+                "x": 1123,
+                "y": 396
+            }
+        }
+    },
+    "蓝色站台_节点结束": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "/4层"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 2441,
+                "y": 131
+            }
+        },
+        "next": [
+            "蓝色站台_节点判断"
+        ]
+    },
+    "蓝色站台_进入事件节点": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "进入节点"
+        ],
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 607,
+                "y": 583
+            }
+        },
+        "interrupt": [
+            "蓝色站台_事件选项",
+            "蓝色站台_选择事件奖励",
+            "蓝色站台_加速事件剧情"
+        ],
+        "next": [
+            "蓝色站台_节点结束"
+        ]
+    },
+    "蓝色站台_事件选项": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/platform/item.png"
+        ],
+        "order_by": "Random",
+        "__yamaape": {
+            "position": {
+                "x": 882,
+                "y": 669
+            }
+        },
+        "next": [
+            "蓝色站台_确定事件选项"
+        ]
+    },
+    "蓝色站台_选择事件奖励": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "选择"
+        ],
+        "order_by": "Random",
+        "__yamaape": {
+            "position": {
+                "x": 882,
+                "y": 853
+            }
+        }
+    },
+    "蓝色站台_加速事件剧情": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            25,
+            250,
+            1,
+            1
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 884,
+                "y": 1037
+            }
+        }
+    },
+    "蓝色站台_确定事件选项": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "确定"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1142,
+                "y": 669
+            }
+        }
+    },
+    "蓝色站台_休息节点": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/platform/rest.png"
+        ],
+        "order_by": "Horizontal",
+        "index": -1,
+        "threshold": [
+            0.9
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 355,
+                "y": 1281
+            }
+        },
+        "next": [
+            "蓝色站台_进入休息节点"
+        ]
+    },
+    "蓝色站台_进入休息节点": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "进入节点"
+        ],
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 615,
+                "y": 1281
+            }
+        },
+        "next": [
+            "蓝色站台_幕间剧情"
+        ],
+        "interrupt": [
+            "蓝色站台_选择补给",
+            "蓝色站台_结束选择"
+        ]
+    },
+    "蓝色站台_幕间剧情": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "幕间剧情"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 885,
+                "y": 1277
+            }
+        },
+        "next": [
+            "蓝色站台_拟态特工"
+        ],
+        "interrupt": [
+            "蓝色站台_跳过幕间剧情"
+        ]
+    },
+    "蓝色站台_选择补给": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "post_delay": 1000,
+        "template": [
+            "../image/platform/select.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 647,
+                "y": 1477
+            }
+        }
+    },
+    "蓝色站台_结束选择": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "结束选择"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 649,
+                "y": 1663
+            }
+        }
+    },
+    "蓝色站台_拟态特工": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "拟态特工"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1141,
+                "y": 1278
+            }
+        },
+        "next": [
+            "蓝色站台_选择夜来"
+        ],
+        "interrupt": [
+            "蓝色站台_向下滑动"
+        ]
+    },
+    "蓝色站台_跳过幕间剧情": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/jump.png"
+        ],
+        "post_delay": 2000,
+        "__yamaape": {
+            "position": {
+                "x": 903,
+                "y": 1442
+            }
+        }
+    },
+    "蓝色站台_选择夜来": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "夜来"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1412,
+                "y": 1283
+            }
+        },
+        "next": [
+            "蓝色站台_确定选择夜来"
+        ]
+    },
+    "蓝色站台_向下滑动": {
+        "recognition": "DirectHit",
+        "action": "Swipe",
+        "begin": [
+            340,
+            520,
+            1,
+            1
+        ],
+        "end": [
+            340,
+            300,
+            1,
+            1
+        ],
+        "duration": 200,
+        "post_delay": 1,
+        "__yamaape": {
+            "position": {
+                "x": 1410,
+                "y": 1455
+            }
+        },
+        "next": [
+            "蓝色站台_停止滑动"
+        ]
+    },
+    "蓝色站台_确定选择夜来": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "确定"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1654,
+                "y": 1278
+            }
+        },
+        "next": [
+            "蓝色站台_物品升级"
+        ]
+    },
+    "蓝色站台_停止滑动": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            340,
+            520,
+            1,
+            1
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1654,
+                "y": 1450
+            }
+        }
+    },
+    "蓝色站台_物品升级": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "物品升级"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 933,
+                "y": 1743
+            }
+        },
+        "next": [
+            "蓝色站台_选择物品"
+        ]
+    },
+    "蓝色站台_选择物品": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/platform/fragments.png"
+        ],
+        "order_by": "Vertical",
+        "threshold": [
+            0.9
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1196,
+                "y": 1742
+            }
+        },
+        "next": [
+            "蓝色站台_确定升级"
+        ]
+    },
+    "蓝色站台_确定升级": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "升级"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1456,
+                "y": 1742
+            }
+        },
+        "next": [
+            "蓝色站台_碎片不足"
+        ]
+    },
+    "蓝色站台_碎片不足": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "异石碎片数量不足"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1707,
+                "y": 1739
+            }
+        },
+        "next": [
+            "蓝色站台_结束升级"
+        ]
+    },
+    "蓝色站台_结束升级": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/back.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1960,
+                "y": 1740
+            }
+        },
+        "next": [
+            "蓝色站台_前往下层"
+        ]
+    },
+    "蓝色站台_前往下层": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "前往下层"
+        ],
+        "post_delay": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 1193,
+                "y": 2006
+            }
+        },
+        "next": [
+            "蓝色站台_选择主题"
+        ]
+    },
+    "蓝色站台_选择主题": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/platform/select.png"
+        ],
+        "order_by": "Random",
+        "__yamaape": {
+            "position": {
+                "x": 1437,
+                "y": 2007
+            }
+        },
+        "next": [
+            "蓝色站台_确定选择主题"
+        ]
+    },
+    "蓝色站台_确定选择主题": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "确定"
+        ],
+        "pre_delay": 400,
+        "post_delay": 3000,
+        "__yamaape": {
+            "position": {
+                "x": 1697,
+                "y": 2007
+            }
+        },
+        "next": [
+            "蓝色站台_检查主题"
+        ]
+    },
+    "蓝色站台_检查主题": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            25,
+            200,
+            1,
+            1
+        ],
+        "post_delay": 3000,
+        "__yamaape": {
+            "position": {
+                "x": 1957,
+                "y": 2007
+            }
+        },
+        "next": [
+            "蓝色站台_节点结束"
+        ]
+    }
+}
