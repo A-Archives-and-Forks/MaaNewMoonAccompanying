@@ -4,7 +4,7 @@
     "custom_title": "新月同行小助手(kqcoxn/MaaNewMoonAccompanying) - MFA | 游戏版本：禅世遗香·下",
     "mirrorchyan_rid": "MNMA",
     "mirrorchyan_multiplatform": true,
-    "version": "v0.3.12",
+    "version": "v0.3.13",
     "message": "- 新 月 同 行 -",
     "controller": [
         {
@@ -22,7 +22,8 @@
         {
             "name": "B服",
             "path": [
-                "{PROJECT_DIR}/resource"
+                "{PROJECT_DIR}/resource",
+                "{PROJECT_DIR}/bside"
             ]
         }
     ],
@@ -36,7 +37,7 @@
         {
             "name": "说明",
             "entry": "说明",
-            "doc": "**- 新 月 同 行 -**\n\n欢迎使用新月同行小助手 ── MNMA!\n\n![](https://s21.ax1x.com/2025/04/15/pEf0CDA.png)\n\n图像技术 + 模拟控制，解放双手！由 MaaFramework 强力驱动！\n\n**注意：请不要在任何官方讨论区底下提及本软件⚠️**\n\n更多相关信息请查阅项目 [Github](https://github.com/kqcoxn/MaaNewMoonAccompanying) 主页，Bug反馈/功能需求请提交 issue，或在 MNMA 交流群（993245868）内提问，感谢您的使用！\n\n**声明：本软件为开源项目，本体不以任何形式收取任何费用，若为付费下载皆是诈骗行为，请立刻退回！**\n\n开源地址：https://github.com/kqcoxn/MaaNewMoonAccompanying"
+            "doc": "**- 新 月 同 行 -**\n\n欢迎使用新月同行小助手 ── MNMA!\n\n![](https://s21.ax1x.com/2025/04/15/pEf0CDA.png)\n\n图像技术 + 模拟控制，解放双手！由 MaaFramework 强力驱动！\n\n**注意：第一次使用请配合 [使用文档](https://docs.codax.site/mnma/) 请不要在任何官方讨论区底下提及本软件⚠️**\n\n更多相关信息请查阅项目 [Github](https://github.com/kqcoxn/MaaNewMoonAccompanying) 主页，Bug反馈/功能需求请提交 issue，或在 MNMA 交流群（993245868）内提问，感谢您的使用！\n\n**声明：本软件为开源项目，本体不以任何形式收取任何费用，若为付费下载皆是诈骗行为，请立刻退回！**\n\n开源地址：https://github.com/kqcoxn/MaaNewMoonAccompanying"
         },
         {
             "name": "启动游戏",
