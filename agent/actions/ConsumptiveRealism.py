@@ -17,15 +17,20 @@ class SetEatTimes(CustomAction):
     ) -> CustomAction.RunResult | bool:
         global expected_times, used_times
 
-        args = json.loads(argv.custom_action_param)
-        if args and args["times"]:
-            expected_times = args["times"]
-            print(f"即将开始战斗，将自动使用 {expected_times} 次稳定合剂")
-        else:
-            expected_times = 0
-        used_times = 0
+        try:
+            args = json.loads(argv.custom_action_param)
+            if args and args["times"]:
+                expected_times = args["times"]
+                print(f"「清体力」功能将自动使用 {expected_times} 次稳定合剂")
+            else:
+                expected_times = 0
+            used_times = 0
 
-        return CustomAction.RunResult(success=True)
+            return CustomAction.RunResult(success=True)
+        except Exception as e:
+            print(f"设置合剂次数失败，请立即停止程序运行！")
+            print(e)
+            return CustomAction.RunResult(success=False)
 
 
 @AgentServer.custom_action("check_eat_times")
@@ -35,12 +40,17 @@ class SetEatTimes(CustomAction):
     ) -> CustomAction.RunResult | bool:
         global expected_times, used_times
 
-        used_times += 1
-        if used_times > expected_times:
-            return CustomAction.RunResult(success=False)
-        else:
-            print(
-                f"第 {used_times} 次使用稳定合剂，剩余 {expected_times - used_times} 次"
-            )
+        try:
+            used_times += 1
+            if used_times > expected_times:
+                return CustomAction.RunResult(success=False)
+            else:
+                print(
+                    f"第 {used_times} 次使用稳定合剂，剩余 {expected_times - used_times} 次"
+                )
 
-        return CustomAction.RunResult(success=True)
+            return CustomAction.RunResult(success=True)
+        except Exception as e:
+            print(f"检查合剂次数失败，请立即停止程序运行！")
+            print(e)
+            return CustomAction.RunResult(success=False)

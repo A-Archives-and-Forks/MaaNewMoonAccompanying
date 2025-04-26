@@ -82,7 +82,7 @@ def install_requirements(req_file="requirements.txt", mirror=None) -> bool:
         if mirror:
             cmd.extend(["-i", mirror])
 
-        subprocess.check_call(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        subprocess.check_call(cmd)
         return True
     except:
         print("环境加载失败，请检查网络与环境后重新尝试！")
