@@ -5,6 +5,8 @@
 /recording/
 /vision/
 /screenshot/
+/assets/**/model/ocr/*
+!/assets/**/model/ocr/.gitkeep
 
 # docs
 docs/node_modules
