@@ -109,12 +109,37 @@
     "七日签到": {
         "__yamaape": {
             "position": {
-                "x": 27,
-                "y": -28
+                "x": -279,
+                "y": -30
             }
         },
         "next": [
-            "七日签到_活动签到"
+            "七日签到_开始签到"
         ]
+    },
+    "七日签到_开始签到": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "timeout": 3000,
+        "__yamaape": {
+            "position": {
+                "x": -66,
+                "y": -62
+            }
+        },
+        "next": [
+            "七日签到_活动签到",
+            "七日签到_签到结束"
+        ]
+    },
+    "七日签到_签到结束": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": 234,
+                "y": 118
+            }
+        }
     }
 }
