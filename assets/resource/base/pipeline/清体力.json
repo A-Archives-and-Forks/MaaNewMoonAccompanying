@@ -236,9 +236,9 @@
         "expected": [
             "行动开始"
         ],
-        "pre_delay": 2000,
+        "pre_delay": 1000,
         "timeout": 300000,
-        "rate_limit": 1000,
+        "rate_limit": 2000,
         "__yamaape": {
             "position": {
                 "x": 4233,
@@ -424,6 +424,108 @@
         "on_error": [
             "清体力_3X及以下行动"
         ]
+    },
+    "清体力_返回倍率选择2": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/close.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 2927,
+                "y": 785
+            }
+        },
+        "next": [
+            "清体力_倍率选择2"
+        ]
+    },
+    "清体力_3X及以下行动": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "行动开始"
+        ],
+        "pre_delay": 1000,
+        "timeout": 300000,
+        "rate_limit": 2000,
+        "__yamaape": {
+            "position": {
+                "x": 4250,
+                "y": 569
+            }
+        },
+        "next": [
+            "清体力_3X及以下升级",
+            "清体力_行动结束"
+        ],
+        "interrupt": [
+            "清体力_确定3X及以下战斗"
+        ]
+    },
+    "清体力_倍率选择2": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/cycle.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3172,
+                "y": 782
+            }
+        },
+        "next": [
+            "清体力_2X"
+        ]
+    },
+    "清体力_3X及以下升级": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击空白处关闭"
+        ],
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 4523,
+                "y": 562
+            }
+        },
+        "next": [
+            "清体力_再动"
+        ]
+    },
+    "清体力_行动结束": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "确定"
+        ],
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 4521,
+                "y": 757
+            }
+        },
+        "next": [
+            "清体力_回到主页"
+        ]
+    },
+    "清体力_确定3X及以下战斗": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "行动开始"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 4277,
+                "y": 822
+            }
+        }
     },
     "清体力_数构银本": {
         "recognition": "OCR",
@@ -1068,108 +1170,6 @@
         "next": [
             "清体力_整流器本"
         ]
-    },
-    "清体力_返回倍率选择2": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "../image/close.png"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 2927,
-                "y": 785
-            }
-        },
-        "next": [
-            "清体力_倍率选择2"
-        ]
-    },
-    "清体力_3X及以下行动": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "行动开始"
-        ],
-        "pre_delay": 2000,
-        "timeout": 300000,
-        "rate_limit": 1000,
-        "__yamaape": {
-            "position": {
-                "x": 4250,
-                "y": 569
-            }
-        },
-        "next": [
-            "清体力_3X及以下升级",
-            "清体力_行动结束"
-        ],
-        "interrupt": [
-            "清体力_确定3X及以下战斗"
-        ]
-    },
-    "清体力_倍率选择2": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "../image/cycle.png"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 3172,
-                "y": 782
-            }
-        },
-        "next": [
-            "清体力_2X"
-        ]
-    },
-    "清体力_3X及以下升级": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "点击空白处关闭"
-        ],
-        "pre_delay": 800,
-        "__yamaape": {
-            "position": {
-                "x": 4523,
-                "y": 562
-            }
-        },
-        "next": [
-            "清体力_再动"
-        ]
-    },
-    "清体力_行动结束": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "确定"
-        ],
-        "pre_delay": 400,
-        "__yamaape": {
-            "position": {
-                "x": 4521,
-                "y": 757
-            }
-        },
-        "next": [
-            "清体力_回到主页"
-        ]
-    },
-    "清体力_确定3X及以下战斗": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "行动开始"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 4277,
-                "y": 822
-            }
-        }
     },
     "清体力_2X": {
         "recognition": "OCR",

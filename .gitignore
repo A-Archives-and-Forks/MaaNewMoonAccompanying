@@ -5,6 +5,7 @@
 /recording/
 /vision/
 /screenshot/
+/assets/resource/**/ocr/
 
 # docs
 docs/node_modules
