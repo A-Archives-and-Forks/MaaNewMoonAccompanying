@@ -13,7 +13,7 @@
   <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white">
   <img src="https://img.shields.io/badge/Pipeline-%23454545?logo=paddypower&logoColor=%23FFFFFF">
   <img src="https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-blueviolet">
-  <img src="https://img.shields.io/badge/proxy-Mirror酱-8fbd08?logo=&logoColor=white&url=https://mirrorchyan.com/zh/projects?rid=MNMA">
+  <img src="https://img.shields.io/badge/Mirror%E9%85%B1-%239af3f6?logo=countingworkspro&logoColor=4f46e5">
   <br/>
   <!-- <img src="https://img.shields.io/github/license/kqcoxn/MaaNewMoonAccompanying"> -->
   <img src="https://img.shields.io/github/commit-activity/m/kqcoxn/MaaNewMoonAccompanying">
@@ -99,7 +99,10 @@
 
 ## 更新记录
 
-<!-- ### Next Release (Committed but Unreleased) -->
+### Next Release (Committed but Unreleased)
+
+- **修复优化**
+  -  修复了B服资源路径错误的问题
 
 ### v0.3.13
 
