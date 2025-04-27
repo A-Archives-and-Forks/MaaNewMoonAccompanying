@@ -432,7 +432,13 @@
             "cases": [
                 {
                     "name": "不使用",
-                    "pipeline_override": {}
+                    "pipeline_override": {
+                        "清体力_设定合剂消耗": {
+                            "custom_action_param": {
+                                "times": 0
+                            }
+                        }
+                    }
                 },
                 {
                     "name": "使用1次",

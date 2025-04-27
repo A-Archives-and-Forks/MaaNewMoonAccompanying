@@ -19,7 +19,7 @@ class SetEatTimes(CustomAction):
 
         try:
             args = json.loads(argv.custom_action_param)
-            if args and args["times"]:
+            if args["times"] > 0:
                 expected_times = args["times"]
                 print(f"「清体力」功能将自动使用 {expected_times} 次稳定合剂")
             else:

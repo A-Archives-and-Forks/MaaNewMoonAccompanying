@@ -69,6 +69,7 @@ def install_requirements(req_file="requirements.txt", mirror=None) -> bool:
         return False
 
     try:
+        print("正在安装或更新环境...")
         cmd = [
             sys.executable,
             "-m",
@@ -83,6 +84,7 @@ def install_requirements(req_file="requirements.txt", mirror=None) -> bool:
             cmd.extend(["-i", mirror])
 
         subprocess.check_call(cmd)
+        print("（以上日志若无「error」等字样则正常）")
         return True
     except:
         print("环境加载失败，请检查网络与环境后重新尝试！")
