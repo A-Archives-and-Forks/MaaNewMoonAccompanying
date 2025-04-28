@@ -89,6 +89,7 @@
         ],
         "pre_delay": 400,
         "post_delay": 1000,
+        "timeout": 3000,
         "__yamaape": {
             "position": {
                 "x": 771,
@@ -97,38 +98,8 @@
         },
         "next": [
             "未来记忆_领取奖励"
-        ]
-    },
-    "未来记忆_停止滑动": {
-        "recognition": "DirectHit",
-        "action": "Click",
-        "target": [
-            145,
-            470,
-            1,
-            1
         ],
-        "__yamaape": {
-            "position": {
-                "x": 761,
-                "y": 115
-            }
-        }
-    },
-    "未来记忆_获得奖励物品": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "点击以继续"
-        ],
-        "pre_delay": 800,
-        "__yamaape": {
-            "position": {
-                "x": 1292,
-                "y": -271
-            }
-        },
-        "next": [
+        "on_error": [
             "未来记忆_返回主页"
         ]
     },
@@ -147,6 +118,22 @@
             }
         }
     },
+    "未来记忆_停止滑动": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            145,
+            470,
+            1,
+            1
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 761,
+                "y": 115
+            }
+        }
+    },
     "未来记忆_领取奖励": {
         "recognition": "OCR",
         "action": "Click",
@@ -162,6 +149,23 @@
         },
         "next": [
             "未来记忆_获得奖励物品"
+        ]
+    },
+    "未来记忆_获得奖励物品": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击以继续"
+        ],
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 1292,
+                "y": -271
+            }
+        },
+        "next": [
+            "未来记忆_返回主页"
         ]
     }
 }
