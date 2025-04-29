@@ -6,6 +6,8 @@
 /vision/
 /screenshot/
 /assets/resource/**/ocr/
+/MFATools/*
+!/MFATools/.gitkeep
 
 # docs
 docs/node_modules
