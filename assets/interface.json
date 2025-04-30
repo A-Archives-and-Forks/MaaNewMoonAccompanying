@@ -1,7 +1,7 @@
 {
     "name": "MaaNewMoonAccompanying",
     "url": "https://github.com/kqcoxn/MaaNewMoonAccompanying",
-    "custom_title": "新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v0.3.20 - MFA | 游戏版本：禅世遗香·下",
+    "custom_title": "新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v0.3.20 - MFA | 游戏版本：血茧时辙·上",
     "mirrorchyan_rid": "MNMA",
     "mirrorchyan_multiplatform": true,
     "version": "v0.3.20",
@@ -85,15 +85,6 @@
             "check": true
         },
         {
-            "name": "「列车长」领取体力",
-            "entry": "列车长的见面礼",
-            "option": [
-                "自动消耗双倍奖励"
-            ],
-            "doc": "**「列车长」领取体力**：\n\n领取「列车长的见面礼」活动每日体力\n\n开始界面：主界面\n\n结束界面：主界面",
-            "check": true
-        },
-        {
             "name": "清体力",
             "entry": "清体力",
             "option": [
@@ -122,21 +113,15 @@
             "check": true
         },
         {
-            "name": "「未来记忆」领取今日奖励",
-            "entry": "未来记忆",
-            "doc": "**「未来记忆」领取今日奖励**：\n\n半周年版本剧情谜语人卖关子活动（\n\n开始界面：主界面\n\n结束界面：主界面",
-            "check": true
-        },
-        {
-            "name": "[禅世遗香]七日签到",
+            "name": "[血茧时辙]七日签到",
             "entry": "七日签到",
-            "doc": "**[禅世遗香]七日签到**：\n\n紧张刺激的七日签到！\n\n开始界面：主界面\n\n结束界面：主界面",
+            "doc": "**[血茧时辙]七日签到**：\n\n紧张刺激的七日签到！\n\n开始界面：主界面\n\n结束界面：主界面",
             "check": true
         },
         {
-            "name": "[禅世遗香]领取每日禅香",
+            "name": "[血茧时辙]领取每日残片",
             "entry": "旅行便签",
-            "doc": "**[禅世遗香]领取每日禅香**：\n\n领取禅世遗香活动每日任务奖励\n\n**注意：版本更新后请先进入活动过完开场动画！**\n\n开始界面：主界面\n\n结束界面：主界面\n\n注意事项：文档介绍每次手册更新后需要手动进入一次",
+            "doc": "**[血茧时辙]领取每日残片**：\n\n领取血茧时辙活动每日任务奖励\n\n**注意：版本更新后请先进入活动过完开场动画！**\n\n开始界面：主界面\n\n结束界面：主界面\n\n注意事项：文档介绍每次手册更新后需要手动进入一次",
             "check": true
         },
         {
@@ -356,22 +341,6 @@
                     "pipeline_override": {
                         "友谊交换_互助结束": {
                             "next": "友谊交换_返回主界面"
-                        }
-                    }
-                }
-            ]
-        },
-        "自动消耗双倍奖励": {
-            "cases": [
-                {
-                    "name": "启用",
-                    "pipeline_override": {}
-                },
-                {
-                    "name": "禁用",
-                    "pipeline_override": {
-                        "列车长的见面礼_领取结束": {
-                            "next": "列车长的见面礼_返回主页"
                         }
                     }
                 }
