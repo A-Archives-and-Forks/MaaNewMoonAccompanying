@@ -105,7 +105,11 @@
 
 ## 更新记录
 
-### Next Release (Committed but Unreleased)
+<!-- ### Next Release (Committed but Unreleased) -->
+
+### v0.3.20
+
+> 2025.4.30
 
 - **新增**
   - 添加功能：「血茧时辙」领取每日残片
