@@ -1,5 +1,11 @@
 {
-    "活动入口": {
+    "__yamaape_config_秘密收管行动": {
+        "filename": "秘密收管行动",
+        "version": "v0.3.2",
+        "export": "",
+        "prefix": "秘密收管行动"
+    },
+    "秘密收管行动_活动入口": {
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
@@ -12,14 +18,14 @@
             }
         },
         "next": [
-            "旅行便签"
+            "秘密收管行动_秘密收管行动"
         ]
     },
-    "旅行便签": {
+    "秘密收管行动_秘密收管行动": {
         "recognition": "OCR",
         "action": "Click",
         "expected": [
-            "旅行便签"
+            "秘密收管行动"
         ],
         "pre_delay": 200,
         "__yamaape": {
@@ -29,10 +35,10 @@
             }
         },
         "next": [
-            "领取奖励"
+            "秘密收管行动_领取奖励"
         ]
     },
-    "领取奖励": {
+    "秘密收管行动_领取奖励": {
         "recognition": "OCR",
         "action": "Click",
         "expected": [
@@ -46,13 +52,13 @@
             }
         },
         "next": [
-            "获取谛香"
+            "秘密收管行动_获取奖励"
         ],
         "on_error": [
-            "返回主界面"
+            "秘密收管行动_返回主界面"
         ]
     },
-    "获取谛香": {
+    "秘密收管行动_获取奖励": {
         "recognition": "OCR",
         "action": "Click",
         "expected": [
@@ -66,10 +72,10 @@
             }
         },
         "next": [
-            "返回主界面"
+            "秘密收管行动_返回主界面"
         ]
     },
-    "返回主界面": {
+    "秘密收管行动_返回主界面": {
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
