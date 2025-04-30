@@ -105,7 +105,10 @@
 
 ## 更新记录
 
-<!-- ### Next Release (Committed but Unreleased) -->
+### Next Release (Committed but Unreleased)
+
+- **新增**
+  - 添加功能：「危局演练」连续作战
 
 ### v0.3.20
 

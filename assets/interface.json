@@ -1,10 +1,10 @@
 {
     "name": "MaaNewMoonAccompanying",
     "url": "https://github.com/kqcoxn/MaaNewMoonAccompanying",
-    "custom_title": "新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v0.3.20 - MFA | 游戏版本：血茧时辙·上",
+    "custom_title": "新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v0.3.21 - MFA | 游戏版本：血茧时辙·上",
     "mirrorchyan_rid": "MNMA",
     "mirrorchyan_multiplatform": true,
-    "version": "v0.3.20",
+    "version": "v0.3.21",
     "message": "- 新 月 同 行 -",
     "controller": [
         {
@@ -89,7 +89,7 @@
             "entry": "清体力",
             "option": [
                 "资源类型",
-                "自动使用稳定合剂",
+                "使用稳定合剂",
                 "认证类型",
                 "演练卷类型",
                 "卡带类型"
@@ -136,6 +136,11 @@
                 "仅在主界面退出"
             ],
             "doc": "**退出游戏**：\n\n仅关闭游戏，保留 MNMA 与模拟器（若需要关闭 MNMA 与模拟器请在 MNMA 设置中进行配置）\n\n“仅在主界面退出”选项用于在其他任务卡住后起提醒作用\n\n开始界面：任意界面"
+        },
+        {
+            "name": "「危局演练」连续作战",
+            "entry": "危局演练_开始",
+            "doc": "**「危局演练」连续作战**：\n\n自动进行连续战斗，请确保体力充足（100以上）\n\n开始界面：危局演练关卡选择\n\n结束界面：危局演练关卡选择"
         }
     ],
     "option": {
@@ -397,7 +402,7 @@
                 }
             ]
         },
-        "自动使用稳定合剂": {
+        "使用稳定合剂": {
             "cases": [
                 {
                     "name": "不使用",
@@ -675,6 +680,18 @@
                             "next": "退出游戏_退出游戏"
                         }
                     }
+                }
+            ]
+        },
+        "自动使用稳定合剂": {
+            "cases": [
+                {
+                    "name": "启用",
+                    "pipeline_override": {}
+                },
+                {
+                    "name": "禁用",
+                    "pipeline_override": {}
                 }
             ]
         }

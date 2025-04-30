@@ -1,0 +1,84 @@
+{
+    "__yamaape_config_危局演练": {
+        "filename": "危局演练",
+        "version": "v0.3.2",
+        "prefix": "危局演练"
+    },
+    "危局演练_开始": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": 705,
+                "y": 127
+            }
+        },
+        "next": [
+            "危局演练_作战开始"
+        ]
+    },
+    "危局演练_作战开始": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "作战开始"
+        ],
+        "timeout": 900000,
+        "rate_limit": 3000,
+        "__yamaape": {
+            "position": {
+                "x": 981,
+                "y": 56
+            }
+        },
+        "interrupt": [
+            "危局演练_开始作战"
+        ],
+        "next": [
+            "危局演练_获取奖励"
+        ]
+    },
+    "危局演练_开始作战": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "行动开始"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1238,
+                "y": 247
+            }
+        }
+    },
+    "危局演练_获取奖励": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "确定"
+        ],
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1238,
+                "y": 56
+            }
+        },
+        "next": [
+            "危局演练_下一关"
+        ]
+    },
+    "危局演练_下一关": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": 1504,
+                "y": -77
+            }
+        },
+        "next": [
+            "危局演练_作战开始"
+        ]
+    }
+}
