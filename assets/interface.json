@@ -1,10 +1,10 @@
 {
     "name": "MaaNewMoonAccompanying",
     "url": "https://github.com/kqcoxn/MaaNewMoonAccompanying",
-    "custom_title": "新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v0.4.0 - MFA | 游戏版本：血茧时辙·上",
+    "custom_title": "新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v0.4.1 - MFA | 游戏版本：血茧时辙·上",
     "mirrorchyan_rid": "MNMA",
     "mirrorchyan_multiplatform": true,
-    "version": "v0.4.0",
+    "version": "v0.4.1",
     "message": "- 新 月 同 行 -",
     "controller": [
         {
@@ -106,7 +106,7 @@
         },
         {
             "name": "城市探索",
-            "entry": "城市探索",
+            "entry": "城市探索_城市探索",
             "doc": "**城市探索**：\n\n资源收取、制造订单、设施管理、传闻调查\n\n开始界面：主界面\n\n结束界面：主界面",
             "option": [
                 "自动城市事件"

@@ -104,7 +104,7 @@
 
 <!-- ### Next Release (Committed but Unreleased) -->
 
-### v0.4.0
+### v0.4.1
 
 > 2025.5.2
 
