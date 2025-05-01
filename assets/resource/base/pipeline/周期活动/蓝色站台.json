@@ -1,18 +1,9 @@
 {
     "__yamaape_config_蓝色站台": {
-        "version": "v0.3.1",
-        "export": ""
-    },
-    "蓝色站台": {
-        "__yamaape": {
-            "position": {
-                "x": 31,
-                "y": -25
-            }
-        },
-        "next": [
-            "蓝色站台_开始探索"
-        ]
+        "filename": "蓝色站台",
+        "version": "v0.3.2",
+        "export": "",
+        "prefix": "蓝色站台"
     },
     "蓝色站台_开始探索": {
         "recognition": "OCR",
@@ -148,6 +139,28 @@
             "蓝色站台_进入战斗节点"
         ]
     },
+    "蓝色站台_进入事件节点": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "进入节点"
+        ],
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 607,
+                "y": 583
+            }
+        },
+        "next": [
+            "蓝色站台_节点结束"
+        ],
+        "interrupt": [
+            "蓝色站台_事件选项",
+            "蓝色站台_选择事件奖励",
+            "蓝色站台_加速事件剧情"
+        ]
+    },
     "蓝色站台_进入战斗节点": {
         "recognition": "OCR",
         "action": "Click",
@@ -213,28 +226,6 @@
         },
         "next": [
             "蓝色站台_节点判断"
-        ]
-    },
-    "蓝色站台_进入事件节点": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "进入节点"
-        ],
-        "pre_delay": 400,
-        "__yamaape": {
-            "position": {
-                "x": 607,
-                "y": 583
-            }
-        },
-        "interrupt": [
-            "蓝色站台_事件选项",
-            "蓝色站台_选择事件奖励",
-            "蓝色站台_加速事件剧情"
-        ],
-        "next": [
-            "蓝色站台_节点结束"
         ]
     },
     "蓝色站台_事件选项": {
@@ -648,5 +639,26 @@
         "next": [
             "蓝色站台_节点结束"
         ]
+    },
+    "蓝色站台_新增节点46": {
+        "recognition": "ColorMatch",
+        "action": "Click",
+        "lower": [
+            98,
+            148,
+            198
+        ],
+        "upper": [
+            102,
+            152,
+            202
+        ],
+        "order_by": "Area",
+        "__yamaape": {
+            "position": {
+                "x": 329,
+                "y": 827
+            }
+        }
     }
 }

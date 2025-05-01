@@ -25,6 +25,13 @@
                 "{PROJECT_DIR}/resource/base",
                 "{PROJECT_DIR}/resource/bside"
             ]
+        },
+        {
+            "name": "小米渠道服",
+            "path": [
+                "{PROJECT_DIR}/resource/base",
+                "{PROJECT_DIR}/resource/miside"
+            ]
         }
     ],
     "agent": {
