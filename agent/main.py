@@ -12,6 +12,7 @@ def main():
 
     import actions.Logger
     import actions.ConsumptiveRealism
+    import actions.Platform
 
     try:
         Toolkit.init_option("./")

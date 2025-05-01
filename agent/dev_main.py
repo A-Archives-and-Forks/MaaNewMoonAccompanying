@@ -5,6 +5,7 @@ from maa.toolkit import Toolkit
 
 import actions.Logger
 import actions.ConsumptiveRealism
+import actions.Platform
 
 
 def main():
@@ -12,7 +13,7 @@ def main():
 
     socket_id = sys.argv[-1]
 
-    AgentServer.start_up("1bcf6108-75f3-47e4-bc96-f8b5a237901e")
+    AgentServer.start_up("1bcf6108-75f3-47e4-bc96-f8b5a2379011")
     AgentServer.join()
     AgentServer.shut_down()
 

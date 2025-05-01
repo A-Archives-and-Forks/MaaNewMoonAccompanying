@@ -1,18 +1,9 @@
 {
     "__yamaape_config_城市探索": {
         "version": "v0.3.1",
-        "export": ""
-    },
-    "城市探索": {
-        "__yamaape": {
-            "position": {
-                "x": -443,
-                "y": 569
-            }
-        },
-        "next": [
-            "城市探索_城市探索"
-        ]
+        "export": "",
+        "prefix": "城市探索",
+        "filename": "城市探索"
     },
     "城市探索_城市探索": {
         "recognition": "OCR",
