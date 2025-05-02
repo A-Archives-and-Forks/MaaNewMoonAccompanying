@@ -102,7 +102,10 @@
 
 ## 更新记录
 
-<!-- ### Next Release (Committed but Unreleased) -->
+### Next Release (Committed but Unreleased)
+
+- **新增**
+  - 新增选项：城市探索-资源收取
 
 ### v0.4.1
 
