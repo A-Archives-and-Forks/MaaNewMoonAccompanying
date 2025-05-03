@@ -102,7 +102,10 @@
 
 ## 更新记录
 
-<!-- ### Next Release (Committed but Unreleased) -->
+### Next Release (Committed but Unreleased)
+
+- **修复优化**
+  - 修复了蓝色站台跳过剧情第一次需要手动确定的问题
 
 ### v0.4.2
 
