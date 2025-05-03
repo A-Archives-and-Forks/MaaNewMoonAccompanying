@@ -113,6 +113,7 @@
             "蓝色站台_选项-未知",
             "蓝色站台_点击空白处关闭",
             "蓝色站台_选择物品奖励",
+            "蓝色站台_开始战斗",
             "蓝色站台_加速事件剧情"
         ]
     },
@@ -239,7 +240,9 @@
         ],
         "interrupt": [
             "蓝色站台_选择物品奖励",
-            "蓝色站台_物品更替"
+            "蓝色站台_物品更替",
+            "蓝色站台_私闯民宅",
+            "蓝色站台_主题效果激活"
         ]
     },
     "蓝色站台_温控变化提示": {
@@ -476,6 +479,7 @@
         "roi": "../image/platform/store.png",
         "index": -1,
         "post_delay": 600,
+        "focus": "> 检测到普通商店节点",
         "__yamaape": {
             "position": {
                 "x": 355,
@@ -513,6 +517,9 @@
         "order_by": "Random",
         "post_delay": 1000,
         "focus": "> 选择物品奖励",
+        "threshold": [
+            0.92
+        ],
         "__yamaape": {
             "position": {
                 "x": 1553,
@@ -970,6 +977,7 @@
             "进入节点"
         ],
         "pre_delay": 400,
+        "focus": "> 进入商店节点",
         "__yamaape": {
             "position": {
                 "x": 624,
@@ -987,6 +995,7 @@
             "离开商店"
         ],
         "pre_delay": 400,
+        "focus": "> 离开商店",
         "__yamaape": {
             "position": {
                 "x": 896,
@@ -1217,31 +1226,13 @@
             }
         }
     },
-    "蓝色站台_加速事件剧情": {
-        "recognition": "DirectHit",
-        "action": "Click",
-        "target": [
-            20,
-            200,
-            1,
-            1
-        ],
-        "pre_delay": 1,
-        "post_delay": 1,
-        "__yamaape": {
-            "position": {
-                "x": 982,
-                "y": 1952
-            }
-        }
-    },
     "蓝色站台_确定事件选项": {
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
             "../image/platform/confirm.png"
         ],
-        "post_delay": 1000,
+        "post_delay": 2000,
         "timeout": 5000,
         "pre_delay": 400,
         "__yamaape": {
@@ -1295,6 +1286,43 @@
                 "y": 3184
             }
         }
+    },
+    "蓝色站台_加速事件剧情": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            20,
+            200,
+            1,
+            1
+        ],
+        "pre_delay": 1,
+        "post_delay": 1,
+        "__yamaape": {
+            "position": {
+                "x": 982,
+                "y": 1952
+            }
+        }
+    },
+    "蓝色站台_私闯民宅": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "私闯民宅"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1202,
+                "y": 757
+            }
+        },
+        "next": [
+            "蓝色站台_节点结束"
+        ],
+        "interrupt": [
+            "蓝色站台_事件信息"
+        ]
     },
     "蓝色站台_今天不再提醒额外消耗": {
         "recognition": "OCR",
