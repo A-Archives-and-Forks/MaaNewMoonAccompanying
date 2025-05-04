@@ -1,18 +1,9 @@
 {
     "__yamaape_config_领取奖励": {
-        "version": "v0.3.1",
-        "export": ""
-    },
-    "领取奖励": {
-        "__yamaape": {
-            "position": {
-                "x": 261,
-                "y": -433
-            }
-        },
-        "next": [
-            "领取奖励_任务"
-        ]
+        "filename": "领取奖励",
+        "version": "v0.3.4",
+        "export": "",
+        "prefix": "领取奖励"
     },
     "领取奖励_任务": {
         "recognition": "OCR",
@@ -158,8 +149,8 @@
         "pre_delay": 200,
         "__yamaape": {
             "position": {
-                "x": 1292,
-                "y": -182
+                "x": 1313,
+                "y": -120
             }
         },
         "next": [
@@ -296,12 +287,15 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 875,
-                "y": 538
+                "x": 879,
+                "y": 540
             }
         },
         "next": [
             "领取奖励_领取手册奖励"
+        ],
+        "interrupt": [
+            "领取奖励_手册升级"
         ]
     },
     "领取奖励_领取手册奖励": {
@@ -310,7 +304,6 @@
         "expected": [
             "领取全部"
         ],
-        "timeout": 3000,
         "__yamaape": {
             "position": {
                 "x": 1152,
@@ -319,9 +312,6 @@
         },
         "next": [
             "领取奖励_关闭手册升级"
-        ],
-        "on_error": [
-            "领取奖励_手册升级"
         ]
     },
     "领取奖励_关闭手册升级": {
@@ -380,6 +370,19 @@
             }
         }
     },
+    "领取奖励_开始": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": 195,
+                "y": -465
+            }
+        },
+        "next": [
+            "领取奖励_任务"
+        ]
+    },
     "领取奖励_手册升级": {
         "recognition": "TemplateMatch",
         "action": "Click",
@@ -388,12 +391,9 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 1418,
-                "y": 747
+                "x": 1152,
+                "y": 698
             }
-        },
-        "next": [
-            "领取奖励_领取手册奖励"
-        ]
+        }
     }
 }
