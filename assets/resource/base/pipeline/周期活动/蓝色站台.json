@@ -114,7 +114,8 @@
             "蓝色站台_点击空白处关闭",
             "蓝色站台_选择物品奖励",
             "蓝色站台_开始战斗",
-            "蓝色站台_加速事件剧情"
+            "蓝色站台_加速事件剧情",
+            "蓝色站台_选项-战斗"
         ]
     },
     "蓝色站台_节点判断": {
@@ -198,7 +199,7 @@
         "template": [
             "../image/platform/run.png"
         ],
-        "focus": "> 选择跑路选项",
+        "focus": "> 我可溜了（",
         "threshold": [
             0.9
         ],
@@ -1324,6 +1325,9 @@
         },
         "next": [
             "蓝色站台_节点结束"
+        ],
+        "interrupt": [
+            "蓝色站台_防止主题多次提示"
         ]
     },
     "蓝色站台_初始化": {
@@ -1354,6 +1358,44 @@
                 "y": 358
             }
         }
+    },
+    "蓝色站台_防止主题多次提示": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            25,
+            200,
+            1,
+            1
+        ],
+        "post_delay": 8000,
+        "__yamaape": {
+            "position": {
+                "x": 2499,
+                "y": 3571
+            }
+        }
+    },
+    "蓝色站台_选项-战斗": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/platform/go_fight.png"
+        ],
+        "order_by": "Random",
+        "focus": "> 选择战斗选项",
+        "threshold": [
+            0.9
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1345,
+                "y": 1494
+            }
+        },
+        "next": [
+            "蓝色站台_确定事件选项"
+        ]
     },
     "蓝色站台_今天不再提醒额外消耗": {
         "recognition": "OCR",
