@@ -5,24 +5,6 @@
         "export": "",
         "prefix": "城市探索"
     },
-    "城市探索_进入城市探索": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "城市探索"
-        ],
-        "post_delay": 2000,
-        "focus": "> 进入城市探索界面",
-        "__yamaape": {
-            "position": {
-                "x": -312,
-                "y": 718
-            }
-        },
-        "next": [
-            "城市探索_资源收取"
-        ]
-    },
     "城市探索_资源收取": {
         "recognition": "TemplateMatch",
         "action": "Click",
@@ -572,7 +554,7 @@
         "expected": [
             "城市事件"
         ],
-        "post_delay": 2000,
+        "timeout": 3000,
         "__yamaape": {
             "position": {
                 "x": 2387,
@@ -615,8 +597,8 @@
         "post_delay": 1000,
         "__yamaape": {
             "position": {
-                "x": 2641,
-                "y": 179
+                "x": 2643,
+                "y": 257
             }
         },
         "next": [
@@ -1512,8 +1494,8 @@
         "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": -591,
-                "y": 561
+                "x": -836,
+                "y": 586
             }
         },
         "next": [
@@ -1529,8 +1511,39 @@
         ],
         "__yamaape": {
             "position": {
-                "x": -313,
-                "y": 560
+                "x": -555,
+                "y": 581
+            }
+        },
+        "next": [
+            "城市探索_城市界面"
+        ]
+    },
+    "城市探索_进入城市探索": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "城市探索"
+        ],
+        "post_delay": 2000,
+        "focus": "> 进入城市探索界面",
+        "__yamaape": {
+            "position": {
+                "x": -554,
+                "y": 739
+            }
+        },
+        "next": [
+            "城市探索_城市界面"
+        ]
+    },
+    "城市探索_城市界面": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": -268,
+                "y": 657
             }
         },
         "next": [
