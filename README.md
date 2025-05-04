@@ -90,8 +90,6 @@
 
 ## 常见问题
 
-在一切问题之前，请先确保你的`Python`与`MaaFw`框架环境正常，具体可参考这篇 [issue](https://github.com/kqcoxn/MaaNewMoonAccompanying/issues/4)
-
 请确保现有 [issue](https://github.com/kqcoxn/MaaNewMoonAccompanying/issues?q=is%3Aissue) 中还没有与您遇到的类似的问题
 
 - [文档站-用户手册-问题排查](https://docs.codax.site/mnma/docs/users/errors.html)

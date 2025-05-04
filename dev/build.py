@@ -31,6 +31,14 @@ def copy_files():
                 else:
                     os.remove(item_path)
 
+        # 删除debug目录
+        if os.path.exists("MFAAvalonia/debug"):
+            shutil.rmtree("MFAAvalonia/debug")
+
+        # 删除logs目录
+        if os.path.exists("MFAAvalonia/logs"):
+            shutil.rmtree("MFAAvalonia/logs")
+
         # 删除agent目录
         if os.path.exists("MFAAvalonia/agent"):
             shutil.rmtree("MFAAvalonia/agent")
