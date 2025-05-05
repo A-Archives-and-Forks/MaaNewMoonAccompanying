@@ -746,8 +746,11 @@
             }
         },
         "next": [
-            "蓝色站台_离开商店",
-            "蓝色站台_跳过交易环节"
+            "蓝色站台_离开商店"
+        ],
+        "interrupt": [
+            "蓝色站台_跳过交易环节",
+            "蓝色站台_确定跳过交易环节"
         ]
     },
     "蓝色站台_确定少人作战": {
@@ -999,24 +1002,6 @@
             "蓝色站台_确认离开商店"
         ]
     },
-    "蓝色站台_跳过交易环节": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "下一步"
-        ],
-        "pre_delay": 400,
-        "focus": "> 跳过交易环节",
-        "__yamaape": {
-            "position": {
-                "x": 1220,
-                "y": 4167
-            }
-        },
-        "next": [
-            "蓝色站台_确定跳过交易环节"
-        ]
-    },
     "蓝色站台_结束商店节点": {
         "recognition": "DirectHit",
         "action": "DoNothing",
@@ -1041,20 +1026,6 @@
             "position": {
                 "x": 1484,
                 "y": 4054
-            }
-        }
-    },
-    "蓝色站台_确定跳过交易环节": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "确定"
-        ],
-        "pre_delay": 400,
-        "__yamaape": {
-            "position": {
-                "x": 1487,
-                "y": 4261
             }
         }
     },
@@ -1445,6 +1416,35 @@
             "position": {
                 "x": 2239,
                 "y": 409
+            }
+        }
+    },
+    "蓝色站台_跳过交易环节": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "下一步"
+        ],
+        "pre_delay": 400,
+        "focus": "> 跳过交易环节",
+        "__yamaape": {
+            "position": {
+                "x": 1223,
+                "y": 4147
+            }
+        }
+    },
+    "蓝色站台_确定跳过交易环节": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "确定"
+        ],
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1221,
+                "y": 4359
             }
         }
     }
