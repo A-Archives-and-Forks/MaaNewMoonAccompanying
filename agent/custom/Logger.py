@@ -5,7 +5,7 @@ from maa.context import Context
 from typing import Dict, Any, Optional
 import json
 
-from .utils import parse_args
+from .utils import parse_query_args
 
 
 @AgentServer.custom_action("log")
@@ -14,7 +14,7 @@ class Log(CustomAction):
         self, context: Context, argv: CustomAction.RunArg
     ) -> CustomAction.RunResult:
         try:
-            params = parse_args(argv)
+            params = parse_query_args(argv)
 
             text: Optional[str] = params.get("t")
             if not text:

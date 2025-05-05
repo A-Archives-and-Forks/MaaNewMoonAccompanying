@@ -10,9 +10,10 @@ def main():
     from maa.agent.agent_server import AgentServer
     from maa.toolkit import Toolkit
 
-    import actions.Logger
-    import actions.ConsumptiveRealism
-    import actions.Platform
+    import custom.Logger
+    import custom.ConsumptiveRealism
+    import custom.Platform
+    import custom.PeriodicInspection
 
     try:
         Toolkit.init_option("./")
