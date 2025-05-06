@@ -100,7 +100,10 @@
 
 ## 更新记录
 
-<!-- ### Next Release (Committed but Unreleased) -->
+### Next Release (Committed but Unreleased)
+
+- **修复优化**
+  - 修复了领取邮件功能异常的问题
 
 ### v0.4.8
 

@@ -1,7 +1,9 @@
 {
-    "__yamaape_config_领取邮件": {
-        "version": "v0.3.1",
-        "export": ""
+    "__yamaape_config_领取邮件 ": {
+        "filename": "领取邮件 ",
+        "version": "v0.3.4",
+        "export": "",
+        "prefix": "领取邮件"
     },
     "领取邮件_领取邮件": {
         "recognition": "TemplateMatch",
@@ -11,6 +13,7 @@
         ],
         "pre_delay": 400,
         "post_delay": 1000,
+        "focus": "> 进入邮件面板",
         "__yamaape": {
             "position": {
                 "x": 351,
@@ -50,10 +53,11 @@
             "点击以继续"
         ],
         "pre_delay": 800,
+        "focus": "> 领取全部邮件",
         "__yamaape": {
             "position": {
-                "x": 892,
-                "y": -103
+                "x": 889,
+                "y": -150
             }
         },
         "next": [
@@ -68,10 +72,11 @@
         ],
         "pre_delay": 1,
         "post_delay": 1,
+        "focus": "> 暂无邮件可领取",
         "__yamaape": {
             "position": {
-                "x": 892,
-                "y": 95
+                "x": 888,
+                "y": 97
             }
         },
         "next": [
@@ -91,17 +96,6 @@
             "领取邮件_返回主页面"
         ]
     },
-    "领取邮件": {
-        "__yamaape": {
-            "position": {
-                "x": 119,
-                "y": -11
-            }
-        },
-        "next": [
-            "领取邮件_领取邮件"
-        ]
-    },
     "领取邮件_返回主页面": {
         "recognition": "DirectHit",
         "action": "Click",
@@ -112,10 +106,11 @@
             1
         ],
         "post_delay": 3000,
+        "focus": "> 返回主界面",
         "__yamaape": {
             "position": {
-                "x": 1526,
-                "y": -34
+                "x": 1507,
+                "y": -47
             }
         }
     },
@@ -125,14 +120,28 @@
         "expected": [
             "删除已读"
         ],
+        "focus": "> 删除已读邮件",
         "__yamaape": {
             "position": {
-                "x": 1269,
-                "y": 147
+                "x": 1229,
+                "y": 157
             }
         },
         "next": [
             "领取邮件_返回主页面"
+        ]
+    },
+    "领取邮件_开始": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": 80,
+                "y": -59
+            }
+        },
+        "next": [
+            "领取邮件_领取邮件"
         ]
     }
 }

@@ -1,10 +1,10 @@
 {
     "name": "MaaNewMoonAccompanying",
     "url": "https://github.com/kqcoxn/MaaNewMoonAccompanying",
-    "custom_title": "新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v0.4.8 - MFA | 游戏版本：血茧时辙·上",
+    "custom_title": "新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v0.4.9 - MFA | 游戏版本：血茧时辙·上",
     "mirrorchyan_rid": "MNMA",
     "mirrorchyan_multiplatform": true,
-    "version": "v0.4.8",
+    "version": "v0.4.9",
     "message": "- 新 月 同 行 -",
     "controller": [
         {
@@ -64,8 +64,14 @@
             "check": true
         },
         {
+            "name": "七日签到",
+            "entry": "七日签到",
+            "doc": "**七日签到**：\n\n紧张刺激的七日签到！\n\n开始界面：主界面\n\n结束界面：主界面",
+            "check": true
+        },
+        {
             "name": "领取邮件",
-            "entry": "领取奖励_开始",
+            "entry": "领取邮件 _开始",
             "option": [
                 "删除已读邮件"
             ],
@@ -116,14 +122,8 @@
         },
         {
             "name": "领取奖励",
-            "entry": "领取奖励_任务",
+            "entry": "领取奖励_开始",
             "doc": "**领取奖励**：\n\n领取每日任务与手册奖励\n\n开始界面：主界面\n\n结束界面：主界面",
-            "check": true
-        },
-        {
-            "name": "七日签到",
-            "entry": "七日签到",
-            "doc": "**七日签到**：\n\n紧张刺激的七日签到！\n\n开始界面：主界面\n\n结束界面：主界面",
             "check": true
         },
         {
