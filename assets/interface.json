@@ -71,7 +71,7 @@
         },
         {
             "name": "领取邮件",
-            "entry": "领取邮件 _开始",
+            "entry": "领取邮件_开始",
             "option": [
                 "删除已读邮件"
             ],
@@ -165,7 +165,6 @@
             "doc": "**「蓝色站台」自动肉鸽**：\n\n**注意：此功能仍在测试与适配中，请先仔细阅读完以下说明，若有场景卡住请截图在交流群内反馈！**\n\n自动肉鸽，小子！\n\n**可移植现实请选择：掠食獠牙**\n\n**提示：为了尽可能适配各种情况，20s以内的卡顿皆在可接受范围内，但若卡顿时长多于30s大概率是寄了**\n\n建议不要太关注MNMA在局内做了什么，决策非常降智（当乐子看也行\n\n开始界面：蓝色站台局内（请保证界面内有可选择节点）\n\n结束界面：蓝色站台结算界面"
         }
     ],
-    "advanced": {},
     "option": {
         "主界面延时": {
             "cases": [
@@ -218,11 +217,11 @@
         "防止公告延迟": {
             "cases": [
                 {
-                    "name": "启用（推荐）",
+                    "name": "Yes",
                     "pipeline_override": {}
                 },
                 {
-                    "name": "禁用",
+                    "name": "No",
                     "pipeline_override": {
                         "启动游戏_确认结束1": {
                             "next": "启动游戏_确认结束2"
@@ -234,7 +233,7 @@
         "防止版本资讯延迟": {
             "cases": [
                 {
-                    "name": "禁用",
+                    "name": "No",
                     "pipeline_override": {
                         "启动游戏_确认结束2": {
                             "next": "启动游戏_确认结束3"
@@ -242,7 +241,7 @@
                     }
                 },
                 {
-                    "name": "启用",
+                    "name": "Yes",
                     "pipeline_override": {}
                 }
             ]
@@ -250,11 +249,11 @@
         "确保游戏未运行": {
             "cases": [
                 {
-                    "name": "禁用",
+                    "name": "No",
                     "pipeline_override": {}
                 },
                 {
-                    "name": "启用",
+                    "name": "Yes",
                     "pipeline_override": {
                         "启动游戏_开始": {
                             "next": "启动游戏_关闭游戏"
@@ -266,11 +265,11 @@
         "购买数构银物资": {
             "cases": [
                 {
-                    "name": "买买买！",
+                    "name": "Yes",
                     "pipeline_override": {}
                 },
                 {
-                    "name": "没钱了，别！",
+                    "name": "No",
                     "pipeline_override": {
                         "每日采购_购买数构银物资": {
                             "next": "每日采购_回到主界面"
@@ -282,11 +281,11 @@
         "数构银再确认": {
             "cases": [
                 {
-                    "name": "启用",
+                    "name": "Yes",
                     "pipeline_override": {}
                 },
                 {
-                    "name": "禁用",
+                    "name": "No",
                     "pipeline_override": {
                         "每日采购_购买数构银物资1-4": {
                             "recognition": "OCR",
@@ -345,11 +344,11 @@
         "删除已读邮件": {
             "cases": [
                 {
-                    "name": "禁用",
+                    "name": "No",
                     "pipeline_override": {}
                 },
                 {
-                    "name": "启用",
+                    "name": "Yes",
                     "pipeline_override": {
                         "领取邮件_领取结束": {
                             "next": "领取邮件_删除已读"
@@ -361,11 +360,11 @@
         "自动同意好友申请": {
             "cases": [
                 {
-                    "name": "启用",
+                    "name": "Yes",
                     "pipeline_override": {}
                 },
                 {
-                    "name": "禁用",
+                    "name": "No",
                     "pipeline_override": {
                         "友谊交换_互助结束": {
                             "next": "友谊交换_返回主界面"
@@ -436,7 +435,17 @@
                     }
                 },
                 {
-                    "name": "使用1次",
+                    "name": "全部使用",
+                    "pipeline_override": {
+                        "清体力_设定合剂消耗": {
+                            "custom_action_param": {
+                                "times": 9999
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "使用 1 次",
                     "pipeline_override": {
                         "清体力_设定合剂消耗": {
                             "custom_action_param": {
@@ -446,7 +455,7 @@
                     }
                 },
                 {
-                    "name": "使用2次",
+                    "name": "使用 2 次",
                     "pipeline_override": {
                         "清体力_设定合剂消耗": {
                             "custom_action_param": {
@@ -456,7 +465,7 @@
                     }
                 },
                 {
-                    "name": "使用3次",
+                    "name": "使用 3 次",
                     "pipeline_override": {
                         "清体力_设定合剂消耗": {
                             "custom_action_param": {
@@ -466,7 +475,7 @@
                     }
                 },
                 {
-                    "name": "使用4次",
+                    "name": "使用 4 次",
                     "pipeline_override": {
                         "清体力_设定合剂消耗": {
                             "custom_action_param": {
@@ -476,11 +485,31 @@
                     }
                 },
                 {
-                    "name": "全部使用",
+                    "name": "使用 5 次",
                     "pipeline_override": {
                         "清体力_设定合剂消耗": {
                             "custom_action_param": {
-                                "times": 999
+                                "times": 5
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "使用 10 次",
+                    "pipeline_override": {
+                        "清体力_设定合剂消耗": {
+                            "custom_action_param": {
+                                "times": 10
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "使用 20 次",
+                    "pipeline_override": {
+                        "清体力_设定合剂消耗": {
+                            "custom_action_param": {
+                                "times": 20
                             }
                         }
                     }
@@ -677,11 +706,11 @@
         "物资收取": {
             "cases": [
                 {
-                    "name": "启用",
+                    "name": "Yes",
                     "pipeline_override": {}
                 },
                 {
-                    "name": "禁用",
+                    "name": "No",
                     "pipeline_override": {
                         "城市探索_城市界面": {
                             "next": "城市探索_城市事件"
@@ -693,11 +722,11 @@
         "城市事件": {
             "cases": [
                 {
-                    "name": "启用",
+                    "name": "Yes",
                     "pipeline_override": {}
                 },
                 {
-                    "name": "禁用",
+                    "name": "No",
                     "pipeline_override": {
                         "城市探索_城市事件": {
                             "next": "城市探索_回到主页"
@@ -709,11 +738,11 @@
         "强制检查拘束塔": {
             "cases": [
                 {
-                    "name": "禁用",
+                    "name": "No",
                     "pipeline_override": {}
                 },
                 {
-                    "name": "启用",
+                    "name": "Yes",
                     "pipeline_override": {
                         "拘束塔奖励_开始": {
                             "next": "拘束塔奖励_战略行动"
@@ -725,11 +754,11 @@
         "仅在主界面退出": {
             "cases": [
                 {
-                    "name": "是",
+                    "name": "Yes",
                     "pipeline_override": {}
                 },
                 {
-                    "name": "否",
+                    "name": "No",
                     "pipeline_override": {
                         "退出游戏": {
                             "next": "退出游戏_退出游戏"
@@ -741,11 +770,11 @@
         "自动使用稳定合剂": {
             "cases": [
                 {
-                    "name": "启用",
+                    "name": "Yes",
                     "pipeline_override": {}
                 },
                 {
-                    "name": "禁用",
+                    "name": "No",
                     "pipeline_override": {}
                 }
             ]
