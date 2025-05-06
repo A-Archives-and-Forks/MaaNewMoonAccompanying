@@ -98,7 +98,11 @@
 
 ## 更新记录
 
-### Next Release (Committed but Unreleased)
+<!-- ### Next Release (Committed but Unreleased) -->
+
+### v0.4.9
+
+> 2025.5.6
 
 - **新增**
   - 新增选项：蓝色站台-一层循环速刷
