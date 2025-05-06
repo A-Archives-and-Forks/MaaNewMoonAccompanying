@@ -130,16 +130,29 @@ jobs:
         shell: bash
         run: |
           rm -rf MFAAvalonia/resource/base/model
-          cp -r MFAAvalonia/* install
-        
+          cp -r MFAAvalonia/* install           
+
+      - name: Install pyinstaller
+        if: ${{matrix.os != 'android' }}
+        working-directory: launcher
+        run: |
+          python -m pip install pyinstaller
+          pyinstaller --onefile --icon=../logo.ico --windowed MNMA.py
+
+      - name: Replace Icon
+        shell: bash
+        run: |
+          cp logo.ico MFAAvalonia/logo.ico
+          mv launcher/dist/MNMA.exe MFAAvalonia/MNMA.exe
+
       - uses: actions/upload-artifact@v4
         with:
           name: MaaNewMoonAccompany-${{ matrix.os }}-${{ matrix.arch }}
           path: "install"
 
   release:
-    if: ${{ needs.meta.outputs.is_release == 'true' || github.event_name == 'workflow_dispatch' }}
-    # if: ${{ needs.meta.outputs.is_release == 'true'}}
+    # if: ${{ needs.meta.outputs.is_release == 'true' || github.event_name == 'workflow_dispatch' }}
+    if: ${{ needs.meta.outputs.is_release == 'true'}}
     needs: [meta, install]
     runs-on: ubuntu-latest
     steps:
