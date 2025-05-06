@@ -8,6 +8,8 @@
 /assets/resource/**/ocr/
 /MFATools/*
 !/MFATools/.gitkeep
+/launcher/*
+!/launcher/MNMA.py
 
 # docs
 docs/node_modules

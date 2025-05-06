@@ -132,18 +132,20 @@ jobs:
           rm -rf MFAAvalonia/resource/base/model
           cp -r MFAAvalonia/* install           
 
-      - name: Install pyinstaller
+      - name: Install Launcher
         if: ${{matrix.os != 'android' }}
         working-directory: launcher
+        shell: bash
         run: |
           python -m pip install pyinstaller
           pyinstaller --onefile --icon=../logo.ico --windowed MNMA.py
 
       - name: Replace Icon
+        if: ${{matrix.os != 'android' }}
         shell: bash
         run: |
-          cp logo.ico MFAAvalonia/logo.ico
-          mv launcher/dist/MNMA.exe MFAAvalonia/MNMA.exe
+          cp logo.ico install/logo.ico
+          cp launcher/dist/MNMA.exe install/MNMA.exe
 
       - uses: actions/upload-artifact@v4
         with:
@@ -165,7 +167,8 @@ jobs:
           cd assets
           rm -f */MFAAvalonia-*.zip
 
-      - run: |
+      - name: Build MNMA
+        run: |
           cd assets
           for f in *; do
             (cd $f && zip -r ../$f-${{ needs.meta.outputs.tag }}.zip .)
