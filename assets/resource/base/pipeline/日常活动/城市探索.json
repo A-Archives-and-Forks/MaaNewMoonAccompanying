@@ -101,7 +101,7 @@
         "recognition": "OCR",
         "action": "Click",
         "expected": [
-            "一键入驻"
+            "键入驻"
         ],
         "focus": "> 特工换班",
         "__yamaape": {
@@ -670,8 +670,8 @@
         "focus": "> 委托类事件",
         "__yamaape": {
             "position": {
-                "x": 2977,
-                "y": 2271
+                "x": 2975,
+                "y": 2312
             }
         },
         "next": [
@@ -786,8 +786,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 3237,
-                "y": 2271
+                "x": 3235,
+                "y": 2312
             }
         },
         "next": [
@@ -961,6 +961,7 @@
             "../image/chat_room/zhenzhu.png"
         ],
         "post_delay": 400,
+        "pre_delay": 400,
         "__yamaape": {
             "position": {
                 "x": 3538,
@@ -987,8 +988,8 @@
         "pre_delay": 1,
         "__yamaape": {
             "position": {
-                "x": 3536,
-                "y": 2023
+                "x": 3534,
+                "y": 2064
             }
         }
     },
@@ -1003,8 +1004,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 3497,
-                "y": 2271
+                "x": 3495,
+                "y": 2312
             }
         },
         "next": [
@@ -1152,6 +1153,7 @@
             "../image/chat_room/zhenzhu.png"
         ],
         "post_delay": 400,
+        "pre_delay": 400,
         "__yamaape": {
             "position": {
                 "x": 3800,
@@ -1178,8 +1180,8 @@
         "pre_delay": 1,
         "__yamaape": {
             "position": {
-                "x": 3796,
-                "y": 2023
+                "x": 3794,
+                "y": 2064
             }
         }
     },
@@ -1194,8 +1196,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 3779,
-                "y": 2274
+                "x": 3777,
+                "y": 2315
             }
         },
         "next": [
@@ -1310,6 +1312,7 @@
             "../image/chat_room/zhenzhu.png"
         ],
         "post_delay": 400,
+        "pre_delay": 400,
         "__yamaape": {
             "position": {
                 "x": 4056,
@@ -1336,8 +1339,8 @@
         "pre_delay": 1,
         "__yamaape": {
             "position": {
-                "x": 4056,
-                "y": 2023
+                "x": 4054,
+                "y": 2064
             }
         }
     },
@@ -1352,8 +1355,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 4057,
-                "y": 2285
+                "x": 4055,
+                "y": 2326
             }
         },
         "next": [
@@ -1376,6 +1379,19 @@
         "next": [
             "城市探索_确定跳过战后剧情"
         ]
+    },
+    "城市探索_确定跳过剧情": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "确定"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 4050,
+                "y": 540
+            }
+        }
     },
     "城市探索_结束讨论": {
         "recognition": "OCR",
@@ -1406,8 +1422,8 @@
         "pre_delay": 1,
         "__yamaape": {
             "position": {
-                "x": 4316,
-                "y": 2023
+                "x": 4314,
+                "y": 2064
             }
         }
     },
@@ -1420,26 +1436,13 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 4338,
-                "y": 2280
+                "x": 4336,
+                "y": 2321
             }
         },
         "next": [
             "城市探索_结算委托"
         ]
-    },
-    "城市探索_确定跳过剧情": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "确定"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 4050,
-                "y": 540
-            }
-        }
     },
     "城市探索_确定跳过战后剧情": {
         "recognition": "OCR",
@@ -1481,8 +1484,8 @@
         "focus": "> 委托结束",
         "__yamaape": {
             "position": {
-                "x": 4585,
-                "y": 2274
+                "x": 4583,
+                "y": 2315
             }
         },
         "next": [

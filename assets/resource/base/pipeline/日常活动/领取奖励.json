@@ -29,9 +29,9 @@
         "expected": [
             "每日任务"
         ],
-        "post_delay": 200,
-        "timeout": 1000,
+        "timeout": 2000,
         "focus": "> 领取每日任务奖励",
+        "pre_delay": 400,
         "__yamaape": {
             "position": {
                 "x": 510,
@@ -51,8 +51,8 @@
         "template": [
             "../image/receive_all.png"
         ],
-        "post_delay": 500,
         "timeout": 2000,
+        "pre_delay": 400,
         "__yamaape": {
             "position": {
                 "x": 757,
@@ -74,10 +74,11 @@
         ],
         "timeout": 1000,
         "focus": "> 领取每周任务奖励",
+        "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 1333,
-                "y": 79
+                "x": 1332,
+                "y": 57
             }
         },
         "next": [
@@ -93,8 +94,7 @@
         "expected": [
             "点击以继续"
         ],
-        "post_delay": 200,
-        "pre_delay": 400,
+        "pre_delay": 800,
         "__yamaape": {
             "position": {
                 "x": 1033,
@@ -111,8 +111,8 @@
         "template": [
             "../image/receive_all.png"
         ],
-        "post_delay": 500,
         "timeout": 2000,
+        "pre_delay": 400,
         "__yamaape": {
             "position": {
                 "x": 1619,
@@ -133,10 +133,11 @@
             "../image/back.png"
         ],
         "focus": "> 进入组长手册面板",
+        "pre_delay": 400,
         "__yamaape": {
             "position": {
                 "x": 2173,
-                "y": 151
+                "y": 127
             }
         },
         "next": [
@@ -149,12 +150,11 @@
         "expected": [
             "点击以继续"
         ],
-        "post_delay": 400,
-        "pre_delay": 200,
+        "pre_delay": 800,
         "__yamaape": {
             "position": {
-                "x": 1915,
-                "y": -60
+                "x": 1913,
+                "y": -44
             }
         },
         "next": [
@@ -167,7 +167,7 @@
         "expected": [
             "组长手册"
         ],
-        "post_delay": 1000,
+        "pre_delay": 400,
         "__yamaape": {
             "position": {
                 "x": 1145,
@@ -185,12 +185,12 @@
             "../image/manual_task_selected.png",
             "../image/manual_task.png"
         ],
-        "post_delay": 500,
         "threshold": [
             0.9,
             0.9
         ],
         "focus": "> 领取手册经验",
+        "pre_delay": 400,
         "__yamaape": {
             "position": {
                 "x": 1427,
@@ -285,7 +285,6 @@
             "../image/manual_reward_selected.png",
             "../image/manual_reward.png"
         ],
-        "post_delay": 500,
         "threshold": [
             0.9,
             0.9
@@ -310,6 +309,7 @@
         "expected": [
             "领取全部"
         ],
+        "pre_delay": 400,
         "__yamaape": {
             "position": {
                 "x": 1754,
@@ -326,10 +326,11 @@
         "template": [
             "../image/close.png"
         ],
+        "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 1754,
-                "y": 758
+                "x": 1751,
+                "y": 783
             }
         }
     },
@@ -342,12 +343,11 @@
             1,
             1
         ],
-        "post_delay": 200,
         "timeout": 2000,
         "__yamaape": {
             "position": {
-                "x": 2021,
-                "y": 585
+                "x": 2024,
+                "y": 609
             }
         },
         "next": [
@@ -363,12 +363,11 @@
         "expected": [
             "点击以继续"
         ],
-        "post_delay": 200,
-        "pre_delay": 400,
+        "pre_delay": 800,
         "__yamaape": {
             "position": {
                 "x": 2305,
-                "y": 585
+                "y": 555
             }
         },
         "next": [
@@ -383,10 +382,11 @@
         ],
         "post_delay": 3000,
         "focus": "> 返回主页",
+        "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 2561,
-                "y": 799
+                "x": 2591,
+                "y": 623
             }
         }
     },
