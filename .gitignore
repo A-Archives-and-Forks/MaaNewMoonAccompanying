@@ -1,15 +1,23 @@
-# others
+# 测试
+测试/
+
+# 开发
 /MFAAvalonia/*
 !/MFAAvalonia/.gitkeep
-测试/
+/MFATools/*
+!/MFATools/.gitkeep
+
+# 日志
 /recording/
 /vision/
 /screenshot/
 /assets/resource/**/ocr/
-/MFATools/*
-!/MFATools/.gitkeep
+
+# 小工具
 /launcher/*
 !/launcher/MNMA.py
+/feedbacker/*
+!/feedbacker/反馈打包小工具.py
 
 # docs
 docs/node_modules
