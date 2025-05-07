@@ -1,7 +1,7 @@
 {
     "__yamaape_config_秘密收管行动": {
         "filename": "秘密收管行动",
-        "version": "v0.3.2",
+        "version": "v0.3.4",
         "export": "",
         "prefix": "秘密收管行动"
     },
@@ -11,10 +11,11 @@
         "template": [
             "../image/血茧时辙/entry.png"
         ],
+        "pre_delay": 400,
         "__yamaape": {
             "position": {
                 "x": 243,
-                "y": -49
+                "y": -69
             }
         },
         "next": [
@@ -27,7 +28,7 @@
         "expected": [
             "秘密收管行动"
         ],
-        "pre_delay": 200,
+        "pre_delay": 400,
         "__yamaape": {
             "position": {
                 "x": 506,

@@ -371,10 +371,11 @@
             "../image/city/investigation.png"
         ],
         "focus": "> 进入传闻调查",
+        "post_delay": 1500,
         "__yamaape": {
             "position": {
-                "x": 464,
-                "y": 1552
+                "x": 466,
+                "y": 1530
             }
         },
         "next": [
