@@ -18,6 +18,8 @@
 !/launcher/MNMA.py
 /feedbacker/*
 !/feedbacker/反馈打包小工具.py
+!/feedbacker/feedbacker.png
+!/feedbacker/feedbacker.ico
 
 # docs
 docs/node_modules

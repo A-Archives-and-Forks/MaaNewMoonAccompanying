@@ -1,4 +1,4 @@
-# pyinstaller --onefile --icon=feedbacker.ico 反馈打包小工具.py
+# pyinstaller --onefile --icon=./feedbacker.ico 反馈打包小工具.py
 
 import os
 import zipfile
