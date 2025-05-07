@@ -993,7 +993,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/卡带/逆转合作.png"
+            "../image/card/逆转合作.png"
         ],
         "__yamaape": {
             "position": {

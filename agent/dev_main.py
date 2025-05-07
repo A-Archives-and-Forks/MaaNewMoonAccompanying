@@ -7,6 +7,7 @@ import custom.Logger
 import custom.ConsumptiveRealism
 import custom.Platform
 import custom.PeriodicInspection
+import custom.Strap
 
 
 def main():

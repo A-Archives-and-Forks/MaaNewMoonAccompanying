@@ -1,0 +1,328 @@
+{
+    "__yamaape_config_卡带升级": {
+        "filename": "卡带升级",
+        "version": "v0.3.4",
+        "prefix": "卡带升级",
+        "export": ""
+    },
+    "卡带升级_加纳！": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "focus": "> 加纳！",
+        "template": [
+            "../image/card/max.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1025,
+                "y": 275
+            }
+        },
+        "next": [
+            "卡带升级_升级"
+        ]
+    },
+    "卡带升级_升级": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "focus": "> 卡带升级",
+        "template": [
+            "../image/card/upgrade.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1285,
+                "y": 275
+            }
+        },
+        "next": [
+            "卡带升级_加速升级"
+        ]
+    },
+    "卡带升级_加速升级": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            640,
+            100,
+            1,
+            1
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1601,
+                "y": 351
+            }
+        },
+        "next": [
+            "卡带升级_确认属性"
+        ]
+    },
+    "卡带升级_确认属性": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击空白处关闭"
+        ],
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 1872,
+                "y": 187
+            }
+        },
+        "next": [
+            "卡带升级_检测当前等级"
+        ]
+    },
+    "卡带升级_检测当前等级": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "focus": "> 检测当前等级",
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 201,
+                "y": 141
+            }
+        },
+        "next": [
+            "卡带升级_检测40级"
+        ],
+        "on_error": [
+            "卡带升级_检测当前状态"
+        ]
+    },
+    "卡带升级_检测40级": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "/50"
+        ],
+        "roi": [
+            830,
+            170,
+            160,
+            90
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 520,
+                "y": -76
+            }
+        },
+        "next": [
+            "卡带升级_已升级至指定等级"
+        ]
+    },
+    "卡带升级_检测当前状态": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "focus": "> 检测当前状态",
+        "__yamaape": {
+            "position": {
+                "x": 491,
+                "y": 276
+            }
+        },
+        "next": [
+            "卡带升级_升级状态",
+            "卡带升级_卡带突破"
+        ]
+    },
+    "卡带升级_卡带突破": {
+        "recognition": "TemplateMatch",
+        "action": "DoNothing",
+        "template": [
+            "../image/card/breakthrough.png"
+        ],
+        "threshold": [
+            0.94
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 770,
+                "y": 502
+            }
+        },
+        "next": [
+            "卡带升级_选择卡带"
+        ]
+    },
+    "卡带升级_选择卡带": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            300,
+            160,
+            60,
+            60
+        ],
+        "focus": "> 选择卡带",
+        "__yamaape": {
+            "position": {
+                "x": 1030,
+                "y": 499
+            }
+        },
+        "next": [
+            "卡带升级_突破"
+        ]
+    },
+    "卡带升级_突破": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/card/breakthrough.png"
+        ],
+        "focus": "> 卡带突破",
+        "timeout": 2000,
+        "__yamaape": {
+            "position": {
+                "x": 1283,
+                "y": 502
+            }
+        },
+        "next": [
+            "卡带升级_确定突破"
+        ],
+        "on_error": [
+            "卡带升级_加速升级"
+        ]
+    },
+    "卡带升级_确定突破": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "pre_delay": 400,
+        "template": [
+            "../image/confirm.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1550,
+                "y": 535
+            }
+        },
+        "next": [
+            "卡带升级_加速升级"
+        ]
+    },
+    "卡带升级_升级状态": {
+        "recognition": "TemplateMatch",
+        "action": "DoNothing",
+        "template": [
+            "../image/card/upgrade.png"
+        ],
+        "threshold": [
+            0.94
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 765,
+                "y": 275
+            }
+        },
+        "next": [
+            "卡带升级_加纳！"
+        ]
+    },
+    "卡带升级_启动": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "init_strap_upgrade",
+        "__yamaape": {
+            "position": {
+                "x": -68,
+                "y": 141
+            }
+        },
+        "next": [
+            "卡带升级_检测当前等级"
+        ]
+    },
+    "卡带升级_已升级至指定等级": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "focus": "> 已提升至指定等级",
+        "__yamaape": {
+            "position": {
+                "x": 775,
+                "y": -46
+            }
+        },
+        "next": [
+            "卡带升级_更新卡带位置"
+        ],
+        "on_error": [
+            "卡带升级_切换结束"
+        ]
+    },
+    "卡带升级_更新卡带位置": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "select_next_strap",
+        "__yamaape": {
+            "position": {
+                "x": 1033,
+                "y": -43
+            }
+        },
+        "next": [
+            "卡带升级_切换卡带"
+        ]
+    },
+    "卡带升级_切换卡带": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            66,
+            442,
+            1,
+            1
+        ],
+        "focus": "> 切换卡带",
+        "post_delay": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 1335,
+                "y": 14
+            }
+        },
+        "next": [
+            "卡带升级_检测当前等级"
+        ]
+    },
+    "卡带升级_检测50级": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "50级"
+        ],
+        "roi": [
+            425,
+            175,
+            100,
+            50
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 518,
+                "y": -264
+            }
+        },
+        "next": [
+            "卡带升级_已升级至指定等级"
+        ]
+    },
+    "卡带升级_切换结束": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "focus": "> 卡带全部升级完成",
+        "__yamaape": {
+            "position": {
+                "x": 1032,
+                "y": -194
+            }
+        }
+    }
+}

@@ -14,6 +14,7 @@ def main():
     import custom.ConsumptiveRealism
     import custom.Platform
     import custom.PeriodicInspection
+    import custom.Strap
 
     try:
         Toolkit.init_option("./")
