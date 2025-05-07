@@ -25,7 +25,7 @@ class Inspector:
 
         try:
             last_date = date.fromisoformat(last_date_str)
-        except (ValueError, TypeError):  # 如果字符串格式不正确
+        except (ValueError, TypeError): 
             return False
 
         return (
@@ -50,13 +50,12 @@ class PeriodicCheck(CustomAction):
                 flag = Inspector.week(task)
 
             if flag:
-                print("周期检查成功！")
                 return CustomAction.RunResult(success=False)
             else:
                 return CustomAction.RunResult(success=True)
 
         except Exception as e:
-            Prompt.error("检查周期任务失败", e)
+            Prompt.error("检查周期任务", e)
 
 
 # 记录检查
@@ -74,4 +73,4 @@ class SetLastPeriodicCheck(CustomAction):
             return CustomAction.RunResult(success=True)
 
         except Exception as e:
-            Prompt.error("记录检查时间失败", e)
+            Prompt.error("记录检查时间", e)
