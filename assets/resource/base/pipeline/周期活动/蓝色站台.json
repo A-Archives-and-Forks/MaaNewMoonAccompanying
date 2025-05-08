@@ -151,6 +151,83 @@
             "蓝色站台_绿色节点"
         ]
     },
+    "蓝色站台_选择战斗奖励": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "作为您的奖励"
+        ],
+        "focus": "> 领取战斗奖励",
+        "__yamaape": {
+            "position": {
+                "x": 1267,
+                "y": 345
+            }
+        },
+        "next": [
+            "蓝色站台_节点结束"
+        ],
+        "interrupt": [
+            "蓝色站台_选择物品奖励",
+            "蓝色站台_物品更替",
+            "蓝色站台_跳过多波",
+            "蓝色站台_事件信息",
+            "蓝色站台_主题效果激活"
+        ]
+    },
+    "蓝色站台_行动失败": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "结束行动"
+        ],
+        "pre_delay": 400,
+        "focus": "> 行动失败",
+        "__yamaape": {
+            "position": {
+                "x": 1290,
+                "y": 18
+            }
+        },
+        "next": [
+            "蓝色站台_确认失败"
+        ]
+    },
+    "蓝色站台_结束剧情": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/jump.png"
+        ],
+        "pre_delay": 400,
+        "focus": "> 本次蓝色站台结束",
+        "__yamaape": {
+            "position": {
+                "x": 1291,
+                "y": -205
+            }
+        },
+        "next": [
+            "蓝色站台_确认结束"
+        ]
+    },
+    "蓝色站台_少人作战": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "当前编队中存在无法行动的特工"
+        ],
+        "focus": "> 编队内存在无法行动的特工",
+        "__yamaape": {
+            "position": {
+                "x": 1219,
+                "y": 613
+            }
+        },
+        "next": [
+            "蓝色站台_不再提醒少人战斗"
+        ]
+    },
     "蓝色站台_额外消耗-事件": {
         "recognition": "OCR",
         "action": "Click",
@@ -360,37 +437,21 @@
             }
         }
     },
-    "蓝色站台_确定事件选项": {
+    "蓝色站台_离开站台": {
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/platform/confirm.png"
-        ],
-        "post_delay": 2000,
-        "timeout": 5000,
-        "pre_delay": 400,
-        "__yamaape": {
-            "position": {
-                "x": 2267,
-                "y": 1900
-            }
-        }
-    },
-    "蓝色站台_主题效果激活": {
-        "recognition": "DirectHit",
-        "action": "Click",
-        "target": [
-            25,
-            200,
-            1,
-            1
+            "../image/back.png"
         ],
         "__yamaape": {
             "position": {
-                "x": 1850,
-                "y": 861
+                "x": 4249,
+                "y": 149
             }
-        }
+        },
+        "next": [
+            "蓝色站台_确认返回"
+        ]
     },
     "蓝色站台_红色节点": {
         "recognition": "ColorMatch",
@@ -479,6 +540,38 @@
             "蓝色站台_交易节点"
         ]
     },
+    "蓝色站台_确定事件选项": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/platform/confirm.png"
+        ],
+        "post_delay": 2000,
+        "timeout": 5000,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 2267,
+                "y": 1900
+            }
+        }
+    },
+    "蓝色站台_主题效果激活": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            25,
+            200,
+            1,
+            1
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1850,
+                "y": 861
+            }
+        }
+    },
     "蓝色站台_进入战斗节点": {
         "recognition": "OCR",
         "action": "Click",
@@ -537,81 +630,82 @@
             "蓝色站台_进入商店节点"
         ]
     },
-    "蓝色站台_选择战斗奖励": {
+    "蓝色站台_确认额外消耗温控-战斗": {
         "recognition": "OCR",
         "action": "DoNothing",
         "expected": [
-            "作为您的奖励"
+            "额外消耗1点"
         ],
-        "focus": "> 领取战斗奖励",
+        "pre_delay": 400,
+        "focus": "> 确认温控消耗",
         "__yamaape": {
             "position": {
-                "x": 1267,
-                "y": 345
+                "x": 845,
+                "y": 760
             }
         },
         "next": [
-            "蓝色站台_节点结束"
+            "蓝色站台_今天不再提醒额外消耗"
+        ]
+    },
+    "蓝色站台_温控变化提示": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            25,
+            200,
+            1,
+            1
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 732,
+                "y": 596
+            }
+        }
+    },
+    "蓝色站台_进入休息节点": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "进入节点"
+        ],
+        "pre_delay": 400,
+        "focus": "> 进入休息节点",
+        "__yamaape": {
+            "position": {
+                "x": 918,
+                "y": 3284
+            }
+        },
+        "next": [
+            "蓝色站台_幕间剧情"
         ],
         "interrupt": [
-            "蓝色站台_选择物品奖励",
-            "蓝色站台_物品更替",
-            "蓝色站台_跳过多波",
-            "蓝色站台_事件信息",
-            "蓝色站台_主题效果激活"
+            "蓝色站台_选择补给",
+            "蓝色站台_结束选择"
         ]
     },
-    "蓝色站台_行动失败": {
+    "蓝色站台_进入商店节点": {
         "recognition": "OCR",
         "action": "Click",
         "expected": [
-            "结束行动"
+            "进入节点"
         ],
         "pre_delay": 400,
-        "focus": "> 行动失败",
+        "focus": "> 进入商店节点",
         "__yamaape": {
             "position": {
-                "x": 1290,
-                "y": 18
+                "x": 957,
+                "y": 2530
             }
         },
         "next": [
-            "蓝色站台_确认失败"
-        ]
-    },
-    "蓝色站台_结束剧情": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "../image/jump.png"
+            "蓝色站台_离开商店"
         ],
-        "pre_delay": 400,
-        "focus": "> 本次蓝色站台结束",
-        "__yamaape": {
-            "position": {
-                "x": 1291,
-                "y": -205
-            }
-        },
-        "next": [
-            "蓝色站台_确认结束"
-        ]
-    },
-    "蓝色站台_少人作战": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "当前编队中存在无法行动的特工"
-        ],
-        "focus": "> 编队内存在无法行动的特工",
-        "__yamaape": {
-            "position": {
-                "x": 1219,
-                "y": 613
-            }
-        },
-        "next": [
-            "蓝色站台_不再提醒少人战斗"
+        "interrupt": [
+            "蓝色站台_跳过交易环节",
+            "蓝色站台_确定跳过交易环节"
         ]
     },
     "蓝色站台_物品更替": {
@@ -694,84 +788,6 @@
         },
         "next": [
             "蓝色站台_确定少人作战"
-        ]
-    },
-    "蓝色站台_确认额外消耗温控-战斗": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "额外消耗1点"
-        ],
-        "pre_delay": 400,
-        "focus": "> 确认温控消耗",
-        "__yamaape": {
-            "position": {
-                "x": 845,
-                "y": 760
-            }
-        },
-        "next": [
-            "蓝色站台_今天不再提醒额外消耗"
-        ]
-    },
-    "蓝色站台_温控变化提示": {
-        "recognition": "DirectHit",
-        "action": "Click",
-        "target": [
-            25,
-            200,
-            1,
-            1
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 732,
-                "y": 596
-            }
-        }
-    },
-    "蓝色站台_进入休息节点": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "进入节点"
-        ],
-        "pre_delay": 400,
-        "focus": "> 进入休息节点",
-        "__yamaape": {
-            "position": {
-                "x": 918,
-                "y": 3284
-            }
-        },
-        "next": [
-            "蓝色站台_幕间剧情"
-        ],
-        "interrupt": [
-            "蓝色站台_选择补给",
-            "蓝色站台_结束选择"
-        ]
-    },
-    "蓝色站台_进入商店节点": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "进入节点"
-        ],
-        "pre_delay": 400,
-        "focus": "> 进入商店节点",
-        "__yamaape": {
-            "position": {
-                "x": 957,
-                "y": 2530
-            }
-        },
-        "next": [
-            "蓝色站台_离开商店"
-        ],
-        "interrupt": [
-            "蓝色站台_跳过交易环节",
-            "蓝色站台_确定跳过交易环节"
         ]
     },
     "蓝色站台_确认物品更替": {
@@ -1222,6 +1238,47 @@
             "蓝色站台_停止滑动"
         ]
     },
+    "蓝色站台_确定升级": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "升级"
+        ],
+        "pre_delay": 400,
+        "focus": "> 确定升级",
+        "__yamaape": {
+            "position": {
+                "x": 1271,
+                "y": 4008
+            }
+        },
+        "next": [
+            "蓝色站台_获取升级物品",
+            "蓝色站台_碎片不足"
+        ]
+    },
+    "蓝色站台_前往下层": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "前往下层"
+        ],
+        "post_delay": 1000,
+        "focus": "> 准备前往下层",
+        "__yamaape": {
+            "position": {
+                "x": 2051,
+                "y": 4008
+            }
+        },
+        "next": [
+            "蓝色站台_选择主题",
+            "蓝色站台_最后一层"
+        ],
+        "interrupt": [
+            "蓝色站台_确认前往"
+        ]
+    },
     "蓝色站台_确定选择夜来": {
         "recognition": "OCR",
         "action": "Click",
@@ -1270,47 +1327,6 @@
                 "y": 3712
             }
         }
-    },
-    "蓝色站台_确定升级": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "升级"
-        ],
-        "pre_delay": 400,
-        "focus": "> 确定升级",
-        "__yamaape": {
-            "position": {
-                "x": 1271,
-                "y": 4008
-            }
-        },
-        "next": [
-            "蓝色站台_获取升级物品",
-            "蓝色站台_碎片不足"
-        ]
-    },
-    "蓝色站台_前往下层": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "前往下层"
-        ],
-        "post_delay": 1000,
-        "focus": "> 准备前往下层",
-        "__yamaape": {
-            "position": {
-                "x": 2051,
-                "y": 4008
-            }
-        },
-        "next": [
-            "蓝色站台_选择主题",
-            "蓝色站台_最后一层"
-        ],
-        "interrupt": [
-            "蓝色站台_确认前往"
-        ]
     },
     "蓝色站台_获取升级物品": {
         "recognition": "OCR",
@@ -1558,6 +1574,24 @@
             "蓝色站台_蓝色站台"
         ]
     },
+    "蓝色站台_选择难度": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "下一步"
+        ],
+        "focus": "> 选择难度",
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": -1090,
+                "y": 444
+            }
+        },
+        "next": [
+            "蓝色站台_选择可移植现实"
+        ]
+    },
     "蓝色站台_蓝色站台": {
         "recognition": "OCR",
         "action": "Click",
@@ -1574,22 +1608,6 @@
         "next": [
             "蓝色站台_开始探索",
             "蓝色站台_继续探索"
-        ]
-    },
-    "蓝色站台_离开站台": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "../image/back.png"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 4249,
-                "y": 149
-            }
-        },
-        "next": [
-            "蓝色站台_确认返回"
         ]
     },
     "蓝色站台_确认返回": {
@@ -1683,31 +1701,45 @@
             "蓝色站台_评分不足"
         ]
     },
-    "蓝色站台_选择难度": {
+    "蓝色站台_分数上限": {
         "recognition": "OCR",
         "action": "Click",
         "expected": [
-            "下一步"
+            "1800/1800"
         ],
-        "focus": "> 选择难度",
-        "pre_delay": 400,
+        "focus": "> 分数已达到最大值",
         "__yamaape": {
             "position": {
-                "x": -1090,
-                "y": 444
+                "x": 5141,
+                "y": -102
             }
         },
         "next": [
-            "蓝色站台_选择可移植现实"
+            "蓝色站台_领取评分奖励"
+        ]
+    },
+    "蓝色站台_评分不足": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "focus": "> 评分进度不足",
+        "__yamaape": {
+            "position": {
+                "x": 5175,
+                "y": -393
+            }
+        },
+        "next": [
+            "蓝色站台_重新探索"
         ]
     },
     "蓝色站台_选择可移植现实": {
         "recognition": "OCR",
         "action": "Click",
         "expected": [
-            "掠食獠牙"
+            "掠食獠牙",
+            "掠食撩牙"
         ],
-        "pre_delay": 400,
+        "pre_delay": 600,
         "focus": "> 选择可移植现实",
         "__yamaape": {
             "position": {
@@ -1756,37 +1788,6 @@
             "蓝色站台_节点判断"
         ]
     },
-    "蓝色站台_分数上限": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "1800/1800"
-        ],
-        "focus": "> 分数已达到最大值",
-        "__yamaape": {
-            "position": {
-                "x": 5141,
-                "y": -102
-            }
-        },
-        "next": [
-            "蓝色站台_领取评分奖励"
-        ]
-    },
-    "蓝色站台_评分不足": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "focus": "> 评分进度不足",
-        "__yamaape": {
-            "position": {
-                "x": 5175,
-                "y": -393
-            }
-        },
-        "next": [
-            "蓝色站台_重新探索"
-        ]
-    },
     "蓝色站台_领取评分奖励": {
         "recognition": "OCR",
         "action": "Click",
@@ -1806,6 +1807,19 @@
         ],
         "interrupt": [
             "蓝色站台_确认领取评分奖励"
+        ]
+    },
+    "蓝色站台_重新探索": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": -1622,
+                "y": -414
+            }
+        },
+        "next": [
+            "蓝色站台_开始探索"
         ]
     },
     "蓝色站台_关闭评分界面": {
@@ -1835,19 +1849,6 @@
                 "y": 56
             }
         }
-    },
-    "蓝色站台_重新探索": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "__yamaape": {
-            "position": {
-                "x": -1622,
-                "y": -414
-            }
-        },
-        "next": [
-            "蓝色站台_开始探索"
-        ]
     },
     "蓝色站台_跳过休息室": {
         "recognition": "OCR",
