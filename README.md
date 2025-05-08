@@ -102,7 +102,11 @@
 
 ## 更新记录
 
-### Next Release (Committed but Unreleased)
+<!-- ### Next Release (Committed but Unreleased) -->
+
+### v0.4.11
+
+> 2025.5.8
 
 - **新增**
   - 反馈打包小工具：自动打包所有日志与配置文件！
