@@ -102,7 +102,10 @@
 
 ## 更新记录
 
-<!-- ### Next Release (Committed but Unreleased) -->
+### Next Release (Committed but Unreleased)
+
+- **修复优化**
+  - 修复了特殊商店可能会卡住的问题
 
 ### v0.4.11
 

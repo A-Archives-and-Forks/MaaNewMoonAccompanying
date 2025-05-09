@@ -228,6 +228,28 @@
             "蓝色站台_不再提醒少人战斗"
         ]
     },
+    "蓝色站台_战斗后事件信息": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "pre_delay": 1,
+        "post_delay": 1,
+        "__yamaape": {
+            "position": {
+                "x": 1226,
+                "y": 837
+            }
+        },
+        "next": [
+            "蓝色站台_选项-金币",
+            "蓝色站台_选项-物品",
+            "蓝色站台_选项-跑路",
+            "蓝色站台_选项-恢复",
+            "蓝色站台_选项-继续",
+            "蓝色站台_选项-未知",
+            "蓝色站台_点击空白处关闭",
+            "蓝色站台_加速事件剧情"
+        ]
+    },
     "蓝色站台_额外消耗-事件": {
         "recognition": "OCR",
         "action": "Click",
@@ -540,6 +562,88 @@
             "蓝色站台_交易节点"
         ]
     },
+    "蓝色站台_物品更替": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "获得物品",
+            "失去物品",
+            "物品升级",
+            "激活培养皿效果"
+        ],
+        "focus": "> 确认物品变化",
+        "__yamaape": {
+            "position": {
+                "x": 1994,
+                "y": 409
+            }
+        },
+        "next": [
+            "蓝色站台_确认物品更替"
+        ]
+    },
+    "蓝色站台_跳过多波": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "结算离开"
+        ],
+        "pre_delay": 400,
+        "focus": "> 跳过多波战斗",
+        "__yamaape": {
+            "position": {
+                "x": 1728,
+                "y": 463
+            }
+        }
+    },
+    "蓝色站台_确认失败": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "确定"
+        ],
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1551,
+                "y": 16
+            }
+        },
+        "next": [
+            "蓝色站台_确认结束"
+        ]
+    },
+    "蓝色站台_确认结束": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "确定"
+        ],
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1552,
+                "y": -203
+            }
+        }
+    },
+    "蓝色站台_不再提醒少人战斗": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "今天不再提醒"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1484,
+                "y": 693
+            }
+        },
+        "next": [
+            "蓝色站台_确定少人作战"
+        ]
+    },
     "蓝色站台_确定事件选项": {
         "recognition": "TemplateMatch",
         "action": "Click",
@@ -571,6 +675,23 @@
                 "y": 859
             }
         }
+    },
+    "蓝色站台_确认返回": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "确定"
+        ],
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 4514,
+                "y": 147
+            }
+        },
+        "next": [
+            "蓝色站台_放弃挑战"
+        ]
     },
     "蓝色站台_进入战斗节点": {
         "recognition": "OCR",
@@ -708,115 +829,6 @@
             "蓝色站台_确定跳过交易环节"
         ]
     },
-    "蓝色站台_物品更替": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "获得物品",
-            "失去物品",
-            "物品升级",
-            "激活培养皿效果"
-        ],
-        "focus": "> 确认物品变化",
-        "__yamaape": {
-            "position": {
-                "x": 1994,
-                "y": 409
-            }
-        },
-        "next": [
-            "蓝色站台_确认物品更替"
-        ]
-    },
-    "蓝色站台_跳过多波": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "结算离开"
-        ],
-        "pre_delay": 400,
-        "focus": "> 跳过多波战斗",
-        "__yamaape": {
-            "position": {
-                "x": 1728,
-                "y": 463
-            }
-        }
-    },
-    "蓝色站台_确认失败": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "确定"
-        ],
-        "pre_delay": 400,
-        "__yamaape": {
-            "position": {
-                "x": 1551,
-                "y": 16
-            }
-        },
-        "next": [
-            "蓝色站台_确认结束"
-        ]
-    },
-    "蓝色站台_确认结束": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "确定"
-        ],
-        "pre_delay": 400,
-        "__yamaape": {
-            "position": {
-                "x": 1552,
-                "y": -203
-            }
-        }
-    },
-    "蓝色站台_不再提醒少人战斗": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "今天不再提醒"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 1484,
-                "y": 693
-            }
-        },
-        "next": [
-            "蓝色站台_确定少人作战"
-        ]
-    },
-    "蓝色站台_确认物品更替": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "点击空白处关闭"
-        ],
-        "pre_delay": 800,
-        "__yamaape": {
-            "position": {
-                "x": 2239,
-                "y": 409
-            }
-        }
-    },
-    "蓝色站台_确定少人作战": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "确定"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 1744,
-                "y": 693
-            }
-        }
-    },
     "蓝色站台_今天不再提醒额外消耗": {
         "recognition": "OCR",
         "action": "Click",
@@ -905,9 +917,6 @@
         },
         "next": [
             "蓝色站台_结束商店节点"
-        ],
-        "interrupt": [
-            "蓝色站台_确认离开商店"
         ]
     },
     "蓝色站台_跳过交易环节": {
@@ -936,6 +945,33 @@
             "position": {
                 "x": 1229,
                 "y": 2966
+            }
+        }
+    },
+    "蓝色站台_确认物品更替": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击空白处关闭"
+        ],
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 2239,
+                "y": 409
+            }
+        }
+    },
+    "蓝色站台_确定少人作战": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "确定"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1744,
+                "y": 693
             }
         }
     },
@@ -1045,21 +1081,10 @@
         },
         "next": [
             "蓝色站台_节点结束"
-        ]
-    },
-    "蓝色站台_确认离开商店": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "确定"
         ],
-        "post_delay": 2000,
-        "__yamaape": {
-            "position": {
-                "x": 1492,
-                "y": 2661
-            }
-        }
+        "interrupt": [
+            "蓝色站台_确认离开商店"
+        ]
     },
     "蓝色站台_检测助战": {
         "recognition": "DirectHit",
@@ -1597,6 +1622,22 @@
             "蓝色站台_选择可移植现实"
         ]
     },
+    "蓝色站台_已在休息节点": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "幕间剧情"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 397,
+                "y": 4447
+            }
+        },
+        "next": [
+            "蓝色站台_前往下层"
+        ]
+    },
     "蓝色站台_蓝色站台": {
         "recognition": "OCR",
         "action": "Click",
@@ -1615,21 +1656,23 @@
             "蓝色站台_继续探索"
         ]
     },
-    "蓝色站台_确认返回": {
+    "蓝色站台_选择可移植现实": {
         "recognition": "OCR",
         "action": "Click",
         "expected": [
-            "确定"
+            "掠食獠牙",
+            "掠食撩牙"
         ],
-        "pre_delay": 400,
+        "pre_delay": 600,
+        "focus": "> 选择可移植现实",
         "__yamaape": {
             "position": {
-                "x": 4514,
-                "y": 147
+                "x": -830,
+                "y": 444
             }
         },
         "next": [
-            "蓝色站台_放弃挑战"
+            "蓝色站台_确认可移植现实"
         ]
     },
     "蓝色站台_放弃挑战": {
@@ -1737,23 +1780,38 @@
             "蓝色站台_重新探索"
         ]
     },
-    "蓝色站台_选择可移植现实": {
+    "蓝色站台_领取评分奖励": {
         "recognition": "OCR",
         "action": "Click",
         "expected": [
-            "掠食獠牙",
-            "掠食撩牙"
+            "领取全部"
         ],
-        "pre_delay": 600,
-        "focus": "> 选择可移植现实",
+        "pre_delay": 400,
+        "post_delay": 800,
         "__yamaape": {
             "position": {
-                "x": -830,
-                "y": 444
+                "x": 5401,
+                "y": -102
             }
         },
         "next": [
-            "蓝色站台_确认可移植现实"
+            "蓝色站台_关闭评分界面"
+        ],
+        "interrupt": [
+            "蓝色站台_确认领取评分奖励"
+        ]
+    },
+    "蓝色站台_重新探索": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": -1622,
+                "y": -414
+            }
+        },
+        "next": [
+            "蓝色站台_开始探索"
         ]
     },
     "蓝色站台_确认可移植现实": {
@@ -1791,40 +1849,6 @@
         },
         "next": [
             "蓝色站台_节点判断"
-        ]
-    },
-    "蓝色站台_领取评分奖励": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "领取全部"
-        ],
-        "pre_delay": 400,
-        "post_delay": 800,
-        "__yamaape": {
-            "position": {
-                "x": 5401,
-                "y": -102
-            }
-        },
-        "next": [
-            "蓝色站台_关闭评分界面"
-        ],
-        "interrupt": [
-            "蓝色站台_确认领取评分奖励"
-        ]
-    },
-    "蓝色站台_重新探索": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "__yamaape": {
-            "position": {
-                "x": -1622,
-                "y": -414
-            }
-        },
-        "next": [
-            "蓝色站台_开始探索"
         ]
     },
     "蓝色站台_关闭评分界面": {
@@ -1889,42 +1913,18 @@
             "蓝色站台_前往下层"
         ]
     },
-    "蓝色站台_战斗后事件信息": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "pre_delay": 1,
-        "post_delay": 1,
-        "__yamaape": {
-            "position": {
-                "x": 1226,
-                "y": 837
-            }
-        },
-        "next": [
-            "蓝色站台_选项-金币",
-            "蓝色站台_选项-物品",
-            "蓝色站台_选项-跑路",
-            "蓝色站台_选项-恢复",
-            "蓝色站台_选项-继续",
-            "蓝色站台_选项-未知",
-            "蓝色站台_点击空白处关闭",
-            "蓝色站台_加速事件剧情"
-        ]
-    },
-    "蓝色站台_已在休息节点": {
+    "蓝色站台_确认离开商店": {
         "recognition": "OCR",
         "action": "Click",
         "expected": [
-            "幕间剧情"
+            "确定"
         ],
+        "post_delay": 2000,
         "__yamaape": {
             "position": {
-                "x": 397,
-                "y": 4447
+                "x": 2519,
+                "y": 2600
             }
-        },
-        "next": [
-            "蓝色站台_前往下层"
-        ]
+        }
     }
 }
