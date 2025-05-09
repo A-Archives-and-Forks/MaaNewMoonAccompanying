@@ -25,7 +25,7 @@ class SetEatTimes(CustomAction):
 
             if times > 0:
                 expected_times = times
-                print(f"「清体力」功能将自动使用 {expected_times} 次稳定合剂")
+                print(f"> 将自动使用 {expected_times} 次稳定合剂")
             else:
                 expected_times = 0
             used_times = 0
@@ -50,7 +50,7 @@ class SetEatTimes(CustomAction):
                 return CustomAction.RunResult(success=False)
             else:
                 print(
-                    f"第 {used_times} 次使用稳定合剂，剩余 {expected_times - used_times} 次"
+                    f"> 第 {used_times} 次使用稳定合剂，剩余 {expected_times - used_times} 次"
                 )
 
             return CustomAction.RunResult(success=True)
