@@ -17,12 +17,13 @@
         "order_by": "Horizontal",
         "index": -1,
         "threshold": [
-            0.84
+            0.78
         ],
+        "green_mask": true,
         "__yamaape": {
             "position": {
-                "x": 257,
-                "y": -81
+                "x": 258,
+                "y": -97
             }
         },
         "next": [
@@ -62,8 +63,8 @@
         "focus": "> 赠送情报点",
         "__yamaape": {
             "position": {
-                "x": 1086,
-                "y": -91
+                "x": 1091,
+                "y": -94
             }
         },
         "next": [
@@ -79,8 +80,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 555,
-                "y": 183
+                "x": 553,
+                "y": 205
             }
         }
     },
@@ -89,8 +90,8 @@
         "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": 1363,
-                "y": 83
+                "x": 1361,
+                "y": 105
             }
         },
         "next": [
@@ -128,8 +129,8 @@
         "focus": "> 检查好友申请",
         "__yamaape": {
             "position": {
-                "x": 919,
-                "y": 323
+                "x": 917,
+                "y": 345
             }
         },
         "next": [
@@ -149,8 +150,8 @@
         "focus": "> 同意好友申请",
         "__yamaape": {
             "position": {
-                "x": 1207,
-                "y": 238
+                "x": 1204,
+                "y": 259
             }
         },
         "next": [
@@ -167,8 +168,8 @@
         "focus": "> 返回主界面",
         "__yamaape": {
             "position": {
-                "x": 1519,
-                "y": 372
+                "x": 1517,
+                "y": 394
             }
         }
     },
