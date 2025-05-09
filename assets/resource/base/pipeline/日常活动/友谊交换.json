@@ -1,14 +1,9 @@
 {
-    "友谊交换": {
-        "__yamaape": {
-            "position": {
-                "x": 46,
-                "y": -11
-            }
-        },
-        "next": [
-            "友谊交换_友谊界面"
-        ]
+    "__yamaape_config_友谊交换": {
+        "filename": "友谊交换",
+        "version": "v0.3.4",
+        "export": "",
+        "prefix": "友谊交换"
     },
     "友谊交换_友谊界面": {
         "recognition": "TemplateMatch",
@@ -18,10 +13,16 @@
         ],
         "post_delay": 1000,
         "timeout": 2000,
+        "focus": "> 进入好友面板",
+        "order_by": "Horizontal",
+        "index": -1,
+        "threshold": [
+            0.84
+        ],
         "__yamaape": {
             "position": {
-                "x": 255,
-                "y": -75
+                "x": 257,
+                "y": -81
             }
         },
         "next": [
@@ -41,6 +42,7 @@
         "expected": [
             "键领取"
         ],
+        "focus": "领取情报点",
         "__yamaape": {
             "position": {
                 "x": 550,
@@ -57,10 +59,11 @@
         "expected": [
             "键赠送"
         ],
+        "focus": "> 赠送情报点",
         "__yamaape": {
             "position": {
-                "x": 1077,
-                "y": -93
+                "x": 1086,
+                "y": -91
             }
         },
         "next": [
@@ -76,10 +79,23 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 542,
-                "y": 137
+                "x": 555,
+                "y": 183
             }
         }
+    },
+    "友谊交换_互助结束": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": 1363,
+                "y": 83
+            }
+        },
+        "next": [
+            "友谊交换_添加好友"
+        ]
     },
     "友谊交换_获取情报点数": {
         "recognition": "OCR",
@@ -102,19 +118,6 @@
             "友谊交换_互助结束"
         ]
     },
-    "友谊交换_互助结束": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "__yamaape": {
-            "position": {
-                "x": 1357,
-                "y": 17
-            }
-        },
-        "next": [
-            "友谊交换_添加好友"
-        ]
-    },
     "友谊交换_添加好友": {
         "recognition": "OCR",
         "action": "Click",
@@ -122,10 +125,11 @@
             "添加好友"
         ],
         "timeout": 1000,
+        "focus": "> 检查好友申请",
         "__yamaape": {
             "position": {
-                "x": 914,
-                "y": 215
+                "x": 919,
+                "y": 323
             }
         },
         "next": [
@@ -142,10 +146,11 @@
             "全部通过"
         ],
         "pre_delay": 400,
+        "focus": "> 同意好友申请",
         "__yamaape": {
             "position": {
-                "x": 1191,
-                "y": 152
+                "x": 1207,
+                "y": 238
             }
         },
         "next": [
@@ -159,11 +164,25 @@
             "../image/home.png"
         ],
         "post_delay": 3000,
+        "focus": "> 返回主界面",
         "__yamaape": {
             "position": {
-                "x": 1495,
-                "y": 258
+                "x": 1519,
+                "y": 372
             }
         }
+    },
+    "友谊交换_开始": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": -21,
+                "y": -47
+            }
+        },
+        "next": [
+            "友谊交换_友谊界面"
+        ]
     }
 }
