@@ -15,11 +15,11 @@ repos:
         types_or:
           - yaml
           - json
-# - repo: https://github.com/DavidAnson/markdownlint-cli2
-#   rev: v0.13.0
-#   hooks:
-#     - id: markdownlint-cli2
-#       files: ^docs/.*|^README\.md$
-#       types:
-#         - markdown
-#       args: ["--fix", "--config", "docs/.markdownlint.yaml", "#**/node_modules"]
+  - repo: https://github.com/DavidAnson/markdownlint-cli2
+    rev: v0.13.0
+    hooks:
+      - id: markdownlint-cli2
+        files: ^docs/.*|^README\.md$
+        types:
+          - markdown
+        args: ["--fix", "--config", "docs/.markdownlint.yaml", "#**/node_modules"]

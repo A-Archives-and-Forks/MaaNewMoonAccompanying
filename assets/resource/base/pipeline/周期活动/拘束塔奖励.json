@@ -36,6 +36,17 @@
             "拘束塔奖励_战略行动"
         ]
     },
+    "拘束塔奖励_已领取提示": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "focus": "> 本周已领取过拘束塔奖励",
+        "__yamaape": {
+            "position": {
+                "x": 1675,
+                "y": 853
+            }
+        }
+    },
     "拘束塔奖励_战略行动": {
         "recognition": "OCR",
         "action": "Click",
@@ -88,6 +99,23 @@
             "拘束塔奖励_领取全部"
         ]
     },
+    "拘束塔奖励_领取全部": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "最多"
+        ],
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 1486,
+                "y": 1272
+            }
+        },
+        "next": [
+            "拘束塔奖励_开始修复"
+        ]
+    },
     "拘束塔奖励_开始修复": {
         "recognition": "OCR",
         "action": "Click",
@@ -120,6 +148,20 @@
             "position": {
                 "x": 1998,
                 "y": 1271
+            }
+        },
+        "next": [
+            "拘束塔奖励_记录上次修复时间"
+        ]
+    },
+    "拘束塔奖励_次数不足提示 ": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "focus": "> 修复次数不足",
+        "__yamaape": {
+            "position": {
+                "x": 1995,
+                "y": 1505
             }
         },
         "next": [
@@ -172,47 +214,5 @@
                 "y": 1445
             }
         }
-    },
-    "拘束塔奖励_领取全部": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "最多"
-        ],
-        "pre_delay": 800,
-        "__yamaape": {
-            "position": {
-                "x": 1486,
-                "y": 1272
-            }
-        },
-        "next": [
-            "拘束塔奖励_开始修复"
-        ]
-    },
-    "拘束塔奖励_已领取提示": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "focus": "> 本周已领取过拘束塔奖励",
-        "__yamaape": {
-            "position": {
-                "x": 1675,
-                "y": 853
-            }
-        }
-    },
-    "拘束塔奖励_次数不足提示 ": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "focus": "> 修复次数不足",
-        "__yamaape": {
-            "position": {
-                "x": 1995,
-                "y": 1505
-            }
-        },
-        "next": [
-            "拘束塔奖励_关闭领取界面"
-        ]
     }
 }
