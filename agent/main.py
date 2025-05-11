@@ -15,6 +15,7 @@ def main():
     import custom.Platform
     import custom.PeriodicInspection
     import custom.Strap
+    import custom.Counter
 
     try:
         Toolkit.init_option("./")

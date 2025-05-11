@@ -55,7 +55,7 @@ class PeriodicCheck(CustomAction):
                 return CustomAction.RunResult(success=True)
 
         except Exception as e:
-            Prompt.error("检查周期任务", e)
+            return Prompt.error("检查周期任务", e)
 
 
 # 记录检查
@@ -73,4 +73,4 @@ class SetLastPeriodicCheck(CustomAction):
             return CustomAction.RunResult(success=True)
 
         except Exception as e:
-            Prompt.error("记录检查时间", e)
+            return Prompt.error("记录检查时间", e)
