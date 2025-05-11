@@ -56,13 +56,21 @@ class SetStrapAttr(CustomAction):
         try:
             args = parse_query_args(argv)
             attr: str = args.get("attr")
+            value: str = args.get("value")
 
-            expects = re.split(r",\s*|、\s*|\s+", attr)
-            expects = [exp for exp in expects if exp]
-            print(f"> 目标属性：{expects}")
-
+            attrs = re.split(r",\s*|，\s*|、\s*|\s+", attr)
+            attrs = [a for a in attrs if a]
+            print(f"> 目标属性：{attrs}")
             context.override_pipeline(
-                {"卡带词条_检测是否为目标特征": {"expected": expects}}
+                {"卡带词条_检测是否为目标属性": {"expected": attrs}}
+            )
+
+            values = re.split(r",\s*|、\s*|\s+", value)
+            values = [v for v in values if v]
+            if len(values) > 0:
+                print(f"> 目标数值：{values}")
+            context.override_pipeline(
+                {"卡带词条_检测属性值是否正确": {"expected": values}}
             )
 
             return CustomAction.RunResult(success=True)

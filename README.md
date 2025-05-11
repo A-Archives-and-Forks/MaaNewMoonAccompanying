@@ -103,7 +103,12 @@
 
 ## 更新记录
 
-<!-- ### Next Release (Committed but Unreleased) -->
+### Next Release (Committed but Unreleased)
+
+- **新增**
+  - 新增选项：卡带再激活-属性值
+- **修复优化**
+  - 修复了原属性会影响激活识别的问题
 
 ### v1.0.0
 

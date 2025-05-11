@@ -1,10 +1,10 @@
 {
     "name": "MaaNewMoonAccompanying",
     "url": "https://github.com/kqcoxn/MaaNewMoonAccompanying",
-    "custom_title": "新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v1.0.0 - MFA | 游戏版本：血茧时辙·上",
+    "custom_title": "新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v1.0.1 - MFA | 游戏版本：血茧时辙·上",
     "mirrorchyan_rid": "MNMA",
     "mirrorchyan_multiplatform": true,
-    "version": "v1.0.0",
+    "version": "v1.0.1",
     "message": "- 新 月 同 行 -",
     "controller": [
         {
@@ -193,18 +193,29 @@
         {
             "name": "卡带再激活",
             "entry": "卡带词条_开始",
-            "advanced": "激活属性",
-            "doc": "**卡带再激活**：\n\n自动将卡带激活至指定属性\n\n**注意：请确保拥有充足的数构银与整流元件**\n\n- 激活属性：可检测多种，不同属性以“,”或“ ”(空格)或“、”隔开，例如“暴击率、暴击伤害,效果命中 攻击%”\n\n开始界面：卡带再激活界面\n\n结束界面：卡带再激活界面"
+            "advanced": [
+                "激活属性"
+            ],
+            "doc": "**卡带再激活**：\n\n自动将卡带激活至指定属性\n\n**注意：请确保拥有充足的数构银与整流元件**\n\n- 激活属性：可检测多种，不同属性以“,”或“ ”(空格)或“、”隔开，例如“暴击率、暴击伤害,效果命中 攻击%”\n- 属性值：格式同上，同时作用上设所有属性，留空表示无属性值要求\n\n开始界面：卡带再激活界面\n\n结束界面：卡带再激活界面"
         }
     ],
     "advanced": {
         "激活属性": {
-            "field": "激活属性",
-            "type": "string",
-            "default": "暴击率",
+            "field": [
+                "激活属性",
+                "属性值"
+            ],
+            "type": [
+                "string",
+                "string"
+            ],
+            "default": [
+                "暴击率",
+                ""
+            ],
             "pipeline_override": {
                 "卡带词条_设定激活属性": {
-                    "custom_action_param": "attr={激活属性}"
+                    "custom_action_param": "attr={激活属性}&value={属性值}"
                 }
             }
         }
