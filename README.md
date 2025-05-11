@@ -103,7 +103,11 @@
 
 ## 更新记录
 
-### Next Release (Committed but Unreleased)
+<!-- ### Next Release (Committed but Unreleased) -->
+
+### v1.0.1
+
+> 2025.5.11
 
 - **新增**
   - 新增选项：卡带再激活-属性值
