@@ -187,17 +187,18 @@
         "recognition": "DirectHit",
         "action": "Custom",
         "custom_action": "select_next_procurement",
+        "timeout": 1000,
         "__yamaape": {
             "position": {
-                "x": 1101,
-                "y": 250
+                "x": 1084,
+                "y": 178
             }
         },
         "next": [
             "每日采购_识别是否为数构银物资"
         ],
         "on_error": [
-            "每日采购_回到主界面"
+            "每日采购_非数构银物资"
         ]
     },
     "每日采购_识别是否为数构银物资": {
@@ -219,34 +220,20 @@
                 "y": 250
             }
         },
-        "next": [
-            "每日采购_检查是否已购买",
-            "每日采购_检测是否为特惠",
-            "每日采购_检测是否为超值"
-        ],
         "on_error": [
             "每日采购_非特惠"
-        ]
-    },
-    "每日采购_回到主界面": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "../image/home.png"
         ],
-        "post_delay": 3000,
-        "focus": "> 返回主界面",
-        "__yamaape": {
-            "position": {
-                "x": 1361,
-                "y": 472
-            }
-        }
+        "next": [
+            "每日采购_检查是否已购买",
+            "每日采购_检测是否为超值",
+            "每日采购_检测是否为特惠"
+        ]
     },
     "每日采购_开始": {
         "recognition": "DirectHit",
         "action": "Custom",
         "custom_action": "set_procurement_list",
+        "custom_action_param": "white=&black=",
         "__yamaape": {
             "position": {
                 "x": -104,
@@ -280,6 +267,22 @@
             "每日采购_检查下个节点"
         ]
     },
+    "每日采购_检查下个节点": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": 3595,
+                "y": 48
+            }
+        },
+        "next": [
+            "每日采购_设置识别位置"
+        ],
+        "on_error": [
+            "每日采购_返回主界面"
+        ]
+    },
     "每日采购_检测是否为特惠": {
         "recognition": "TemplateMatch",
         "action": "DoNothing",
@@ -303,6 +306,23 @@
             "每日采购_检测黑白名单"
         ]
     },
+    "每日采购_检测黑白名单": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 1925,
+                "y": 260
+            }
+        },
+        "next": [
+            "每日采购_检测是否在白名单"
+        ],
+        "on_error": [
+            "每日采购_非白名单"
+        ]
+    },
     "每日采购_检测是否为超值": {
         "recognition": "TemplateMatch",
         "action": "DoNothing",
@@ -324,36 +344,6 @@
         },
         "next": [
             "每日采购_检测黑白名单"
-        ]
-    },
-    "每日采购_检查下个节点": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "__yamaape": {
-            "position": {
-                "x": 3595,
-                "y": 48
-            }
-        },
-        "next": [
-            "每日采购_设置识别位置"
-        ]
-    },
-    "每日采购_检测黑白名单": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "timeout": 1000,
-        "__yamaape": {
-            "position": {
-                "x": 1925,
-                "y": 260
-            }
-        },
-        "next": [
-            "每日采购_检测是否在白名单"
-        ],
-        "on_error": [
-            "每日采购_非白名单"
         ]
     },
     "每日采购_检测是否在白名单": {
@@ -420,7 +410,7 @@
             -60,
             -40
         ],
-        "focus": "> 好东西，快抢！",
+        "focus": "> 好东西，猛攻！",
         "__yamaape": {
             "position": {
                 "x": 2455,
@@ -501,6 +491,35 @@
             "position": {
                 "x": 2974,
                 "y": 482
+            }
+        },
+        "next": [
+            "每日采购_检查下个节点"
+        ]
+    },
+    "每日采购_返回主界面": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/home.png"
+        ],
+        "post_delay": 3000,
+        "focus": "> 返回主界面",
+        "__yamaape": {
+            "position": {
+                "x": 3882,
+                "y": 29
+            }
+        }
+    },
+    "每日采购_非数构银物资": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "focus": "> 并非数构银物资",
+        "__yamaape": {
+            "position": {
+                "x": 1360,
+                "y": 92
             }
         },
         "next": [

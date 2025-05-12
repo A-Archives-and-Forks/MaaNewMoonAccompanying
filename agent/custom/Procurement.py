@@ -27,7 +27,7 @@ class SetProcurementList(CustomAction):
             if len(white_list) > 0:
                 print(f"> 物资白名单：{white_list}")
             context.override_pipeline(
-                {"卡带词条_检测是否为目标属性": {"expected": white_list}}
+                {"每日采购_检测是否在白名单": {"expected": white_list}}
             )
 
             # 黑名单
@@ -37,7 +37,7 @@ class SetProcurementList(CustomAction):
             else:
                 black_list = "我全都要！"
             context.override_pipeline(
-                {"卡带词条_检测属性值是否正确": {"expected": black_list}}
+                {"每日采购_检测是否在黑名单": {"expected": black_list}}
             )
 
             return CustomAction.RunResult(success=True)

@@ -9,6 +9,7 @@ import custom.Platform
 import custom.PeriodicInspection
 import custom.Strap
 import custom.Counter
+import custom.Procurement
 
 
 def main():
