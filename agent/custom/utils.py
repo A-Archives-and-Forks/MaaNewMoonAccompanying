@@ -3,6 +3,7 @@ from maa.custom_action import CustomAction
 from typing import Dict, Any
 import os
 import json
+import re
 
 
 # 解析查询字符串
@@ -20,6 +21,19 @@ def parse_query_args(argv: CustomAction.RunArg) -> dict[str, Any]:
         params[arg.split("=")[0]] = arg.split("=")[1]
 
     return params
+
+
+# 解析列表输入
+def parse_list_input(input: str) -> list[str]:
+    if not input:
+        return []
+
+    list_split_regex = r",\s*|，\s*|、\s*|\s+"
+
+    items = re.split(list_split_regex, input)
+    items = [item for item in items if item]
+
+    return items
 
 
 # 提示

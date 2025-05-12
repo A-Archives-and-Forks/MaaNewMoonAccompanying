@@ -1,5 +1,11 @@
 {
-    "采购中心": {
+    "__yamaape_config_每日采购": {
+        "filename": "每日采购",
+        "version": "v0.3.4",
+        "prefix": "每日采购",
+        "export": ""
+    },
+    "每日采购_采购中心": {
         "recognition": "OCR",
         "action": "Click",
         "post_delay": 2000,
@@ -13,10 +19,10 @@
             }
         },
         "next": [
-            "补给包"
+            "每日采购_补给包"
         ]
     },
-    "补给包": {
+    "每日采购_补给包": {
         "recognition": "OCR",
         "action": "Click",
         "expected": [
@@ -25,15 +31,15 @@
         "post_delay": 500,
         "__yamaape": {
             "position": {
-                "x": 457,
-                "y": -296
+                "x": 455,
+                "y": -295
             }
         },
         "next": [
-            "特惠活动"
+            "每日采购_特惠活动"
         ]
     },
-    "特惠活动": {
+    "每日采购_特惠活动": {
         "recognition": "OCR",
         "action": "Click",
         "expected": [
@@ -48,13 +54,13 @@
             }
         },
         "next": [
-            "每日补给包"
+            "每日采购_每日补给包"
         ],
         "on_error": [
-            "购买数构银物资"
+            "每日采购_购买数构银物资"
         ]
     },
-    "每日补给包": {
+    "每日采购_每日补给包": {
         "recognition": "OCR",
         "action": "Click",
         "expected": [
@@ -68,10 +74,10 @@
             }
         },
         "next": [
-            "免费购买"
+            "每日采购_免费购买"
         ]
     },
-    "购买数构银物资": {
+    "每日采购_购买数构银物资": {
         "recognition": "DirectHit",
         "action": "DoNothing",
         "__yamaape": {
@@ -81,10 +87,10 @@
             }
         },
         "next": [
-            "流动市场"
+            "每日采购_流动市场"
         ]
     },
-    "免费购买": {
+    "每日采购_免费购买": {
         "recognition": "OCR",
         "action": "Click",
         "expected": [
@@ -98,10 +104,27 @@
             }
         },
         "next": [
-            "获取每日补给包物品"
+            "每日采购_获取每日补给包物品"
         ]
     },
-    "获取每日补给包物品": {
+    "每日采购_流动市场": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "流动市场"
+        ],
+        "post_delay": 500,
+        "__yamaape": {
+            "position": {
+                "x": 261,
+                "y": -1
+            }
+        },
+        "next": [
+            "每日采购_特价交易所"
+        ]
+    },
+    "每日采购_获取每日补给包物品": {
         "recognition": "OCR",
         "action": "Click",
         "expected": [
@@ -115,27 +138,10 @@
             }
         },
         "next": [
-            "购买数构银物资"
+            "每日采购_购买数构银物资"
         ]
     },
-    "流动市场": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "流动市场"
-        ],
-        "post_delay": 500,
-        "__yamaape": {
-            "position": {
-                "x": 262,
-                "y": -91
-            }
-        },
-        "next": [
-            "特价交易所"
-        ]
-    },
-    "特价交易所": {
+    "每日采购_特价交易所": {
         "recognition": "OCR",
         "action": "Click",
         "expected": [
@@ -144,15 +150,15 @@
         "post_delay": 500,
         "__yamaape": {
             "position": {
-                "x": 520,
-                "y": -89
+                "x": 519,
+                "y": 1
             }
         },
         "next": [
-            "滑动至底部"
+            "每日采购_滑动至底部"
         ]
     },
-    "滑动至底部": {
+    "每日采购_滑动至底部": {
         "recognition": "DirectHit",
         "action": "Swipe",
         "begin": [
@@ -167,526 +173,338 @@
             0,
             0
         ],
-        "post_delay": 200,
         "__yamaape": {
             "position": {
-                "x": 775,
-                "y": -91
+                "x": 774,
+                "y": -1
             }
         },
         "next": [
-            "识别阵列"
+            "每日采购_设置识别位置"
         ]
     },
-    "识别阵列": {
+    "每日采购_设置识别位置": {
         "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "select_next_procurement",
+        "__yamaape": {
+            "position": {
+                "x": 1101,
+                "y": 250
+            }
+        },
+        "next": [
+            "每日采购_识别是否为数构银物资"
+        ],
+        "on_error": [
+            "每日采购_回到主界面"
+        ]
+    },
+    "每日采购_识别是否为数构银物资": {
+        "recognition": "TemplateMatch",
         "action": "DoNothing",
-        "timeout": 1000,
-        "__yamaape": {
-            "position": {
-                "x": 1036,
-                "y": -33
-            }
-        },
-        "next": [
-            "数构银物资1-4",
-            "数构银物资2-1",
-            "数构银物资2-2",
-            "数构银物资2-3",
-            "数构银物资2-4"
-        ],
-        "on_error": [
-            "矩阵结束"
-        ]
-    },
-    "数构银物资1-4": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
         "template": [
             "../image/silver.png"
         ],
         "roi": [
-            1004,
-            335,
-            192,
-            32
-        ],
-        "timeout": 20000,
-        "post_delay": 500,
-        "__yamaape": {
-            "position": {
-                "x": 1382,
-                "y": -30
-            }
-        },
-        "next": [
-            "购买数构银物资1-4"
-        ],
-        "on_error": [
-            "矩阵递归1-4"
-        ]
-    },
-    "数构银物资2-1": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "../image/silver.png"
-        ],
-        "roi": [
-            323,
-            578,
-            192,
-            32
-        ],
-        "timeout": 1000,
-        "post_delay": 500,
-        "__yamaape": {
-            "position": {
-                "x": 1383,
-                "y": 223
-            }
-        },
-        "next": [
-            "购买数构银物资2-1"
-        ],
-        "on_error": [
-            "矩阵递归2-1"
-        ]
-    },
-    "数构银物资2-2": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "../image/silver.png"
-        ],
-        "roi": [
-            548,
-            578,
-            192,
-            32
-        ],
-        "timeout": 1000,
-        "post_delay": 500,
-        "__yamaape": {
-            "position": {
-                "x": 1382,
-                "y": 475
-            }
-        },
-        "next": [
-            "购买数构银物资2-2"
-        ],
-        "on_error": [
-            "矩阵递归2-2"
-        ]
-    },
-    "数构银物资2-3": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "../image/silver.png"
-        ],
-        "roi": [
-            777,
-            578,
-            192,
-            32
-        ],
-        "timeout": 1000,
-        "post_delay": 500,
-        "__yamaape": {
-            "position": {
-                "x": 1382,
-                "y": 729
-            }
-        },
-        "next": [
-            "购买数构银物资2-3"
-        ],
-        "on_error": [
-            "矩阵递归2-3"
-        ]
-    },
-    "数构银物资2-4": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "../image/silver.png"
-        ],
-        "roi": [
-            1003,
-            578,
-            192,
-            32
-        ],
-        "timeout": 1000,
-        "post_delay": 500,
-        "__yamaape": {
-            "position": {
-                "x": 1383,
-                "y": 982
-            }
-        },
-        "next": [
-            "购买数构银物资2-4"
-        ],
-        "on_error": [
-            "矩阵递归2-4"
-        ]
-    },
-    "矩阵结束": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "__yamaape": {
-            "position": {
-                "x": 1372,
-                "y": 1286
-            }
-        },
-        "next": [
-            "回到主界面"
-        ]
-    },
-    "购买数构银物资1-4": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "../image/silver.png"
-        ],
-        "roi": [
-            683,
-            557,
-            231,
-            59
-        ],
-        "timeout": 1000,
-        "__yamaape": {
-            "position": {
-                "x": 1633,
-                "y": -32
-            }
-        },
-        "next": [
-            "获取数构银物资1-4"
-        ],
-        "on_error": [
-            "矩阵递归1-4"
-        ]
-    },
-    "购买数构银物资2-1": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "../image/silver.png"
-        ],
-        "roi": [
-            683,
-            557,
-            231,
-            59
-        ],
-        "timeout": 1000,
-        "__yamaape": {
-            "position": {
-                "x": 1633,
-                "y": 224
-            }
-        },
-        "next": [
-            "获取数构银物资2-1"
-        ],
-        "on_error": [
-            "矩阵递归2-1"
-        ]
-    },
-    "购买数构银物资2-2": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "../image/silver.png"
-        ],
-        "roi": [
-            683,
-            557,
-            231,
-            59
-        ],
-        "timeout": 1000,
-        "__yamaape": {
-            "position": {
-                "x": 1633,
-                "y": 475
-            }
-        },
-        "next": [
-            "获取数构银物资2-2"
-        ],
-        "on_error": [
-            "矩阵递归2-2"
-        ]
-    },
-    "购买数构银物资2-3": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "../image/silver.png"
-        ],
-        "roi": [
-            683,
-            557,
-            231,
-            59
-        ],
-        "timeout": 1000,
-        "__yamaape": {
-            "position": {
-                "x": 1632,
-                "y": 728
-            }
-        },
-        "next": [
-            "获取数构银物资2-3"
-        ],
-        "on_error": [
-            "矩阵递归2-3"
-        ]
-    },
-    "购买数构银物资2-4": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "../image/silver.png"
-        ],
-        "roi": [
-            768,
-            557,
-            231,
-            59
-        ],
-        "timeout": 1000,
-        "__yamaape": {
-            "position": {
-                "x": 1633,
-                "y": 981
-            }
-        },
-        "next": [
-            "获取数构银物资2-4"
-        ],
-        "on_error": [
-            "矩阵递归2-4"
-        ]
-    },
-    "矩阵递归2-4": {
-        "recognition": "DirectHit",
-        "action": "Click",
-        "target": [
-            25,
+            320,
+            380,
             200,
-            1,
-            1
+            230
         ],
+        "timeout": 2000,
         "__yamaape": {
             "position": {
-                "x": 2141,
-                "y": 1085
+                "x": 1361,
+                "y": 250
             }
         },
         "next": [
-            "回到主界面"
+            "每日采购_检查是否已购买",
+            "每日采购_检测是否为特惠",
+            "每日采购_检测是否为超值"
+        ],
+        "on_error": [
+            "每日采购_非特惠"
         ]
     },
-    "回到主界面": {
+    "每日采购_回到主界面": {
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/back.png"
+            "../image/home.png"
         ],
         "post_delay": 3000,
+        "focus": "> 返回主界面",
         "__yamaape": {
             "position": {
-                "x": 2470,
-                "y": 1230
+                "x": 1361,
+                "y": 472
             }
         }
     },
-    "获取数构银物资1-4": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "点击以继续"
-        ],
-        "post_delay": 300,
+    "每日采购_开始": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "set_procurement_list",
         "__yamaape": {
             "position": {
-                "x": 1897,
-                "y": -29
+                "x": -104,
+                "y": -412
             }
         },
         "next": [
-            "矩阵递归1-4"
+            "每日采购_采购中心"
         ]
     },
-    "矩阵递归1-4": {
+    "每日采购_检查是否已购买": {
+        "recognition": "TemplateMatch",
+        "action": "DoNothing",
+        "focus": "> 该物资已采购",
+        "template": [
+            "../image/procurement/sold_out.png"
+        ],
+        "roi": [
+            320,
+            380,
+            200,
+            230
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1646,
+                "y": 37
+            }
+        },
+        "next": [
+            "每日采购_检查下个节点"
+        ]
+    },
+    "每日采购_检测是否为特惠": {
+        "recognition": "TemplateMatch",
+        "action": "DoNothing",
+        "template": [
+            "../image/procurement/special.png"
+        ],
+        "timeout": 1000,
+        "roi": [
+            320,
+            380,
+            200,
+            230
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1642,
+                "y": 429
+            }
+        },
+        "next": [
+            "每日采购_检测黑白名单"
+        ]
+    },
+    "每日采购_检测是否为超值": {
+        "recognition": "TemplateMatch",
+        "action": "DoNothing",
+        "template": [
+            "../image/procurement/super.png"
+        ],
+        "timeout": 1000,
+        "roi": [
+            320,
+            380,
+            200,
+            230
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1642,
+                "y": 653
+            }
+        },
+        "next": [
+            "每日采购_检测黑白名单"
+        ]
+    },
+    "每日采购_检查下个节点": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": 3595,
+                "y": 48
+            }
+        },
+        "next": [
+            "每日采购_设置识别位置"
+        ]
+    },
+    "每日采购_检测黑白名单": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 1925,
+                "y": 260
+            }
+        },
+        "next": [
+            "每日采购_检测是否在白名单"
+        ],
+        "on_error": [
+            "每日采购_非白名单"
+        ]
+    },
+    "每日采购_检测是否在白名单": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "timeout": 1000,
+        "expected": [
+            ""
+        ],
+        "roi": [
+            320,
+            380,
+            200,
+            230
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 2190,
+                "y": 260
+            }
+        },
+        "next": [
+            "每日采购_检测是否在黑名单"
+        ],
+        "on_error": [
+            "每日采购_点击详情页"
+        ]
+    },
+    "每日采购_检测是否在黑名单": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            ""
+        ],
+        "timeout": 1000,
+        "roi": [
+            320,
+            380,
+            200,
+            230
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 2459,
+                "y": 259
+            }
+        },
+        "next": [
+            "每日采购_黑名单"
+        ]
+    },
+    "每日采购_点击详情页": {
         "recognition": "DirectHit",
         "action": "Click",
         "target": [
-            25,
+            320,
+            380,
             200,
-            1,
-            1
+            230
         ],
+        "target_offset": [
+            20,
+            20,
+            -60,
+            -40
+        ],
+        "focus": "> 好东西，快抢！",
         "__yamaape": {
             "position": {
-                "x": 2152,
-                "y": 72
+                "x": 2455,
+                "y": 485
             }
         },
         "next": [
-            "数构银物资2-1",
-            "数构银物资2-2",
-            "数构银物资2-3",
-            "数构银物资2-4"
-        ],
-        "on_error": [
-            "回到主界面"
+            "每日采购_购买"
         ]
     },
-    "获取数构银物资2-1": {
+    "每日采购_购买": {
         "recognition": "OCR",
         "action": "Click",
         "expected": [
-            "点击以继续"
+            "购买"
         ],
-        "post_delay": 300,
+        "pre_delay": 800,
         "__yamaape": {
             "position": {
-                "x": 1890,
-                "y": 224
+                "x": 2714,
+                "y": 482
             }
         },
         "next": [
-            "矩阵递归2-1"
+            "每日采购_确定购买物资"
         ]
     },
-    "矩阵递归2-1": {
+    "每日采购_非特惠": {
         "recognition": "DirectHit",
-        "action": "Click",
-        "target": [
-            25,
-            200,
-            1,
-            1
-        ],
+        "action": "DoNothing",
+        "focus": "> 并非超值/特惠",
         "__yamaape": {
             "position": {
-                "x": 2151,
-                "y": 325
+                "x": 1644,
+                "y": 259
             }
         },
         "next": [
-            "数构银物资2-2",
-            "数构银物资2-3",
-            "数构银物资2-4"
-        ],
-        "on_error": [
-            "回到主界面"
+            "每日采购_检查下个节点"
         ]
     },
-    "获取数构银物资2-2": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "点击以继续"
-        ],
-        "post_delay": 300,
-        "__yamaape": {
-            "position": {
-                "x": 1895,
-                "y": 475
-            }
-        },
-        "next": [
-            "矩阵递归2-2"
-        ]
-    },
-    "矩阵递归2-2": {
+    "每日采购_非白名单": {
         "recognition": "DirectHit",
-        "action": "Click",
-        "target": [
-            25,
-            200,
-            1,
-            1
-        ],
+        "action": "DoNothing",
+        "focus": "> 不在白名单内",
         "__yamaape": {
             "position": {
-                "x": 2150,
-                "y": 582
+                "x": 2191,
+                "y": 105
             }
         },
         "next": [
-            "数构银物资2-3",
-            "数构银物资2-4"
-        ],
-        "on_error": [
-            "回到主界面"
+            "每日采购_检查下个节点"
         ]
     },
-    "获取数构银物资2-3": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "点击以继续"
-        ],
-        "post_delay": 300,
-        "__yamaape": {
-            "position": {
-                "x": 1892,
-                "y": 728
-            }
-        },
-        "next": [
-            "矩阵递归2-3"
-        ]
-    },
-    "矩阵递归2-3": {
+    "每日采购_黑名单": {
         "recognition": "DirectHit",
-        "action": "Click",
-        "target": [
-            25,
-            200,
-            1,
-            1
-        ],
+        "action": "DoNothing",
+        "focus": "> 在黑名单内",
         "__yamaape": {
             "position": {
-                "x": 2143,
-                "y": 830
+                "x": 2713,
+                "y": 255
             }
         },
         "next": [
-            "数构银物资2-4"
-        ],
-        "on_error": [
-            "回到主界面"
+            "每日采购_检查下个节点"
         ]
     },
-    "获取数构银物资2-4": {
+    "每日采购_确定购买物资": {
         "recognition": "OCR",
         "action": "Click",
         "expected": [
             "点击以继续"
         ],
-        "post_delay": 300,
+        "pre_delay": 800,
         "__yamaape": {
             "position": {
-                "x": 1893,
-                "y": 984
+                "x": 2974,
+                "y": 482
             }
         },
         "next": [
-            "矩阵递归2-4"
+            "每日采购_检查下个节点"
         ]
     }
 }

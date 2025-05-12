@@ -4,14 +4,14 @@ from maa.context import Context
 
 import re
 
-from .utils import parse_query_args, Prompt
+from .utils import parse_query_args, parse_list_input, Prompt
 
 index = 0
 
 
 # 记录检查
 @AgentServer.custom_action("init_strap_upgrade")
-class SetLastPeriodicCheck(CustomAction):
+class InitStrapUpgrade(CustomAction):
     def run(
         self, context: Context, argv: CustomAction.RunArg
     ) -> CustomAction.RunResult | bool:
@@ -26,7 +26,7 @@ class SetLastPeriodicCheck(CustomAction):
 
 
 @AgentServer.custom_action("select_next_strap")
-class SetLastPeriodicCheck(CustomAction):
+class SelectNextStrap(CustomAction):
     def run(
         self, context: Context, argv: CustomAction.RunArg
     ) -> CustomAction.RunResult | bool:
@@ -44,7 +44,7 @@ class SetLastPeriodicCheck(CustomAction):
             return CustomAction.RunResult(success=True)
 
         except Exception as e:
-            return Prompt.error("初始化卡带升级", e)
+            return Prompt.error("切换卡带", e)
 
 
 @AgentServer.custom_action("set_strap_attr")
@@ -55,20 +55,18 @@ class SetStrapAttr(CustomAction):
 
         try:
             args = parse_query_args(argv)
-            attr: str = args.get("attr")
-            value: str = args.get("value")
+            attr_input: str = args.get("attr")
+            value_input: str = args.get("value")
 
-            regex = r",\s*|，\s*|、\s*|\s+"
-
-            attrs = re.split(regex, attr)
-            attrs = [a for a in attrs if a]
+            # 目标属性
+            attrs = parse_list_input(attr_input)
             print(f"> 目标属性：{attrs}")
             context.override_pipeline(
                 {"卡带词条_检测是否为目标属性": {"expected": attrs}}
             )
 
-            values = re.split(regex, value)
-            values = [v for v in values if v]
+            # 目标数值
+            values = parse_list_input(value_input)
             if len(values) > 0:
                 print(f"> 目标数值：{values}")
             context.override_pipeline(
@@ -78,4 +76,4 @@ class SetStrapAttr(CustomAction):
             return CustomAction.RunResult(success=True)
 
         except Exception as e:
-            return Prompt.error("初始化卡带升级", e)
+            return Prompt.error("设置卡带属性", e)

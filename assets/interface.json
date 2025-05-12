@@ -80,12 +80,14 @@
         },
         {
             "name": "每日采购",
-            "entry": "每日采购",
-            "option": [
-                "购买数构银物资",
-                "数构银再确认"
+            "entry": "每日采购_开始",
+            "advanced": [
+                "数构银物资黑白名单"
             ],
-            "doc": "**每日采购**：\n\n购买每日免费礼包与数构银物资\n\n**注意事项：请确保有充足数构银**\n\n- 启用数构银再确认：若购买数构银只看不买或少买请关闭此选项\n\n开始界面：主界面\n\n结束界面：主界面",
+            "option": [
+                "数构银物资购买策略"
+            ],
+            "doc": "**每日采购**：\n\n购买每日免费礼包与数构银物资\n\n**注意事项：请确保有充足数构银**\n\n开始界面：主界面\n\n结束界面：主界面",
             "check": true
         },
         {
@@ -200,6 +202,25 @@
         }
     ],
     "advanced": {
+        "数构银物资黑白名单": {
+            "field": [
+                "物资白名单",
+                "物资黑名单"
+            ],
+            "type": [
+                "string",
+                "string"
+            ],
+            "default": [
+                "",
+                ""
+            ],
+            "pipeline_override": {
+                "每日采购_开始": {
+                    "custom_action_param": "white={物资白名单}&black={物资黑名单}"
+                }
+            }
+        },
         "激活属性": {
             "field": [
                 "激活属性",
@@ -317,82 +338,23 @@
                 }
             ]
         },
-        "购买数构银物资": {
+        "数构银物资购买策略": {
             "cases": [
                 {
-                    "name": "Yes",
+                    "name": "全部采购",
                     "pipeline_override": {}
                 },
                 {
-                    "name": "No",
-                    "pipeline_override": {
-                        "每日采购_购买数构银物资": {
-                            "next": "每日采购_回到主界面"
-                        }
-                    }
-                }
-            ]
-        },
-        "数构银再确认": {
-            "cases": [
-                {
-                    "name": "Yes",
+                    "name": "不采购",
                     "pipeline_override": {}
                 },
                 {
-                    "name": "No",
-                    "pipeline_override": {
-                        "每日采购_购买数构银物资1-4": {
-                            "recognition": "OCR",
-                            "expected": "购买",
-                            "roi": [
-                                0,
-                                0,
-                                0,
-                                0
-                            ]
-                        },
-                        "每日采购_购买数构银物资2-1": {
-                            "recognition": "OCR",
-                            "expected": "购买",
-                            "roi": [
-                                0,
-                                0,
-                                0,
-                                0
-                            ]
-                        },
-                        "每日采购_购买数构银物资2-2": {
-                            "recognition": "OCR",
-                            "expected": "购买",
-                            "roi": [
-                                0,
-                                0,
-                                0,
-                                0
-                            ]
-                        },
-                        "每日采购_购买数构银物资2-3": {
-                            "recognition": "OCR",
-                            "expected": "购买",
-                            "roi": [
-                                0,
-                                0,
-                                0,
-                                0
-                            ]
-                        },
-                        "每日采购_购买数构银物资2-4": {
-                            "recognition": "OCR",
-                            "expected": "购买",
-                            "roi": [
-                                0,
-                                0,
-                                0,
-                                0
-                            ]
-                        }
-                    }
+                    "name": "仅特惠与超值",
+                    "pipeline_override": {}
+                },
+                {
+                    "name": "仅超值",
+                    "pipeline_override": {}
                 }
             ]
         },
