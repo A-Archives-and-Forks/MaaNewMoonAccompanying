@@ -43,7 +43,7 @@
         "expected": [
             "键领取"
         ],
-        "focus": "领取情报点",
+        "focus": "> 领取情报点",
         "__yamaape": {
             "position": {
                 "x": 550,
@@ -178,19 +178,6 @@
             }
         }
     },
-    "友谊交换_开始": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "__yamaape": {
-            "position": {
-                "x": -21,
-                "y": -47
-            }
-        },
-        "next": [
-            "友谊交换_友谊界面"
-        ]
-    },
     "友谊交换_好友已到上线": {
         "recognition": "OCR",
         "action": "Click",
@@ -207,6 +194,19 @@
         },
         "next": [
             "友谊交换_返回主界面"
+        ]
+    },
+    "友谊交换_开始": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": -21,
+                "y": -47
+            }
+        },
+        "next": [
+            "友谊交换_友谊界面"
         ]
     }
 }

@@ -103,7 +103,12 @@
 
 ## 更新记录
 
-<!-- ### Next Release (Committed but Unreleased) -->
+### Next Release (Committed but Unreleased)
+
+- **修复优化**
+  - 修复了蓝色站台剧情节点后温控变化会卡住的问题
+  - 修复了蓝色站台战斗节点后仍然有选项时会卡住的问题
+  - 提高蓝色站台选项对话速度
 
 ### v1.0.1
 

@@ -58,14 +58,16 @@ class SetStrapAttr(CustomAction):
             attr: str = args.get("attr")
             value: str = args.get("value")
 
-            attrs = re.split(r",\s*|，\s*|、\s*|\s+", attr)
+            regex = r",\s*|，\s*|、\s*|\s+"
+
+            attrs = re.split(regex, attr)
             attrs = [a for a in attrs if a]
             print(f"> 目标属性：{attrs}")
             context.override_pipeline(
                 {"卡带词条_检测是否为目标属性": {"expected": attrs}}
             )
 
-            values = re.split(r",\s*|、\s*|\s+", value)
+            values = re.split(regex, value)
             values = [v for v in values if v]
             if len(values) > 0:
                 print(f"> 目标数值：{values}")
