@@ -10,7 +10,7 @@ import custom.PeriodicInspection
 import custom.Strap
 import custom.Counter
 import custom.Procurement
-
+import custom.Assistance
 
 def main():
     Toolkit.init_option("./")
