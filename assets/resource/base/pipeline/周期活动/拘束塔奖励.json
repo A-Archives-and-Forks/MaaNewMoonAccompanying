@@ -89,6 +89,7 @@
         ],
         "focus": "> 检查剩余奖励次数",
         "pre_delay": 400,
+        "post_delay": 800,
         "__yamaape": {
             "position": {
                 "x": 2475,
