@@ -109,6 +109,21 @@
             "信赖谈话_设置计时器"
         ]
     },
+    "信赖谈话_设置计时器": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "init_timer",
+        "custom_action_param": "limit=15",
+        "__yamaape": {
+            "position": {
+                "x": 2939,
+                "y": 1096
+            }
+        },
+        "next": [
+            "信赖谈话_进入谈话"
+        ]
+    },
     "信赖谈话_进入谈话": {
         "recognition": "TemplateMatch",
         "action": "Click",
@@ -202,84 +217,12 @@
             "信赖谈话_下一个特工"
         ]
     },
-    "信赖谈话_切换对话": {
-        "recognition": "DirectHit",
-        "action": "Swipe",
-        "pre_delay": 400,
-        "begin": [
-            1203,
-            399,
-            0,
-            0
-        ],
-        "end": [
-            1203,
-            315,
-            1,
-            1
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 3992,
-                "y": 1097
-            }
-        },
-        "next": [
-            "信赖谈话_下一个对话"
-        ]
-    },
-    "信赖谈话_下一个对话": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "post_delay": 400,
-        "__yamaape": {
-            "position": {
-                "x": 4304,
-                "y": 900
-            }
-        },
-        "next": [
-            "信赖谈话_设置计时器"
-        ]
-    },
-    "信赖谈话_下一个特工": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "../image/back.png"
-        ],
-        "pre_delay": 400,
-        "__yamaape": {
-            "position": {
-                "x": 3992,
-                "y": 869
-            }
-        },
-        "next": [
-            "信赖谈话_检查信赖"
-        ]
-    },
-    "信赖谈话_设置计时器": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "init_timer",
-        "custom_action_param": "limit=15",
-        "__yamaape": {
-            "position": {
-                "x": 2939,
-                "y": 1096
-            }
-        },
-        "next": [
-            "信赖谈话_进入谈话"
-        ]
-    },
     "信赖谈话_检查限时": {
         "recognition": "DirectHit",
         "action": "Custom",
         "custom_action": "check_time",
         "pre_delay": 1,
-        "post_delay": 1,
+        "post_delay": 50,
         "__yamaape": {
             "position": {
                 "x": 3735,
@@ -313,6 +256,50 @@
             "信赖谈话_重置计时器"
         ]
     },
+    "信赖谈话_切换对话": {
+        "recognition": "DirectHit",
+        "action": "Swipe",
+        "pre_delay": 400,
+        "begin": [
+            1203,
+            399,
+            1,
+            1
+        ],
+        "end": [
+            1203,
+            315,
+            1,
+            1
+        ],
+        "duration": 300,
+        "__yamaape": {
+            "position": {
+                "x": 3992,
+                "y": 1097
+            }
+        },
+        "next": [
+            "信赖谈话_下一个对话"
+        ]
+    },
+    "信赖谈话_下一个特工": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/back.png"
+        ],
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 3992,
+                "y": 869
+            }
+        },
+        "next": [
+            "信赖谈话_检查信赖"
+        ]
+    },
     "信赖谈话_重置计时器": {
         "recognition": "DirectHit",
         "action": "Custom",
@@ -326,6 +313,20 @@
                 "y": 1530
             }
         }
+    },
+    "信赖谈话_下一个对话": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "post_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 4304,
+                "y": 900
+            }
+        },
+        "next": [
+            "信赖谈话_设置计时器"
+        ]
     },
     "信赖谈话_开始": {
         "recognition": "DirectHit",
