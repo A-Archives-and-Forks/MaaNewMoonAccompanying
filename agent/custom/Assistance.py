@@ -18,7 +18,7 @@ class RecordActionType(CustomAction):
             # 从argv中获取行动类型
             args = parse_query_args(argv)
             action_type = args.get("a")
-            print(" 记录行动类型" + action_type)
+            # print(" 记录行动类型" + action_type)
             if action_type:
                 # 修改助战_结束节点的next为记录的行动类型
                 context.override_pipeline({
