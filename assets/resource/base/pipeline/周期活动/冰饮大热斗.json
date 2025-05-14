@@ -98,8 +98,8 @@
         "timeout": 2000,
         "__yamaape": {
             "position": {
-                "x": 3178,
-                "y": 2047
+                "x": 3426,
+                "y": 2131
             }
         },
         "next": [
@@ -135,8 +135,8 @@
         "focus": "> 老金！",
         "__yamaape": {
             "position": {
-                "x": 3445,
-                "y": 2051
+                "x": 3693,
+                "y": 2135
             }
         },
         "next": [
@@ -146,7 +146,7 @@
     "冰饮_没有老金": {
         "recognition": "OCR",
         "action": "Click",
-        "focus": "> 未检测到老金，尝试刷新",
+        "focus": "> 未检测到老金",
         "expected": [
             "世界请求"
         ],
@@ -154,8 +154,8 @@
         "timeout": 2000,
         "__yamaape": {
             "position": {
-                "x": 3441,
-                "y": 2249
+                "x": 3689,
+                "y": 2333
             }
         },
         "next": [
@@ -384,8 +384,8 @@
         "timeout": 2000,
         "__yamaape": {
             "position": {
-                "x": 2642,
-                "y": 2111
+                "x": 2890,
+                "y": 2195
             }
         },
         "next": [
@@ -403,8 +403,8 @@
         "timeout": 2000,
         "__yamaape": {
             "position": {
-                "x": 2922,
-                "y": 2048
+                "x": 3170,
+                "y": 2132
             }
         },
         "next": [
@@ -425,8 +425,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 3009,
-                "y": 2668
+                "x": 3969,
+                "y": 2898
             }
         }
     },
@@ -438,8 +438,8 @@
         "focus": "> 协助挑战已完成",
         "__yamaape": {
             "position": {
-                "x": 5055,
-                "y": 2182
+                "x": 5303,
+                "y": 2266
             }
         },
         "next": [
@@ -456,8 +456,8 @@
         "index": -1,
         "__yamaape": {
             "position": {
-                "x": 3715,
-                "y": 2053
+                "x": 3963,
+                "y": 2137
             }
         },
         "next": [
@@ -474,8 +474,8 @@
         "focus": "> 开始行动",
         "__yamaape": {
             "position": {
-                "x": 3971,
-                "y": 2054
+                "x": 4219,
+                "y": 2138
             }
         },
         "next": [
@@ -493,8 +493,8 @@
         "timeout": 600000,
         "__yamaape": {
             "position": {
-                "x": 4238,
-                "y": 2052
+                "x": 4486,
+                "y": 2136
             }
         },
         "next": [
@@ -511,8 +511,8 @@
         "focus": "> 行动结束",
         "__yamaape": {
             "position": {
-                "x": 4501,
-                "y": 2056
+                "x": 4749,
+                "y": 2140
             }
         },
         "next": [
@@ -529,8 +529,8 @@
         "timeout": 2000,
         "__yamaape": {
             "position": {
-                "x": 4776,
-                "y": 2054
+                "x": 5024,
+                "y": 2138
             }
         },
         "next": [
@@ -550,8 +550,8 @@
         "focus": "> 协助挑战未完成",
         "__yamaape": {
             "position": {
-                "x": 5053,
-                "y": 1980
+                "x": 5301,
+                "y": 2064
             }
         },
         "next": [
@@ -661,7 +661,7 @@
             }
         },
         "next": [
-            "冰饮_个人挑战完成"
+            "冰饮_检查是否已领奖"
         ]
     },
     "冰饮_个人挑战未完成": {
@@ -704,8 +704,8 @@
         "focus": "> 发现世界请求",
         "__yamaape": {
             "position": {
-                "x": 3716,
-                "y": 2287
+                "x": 3964,
+                "y": 2371
             }
         },
         "next": [
@@ -720,10 +720,11 @@
         ],
         "timeout": 2000,
         "post_delay": 800,
+        "focus": "> 尝试刷新老金",
         "__yamaape": {
             "position": {
-                "x": 3717,
-                "y": 2481
+                "x": 3965,
+                "y": 2565
             }
         },
         "next": [
@@ -731,6 +732,94 @@
         ],
         "on_error": [
             "冰饮_没有老金"
+        ]
+    },
+    "冰饮_检查是否已领奖": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "协助记录"
+        ],
+        "timeout": 2000,
+        "focus": "> 检查是否已领奖",
+        "order_by": "Vertical",
+        "__yamaape": {
+            "position": {
+                "x": 3939,
+                "y": 1614
+            }
+        },
+        "next": [
+            "冰饮_领奖"
+        ],
+        "on_error": [
+            "冰饮_已领取"
+        ]
+    },
+    "冰饮_领奖": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "领奖"
+        ],
+        "pre_delay": 800,
+        "focus": "> 领取个人挑战奖励",
+        "__yamaape": {
+            "position": {
+                "x": 4199,
+                "y": 1614
+            }
+        },
+        "next": [
+            "冰饮_确认领奖"
+        ]
+    },
+    "冰饮_确认领奖": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击以继续"
+        ],
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 4461,
+                "y": 1617
+            }
+        },
+        "next": [
+            "冰饮_从协助记录返回好友请求"
+        ]
+    },
+    "冰饮_从协助记录返回好友请求": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "好友请求"
+        ],
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 4734,
+                "y": 1668
+            }
+        },
+        "next": [
+            "冰饮_个人挑战完成"
+        ]
+    },
+    "冰饮_已领取": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "focus": "> 奖励已领取",
+        "__yamaape": {
+            "position": {
+                "x": 4194,
+                "y": 1834
+            }
+        },
+        "next": [
+            "冰饮_从协助记录返回好友请求"
         ]
     }
 }
