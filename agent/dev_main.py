@@ -10,6 +10,7 @@ import custom.PeriodicInspection
 import custom.Strap
 import custom.Counter
 import custom.Procurement
+import custom.Timer
 import custom.Assistance
 
 def main():

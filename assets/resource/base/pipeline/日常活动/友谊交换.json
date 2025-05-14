@@ -17,7 +17,7 @@
         "order_by": "Horizontal",
         "index": -1,
         "threshold": [
-            0.78
+            0.68
         ],
         "green_mask": true,
         "__yamaape": {

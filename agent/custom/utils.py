@@ -17,8 +17,10 @@ def parse_query_args(argv: CustomAction.RunArg) -> dict[str, Any]:
     # 解析键值对到字典
     params: Dict[str, Any] = {}
     for arg in args:
-        # 每个参数按第一个'='分割键值（支持含等号的值）
-        params[arg.split("=")[0]] = arg.split("=")[1]
+        # 分割键值
+        parts = arg.split("=")
+        if len(parts) >= 2:
+            params[parts[0]] = parts[1]
 
     return params
 

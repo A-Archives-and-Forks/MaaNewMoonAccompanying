@@ -85,7 +85,7 @@
         "expected": [
             "开始制造"
         ],
-        "timeout": 1000,
+        "timeout": 2000,
         "focus": "> 开始制造",
         "__yamaape": {
             "position": {
@@ -156,7 +156,7 @@
         "expected": [
             "点击以继续"
         ],
-        "timeout": 1000,
+        "timeout": 2000,
         "pre_delay": 500,
         "__yamaape": {
             "position": {
@@ -280,7 +280,7 @@
             1,
             1
         ],
-        "timeout": 1000,
+        "timeout": 2000,
         "__yamaape": {
             "position": {
                 "x": 1380,
@@ -489,12 +489,12 @@
         "expected": [
             "点击以继续"
         ],
-        "timeout": 1000,
+        "timeout": 2000,
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 916,
-                "y": 1725
+                "x": 923,
+                "y": 1722
             }
         },
         "next": [
@@ -543,6 +543,7 @@
         ],
         "timeout": 2000,
         "post_delay": 800,
+        "pre_delay": 400,
         "__yamaape": {
             "position": {
                 "x": 2185,
@@ -555,6 +556,21 @@
         "on_error": [
             "城市探索_事件详情"
         ]
+    },
+    "城市探索_事件列表": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "pre_delay": 400,
+        "template": [
+            "../image/city/events.png"
+        ],
+        "post_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 2184,
+                "y": 283
+            }
+        }
     },
     "城市探索_检查事件": {
         "recognition": "OCR",
@@ -582,7 +598,7 @@
             58,
             58
         ],
-        "post_delay": 1000,
+        "post_delay": 1500,
         "__yamaape": {
             "position": {
                 "x": 2483,
@@ -622,7 +638,7 @@
         "__yamaape": {
             "position": {
                 "x": 2817,
-                "y": 1104
+                "y": 1158
             }
         },
         "next": [
@@ -640,8 +656,8 @@
         "focus": "> 水群类事件",
         "__yamaape": {
             "position": {
-                "x": 2817,
-                "y": 1826
+                "x": 2808,
+                "y": 1918
             }
         },
         "next": [
@@ -658,8 +674,8 @@
         "focus": "> 委托类事件",
         "__yamaape": {
             "position": {
-                "x": 2815,
-                "y": 2322
+                "x": 2806,
+                "y": 2464
             }
         },
         "next": [
@@ -713,10 +729,16 @@
             "剧情"
         ],
         "focus": "> 剧情类事件",
+        "roi": [
+            781,
+            55,
+            479,
+            551
+        ],
         "__yamaape": {
             "position": {
-                "x": 2861,
-                "y": 561
+                "x": 2822,
+                "y": 598
             }
         },
         "next": [
@@ -736,7 +758,7 @@
         "__yamaape": {
             "position": {
                 "x": 3096,
-                "y": 1101
+                "y": 1155
             }
         },
         "next": [
@@ -754,8 +776,8 @@
         "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": 3093,
-                "y": 1828
+                "x": 3084,
+                "y": 1920
             }
         },
         "next": [
@@ -774,8 +796,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 3075,
-                "y": 2322
+                "x": 3066,
+                "y": 2464
             }
         },
         "next": [
@@ -826,8 +848,8 @@
         "timeout": 120000,
         "__yamaape": {
             "position": {
-                "x": 3125,
-                "y": 529
+                "x": 3130,
+                "y": 600
             }
         },
         "next": [
@@ -854,7 +876,7 @@
         "__yamaape": {
             "position": {
                 "x": 3641,
-                "y": 1039
+                "y": 1093
             }
         },
         "next": [
@@ -874,7 +896,7 @@
         "__yamaape": {
             "position": {
                 "x": 3378,
-                "y": 1208
+                "y": 1262
             }
         }
     },
@@ -888,7 +910,7 @@
         "__yamaape": {
             "position": {
                 "x": 3378,
-                "y": 1361
+                "y": 1415
             }
         },
         "next": [
@@ -905,7 +927,7 @@
         "__yamaape": {
             "position": {
                 "x": 3642,
-                "y": 1549
+                "y": 1603
             }
         }
     },
@@ -926,7 +948,7 @@
         "__yamaape": {
             "position": {
                 "x": 3378,
-                "y": 1549
+                "y": 1603
             }
         }
     },
@@ -952,8 +974,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 3378,
-                "y": 1823
+                "x": 3369,
+                "y": 1915
             }
         },
         "next": [
@@ -976,8 +998,8 @@
         "pre_delay": 1,
         "__yamaape": {
             "position": {
-                "x": 3374,
-                "y": 2074
+                "x": 3365,
+                "y": 2166
             }
         }
     },
@@ -992,8 +1014,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 3335,
-                "y": 2322
+                "x": 3326,
+                "y": 2464
             }
         },
         "next": [
@@ -1008,6 +1030,7 @@
         ],
         "pre_delay": 800,
         "focus": "> 获取事件奖励",
+        "post_delay": 1500,
         "__yamaape": {
             "position": {
                 "x": 4850,
@@ -1033,8 +1056,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 3379,
-                "y": 525
+                "x": 3384,
+                "y": 596
             }
         },
         "next": [
@@ -1053,8 +1076,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 3643,
-                "y": 729
+                "x": 3648,
+                "y": 821
             }
         }
     },
@@ -1074,8 +1097,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 3380,
-                "y": 710
+                "x": 3385,
+                "y": 802
             }
         }
     },
@@ -1090,7 +1113,7 @@
         "__yamaape": {
             "position": {
                 "x": 3912,
-                "y": 1151
+                "y": 1205
             }
         },
         "next": [
@@ -1106,7 +1129,7 @@
         "__yamaape": {
             "position": {
                 "x": 3909,
-                "y": 1371
+                "y": 1425
             }
         }
     },
@@ -1119,7 +1142,7 @@
         "__yamaape": {
             "position": {
                 "x": 3641,
-                "y": 1388
+                "y": 1442
             }
         }
     },
@@ -1145,8 +1168,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 3640,
-                "y": 1822
+                "x": 3631,
+                "y": 1914
             }
         },
         "next": [
@@ -1169,8 +1192,8 @@
         "pre_delay": 1,
         "__yamaape": {
             "position": {
-                "x": 3634,
-                "y": 2074
+                "x": 3625,
+                "y": 2166
             }
         }
     },
@@ -1185,8 +1208,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 3617,
-                "y": 2325
+                "x": 3608,
+                "y": 2467
             }
         },
         "next": [
@@ -1200,6 +1223,7 @@
             "../image/jump.png"
         ],
         "pre_delay": 800,
+        "post_delay": 1500,
         "__yamaape": {
             "position": {
                 "x": 5157,
@@ -1223,8 +1247,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 5158,
-                "y": 499
+                "x": 5154,
+                "y": 537
             }
         }
     },
@@ -1244,8 +1268,23 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 5159,
-                "y": 259
+                "x": 5155,
+                "y": 297
+            }
+        }
+    },
+    "城市探索_重新唤出事件列表": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "pre_delay": 400,
+        "template": [
+            "../image/city/events.png"
+        ],
+        "post_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 5410,
+                "y": -153
             }
         }
     },
@@ -1258,8 +1297,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 3643,
-                "y": 551
+                "x": 3648,
+                "y": 622
             }
         },
         "next": [
@@ -1275,8 +1314,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 4421,
-                "y": 700
+                "x": 4438,
+                "y": 767
             }
         },
         "next": [
@@ -1305,8 +1344,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 3896,
-                "y": 1819
+                "x": 3887,
+                "y": 1911
             }
         },
         "next": [
@@ -1329,8 +1368,8 @@
         "pre_delay": 1,
         "__yamaape": {
             "position": {
-                "x": 3894,
-                "y": 2074
+                "x": 3885,
+                "y": 2166
             }
         }
     },
@@ -1345,8 +1384,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 3895,
-                "y": 2336
+                "x": 3886,
+                "y": 2478
             }
         },
         "next": [
@@ -1378,8 +1417,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 3890,
-                "y": 550
+                "x": 3895,
+                "y": 621
             }
         }
     },
@@ -1391,8 +1430,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 4156,
-                "y": 1819
+                "x": 4147,
+                "y": 1911
             }
         },
         "next": [
@@ -1412,8 +1451,8 @@
         "pre_delay": 1,
         "__yamaape": {
             "position": {
-                "x": 4154,
-                "y": 2074
+                "x": 4145,
+                "y": 2166
             }
         }
     },
@@ -1426,8 +1465,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 4176,
-                "y": 2331
+                "x": 4167,
+                "y": 2473
             }
         },
         "next": [
@@ -1456,8 +1495,8 @@
         "focus": "> 水群结束",
         "__yamaape": {
             "position": {
-                "x": 4418,
-                "y": 1818
+                "x": 4409,
+                "y": 1910
             }
         },
         "next": [
@@ -1474,8 +1513,8 @@
         "focus": "> 委托结束",
         "__yamaape": {
             "position": {
-                "x": 4423,
-                "y": 2325
+                "x": 4414,
+                "y": 2467
             }
         },
         "next": [
@@ -1542,33 +1581,5 @@
         "next": [
             "城市探索_资源收取"
         ]
-    },
-    "城市探索_事件列表": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "pre_delay": 400,
-        "template": [
-            "../image/city/events.png"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 2185,
-                "y": 258
-            }
-        }
-    },
-    "城市探索_重新唤出事件列表": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "pre_delay": 400,
-        "template": [
-            "../image/city/events.png"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 5407,
-                "y": -125
-            }
-        }
     }
 }
