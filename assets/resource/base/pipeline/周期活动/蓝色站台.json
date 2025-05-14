@@ -851,6 +851,7 @@
             "进入节点"
         ],
         "pre_delay": 400,
+        "post_delay": 400,
         "focus": "> 进入休息节点",
         "__yamaape": {
             "position": {
