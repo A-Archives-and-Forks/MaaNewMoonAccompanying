@@ -234,7 +234,7 @@
             }
         },
         "next": [
-            "清体力_助战4x"
+            "清体力_4X行动"
         ]
     },
     "清体力_返回倍率选择3": {
@@ -270,21 +270,6 @@
             "清体力_返回倍率选择3"
         ]
     },
-    "清体力_助战4x": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "record_action_type",
-        "custom_action_param": "a=清体力_4X行动",
-        "__yamaape": {
-            "position": {
-                "x": 4704,
-                "y": 417
-            }
-        },
-        "next": [
-            "清体力_设置助战"
-        ]
-    },
     "清体力_倍率选择3": {
         "recognition": "TemplateMatch",
         "action": "Click",
@@ -315,6 +300,21 @@
         },
         "next": [
             "清体力_关闭合剂界面"
+        ]
+    },
+    "清体力_助战4x": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "record_action_type",
+        "custom_action_param": "a=清体力_4X行动",
+        "__yamaape": {
+            "position": {
+                "x": 4711,
+                "y": 482
+            }
+        },
+        "next": [
+            "清体力_设置助战"
         ]
     },
     "清体力_设置助战": {
@@ -448,12 +448,12 @@
         "rate_limit": 2000,
         "__yamaape": {
             "position": {
-                "x": 4299,
-                "y": 762
+                "x": 4297,
+                "y": 800
             }
         },
         "next": [
-            "清体力_助战3x"
+            "清体力_3X及以下行动"
         ]
     },
     "清体力_倍率选择2": {
@@ -470,21 +470,6 @@
         },
         "next": [
             "清体力_2X"
-        ]
-    },
-    "清体力_助战3x": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "record_action_type",
-        "custom_action_param": "a=清体力_3X及以下行动",
-        "__yamaape": {
-            "position": {
-                "x": 4703,
-                "y": 790
-            }
-        },
-        "next": [
-            "清体力_设置助战"
         ]
     },
     "清体力_4X行动": {
@@ -579,6 +564,21 @@
         },
         "next": [
             "清体力_开始挑战2"
+        ]
+    },
+    "清体力_助战3x": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "record_action_type",
+        "custom_action_param": "a=清体力_3X及以下行动",
+        "__yamaape": {
+            "position": {
+                "x": 4690,
+                "y": 753
+            }
+        },
+        "next": [
+            "清体力_设置助战"
         ]
     },
     "清体力_开始挑战2": {
