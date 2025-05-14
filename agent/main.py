@@ -18,6 +18,7 @@ def main():
     import custom.Counter
     import custom.Procurement
     import custom.Timer
+    import custom.Assistance
 
     try:
         Toolkit.init_option("./")
