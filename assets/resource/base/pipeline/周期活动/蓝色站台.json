@@ -852,6 +852,7 @@
         ],
         "pre_delay": 400,
         "focus": "> 进入休息节点",
+        "post_delay": 1500,
         "__yamaape": {
             "position": {
                 "x": 918,
@@ -1349,6 +1350,40 @@
         },
         "next": [
             "蓝色站台_前往下层"
+        ]
+    },
+    "蓝色站台_领取评分奖励": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "领取全部"
+        ],
+        "pre_delay": 400,
+        "post_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 5401,
+                "y": -102
+            }
+        },
+        "next": [
+            "蓝色站台_关闭评分界面"
+        ],
+        "interrupt": [
+            "蓝色站台_确认领取评分奖励"
+        ]
+    },
+    "蓝色站台_重新探索": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": -1622,
+                "y": -414
+            }
+        },
+        "next": [
+            "蓝色站台_开始探索"
         ]
     },
     "蓝色站台_选择夜来": {
@@ -1863,40 +1898,6 @@
         "next": [
             "蓝色站台_开始探索",
             "蓝色站台_继续探索"
-        ]
-    },
-    "蓝色站台_领取评分奖励": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "领取全部"
-        ],
-        "pre_delay": 400,
-        "post_delay": 800,
-        "__yamaape": {
-            "position": {
-                "x": 5401,
-                "y": -102
-            }
-        },
-        "next": [
-            "蓝色站台_关闭评分界面"
-        ],
-        "interrupt": [
-            "蓝色站台_确认领取评分奖励"
-        ]
-    },
-    "蓝色站台_重新探索": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "__yamaape": {
-            "position": {
-                "x": -1622,
-                "y": -414
-            }
-        },
-        "next": [
-            "蓝色站台_开始探索"
         ]
     },
     "蓝色站台_关闭评分界面": {
