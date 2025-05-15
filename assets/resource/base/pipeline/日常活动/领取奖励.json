@@ -65,7 +65,7 @@
         "template": [
             "../image/receive_all.png"
         ],
-        "timeout": 2000,
+        "timeout": 3000,
         "pre_delay": 400,
         "__yamaape": {
             "position": {
@@ -125,7 +125,7 @@
         "template": [
             "../image/receive_all.png"
         ],
-        "timeout": 2000,
+        "timeout": 3000,
         "pre_delay": 400,
         "__yamaape": {
             "position": {
@@ -230,6 +230,20 @@
         "next": [
             "领取奖励_领取手册经验"
         ]
+    },
+    "领取奖励_关闭扩展手册推销": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "解锁本期进阶扩展手册"
+        ],
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1191,
+                "y": 575
+            }
+        }
     },
     "领取奖励_领取手册经验": {
         "recognition": "OCR",
@@ -445,19 +459,5 @@
         "next": [
             "领取奖励_任务"
         ]
-    },
-    "领取奖励_关闭扩展手册推销": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "解锁本期进阶扩展手册"
-        ],
-        "pre_delay": 400,
-        "__yamaape": {
-            "position": {
-                "x": 1191,
-                "y": 575
-            }
-        }
     }
 }
