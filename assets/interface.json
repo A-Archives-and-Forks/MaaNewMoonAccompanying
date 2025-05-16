@@ -496,8 +496,10 @@
                 {
                     "name": "不使用",
                     "pipeline_override": {
-                        "custom_action_param": {
-                            "times": 0
+                        "清体力_设定合剂消耗": {
+                            "custom_action_param": {
+                                "times": 0
+                            }
                         }
                     }
                 },
@@ -506,7 +508,7 @@
                     "pipeline_override": {
                         "清体力_设定合剂消耗": {
                             "custom_action_param": {
-                                "times": 9999
+                                "times": 999
                             }
                         }
                     }
