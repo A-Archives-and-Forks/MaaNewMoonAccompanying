@@ -18,7 +18,7 @@ def main():
     import custom.Counter
     import custom.Procurement
     import custom.Timer
-    import agent.custom.Pipeliner
+    import custom.Pipeliner
 
     try:
         Toolkit.init_option("./")

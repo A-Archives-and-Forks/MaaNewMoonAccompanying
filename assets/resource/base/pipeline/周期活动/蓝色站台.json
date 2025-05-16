@@ -72,7 +72,10 @@
             "蓝色站台_节点结束"
         ],
         "interrupt": [
-            "蓝色站台_少人作战"
+            "蓝色站台_少人作战",
+            "蓝色站台_战斗后事件信息",
+            "蓝色站台_选择物品奖励",
+            "蓝色站台_跳过多波"
         ]
     },
     "蓝色站台_确认额外消耗温控-事件": {
@@ -96,8 +99,6 @@
     "蓝色站台_事件信息": {
         "recognition": "DirectHit",
         "action": "Click",
-        "pre_delay": 1,
-        "post_delay": 1,
         "target": [
             25,
             200,
@@ -106,8 +107,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 962,
-                "y": 1585
+                "x": 974,
+                "y": 1631
             }
         },
         "next": [
@@ -393,6 +394,8 @@
         "expected": [
             "点击空白处关闭"
         ],
+        "pre_delay": 800,
+        "post_delay": 1000,
         "__yamaape": {
             "position": {
                 "x": 1003,
@@ -533,6 +536,9 @@
         },
         "next": [
             "蓝色站台_进入事件节点"
+        ],
+        "interrupt": [
+            "蓝色站台_事件信息"
         ]
     },
     "蓝色站台_绿色节点": {
@@ -602,8 +608,6 @@
     "蓝色站台_战斗后事件信息": {
         "recognition": "DirectHit",
         "action": "Click",
-        "pre_delay": 1,
-        "post_delay": 1,
         "target": [
             25,
             200,
@@ -1493,6 +1497,52 @@
             "蓝色站台_确认前往"
         ]
     },
+    "蓝色站台_关闭评分界面": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/back.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 5665,
+                "y": -104
+            }
+        }
+    },
+    "蓝色站台_确认领取评分奖励": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击以继续"
+        ],
+        "pre_delay": 800,
+        "focus": "> 领取评分奖励",
+        "__yamaape": {
+            "position": {
+                "x": 5663,
+                "y": 56
+            }
+        }
+    },
+    "蓝色站台_开始探索": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "开始探索"
+        ],
+        "pre_delay": 800,
+        "focus": "> 新的探索",
+        "__yamaape": {
+            "position": {
+                "x": -1350,
+                "y": 444
+            }
+        },
+        "next": [
+            "蓝色站台_选择难度"
+        ]
+    },
     "蓝色站台_确定选择夜来": {
         "recognition": "OCR",
         "action": "Click",
@@ -1701,24 +1751,6 @@
             "蓝色站台_已在站台内"
         ]
     },
-    "蓝色站台_开始探索": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "开始探索"
-        ],
-        "pre_delay": 800,
-        "focus": "> 新的探索",
-        "__yamaape": {
-            "position": {
-                "x": -1350,
-                "y": 444
-            }
-        },
-        "next": [
-            "蓝色站台_选择难度"
-        ]
-    },
     "蓝色站台_继续探索": {
         "recognition": "OCR",
         "action": "Click",
@@ -1817,7 +1849,6 @@
         "expected": [
             "下一步"
         ],
-        "focus": "> 选择难度",
         "pre_delay": 400,
         "__yamaape": {
             "position": {
@@ -1899,34 +1930,6 @@
             "蓝色站台_开始探索",
             "蓝色站台_继续探索"
         ]
-    },
-    "蓝色站台_关闭评分界面": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "../image/back.png"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 5665,
-                "y": -104
-            }
-        }
-    },
-    "蓝色站台_确认领取评分奖励": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "点击以继续"
-        ],
-        "pre_delay": 800,
-        "focus": "> 领取评分奖励",
-        "__yamaape": {
-            "position": {
-                "x": 5663,
-                "y": 56
-            }
-        }
     },
     "蓝色站台_跳过休息室": {
         "recognition": "OCR",

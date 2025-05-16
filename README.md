@@ -52,7 +52,7 @@
 - **清体力**
   - [x] 全种类资源
   - [x] 自动使用合剂
-  - [ ] 自动助战
+  - [x] 自动助战
 - **轮换周常**
   - [x] 冰饮大热斗
   - [x] 自动站台肉鸽
@@ -104,7 +104,7 @@
 
 ## 更新记录
 
-<!-- ### Next Release (Committed but Unreleased) -->
+### Next Release (Committed but Unreleased)
 
 ### v1.0.3
 
