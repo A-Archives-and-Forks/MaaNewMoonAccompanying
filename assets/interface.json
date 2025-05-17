@@ -1,10 +1,10 @@
 {
     "name": "MaaNewMoonAccompanying",
     "url": "https://github.com/kqcoxn/MaaNewMoonAccompanying",
-    "custom_title": "MNMA新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v1.0.3 - MFA | 游戏版本：血茧时辙·下",
+    "custom_title": "MNMA新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v1.0.4 - MFA | 游戏版本：血茧时辙·下",
     "mirrorchyan_rid": "MNMA",
     "mirrorchyan_multiplatform": true,
-    "version": "v1.0.3",
+    "version": "v1.0.4",
     "message": "- 新 月 同 行 -",
     "controller": [
         {
@@ -108,9 +108,9 @@
                 "认证类型",
                 "演练卷类型",
                 "卡带类型",
-                "战斗前设置助战"
+                "使用助战特工"
             ],
-            "doc": "**清体力**：\n\n开始界面：主界面\n\n结束界面：主界面",
+            "doc": "**清体力**：\n\n- 资源类型及选项：先匹配资源类型选项，再根据资源类型匹配详细的资源种类选项，其他资源类型的种类设置不会生效\n- 使用助战特工：选择助战特工在7号位，主要用于完成每日/周任务\n\n开始界面：主界面\n\n结束界面：主界面",
             "check": true
         },
         {
@@ -171,11 +171,6 @@
             "doc": "**退出游戏**：\n\n仅关闭游戏，保留 MNMA 与模拟器（若需要关闭 MNMA 与模拟器请在 MNMA 设置中进行配置）\n\n“仅在主界面退出”选项用于在其他任务卡住后起提醒作用\n\n开始界面：任意界面"
         },
         {
-            "name": "「危局演练」连续作战",
-            "entry": "危局演练_开始",
-            "doc": "**「危局演练」连续作战**：\n\n自动进行连续战斗，请确保体力充足\n\n开始界面：危局演练关卡选择\n\n结束界面：危局演练关卡选择"
-        },
-        {
             "name": "「蓝色站台」自动肉鸽",
             "entry": "蓝色站台_初始化",
             "option": [
@@ -231,6 +226,11 @@
             "name": "信赖谈话",
             "entry": "信赖谈话_开始",
             "doc": "**信赖谈话**：\n\n自动信赖谈话\n\n对信赖为“7知己”的特工进行谈话，请先自行对特工进行信赖升级\n\n**注意：为了尽可能适配多种谈话模式，21s以内的卡顿或重复点击皆在可接受范围内**\n\n开始界面：特工谈话列表界面\n\n结束界面：特工谈话列表界面"
+        },
+        {
+            "name": "「危局演练」连续作战",
+            "entry": "危局演练_开始",
+            "doc": "**「危局演练」连续作战**：\n\n自动进行连续战斗，请确保体力充足\n\n开始界面：危局演练关卡选择\n\n结束界面：危局演练关卡选择"
         }
     ],
     "advanced": {
@@ -496,8 +496,10 @@
                 {
                     "name": "不使用",
                     "pipeline_override": {
-                        "custom_action_param": {
-                            "times": 0
+                        "清体力_设定合剂消耗": {
+                            "custom_action_param": {
+                                "times": 0
+                            }
                         }
                     }
                 },
@@ -506,7 +508,7 @@
                     "pipeline_override": {
                         "清体力_设定合剂消耗": {
                             "custom_action_param": {
-                                "times": 9999
+                                "times": 999
                             }
                         }
                     }
@@ -578,6 +580,25 @@
                             "custom_action_param": {
                                 "times": 20
                             }
+                        }
+                    }
+                }
+            ]
+        },
+        "使用助战特工": {
+            "cases": [
+                {
+                    "name": "No",
+                    "pipeline_override": {}
+                },
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "清体力_4x行动前检测": {
+                            "next": "清体力_4X助战"
+                        },
+                        "清体力_3X及以下行动前检测": {
+                            "next": "清体力_3X助战"
                         }
                     }
                 }
@@ -765,25 +786,6 @@
                         },
                         "清体力_选择卡带": {
                             "next": "清体力_冷酷者"
-                        }
-                    }
-                }
-            ]
-        },
-        "战斗前设置助战": {
-            "cases": [
-                {
-                    "name": "No",
-                    "pipeline_override": {}
-                },
-                {
-                    "name": "Yes",
-                    "pipeline_override": {
-                        "清体力_4x行动前检测": {
-                            "next": "清体力_助战4x"
-                        },
-                        "清体力_3X及以下行动前检测": {
-                            "next": "清体力_助战3x"
                         }
                     }
                 }
