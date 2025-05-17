@@ -591,10 +591,13 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 1842,
-                "y": -279
+                "x": 1839,
+                "y": -282
             }
-        }
+        },
+        "next": [
+            "蓝色站台_回到蓝色站台"
+        ]
     },
     "蓝色站台_不再提醒少人战斗": {
         "recognition": "OCR",
@@ -1993,6 +1996,21 @@
             "position": {
                 "x": 1802,
                 "y": 638
+            }
+        }
+    },
+    "蓝色站台_回到蓝色站台": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "确定"
+        ],
+        "pre_delay": 400,
+        "focus": "> 回到蓝色站台",
+        "__yamaape": {
+            "position": {
+                "x": 2103,
+                "y": -285
             }
         }
     }
