@@ -675,7 +675,7 @@
         "__yamaape": {
             "position": {
                 "x": 2806,
-                "y": 2464
+                "y": 2570
             }
         },
         "next": [
@@ -797,7 +797,7 @@
         "__yamaape": {
             "position": {
                 "x": 3066,
-                "y": 2464
+                "y": 2570
             }
         },
         "next": [
@@ -994,7 +994,7 @@
             500,
             100
         ],
-        "post_delay": 25,
+        "post_delay": 30,
         "pre_delay": 1,
         "__yamaape": {
             "position": {
@@ -1015,7 +1015,7 @@
         "__yamaape": {
             "position": {
                 "x": 3326,
-                "y": 2464
+                "y": 2570
             }
         },
         "next": [
@@ -1188,7 +1188,7 @@
             500,
             100
         ],
-        "post_delay": 25,
+        "post_delay": 30,
         "pre_delay": 1,
         "__yamaape": {
             "position": {
@@ -1209,7 +1209,7 @@
         "__yamaape": {
             "position": {
                 "x": 3608,
-                "y": 2467
+                "y": 2573
             }
         },
         "next": [
@@ -1352,6 +1352,7 @@
             "城市探索_结束讨论"
         ],
         "interrupt": [
+            "城市探索_防止更多群友",
             "城市探索_加速群友4"
         ]
     },
@@ -1364,7 +1365,7 @@
             500,
             100
         ],
-        "post_delay": 25,
+        "post_delay": 30,
         "pre_delay": 1,
         "__yamaape": {
             "position": {
@@ -1385,7 +1386,7 @@
         "__yamaape": {
             "position": {
                 "x": 3886,
-                "y": 2478
+                "y": 2584
             }
         },
         "next": [
@@ -1438,24 +1439,6 @@
             "城市探索_关闭聊天"
         ]
     },
-    "城市探索_加速群友4": {
-        "recognition": "DirectHit",
-        "action": "Click",
-        "target": [
-            700,
-            200,
-            500,
-            100
-        ],
-        "post_delay": 25,
-        "pre_delay": 1,
-        "__yamaape": {
-            "position": {
-                "x": 4145,
-                "y": 2166
-            }
-        }
-    },
     "城市探索_执行委托": {
         "recognition": "OCR",
         "action": "Click",
@@ -1466,7 +1449,7 @@
         "__yamaape": {
             "position": {
                 "x": 4167,
-                "y": 2473
+                "y": 2579
             }
         },
         "next": [
@@ -1514,7 +1497,7 @@
         "__yamaape": {
             "position": {
                 "x": 4414,
-                "y": 2467
+                "y": 2573
             }
         },
         "next": [
@@ -1581,5 +1564,50 @@
         "next": [
             "城市探索_资源收取"
         ]
+    },
+    "城市探索_防止更多群友": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "roi": [
+            1092,
+            436,
+            47,
+            185
+        ],
+        "template": [
+            "../image/chat_room/xiaochun.png",
+            "../image/chat_room/chashao.png",
+            "../image/chat_room/lei.png",
+            "../image/chat_room/wenjing.png",
+            "../image/chat_room/ju.png",
+            "../image/chat_room/saturday.png",
+            "../image/chat_room/zhenzhu.png"
+        ],
+        "post_delay": 400,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 4148,
+                "y": 2071
+            }
+        }
+    },
+    "城市探索_加速群友4": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            700,
+            200,
+            500,
+            100
+        ],
+        "post_delay": 30,
+        "pre_delay": 1,
+        "__yamaape": {
+            "position": {
+                "x": 4146,
+                "y": 2322
+            }
+        }
     }
 }
