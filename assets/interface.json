@@ -858,25 +858,21 @@
         "强制检查拘束塔": {
             "cases": [
                 {
-                    "name": "No",
-                    "pipeline_override": {}
-                },
-                {
                     "name": "Yes",
                     "pipeline_override": {
                         "拘束塔奖励_开始": {
                             "next": "拘束塔奖励_战略行动"
                         }
                     }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {}
                 }
             ]
         },
         "强制检查冰饮": {
             "cases": [
-                {
-                    "name": "No",
-                    "pipeline_override": {}
-                },
                 {
                     "name": "Yes",
                     "pipeline_override": {
@@ -891,6 +887,10 @@
                             "on_error": "冰饮_没有老金"
                         }
                     }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {}
                 }
             ]
         },
