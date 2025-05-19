@@ -104,7 +104,10 @@
 
 ## 更新记录
 
-<!-- ### Next Release (Committed but Unreleased) -->
+### Next Release (Committed but Unreleased)
+
+- **修复优化**
+  - 优化城市事件稳定性
 
 ### v1.0.5
 
