@@ -100,48 +100,6 @@
             "卡带词条_重新激活"
         ]
     },
-    "卡带词条_重新激活": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "__yamaape": {
-            "position": {
-                "x": 1862,
-                "y": 981
-            }
-        },
-        "next": [
-            "卡带词条_再激活"
-        ]
-    },
-    "卡带词条_开始": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "init_counter",
-        "__yamaape": {
-            "position": {
-                "x": -44,
-                "y": 678
-            }
-        },
-        "next": [
-            "卡带词条_设定激活属性"
-        ]
-    },
-    "卡带词条_设定激活属性": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "set_strap_attr",
-        "custom_action_param": "attr=暴击率",
-        "__yamaape": {
-            "position": {
-                "x": 241,
-                "y": 680
-            }
-        },
-        "next": [
-            "卡带词条_再激活"
-        ]
-    },
     "卡带词条_检测属性值是否正确": {
         "recognition": "OCR",
         "action": "Click",
@@ -164,6 +122,19 @@
             "卡带词条_使用新特征"
         ]
     },
+    "卡带词条_重新激活": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": 1862,
+                "y": 981
+            }
+        },
+        "next": [
+            "卡带词条_再激活"
+        ]
+    },
     "卡带词条_使用新特征": {
         "recognition": "OCR",
         "action": "Click",
@@ -177,5 +148,64 @@
                 "y": 548
             }
         }
+    },
+    "卡带词条_设定激活属性1": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "set_strap_attr",
+        "custom_action_param": "attr=暴击率",
+        "__yamaape": {
+            "position": {
+                "x": 235,
+                "y": 493
+            }
+        },
+        "next": [
+            "卡带词条_再激活"
+        ]
+    },
+    "卡带词条_设定激活属性2": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "set_strap_attr",
+        "custom_action_param": "attr=暴击率",
+        "__yamaape": {
+            "position": {
+                "x": 236,
+                "y": 683
+            }
+        },
+        "next": [
+            "卡带词条_再激活"
+        ]
+    },
+    "卡带词条_设定激活属性3": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "set_strap_attr",
+        "custom_action_param": "attr=暴击率",
+        "__yamaape": {
+            "position": {
+                "x": 239,
+                "y": 877
+            }
+        },
+        "next": [
+            "卡带词条_再激活"
+        ]
+    },
+    "卡带词条_开始": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "init_counter",
+        "__yamaape": {
+            "position": {
+                "x": -46,
+                "y": 699
+            }
+        },
+        "next": [
+            "卡带词条_设定激活属性1"
+        ]
     }
 }
