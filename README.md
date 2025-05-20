@@ -104,7 +104,11 @@
 
 ## 更新记录
 
-### Next Release (Committed but Unreleased)
+<!-- ### Next Release (Committed but Unreleased) -->
+
+### v1.0.6
+
+> 2025.5.20
 
 - **新增**
   - 新增选项：卡带再激活-使用属性组
