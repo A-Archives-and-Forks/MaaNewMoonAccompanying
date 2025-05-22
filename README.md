@@ -104,7 +104,14 @@
 
 ## 更新记录
 
-<!-- ### Next Release (Committed but Unreleased) -->
+<!-- ### Next Version (Committed but Unreleased) -->
+
+### v1.0.7
+
+> 2025.5.22
+
+- **新增**
+  - 新增任务：「决雍协定」领取体力与奖励
 
 ### v1.0.6
 
