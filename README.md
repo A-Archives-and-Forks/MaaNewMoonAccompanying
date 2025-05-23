@@ -105,7 +105,10 @@
 
 ## 更新记录
 
-<!-- ### Next Version (Committed but Unreleased) -->
+### Next Version (Committed but Unreleased)
+
+- **修复优化**
+  - 优化蓝色站台的任务描述
 
 ### v1.0.8
 
