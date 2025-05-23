@@ -6,7 +6,7 @@ import sys
 import datetime
 
 
-version = "1.0.0"
+version = "1.1.0"
 
 
 class ZipPacker:
@@ -85,7 +85,12 @@ def main():
 
     packer = ZipPacker()
     output_filename = f"反馈日志.zip"
-    source_paths = ["debug/maa.log", "logs", "config"]
+    source_paths = [
+        "debug/maa.log",
+        f"logs/log-{datetime.datetime.now().date()}.txt",
+        f"logs/log-{datetime.datetime.now().date() - datetime.timedelta(days=1)}.txt",
+        "config",
+    ]
 
     try:
         packer.log(f"小工具版本: {version}")
