@@ -6,7 +6,7 @@
 !/MFAAvalonia/.gitkeep
 /MFATools/*
 !/MFATools/.gitkeep
-/nicegui/
+/.nicegui/
 
 # 日志
 /recording/
