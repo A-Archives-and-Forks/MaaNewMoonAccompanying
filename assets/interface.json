@@ -1,10 +1,10 @@
 {
     "name": "MaaNewMoonAccompanying",
     "url": "https://github.com/kqcoxn/MaaNewMoonAccompanying",
-    "custom_title": "MNMA新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v1.0.9 - MFA | 游戏版本：血茧时辙·下",
+    "custom_title": "MNMA新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v1.1.0 - MFA | 游戏版本：血茧时辙·下",
     "mirrorchyan_rid": "MNMA",
     "mirrorchyan_multiplatform": true,
-    "version": "v1.0.9",
+    "version": "v1.1.0",
     "message": "- 新 月 同 行 -",
     "controller": [
         {
@@ -1088,15 +1088,7 @@
                             "custom_action_param": "key=friend_round&max=5"
                         }
                     }
-                },
-                {
-                    "name": "10轮",
-                    "pipeline_override": {
-                        "好友换新_初始化轮次计数": {
-                            "custom_action_param": "key=friend_round&max=10"
-                        }
-                    }
-                },
+                }
             ]
         }
     }

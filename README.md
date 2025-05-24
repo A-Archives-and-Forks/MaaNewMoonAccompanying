@@ -107,7 +107,7 @@
 
 <!-- ### Next Version (Committed but Unreleased) -->
 
-### v1.0.9
+### v1.1.0
 
 > 2025.5.24
 
