@@ -27,10 +27,17 @@
             ]
         },
         {
-            "name": "小米渠道服",
+            "name": "小米服",
             "path": [
                 "{PROJECT_DIR}/resource/base",
                 "{PROJECT_DIR}/resource/miside"
+            ]
+        },
+        {
+            "name": "4399服",
+            "path": [
+                "{PROJECT_DIR}/resource/base",
+                "{PROJECT_DIR}/resource/4399side"
             ]
         }
     ],
