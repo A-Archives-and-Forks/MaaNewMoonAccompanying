@@ -104,8 +104,8 @@
         "expected": [
             "点击以继续"
         ],
-        "pre_delay": 300,
-        "timeout": 1000,
+        "pre_delay": 800,
+        "timeout": 2000,
         "__yamaape": {
             "position": {
                 "x": 797,
