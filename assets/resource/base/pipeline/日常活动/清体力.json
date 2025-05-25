@@ -421,6 +421,38 @@
             "清体力_3X及以下行动前检测"
         ]
     },
+    "清体力_返回倍率选择2": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/close.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 2927,
+                "y": 785
+            }
+        },
+        "next": [
+            "清体力_倍率选择2"
+        ]
+    },
+    "清体力_3X及以下行动前检测": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "行动开始"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 4036,
+                "y": 763
+            }
+        },
+        "next": [
+            "清体力_3X及以下行动"
+        ]
+    },
     "清体力_4X助战": {
         "recognition": "DirectHit",
         "action": "Custom",
@@ -522,36 +554,21 @@
             "清体力_设置助战结束"
         ]
     },
-    "清体力_返回倍率选择2": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "../image/close.png"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 2927,
-                "y": 785
-            }
-        },
-        "next": [
-            "清体力_倍率选择2"
-        ]
-    },
-    "清体力_3X及以下行动前检测": {
+    "清体力_已存在相同特工": {
         "recognition": "OCR",
         "action": "DoNothing",
         "expected": [
-            "行动开始"
+            "已存在相同特工"
         ],
+        "focus": "> 已存在相同特工，尝试重新选择助战",
         "__yamaape": {
             "position": {
-                "x": 4036,
-                "y": 763
+                "x": 3993,
+                "y": 1604
             }
         },
         "next": [
-            "清体力_3X及以下行动"
+            "清体力_取消下阵"
         ]
     },
     "清体力_倍率选择2": {
@@ -684,6 +701,40 @@
             "清体力_3X及以下行动前检测"
         ]
     },
+    "清体力_再动": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "确定"
+        ],
+        "pre_delay": 400,
+        "focus": "> 作战结束，使用升级体力再次作战",
+        "__yamaape": {
+            "position": {
+                "x": 4868,
+                "y": 676
+            }
+        },
+        "next": [
+            "清体力_倍率选择2"
+        ]
+    },
+    "清体力_回到主页": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/home.png"
+        ],
+        "post_delay": 3000,
+        "pre_delay": 400,
+        "focus": "> 返回主界面",
+        "__yamaape": {
+            "position": {
+                "x": 4868,
+                "y": 1163
+            }
+        }
+    },
     "清体力_返回倍率选择1": {
         "recognition": "TemplateMatch",
         "action": "Click",
@@ -700,21 +751,6 @@
             "清体力_倍率选择1"
         ]
     },
-    "清体力_3X助战": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "set_str_node_attrs",
-        "custom_action_param": "node=清体力_设置助战结束&keys=next&values=清体力_3X及以下行动",
-        "__yamaape": {
-            "position": {
-                "x": 2938,
-                "y": 1714
-            }
-        },
-        "next": [
-            "清体力_设置助战"
-        ]
-    },
     "清体力_倍率选择1": {
         "recognition": "TemplateMatch",
         "action": "Click",
@@ -729,6 +765,21 @@
         },
         "next": [
             "清体力_1X"
+        ]
+    },
+    "清体力_3X助战": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "set_str_node_attrs",
+        "custom_action_param": "node=清体力_设置助战结束&keys=next&values=清体力_3X及以下行动",
+        "__yamaape": {
+            "position": {
+                "x": 2938,
+                "y": 1714
+            }
+        },
+        "next": [
+            "清体力_设置助战"
         ]
     },
     "清体力_1X": {
@@ -788,40 +839,6 @@
         "next": [
             "清体力_回到主页"
         ]
-    },
-    "清体力_再动": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "确定"
-        ],
-        "pre_delay": 400,
-        "focus": "> 作战结束，使用升级体力再次作战",
-        "__yamaape": {
-            "position": {
-                "x": 4868,
-                "y": 676
-            }
-        },
-        "next": [
-            "清体力_倍率选择2"
-        ]
-    },
-    "清体力_回到主页": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "../image/home.png"
-        ],
-        "post_delay": 3000,
-        "pre_delay": 400,
-        "focus": "> 返回主界面",
-        "__yamaape": {
-            "position": {
-                "x": 4868,
-                "y": 1163
-            }
-        }
     },
     "清体力_数构银本": {
         "recognition": "OCR",
@@ -991,7 +1008,7 @@
             "前往"
         ],
         "order_by": "Vertical",
-        "index": 3,
+        "index": 2,
         "__yamaape": {
             "position": {
                 "x": 1137,
@@ -1465,23 +1482,6 @@
         },
         "next": [
             "清体力_整流器本"
-        ]
-    },
-    "清体力_已存在相同特工": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "已存在相同特工"
-        ],
-        "focus": "> 已存在相同特工，尝试重新选择助战",
-        "__yamaape": {
-            "position": {
-                "x": 3993,
-                "y": 1604
-            }
-        },
-        "next": [
-            "清体力_取消下阵"
         ]
     },
     "清体力_取消下阵": {

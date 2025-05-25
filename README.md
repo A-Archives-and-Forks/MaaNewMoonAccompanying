@@ -105,7 +105,10 @@
 
 ## 更新记录
 
-<!-- ### Next Version (Committed but Unreleased) -->
+### Next Version (Committed but Unreleased)
+
+- **修复优化**
+  - 修复了突击型演练卷本索引错误的问题
 
 ### v1.1.0
 
@@ -217,16 +220,25 @@
 
 </details>
 
-## 鸣谢
-
-- 本项目由 **[MaaFramework](https://github.com/MaaXYZ/MaaFramework)** 强力驱动！
-- GUI：[MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia/tree/master)
-- 分发：[Mirror酱](https://mirrorchyan.com/zh/get-start)
-- Pipeline 编辑器：[YAMaaPE](https://github.com/kqcoxn/YAMaaPE)
-
-游戏官网：[烛薪网络-新月同行](https://xytx.firewick.net/home)
-
 ## 加入我们
 
-- 🐧~~吹水~~交流群：[993245868](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=VMC132QhbMDLi5U62MlDRvtCMj9WOXRr&authKey=yJNKO4sQ%2BBFHpBCLSSEvVOAyz%2FPjknNSl70W3ugg2%2BpELnKmEiHamj1emJMWcLwQ&noverify=0&group_code=993245868)
+🐧~~吹水~~交流群：[993245868](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=VMC132QhbMDLi5U62MlDRvtCMj9WOXRr&authKey=yJNKO4sQ%2BBFHpBCLSSEvVOAyz%2FPjknNSl70W3ugg2%2BpELnKmEiHamj1emJMWcLwQ&noverify=0&group_code=993245868)
 
+如果您在使用过程中遇到了问题、有更好的想法、希望参与开发，或是单纯想要聊天吹水，欢迎加入 MNMA 交流群！
+
+## 鸣谢
+
+### 贡献者
+
+感谢以下开发者对本项目作出的贡献:
+
+[![Contributors](https://contrib.rocks/image?repo=kqcoxn/MaaNewMoonAccompanying&max=1000)](https://github.com/kqcoxn/MaaNewMoonAccompanying/graphs/contributors)
+
+### 依赖
+
+- **本项目由 **[MaaFramework](https://github.com/MaaXYZ/MaaFramework)** 强力驱动！**
+- Pipeline 编辑器：[YAMaaPE](https://github.com/kqcoxn/YAMaaPE)
+- GUI：[MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia/tree/master)
+- 分发：[Mirror酱](https://mirrorchyan.com/zh/get-start)
+
+游戏官网：[烛薪网络-新月同行](https://xytx.firewick.net/home)
