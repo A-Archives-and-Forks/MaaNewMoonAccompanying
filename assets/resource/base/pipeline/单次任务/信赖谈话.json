@@ -97,7 +97,7 @@
         "recognition": "DirectHit",
         "action": "Custom",
         "custom_action": "init_counter",
-        "custom_action_param": "max=5",
+        "custom_action_param": "max=5&exceed=false",
         "focus": "> 开始谈话",
         "__yamaape": {
             "position": {
@@ -177,8 +177,8 @@
         "post_delay": 30,
         "__yamaape": {
             "position": {
-                "x": 3468,
-                "y": 1262
+                "x": 3472,
+                "y": 1257
             }
         },
         "next": [
@@ -272,7 +272,9 @@
             1,
             1
         ],
-        "duration": 300,
+        "duration": 400,
+        "focus": "> 切换对话内容",
+        "post_delay": 0,
         "__yamaape": {
             "position": {
                 "x": 3992,
@@ -280,7 +282,7 @@
             }
         },
         "next": [
-            "信赖谈话_下一个对话"
+            "信赖谈话_停止滑动"
         ]
     },
     "信赖谈话_下一个特工": {
@@ -320,8 +322,8 @@
         "post_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 4304,
-                "y": 900
+                "x": 4547,
+                "y": 920
             }
         },
         "next": [
@@ -376,6 +378,26 @@
         },
         "next": [
             "信赖谈话_检查信赖"
+        ]
+    },
+    "信赖谈话_停止滑动": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "pre_delay": 0,
+        "target": [
+            1203,
+            315,
+            1,
+            1
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 4252,
+                "y": 1097
+            }
+        },
+        "next": [
+            "信赖谈话_下一个对话"
         ]
     }
 }

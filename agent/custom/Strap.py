@@ -52,7 +52,6 @@ class SetStrapAttr(CustomAction):
     def run(
         self, context: Context, argv: CustomAction.RunArg
     ) -> CustomAction.RunResult | bool:
-
         try:
             args = parse_query_args(argv)
             attr_input: str = args.get("attr")

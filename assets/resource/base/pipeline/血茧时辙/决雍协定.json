@@ -1,0 +1,419 @@
+{
+    "__yamaape_config_决雍协定": {
+        "filename": "决雍协定",
+        "version": "v0.3.4",
+        "export": "",
+        "prefix": "决雍协定"
+    },
+    "决雍协定_开始": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": -45,
+                "y": -117
+            }
+        },
+        "next": [
+            "决雍协定_活动界面"
+        ]
+    },
+    "决雍协定_活动界面": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "活动"
+        ],
+        "post_delay": 2000,
+        "focus": "> 进入活动界面",
+        "__yamaape": {
+            "position": {
+                "x": 224,
+                "y": -117
+            }
+        },
+        "next": [
+            "决雍协定_活动面板"
+        ],
+        "interrupt": [
+            "决雍协定_滑动"
+        ]
+    },
+    "决雍协定_活动面板": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "往像域决"
+        ],
+        "timeout": 2000,
+        "__yamaape": {
+            "position": {
+                "x": 507,
+                "y": -143
+            }
+        },
+        "next": [
+            "决雍协定_今日补给"
+        ],
+        "on_error": [
+            "决雍协定_领取体力结束"
+        ]
+    },
+    "决雍协定_滑动": {
+        "recognition": "DirectHit",
+        "action": "Swipe",
+        "begin": [
+            145,
+            470,
+            1,
+            1
+        ],
+        "end": [
+            145,
+            270,
+            1,
+            1
+        ],
+        "duration": 200,
+        "post_delay": 1,
+        "__yamaape": {
+            "position": {
+                "x": 505,
+                "y": 329
+            }
+        },
+        "next": [
+            "决雍协定_停止滑动"
+        ]
+    },
+    "决雍协定_今日补给": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "今日补给"
+        ],
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 814,
+                "y": 38
+            }
+        },
+        "next": [
+            "决雍协定_领取补给体力"
+        ]
+    },
+    "决雍协定_停止滑动": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            145,
+            470,
+            1,
+            1
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 761,
+                "y": 337
+            }
+        }
+    },
+    "决雍协定_领取补给体力": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击以继续"
+        ],
+        "pre_delay": 800,
+        "focus": "> 尝试领取今日补给",
+        "__yamaape": {
+            "position": {
+                "x": 1065,
+                "y": 39
+            }
+        },
+        "next": [
+            "决雍协定_领取体力结束"
+        ]
+    },
+    "决雍协定_领取体力结束": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": 1318,
+                "y": 38
+            }
+        },
+        "next": [
+            "决雍协定_领取奖励"
+        ]
+    },
+    "决雍协定_自动双倍战斗": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "前往挑战"
+        ],
+        "order_by": "Horizontal",
+        "index": -1,
+        "post_delay": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 1161,
+                "y": 322
+            }
+        },
+        "next": [
+            "决雍协定_进入关卡"
+        ]
+    },
+    "决雍协定_进入关卡": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "前往"
+        ],
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1421,
+                "y": 322
+            }
+        },
+        "next": [
+            "决雍协定_准备战斗"
+        ]
+    },
+    "决雍协定_准备战斗": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "post_delay": 500,
+        "expected": [
+            "开始挑战"
+        ],
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 1679,
+                "y": 321
+            }
+        },
+        "next": [
+            "决雍协定_检查多倍战斗"
+        ],
+        "on_error": [
+            "决雍协定_倍率选择4"
+        ]
+    },
+    "决雍协定_检查多倍战斗": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/checkless.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1952,
+                "y": 303
+            }
+        },
+        "next": [
+            "决雍协定_倍率选择4"
+        ]
+    },
+    "决雍协定_倍率选择4": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/cycle.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 2215,
+                "y": 401
+            }
+        },
+        "next": [
+            "决雍协定_4X"
+        ]
+    },
+    "决雍协定_4X": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "x4",
+            "×4"
+        ],
+        "order_by": "Vertical",
+        "roi": [
+            848,
+            416,
+            118,
+            175
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 2467,
+                "y": 396
+            }
+        },
+        "next": [
+            "决雍协定_开始挑战4"
+        ]
+    },
+    "决雍协定_开始挑战4": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "开始挑战"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1609,
+                "y": 695
+            }
+        },
+        "next": [
+            "决雍协定_4X行动"
+        ]
+    },
+    "决雍协定_4X行动": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "行动开始"
+        ],
+        "pre_delay": 2000,
+        "timeout": 300000,
+        "rate_limit": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 1919,
+                "y": 686
+            }
+        },
+        "next": [
+            "决雍协定_4X升级",
+            "决雍协定_结束行动并检查"
+        ],
+        "interrupt": [
+            "决雍协定_确定4X战斗"
+        ]
+    },
+    "决雍协定_4X升级": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击空白处关闭"
+        ],
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 2205,
+                "y": 778
+            }
+        },
+        "next": [
+            "决雍协定_结束行动并检查"
+        ]
+    },
+    "决雍协定_结束行动并检查": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "确定"
+        ],
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 2466,
+                "y": 660
+            }
+        },
+        "next": [
+            "决雍协定_返回主页"
+        ]
+    },
+    "决雍协定_确定4X战斗": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "行动开始"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1946,
+                "y": 940
+            }
+        }
+    },
+    "决雍协定_返回主页": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/home.png"
+        ],
+        "pre_delay": 400,
+        "post_delay": 3000,
+        "focus": "> 回到主界面",
+        "__yamaape": {
+            "position": {
+                "x": 2947,
+                "y": -97
+            }
+        }
+    },
+    "决雍协定_领取奖励": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "键领取"
+        ],
+        "timeout": 2000,
+        "__yamaape": {
+            "position": {
+                "x": 1591,
+                "y": 34
+            }
+        },
+        "next": [
+            "决雍协定_确定领取奖励"
+        ],
+        "on_error": [
+            "决雍协定_领取奖励结束"
+        ]
+    },
+    "决雍协定_确定领取奖励": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击以继续"
+        ],
+        "pre_delay": 800,
+        "focus": "> 领取奖励",
+        "__yamaape": {
+            "position": {
+                "x": 1852,
+                "y": 35
+            }
+        },
+        "next": [
+            "决雍协定_领取奖励结束"
+        ]
+    },
+    "决雍协定_领取奖励结束": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": 2121,
+                "y": 33
+            }
+        },
+        "next": [
+            "决雍协定_返回主页"
+        ]
+    }
+}
