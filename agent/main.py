@@ -19,6 +19,7 @@ def main():
     import custom.Procurement
     import custom.Timer
     import custom.Pipeliner
+    import custom.RewardSelect
 
     try:
         Toolkit.init_option("./")

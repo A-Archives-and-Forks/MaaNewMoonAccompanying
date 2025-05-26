@@ -12,6 +12,7 @@ import custom.Counter
 import custom.Procurement
 import custom.Timer
 import custom.Pipeliner
+import custom.RewardSelect
 
 def main():
     Toolkit.init_option("./")
