@@ -106,7 +106,10 @@
 
 ## 更新记录
 
-<!-- ### Next Version (Committed but Unreleased) -->
+### Next Version (Committed but Unreleased)
+
+- **修复优化**
+  - 优化了城市水群事件判断逻辑
 
 ### v1.1.1
 
