@@ -106,8 +106,14 @@
 
 ## 更新记录
 
-### Next Version (Committed but Unreleased)
+<!-- ### Next Version (Committed but Unreleased) -->
 
+### v1.1.2
+
+> 2025.5.26
+
+- **新增**
+  - 新增选项：城市探索-指定作战队伍
 - **修复优化**
   - 优化了城市水群事件判断逻辑
 

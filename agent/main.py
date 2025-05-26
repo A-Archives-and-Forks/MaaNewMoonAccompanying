@@ -10,15 +10,7 @@ def main():
     from maa.agent.agent_server import AgentServer
     from maa.toolkit import Toolkit
 
-    import custom.Logger
-    import custom.ConsumptiveRealism
-    import custom.Platform
-    import custom.PeriodicInspection
-    import custom.Strap
-    import custom.Counter
-    import custom.Procurement
-    import custom.Timer
-    import custom.Pipeliner
+    import custom
 
     try:
         Toolkit.init_option("./")
