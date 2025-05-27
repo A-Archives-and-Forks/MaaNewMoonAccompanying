@@ -7,34 +7,25 @@
     },
     "领取奖励_任务": {
         "recognition": "OCR",
-        "action": "Swipe",
+        "action": "Click",
         "expected": [
             "任务"
         ],
         "post_delay": 2000,
         "focus": "> 进入任务面板",
-        "pre_delay": 400,
-        "begin_offset": [
-            4,
-            -8,
-            -8,
-            -8
-        ],
-        "end_offset": [
-            4,
-            -8,
-            -8,
-            -8
-        ],
-        "duration": 200,
+        "pre_delay": 800,
+        "rate_limit": 2000,
         "__yamaape": {
             "position": {
-                "x": 431,
-                "y": -580
+                "x": 236,
+                "y": -223
             }
         },
         "next": [
             "领取奖励_每日任务"
+        ],
+        "interrupt": [
+            "领取奖励_确保进入任务界面"
         ]
     },
     "领取奖励_每日任务": {
@@ -459,12 +450,25 @@
         "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": 173,
-                "y": -578
+                "x": -22,
+                "y": -221
             }
         },
         "next": [
             "领取奖励_任务"
         ]
+    },
+    "领取奖励_确保进入任务界面": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "任务"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 518,
+                "y": 32
+            }
+        }
     }
 }
