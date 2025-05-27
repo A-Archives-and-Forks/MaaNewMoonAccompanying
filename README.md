@@ -106,7 +106,10 @@
 
 ## 更新记录
 
-<!-- ### Next Version (Committed but Unreleased) -->
+### Next Version (Committed but Unreleased)
+
+- **修复优化**
+  - 修复了强制检测冰饮时会进入切换死循环的问题
 
 ### v1.1.2
 
