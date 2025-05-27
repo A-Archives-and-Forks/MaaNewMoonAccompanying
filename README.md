@@ -66,13 +66,14 @@
 - **领取奖励**
   - [x] 每日/周任务
   - [x] 组长手册
+  - [ ] 角色卡带升一级
 - **友谊交换**
   - [x] 情报点互换
   - [x] 同意好友
 - **清体力**
   - [x] 全种类资源
   - [x] 自动使用合剂
-  - [x] 自动助战
+  - [x] 自动使用助战
 - **轮换周常**
   - [x] 冰饮大热斗
   - [x] 自动站台肉鸽
@@ -105,7 +106,31 @@
 
 ## 更新记录
 
-<!-- ### Next Version (Committed but Unreleased) -->
+### Next Version (Committed but Unreleased)
+
+- **修复优化**
+  - 修复了强制检测冰饮时会进入切换死循环的问题
+
+### v1.1.2
+
+> 2025.5.26
+
+- **新增**
+  - 新增选项：城市探索-指定作战队伍
+- **修复优化**
+  - 优化了城市水群事件判断逻辑
+
+### v1.1.1
+
+> 2025.5.25
+
+- **新增**
+  - 适配4399服
+  - 新增选项：清体力-指定作战队伍
+- **修复优化**
+  - 修复了突击型演练卷本索引错误的问题
+  - 优化友谊交换延迟
+  - 优化组长手册切换面板后延迟
 
 ### v1.1.0
 
@@ -217,16 +242,25 @@
 
 </details>
 
-## 鸣谢
-
-- 本项目由 **[MaaFramework](https://github.com/MaaXYZ/MaaFramework)** 强力驱动！
-- GUI：[MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia/tree/master)
-- 分发：[Mirror酱](https://mirrorchyan.com/zh/get-start)
-- Pipeline 编辑器：[YAMaaPE](https://github.com/kqcoxn/YAMaaPE)
-
-游戏官网：[烛薪网络-新月同行](https://xytx.firewick.net/home)
-
 ## 加入我们
 
-- 🐧~~吹水~~交流群：[993245868](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=VMC132QhbMDLi5U62MlDRvtCMj9WOXRr&authKey=yJNKO4sQ%2BBFHpBCLSSEvVOAyz%2FPjknNSl70W3ugg2%2BpELnKmEiHamj1emJMWcLwQ&noverify=0&group_code=993245868)
+🐧~~吹水~~交流群：[993245868](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=VMC132QhbMDLi5U62MlDRvtCMj9WOXRr&authKey=yJNKO4sQ%2BBFHpBCLSSEvVOAyz%2FPjknNSl70W3ugg2%2BpELnKmEiHamj1emJMWcLwQ&noverify=0&group_code=993245868)
 
+如果您在使用过程中遇到了问题、有更好的想法、希望参与开发，或是单纯想要聊天吹水，欢迎加入 MNMA 交流群！
+
+## 鸣谢
+
+### 贡献者
+
+感谢以下开发者对本项目作出的贡献:
+
+[![Contributors](https://contrib.rocks/image?repo=kqcoxn/MaaNewMoonAccompanying&max=1000)](https://github.com/kqcoxn/MaaNewMoonAccompanying/graphs/contributors)
+
+### 依赖
+
+- **本项目由 **[MaaFramework](https://github.com/MaaXYZ/MaaFramework)** 强力驱动！**
+- Pipeline 编辑器：[YAMaaPE](https://github.com/kqcoxn/YAMaaPE)
+- GUI：[MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia/tree/master)
+- 分发：[Mirror酱](https://mirrorchyan.com/zh/get-start)
+
+游戏官网：[烛薪网络-新月同行](https://xytx.firewick.net/home)

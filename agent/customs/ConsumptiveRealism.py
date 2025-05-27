@@ -4,6 +4,7 @@ from maa.context import Context
 
 import json
 
+from .utils import parse_query_args, Prompt
 
 expected_times = 0
 used_times = 0
@@ -32,9 +33,7 @@ class SetEatTimes(CustomAction):
 
             return CustomAction.RunResult(success=True)
         except Exception as e:
-            print(f"设置合剂次数失败，请立即停止程序运行！")
-            print(e)
-            return CustomAction.RunResult(success=False)
+            return Prompt.error("设置合剂次数", e)
 
 
 @AgentServer.custom_action("check_eat_times")
@@ -55,6 +54,27 @@ class SetEatTimes(CustomAction):
 
             return CustomAction.RunResult(success=True)
         except Exception as e:
-            print(f"检查合剂次数失败，请立即停止程序运行！")
-            print(e)
-            return CustomAction.RunResult(success=False)
+            return Prompt.error("检查合剂次数", e)
+
+
+@AgentServer.custom_action("set_squad")
+class SetSquad(CustomAction):
+    def run(
+        self, context: Context, argv: CustomAction.RunArg
+    ) -> CustomAction.RunResult | bool:
+        try:
+            args = parse_query_args(argv)
+            squad = args.get("s", "")
+
+            if squad != "":
+                context.override_pipeline(
+                    {
+                        "清体力_4x行动前检测1": {"next": "清体力_4X队伍"},
+                        "清体力_3X及以下行动前检测1": {"next": "清体力_3X队伍"},
+                    }
+                )
+                print(f"> 将使用队伍：{squad}")
+
+            return CustomAction.RunResult(success=True)
+        except Exception as e:
+            return Prompt.error("设定指定队伍", e)

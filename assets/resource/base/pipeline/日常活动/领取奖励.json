@@ -251,7 +251,7 @@
         "expected": [
             "领取全部"
         ],
-        "pre_delay": 400,
+        "pre_delay": 1000,
         "post_delay": 500,
         "__yamaape": {
             "position": {
@@ -353,7 +353,7 @@
         "expected": [
             "领取全部"
         ],
-        "pre_delay": 400,
+        "pre_delay": 1000,
         "post_delay": 800,
         "__yamaape": {
             "position": {
@@ -401,11 +401,11 @@
         "next": [
             "领取奖励_获取手册奖励"
         ],
-        "on_error": [
-            "领取奖励_从手册返回"
-        ],
         "interrupt": [
             "领取奖励_手册升级"
+        ],
+        "on_error": [
+            "领取奖励_从手册返回"
         ]
     },
     "领取奖励_获取手册奖励": {

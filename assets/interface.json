@@ -1,10 +1,10 @@
 {
     "name": "MaaNewMoonAccompanying",
     "url": "https://github.com/kqcoxn/MaaNewMoonAccompanying",
-    "custom_title": "MNMA新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v1.1.0 - MFA | 游戏版本：血茧时辙·下",
+    "custom_title": "MNMA新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v1.1.3 - MFA | 游戏版本：血茧时辙·下",
     "mirrorchyan_rid": "MNMA",
     "mirrorchyan_multiplatform": true,
-    "version": "v1.1.0",
+    "version": "v1.1.3",
     "message": "- 新 月 同 行 -",
     "controller": [
         {
@@ -27,10 +27,17 @@
             ]
         },
         {
-            "name": "小米渠道服",
+            "name": "小米服",
             "path": [
                 "{PROJECT_DIR}/resource/base",
                 "{PROJECT_DIR}/resource/miside"
+            ]
+        },
+        {
+            "name": "4399服",
+            "path": [
+                "{PROJECT_DIR}/resource/base",
+                "{PROJECT_DIR}/resource/4399side"
             ]
         }
     ],
@@ -108,6 +115,9 @@
         {
             "name": "清体力",
             "entry": "清体力_开始",
+            "advanced": [
+                "指定清体力队伍"
+            ],
             "option": [
                 "资源类型",
                 "使用稳定合剂",
@@ -116,13 +126,16 @@
                 "卡带类型",
                 "使用助战特工"
             ],
-            "doc": "**清体力**：\n\n- 资源类型及选项：先匹配资源类型选项，再根据资源类型匹配详细的资源种类选项，其他资源类型的种类设置不会生效\n- 使用助战特工：选择助战特工在7号位，主要用于完成每日/周任务\n\n开始界面：主界面\n\n结束界面：主界面",
+            "doc": "**清体力**：\n\n- 资源类型及选项：先匹配资源类型选项，再根据资源类型匹配详细的资源种类选项，其他资源类型的种类设置不会生效\n- 使用助战特工：选择助战特工在7号位，主要用于完成每日/周任务\n- 指定清体力队伍：检查当前队伍是否为指定队伍，若不是则切换，留空表示使用默认队伍\n\n开始界面：主界面\n\n结束界面：主界面",
             "check": true
         },
         {
             "name": "城市探索",
-            "entry": "城市探索_城市探索",
-            "doc": "**城市探索**：\n\n资源收取、制造订单、设施管理、传闻调查、城市事件\n\n开始界面：主界面\n\n结束界面：主界面",
+            "entry": "城市探索_开始",
+            "advanced": [
+                "指定战斗类事件队伍"
+            ],
+            "doc": "**城市探索**：\n\n资源收取、制造订单、设施管理、传闻调查、城市事件\n\n- 指定作战队伍：在战斗类事件中，检查当前队伍是否为指定队伍，若不是则切换，留空表示使用默认队伍\n\n开始界面：主界面/城市探索界面\n\n结束界面：主界面",
             "option": [
                 "物资收取",
                 "城市事件"
@@ -268,6 +281,50 @@
             "pipeline_override": {
                 "每日采购_开始": {
                     "custom_action_param": "white={物资白名单}&black={物资黑名单}"
+                }
+            }
+        },
+        "指定清体力队伍": {
+            "field": [
+                "指定作战队伍"
+            ],
+            "type": [
+                "string"
+            ],
+            "default": [
+                ""
+            ],
+            "pipeline_override": {
+                "清体力_设定指定队伍": {
+                    "custom_action_param": "s={指定作战队伍}"
+                },
+                "清体力_检测配队是否正确": {
+                    "expected": "{指定作战队伍}"
+                },
+                "清体力_查找指定队伍": {
+                    "expected": "{指定作战队伍}"
+                }
+            }
+        },
+        "指定战斗类事件队伍": {
+            "field": [
+                "指定作战队伍"
+            ],
+            "type": [
+                "string"
+            ],
+            "default": [
+                ""
+            ],
+            "pipeline_override": {
+                "城市探索_设置战斗队伍": {
+                    "custom_action_param": "s={指定作战队伍}"
+                },
+                "城市探索_配队正确": {
+                    "expected": "{指定作战队伍}"
+                },
+                "城市探索_查找指定队伍": {
+                    "expected": "{指定作战队伍}"
                 }
             }
         },
@@ -630,10 +687,10 @@
                 {
                     "name": "Yes",
                     "pipeline_override": {
-                        "清体力_4x行动前检测": {
+                        "清体力_4x行动前检测2": {
                             "next": "清体力_4X助战"
                         },
-                        "清体力_3X及以下行动前检测": {
+                        "清体力_3X及以下行动前检测2": {
                             "next": "清体力_3X助战"
                         }
                     }
@@ -920,7 +977,7 @@
                         },
                         "冰饮_检查协助作战记录": {
                             "next": "冰饮_检查协助挑战",
-                            "on_error": "冰饮_没有老金"
+                            "on_error": "冰饮_冰饮检查完成"
                         }
                     }
                 },
