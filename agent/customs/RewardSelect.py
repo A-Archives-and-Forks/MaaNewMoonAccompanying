@@ -67,7 +67,6 @@ class CompareReward(CustomAction):
             # 是否只要指定选项
             normal_first = args.get("normal_first")
             # 判断当前选项的识别结果
-            print(f"级别 result: {result}  index： {roi_index}")
             # best 是指定选项且是高风险高收益
             if result == "best":
                 best_reward = roi_index
@@ -79,7 +78,6 @@ class CompareReward(CustomAction):
             elif result == "normal":
                 if normal_first == 'true':
                     better_reward = roi_index
-            print(f"best_reward: {best_reward} better_reward: {better_reward}")
             final_index = 0
             if best_reward != None:
                 final_index = best_reward
@@ -87,7 +85,6 @@ class CompareReward(CustomAction):
                 final_index = better_reward
             # 更新最终的点击区域
             roi = [840, 225 + final_index * 85, 220, 70]
-            print(f"compare_reward点击区域: {roi} {final_index}")
             # 循环完三个选项 或者已经找到最佳选项
             if roi_index >= 2 or final_index == best_reward:
                 context.override_pipeline(
@@ -100,7 +97,6 @@ class CompareReward(CustomAction):
                             },
                     }
                 )
-                print('设置了城市探索_点击奖励选项')
             return CustomAction.RunResult(success=True)
         except Exception as e:
             return Prompt.error("判断委托事件选项结果", e)
