@@ -1076,7 +1076,7 @@
         "next": [
             "城市探索_识别指定类型",
             "城市探索_识别非指定高收益",
-            "城市探索_识别下一区域"
+            "城市探索_判断是否结束循环"
         ]
     },
     "城市探索_获取事件奖励": {
@@ -1233,6 +1233,89 @@
         },
         "next": [
             "城市探索_获取事件奖励"
+        ]
+    },
+    "城市探索_确保结束讨论": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "结束讨论"
+        ],
+        "roi": [
+            864,
+            563,
+            127,
+            67
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3625,
+                "y": 2006
+            }
+        }
+    },
+    "城市探索_选择特工1": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            270,
+            256,
+            1,
+            1
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3326,
+                "y": 2590
+            }
+        },
+        "next": [
+            "城市探索_选择特工2"
+        ]
+    },
+    "城市探索_识别指定类型": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "卡带升级素材"
+        ],
+        "roi": [
+            838,
+            225,
+            218,
+            69
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3360,
+                "y": 2957
+            }
+        },
+        "next": [
+            "城市探索_识别指定高收益",
+            "城市探索_选择普通收益"
+        ]
+    },
+    "城市探索_识别非指定高收益": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "高风险高收益"
+        ],
+        "roi": [
+            838,
+            225,
+            218,
+            69
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3351,
+                "y": 3209
+            }
+        },
+        "next": [
+            "城市探索_选择非指定高收益"
         ]
     },
     "城市探索_重新唤出事件列表": {
@@ -1400,25 +1483,6 @@
             }
         }
     },
-    "城市探索_选择特工1": {
-        "recognition": "DirectHit",
-        "action": "Click",
-        "target": [
-            270,
-            256,
-            1,
-            1
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 3326,
-                "y": 2590
-            }
-        },
-        "next": [
-            "城市探索_选择特工2"
-        ]
-    },
     "城市探索_选择特工2": {
         "recognition": "DirectHit",
         "action": "Click",
@@ -1438,23 +1502,57 @@
             "城市探索_选择特工3"
         ]
     },
-    "城市探索_选择特工3": {
-        "recognition": "DirectHit",
-        "action": "Click",
-        "target": [
-            495,
-            256,
-            1,
-            1
+    "城市探索_识别指定高收益": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "高风险高收益"
+        ],
+        "roi": "城市探索_识别指定类型",
+        "roi_offset": [
+            -100,
+            0,
+            110,
+            40
         ],
         "__yamaape": {
             "position": {
-                "x": 3886,
-                "y": 2604
+                "x": 3670,
+                "y": 2813
             }
         },
         "next": [
-            "城市探索_执行委托"
+            "城市探索_选择指定高收益"
+        ]
+    },
+    "城市探索_选择普通收益": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "compare_reward",
+        "custom_action_param": "result=normal&normal_first=false",
+        "__yamaape": {
+            "position": {
+                "x": 3671,
+                "y": 3047
+            }
+        },
+        "next": [
+            "城市探索_判断是否结束循环"
+        ]
+    },
+    "城市探索_选择非指定高收益": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "compare_reward",
+        "custom_action_param": "result=better",
+        "__yamaape": {
+            "position": {
+                "x": 3670,
+                "y": 3253
+            }
+        },
+        "next": [
+            "城市探索_判断是否结束循环"
         ]
     },
     "城市探索_确定跳过战后剧情": {
@@ -1467,6 +1565,19 @@
             "position": {
                 "x": 6383,
                 "y": 53
+            }
+        }
+    },
+    "城市探索_关闭恢复体力界面": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/close.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 6146,
+                "y": 303
             }
         }
     },
@@ -1541,23 +1652,6 @@
             "城市探索_回到主页"
         ]
     },
-    "城市探索_执行委托": {
-        "recognition": "OCR",
-        "action": "Click",
-        "pre_delay": 400,
-        "expected": [
-            "执行委托"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 4167,
-                "y": 2599
-            }
-        },
-        "next": [
-            "城市探索_结算委托"
-        ]
-    },
     "城市探索_划至配队顶部": {
         "recognition": "OCR",
         "action": "Swipe",
@@ -1608,6 +1702,42 @@
                 "y": 1653
             }
         }
+    },
+    "城市探索_选择特工3": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            495,
+            256,
+            1,
+            1
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3886,
+                "y": 2604
+            }
+        },
+        "next": [
+            "城市探索_执行委托"
+        ]
+    },
+    "城市探索_执行委托": {
+        "recognition": "OCR",
+        "action": "Click",
+        "pre_delay": 400,
+        "expected": [
+            "执行委托"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 4167,
+                "y": 2599
+            }
+        },
+        "next": [
+            "城市探索_结算委托"
+        ]
     },
     "城市探索_结算委托": {
         "recognition": "OCR",
@@ -1671,6 +1801,31 @@
             "城市探索_配队点停"
         ]
     },
+    "城市探索_配队点停": {
+        "recognition": "DirectHit",
+        "action": "Swipe",
+        "pre_delay": 0,
+        "post_delay": 400,
+        "begin": [
+            1215,
+            180,
+            1,
+            1
+        ],
+        "end": [
+            1215,
+            180,
+            1,
+            1
+        ],
+        "duration": 50,
+        "__yamaape": {
+            "position": {
+                "x": 4723,
+                "y": 1630
+            }
+        }
+    },
     "城市探索_开始": {
         "recognition": "DirectHit",
         "action": "DoNothing",
@@ -1732,140 +1887,6 @@
             "城市探索_资源收取"
         ]
     },
-    "城市探索_配队点停": {
-        "recognition": "DirectHit",
-        "action": "Swipe",
-        "pre_delay": 0,
-        "post_delay": 400,
-        "begin": [
-            1215,
-            180,
-            1,
-            1
-        ],
-        "end": [
-            1215,
-            180,
-            1,
-            1
-        ],
-        "duration": 50,
-        "__yamaape": {
-            "position": {
-                "x": 4723,
-                "y": 1630
-            }
-        }
-    },
-    "城市探索_识别指定类型": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "卡带升级素材"
-        ],
-        "roi": [
-            838,
-            225,
-            218,
-            69
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 3360,
-                "y": 2957
-            }
-        },
-        "next": [
-            "城市探索_识别指定高收益",
-            "城市探索_选择普通收益"
-        ]
-    },
-    "城市探索_识别非指定高收益": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "高风险高收益"
-        ],
-        "roi": [
-            838,
-            225,
-            218,
-            69
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 3351,
-                "y": 3209
-            }
-        },
-        "next": [
-            "城市探索_选择非指定高收益"
-        ]
-    },
-    "城市探索_识别下一区域": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "select_next_reward",
-        "__yamaape": {
-            "position": {
-                "x": 4326,
-                "y": 3050
-            }
-        }
-    },
-    "城市探索_识别指定高收益": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "高风险高收益"
-        ],
-        "roi": "城市探索_识别指定类型",
-        "roi_offset": [
-            -100,
-            0,
-            110,
-            40
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 3670,
-                "y": 2813
-            }
-        },
-        "next": [
-            "城市探索_选择指定高收益"
-        ]
-    },
-    "城市探索_选择普通收益": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "compare_reward",
-        "custom_action_param": "result=normal&normal_first=false",
-        "__yamaape": {
-            "position": {
-                "x": 3671,
-                "y": 3047
-            }
-        },
-        "next": [
-            "城市探索_识别下一区域"
-        ]
-    },
-    "城市探索_选择非指定高收益": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "compare_reward",
-        "custom_action_param": "result=better",
-        "__yamaape": {
-            "position": {
-                "x": 3670,
-                "y": 3253
-            }
-        },
-        "next": [
-            "城市探索_识别下一区域"
-        ]
-    },
     "城市探索_选择指定高收益": {
         "recognition": "DirectHit",
         "action": "Custom",
@@ -1878,38 +1899,31 @@
             }
         },
         "next": [
+            "城市探索_判断是否结束循环"
+        ]
+    },
+    "城市探索_判断是否结束循环": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "break_loop",
+        "__yamaape": {
+            "position": {
+                "x": 4254,
+                "y": 3060
+            }
+        },
+        "next": [
             "城市探索_识别下一区域"
         ]
     },
-    "城市探索_关闭恢复体力界面": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "../image/close.png"
-        ],
+    "城市探索_识别下一区域": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "select_next_reward",
         "__yamaape": {
             "position": {
-                "x": 6146,
-                "y": 303
-            }
-        }
-    },
-    "城市探索_确保结束讨论": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "结束讨论"
-        ],
-        "roi": [
-            864,
-            563,
-            127,
-            67
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 3625,
-                "y": 2006
+                "x": 4514,
+                "y": 3061
             }
         }
     },
@@ -1919,7 +1933,7 @@
         "post_delay": 500,
         "__yamaape": {
             "position": {
-                "x": 4642,
+                "x": 4811,
                 "y": 3047
             }
         }
