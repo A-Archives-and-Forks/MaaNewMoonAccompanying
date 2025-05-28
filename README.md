@@ -11,10 +11,11 @@
 
 <p align="center">
   <a href="https://www.python.org/" target="_blank"><img alt="python" src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white"></a>
+  <a href="https://github.com/MaaXYZ/MaaFramework/blob/main/docs/zh_cn/3.1-%E4%BB%BB%E5%8A%A1%E6%B5%81%E6%B0%B4%E7%BA%BF%E5%8D%8F%E8%AE%AE.md" target="_blank"><img alt="pipeline" src="https://img.shields.io/badge/Pipeline-%23876f69?logo=paddypower&logoColor=%23FFFFFF"></a>
   <a href="https://github.com/kqcoxn/MaaNewMoonAccompanying/releases" target="_blank"><img alt="platform" src="https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-blueviolet"></a>
   <a href="https://mirrorchyan.com/zh/projects" target="_blank"><img alt="mirrorc" src="https://img.shields.io/badge/Mirror%E9%85%B1-%239af3f6?logo=countingworkspro&logoColor=4f46e5"></a>
   <br/>
-  <a href="https://github.com/kqcoxn/MaaNewMoonAccompanying/commits/main/" target="_blank"><img alt="committs" src="https://img.shields.io/github/commit-activity/m/kqcoxn/MaaNewMoonAccompanying"></a>
+  <a href="https://github.com/kqcoxn/MaaNewMoonAccompanying/commits/main/" target="_blank"><img alt="committs" src="https://img.shields.io/github/commit-activity/m/kqcoxn/MaaNewMoonAccompanying?color=%23ff69b4"></a>
   <a href="https://github.com/kqcoxn/MaaNewMoonAccompanying/stargazers" target="_blank"><img alt="stars" src="https://img.shields.io/github/stars/kqcoxn/MaaNewMoonAccompanying?style=social"></a>
   <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=VMC132QhbMDLi5U62MlDRvtCMj9WOXRr&authKey=yJNKO4sQ%2BBFHpBCLSSEvVOAyz%2FPjknNSl70W3ugg2%2BpELnKmEiHamj1emJMWcLwQ&noverify=0&group_code=993245868" target="_blank"><img alt="QQ交流群" src="https://img.shields.io/badge/QGroup-993245868-0e80c1?logo=qq&logoColor=white"></a>
 </p>
@@ -64,7 +65,7 @@
 - **领取奖励**
   - [x] 每日/周任务
   - [x] 组长手册
-  - [x] 角色卡带升一级
+  - [ ] 角色卡带升一级
 - **友谊交换**
   - [x] 情报点互换
   - [x] 同意好友
@@ -134,6 +135,9 @@
 - **修复优化**
   - 优化了城市水群事件判断逻辑
 
+<details>
+<summary>其他版本</summary>
+
 ### v1.1.1
 
 > 2025.5.25
@@ -156,99 +160,6 @@
   - 修复了信赖谈话章节滑动距离过大的问题
   - 优化蓝色站台配队相关任务描述与日志提示
   - 打包小工具仅打包近两天日志
-
-<details>
-<summary>其他版本</summary>
-
-### v1.0.8
-
-> 2025.5.22
-
-- **新增**
-  - 新增任务：「决雍协定」领取体力与奖励
-- **修复优化**
-  - 移除 `windows` 之外系统的启动器与小工具
-
-### v1.0.6
-
-> 2025.5.20
-
-- **新增**
-  - 新增选项：卡带再激活-使用属性组
-- **修复优化**
-  - 优化城市事件稳定性
-  - 更正词条刷新选项描述
-  - 添加领取组长手册后的升级界面判断
-  - 调整周任务强制检查默认值
-
-### v1.0.5
-
-> 2025.5.18
-
-- **新增**
-  - 新增选项：蓝色站台-站台循环方式
-- **修复优化**
-  - 修复了城市事件水群类任务可能卡在回复环节的问题
-  - 修复了城市事件部分行动类任务序号错误的问题
-  - 修复了蓝色站台战斗节点结束战斗后卡顿引起的提前识别问题
-
-### v1.0.4
-
-> 2025.5.16
-
-- **修复优化**
-  - 修复了体力合剂选项失效的问题
-  - 修复了蓝色站台剧情节点战斗选项后的选项可能卡住的问题
-  - 修复了蓝色站台选择物品后可能进入配队界面的问题
-
-### v1.0.3
-
-> 2025.5.15
-
-- **新增**
-  - 新增选项：清体力-使用助战特工
-- **修复优化**
-  - 游戏新版本适配
-  - 添加清体力详细日志输出
-  - 冰饮未出现老金时尝试查找世界请求或反复刷新老金
-  - 添加冰饮个人挑战未记录但已完成时的奖励再确认
-  - 调整部分节点延迟
-
-### v1.0.2
-
-> 2025.5.13
-
-- **新增**
-  - 新增任务：信赖谈话
-  - 新增选项：每日采购-数构银物资黑白名单、每日采购-数构银物资购买策略
-- **修复优化**
-  - 优化了城市探索任务延迟标准
-  - 修复了拘束塔奖励有可能不选择最大领取的问题
-  - 为领取奖励功能添加扩展手册判断
-  - 修复了每日采购已购免费物资在可视区域内时会卡住的问题
-  - 修复了部分背景下无法点进好友界面的问题
-  - 修复了蓝色站台剧情节点后温控变化会卡住的问题
-  - 修复了蓝色站台战斗节点后仍然有选项时会卡住的问题
-  - 提高了蓝色站台选项对话速度
-
-### v1.0.1
-
-> 2025.5.11
-
-- **新增**
-  - 新增选项：卡带再激活-属性值
-- **修复优化**
-  - 修复了原属性会影响激活识别的问题
-
-### v1.0.0
-
-> 2025.5.11
-
-- **新增**
-  - 新增任务：卡带再激活
-  - 新增选项：卡带升级-无卡带时使用模组块
-- **修复优化**
-  - 添加了城市事件结束后列表消失情况的判断
 
 ### 更早的版本
 
