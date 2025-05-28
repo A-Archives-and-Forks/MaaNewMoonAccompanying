@@ -112,7 +112,10 @@
 
 ## 更新记录
 
-<!-- ### Next Version (Committed but Unreleased) -->
+### Next Version (Committed but Unreleased)
+
+- **修复优化**
+  - 优化了水群类事件结束时的执行逻辑
 
 ### v1.1.3
 
