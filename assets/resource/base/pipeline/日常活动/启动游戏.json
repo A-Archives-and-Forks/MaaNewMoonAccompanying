@@ -1,7 +1,7 @@
 {
     "__yamaape_config_启动游戏": {
         "filename": "启动游戏",
-        "version": "v0.3.2",
+        "version": "v0.3.4",
         "export": "",
         "prefix": "启动游戏"
     },
@@ -18,7 +18,7 @@
         "next": [
             "启动游戏_更新游戏",
             "启动游戏_校准现实",
-            "启动游戏_主界面"
+            "启动游戏_已在主界面"
         ],
         "interrupt": [
             "启动游戏_启动游戏"
@@ -30,10 +30,11 @@
         "expected": [
             "新版本资源"
         ],
+        "focus": "> 游戏版本更新",
         "__yamaape": {
             "position": {
-                "x": 514,
-                "y": -186
+                "x": 512,
+                "y": -215
             }
         },
         "next": [
@@ -49,34 +50,15 @@
         "pre_delay": 2000,
         "timeout": 10000,
         "post_delay": 5000,
+        "focus": "> 进入游戏",
         "__yamaape": {
             "position": {
                 "x": 1037,
-                "y": -101
+                "y": -125
             }
         },
         "next": [
-            "启动游戏_主界面"
-        ],
-        "interrupt": [
-            "启动游戏_关闭活动公告",
-            "启动游戏_关闭签到界面1"
-        ]
-    },
-    "启动游戏_主界面": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "城市探索"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 1348,
-                "y": 141
-            }
-        },
-        "next": [
-            "启动游戏_确认结束1"
+            "启动游戏_初始化检测计数"
         ]
     },
     "启动游戏_启动游戏": {
@@ -86,8 +68,8 @@
         "post_delay": 10000,
         "__yamaape": {
             "position": {
-                "x": 558,
-                "y": 82
+                "x": 517,
+                "y": 240
             }
         }
     },
@@ -102,328 +84,44 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 767,
-                "y": -240
+                "x": 764,
+                "y": -276
             }
         },
         "next": [
             "启动游戏_校准现实"
         ]
     },
-    "启动游戏_关闭活动公告": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "../image/close.png"
-        ],
-        "post_delay": 300,
-        "__yamaape": {
-            "position": {
-                "x": 1351,
-                "y": -255
-            }
-        }
-    },
-    "启动游戏_关闭签到界面1": {
+    "启动游戏_初始化检测计数": {
         "recognition": "DirectHit",
-        "action": "Click",
-        "target": [
-            25,
-            200,
-            1,
-            1
-        ],
-        "post_delay": 200,
+        "action": "Custom",
+        "custom_action": "init_counter",
+        "custom_action_param": "max=5&exceed=false",
+        "pre_delay": 0,
         "__yamaape": {
             "position": {
-                "x": 1354,
-                "y": -66
+                "x": 1348,
+                "y": 141
             }
         },
         "next": [
-            "启动游戏_关闭签到界面2"
+            "启动游戏_检测当前界面"
         ]
-    },
-    "启动游戏_确认结束1": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "__yamaape": {
-            "position": {
-                "x": 1702,
-                "y": 260
-            }
-        },
-        "next": [
-            "启动游戏_防止公告延迟"
-        ]
-    },
-    "启动游戏_关闭签到界面2": {
-        "recognition": "DirectHit",
-        "action": "Click",
-        "target": [
-            25,
-            200,
-            1,
-            1
-        ],
-        "post_delay": 200,
-        "__yamaape": {
-            "position": {
-                "x": 1603,
-                "y": -70
-            }
-        },
-        "next": [
-            "启动游戏_关闭签到界面3"
-        ]
-    },
-    "启动游戏_关闭签到界面3": {
-        "recognition": "DirectHit",
-        "action": "Click",
-        "target": [
-            25,
-            200,
-            1,
-            1
-        ],
-        "post_delay": 2000,
-        "timeout": 1000,
-        "__yamaape": {
-            "position": {
-                "x": 1855,
-                "y": -81
-            }
-        }
-    },
-    "启动游戏_防止公告延迟": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "timeout": 2000,
-        "post_delay": 3000,
-        "__yamaape": {
-            "position": {
-                "x": 1976,
-                "y": 203
-            }
-        },
-        "next": [
-            "启动游戏_关闭公告"
-        ],
-        "on_error": [
-            "启动游戏_确认结束2"
-        ]
-    },
-    "启动游戏_关闭公告": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "../image/close.png"
-        ],
-        "pre_delay": 400,
-        "__yamaape": {
-            "position": {
-                "x": 2244,
-                "y": 202
-            }
-        },
-        "next": [
-            "启动游戏_确认结束2"
-        ]
-    },
-    "启动游戏_确认结束2": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "__yamaape": {
-            "position": {
-                "x": 2520,
-                "y": 273
-            }
-        },
-        "next": [
-            "启动游戏_关闭其他界面1"
-        ]
-    },
-    "启动游戏_关闭其他界面1": {
-        "recognition": "DirectHit",
-        "action": "Click",
-        "target": [
-            25,
-            200,
-            1,
-            1
-        ],
-        "post_delay": 200,
-        "pre_delay": 5000,
-        "__yamaape": {
-            "position": {
-                "x": 2021,
-                "y": 433
-            }
-        },
-        "next": [
-            "启动游戏_关闭其他界面2"
-        ]
-    },
-    "启动游戏_关闭其他界面2": {
-        "recognition": "DirectHit",
-        "action": "Click",
-        "target": [
-            25,
-            200,
-            1,
-            1
-        ],
-        "post_delay": 200,
-        "__yamaape": {
-            "position": {
-                "x": 2278,
-                "y": 454
-            }
-        },
-        "next": [
-            "启动游戏_关闭其他界面3"
-        ]
-    },
-    "启动游戏_关闭其他界面3": {
-        "recognition": "DirectHit",
-        "action": "Click",
-        "target": [
-            25,
-            200,
-            1,
-            1
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 2554,
-                "y": 468
-            }
-        },
-        "next": [
-            "启动游戏_确认结束3"
-        ]
-    },
-    "启动游戏_确认结束3": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "__yamaape": {
-            "position": {
-                "x": 2814,
-                "y": 474
-            }
-        },
-        "next": [
-            "启动游戏_最终确认"
-        ],
-        "interrupt": [
-            "启动游戏_关闭其他面板",
-            "启动游戏_关闭版本公告",
-            "启动游戏_尝试关闭其他界面1"
-        ]
-    },
-    "启动游戏_最终确认": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "城市探索"
-        ],
-        "post_delay": 3000,
-        "timeout": 3000,
-        "__yamaape": {
-            "position": {
-                "x": 3082,
-                "y": 475
-            }
-        }
     },
     "启动游戏_关闭游戏": {
         "recognition": "DirectHit",
         "action": "StopApp",
         "package": "com.firewick.p42",
         "post_delay": 2000,
+        "focus": "> 尝试结束游戏运行",
         "__yamaape": {
             "position": {
-                "x": 220,
-                "y": -223
+                "x": 192,
+                "y": -259
             }
         },
         "next": [
             "启动游戏_检测界面"
-        ]
-    },
-    "启动游戏_额外延时5s": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "post_delay": 5000,
-        "pre_delay": 1,
-        "__yamaape": {
-            "position": {
-                "x": 1369,
-                "y": 313
-            }
-        },
-        "next": [
-            "启动游戏_确认结束1"
-        ]
-    },
-    "启动游戏_额外延时10s": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "post_delay": 10000,
-        "pre_delay": 1,
-        "__yamaape": {
-            "position": {
-                "x": 1365,
-                "y": 505
-            }
-        },
-        "next": [
-            "启动游戏_确认结束1"
-        ]
-    },
-    "启动游戏_额外延时15s": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "post_delay": 15000,
-        "pre_delay": 1,
-        "__yamaape": {
-            "position": {
-                "x": 1363,
-                "y": 701
-            }
-        },
-        "next": [
-            "启动游戏_确认结束1"
-        ]
-    },
-    "启动游戏_额外延时20s": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "post_delay": 20000,
-        "pre_delay": 1,
-        "__yamaape": {
-            "position": {
-                "x": 1363,
-                "y": 888
-            }
-        },
-        "next": [
-            "启动游戏_确认结束1"
-        ]
-    },
-    "启动游戏_额外延时30s": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "post_delay": 30000,
-        "pre_delay": 1,
-        "__yamaape": {
-            "position": {
-                "x": 1366,
-                "y": 1088
-            }
-        },
-        "next": [
-            "启动游戏_确认结束1"
         ]
     },
     "启动游戏_开始": {
@@ -431,97 +129,171 @@
         "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": -73,
-                "y": 7
+                "x": -18,
+                "y": -31
             }
         },
         "next": [
             "启动游戏_检测界面"
         ]
     },
-    "启动游戏_关闭其他面板": {
+    "启动游戏_已在主界面": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "城市探索"
+        ],
+        "focus": "> 已在主界面",
+        "__yamaape": {
+            "position": {
+                "x": 513,
+                "y": 39
+            }
+        },
+        "next": [
+            "启动游戏_初始化检测计数"
+        ]
+    },
+    "启动游戏_检测当前界面": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "pre_delay": 1,
+        "post_delay": 1,
+        "__yamaape": {
+            "position": {
+                "x": 1619,
+                "y": 140
+            }
+        },
+        "next": [
+            "启动游戏_主界面"
+        ],
+        "interrupt": [
+            "启动游戏_关闭弹出面板",
+            "启动游戏_关闭提示界面",
+            "启动游戏_盲目点击"
+        ]
+    },
+    "启动游戏_主界面": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "城市探索"
+        ],
+        "pre_delay": 1,
+        "post_delay": 1,
+        "__yamaape": {
+            "position": {
+                "x": 1902,
+                "y": -50
+            }
+        },
+        "next": [
+            "启动游戏_检测计数"
+        ],
+        "on_error": [
+            "启动游戏_检测结束"
+        ]
+    },
+    "启动游戏_关闭弹出面板": {
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/close.png"
+            "../image/close.png",
+            "../image/home.png",
+            "../image/back.png"
         ],
-        "post_delay": 300,
+        "pre_delay": 200,
+        "post_delay": 1,
         "__yamaape": {
             "position": {
-                "x": 3082,
-                "y": 708
+                "x": 1902,
+                "y": 179
+            }
+        },
+        "next": [
+            "启动游戏_重置计数"
+        ]
+    },
+    "启动游戏_检测计数": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "count",
+        "pre_delay": 1,
+        "post_delay": 995,
+        "__yamaape": {
+            "position": {
+                "x": 2164,
+                "y": -251
+            }
+        },
+        "next": [
+            "启动游戏_检测当前界面"
+        ]
+    },
+    "启动游戏_检测结束": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "focus": "> 已进入主界面",
+        "pre_delay": 0,
+        "__yamaape": {
+            "position": {
+                "x": 2167,
+                "y": -22
             }
         }
     },
-    "启动游戏_关闭版本公告": {
+    "启动游戏_重置计数": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "init_counter",
+        "custom_action_param": "max=5&exceed=false",
+        "pre_delay": 0,
+        "__yamaape": {
+            "position": {
+                "x": 2167,
+                "y": 180
+            }
+        }
+    },
+    "启动游戏_盲目点击": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            25,
+            200,
+            1,
+            1
+        ],
+        "post_delay": 1,
+        "pre_delay": 30,
+        "__yamaape": {
+            "position": {
+                "x": 1898,
+                "y": 634
+            }
+        },
+        "next": [
+            "启动游戏_重置计数"
+        ]
+    },
+    "启动游戏_关闭提示界面": {
         "recognition": "OCR",
         "action": "Click",
+        "pre_delay": 200,
+        "post_delay": 1,
         "expected": [
-            "点击以继续"
+            "点击以继续",
+            "校准现实"
         ],
         "__yamaape": {
             "position": {
-                "x": 3083,
-                "y": 902
-            }
-        }
-    },
-    "启动游戏_尝试关闭其他界面1": {
-        "recognition": "DirectHit",
-        "action": "Click",
-        "target": [
-            25,
-            200,
-            1,
-            1
-        ],
-        "post_delay": 200,
-        "__yamaape": {
-            "position": {
-                "x": 3083,
-                "y": 1070
+                "x": 1900,
+                "y": 407
             }
         },
         "next": [
-            "启动游戏_尝试关闭其他界面2"
+            "启动游戏_重置计数"
         ]
-    },
-    "启动游戏_尝试关闭其他界面2": {
-        "recognition": "DirectHit",
-        "action": "Click",
-        "target": [
-            25,
-            200,
-            1,
-            1
-        ],
-        "post_delay": 200,
-        "__yamaape": {
-            "position": {
-                "x": 3337,
-                "y": 1069
-            }
-        },
-        "next": [
-            "启动游戏_尝试关闭其他界面3"
-        ]
-    },
-    "启动游戏_尝试关闭其他界面3": {
-        "recognition": "DirectHit",
-        "action": "Click",
-        "target": [
-            25,
-            200,
-            1,
-            1
-        ],
-        "post_delay": 2000,
-        "timeout": 1000,
-        "__yamaape": {
-            "position": {
-                "x": 3596,
-                "y": 1068
-            }
-        }
     }
 }

@@ -93,6 +93,13 @@
 
 - [文图教程](https://docs.codax.site/mnma/docs/users/start.html)
 
+
+## 免责声明
+
+本软件开源、免费，仅供学习交流使用。若您遇到商家使用本软件进行代练并收费，可能是分发、设备或时间等费用，产生的费用、问题及后果与本软件无关。
+
+**在使用过程中，MNMA 可能存在任何意想不到的 Bug，因 MNMA 自身漏洞、文本理解有歧义、异常操作导致的账号问题等开发组不承担任何责任，请在确保在阅读完用户手册、自行尝试运行效果后谨慎使用！**
+
 ## 常见问题
 
 请确保现有 [issue](https://github.com/kqcoxn/MaaNewMoonAccompanying/issues?q=is%3Aissue) 中还没有与您遇到的类似的问题
@@ -115,6 +122,7 @@
 ### Next Version (Committed but Unreleased)
 
 - **修复优化**
+  - 重构启动游戏逻辑
   - 优化了水群类事件结束时的执行逻辑
 
 ### v1.1.3
