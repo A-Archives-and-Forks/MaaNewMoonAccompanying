@@ -1,15 +1,15 @@
 {
-    "__yamaape_config_秘密收管行动": {
-        "filename": "秘密收管行动",
+    "__yamaape_config_活动日活": {
+        "filename": "活动日活",
         "version": "v0.3.4",
         "export": "",
-        "prefix": "秘密收管行动"
+        "prefix": "活动日活"
     },
-    "秘密收管行动_活动入口": {
+    "活动日活_活动入口": {
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/血茧时辙/entry.png"
+            "../image/往像螺旋/entry.png"
         ],
         "pre_delay": 400,
         "__yamaape": {
@@ -19,16 +19,16 @@
             }
         },
         "next": [
-            "秘密收管行动_秘密收管行动"
+            "活动日活_进入领取界面"
         ]
     },
-    "秘密收管行动_秘密收管行动": {
+    "活动日活_进入领取界面": {
         "recognition": "OCR",
         "action": "Click",
         "expected": [
-            "秘密收管行动"
+            "疏浚行动"
         ],
-        "pre_delay": 400,
+        "pre_delay": 800,
         "__yamaape": {
             "position": {
                 "x": 506,
@@ -36,16 +36,17 @@
             }
         },
         "next": [
-            "秘密收管行动_领取奖励"
+            "活动日活_领取奖励"
         ]
     },
-    "秘密收管行动_领取奖励": {
+    "活动日活_领取奖励": {
         "recognition": "OCR",
         "action": "Click",
         "expected": [
             "全部领取"
         ],
         "timeout": 2000,
+        "pre_delay": 800,
         "__yamaape": {
             "position": {
                 "x": 767,
@@ -53,13 +54,13 @@
             }
         },
         "next": [
-            "秘密收管行动_获取奖励"
+            "活动日活_获取奖励"
         ],
         "on_error": [
-            "秘密收管行动_返回主界面"
+            "活动日活_返回主界面"
         ]
     },
-    "秘密收管行动_获取奖励": {
+    "活动日活_获取奖励": {
         "recognition": "OCR",
         "action": "Click",
         "expected": [
@@ -73,10 +74,10 @@
             }
         },
         "next": [
-            "秘密收管行动_返回主界面"
+            "活动日活_返回主界面"
         ]
     },
-    "秘密收管行动_返回主界面": {
+    "活动日活_返回主界面": {
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
@@ -86,9 +87,22 @@
         "post_delay": 3000,
         "__yamaape": {
             "position": {
-                "x": 1390,
-                "y": -48
+                "x": 1387,
+                "y": -21
             }
         }
+    },
+    "活动日活_开始": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": -27,
+                "y": -69
+            }
+        },
+        "next": [
+            "活动日活_活动入口"
+        ]
     }
 }

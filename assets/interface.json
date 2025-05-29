@@ -1,7 +1,7 @@
 {
     "name": "MaaNewMoonAccompanying",
     "url": "https://github.com/kqcoxn/MaaNewMoonAccompanying",
-    "custom_title": "MNMA新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v1.1.4 - MFA | 游戏版本：血茧时辙·下",
+    "custom_title": "MNMA新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v1.1.4 - MFA | 游戏版本：往像螺旋",
     "mirrorchyan_rid": "MNMA",
     "mirrorchyan_multiplatform": true,
     "version": "v1.1.4",
@@ -105,12 +105,6 @@
             "check": true
         },
         {
-            "name": "「决雍协定」领取体力与奖励",
-            "entry": "决雍协定_开始",
-            "doc": "**「决雍协定」领取体力与奖励**：\n\n领取往像域决雍协定活动体力与奖励\n\n开始界面：主界面\n\n结束界面：主界面",
-            "check": true
-        },
-        {
             "name": "清体力",
             "entry": "清体力_开始",
             "advanced": [
@@ -153,9 +147,9 @@
             "check": true
         },
         {
-            "name": "「血茧时辙」领取每日残片",
-            "entry": "秘密收管行动_活动入口",
-            "doc": "**[血茧时辙]领取每日残片**：\n\n领取血茧时辙活动每日任务奖励\n\n**注意：版本更新后请先进入活动过完开场动画！**\n\n开始界面：主界面\n\n结束界面：主界面",
+            "name": "「往像螺旋」领取每日尘质",
+            "entry": "活动日活_开始",
+            "doc": "**「往像螺旋」领取每日尘质**：\n\n领取往像螺旋活动每日任务奖励\n\n**注意：版本更新后请先进入活动过完开场动画！**\n\n开始界面：主界面\n\n结束界面：主界面",
             "check": true
         },
         {
