@@ -1,0 +1,126 @@
+{
+    "__yamaape_config_工坊开放日": {
+        "filename": "工坊开放日",
+        "version": "v0.3.4",
+        "prefix": "工坊开放日"
+    },
+    "工坊开放日_开始": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": 736,
+                "y": 17
+            }
+        },
+        "next": [
+            "工坊开放日_进入活动界面"
+        ]
+    },
+    "工坊开放日_进入活动界面": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "活动"
+        ],
+        "focus": "> 进入活动界面",
+        "__yamaape": {
+            "position": {
+                "x": 996,
+                "y": 17
+            }
+        },
+        "next": [
+            "工坊开放日_新增节点17"
+        ]
+    },
+    "工坊开放日_新增节点17": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "工坊开放日"
+        ],
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 1256,
+                "y": 17
+            }
+        },
+        "next": [
+            "工坊开放日_活动任务"
+        ]
+    },
+    "工坊开放日_活动任务": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "活动任务"
+        ],
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 1516,
+                "y": 17
+            }
+        },
+        "next": [
+            "工坊开放日_领取奖励"
+        ]
+    },
+    "工坊开放日_领取奖励": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "键领取"
+        ],
+        "focus": "> 尝试领取奖励",
+        "pre_delay": 800,
+        "timeout": 2000,
+        "__yamaape": {
+            "position": {
+                "x": 1776,
+                "y": 17
+            }
+        },
+        "next": [
+            "工坊开放日_获取奖励"
+        ],
+        "on_error": [
+            "工坊开放日_返回主页"
+        ]
+    },
+    "工坊开放日_获取奖励": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击以继续"
+        ],
+        "focus": "> 尝试领取奖励",
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 2060,
+                "y": -55
+            }
+        },
+        "next": [
+            "工坊开放日_返回主页"
+        ]
+    },
+    "工坊开放日_返回主页": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/home.png"
+        ],
+        "focus": "> 返回主界面",
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 2346,
+                "y": 92
+            }
+        }
+    }
+}

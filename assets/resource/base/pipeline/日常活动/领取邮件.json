@@ -1,6 +1,6 @@
 {
-    "__yamaape_config_领取邮件 ": {
-        "filename": "领取邮件 ",
+    "__yamaape_config_领取邮件": {
+        "filename": "领取邮件",
         "version": "v0.3.4",
         "export": "",
         "prefix": "领取邮件"
@@ -100,8 +100,8 @@
         "recognition": "DirectHit",
         "action": "Click",
         "target": [
-            25,
-            200,
+            15,
+            60,
             1,
             1
         ],
