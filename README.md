@@ -128,7 +128,11 @@
 
 ## 更新记录
 
-<!-- ### Next Version (Committed but Unreleased) -->
+### Next Version (Committed but Unreleased)
+
+- **修复优化**
+  - 修复了卡带突破会卡在材料返还页面的问题
+  - 将每日决雍作战关卡调整为「未开之花」
 
 ### v1.1.5
 

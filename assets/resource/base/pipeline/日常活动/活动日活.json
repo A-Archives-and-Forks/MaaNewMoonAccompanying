@@ -12,6 +12,7 @@
             "../image/往像螺旋/entry.png"
         ],
         "pre_delay": 400,
+        "focus": "> 进入活动界面",
         "__yamaape": {
             "position": {
                 "x": 243,
@@ -29,6 +30,7 @@
             "疏浚行动"
         ],
         "pre_delay": 800,
+        "focus": "> 领取每日活动奖励",
         "__yamaape": {
             "position": {
                 "x": 506,
@@ -105,23 +107,6 @@
             "活动日活_活动入口"
         ]
     },
-    "活动日活_决雍作战": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "最高评分"
-        ],
-        "pre_delay": 800,
-        "__yamaape": {
-            "position": {
-                "x": -1636,
-                "y": 235
-            }
-        },
-        "next": [
-            "活动日活_前往试炼"
-        ]
-    },
     "活动日活_前往试炼": {
         "recognition": "OCR",
         "action": "Click",
@@ -129,10 +114,11 @@
             "前往"
         ],
         "pre_delay": 800,
+        "order_by": "Vertical",
         "__yamaape": {
             "position": {
-                "x": -1376,
-                "y": 235
+                "x": -352,
+                "y": 239
             }
         },
         "next": [
@@ -148,8 +134,8 @@
         "pre_delay": 800,
         "__yamaape": {
             "position": {
-                "x": -1116,
-                "y": 235
+                "x": -92,
+                "y": 239
             }
         },
         "next": [
@@ -164,8 +150,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": -856,
-                "y": 235
+                "x": 168,
+                "y": 239
             }
         },
         "next": [
@@ -181,35 +167,18 @@
         "pre_delay": 1000,
         "rate_limit": 3000,
         "timeout": 900000,
+        "focus": "> 开始行动",
         "__yamaape": {
             "position": {
-                "x": -596,
-                "y": 235
+                "x": -545,
+                "y": 483
             }
         },
         "next": [
-            "活动日活_下一阶段",
             "活动日活_作战结束"
         ],
         "interrupt": [
             "活动日活_确保作战开始"
-        ]
-    },
-    "活动日活_下一阶段": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "下一阶段"
-        ],
-        "pre_delay": 800,
-        "__yamaape": {
-            "position": {
-                "x": -307,
-                "y": 147
-            }
-        },
-        "next": [
-            "活动日活_开始行动"
         ]
     },
     "活动日活_作战结束": {
@@ -219,10 +188,11 @@
             "作战结束"
         ],
         "pre_delay": 800,
+        "focus": "> 作战结束",
         "__yamaape": {
             "position": {
-                "x": -303,
-                "y": 350
+                "x": -296,
+                "y": 482
             }
         },
         "next": [
@@ -237,8 +207,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": -566,
-                "y": 492
+                "x": -295,
+                "y": 710
             }
         }
     },
@@ -251,8 +221,8 @@
         "pre_delay": 800,
         "__yamaape": {
             "position": {
-                "x": -43,
-                "y": 350
+                "x": -36,
+                "y": 482
             }
         },
         "next": [
@@ -268,12 +238,47 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 216,
-                "y": 349
+                "x": 223,
+                "y": 481
             }
         },
         "next": [
             "活动日活_进入领取界面"
+        ]
+    },
+    "活动日活_决雍作战": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "最高评分"
+        ],
+        "pre_delay": 800,
+        "focus": "> 每日作战",
+        "__yamaape": {
+            "position": {
+                "x": -865,
+                "y": 239
+            }
+        },
+        "next": [
+            "活动日活_定向特训"
+        ]
+    },
+    "活动日活_定向特训": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "定向特训"
+        ],
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": -605,
+                "y": 239
+            }
+        },
+        "next": [
+            "活动日活_前往试炼"
         ]
     }
 }
