@@ -104,5 +104,176 @@
         "next": [
             "活动日活_活动入口"
         ]
+    },
+    "活动日活_决雍作战": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "最高评分"
+        ],
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": -1636,
+                "y": 235
+            }
+        },
+        "next": [
+            "活动日活_前往试炼"
+        ]
+    },
+    "活动日活_前往试炼": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "前往"
+        ],
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": -1376,
+                "y": 235
+            }
+        },
+        "next": [
+            "活动日活_清除分数"
+        ]
+    },
+    "活动日活_清除分数": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "重置"
+        ],
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": -1116,
+                "y": 235
+            }
+        },
+        "next": [
+            "活动日活_开始作战"
+        ]
+    },
+    "活动日活_开始作战": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "开始作战"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": -856,
+                "y": 235
+            }
+        },
+        "next": [
+            "活动日活_开始行动"
+        ]
+    },
+    "活动日活_开始行动": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "行动开始"
+        ],
+        "pre_delay": 1000,
+        "rate_limit": 3000,
+        "timeout": 900000,
+        "__yamaape": {
+            "position": {
+                "x": -596,
+                "y": 235
+            }
+        },
+        "next": [
+            "活动日活_下一阶段",
+            "活动日活_作战结束"
+        ],
+        "interrupt": [
+            "活动日活_确保作战开始"
+        ]
+    },
+    "活动日活_下一阶段": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "下一阶段"
+        ],
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": -307,
+                "y": 147
+            }
+        },
+        "next": [
+            "活动日活_开始行动"
+        ]
+    },
+    "活动日活_作战结束": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "作战结束"
+        ],
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": -303,
+                "y": 350
+            }
+        },
+        "next": [
+            "活动日活_作战结算"
+        ]
+    },
+    "活动日活_确保作战开始": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "开始作战"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": -566,
+                "y": 492
+            }
+        }
+    },
+    "活动日活_作战结算": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "返回"
+        ],
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": -43,
+                "y": 350
+            }
+        },
+        "next": [
+            "活动日活_返回活动界面"
+        ]
+    },
+    "活动日活_返回活动界面": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/back.png"
+        ],
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 216,
+                "y": 349
+            }
+        },
+        "next": [
+            "活动日活_进入领取界面"
+        ]
     }
 }
