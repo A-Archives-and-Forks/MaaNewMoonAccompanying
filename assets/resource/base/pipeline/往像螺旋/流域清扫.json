@@ -1,0 +1,327 @@
+{
+    "__yamaape_config_流域清扫": {
+        "filename": "流域清扫",
+        "version": "v0.3.4",
+        "prefix": "流域清扫"
+    },
+    "流域清扫_开始": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": 3101,
+                "y": 311
+            }
+        },
+        "next": [
+            "流域清扫_检查区域"
+        ]
+    },
+    "流域清扫_检查区域": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "pre_delay": 1,
+        "post_delay": 1,
+        "__yamaape": {
+            "position": {
+                "x": 3361,
+                "y": 311
+            }
+        },
+        "next": [
+            "流域清扫_挑战结束",
+            "流域清扫_危险区",
+            "流域清扫_预警区",
+            "流域清扫_安全区"
+        ]
+    },
+    "流域清扫_检查结束": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "post_delay": 2000,
+        "__yamaape": {
+            "position": {
+                "x": 4221,
+                "y": 308
+            }
+        },
+        "next": [
+            "流域清扫_重新检查"
+        ]
+    },
+    "流域清扫_重新检查": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "pre_delay": 1,
+        "post_delay": 1,
+        "__yamaape": {
+            "position": {
+                "x": 4534,
+                "y": 48
+            }
+        },
+        "next": [
+            "流域清扫_检查区域"
+        ]
+    },
+    "流域清扫_危险区": {
+        "recognition": "TemplateMatch",
+        "action": "DoNothing",
+        "template": [
+            "../image/往像螺旋/ltt.png",
+            "../image/往像螺旋/lbt.png",
+            "../image/往像螺旋/block.png",
+            "../image/往像螺旋/rtt.png",
+            "../image/往像螺旋/rbt.png"
+        ],
+        "roi": [
+            905,
+            30,
+            97,
+            657
+        ],
+        "pre_delay": 1,
+        "post_delay": 1,
+        "__yamaape": {
+            "position": {
+                "x": 3638,
+                "y": 310
+            }
+        },
+        "next": [
+            "流域清扫_危险三角",
+            "流域清扫_危险方块"
+        ]
+    },
+    "流域清扫_危险三角": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/往像螺旋/ltt.png",
+            "../image/往像螺旋/lbt.png",
+            "../image/往像螺旋/rtt.png",
+            "../image/往像螺旋/rbt.png"
+        ],
+        "index": -1,
+        "roi": [
+            905,
+            30,
+            97,
+            657
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3930,
+                "y": 307
+            }
+        },
+        "next": [
+            "流域清扫_检查结束"
+        ]
+    },
+    "流域清扫_危险方块": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/往像螺旋/block.png"
+        ],
+        "index": -1,
+        "roi": [
+            905,
+            30,
+            97,
+            657
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3932,
+                "y": 534
+            }
+        },
+        "next": [
+            "流域清扫_检查结束"
+        ]
+    },
+    "流域清扫_安全区": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "pre_delay": 1,
+        "post_delay": 1,
+        "__yamaape": {
+            "position": {
+                "x": 3642,
+                "y": 1285
+            }
+        },
+        "next": [
+            "流域清扫_分散",
+            "流域清扫_加号",
+            "流域清扫_连排",
+            "流域清扫_其他"
+        ]
+    },
+    "流域清扫_分散": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/往像螺旋/triple.png"
+        ],
+        "index": -1,
+        "__yamaape": {
+            "position": {
+                "x": 3928,
+                "y": 1283
+            }
+        },
+        "next": [
+            "流域清扫_检查结束"
+        ]
+    },
+    "流域清扫_加号": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/往像螺旋/add.png"
+        ],
+        "index": -1,
+        "__yamaape": {
+            "position": {
+                "x": 3931,
+                "y": 1479
+            }
+        },
+        "next": [
+            "流域清扫_检查结束"
+        ]
+    },
+    "流域清扫_连排": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/往像螺旋/lr.png",
+            "../image/往像螺旋/tb.png"
+        ],
+        "index": -1,
+        "__yamaape": {
+            "position": {
+                "x": 3930,
+                "y": 1679
+            }
+        },
+        "next": [
+            "流域清扫_检查结束"
+        ]
+    },
+    "流域清扫_挑战结束": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "返回选择"
+        ],
+        "focus": "> 挑战结束",
+        "__yamaape": {
+            "position": {
+                "x": 3640,
+                "y": 114
+            }
+        }
+    },
+    "流域清扫_其他": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/往像螺旋/ltt.png",
+            "../image/往像螺旋/lbt.png",
+            "../image/往像螺旋/rtt.png",
+            "../image/往像螺旋/rbt.png"
+        ],
+        "index": -1,
+        "__yamaape": {
+            "position": {
+                "x": 3929,
+                "y": 1881
+            }
+        },
+        "next": [
+            "流域清扫_检查结束"
+        ]
+    },
+    "流域清扫_预警区": {
+        "recognition": "TemplateMatch",
+        "action": "DoNothing",
+        "template": [
+            "../image/往像螺旋/ltt.png",
+            "../image/往像螺旋/lbt.png",
+            "../image/往像螺旋/block.png",
+            "../image/往像螺旋/rtt.png",
+            "../image/往像螺旋/rbt.png"
+        ],
+        "roi": [
+            726,
+            30,
+            183,
+            659
+        ],
+        "pre_delay": 1,
+        "post_delay": 1,
+        "__yamaape": {
+            "position": {
+                "x": 3641,
+                "y": 782
+            }
+        },
+        "next": [
+            "流域清扫_预警三角",
+            "流域清扫_预警方块"
+        ]
+    },
+    "流域清扫_预警三角": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/往像螺旋/ltt.png",
+            "../image/往像螺旋/lbt.png",
+            "../image/往像螺旋/rtt.png",
+            "../image/往像螺旋/rbt.png"
+        ],
+        "index": -1,
+        "roi": [
+            726,
+            30,
+            183,
+            659
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3932,
+                "y": 781
+            }
+        },
+        "next": [
+            "流域清扫_检查结束"
+        ]
+    },
+    "流域清扫_预警方块": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/往像螺旋/block.png"
+        ],
+        "index": -1,
+        "roi": [
+            726,
+            30,
+            183,
+            659
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3932,
+                "y": 1020
+            }
+        },
+        "next": [
+            "流域清扫_检查结束"
+        ]
+    }
+}
