@@ -80,8 +80,34 @@
             }
         },
         "next": [
+            "卡带升级_检查返还材料",
             "卡带升级_检测当前等级"
         ]
+    },
+    "卡带升级_确定突破": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "pre_delay": 400,
+        "template": [
+            "../image/confirm.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 2019,
+                "y": 503
+            }
+        }
+    },
+    "卡带升级_卡带不足结束": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "focus": "> 卡带不足！",
+        "__yamaape": {
+            "position": {
+                "x": 2028,
+                "y": 918
+            }
+        }
     },
     "卡带升级_检测当前等级": {
         "recognition": "DirectHit",
@@ -295,17 +321,6 @@
             "卡带升级_加速提升"
         ]
     },
-    "卡带升级_卡带不足结束": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "focus": "> 卡带不足！",
-        "__yamaape": {
-            "position": {
-                "x": 2028,
-                "y": 918
-            }
-        }
-    },
     "卡带升级_选择模块组": {
         "recognition": "DirectHit",
         "action": "Click",
@@ -346,6 +361,20 @@
             "卡带升级_加速提升"
         ]
     },
+    "卡带升级_模组块不足结束": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/close.png"
+        ],
+        "focus": "> 模组块不足！",
+        "__yamaape": {
+            "position": {
+                "x": 1291,
+                "y": 1086
+            }
+        }
+    },
     "卡带升级_启动": {
         "recognition": "DirectHit",
         "action": "Custom",
@@ -382,32 +411,21 @@
             "卡带升级_已升级至指定等级"
         ]
     },
-    "卡带升级_模组块不足结束": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "../image/close.png"
-        ],
-        "focus": "> 模组块不足！",
-        "__yamaape": {
-            "position": {
-                "x": 1291,
-                "y": 1086
-            }
-        }
-    },
-    "卡带升级_确定突破": {
-        "recognition": "TemplateMatch",
+    "卡带升级_检查返还材料": {
+        "recognition": "OCR",
         "action": "Click",
         "pre_delay": 400,
-        "template": [
-            "../image/confirm.png"
+        "expected": [
+            "获得物品"
         ],
         "__yamaape": {
             "position": {
-                "x": 2019,
-                "y": 503
+                "x": 2304,
+                "y": 98
             }
-        }
+        },
+        "next": [
+            "卡带升级_检测当前等级"
+        ]
     }
 }
