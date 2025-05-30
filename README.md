@@ -128,8 +128,10 @@
 
 ## 更新记录
 
-### Next Version (Committed but Unreleased)
+### Next Version (Committed)
 
+- **新增**
+  - 新增选项：「往像螺旋」领取每日尘质-自动捕捞奖池
 - **修复优化**
   - 修复了卡带突破会卡在材料返还页面的问题
   - 将每日决雍作战关卡调整为「未开之花」

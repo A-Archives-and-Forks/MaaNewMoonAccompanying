@@ -59,7 +59,7 @@
             "活动日活_获取奖励"
         ],
         "on_error": [
-            "活动日活_返回主界面"
+            "活动日活_领取奖励完成"
         ]
     },
     "活动日活_获取奖励": {
@@ -76,23 +76,21 @@
             }
         },
         "next": [
-            "活动日活_返回主界面"
+            "活动日活_领取奖励完成"
         ]
     },
-    "活动日活_返回主界面": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "../image/home.png"
-        ],
-        "pre_delay": 200,
-        "post_delay": 3000,
+    "活动日活_领取奖励完成": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": 1387,
-                "y": -21
+                "x": 1320,
+                "y": 22
             }
-        }
+        },
+        "next": [
+            "活动日活_回到主页"
+        ]
     },
     "活动日活_开始": {
         "recognition": "DirectHit",
@@ -117,8 +115,8 @@
         "order_by": "Vertical",
         "__yamaape": {
             "position": {
-                "x": -352,
-                "y": 239
+                "x": -378,
+                "y": 178
             }
         },
         "next": [
@@ -134,8 +132,8 @@
         "pre_delay": 800,
         "__yamaape": {
             "position": {
-                "x": -92,
-                "y": 239
+                "x": -118,
+                "y": 178
             }
         },
         "next": [
@@ -150,8 +148,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 168,
-                "y": 239
+                "x": 142,
+                "y": 178
             }
         },
         "next": [
@@ -170,8 +168,8 @@
         "focus": "> 开始行动",
         "__yamaape": {
             "position": {
-                "x": -545,
-                "y": 483
+                "x": -571,
+                "y": 422
             }
         },
         "next": [
@@ -191,8 +189,8 @@
         "focus": "> 作战结束",
         "__yamaape": {
             "position": {
-                "x": -296,
-                "y": 482
+                "x": -322,
+                "y": 421
             }
         },
         "next": [
@@ -207,8 +205,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": -295,
-                "y": 710
+                "x": -321,
+                "y": 649
             }
         }
     },
@@ -221,8 +219,8 @@
         "pre_delay": 800,
         "__yamaape": {
             "position": {
-                "x": -36,
-                "y": 482
+                "x": -62,
+                "y": 421
             }
         },
         "next": [
@@ -238,8 +236,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 223,
-                "y": 481
+                "x": 197,
+                "y": 420
             }
         },
         "next": [
@@ -256,8 +254,8 @@
         "focus": "> 每日作战",
         "__yamaape": {
             "position": {
-                "x": -865,
-                "y": 239
+                "x": -891,
+                "y": 178
             }
         },
         "next": [
@@ -273,12 +271,216 @@
         "pre_delay": 800,
         "__yamaape": {
             "position": {
-                "x": -605,
-                "y": 239
+                "x": -631,
+                "y": 178
             }
         },
         "next": [
             "活动日活_前往试炼"
+        ]
+    },
+    "活动日活_回到主页": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/home.png"
+        ],
+        "pre_delay": 200,
+        "post_delay": 3000,
+        "__yamaape": {
+            "position": {
+                "x": 1610,
+                "y": -49
+            }
+        }
+    },
+    "活动日活_进入抽取奖励界面": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "垂网"
+        ],
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 721,
+                "y": 333
+            }
+        },
+        "next": [
+            "活动日活_捕捞10次"
+        ]
+    },
+    "活动日活_捕捞10次": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "捕捞10次"
+        ],
+        "pre_delay": 400,
+        "focus": "> 我的回合，抽卡！",
+        "__yamaape": {
+            "position": {
+                "x": 981,
+                "y": 333
+            }
+        },
+        "next": [
+            "活动日活_领取捕捞奖励",
+            "活动日活_大鱼落网",
+            "活动日活_10次尘质不足"
+        ]
+    },
+    "活动日活_领取捕捞奖励": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击以继续"
+        ],
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 1532,
+                "y": 294
+            }
+        },
+        "next": [
+            "活动日活_再次抽取"
+        ]
+    },
+    "活动日活_再次抽取": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": 1771,
+                "y": 195
+            }
+        },
+        "next": [
+            "活动日活_捕捞10次"
+        ],
+        "interrupt": [
+            "活动日活_新捕捞区"
+        ]
+    },
+    "活动日活_大鱼落网": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "落网"
+        ],
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 1249,
+                "y": 433
+            }
+        },
+        "next": [
+            "活动日活_领取捕捞奖励"
+        ]
+    },
+    "活动日活_新捕捞区": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "确定"
+        ],
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 2035,
+                "y": 266
+            }
+        }
+    },
+    "活动日活_切换次数": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "focus": "> 这是我最后的波纹了！",
+        "custom_action": "set_str_node_attrs",
+        "custom_action_param": "node=活动日活_再次抽取&keys=next&values=活动日活_捕捞1次",
+        "post_delay": 3000,
+        "__yamaape": {
+            "position": {
+                "x": 727,
+                "y": 708
+            }
+        },
+        "next": [
+            "活动日活_捕捞1次"
+        ]
+    },
+    "活动日活_捕捞1次": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "捕捞1次"
+        ],
+        "pre_delay": 400,
+        "focus": "> 我的回合，抽卡！",
+        "__yamaape": {
+            "position": {
+                "x": 990,
+                "y": 708
+            }
+        },
+        "next": [
+            "活动日活_领取捕捞奖励",
+            "活动日活_大鱼落网",
+            "活动日活_捕捞结束"
+        ]
+    },
+    "活动日活_10次尘质不足": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "尘质不足"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 457,
+                "y": 706
+            }
+        },
+        "next": [
+            "活动日活_切换次数"
+        ]
+    },
+    "活动日活_捕捞结束": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "尘质不足"
+        ],
+        "focus": "> 燃尽力",
+        "__yamaape": {
+            "position": {
+                "x": 1299,
+                "y": 730
+            }
+        },
+        "next": [
+            "活动日活_回到主页"
+        ]
+    },
+    "活动日活_从奖励返回活动界面": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/back.png"
+        ],
+        "pre_delay": 800,
+        "focus": "> 进入捕捞界面",
+        "__yamaape": {
+            "position": {
+                "x": 469,
+                "y": 331
+            }
+        },
+        "next": [
+            "活动日活_进入抽取奖励界面"
         ]
     }
 }
