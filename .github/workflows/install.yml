@@ -162,7 +162,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: MaaNewMoonAccompany-${{ matrix.os }}-${{ matrix.arch }}
+          name: MaaNewMoonAccompanying-${{ matrix.os }}-${{ matrix.arch }}
           path: "install"
 
   release:
