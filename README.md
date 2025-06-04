@@ -13,7 +13,7 @@
   <a href="https://www.python.org/" target="_blank"><img alt="python" src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white"></a>
   <a href="https://github.com/MaaXYZ/MaaFramework/blob/main/docs/zh_cn/3.1-%E4%BB%BB%E5%8A%A1%E6%B5%81%E6%B0%B4%E7%BA%BF%E5%8D%8F%E8%AE%AE.md" target="_blank"><img alt="pipeline" src="https://img.shields.io/badge/Pipeline-%23876f69?logo=paddypower&logoColor=%23FFFFFF"></a>
   <a href="https://github.com/kqcoxn/MaaNewMoonAccompanying/releases" target="_blank"><img alt="platform" src="https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-blueviolet"></a>
-  <a href="https://mirrorchyan.com/zh/projects" target="_blank"><img alt="mirrorc" src="https://img.shields.io/badge/Mirror%E9%85%B1-%239af3f6?logo=countingworkspro&logoColor=4f46e5"></a>
+  <a href="https://mirrorchyan.com/zh/projects&source=github-code" target="_blank"><img alt="mirrorc" src="https://img.shields.io/badge/Mirror%E9%85%B1-%239af3f6?logo=countingworkspro&logoColor=4f46e5"></a>
   <br/>
   <a href="https://github.com/kqcoxn/MaaNewMoonAccompanying/commits/main/" target="_blank"><img alt="committs" src="https://img.shields.io/github/commit-activity/m/kqcoxn/MaaNewMoonAccompanying?color=%23ff69b4"></a>
   <a href="https://github.com/kqcoxn/MaaNewMoonAccompanying/stargazers" target="_blank"><img alt="stars" src="https://img.shields.io/github/stars/kqcoxn/MaaNewMoonAccompanying?style=social"></a>
@@ -135,7 +135,7 @@
 > 2025.6.1
 
 - **修复优化**
-  - 修复了MFAA`1.3.9`以上版本无法连接至模拟器的问题
+  - 修复了MFAA`1.2.9`以上版本无法连接至模拟器的问题
 
 ### v1.1.6
 
@@ -237,6 +237,6 @@
 - **本项目由 **[MaaFramework](https://github.com/MaaXYZ/MaaFramework)** 强力驱动！**
 - Pipeline 编辑器：[YAMaaPE](https://github.com/kqcoxn/YAMaaPE)
 - GUI：[MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia/tree/master)
-- 分发：[Mirror酱](https://mirrorchyan.com/zh/get-start)
+- 分发：[Mirror酱](https://mirrorchyan.com/zh/get-start&source=github-code)
 
 游戏官网：[烛薪网络-新月同行](https://xytx.firewick.net/home)

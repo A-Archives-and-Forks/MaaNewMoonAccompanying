@@ -23,5 +23,5 @@ Bug反馈请在群内询问，或直接[提交issue](https://github.com/kqcoxn/M
 
 - 本项目由 **[MaaFramework](https://github.com/MaaXYZ/MaaFramework)** 强力驱动！
 - GUI：[MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia/tree/master)
-- 分发：[Mirror酱](https://mirrorchyan.com/zh/get-start)
+- 分发：[Mirror酱](https://mirrorchyan.com/zh/get-start&source=mnma-anno)
 - Pipeline 编辑器：[YAMaaPE](https://github.com/kqcoxn/YAMaaPE)
