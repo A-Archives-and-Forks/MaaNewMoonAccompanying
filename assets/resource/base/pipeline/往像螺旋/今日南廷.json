@@ -1,0 +1,206 @@
+{
+    "__yamaape_config_今日南廷": {
+        "filename": "今日南廷",
+        "version": "v0.3.4",
+        "export": "",
+        "prefix": "今日南廷"
+    },
+    "今日南廷_开始": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": -47,
+                "y": -96
+            }
+        },
+        "next": [
+            "今日南廷_活动界面"
+        ]
+    },
+    "今日南廷_活动界面": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "活动"
+        ],
+        "post_delay": 2000,
+        "focus": "> 进入活动界面",
+        "__yamaape": {
+            "position": {
+                "x": 224,
+                "y": -117
+            }
+        },
+        "next": [
+            "今日南廷_活动面板"
+        ],
+        "interrupt": [
+            "今日南廷_滑动"
+        ]
+    },
+    "今日南廷_活动面板": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "南廷大事"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 507,
+                "y": -143
+            }
+        },
+        "next": [
+            "今日南廷_今日奖励",
+            "今日南廷_未完成",
+            "今日南廷_已完成"
+        ]
+    },
+    "今日南廷_滑动": {
+        "recognition": "DirectHit",
+        "action": "Swipe",
+        "begin": [
+            145,
+            470,
+            1,
+            1
+        ],
+        "end": [
+            145,
+            270,
+            1,
+            1
+        ],
+        "duration": 200,
+        "post_delay": 1,
+        "__yamaape": {
+            "position": {
+                "x": 502,
+                "y": 287
+            }
+        },
+        "next": [
+            "今日南廷_停止滑动"
+        ]
+    },
+    "今日南廷_今日奖励": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "pre_delay": 800,
+        "focus": "> 获取奖励",
+        "template": [
+            "../image/往像螺旋/sign.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 821,
+                "y": 12
+            }
+        },
+        "next": [
+            "今日南廷_领取补给体力"
+        ]
+    },
+    "今日南廷_停止滑动": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            145,
+            470,
+            1,
+            1
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 758,
+                "y": 295
+            }
+        }
+    },
+    "今日南廷_领取补给体力": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击以继续"
+        ],
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 1072,
+                "y": 13
+            }
+        },
+        "next": [
+            "今日南廷_下一篇"
+        ]
+    },
+    "今日南廷_下一篇": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "下一篇简报"
+        ],
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1325,
+                "y": 12
+            }
+        },
+        "next": [
+            "今日南廷_返回主页"
+        ]
+    },
+    "今日南廷_未完成": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "前往获得"
+        ],
+        "focus": "> 未达到领取条件！",
+        "__yamaape": {
+            "position": {
+                "x": 822,
+                "y": -191
+            }
+        },
+        "next": [
+            "今日南廷_返回主页"
+        ]
+    },
+    "今日南廷_返回主页": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/home.png"
+        ],
+        "pre_delay": 400,
+        "post_delay": 3000,
+        "focus": "> 回到主界面",
+        "__yamaape": {
+            "position": {
+                "x": 1666,
+                "y": -261
+            }
+        }
+    },
+    "今日南廷_已完成": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "下一篇简报",
+            "明天再来"
+        ],
+        "focus": "> 今日奖励已领取",
+        "__yamaape": {
+            "position": {
+                "x": 822,
+                "y": -395
+            }
+        },
+        "next": [
+            "今日南廷_返回主页"
+        ]
+    }
+}
