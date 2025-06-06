@@ -99,7 +99,7 @@
             "../image/home.png"
         ],
         "pre_delay": 200,
-        "post_delay": 3000,
+        "post_delay": 5000,
         "__yamaape": {
             "position": {
                 "x": 1610,
@@ -136,6 +136,9 @@
         },
         "next": [
             "活动日活_清除分数"
+        ],
+        "interrupt": [
+            "活动日活_确认前往"
         ]
     },
     "活动日活_清除分数": {
@@ -284,6 +287,7 @@
             "定向特训"
         ],
         "pre_delay": 800,
+        "post_delay": 1000,
         "__yamaape": {
             "position": {
                 "x": -631,
@@ -400,20 +404,6 @@
             "活动日活_新捕捞区"
         ]
     },
-    "活动日活_新捕捞区": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "确定"
-        ],
-        "pre_delay": 800,
-        "__yamaape": {
-            "position": {
-                "x": 2035,
-                "y": 266
-            }
-        }
-    },
     "活动日活_切换次数": {
         "recognition": "DirectHit",
         "action": "Custom",
@@ -430,6 +420,20 @@
         "next": [
             "活动日活_捕捞1次"
         ]
+    },
+    "活动日活_新捕捞区": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "确定"
+        ],
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 2035,
+                "y": 266
+            }
+        }
     },
     "活动日活_捕捞1次": {
         "recognition": "OCR",
@@ -485,5 +489,19 @@
         "next": [
             "活动日活_进入抽取奖励界面"
         ]
+    },
+    "活动日活_确认前往": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "前往"
+        ],
+        "order_by": "Vertical",
+        "__yamaape": {
+            "position": {
+                "x": -328,
+                "y": -15
+            }
+        }
     }
 }
