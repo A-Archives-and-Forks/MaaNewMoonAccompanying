@@ -273,6 +273,54 @@
             "冰饮_开始个人挑战"
         ]
     },
+    "冰饮_个人挑战已完成": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "1/1"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3679,
+                "y": 1614
+            }
+        },
+        "next": [
+            "冰饮_检查是否已领奖"
+        ]
+    },
+    "冰饮_个人挑战未完成": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "focus": "> 个人挑战未刷新",
+        "__yamaape": {
+            "position": {
+                "x": 3676,
+                "y": 1776
+            }
+        },
+        "next": [
+            "冰饮_检查协助作战记录"
+        ]
+    },
+    "冰饮_开始协助挑战": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "开始挑战"
+        ],
+        "pre_delay": 400,
+        "focus": "> 开始行动",
+        "__yamaape": {
+            "position": {
+                "x": 4219,
+                "y": 2138
+            }
+        },
+        "next": [
+            "冰饮_协助行动开始"
+        ]
+    },
     "冰饮_开始个人挑战": {
         "recognition": "OCR",
         "action": "Click",
@@ -510,7 +558,6 @@
         "action": "Click",
         "pre_delay": 400,
         "focus": "> 返回主界面",
-        "post_delay": 3000,
         "template": [
             "../image/home.png"
         ],
@@ -519,7 +566,10 @@
                 "x": 3969,
                 "y": 2898
             }
-        }
+        },
+        "next": [
+            "冰饮_确认返回主界面"
+        ]
     },
     "冰饮_协助挑战完成": {
         "recognition": "DirectHit",
@@ -535,24 +585,6 @@
         },
         "next": [
             "冰饮_冰饮检查完成"
-        ]
-    },
-    "冰饮_开始协助挑战": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "开始挑战"
-        ],
-        "pre_delay": 400,
-        "focus": "> 开始行动",
-        "__yamaape": {
-            "position": {
-                "x": 4219,
-                "y": 2138
-            }
-        },
-        "next": [
-            "冰饮_协助行动开始"
         ]
     },
     "冰饮_协助行动开始": {
@@ -706,36 +738,6 @@
             }
         }
     },
-    "冰饮_个人挑战已完成": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "1/1"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 3679,
-                "y": 1614
-            }
-        },
-        "next": [
-            "冰饮_检查是否已领奖"
-        ]
-    },
-    "冰饮_个人挑战未完成": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "focus": "> 个人挑战未刷新",
-        "__yamaape": {
-            "position": {
-                "x": 3676,
-                "y": 1776
-            }
-        },
-        "next": [
-            "冰饮_检查协助作战记录"
-        ]
-    },
     "冰饮_检查是否已领奖": {
         "recognition": "OCR",
         "action": "Click",
@@ -857,21 +859,6 @@
             "冰饮_结束配队"
         ]
     },
-    "冰饮_助战队伍": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "set_str_node_attrs",
-        "custom_action_param": "node=冰饮_结束配队&keys=next&values=冰饮_协助行动开始",
-        "__yamaape": {
-            "position": {
-                "x": 2934,
-                "y": 598
-            }
-        },
-        "next": [
-            "冰饮_指定作战队伍"
-        ]
-    },
     "冰饮_检测是否已检测": {
         "recognition": "DirectHit",
         "action": "Custom",
@@ -901,6 +888,21 @@
                 "y": 671
             }
         }
+    },
+    "冰饮_助战队伍": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "set_str_node_attrs",
+        "custom_action_param": "node=冰饮_结束配队&keys=next&values=冰饮_协助行动开始",
+        "__yamaape": {
+            "position": {
+                "x": 2934,
+                "y": 598
+            }
+        },
+        "next": [
+            "冰饮_指定作战队伍"
+        ]
     },
     "冰饮_检测配队是否正确": {
         "recognition": "OCR",
@@ -1084,5 +1086,19 @@
         "next": [
             "冰饮_初始化配队计数"
         ]
+    },
+    "冰饮_确认返回主界面": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "城市探索"
+        ],
+        "post_delay": 3000,
+        "__yamaape": {
+            "position": {
+                "x": 4229,
+                "y": 2898
+            }
+        }
     }
 }

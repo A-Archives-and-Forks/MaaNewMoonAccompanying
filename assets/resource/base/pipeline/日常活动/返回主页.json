@@ -1,13 +1,18 @@
 {
     "__yamaape_config_返回主页": {
-        "version": "v0.3.1",
-        "export": ""
+        "filename": "返回主页",
+        "version": "v0.3.4",
+        "export": "",
+        "prefix": "返回主页"
     },
-    "返回主页": {
+    "返回主页_开始": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "focus": "> 尝试回到主界面",
         "__yamaape": {
             "position": {
-                "x": 0,
-                "y": 0
+                "x": -57,
+                "y": -20
             }
         },
         "next": [
@@ -40,10 +45,12 @@
         "expected": [
             "城市探索"
         ],
+        "post_delay": 3000,
+        "focus": "> 已回到主界面",
         "__yamaape": {
             "position": {
-                "x": 841,
-                "y": -45
+                "x": 888,
+                "y": -73
             }
         }
     },
@@ -82,8 +89,8 @@
         "post_delay": 500,
         "__yamaape": {
             "position": {
-                "x": 586,
-                "y": 275
+                "x": 585,
+                "y": 282
             }
         }
     },

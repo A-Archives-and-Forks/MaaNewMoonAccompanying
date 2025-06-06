@@ -2,7 +2,8 @@
     "__yamaape_config_工坊开放日": {
         "filename": "工坊开放日",
         "version": "v0.3.4",
-        "prefix": "工坊开放日"
+        "prefix": "工坊开放日",
+        "export": ""
     },
     "工坊开放日_开始": {
         "recognition": "DirectHit",
@@ -119,6 +120,23 @@
         "__yamaape": {
             "position": {
                 "x": 2346,
+                "y": 92
+            }
+        },
+        "next": [
+            "工坊开放日_确认回到主界面"
+        ]
+    },
+    "工坊开放日_确认回到主界面": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "城市探索"
+        ],
+        "post_delay": 3000,
+        "__yamaape": {
+            "position": {
+                "x": 2606,
                 "y": 92
             }
         }

@@ -168,15 +168,17 @@
         "template": [
             "../image/home.png"
         ],
-        "post_delay": 3000,
         "focus": "> 返回主界面",
         "pre_delay": 400,
         "__yamaape": {
             "position": {
                 "x": 1770,
-                "y": 435
+                "y": 450
             }
-        }
+        },
+        "next": [
+            "友谊交换_确认返回主界面"
+        ]
     },
     "友谊交换_好友已到上线": {
         "recognition": "OCR",
@@ -208,5 +210,19 @@
         "next": [
             "友谊交换_友谊界面"
         ]
+    },
+    "友谊交换_确认返回主界面": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "城市探索"
+        ],
+        "post_delay": 3000,
+        "__yamaape": {
+            "position": {
+                "x": 2030,
+                "y": 450
+            }
+        }
     }
 }

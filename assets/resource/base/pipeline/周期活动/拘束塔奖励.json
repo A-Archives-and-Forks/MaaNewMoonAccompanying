@@ -208,10 +208,27 @@
         "template": [
             "../image/home.png"
         ],
-        "post_delay": 3000,
+        "pre_delay": 400,
         "__yamaape": {
             "position": {
                 "x": 2845,
+                "y": 1445
+            }
+        },
+        "next": [
+            "拘束塔奖励_确认返回主页"
+        ]
+    },
+    "拘束塔奖励_确认返回主页": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "城市探索"
+        ],
+        "post_delay": 3000,
+        "__yamaape": {
+            "position": {
+                "x": 3105,
                 "y": 1445
             }
         }

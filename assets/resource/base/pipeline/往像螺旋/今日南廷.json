@@ -102,6 +102,41 @@
             "今日南廷_领取补给体力"
         ]
     },
+    "今日南廷_未完成": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "前往获得"
+        ],
+        "focus": "> 未达到领取条件！",
+        "__yamaape": {
+            "position": {
+                "x": 822,
+                "y": -191
+            }
+        },
+        "next": [
+            "今日南廷_返回主页"
+        ]
+    },
+    "今日南廷_已完成": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "下一篇简报",
+            "明天再来"
+        ],
+        "focus": "> 今日奖励已领取",
+        "__yamaape": {
+            "position": {
+                "x": 822,
+                "y": -395
+            }
+        },
+        "next": [
+            "今日南廷_返回主页"
+        ]
+    },
     "今日南廷_停止滑动": {
         "recognition": "DirectHit",
         "action": "Click",
@@ -135,6 +170,24 @@
             "今日南廷_下一篇"
         ]
     },
+    "今日南廷_返回主页": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/home.png"
+        ],
+        "pre_delay": 400,
+        "focus": "> 回到主界面",
+        "__yamaape": {
+            "position": {
+                "x": 1665,
+                "y": -245
+            }
+        },
+        "next": [
+            "今日南廷_确定回到主界面"
+        ]
+    },
     "今日南廷_下一篇": {
         "recognition": "OCR",
         "action": "Click",
@@ -152,55 +205,18 @@
             "今日南廷_返回主页"
         ]
     },
-    "今日南廷_未完成": {
+    "今日南廷_确定回到主界面": {
         "recognition": "OCR",
         "action": "DoNothing",
         "expected": [
-            "前往获得"
+            "城市探索"
         ],
-        "focus": "> 未达到领取条件！",
-        "__yamaape": {
-            "position": {
-                "x": 822,
-                "y": -191
-            }
-        },
-        "next": [
-            "今日南廷_返回主页"
-        ]
-    },
-    "今日南廷_返回主页": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "../image/home.png"
-        ],
-        "pre_delay": 400,
         "post_delay": 3000,
-        "focus": "> 回到主界面",
         "__yamaape": {
             "position": {
-                "x": 1666,
-                "y": -261
+                "x": 1927,
+                "y": -236
             }
         }
-    },
-    "今日南廷_已完成": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "下一篇简报",
-            "明天再来"
-        ],
-        "focus": "> 今日奖励已领取",
-        "__yamaape": {
-            "position": {
-                "x": 822,
-                "y": -395
-            }
-        },
-        "next": [
-            "今日南廷_返回主页"
-        ]
     }
 }

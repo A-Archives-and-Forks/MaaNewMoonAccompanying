@@ -1,7 +1,9 @@
 {
     "__yamaape_config_七日签到": {
-        "version": "v0.3.1",
-        "export": ""
+        "filename": "七日签到",
+        "version": "v0.3.4",
+        "export": "",
+        "prefix": "七日签到"
     },
     "七日签到_领取今日奖励": {
         "recognition": "OCR",
@@ -29,13 +31,16 @@
             1,
             1
         ],
-        "post_delay": 3000,
+        "pre_delay": 400,
         "__yamaape": {
             "position": {
                 "x": 1115,
                 "y": 81
             }
-        }
+        },
+        "next": [
+            "七日签到_确认返回主页"
+        ]
     },
     "七日签到_活动签到": {
         "recognition": "OCR",
@@ -106,11 +111,13 @@
             "七日签到_关闭签到界面"
         ]
     },
-    "七日签到": {
+    "七日签到_开始": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": -279,
-                "y": -30
+                "x": -327,
+                "y": -61
             }
         },
         "next": [
@@ -139,6 +146,20 @@
             "position": {
                 "x": 234,
                 "y": 118
+            }
+        }
+    },
+    "七日签到_确认返回主页": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "城市探索"
+        ],
+        "post_delay": 3000,
+        "__yamaape": {
+            "position": {
+                "x": 1375,
+                "y": 81
             }
         }
     }

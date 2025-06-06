@@ -397,14 +397,17 @@
         "template": [
             "../image/home.png"
         ],
-        "post_delay": 3000,
         "focus": "> 返回主界面",
+        "pre_delay": 400,
         "__yamaape": {
             "position": {
                 "x": 3882,
                 "y": 29
             }
-        }
+        },
+        "next": [
+            "每日采购_确认返回主页"
+        ]
     },
     "每日采购_检测是否在白名单": {
         "recognition": "OCR",
@@ -561,5 +564,19 @@
         "next": [
             "每日采购_采购中心"
         ]
+    },
+    "每日采购_确认返回主页": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "城市探索"
+        ],
+        "post_delay": 3000,
+        "__yamaape": {
+            "position": {
+                "x": 4142,
+                "y": 29
+            }
+        }
     }
 }
