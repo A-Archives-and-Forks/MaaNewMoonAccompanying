@@ -106,6 +106,12 @@
 
 - [文图教程](https://docs.codax.site/mnma/docs/users/start.html)
 
+## 加入我们
+
+🐧~~吹水~~交流群：[993245868](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=VMC132QhbMDLi5U62MlDRvtCMj9WOXRr&authKey=yJNKO4sQ%2BBFHpBCLSSEvVOAyz%2FPjknNSl70W3ugg2%2BpELnKmEiHamj1emJMWcLwQ&noverify=0&group_code=993245868)
+
+如果您在使用过程中遇到了问题、有更好的想法、希望参与开发，或是单纯想要聊天吹水，欢迎加入 MNMA 交流群！
+
 ## 免责声明
 
 本软件开源、免费，仅供学习交流使用。若您遇到商家使用本软件进行代练并收费，可能是分发、设备或时间等费用，产生的费用、问题及后果与本软件无关。
@@ -121,12 +127,6 @@
 特别感谢 [@Yakir-George](https://github.com/Yakir-George) 在项目开发时期的测试与反馈！
 
 如果有其他问题，欢迎提交 [issue](https://github.com/kqcoxn/MaaNewMoonAccompanying/issues?q=is%3Aissue)，或在 [交流群](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=VMC132QhbMDLi5U62MlDRvtCMj9WOXRr&authKey=yJNKO4sQ%2BBFHpBCLSSEvVOAyz%2FPjknNSl70W3ugg2%2BpELnKmEiHamj1emJMWcLwQ&noverify=0&group_code=993245868) 内提问，您的反馈将使更多组长受益！
-
-## 加入我们
-
-🐧~~吹水~~交流群：[993245868](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=VMC132QhbMDLi5U62MlDRvtCMj9WOXRr&authKey=yJNKO4sQ%2BBFHpBCLSSEvVOAyz%2FPjknNSl70W3ugg2%2BpELnKmEiHamj1emJMWcLwQ&noverify=0&group_code=993245868)
-
-如果您在使用过程中遇到了问题、有更好的想法、希望参与开发，或是单纯想要聊天吹水，欢迎加入 MNMA 交流群！
 
 ## 鸣谢
 
