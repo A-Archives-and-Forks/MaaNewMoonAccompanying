@@ -1,10 +1,10 @@
 {
     "name": "MaaNewMoonAccompanying",
     "url": "https://github.com/kqcoxn/MaaNewMoonAccompanying",
-    "custom_title": "MNMA新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v1.1.10 - MFA | 游戏版本：往像螺旋",
+    "custom_title": "MNMA新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v1.1.11 - MFA | 游戏版本：往像螺旋",
     "mirrorchyan_rid": "MNMA",
     "mirrorchyan_multiplatform": true,
-    "version": "v1.1.10",
+    "version": "v1.1.11",
     "message": "- 新 月 同 行 -",
     "controller": [
         {
@@ -60,11 +60,6 @@
                 "主界面连续静止时间",
                 "确保游戏未运行"
             ],
-            "pipeline_override": {
-                "启动游戏_确认结束": {
-                    "on_error": "返回主页"
-                }
-            },
             "doc": "**启动游戏**：\n\n自动登录并领取签到奖励\n\n**注意：已经进入游戏后且不在主界面时请不要开启此选项**\n\n- 主界面连续静止时间：连续检测n秒是否在主界面（无其他弹窗面板），若检测到则尝试关闭并重置连续检测时间。时长请根据个人网速等情况调节，若任务结束后仍然没有关闭所有面板请尝试增加此选项的时长\n- 确保游戏未运行：执行前先关闭游戏，若游戏无法正常启动请尝试打开此选项\n\n开始界面：进入游戏前/主界面\n\n结束界面：主界面",
             "check": true
         },
