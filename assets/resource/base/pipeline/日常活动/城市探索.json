@@ -1235,7 +1235,8 @@
             "城市探索_作战失败"
         ],
         "interrupt": [
-            "城市探索_确认开始战斗"
+            "城市探索_确认开始战斗",
+            "城市探索_等待指令"
         ]
     },
     "城市探索_确定跳过战前提醒": {
@@ -2114,6 +2115,36 @@
             "position": {
                 "x": 4811,
                 "y": 3047
+            }
+        }
+    },
+    "城市探索_等待指令": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "瞬时调度"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 4406,
+                "y": 1109
+            }
+        },
+        "next": [
+            "城市探索_开启自动战斗"
+        ]
+    },
+    "城市探索_开启自动战斗": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/cycle_outlined.png"
+        ],
+        "post_delay": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 4666,
+                "y": 1109
             }
         }
     }
