@@ -386,7 +386,7 @@
             "城市探索_新案件提示"
         ],
         "on_error": [
-            "城市探索_从调查返回"
+            "城市探索_完成情报收取"
         ]
     },
     "城市探索_开始审阅": {
@@ -435,7 +435,7 @@
             "城市探索_新档案提示"
         ],
         "on_error": [
-            "城市探索_从调查返回"
+            "城市探索_完成情报收取"
         ]
     },
     "城市探索_新案件提示": {
@@ -451,22 +451,18 @@
             }
         }
     },
-    "城市探索_从调查返回": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "../image/back.png"
-        ],
-        "pre_delay": 800,
-        "focus": "> 调查结束",
+    "城市探索_完成情报收取": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": 1442,
-                "y": 1598
+                "x": 1731,
+                "y": 1722
             }
         },
         "next": [
-            "城市探索_城市事件"
+            "城市探索_自动更换",
+            "城市探索_从调查返回"
         ]
     },
     "城市探索_防止审阅失败": {
@@ -501,7 +497,7 @@
             "城市探索_开始审阅"
         ],
         "on_error": [
-            "城市探索_从调查返回"
+            "城市探索_完成情报收取"
         ]
     },
     "城市探索_新档案提示": {
@@ -517,6 +513,24 @@
                 "y": 1979
             }
         }
+    },
+    "城市探索_从调查返回": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/back.png"
+        ],
+        "pre_delay": 800,
+        "focus": "> 调查结束",
+        "__yamaape": {
+            "position": {
+                "x": 2203,
+                "y": 1658
+            }
+        },
+        "next": [
+            "城市探索_城市事件"
+        ]
     },
     "城市探索_城市事件": {
         "recognition": "DirectHit",
@@ -735,8 +749,8 @@
         "focus": "> 线索行动类事件",
         "__yamaape": {
             "position": {
-                "x": 2821,
-                "y": 342
+                "x": 2835,
+                "y": 149
             }
         },
         "next": [
@@ -771,13 +785,27 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 2822,
-                "y": 598
+                "x": 2797,
+                "y": 481
             }
         },
         "next": [
             "城市探索_进入剧情"
         ]
+    },
+    "城市探索_确定返回主页": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "城市探索"
+        ],
+        "post_delay": 3000,
+        "__yamaape": {
+            "position": {
+                "x": 3673,
+                "y": -146
+            }
+        }
     },
     "城市探索_进入战斗": {
         "recognition": "OCR",
@@ -848,8 +876,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 3126,
-                "y": 362
+                "x": 3140,
+                "y": 169
             }
         },
         "next": [
@@ -863,8 +891,8 @@
         "custom_action_param": "t=您需要自行通过第一次线索行动类事件！",
         "__yamaape": {
             "position": {
-                "x": 3126,
-                "y": 178
+                "x": 3140,
+                "y": -15
             }
         },
         "next": [
@@ -884,8 +912,8 @@
         "timeout": 120000,
         "__yamaape": {
             "position": {
-                "x": 3130,
-                "y": 600
+                "x": 3105,
+                "y": 483
             }
         },
         "next": [
@@ -1119,7 +1147,7 @@
         "__yamaape": {
             "position": {
                 "x": 3384,
-                "y": 596
+                "y": 355
             }
         },
         "next": [
@@ -1138,8 +1166,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 3648,
-                "y": 821
+                "x": 3645,
+                "y": 494
             }
         }
     },
@@ -1159,10 +1187,13 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 3385,
-                "y": 802
+                "x": 3383,
+                "y": 552
             }
-        }
+        },
+        "next": [
+            "城市探索_设置倍速"
+        ]
     },
     "城市探索_检查配队计数": {
         "recognition": "DirectHit",
@@ -1204,7 +1235,8 @@
             "城市探索_作战失败"
         ],
         "interrupt": [
-            "城市探索_确认开始战斗"
+            "城市探索_确认开始战斗",
+            "城市探索_等待指令"
         ]
     },
     "城市探索_确定跳过战前提醒": {
@@ -1443,12 +1475,28 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 3648,
-                "y": 622
+                "x": 3654,
+                "y": 318
             }
         },
         "next": [
             "城市探索_确定跳过剧情"
+        ]
+    },
+    "城市探索_设置倍速": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/cycle_outlined.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3634,
+                "y": 702
+            }
+        },
+        "next": [
+            "城市探索_二倍速"
         ]
     },
     "城市探索_检查配队": {
@@ -1572,6 +1620,17 @@
             "城市探索_判断是否结束循环"
         ]
     },
+    "城市探索_识别下一区域": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "select_next_reward",
+        "__yamaape": {
+            "position": {
+                "x": 4514,
+                "y": 3061
+            }
+        }
+    },
     "城市探索_确定跳过战后剧情": {
         "recognition": "OCR",
         "action": "Click",
@@ -1606,10 +1665,24 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 3895,
-                "y": 621
+                "x": 3973,
+                "y": 338
             }
         }
+    },
+    "城市探索_二倍速": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": "城市探索_设置倍速",
+        "__yamaape": {
+            "position": {
+                "x": 3904,
+                "y": 706
+            }
+        },
+        "next": [
+            "城市探索_四倍速"
+        ]
     },
     "城市探索_配队正确": {
         "recognition": "OCR",
@@ -1703,6 +1776,32 @@
             "城市探索_判断是否结束循环"
         ]
     },
+    "城市探索_四倍速": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": "城市探索_设置倍速",
+        "__yamaape": {
+            "position": {
+                "x": 4173,
+                "y": 704
+            }
+        },
+        "next": [
+            "城市探索_结束倍速"
+        ]
+    },
+    "城市探索_结束倍速": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "set_str_node_attrs",
+        "custom_action_param": "node=城市探索_新剧情&keys=next&values=[]",
+        "__yamaape": {
+            "position": {
+                "x": 4433,
+                "y": 704
+            }
+        }
+    },
     "城市探索_划至配队顶部": {
         "recognition": "OCR",
         "action": "Swipe",
@@ -1754,6 +1853,23 @@
             }
         }
     },
+    "城市探索_执行委托": {
+        "recognition": "OCR",
+        "action": "Click",
+        "pre_delay": 400,
+        "expected": [
+            "执行委托"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 4167,
+                "y": 2599
+            }
+        },
+        "next": [
+            "城市探索_结算委托"
+        ]
+    },
     "城市探索_查找指定队伍": {
         "recognition": "OCR",
         "action": "Click",
@@ -1798,41 +1914,6 @@
             "城市探索_配队点停"
         ]
     },
-    "城市探索_执行委托": {
-        "recognition": "OCR",
-        "action": "Click",
-        "pre_delay": 400,
-        "expected": [
-            "执行委托"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 4167,
-                "y": 2599
-            }
-        },
-        "next": [
-            "城市探索_结算委托"
-        ]
-    },
-    "城市探索_结算委托": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "结算委托"
-        ],
-        "pre_delay": 400,
-        "focus": "> 委托结束",
-        "__yamaape": {
-            "position": {
-                "x": 5055,
-                "y": 2550
-            }
-        },
-        "next": [
-            "城市探索_获取事件奖励"
-        ]
-    },
     "城市探索_配队点停": {
         "recognition": "DirectHit",
         "action": "Swipe",
@@ -1857,6 +1938,24 @@
                 "y": 1630
             }
         }
+    },
+    "城市探索_结算委托": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "结算委托"
+        ],
+        "pre_delay": 400,
+        "focus": "> 委托结束",
+        "__yamaape": {
+            "position": {
+                "x": 5055,
+                "y": 2550
+            }
+        },
+        "next": [
+            "城市探索_获取事件奖励"
+        ]
     },
     "城市探索_开始": {
         "recognition": "DirectHit",
@@ -1919,30 +2018,94 @@
             "城市探索_资源收取"
         ]
     },
-    "城市探索_识别下一区域": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "select_next_reward",
-        "__yamaape": {
-            "position": {
-                "x": 4514,
-                "y": 3061
-            }
-        }
-    },
-    "城市探索_确定返回主页": {
+    "城市探索_自动更换": {
         "recognition": "OCR",
-        "action": "DoNothing",
+        "action": "Click",
+        "post_delay": 800,
         "expected": [
-            "城市探索"
+            "请更换事件"
         ],
-        "post_delay": 3000,
         "__yamaape": {
             "position": {
-                "x": 3673,
-                "y": -146
+                "x": 587,
+                "y": 2474
             }
-        }
+        },
+        "next": [
+            "城市探索_选择新事件",
+            "城市探索_切换自由调查"
+        ]
+    },
+    "城市探索_选择新事件": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "0%"
+        ],
+        "roi": [
+            427,
+            152,
+            622,
+            325
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 866,
+                "y": 2461
+            }
+        },
+        "next": [
+            "城市探索_开始调查"
+        ]
+    },
+    "城市探索_切换自由调查": {
+        "recognition": "OCR",
+        "action": "Click",
+        "post_delay": 800,
+        "expected": [
+            "自由调查"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 993,
+                "y": 2668
+            }
+        },
+        "next": [
+            "城市探索_安排特工自由调查"
+        ]
+    },
+    "城市探索_开始调查": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "开始调查"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1389,
+                "y": 2433
+            }
+        },
+        "next": [
+            "城市探索_从调查返回"
+        ]
+    },
+    "城市探索_安排特工自由调查": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "安排特工自由调查"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1260,
+                "y": 2668
+            }
+        },
+        "next": [
+            "城市探索_开始调查"
+        ]
     },
     "城市探索_点击奖励选项": {
         "recognition": "DirectHit",
@@ -1952,6 +2115,36 @@
             "position": {
                 "x": 4811,
                 "y": 3047
+            }
+        }
+    },
+    "城市探索_等待指令": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "瞬时调度"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 4406,
+                "y": 1109
+            }
+        },
+        "next": [
+            "城市探索_开启自动战斗"
+        ]
+    },
+    "城市探索_开启自动战斗": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/cycle_outlined.png"
+        ],
+        "post_delay": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 4666,
+                "y": 1109
             }
         }
     }

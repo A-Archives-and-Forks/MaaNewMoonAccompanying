@@ -73,6 +73,7 @@
         ],
         "interrupt": [
             "蓝色站台_少人作战",
+            "蓝色站台_等待指令",
             "蓝色站台_战斗后检测"
         ]
     },
@@ -282,6 +283,22 @@
             "蓝色站台_物品更替",
             "蓝色站台_跳过多波",
             "蓝色站台_战斗后事件信息"
+        ]
+    },
+    "蓝色站台_等待指令": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "瞬时调度"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 2011,
+                "y": 849
+            }
+        },
+        "next": [
+            "蓝色站台_自动战斗"
         ]
     },
     "蓝色站台_额外消耗-事件": {
@@ -651,6 +668,67 @@
             "蓝色站台_确定少人作战"
         ]
     },
+    "蓝色站台_物品更替": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "获得物品",
+            "失去物品",
+            "物品升级",
+            "激活培养皿效果"
+        ],
+        "focus": "> 确认物品变化",
+        "__yamaape": {
+            "position": {
+                "x": 1799,
+                "y": 442
+            }
+        },
+        "next": [
+            "蓝色站台_确认物品更替"
+        ]
+    },
+    "蓝色站台_跳过多波": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "结算离开"
+        ],
+        "pre_delay": 400,
+        "focus": "> 跳过多波战斗",
+        "__yamaape": {
+            "position": {
+                "x": 1802,
+                "y": 638
+            }
+        }
+    },
+    "蓝色站台_战斗后事件信息": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            25,
+            200,
+            1,
+            1
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1640,
+                "y": 858
+            }
+        },
+        "next": [
+            "蓝色站台_选项-金币",
+            "蓝色站台_选项-物品",
+            "蓝色站台_选项-跑路",
+            "蓝色站台_选项-恢复",
+            "蓝色站台_选项-继续",
+            "蓝色站台_选项-未知",
+            "蓝色站台_点击空白处关闭",
+            "蓝色站台_加速事件剧情"
+        ]
+    },
     "蓝色站台_确定事件选项": {
         "recognition": "TemplateMatch",
         "action": "Click",
@@ -786,6 +864,20 @@
             }
         }
     },
+    "蓝色站台_确认物品更替": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击空白处关闭"
+        ],
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 2047,
+                "y": 441
+            }
+        }
+    },
     "蓝色站台_放弃挑战": {
         "recognition": "OCR",
         "action": "Click",
@@ -868,40 +960,6 @@
             "蓝色站台_确定跳过交易环节",
             "蓝色站台_温控变化-交易"
         ]
-    },
-    "蓝色站台_物品更替": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "获得物品",
-            "失去物品",
-            "物品升级",
-            "激活培养皿效果"
-        ],
-        "focus": "> 确认物品变化",
-        "__yamaape": {
-            "position": {
-                "x": 1799,
-                "y": 442
-            }
-        },
-        "next": [
-            "蓝色站台_确认物品更替"
-        ]
-    },
-    "蓝色站台_确认物品更替": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "点击空白处关闭"
-        ],
-        "pre_delay": 800,
-        "__yamaape": {
-            "position": {
-                "x": 2047,
-                "y": 441
-            }
-        }
     },
     "蓝色站台_确认放弃": {
         "recognition": "OCR",
@@ -1076,32 +1134,6 @@
                 "y": 2763
             }
         }
-    },
-    "蓝色站台_战斗后事件信息": {
-        "recognition": "DirectHit",
-        "action": "Click",
-        "target": [
-            25,
-            200,
-            1,
-            1
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 1640,
-                "y": 858
-            }
-        },
-        "next": [
-            "蓝色站台_选项-金币",
-            "蓝色站台_选项-物品",
-            "蓝色站台_选项-跑路",
-            "蓝色站台_选项-恢复",
-            "蓝色站台_选项-继续",
-            "蓝色站台_选项-未知",
-            "蓝色站台_点击空白处关闭",
-            "蓝色站台_加速事件剧情"
-        ]
     },
     "蓝色站台_确认评分": {
         "recognition": "OCR",
@@ -1827,6 +1859,36 @@
             "蓝色站台_未配队提示"
         ]
     },
+    "蓝色站台_选择拟态": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "开始探索"
+        ],
+        "focus": "> 确认配队",
+        "pre_delay": 400,
+        "post_delay": 8000,
+        "__yamaape": {
+            "position": {
+                "x": -302,
+                "y": 442
+            }
+        },
+        "next": [
+            "蓝色站台_节点判断"
+        ]
+    },
+    "蓝色站台_未配队提示": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "focus": "> 请先自行配置好一次队伍，MNMA仅可使用默认配队直接进入战斗！",
+        "__yamaape": {
+            "position": {
+                "x": -302,
+                "y": 707
+            }
+        }
+    },
     "蓝色站台_初始化": {
         "recognition": "DirectHit",
         "action": "Custom",
@@ -1897,25 +1959,6 @@
         },
         "next": [
             "蓝色站台_前往下层"
-        ]
-    },
-    "蓝色站台_选择拟态": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "开始探索"
-        ],
-        "focus": "> 确认配队",
-        "pre_delay": 400,
-        "post_delay": 8000,
-        "__yamaape": {
-            "position": {
-                "x": -302,
-                "y": 442
-            }
-        },
-        "next": [
-            "蓝色站台_节点判断"
         ]
     },
     "蓝色站台_战略行动": {
@@ -2004,29 +2047,24 @@
             "蓝色站台_前往下层"
         ]
     },
-    "蓝色站台_跳过多波": {
-        "recognition": "OCR",
+    "蓝色站台_自动战斗": {
+        "recognition": "TemplateMatch",
         "action": "Click",
-        "expected": [
-            "结算离开"
+        "template": [
+            "../image/cycle_outlined.png"
         ],
-        "pre_delay": 400,
-        "focus": "> 跳过多波战斗",
+        "roi": [
+            1200,
+            70,
+            60,
+            200
+        ],
+        "threshold": 0.4,
+        "post_delay": 1000,
         "__yamaape": {
             "position": {
-                "x": 1802,
-                "y": 638
-            }
-        }
-    },
-    "蓝色站台_未配队提示": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "focus": "> 请先自行配置好一次队伍，MNMA仅可使用默认配队直接进入战斗！",
-        "__yamaape": {
-            "position": {
-                "x": -302,
-                "y": 707
+                "x": 2310,
+                "y": 811
             }
         }
     }
