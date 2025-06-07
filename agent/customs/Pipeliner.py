@@ -29,6 +29,9 @@ class SetStrNodeAttrs(CustomAction):
             for i in range(len(keys)):
                 key = keys[i]
                 value = values[i]
+                if value == "[]":
+                    value = []
+                print(f"设置节点字符串类型属性: {node} {key} {value} {type(value)}")
                 context.override_pipeline({node: {key: value}})
 
             return CustomAction.RunResult(success=True)
