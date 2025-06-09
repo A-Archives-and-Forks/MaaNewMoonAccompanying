@@ -1,10 +1,10 @@
 {
     "name": "MaaNewMoonAccompanying",
     "url": "https://github.com/kqcoxn/MaaNewMoonAccompanying",
-    "custom_title": "MNMA新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v1.1.12 - MFA | 游戏版本：往像螺旋",
+    "custom_title": "MNMA新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v1.1.13 - MFA | 游戏版本：往像螺旋",
     "mirrorchyan_rid": "MNMA",
     "mirrorchyan_multiplatform": true,
-    "version": "v1.1.12",
+    "version": "v1.1.13",
     "message": "- 新 月 同 行 -",
     "controller": [
         {
@@ -1079,11 +1079,11 @@
                             "next": "冰饮_城市探索"
                         },
                         "冰饮_检查个人作战记录": {
-                            "next": "冰饮_检查是否刷新"
+                            "next": "冰饮_确保在请求界面"
                         },
                         "冰饮_检查协助作战记录": {
                             "next": "冰饮_检查协助挑战",
-                            "on_error": "冰饮_冰饮检查完成"
+                            "on_error": "冰饮_协助挑战完成"
                         }
                     }
                 },
