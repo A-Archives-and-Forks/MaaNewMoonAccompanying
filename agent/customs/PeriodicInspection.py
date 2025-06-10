@@ -16,7 +16,7 @@ class Inspector:
 
     # 是否在同一周
     @staticmethod
-    def week(task: str) -> bool:
+    def same_week(task: str) -> bool:
         current_date = date.today()
         last_date_str: Optional[str] = LocalStorage.get(task, "last_date")
 
@@ -25,13 +25,29 @@ class Inspector:
 
         try:
             last_date = date.fromisoformat(last_date_str)
-        except (ValueError, TypeError): 
+        except (ValueError, TypeError):
             return False
 
         return (
             current_date.isocalendar()[1] == last_date.isocalendar()[1]
             and current_date.year == last_date.year
         )
+
+    # 是否在同一天
+    @staticmethod
+    def same_day(task: str) -> bool:
+        current_date = date.today()
+        last_date_str: Optional[str] = LocalStorage.get(task, "last_date")
+
+        if not last_date_str:
+            return False
+
+        try:
+            last_date = date.fromisoformat(last_date_str)
+        except (ValueError, TypeError):
+            return False
+
+        return current_date == last_date
 
 
 # 周期检查
@@ -47,12 +63,11 @@ class PeriodicCheck(CustomAction):
 
             flag = False
             if periodic == "week":
-                flag = Inspector.week(task)
+                flag = Inspector.same_week(task)
+            elif periodic == "day":
+                flag = Inspector.same_day(task)
 
-            if flag:
-                return CustomAction.RunResult(success=False)
-            else:
-                return CustomAction.RunResult(success=True)
+            return not flag
 
         except Exception as e:
             return Prompt.error("检查周期任务", e)
