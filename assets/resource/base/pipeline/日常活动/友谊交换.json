@@ -5,21 +5,15 @@
         "export": "",
         "prefix": "友谊交换"
     },
-    "友谊交换_友谊界面": {
-        "recognition": "TemplateMatch",
+    "友谊交换_确保进入友谊界面": {
+        "recognition": "OCR",
         "action": "Click",
-        "template": [
-            "../image/friends.png"
-        ],
         "post_delay": 1000,
         "timeout": 2000,
-        "focus": "> 进入好友面板",
-        "order_by": "Horizontal",
-        "index": -1,
-        "threshold": [
-            0.68
+        "expected": [
+            "好友列表"
         ],
-        "green_mask": true,
+        "pre_delay": 800,
         "__yamaape": {
             "position": {
                 "x": 258,
@@ -44,10 +38,11 @@
             "键领取"
         ],
         "focus": "> 领取情报点",
+        "pre_delay": 800,
         "__yamaape": {
             "position": {
-                "x": 550,
-                "y": -244
+                "x": 547,
+                "y": -261
             }
         },
         "next": [
@@ -61,10 +56,11 @@
             "键赠送"
         ],
         "focus": "> 赠送情报点",
+        "pre_delay": 800,
         "__yamaape": {
             "position": {
-                "x": 1091,
-                "y": -94
+                "x": 1118,
+                "y": -137
             }
         },
         "next": [
@@ -80,8 +76,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 553,
-                "y": 205
+                "x": 540,
+                "y": 127
             }
         }
     },
@@ -90,8 +86,8 @@
         "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": 1361,
-                "y": 105
+                "x": 1418,
+                "y": 18
             }
         },
         "next": [
@@ -129,8 +125,8 @@
         "focus": "> 检查好友申请",
         "__yamaape": {
             "position": {
-                "x": 917,
-                "y": 395
+                "x": 974,
+                "y": 291
             }
         },
         "next": [
@@ -151,8 +147,8 @@
         "timeout": 2000,
         "__yamaape": {
             "position": {
-                "x": 1224,
-                "y": 292
+                "x": 1281,
+                "y": 188
             }
         },
         "next": [
@@ -172,8 +168,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 1770,
-                "y": 450
+                "x": 1827,
+                "y": 346
             }
         },
         "next": [
@@ -190,25 +186,12 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 1491,
-                "y": 292
+                "x": 1548,
+                "y": 188
             }
         },
         "next": [
             "友谊交换_返回主界面"
-        ]
-    },
-    "友谊交换_开始": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "__yamaape": {
-            "position": {
-                "x": -21,
-                "y": -47
-            }
-        },
-        "next": [
-            "友谊交换_友谊界面"
         ]
     },
     "友谊交换_确认返回主界面": {
@@ -220,9 +203,45 @@
         "post_delay": 3000,
         "__yamaape": {
             "position": {
-                "x": 2030,
-                "y": 450
+                "x": 2087,
+                "y": 346
             }
         }
+    },
+    "友谊交换_开始": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": -268,
+                "y": -91
+            }
+        },
+        "next": [
+            "友谊交换_进入友谊界面"
+        ]
+    },
+    "友谊交换_进入友谊界面": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "../image/friends.png"
+        ],
+        "focus": "> 进入好友面板",
+        "order_by": "Horizontal",
+        "index": -1,
+        "threshold": [
+            0.67
+        ],
+        "green_mask": true,
+        "__yamaape": {
+            "position": {
+                "x": -3,
+                "y": -96
+            }
+        },
+        "next": [
+            "友谊交换_确保进入友谊界面"
+        ]
     }
 }
