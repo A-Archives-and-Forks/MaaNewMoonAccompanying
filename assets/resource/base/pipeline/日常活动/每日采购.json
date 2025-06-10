@@ -451,6 +451,20 @@
             "每日采购_检查下个节点"
         ]
     },
+    "每日采购_确认返回主页": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "城市探索"
+        ],
+        "post_delay": 3000,
+        "__yamaape": {
+            "position": {
+                "x": 4142,
+                "y": 29
+            }
+        }
+    },
     "每日采购_检测是否在黑名单": {
         "recognition": "OCR",
         "action": "DoNothing",
@@ -492,6 +506,7 @@
             -40
         ],
         "focus": "> 好东西，梭哈！",
+        "post_delay": 1200,
         "__yamaape": {
             "position": {
                 "x": 2460,
@@ -522,7 +537,7 @@
         "expected": [
             "购买"
         ],
-        "pre_delay": 800,
+        "pre_delay": 400,
         "__yamaape": {
             "position": {
                 "x": 2719,
@@ -564,19 +579,5 @@
         "next": [
             "每日采购_采购中心"
         ]
-    },
-    "每日采购_确认返回主页": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "城市探索"
-        ],
-        "post_delay": 3000,
-        "__yamaape": {
-            "position": {
-                "x": 4142,
-                "y": 29
-            }
-        }
     }
 }
