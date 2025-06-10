@@ -10,7 +10,7 @@
         "action": "Click",
         "timeout": 3000,
         "template": [
-            "../image/city/resource.png"
+            "city/resource.png"
         ],
         "focus": "> 收取资源",
         "__yamaape": {
@@ -66,7 +66,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/city/facilities.png"
+            "city/facilities.png"
         ],
         "focus": "> 进入设施管理",
         "__yamaape": {
@@ -192,7 +192,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/back.png"
+            "back.png"
         ],
         "pre_delay": 400,
         "focus": "> 制造完成",
@@ -316,7 +316,7 @@
         "action": "Click",
         "post_delay": 1000,
         "template": [
-            "../image/back.png"
+            "back.png"
         ],
         "focus": "> 结束物资加速",
         "__yamaape": {
@@ -351,7 +351,7 @@
         "action": "Click",
         "post_delay": 500,
         "template": [
-            "../image/back.png"
+            "back.png"
         ],
         "__yamaape": {
             "position": {
@@ -368,7 +368,7 @@
         "action": "Click",
         "timeout": 2000,
         "template": [
-            "../image/city/investigation.png"
+            "city/investigation.png"
         ],
         "focus": "> 进入传闻调查",
         "post_delay": 1500,
@@ -414,7 +414,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/archive.png"
+            "archive.png"
         ],
         "pre_delay": 400,
         "timeout": 6000,
@@ -518,7 +518,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/back.png"
+            "back.png"
         ],
         "pre_delay": 800,
         "focus": "> 调查结束",
@@ -607,7 +607,7 @@
         "action": "Click",
         "pre_delay": 400,
         "template": [
-            "../image/city/events.png"
+            "city/events.png"
         ],
         "post_delay": 800,
         "__yamaape": {
@@ -662,7 +662,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/home.png"
+            "home.png"
         ],
         "focus": "> 回到主页",
         "pre_delay": 400,
@@ -948,7 +948,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/jump.png"
+            "jump.png"
         ],
         "__yamaape": {
             "position": {
@@ -979,7 +979,7 @@
         "action": "Click",
         "post_delay": 1,
         "template": [
-            "../image/chat_option.png"
+            "chat_option.png"
         ],
         "__yamaape": {
             "position": {
@@ -1000,7 +1000,7 @@
             1
         ],
         "template": [
-            "../image/log.png"
+            "log.png"
         ],
         "__yamaape": {
             "position": {
@@ -1045,13 +1045,13 @@
             194
         ],
         "template": [
-            "../image/chat_room/xiaochun.png",
-            "../image/chat_room/chashao.png",
-            "../image/chat_room/lei.png",
-            "../image/chat_room/wenjing.png",
-            "../image/chat_room/ju.png",
-            "../image/chat_room/saturday.png",
-            "../image/chat_room/zhenzhu.png"
+            "chat_room/xiaochun.png",
+            "chat_room/chashao.png",
+            "chat_room/lei.png",
+            "chat_room/wenjing.png",
+            "chat_room/ju.png",
+            "chat_room/saturday.png",
+            "chat_room/zhenzhu.png"
         ],
         "pre_delay": 800,
         "__yamaape": {
@@ -1141,7 +1141,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/jump.png"
+            "jump.png"
         ],
         "pre_delay": 400,
         "__yamaape": {
@@ -1162,7 +1162,7 @@
         "action": "Click",
         "post_delay": 1,
         "template": [
-            "../image/chat_option.png"
+            "chat_option.png"
         ],
         "__yamaape": {
             "position": {
@@ -1175,7 +1175,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/log.png"
+            "log.png"
         ],
         "pre_delay": 1,
         "post_delay": 1,
@@ -1372,7 +1372,7 @@
         "action": "Click",
         "pre_delay": 400,
         "template": [
-            "../image/city/events.png"
+            "city/events.png"
         ],
         "post_delay": 800,
         "__yamaape": {
@@ -1386,7 +1386,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/jump.png"
+            "jump.png"
         ],
         "pre_delay": 800,
         "post_delay": 1500,
@@ -1436,7 +1436,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/chat_option.png"
+            "chat_option.png"
         ],
         "__yamaape": {
             "position": {
@@ -1457,7 +1457,7 @@
             1
         ],
         "template": [
-            "../image/log.png"
+            "log.png"
         ],
         "__yamaape": {
             "position": {
@@ -1487,7 +1487,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/cycle_outlined.png"
+            "cycle_outlined.png"
         ],
         "__yamaape": {
             "position": {
@@ -1648,7 +1648,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/close.png"
+            "close.png"
         ],
         "__yamaape": {
             "position": {
@@ -2138,7 +2138,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/cycle_outlined.png"
+            "cycle_outlined.png"
         ],
         "post_delay": 1000,
         "__yamaape": {

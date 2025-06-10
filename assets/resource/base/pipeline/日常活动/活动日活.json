@@ -9,7 +9,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/往像螺旋/entry.png"
+            "往像螺旋/entry.png"
         ],
         "pre_delay": 400,
         "focus": "> 进入活动界面",
@@ -96,7 +96,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/home.png"
+            "home.png"
         ],
         "pre_delay": 400,
         "__yamaape": {
@@ -265,7 +265,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/back.png"
+            "back.png"
         ],
         "pre_delay": 400,
         "__yamaape": {
@@ -492,7 +492,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/back.png"
+            "back.png"
         ],
         "pre_delay": 800,
         "focus": "> 进入捕捞界面",

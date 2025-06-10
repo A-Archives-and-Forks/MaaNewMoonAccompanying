@@ -218,7 +218,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/jump.png"
+            "jump.png"
         ],
         "pre_delay": 400,
         "focus": "> 本次蓝色站台结束",
@@ -318,7 +318,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/platform/money.png"
+            "platform/money.png"
         ],
         "order_by": "Random",
         "focus": "> 选择金币选项",
@@ -339,7 +339,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/platform/item.png"
+            "platform/item.png"
         ],
         "order_by": "Random",
         "focus": "> 选择物品选项",
@@ -360,7 +360,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/platform/run.png"
+            "platform/run.png"
         ],
         "focus": "> 我不打扰，溜了溜了（",
         "threshold": [
@@ -398,7 +398,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/platform/down.png"
+            "platform/down.png"
         ],
         "order_by": "Random",
         "focus": "> 查看更多选项",
@@ -419,7 +419,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/platform/what.png"
+            "platform/what.png"
         ],
         "order_by": "Random",
         "focus": "> 选择未知选项",
@@ -455,7 +455,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/platform/select.png"
+            "platform/select.png"
         ],
         "order_by": "Random",
         "post_delay": 1000,
@@ -477,7 +477,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/platform/go_fight.png"
+            "platform/go_fight.png"
         ],
         "order_by": "Random",
         "focus": "> 选择战斗选项",
@@ -516,7 +516,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/back.png"
+            "back.png"
         ],
         "__yamaape": {
             "position": {
@@ -733,7 +733,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/platform/confirm.png"
+            "platform/confirm.png"
         ],
         "post_delay": 2000,
         "timeout": 5000,
@@ -1026,7 +1026,7 @@
         "action": "Click",
         "post_delay": 1000,
         "template": [
-            "../image/platform/select.png"
+            "platform/select.png"
         ],
         "focus": "> 领取补给",
         "threshold": [
@@ -1188,7 +1188,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/jump.png"
+            "jump.png"
         ],
         "post_delay": 2000,
         "focus": "> 跳过幕间剧情",
@@ -1203,7 +1203,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/chat_option.png"
+            "chat_option.png"
         ],
         "pre_delay": 400,
         "__yamaape": {
@@ -1384,7 +1384,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/platform/fragments.png"
+            "platform/fragments.png"
         ],
         "order_by": "Vertical",
         "threshold": [
@@ -1409,7 +1409,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/back.png"
+            "back.png"
         ],
         "focus": "> 结束物品升级",
         "__yamaape": {
@@ -1567,7 +1567,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/back.png"
+            "back.png"
         ],
         "__yamaape": {
             "position": {
@@ -1630,7 +1630,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/back.png"
+            "back.png"
         ],
         "__yamaape": {
             "position": {
@@ -1700,7 +1700,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/platform/select.png"
+            "platform/select.png"
         ],
         "order_by": "Random",
         "focus": "> 选择主题",
@@ -2051,7 +2051,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/cycle_outlined.png"
+            "cycle_outlined.png"
         ],
         "roi": [
             1200,

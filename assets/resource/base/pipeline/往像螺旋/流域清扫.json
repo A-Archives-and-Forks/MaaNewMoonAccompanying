@@ -68,11 +68,11 @@
         "recognition": "TemplateMatch",
         "action": "DoNothing",
         "template": [
-            "../image/往像螺旋/ltt.png",
-            "../image/往像螺旋/lbt.png",
-            "../image/往像螺旋/block.png",
-            "../image/往像螺旋/rtt.png",
-            "../image/往像螺旋/rbt.png"
+            "往像螺旋/ltt.png",
+            "往像螺旋/lbt.png",
+            "往像螺旋/block.png",
+            "往像螺旋/rtt.png",
+            "往像螺旋/rbt.png"
         ],
         "roi": [
             905,
@@ -97,10 +97,10 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/往像螺旋/ltt.png",
-            "../image/往像螺旋/lbt.png",
-            "../image/往像螺旋/rtt.png",
-            "../image/往像螺旋/rbt.png"
+            "往像螺旋/ltt.png",
+            "往像螺旋/lbt.png",
+            "往像螺旋/rtt.png",
+            "往像螺旋/rbt.png"
         ],
         "index": -1,
         "roi": [
@@ -123,7 +123,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/往像螺旋/block.png"
+            "往像螺旋/block.png"
         ],
         "index": -1,
         "roi": [
@@ -164,7 +164,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/往像螺旋/triple.png"
+            "往像螺旋/triple.png"
         ],
         "index": -1,
         "__yamaape": {
@@ -181,7 +181,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/往像螺旋/add.png"
+            "往像螺旋/add.png"
         ],
         "index": -1,
         "__yamaape": {
@@ -198,8 +198,8 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/往像螺旋/lr.png",
-            "../image/往像螺旋/tb.png"
+            "往像螺旋/lr.png",
+            "往像螺旋/tb.png"
         ],
         "index": -1,
         "__yamaape": {
@@ -230,10 +230,10 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/往像螺旋/ltt.png",
-            "../image/往像螺旋/lbt.png",
-            "../image/往像螺旋/rtt.png",
-            "../image/往像螺旋/rbt.png"
+            "往像螺旋/ltt.png",
+            "往像螺旋/lbt.png",
+            "往像螺旋/rtt.png",
+            "往像螺旋/rbt.png"
         ],
         "index": -1,
         "__yamaape": {
@@ -250,11 +250,11 @@
         "recognition": "TemplateMatch",
         "action": "DoNothing",
         "template": [
-            "../image/往像螺旋/ltt.png",
-            "../image/往像螺旋/lbt.png",
-            "../image/往像螺旋/block.png",
-            "../image/往像螺旋/rtt.png",
-            "../image/往像螺旋/rbt.png"
+            "往像螺旋/ltt.png",
+            "往像螺旋/lbt.png",
+            "往像螺旋/block.png",
+            "往像螺旋/rtt.png",
+            "往像螺旋/rbt.png"
         ],
         "roi": [
             726,
@@ -279,10 +279,10 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/往像螺旋/ltt.png",
-            "../image/往像螺旋/lbt.png",
-            "../image/往像螺旋/rtt.png",
-            "../image/往像螺旋/rbt.png"
+            "往像螺旋/ltt.png",
+            "往像螺旋/lbt.png",
+            "往像螺旋/rtt.png",
+            "往像螺旋/rbt.png"
         ],
         "index": -1,
         "roi": [
@@ -305,7 +305,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/往像螺旋/block.png"
+            "往像螺旋/block.png"
         ],
         "index": -1,
         "roi": [

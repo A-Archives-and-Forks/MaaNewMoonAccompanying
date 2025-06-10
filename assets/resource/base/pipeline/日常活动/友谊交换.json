@@ -162,7 +162,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/home.png"
+            "home.png"
         ],
         "focus": "> 返回主界面",
         "pre_delay": 400,
@@ -225,7 +225,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/friends.png"
+            "friends.png"
         ],
         "focus": "> 进入好友面板",
         "order_by": "Horizontal",

@@ -95,7 +95,7 @@
         "pre_delay": 800,
         "focus": "> 获取奖励",
         "template": [
-            "../image/往像螺旋/sign.png"
+            "往像螺旋/sign.png"
         ],
         "__yamaape": {
             "position": {
@@ -179,7 +179,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/home.png"
+            "home.png"
         ],
         "pre_delay": 400,
         "focus": "> 回到主界面",

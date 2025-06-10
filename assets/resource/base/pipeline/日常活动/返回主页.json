@@ -58,11 +58,11 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/home.png",
-            "../image/back.png",
-            "../image/close.png",
-            "../image/jump.png",
-            "../image/chat_room/close.png"
+            "home.png",
+            "back.png",
+            "close.png",
+            "jump.png",
+            "chat_room/close.png"
         ],
         "post_delay": 500,
         "threshold": [

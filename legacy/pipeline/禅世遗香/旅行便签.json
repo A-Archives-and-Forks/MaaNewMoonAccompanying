@@ -14,7 +14,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/禅世遗香/entry.png"
+            "禅世遗香/entry.png"
         ],
         "__yamaape": {
             "position": {
@@ -84,7 +84,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/home.png"
+            "home.png"
         ],
         "pre_delay": 200,
         "post_delay": 3000,

@@ -188,7 +188,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/close.png"
+            "close.png"
         ],
         "pre_delay": 400,
         "focus": "> 返回主界面",
@@ -206,7 +206,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/home.png"
+            "home.png"
         ],
         "pre_delay": 400,
         "__yamaape": {

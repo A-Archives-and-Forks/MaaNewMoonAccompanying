@@ -113,7 +113,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/home.png"
+            "home.png"
         ],
         "focus": "> 返回主界面",
         "pre_delay": 400,

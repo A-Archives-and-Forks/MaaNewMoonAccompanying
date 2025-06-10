@@ -10,7 +10,7 @@
         "action": "Click",
         "focus": "> 加纳！",
         "template": [
-            "../image/card/max.png"
+            "card/max.png"
         ],
         "__yamaape": {
             "position": {
@@ -27,7 +27,7 @@
         "action": "Click",
         "focus": "> 卡带升级",
         "template": [
-            "../image/card/upgrade.png"
+            "card/upgrade.png"
         ],
         "__yamaape": {
             "position": {
@@ -89,7 +89,7 @@
         "action": "Click",
         "pre_delay": 400,
         "template": [
-            "../image/confirm.png"
+            "confirm.png"
         ],
         "__yamaape": {
             "position": {
@@ -185,7 +185,7 @@
         "recognition": "TemplateMatch",
         "action": "DoNothing",
         "template": [
-            "../image/card/upgrade.png"
+            "card/upgrade.png"
         ],
         "threshold": [
             0.94
@@ -205,7 +205,7 @@
         "recognition": "TemplateMatch",
         "action": "DoNothing",
         "template": [
-            "../image/card/breakthrough.png"
+            "card/breakthrough.png"
         ],
         "threshold": [
             0.94
@@ -292,7 +292,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/close.png"
+            "close.png"
         ],
         "__yamaape": {
             "position": {
@@ -308,7 +308,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/card/breakthrough.png"
+            "card/breakthrough.png"
         ],
         "focus": "> 使用卡带突破",
         "__yamaape": {
@@ -349,7 +349,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/card/breakthrough.png"
+            "card/breakthrough.png"
         ],
         "__yamaape": {
             "position": {
@@ -365,7 +365,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/close.png"
+            "close.png"
         ],
         "focus": "> 模组块不足！",
         "__yamaape": {

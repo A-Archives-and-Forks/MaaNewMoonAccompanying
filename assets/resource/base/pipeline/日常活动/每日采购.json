@@ -227,7 +227,7 @@
         "recognition": "TemplateMatch",
         "action": "DoNothing",
         "template": [
-            "../image/silver.png"
+            "silver.png"
         ],
         "roi": [
             320,
@@ -272,7 +272,7 @@
         "action": "DoNothing",
         "focus": "> 该物资已采购",
         "template": [
-            "../image/procurement/sold_out.png"
+            "procurement/sold_out.png"
         ],
         "roi": [
             320,
@@ -294,7 +294,7 @@
         "recognition": "TemplateMatch",
         "action": "DoNothing",
         "template": [
-            "../image/procurement/super.png"
+            "procurement/super.png"
         ],
         "timeout": 1000,
         "roi": [
@@ -319,7 +319,7 @@
         "recognition": "TemplateMatch",
         "action": "DoNothing",
         "template": [
-            "../image/procurement/special.png"
+            "procurement/special.png"
         ],
         "timeout": 1000,
         "roi": [
@@ -395,7 +395,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/home.png"
+            "home.png"
         ],
         "focus": "> 返回主界面",
         "pre_delay": 400,

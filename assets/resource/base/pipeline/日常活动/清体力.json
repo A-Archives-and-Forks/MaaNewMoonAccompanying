@@ -101,7 +101,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/checkless.png"
+            "checkless.png"
         ],
         "__yamaape": {
             "position": {
@@ -117,7 +117,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/cycle.png"
+            "cycle.png"
         ],
         "focus": "> 尝试选择合适倍率",
         "__yamaape": {
@@ -229,7 +229,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/close.png"
+            "close.png"
         ],
         "__yamaape": {
             "position": {
@@ -278,7 +278,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/cycle.png"
+            "cycle.png"
         ],
         "__yamaape": {
             "position": {
@@ -458,7 +458,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/close.png"
+            "close.png"
         ],
         "__yamaape": {
             "position": {
@@ -490,7 +490,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/cycle_outlined.png"
+            "cycle_outlined.png"
         ],
         "post_delay": 1000,
         "__yamaape": {
@@ -504,7 +504,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/cycle.png"
+            "cycle.png"
         ],
         "__yamaape": {
             "position": {
@@ -651,7 +651,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/close.png"
+            "close.png"
         ],
         "__yamaape": {
             "position": {
@@ -717,7 +717,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/battle/assistance.png"
+            "battle/assistance.png"
         ],
         "order_by": "Random",
         "pre_delay": 400,
@@ -802,7 +802,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/back.png"
+            "back.png"
         ],
         "pre_delay": 400,
         "__yamaape": {
@@ -836,7 +836,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/cycle.png"
+            "cycle.png"
         ],
         "__yamaape": {
             "position": {
@@ -870,7 +870,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/home.png"
+            "home.png"
         ],
         "pre_delay": 400,
         "focus": "> 返回主界面",
@@ -943,7 +943,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/close.png"
+            "close.png"
         ],
         "focus": "> 体力耗尽",
         "__yamaape": {
@@ -1370,7 +1370,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/card/逆转合作.png"
+            "card/逆转合作.png"
         ],
         "__yamaape": {
             "position": {

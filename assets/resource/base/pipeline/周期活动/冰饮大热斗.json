@@ -497,7 +497,7 @@
         "pre_delay": 400,
         "focus": "> 返回主界面",
         "template": [
-            "../image/home.png"
+            "home.png"
         ],
         "__yamaape": {
             "position": {
@@ -547,7 +547,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/back.png"
+            "back.png"
         ],
         "pre_delay": 400,
         "timeout": 2000,
@@ -701,7 +701,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/back.png"
+            "back.png"
         ],
         "pre_delay": 800,
         "timeout": 2000,
@@ -1110,7 +1110,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/cycle_outlined.png"
+            "cycle_outlined.png"
         ],
         "roi": [
             1200,

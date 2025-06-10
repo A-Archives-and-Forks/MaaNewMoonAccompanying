@@ -67,7 +67,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/receive_all.png"
+            "receive_all.png"
         ],
         "timeout": 3000,
         "pre_delay": 400,
@@ -127,7 +127,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/receive_all.png"
+            "receive_all.png"
         ],
         "timeout": 3000,
         "pre_delay": 400,
@@ -148,7 +148,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/back.png"
+            "back.png"
         ],
         "pre_delay": 400,
         "__yamaape": {
@@ -216,8 +216,8 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/manual_task_selected.png",
-            "../image/manual_task.png"
+            "manual_task_selected.png",
+            "manual_task.png"
         ],
         "threshold": [
             0.9,
@@ -330,8 +330,8 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/manual_reward_selected.png",
-            "../image/manual_reward.png"
+            "manual_reward_selected.png",
+            "manual_reward.png"
         ],
         "threshold": [
             0.9,
@@ -376,7 +376,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/close.png"
+            "close.png"
         ],
         "pre_delay": 400,
         "__yamaape": {
@@ -433,7 +433,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/back.png"
+            "back.png"
         ],
         "focus": "> 返回主页",
         "pre_delay": 400,
@@ -583,7 +583,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/character/grade_entry.png"
+            "character/grade_entry.png"
         ],
         "pre_delay": 400,
         "__yamaape": {
@@ -643,7 +643,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "../image/character/add_grade.png"
+            "character/add_grade.png"
         ],
         "index": -1,
         "focus": "> 升级",
