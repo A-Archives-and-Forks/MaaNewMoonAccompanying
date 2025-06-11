@@ -1,10 +1,10 @@
 {
     "name": "MaaNewMoonAccompanying",
     "url": "https://github.com/kqcoxn/MaaNewMoonAccompanying",
-    "custom_title": "MNMA新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v1.1.14 - MFA | 游戏版本：往像螺旋",
+    "custom_title": "MNMA新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v1.2.0 - MFA | 游戏版本：往像螺旋",
     "mirrorchyan_rid": "MNMA",
     "mirrorchyan_multiplatform": true,
-    "version": "v1.1.14",
+    "version": "v1.2.0",
     "message": "- 新 月 同 行 -",
     "controller": [
         {
@@ -108,6 +108,7 @@
             "option": [
                 "资源类型",
                 "使用稳定合剂",
+                "每日仅首次使用合剂",
                 "认证类型",
                 "演练卷类型",
                 "卡带类型",
@@ -713,6 +714,22 @@
                             "custom_action_param": {
                                 "times": 20
                             }
+                        }
+                    }
+                }
+            ]
+        },
+        "每日仅首次使用合剂": {
+            "cases": [
+                {
+                    "name": "No",
+                    "pipeline_override": {}
+                },
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "清体力_开始": {
+                            "next": "清体力_是否仅首次使用合剂"
                         }
                     }
                 }

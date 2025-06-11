@@ -454,6 +454,20 @@
             "清体力_3X及以下行动前检测1"
         ]
     },
+    "清体力_自动战斗": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "cycle_outlined.png"
+        ],
+        "post_delay": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 5502,
+                "y": 533
+            }
+        }
+    },
     "清体力_返回倍率选择2": {
         "recognition": "TemplateMatch",
         "action": "Click",
@@ -485,20 +499,6 @@
         "next": [
             "清体力_3X及以下行动前检测2"
         ]
-    },
-    "清体力_自动战斗": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "cycle_outlined.png"
-        ],
-        "post_delay": 1000,
-        "__yamaape": {
-            "position": {
-                "x": 5502,
-                "y": 533
-            }
-        }
     },
     "清体力_倍率选择2": {
         "recognition": "TemplateMatch",
@@ -661,6 +661,58 @@
         },
         "next": [
             "清体力_倍率选择1"
+        ]
+    },
+    "清体力_再动": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "确定"
+        ],
+        "pre_delay": 400,
+        "focus": "> 作战结束，使用升级体力再次作战",
+        "__yamaape": {
+            "position": {
+                "x": 4924,
+                "y": 676
+            }
+        },
+        "next": [
+            "清体力_倍率选择2"
+        ]
+    },
+    "清体力_回到主页": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "home.png"
+        ],
+        "pre_delay": 400,
+        "focus": "> 返回主界面",
+        "__yamaape": {
+            "position": {
+                "x": 4924,
+                "y": 1163
+            }
+        },
+        "next": [
+            "清体力_确认回到主页"
+        ]
+    },
+    "清体力_倍率选择1": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "cycle.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3175,
+                "y": 1027
+            }
+        },
+        "next": [
+            "清体力_1X"
         ]
     },
     "清体力_4X助战": {
@@ -832,72 +884,6 @@
             "清体力_选择助战"
         ]
     },
-    "清体力_倍率选择1": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "cycle.png"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 3175,
-                "y": 1027
-            }
-        },
-        "next": [
-            "清体力_1X"
-        ]
-    },
-    "清体力_再动": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "确定"
-        ],
-        "pre_delay": 400,
-        "focus": "> 作战结束，使用升级体力再次作战",
-        "__yamaape": {
-            "position": {
-                "x": 4924,
-                "y": 676
-            }
-        },
-        "next": [
-            "清体力_倍率选择2"
-        ]
-    },
-    "清体力_回到主页": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "home.png"
-        ],
-        "pre_delay": 400,
-        "focus": "> 返回主界面",
-        "__yamaape": {
-            "position": {
-                "x": 4924,
-                "y": 1163
-            }
-        },
-        "next": [
-            "清体力_确认回到主页"
-        ]
-    },
-    "清体力_确认回到主页": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "城市探索"
-        ],
-        "post_delay": 3000,
-        "__yamaape": {
-            "position": {
-                "x": 5184,
-                "y": 1163
-            }
-        }
-    },
     "清体力_1X": {
         "recognition": "OCR",
         "action": "Click",
@@ -921,6 +907,22 @@
         "next": [
             "清体力_开始挑战1"
         ]
+    },
+    "清体力_确认回到主页": {
+        "recognition": "OCR",
+        "action": "Custom",
+        "expected": [
+            "城市探索"
+        ],
+        "post_delay": 3000,
+        "custom_action": "record_periodic_check",
+        "custom_action_param": "t=auto_fight",
+        "__yamaape": {
+            "position": {
+                "x": 5184,
+                "y": 1163
+            }
+        }
     },
     "清体力_开始挑战1": {
         "recognition": "OCR",
@@ -1615,23 +1617,11 @@
             "清体力_整流器本"
         ]
     },
-    "清体力_开始": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "__yamaape": {
-            "position": {
-                "x": -829,
-                "y": -52
-            }
-        },
-        "next": [
-            "清体力_设定合剂消耗"
-        ]
-    },
     "清体力_设定合剂消耗": {
         "recognition": "DirectHit",
         "action": "Custom",
         "custom_action": "set_eat_times",
+        "post_delay": 0,
         "__yamaape": {
             "position": {
                 "x": -548,
@@ -1646,6 +1636,7 @@
         "recognition": "DirectHit",
         "action": "Custom",
         "custom_action": "set_squad",
+        "post_delay": 0,
         "__yamaape": {
             "position": {
                 "x": -288,
@@ -1888,6 +1879,71 @@
         },
         "next": [
             "清体力_指定作战队伍"
+        ]
+    },
+    "清体力_跳过使用合剂节点1": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "set_str_node_attrs",
+        "post_delay": 0,
+        "focus": "> 今日已使用过合剂，将跳过自动消耗",
+        "custom_action_param": "node=清体力_开始&keys=next&values=清体力_设定指定队伍",
+        "__yamaape": {
+            "position": {
+                "x": -808,
+                "y": 152
+            }
+        },
+        "next": [
+            "清体力_跳过使用合剂节点2"
+        ]
+    },
+    "清体力_跳过使用合剂节点2": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "set_str_node_attrs",
+        "post_delay": 0,
+        "custom_action_param": "node=清体力_判断合剂余量&keys=next&values=清体力_返回倍率选择3",
+        "__yamaape": {
+            "position": {
+                "x": -543,
+                "y": 182
+            }
+        },
+        "next": [
+            "清体力_设定指定队伍"
+        ]
+    },
+    "清体力_开始": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": -816,
+                "y": -48
+            }
+        },
+        "next": [
+            "清体力_设定合剂消耗"
+        ],
+        "on_error": [
+            "清体力_跳过使用合剂节点1"
+        ]
+    },
+    "清体力_是否仅首次使用合剂": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "periodic_check",
+        "post_delay": 0,
+        "custom_action_param": "p=day&t=auto_fight",
+        "__yamaape": {
+            "position": {
+                "x": -815,
+                "y": -291
+            }
+        },
+        "next": [
+            "清体力_设定合剂消耗"
         ]
     }
 }

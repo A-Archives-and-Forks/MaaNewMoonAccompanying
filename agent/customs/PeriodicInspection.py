@@ -50,9 +50,31 @@ class Inspector:
         return current_date == last_date
 
 
+# 记录检查
+@AgentServer.custom_action("record_periodic_check")
+class SetLastPeriodicCheck(CustomAction):
+    def run(
+        self, context: Context, argv: CustomAction.RunArg
+    ) -> CustomAction.RunResult | bool:
+        try:
+            args = parse_query_args(argv)
+            task = args.get("t")
+
+            Inspector.record(task)
+
+            return CustomAction.RunResult(success=True)
+
+        except Exception as e:
+            return Prompt.error("记录检查时间", e)
+
+
 # 周期检查
 @AgentServer.custom_action("periodic_check")
 class PeriodicCheck(CustomAction):
+    """
+    在当天或本周时，节点返回error，即仅在没有指定记录时通过节点，在有记录时走上一个节点的on_error路径
+    """
+
     def run(
         self, context: Context, argv: CustomAction.RunArg
     ) -> CustomAction.RunResult | bool:
@@ -71,21 +93,3 @@ class PeriodicCheck(CustomAction):
 
         except Exception as e:
             return Prompt.error("检查周期任务", e)
-
-
-# 记录检查
-@AgentServer.custom_action("record_periodic_check")
-class SetLastPeriodicCheck(CustomAction):
-    def run(
-        self, context: Context, argv: CustomAction.RunArg
-    ) -> CustomAction.RunResult | bool:
-        try:
-            args = parse_query_args(argv)
-            task = args.get("t")
-
-            Inspector.record(task)
-
-            return CustomAction.RunResult(success=True)
-
-        except Exception as e:
-            return Prompt.error("记录检查时间", e)
