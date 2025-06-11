@@ -470,8 +470,8 @@
         "focus": "> 进入特工管理界面",
         "__yamaape": {
             "position": {
-                "x": -1407,
-                "y": -889
+                "x": -1118,
+                "y": -901
             }
         },
         "next": [
@@ -480,25 +480,46 @@
     },
     "领取奖励_确保进入特工界面": {
         "recognition": "OCR",
-        "action": "Custom",
+        "action": "DoNothing",
         "expected": [
             "基础"
         ],
         "post_delay": 800,
-        "custom_action": "record_periodic_check",
         "focus": "> 查找目标特工",
-        "custom_action_param": "t=character_upgrade",
+        "timeout": 12000,
         "__yamaape": {
             "position": {
-                "x": -1149,
-                "y": -981
+                "x": -868,
+                "y": -964
             }
         },
-        "interrupt": [
-            "领取奖励_下滑角色列表"
-        ],
         "next": [
             "领取奖励_选择角色"
+        ],
+        "interrupt": [
+            "领取奖励_下滑角色列表"
+        ]
+    },
+    "领取奖励_选择角色": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "夜来"
+        ],
+        "roi": [
+            739,
+            66,
+            475,
+            624
+        ],
+        "__yamaape": {
+            "position": {
+                "x": -607,
+                "y": -906
+            }
+        },
+        "next": [
+            "领取奖励_进入基础界面"
         ]
     },
     "领取奖励_下滑角色列表": {
@@ -521,8 +542,8 @@
         "pre_delay": 1,
         "__yamaape": {
             "position": {
-                "x": -886,
-                "y": -1171
+                "x": -605,
+                "y": -1191
             }
         },
         "next": [
@@ -539,28 +560,13 @@
             1
         ],
         "pre_delay": 0,
+        "post_delay": 600,
         "__yamaape": {
             "position": {
-                "x": -626,
-                "y": -1171
+                "x": -361,
+                "y": -1192
             }
         }
-    },
-    "领取奖励_选择角色": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "夜来"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": -886,
-                "y": -863
-            }
-        },
-        "next": [
-            "领取奖励_进入基础界面"
-        ]
     },
     "领取奖励_进入基础界面": {
         "recognition": "OCR",
@@ -571,8 +577,8 @@
         "focus": "> 进入升级界面",
         "__yamaape": {
             "position": {
-                "x": -625,
-                "y": -895
+                "x": -352,
+                "y": -901
             }
         },
         "next": [
@@ -588,12 +594,31 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": -1371,
-                "y": -678
+                "x": -1372,
+                "y": -687
             }
         },
         "next": [
-            "领取奖励_角色等级加一"
+            "领取奖励_角色等级加一",
+            "领取奖励_已满级"
+        ]
+    },
+    "领取奖励_角色等级加一": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "character/add_grade.png"
+        ],
+        "index": -1,
+        "focus": "> 升级",
+        "__yamaape": {
+            "position": {
+                "x": -1095,
+                "y": -685
+            }
+        },
+        "next": [
+            "领取奖励_确认升级"
         ]
     },
     "领取奖励_开始": {
@@ -601,7 +626,7 @@
         "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": -803,
+                "x": -554,
                 "y": -225
             }
         },
@@ -616,45 +641,12 @@
         "post_delay": 1,
         "__yamaape": {
             "position": {
-                "x": -543,
+                "x": -294,
                 "y": -225
             }
         },
         "next": [
-            "领取奖励_卡带升级开始"
-        ]
-    },
-    "领取奖励_卡带升级开始": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "pre_delay": 1,
-        "post_delay": 1,
-        "__yamaape": {
-            "position": {
-                "x": -280,
-                "y": -223
-            }
-        },
-        "next": [
             "领取奖励_任务奖励"
-        ]
-    },
-    "领取奖励_角色等级加一": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "character/add_grade.png"
-        ],
-        "index": -1,
-        "focus": "> 升级",
-        "__yamaape": {
-            "position": {
-                "x": -1111,
-                "y": -678
-            }
-        },
-        "next": [
-            "领取奖励_确认升级"
         ]
     },
     "领取奖励_确认升级": {
@@ -666,29 +658,12 @@
         "index": -1,
         "__yamaape": {
             "position": {
-                "x": -851,
-                "y": -678
+                "x": -849,
+                "y": -683
             }
         },
         "next": [
-            "领取奖励_从角色升级返回主界面"
-        ]
-    },
-    "领取奖励_从角色升级返回主界面": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "home.png"
-        ],
-        "focus": "> 返回主界面",
-        "__yamaape": {
-            "position": {
-                "x": -591,
-                "y": -678
-            }
-        },
-        "next": [
-            "领取奖励_卡带升级开始"
+            "领取奖励_记录升级"
         ]
     },
     "领取奖励_角色升一级": {
@@ -699,8 +674,8 @@
         "post_delay": 1,
         "__yamaape": {
             "position": {
-                "x": -1927,
-                "y": -889
+                "x": -1638,
+                "y": -901
             }
         },
         "next": [
@@ -717,8 +692,8 @@
         "custom_action_param": "t=character_upgrade&p=day",
         "__yamaape": {
             "position": {
-                "x": -1673,
-                "y": -888
+                "x": -1384,
+                "y": -900
             }
         },
         "next": [
@@ -731,12 +706,12 @@
         "focus": "> 今日角色已升级",
         "__yamaape": {
             "position": {
-                "x": -605,
+                "x": -356,
                 "y": -476
             }
         },
-        "on_error": [
-            "领取奖励_卡带升级开始"
+        "next": [
+            "领取奖励_任务奖励"
         ]
     },
     "领取奖励_任务奖励": {
@@ -752,6 +727,72 @@
         },
         "next": [
             "领取奖励_任务"
+        ]
+    },
+    "领取奖励_从角色升级返回主界面": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "home.png"
+        ],
+        "focus": "> 返回主界面",
+        "__yamaape": {
+            "position": {
+                "x": -342,
+                "y": -678
+            }
+        },
+        "next": [
+            "领取奖励_任务奖励"
+        ]
+    },
+    "领取奖励_已满级": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "资格认证条件"
+        ],
+        "focus": "> 指定特工需要认证或已满级！",
+        "__yamaape": {
+            "position": {
+                "x": -1080,
+                "y": -455
+            }
+        },
+        "next": [
+            "领取奖励_取消升级"
+        ]
+    },
+    "领取奖励_取消升级": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "back.png"
+        ],
+        "post_delay": 1000,
+        "__yamaape": {
+            "position": {
+                "x": -830,
+                "y": -456
+            }
+        },
+        "next": [
+            "领取奖励_从角色升级返回主界面"
+        ]
+    },
+    "领取奖励_记录升级": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "record_periodic_check",
+        "custom_action_param": "t=character_upgrade",
+        "__yamaape": {
+            "position": {
+                "x": -594,
+                "y": -680
+            }
+        },
+        "next": [
+            "领取奖励_从角色升级返回主界面"
         ]
     }
 }
