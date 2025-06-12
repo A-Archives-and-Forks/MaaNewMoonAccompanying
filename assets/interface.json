@@ -1,10 +1,10 @@
 {
     "name": "MaaNewMoonAccompanying",
     "url": "https://github.com/kqcoxn/MaaNewMoonAccompanying",
-    "custom_title": "MNMA新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v1.2.0 - MFAA | 游戏版本：乐园不妙夜·上",
+    "custom_title": "MNMA新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v1.2.1 - MFAA | 游戏版本：乐园不妙夜·上",
     "mirrorchyan_rid": "MNMA",
     "mirrorchyan_multiplatform": true,
-    "version": "v1.2.0",
+    "version": "v1.2.1",
     "message": "- 新 月 同 行 -",
     "controller": [
         {
@@ -185,6 +185,12 @@
                 "仅在主界面退出"
             ],
             "doc": "**退出游戏**：\n\n仅关闭游戏，保留 MNMA 与模拟器（若需要关闭 MNMA 与模拟器请在 MNMA 设置中进行配置）\n\n“仅在主界面退出”选项用于在其他任务卡住后起提醒作用\n\n开始界面：任意界面"
+        },
+        {
+            "name": "「融变超」合成大(头)时曦",
+            "entry": "无尽融合_开始",
+            "doc": "**「融变超」合成大(头)时曦**：\n\n自动合成大时曦\n\n**注意：普通关卡一般一遍过，无尽得分大概会在400-650之间波动，但除合成两次时曦之外的任务理论上都能完成（得分并非任务要求的值，一般要高，600就能拿800的奖励），一次不成功可以多试几次**\n\n开始界面：选关界面（有进入挑战按钮）/重新挑战界面\n\n结束界面：分数结算界面",
+            "check": true
         },
         {
             "name": "「蓝色站台」自动肉鸽",
