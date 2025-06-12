@@ -1,10 +1,10 @@
 {
     "name": "MaaNewMoonAccompanying",
     "url": "https://github.com/kqcoxn/MaaNewMoonAccompanying",
-    "custom_title": "MNMA新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v1.2.1 - MFAA | 游戏版本：乐园不妙夜·上",
+    "custom_title": "MNMA新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v1.2.2 - MFAA | 游戏版本：乐园不妙夜·上",
     "mirrorchyan_rid": "MNMA",
     "mirrorchyan_multiplatform": true,
-    "version": "v1.2.1",
+    "version": "v1.2.2",
     "message": "- 新 月 同 行 -",
     "controller": [
         {
@@ -262,6 +262,17 @@
             "doc": "**信赖谈话**：\n\n自动信赖谈话\n\n**注意：对信赖为“7知己”的特工进行谈话，请先自行对特工进行信赖升级**\n\n**为了尽可能适配多种谈话模式，21s以内的卡顿或重复点击皆在可接受范围内**\n\n开始界面：特工谈话列表界面\n\n结束界面：特工谈话列表界面"
         },
         {
+            "name": "剧情阅读器",
+            "entry": "自动剧情_开始",
+            "advanced": [
+                "对话阅读间隔"
+            ],
+            "option": [
+                "跳过对话打字机效果"
+            ],
+            "doc": "**剧情阅读器**：\n\n以自定义的方式推进剧情\n\n- 跳过对话打字机效果：点击后再次连点以跳过渐变时长，建议对话间隔低时启用（对话阅读间隔较长时此选项不影响总时长）\n- 对话阅读间隔：两次对话之间的时间差，**单位为毫秒**，设长可以当作阅读辅助器，设短可以当作连点器快速过剧情\n（1秒=1000毫秒，只能为非负整数，建议最低设为50毫秒，否则容易崩溃）\n\n开始界面：剧情界面\n\n结束界面：剧情后界面"
+        },
+        {
             "name": "「危局演练」连续作战",
             "entry": "危局演练_开始",
             "doc": "**「危局演练」连续作战**：\n\n自动进行连续战斗，请确保体力充足\n\n开始界面：危局演练关卡选择\n\n结束界面：危局演练关卡选择"
@@ -403,6 +414,22 @@
                 },
                 "卡带词条_设定激活属性3": {
                     "custom_action_param": "attr={组3_属性类型}&value={组3_属性值}"
+                }
+            }
+        },
+        "对话阅读间隔": {
+            "field": [
+                "对话阅读间隔"
+            ],
+            "type": [
+                "int"
+            ],
+            "default": [
+                "3000"
+            ],
+            "pipeline_override": {
+                "自动剧情_阅读剧情": {
+                    "post_delay": "{对话阅读间隔}"
                 }
             }
         }
@@ -1256,6 +1283,22 @@
                             "custom_action_param": "key=friend_round&max=5"
                         }
                     }
+                }
+            ]
+        },
+        "跳过对话打字机效果": {
+            "cases": [
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "自动剧情_阅读剧情": {
+                            "action": "DoNothing"
+                        }
+                    }
+                },
+                {
+                    "name": "Yes",
+                    "pipeline_override": {}
                 }
             ]
         }

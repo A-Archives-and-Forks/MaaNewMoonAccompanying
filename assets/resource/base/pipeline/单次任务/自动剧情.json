@@ -1,0 +1,163 @@
+{
+    "__yamaape_config_自动剧情": {
+        "filename": "自动剧情",
+        "version": "v0.3.4",
+        "export": "",
+        "prefix": "自动剧情"
+    },
+    "自动剧情_推进剧情": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "pre_delay": 0,
+        "post_delay": 0,
+        "target": [
+            15,
+            150,
+            1,
+            1
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1649,
+                "y": 393
+            }
+        },
+        "next": [
+            "自动剧情_阅读剧情"
+        ]
+    },
+    "自动剧情_阅读剧情": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "post_delay": 3000,
+        "pre_delay": 50,
+        "target": [
+            15,
+            150,
+            1,
+            1
+        ],
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 1944,
+                "y": 107
+            }
+        },
+        "next": [
+            "自动剧情_继续阅读"
+        ],
+        "on_error": [
+            "自动剧情_阅读结束"
+        ]
+    },
+    "自动剧情_继续阅读": {
+        "recognition": "TemplateMatch",
+        "action": "DoNothing",
+        "pre_delay": 0,
+        "post_delay": 0,
+        "template": [
+            "log.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 2203,
+                "y": -118
+            }
+        },
+        "next": [
+            "自动剧情_对话节点"
+        ]
+    },
+    "自动剧情_阅读结束": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "focus": "> 剧情阅读完毕",
+        "__yamaape": {
+            "position": {
+                "x": 2209,
+                "y": 196
+            }
+        }
+    },
+    "自动剧情_自动阅读剧情": {
+        "recognition": "TemplateMatch",
+        "action": "DoNothing",
+        "focus": "> 开始自动阅读剧情",
+        "template": [
+            "log.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1100,
+                "y": 112
+            }
+        },
+        "next": [
+            "自动剧情_对话节点"
+        ]
+    },
+    "自动剧情_对话节点": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "pre_delay": 0,
+        "post_delay": 0,
+        "__yamaape": {
+            "position": {
+                "x": 1359,
+                "y": 111
+            }
+        },
+        "next": [
+            "自动剧情_对话选项",
+            "自动剧情_推进剧情"
+        ]
+    },
+    "自动剧情_对话选项": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "chat_option.png"
+        ],
+        "pre_delay": 800,
+        "post_delay": 0,
+        "order_by": "Random",
+        "focus": "> 随机对话选项",
+        "__yamaape": {
+            "position": {
+                "x": 1652,
+                "y": 107
+            }
+        },
+        "next": [
+            "自动剧情_阅读剧情"
+        ]
+    },
+    "自动剧情_开始": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": 828,
+                "y": 116
+            }
+        },
+        "next": [
+            "自动剧情_自动阅读剧情"
+        ],
+        "on_error": [
+            "自动剧情_错误提示"
+        ]
+    },
+    "自动剧情_错误提示": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "focus": "> 请在进入剧情界面后再执行此任务！",
+        "__yamaape": {
+            "position": {
+                "x": 1099,
+                "y": 304
+            }
+        }
+    }
+}
