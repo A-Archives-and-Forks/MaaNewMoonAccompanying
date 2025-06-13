@@ -3,10 +3,99 @@
 import os
 import zipfile
 import sys
-import datetime
+from datetime import datetime, timedelta
+import re
+from tqdm import tqdm
 
 
-version = "1.1.0"
+version = "1.2"
+
+
+def filter_recent_logs_optimized(input_file, output_file="", days=2, max_len=2800000):
+    print(f"> 正在精简文件 {input_file}")
+    # 获取昨日日期
+    now = datetime.now()
+    cutoff_date = (now - timedelta(days=days - 1)).date()
+    date_pattern = re.compile(r"^\[(\d{4}-\d{2}-\d{2}) ")
+
+    found_cutoff = False
+    line_count = 0
+    kept_line_count = 0
+    buffer = []
+
+    # 如果输入和输出文件相同，使用临时文件
+    if output_file == "":
+        output_file = input_file
+    temp_output = output_file
+    if input_file == output_file:
+        temp_output = output_file + ".temp"
+
+    try:
+        # 首先计算总行数
+        with open(input_file, "r", encoding="utf-8", errors="replace") as f:
+            total_lines = sum(1 for _ in f)
+
+        with open(input_file, "r", encoding="utf-8", errors="replace") as infile:
+            # 创建进度条
+            pbar = tqdm(total=total_lines, desc="> 处理进度", unit="行")
+
+            for line in infile:
+                line_count += 1
+                pbar.update(1)
+
+                # 找到截止日期
+                if found_cutoff:
+                    buffer.append(line)
+                    kept_line_count += 1
+                    continue
+
+                # 尝试匹配日期
+                match = date_pattern.match(line)
+                if match:
+                    log_date_str = match.group(1)
+                    try:
+                        # 检查是否达到或超过截止日期
+                        log_date = datetime.strptime(log_date_str, "%Y-%m-%d").date()
+                        if log_date >= cutoff_date:
+                            found_cutoff = True
+                            buffer.append(line)
+                            kept_line_count += 1
+                    except ValueError:
+                        # 无日期
+                        pass
+
+            pbar.close()
+
+        # 如果行数超过限制，只保留最后几行
+        if kept_line_count > max_len:
+            buffer = buffer[-max_len:]
+            kept_line_count = max_len
+
+        # 写入文件
+        with open(temp_output, "w", encoding="utf-8") as outfile:
+            outfile.writelines(buffer)
+
+        # 获取文件大小
+        input_size = os.path.getsize(input_file)
+        output_size = os.path.getsize(temp_output)
+
+        # 如果使用了临时文件，将其重命名为目标文件
+        if input_file == output_file:
+            os.replace(temp_output, output_file)
+
+        print(
+            f"> 处理完成，原文件大小: {input_size/1024/1024:.1f}MB，处理后大小: {output_size/1024/1024:.1f}MB"
+        )
+
+    except Exception as e:
+        print(f"处理文件时出错: {str(e)}")
+        # 如果出错，确保清理临时文件
+        if input_file == output_file and os.path.exists(temp_output):
+            try:
+                os.remove(temp_output)
+            except:
+                pass
+        return
 
 
 class ZipPacker:
@@ -75,20 +164,20 @@ class ZipPacker:
             os.remove(self.log_file)
 
         self.log(f"成功打包日志: {output_filename}")
-        zip_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        zip_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         self.log(f"日志包生成时间: {zip_time}")
         self.log(f"保存路径: {output_path}")
 
 
-def main():
+def zip():
     global version
 
     packer = ZipPacker()
     output_filename = f"反馈日志.zip"
     source_paths = [
         "debug/maa.log",
-        f"logs/log-{datetime.datetime.now().date()}.txt",
-        f"logs/log-{datetime.datetime.now().date() - datetime.timedelta(days=1)}.txt",
+        f"logs/log-{datetime.now().date()}.txt",
+        f"logs/log-{datetime.now().date() - timedelta(days=1)}.txt",
         "config",
     ]
 
@@ -102,8 +191,9 @@ def main():
 
 
 if __name__ == "__main__":
-    print("即将运行日志打包脚本，请等待提示后再关闭此窗口...")
-    main()
+    print("即将打包日志，请等待提示后再关闭此窗口...")
+    filter_recent_logs_optimized("debug/maa.log")
+    zip()
     print(
         "日志打包脚本执行完毕，请将目录下 反馈日志.zip 发送至交流群并@群主，同时描述错误内容并提交截图或录屏，或将以上信息提交至issue"
     )
