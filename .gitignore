@@ -21,6 +21,10 @@
 !/feedbacker/反馈打包小工具.py
 !/feedbacker/feedbacker.png
 !/feedbacker/feedbacker.ico
+/gc/*
+!/gc/安全清理小工具.py
+!/gc/gc.png
+!/gc/gc.ico
 
 # docs
 docs/node_modules
