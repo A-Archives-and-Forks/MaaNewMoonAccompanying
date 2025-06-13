@@ -135,8 +135,8 @@ jobs:
       - name: Replace Icon
         shell: bash
         run: |
-          cp logo.ico install/logo.ico
           cp logo.ico install/Assets/logo.ico
+      # - cp logo.ico install/logo.ico
 
       - name: Packing Launcher
         if: ${{matrix.os == 'win' }}
