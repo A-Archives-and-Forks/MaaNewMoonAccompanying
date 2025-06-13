@@ -8,10 +8,13 @@ import re
 from tqdm import tqdm
 
 
-version = "1.2"
+version = "v1.2"
 
 
 def filter_recent_logs_optimized(input_file, output_file="", days=2, max_len=2800000):
+    if not os.path.exists(input_file):
+        return
+
     print(f"> 正在精简文件 {input_file}")
     # 获取昨日日期
     now = datetime.now()
@@ -182,7 +185,7 @@ def zip():
     ]
 
     try:
-        packer.log(f"小工具版本: {version}")
+        packer.log(f"打包器版本: {version}")
         packer.create_zip(output_filename, source_paths)
     except Exception as e:
         packer.log(f"打包工具执行异常: {str(e)}")
@@ -191,7 +194,9 @@ def zip():
 
 
 if __name__ == "__main__":
-    print("即将打包日志，请等待提示后再关闭此窗口...")
+    print(f"反馈打包小工具 - {version}")
+    input("请在关闭 MNMA 后，按任意键执行打包操作...")
+    print("> 即将打包日志，请等待提示后再关闭此窗口")
     filter_recent_logs_optimized("debug/maa.log")
     zip()
     print(
