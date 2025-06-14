@@ -5,11 +5,9 @@
 
 ## 使用方式
 
-​**​每次版本更新后请手动把仅第一次出现的界面过一遍！​**​
+[使用文档](https://docs.codax.site/mnma/)
 
 **第一次使用 MNMA 建议先单独尝试每一个功能，再尝试串行使用！**
-
-[使用文档](https://docs.codax.site/mnma/)
 
 Bug反馈请在群内询问，或直接[提交issue](https://github.com/kqcoxn/MaaNewMoonAccompanying/issues?q=is%3Aissue)，感谢您的帮助！
 
@@ -17,7 +15,7 @@ Bug反馈请在群内询问，或直接[提交issue](https://github.com/kqcoxn/M
 
 ## 更新记录
 
-[更新记录](https://github.com/kqcoxn/MaaNewMoonAccompanying?tab=readme-ov-file#%E6%9B%B4%E6%96%B0%E8%AE%B0%E5%BD%95)
+[更新记录](https://github.com/kqcoxn/MaaNewMoonAccompanying/blob/main/docs/zh_cn/%E6%9B%B4%E6%96%B0%E8%AE%B0%E5%BD%95.md)
 
 ## 鸣谢
 
