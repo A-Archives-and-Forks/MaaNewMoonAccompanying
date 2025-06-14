@@ -540,7 +540,7 @@
         ],
         "duration": 600,
         "post_delay": 0,
-        "pre_delay": 1,
+        "pre_delay": 100,
         "__yamaape": {
             "position": {
                 "x": -605,
@@ -578,7 +578,7 @@
             1
         ],
         "pre_delay": 0,
-        "post_delay": 600,
+        "post_delay": 1000,
         "__yamaape": {
             "position": {
                 "x": -361,
@@ -601,6 +601,7 @@
         },
         "next": [
             "领取奖励_角色等级加一",
+            "领取奖励_需要认证",
             "领取奖励_已满级"
         ]
     },
@@ -622,13 +623,13 @@
             "领取奖励_确认升级"
         ]
     },
-    "领取奖励_已满级": {
+    "领取奖励_需要认证": {
         "recognition": "OCR",
         "action": "DoNothing",
         "expected": [
             "资格认证条件"
         ],
-        "focus": "> 指定特工需要认证或已满级！",
+        "focus": "> 指定特工需要认证",
         "__yamaape": {
             "position": {
                 "x": -1080,
@@ -661,8 +662,8 @@
         "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": -554,
-                "y": -225
+                "x": -546,
+                "y": -86
             }
         },
         "next": [
@@ -676,8 +677,8 @@
         "post_delay": 1,
         "__yamaape": {
             "position": {
-                "x": -294,
-                "y": -225
+                "x": -285,
+                "y": -89
             }
         },
         "next": [
@@ -712,40 +713,6 @@
         },
         "next": [
             "领取奖励_从角色升级返回主界面"
-        ]
-    },
-    "领取奖励_角色升一级": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "focus": "> 角色升级",
-        "pre_delay": 1,
-        "post_delay": 1,
-        "__yamaape": {
-            "position": {
-                "x": -1638,
-                "y": -901
-            }
-        },
-        "next": [
-            "领取奖励_检查是否已升级"
-        ],
-        "on_error": [
-            "领取奖励_今日角色已升级"
-        ]
-    },
-    "领取奖励_检查是否已升级": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "periodic_check",
-        "custom_action_param": "t=character_upgrade&p=day",
-        "__yamaape": {
-            "position": {
-                "x": -1384,
-                "y": -900
-            }
-        },
-        "next": [
-            "领取奖励_特工管理"
         ]
     },
     "领取奖励_今日角色已升级": {
@@ -793,7 +760,10 @@
             }
         },
         "next": [
-            "领取奖励_从角色升级返回主界面"
+            "领取奖励_切换特工"
+        ],
+        "on_error": [
+            "领取奖励_列表清空"
         ]
     },
     "领取奖励_确认进入组长手册": {
@@ -809,5 +779,200 @@
                 "y": 772
             }
         }
+    },
+    "领取奖励_角色升一级": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "focus": "> 角色升级",
+        "pre_delay": 1,
+        "post_delay": 1,
+        "__yamaape": {
+            "position": {
+                "x": -1914,
+                "y": -944
+            }
+        },
+        "next": [
+            "领取奖励_检查是否已升级"
+        ],
+        "on_error": [
+            "领取奖励_今日角色已升级"
+        ]
+    },
+    "领取奖励_检查是否已升级": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "periodic_check",
+        "custom_action_param": "t=character_upgrade&p=day",
+        "pre_delay": 0,
+        "__yamaape": {
+            "position": {
+                "x": -1644,
+                "y": -944
+            }
+        },
+        "next": [
+            "领取奖励_设置角色列表"
+        ],
+        "on_error": [
+            "领取奖励_列表为空"
+        ]
+    },
+    "领取奖励_设置角色列表": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "focus": "> 角色升级",
+        "pre_delay": 0,
+        "custom_action": "set_upgrade_list",
+        "custom_action_param": "list=夜来",
+        "__yamaape": {
+            "position": {
+                "x": -1379,
+                "y": -966
+            }
+        },
+        "next": [
+            "领取奖励_特工管理"
+        ]
+    },
+    "领取奖励_列表为空": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "focus": "> 特工名单为空",
+        "__yamaape": {
+            "position": {
+                "x": -1371,
+                "y": -188
+            }
+        },
+        "next": [
+            "领取奖励_任务奖励"
+        ]
+    },
+    "领取奖励_已满级": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "已达到最高"
+        ],
+        "focus": "> 指定特工已满级",
+        "__yamaape": {
+            "position": {
+                "x": -1346,
+                "y": -457
+            }
+        },
+        "next": [
+            "领取奖励_取消升级"
+        ]
+    },
+    "领取奖励_切换特工": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "switch_upgrade_target",
+        "pre_delay": 0,
+        "__yamaape": {
+            "position": {
+                "x": -1928,
+                "y": -1299
+            }
+        },
+        "next": [
+            "领取奖励_从角色返回列表"
+        ]
+    },
+    "领取奖励_从角色返回列表": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "back.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": -1668,
+                "y": -1299
+            }
+        },
+        "next": [
+            "领取奖励_列表划至顶端1"
+        ]
+    },
+    "领取奖励_列表划至顶端1": {
+        "recognition": "OCR",
+        "action": "Swipe",
+        "begin": [
+            1060,
+            92,
+            1,
+            1
+        ],
+        "end": [
+            1060,
+            668,
+            1,
+            1
+        ],
+        "duration": 100,
+        "expected": [
+            "基础"
+        ],
+        "pre_delay": 800,
+        "post_delay": 1000,
+        "__yamaape": {
+            "position": {
+                "x": -1404,
+                "y": -1299
+            }
+        },
+        "next": [
+            "领取奖励_列表划至顶端2"
+        ]
+    },
+    "领取奖励_列表划至顶端2": {
+        "recognition": "OCR",
+        "action": "Swipe",
+        "begin": [
+            1060,
+            92,
+            1,
+            1
+        ],
+        "end": [
+            1060,
+            668,
+            1,
+            1
+        ],
+        "duration": 100,
+        "expected": [
+            "基础"
+        ],
+        "post_delay": 1000,
+        "__yamaape": {
+            "position": {
+                "x": -1144,
+                "y": -1299
+            }
+        },
+        "next": [
+            "领取奖励_确保进入特工界面"
+        ]
+    },
+    "领取奖励_列表清空": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "focus": "> 列表内无可升级特工！",
+        "template": [
+            "home.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": -582,
+                "y": -345
+            }
+        },
+        "next": [
+            "领取奖励_任务奖励"
+        ]
     }
 }
