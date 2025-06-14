@@ -15,8 +15,8 @@
         "focus": "> 收取资源",
         "__yamaape": {
             "position": {
-                "x": 25,
-                "y": 615
+                "x": -465,
+                "y": 450
             }
         },
         "next": [
@@ -36,8 +36,8 @@
         "pre_delay": 1000,
         "__yamaape": {
             "position": {
-                "x": 309,
-                "y": 765
+                "x": -181,
+                "y": 600
             }
         },
         "next": [
@@ -54,8 +54,8 @@
         "focus": "> 进入制造订单",
         "__yamaape": {
             "position": {
-                "x": 584,
-                "y": 304
+                "x": 94,
+                "y": 139
             }
         },
         "next": [
@@ -71,8 +71,8 @@
         "focus": "> 进入设施管理",
         "__yamaape": {
             "position": {
-                "x": 598,
-                "y": 526
+                "x": 108,
+                "y": 361
             }
         },
         "next": [
@@ -89,8 +89,8 @@
         "focus": "> 开始制造",
         "__yamaape": {
             "position": {
-                "x": 832,
-                "y": 304
+                "x": 342,
+                "y": 139
             }
         },
         "next": [
@@ -106,8 +106,8 @@
         "focus": "> 特工换班",
         "__yamaape": {
             "position": {
-                "x": 856,
-                "y": 526
+                "x": 366,
+                "y": 361
             }
         },
         "next": [
@@ -125,8 +125,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 1070,
-                "y": 304
+                "x": 580,
+                "y": 139
             }
         },
         "next": [
@@ -142,8 +142,8 @@
         "focus": "> 进入物资类",
         "__yamaape": {
             "position": {
-                "x": 607,
-                "y": 727
+                "x": 117,
+                "y": 562
             }
         },
         "next": [
@@ -160,8 +160,8 @@
         "pre_delay": 500,
         "__yamaape": {
             "position": {
-                "x": 952,
-                "y": 87
+                "x": 462,
+                "y": -78
             }
         },
         "next": [
@@ -180,8 +180,8 @@
         "focus": "> 进入矢量创品",
         "__yamaape": {
             "position": {
-                "x": 863,
-                "y": 724
+                "x": 373,
+                "y": 559
             }
         },
         "next": [
@@ -198,8 +198,8 @@
         "focus": "> 制造完成",
         "__yamaape": {
             "position": {
-                "x": 1315,
-                "y": 346
+                "x": 825,
+                "y": 181
             }
         },
         "next": [
@@ -214,8 +214,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 1122,
-                "y": 728
+                "x": 632,
+                "y": 563
             }
         },
         "next": [
@@ -231,8 +231,8 @@
         "focus": "> 设施加速",
         "__yamaape": {
             "position": {
-                "x": 639,
-                "y": 941
+                "x": 149,
+                "y": 776
             }
         },
         "next": [
@@ -247,8 +247,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 892,
-                "y": 937
+                "x": 402,
+                "y": 772
             }
         },
         "next": [
@@ -263,8 +263,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 1140,
-                "y": 933
+                "x": 650,
+                "y": 768
             }
         },
         "next": [
@@ -283,8 +283,8 @@
         "timeout": 2000,
         "__yamaape": {
             "position": {
-                "x": 1380,
-                "y": 932
+                "x": 890,
+                "y": 767
             }
         },
         "next": [
@@ -303,8 +303,8 @@
         "focus": "> 收取加速后物资",
         "__yamaape": {
             "position": {
-                "x": 664,
-                "y": 1158
+                "x": 174,
+                "y": 993
             }
         },
         "next": [
@@ -321,8 +321,8 @@
         "focus": "> 结束物资加速",
         "__yamaape": {
             "position": {
-                "x": 1174,
-                "y": 1143
+                "x": 684,
+                "y": 978
             }
         },
         "next": [
@@ -338,8 +338,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 917,
-                "y": 1158
+                "x": 427,
+                "y": 993
             }
         },
         "next": [
@@ -355,8 +355,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 1432,
-                "y": 1140
+                "x": 942,
+                "y": 975
             }
         },
         "next": [
@@ -374,8 +374,8 @@
         "post_delay": 1500,
         "__yamaape": {
             "position": {
-                "x": 466,
-                "y": 1530
+                "x": -24,
+                "y": 1365
             }
         },
         "next": [
@@ -399,8 +399,8 @@
         "focus": "> 审阅档案",
         "__yamaape": {
             "position": {
-                "x": 796,
-                "y": 1946
+                "x": 306,
+                "y": 1781
             }
         },
         "next": [
@@ -424,8 +424,8 @@
         "focus": "> 档案归档",
         "__yamaape": {
             "position": {
-                "x": 1048,
-                "y": 1946
+                "x": 558,
+                "y": 1781
             }
         },
         "next": [
@@ -446,8 +446,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 779,
-                "y": 1528
+                "x": 289,
+                "y": 1363
             }
         }
     },
@@ -456,8 +456,8 @@
         "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": 1731,
-                "y": 1722
+                "x": 992,
+                "y": 1482
             }
         },
         "next": [
@@ -474,8 +474,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 1042,
-                "y": 2231
+                "x": 552,
+                "y": 2066
             }
         }
     },
@@ -489,8 +489,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 923,
-                "y": 1722
+                "x": 433,
+                "y": 1557
             }
         },
         "next": [
@@ -509,10 +509,28 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 1364,
-                "y": 1979
+                "x": 874,
+                "y": 1814
             }
         }
+    },
+    "城市探索_自动更换": {
+        "recognition": "OCR",
+        "action": "Click",
+        "post_delay": 800,
+        "expected": [
+            "请更换事件"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 97,
+                "y": 2309
+            }
+        },
+        "next": [
+            "城市探索_选择新事件",
+            "城市探索_切换自由调查"
+        ]
     },
     "城市探索_从调查返回": {
         "recognition": "TemplateMatch",
@@ -524,8 +542,8 @@
         "focus": "> 调查结束",
         "__yamaape": {
             "position": {
-                "x": 2203,
-                "y": 1658
+                "x": 1336,
+                "y": 1409
             }
         },
         "next": [
@@ -586,13 +604,11 @@
         "expected": [
             "事件回顾"
         ],
-        "timeout": 2000,
-        "post_delay": 800,
-        "pre_delay": 400,
+        "timeout": 1000,
         "__yamaape": {
             "position": {
-                "x": 2185,
-                "y": 33
+                "x": 2186,
+                "y": 88
             }
         },
         "next": [
@@ -1125,9 +1141,6 @@
                 "y": 94
             }
         },
-        "next": [
-            "城市探索_检查事件面板"
-        ],
         "interrupt": [
             "城市探索_重新唤出事件列表",
             "城市探索_跳过战后剧情",
@@ -1135,6 +1148,9 @@
             "城市探索_检测恢复体力界面",
             "城市探索_新战后剧情选项",
             "城市探索_新战后剧情"
+        ],
+        "next": [
+            "城市探索_确认回到城市探索"
         ]
     },
     "城市探索_跳过剧情": {
@@ -1548,6 +1564,22 @@
             }
         }
     },
+    "城市探索_等待指令": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "瞬时调度"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 4406,
+                "y": 1109
+            }
+        },
+        "next": [
+            "城市探索_开启自动战斗"
+        ]
+    },
     "城市探索_选择特工2": {
         "recognition": "DirectHit",
         "action": "Click",
@@ -1790,18 +1822,6 @@
             "城市探索_结束倍速"
         ]
     },
-    "城市探索_结束倍速": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "set_str_node_attrs",
-        "custom_action_param": "node=城市探索_新剧情&keys=next&values=[]",
-        "__yamaape": {
-            "position": {
-                "x": 4433,
-                "y": 704
-            }
-        }
-    },
     "城市探索_划至配队顶部": {
         "recognition": "OCR",
         "action": "Swipe",
@@ -1870,6 +1890,18 @@
             "城市探索_结算委托"
         ]
     },
+    "城市探索_结束倍速": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "set_str_node_attrs",
+        "custom_action_param": "node=城市探索_新剧情&keys=next&values=[]",
+        "__yamaape": {
+            "position": {
+                "x": 4433,
+                "y": 704
+            }
+        }
+    },
     "城市探索_查找指定队伍": {
         "recognition": "OCR",
         "action": "Click",
@@ -1914,6 +1946,24 @@
             "城市探索_配队点停"
         ]
     },
+    "城市探索_结算委托": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "结算委托"
+        ],
+        "pre_delay": 400,
+        "focus": "> 委托结束",
+        "__yamaape": {
+            "position": {
+                "x": 5055,
+                "y": 2550
+            }
+        },
+        "next": [
+            "城市探索_获取事件奖励"
+        ]
+    },
     "城市探索_配队点停": {
         "recognition": "DirectHit",
         "action": "Swipe",
@@ -1939,31 +1989,13 @@
             }
         }
     },
-    "城市探索_结算委托": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "结算委托"
-        ],
-        "pre_delay": 400,
-        "focus": "> 委托结束",
-        "__yamaape": {
-            "position": {
-                "x": 5055,
-                "y": 2550
-            }
-        },
-        "next": [
-            "城市探索_获取事件奖励"
-        ]
-    },
     "城市探索_开始": {
         "recognition": "DirectHit",
         "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": -836,
-                "y": 586
+                "x": -1326,
+                "y": 421
             }
         },
         "next": [
@@ -1979,8 +2011,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": -555,
-                "y": 581
+                "x": -1045,
+                "y": 416
             }
         },
         "next": [
@@ -1997,8 +2029,8 @@
         "focus": "> 进入城市探索界面",
         "__yamaape": {
             "position": {
-                "x": -554,
-                "y": 739
+                "x": -1044,
+                "y": 574
             }
         },
         "next": [
@@ -2010,30 +2042,12 @@
         "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": -268,
-                "y": 657
+                "x": -758,
+                "y": 492
             }
         },
         "next": [
             "城市探索_资源收取"
-        ]
-    },
-    "城市探索_自动更换": {
-        "recognition": "OCR",
-        "action": "Click",
-        "post_delay": 800,
-        "expected": [
-            "请更换事件"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 587,
-                "y": 2474
-            }
-        },
-        "next": [
-            "城市探索_选择新事件",
-            "城市探索_切换自由调查"
         ]
     },
     "城市探索_选择新事件": {
@@ -2050,8 +2064,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 866,
-                "y": 2461
+                "x": 376,
+                "y": 2296
             }
         },
         "next": [
@@ -2067,8 +2081,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 993,
-                "y": 2668
+                "x": 503,
+                "y": 2503
             }
         },
         "next": [
@@ -2083,8 +2097,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 1389,
-                "y": 2433
+                "x": 899,
+                "y": 2268
             }
         },
         "next": [
@@ -2099,39 +2113,12 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 1260,
-                "y": 2668
+                "x": 770,
+                "y": 2503
             }
         },
         "next": [
             "城市探索_开始调查"
-        ]
-    },
-    "城市探索_点击奖励选项": {
-        "recognition": "DirectHit",
-        "action": "Click",
-        "post_delay": 500,
-        "__yamaape": {
-            "position": {
-                "x": 4811,
-                "y": 3047
-            }
-        }
-    },
-    "城市探索_等待指令": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "瞬时调度"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 4406,
-                "y": 1109
-            }
-        },
-        "next": [
-            "城市探索_开启自动战斗"
         ]
     },
     "城市探索_开启自动战斗": {
@@ -2145,6 +2132,37 @@
             "position": {
                 "x": 4666,
                 "y": 1109
+            }
+        }
+    },
+    "城市探索_确认回到城市探索": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "事件回顾"
+        ],
+        "post_delay": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 5580,
+                "y": -95
+            }
+        },
+        "next": [
+            "城市探索_检查事件面板"
+        ],
+        "interrupt": [
+            "城市探索_重新唤出事件列表"
+        ]
+    },
+    "城市探索_点击奖励选项": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "post_delay": 500,
+        "__yamaape": {
+            "position": {
+                "x": 4811,
+                "y": 3047
             }
         }
     }
