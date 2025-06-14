@@ -197,7 +197,7 @@
         "expected": [
             "组长手册"
         ],
-        "pre_delay": 400,
+        "pre_delay": 800,
         "focus": "> 进入组长手册面板",
         "__yamaape": {
             "position": {
@@ -209,7 +209,8 @@
             "领取奖励_手册经验"
         ],
         "interrupt": [
-            "领取奖励_关闭扩展手册推销"
+            "领取奖励_关闭扩展手册推销",
+            "领取奖励_确认进入组长手册"
         ]
     },
     "领取奖励_手册经验": {
@@ -550,6 +551,23 @@
             "领取奖励_角色列表点停"
         ]
     },
+    "领取奖励_进入基础界面": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "基础"
+        ],
+        "focus": "> 进入升级界面",
+        "__yamaape": {
+            "position": {
+                "x": -352,
+                "y": -901
+            }
+        },
+        "next": [
+            "领取奖励_进入等级界面"
+        ]
+    },
     "领取奖励_角色列表点停": {
         "recognition": "DirectHit",
         "action": "Click",
@@ -567,23 +585,6 @@
                 "y": -1192
             }
         }
-    },
-    "领取奖励_进入基础界面": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "基础"
-        ],
-        "focus": "> 进入升级界面",
-        "__yamaape": {
-            "position": {
-                "x": -352,
-                "y": -901
-            }
-        },
-        "next": [
-            "领取奖励_进入等级界面"
-        ]
     },
     "领取奖励_进入等级界面": {
         "recognition": "TemplateMatch",
@@ -621,6 +622,40 @@
             "领取奖励_确认升级"
         ]
     },
+    "领取奖励_已满级": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "资格认证条件"
+        ],
+        "focus": "> 指定特工需要认证或已满级！",
+        "__yamaape": {
+            "position": {
+                "x": -1080,
+                "y": -455
+            }
+        },
+        "next": [
+            "领取奖励_取消升级"
+        ]
+    },
+    "领取奖励_确认升级": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "升级"
+        ],
+        "index": -1,
+        "__yamaape": {
+            "position": {
+                "x": -849,
+                "y": -683
+            }
+        },
+        "next": [
+            "领取奖励_记录升级"
+        ]
+    },
     "领取奖励_开始": {
         "recognition": "DirectHit",
         "action": "DoNothing",
@@ -649,21 +684,34 @@
             "领取奖励_任务奖励"
         ]
     },
-    "领取奖励_确认升级": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "升级"
-        ],
-        "index": -1,
+    "领取奖励_任务奖励": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "pre_delay": 1,
+        "post_delay": 1,
         "__yamaape": {
             "position": {
-                "x": -849,
-                "y": -683
+                "x": -28,
+                "y": -223
             }
         },
         "next": [
-            "领取奖励_记录升级"
+            "领取奖励_任务"
+        ]
+    },
+    "领取奖励_记录升级": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "record_periodic_check",
+        "custom_action_param": "t=character_upgrade",
+        "__yamaape": {
+            "position": {
+                "x": -594,
+                "y": -680
+            }
+        },
+        "next": [
+            "领取奖励_从角色升级返回主界面"
         ]
     },
     "领取奖励_角色升一级": {
@@ -714,21 +762,6 @@
             "领取奖励_任务奖励"
         ]
     },
-    "领取奖励_任务奖励": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "pre_delay": 1,
-        "post_delay": 1,
-        "__yamaape": {
-            "position": {
-                "x": -28,
-                "y": -223
-            }
-        },
-        "next": [
-            "领取奖励_任务"
-        ]
-    },
     "领取奖励_从角色升级返回主界面": {
         "recognition": "TemplateMatch",
         "action": "Click",
@@ -744,23 +777,6 @@
         },
         "next": [
             "领取奖励_任务奖励"
-        ]
-    },
-    "领取奖励_已满级": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "资格认证条件"
-        ],
-        "focus": "> 指定特工需要认证或已满级！",
-        "__yamaape": {
-            "position": {
-                "x": -1080,
-                "y": -455
-            }
-        },
-        "next": [
-            "领取奖励_取消升级"
         ]
     },
     "领取奖励_取消升级": {
@@ -780,19 +796,18 @@
             "领取奖励_从角色升级返回主界面"
         ]
     },
-    "领取奖励_记录升级": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "record_periodic_check",
-        "custom_action_param": "t=character_upgrade",
+    "领取奖励_确认进入组长手册": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "组长手册"
+        ],
+        "focus": "> 进入组长手册面板",
         "__yamaape": {
             "position": {
-                "x": -594,
-                "y": -680
+                "x": 1196,
+                "y": 772
             }
-        },
-        "next": [
-            "领取奖励_从角色升级返回主界面"
-        ]
+        }
     }
 }
