@@ -73,11 +73,11 @@
         "expected": [
             "点击空白处关闭"
         ],
-        "pre_delay": 400,
+        "pre_delay": 800,
         "__yamaape": {
             "position": {
-                "x": 540,
-                "y": 127
+                "x": 548,
+                "y": 171
             }
         }
     },
@@ -231,7 +231,7 @@
         "order_by": "Horizontal",
         "index": -1,
         "threshold": [
-            0.67
+            0.65
         ],
         "green_mask": true,
         "__yamaape": {
@@ -242,6 +242,9 @@
         },
         "next": [
             "友谊交换_确保进入友谊界面"
+        ],
+        "interrupt": [
+            "友谊交换_情报点数收取"
         ]
     }
 }
