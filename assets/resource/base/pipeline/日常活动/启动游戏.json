@@ -61,6 +61,23 @@
             "启动游戏_初始化检测计数"
         ]
     },
+    "启动游戏_已在主界面": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "城市探索"
+        ],
+        "focus": "> 已在主界面",
+        "__yamaape": {
+            "position": {
+                "x": 513,
+                "y": 39
+            }
+        },
+        "next": [
+            "启动游戏_短计数"
+        ]
+    },
     "启动游戏_启动游戏": {
         "recognition": "DirectHit",
         "action": "StartApp",
@@ -101,11 +118,31 @@
         "__yamaape": {
             "position": {
                 "x": 1348,
-                "y": 141
+                "y": 41
             }
         },
         "next": [
             "启动游戏_检测当前界面"
+        ]
+    },
+    "启动游戏_检测当前界面": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "pre_delay": 1,
+        "post_delay": 1,
+        "__yamaape": {
+            "position": {
+                "x": 1619,
+                "y": 40
+            }
+        },
+        "next": [
+            "启动游戏_主界面"
+        ],
+        "interrupt": [
+            "启动游戏_关闭弹出面板",
+            "启动游戏_关闭提示界面",
+            "启动游戏_盲目点击"
         ]
     },
     "启动游戏_关闭游戏": {
@@ -137,43 +174,6 @@
             "启动游戏_检测界面"
         ]
     },
-    "启动游戏_已在主界面": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "城市探索"
-        ],
-        "focus": "> 已在主界面",
-        "__yamaape": {
-            "position": {
-                "x": 513,
-                "y": 39
-            }
-        },
-        "next": [
-            "启动游戏_初始化检测计数"
-        ]
-    },
-    "启动游戏_检测当前界面": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "pre_delay": 1,
-        "post_delay": 1,
-        "__yamaape": {
-            "position": {
-                "x": 1619,
-                "y": 140
-            }
-        },
-        "next": [
-            "启动游戏_主界面"
-        ],
-        "interrupt": [
-            "启动游戏_关闭弹出面板",
-            "启动游戏_关闭提示界面",
-            "启动游戏_盲目点击"
-        ]
-    },
     "启动游戏_主界面": {
         "recognition": "OCR",
         "action": "DoNothing",
@@ -185,7 +185,7 @@
         "__yamaape": {
             "position": {
                 "x": 1902,
-                "y": -50
+                "y": -150
             }
         },
         "next": [
@@ -208,69 +208,7 @@
         "__yamaape": {
             "position": {
                 "x": 1902,
-                "y": 179
-            }
-        },
-        "next": [
-            "启动游戏_重置计数"
-        ]
-    },
-    "启动游戏_检测计数": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "count",
-        "pre_delay": 1,
-        "post_delay": 995,
-        "__yamaape": {
-            "position": {
-                "x": 2164,
-                "y": -251
-            }
-        },
-        "next": [
-            "启动游戏_检测当前界面"
-        ]
-    },
-    "启动游戏_检测结束": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "focus": "> 已进入主界面",
-        "pre_delay": 0,
-        "__yamaape": {
-            "position": {
-                "x": 2167,
-                "y": -22
-            }
-        }
-    },
-    "启动游戏_重置计数": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "init_counter",
-        "custom_action_param": "max=5&exceed=false",
-        "pre_delay": 0,
-        "__yamaape": {
-            "position": {
-                "x": 2167,
-                "y": 180
-            }
-        }
-    },
-    "启动游戏_盲目点击": {
-        "recognition": "DirectHit",
-        "action": "Click",
-        "target": [
-            25,
-            200,
-            1,
-            1
-        ],
-        "post_delay": 1,
-        "pre_delay": 30,
-        "__yamaape": {
-            "position": {
-                "x": 1898,
-                "y": 634
+                "y": 79
             }
         },
         "next": [
@@ -289,11 +227,89 @@
         "__yamaape": {
             "position": {
                 "x": 1900,
-                "y": 407
+                "y": 307
             }
         },
         "next": [
             "启动游戏_重置计数"
+        ]
+    },
+    "启动游戏_盲目点击": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            25,
+            200,
+            1,
+            1
+        ],
+        "post_delay": 1,
+        "pre_delay": 30,
+        "__yamaape": {
+            "position": {
+                "x": 1898,
+                "y": 534
+            }
+        },
+        "next": [
+            "启动游戏_重置计数"
+        ]
+    },
+    "启动游戏_检测计数": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "count",
+        "pre_delay": 1,
+        "post_delay": 995,
+        "__yamaape": {
+            "position": {
+                "x": 2164,
+                "y": -351
+            }
+        },
+        "next": [
+            "启动游戏_检测当前界面"
+        ]
+    },
+    "启动游戏_检测结束": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "focus": "> 已进入主界面",
+        "pre_delay": 0,
+        "__yamaape": {
+            "position": {
+                "x": 2167,
+                "y": -122
+            }
+        }
+    },
+    "启动游戏_重置计数": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "init_counter",
+        "custom_action_param": "max=5&exceed=false",
+        "pre_delay": 0,
+        "__yamaape": {
+            "position": {
+                "x": 2167,
+                "y": 80
+            }
+        }
+    },
+    "启动游戏_短计数": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "init_counter",
+        "custom_action_param": "max=3&exceed=false",
+        "pre_delay": 0,
+        "__yamaape": {
+            "position": {
+                "x": 1349,
+                "y": 270
+            }
+        },
+        "next": [
+            "启动游戏_检测当前界面"
         ]
     }
 }
