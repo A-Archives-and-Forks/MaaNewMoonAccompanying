@@ -101,7 +101,7 @@
         "template": [
             "home.png"
         ],
-        "pre_delay": 400,
+        "pre_delay": 800,
         "__yamaape": {
             "position": {
                 "x": 1610,
