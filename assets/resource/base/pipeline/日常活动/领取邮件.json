@@ -80,11 +80,14 @@
         },
         "next": [
             "领取邮件_领取结束"
+        ],
+        "interrupt": [
+            "领取邮件_确认获取邮件奖励"
         ]
     },
     "领取邮件_暂无奖励": {
         "recognition": "OCR",
-        "action": "Click",
+        "action": "DoNothing",
         "expected": [
             "当前暂无奖励可领取"
         ],
@@ -105,13 +108,13 @@
         "recognition": "DirectHit",
         "action": "Click",
         "target": [
-            15,
-            60,
+            2,
+            2,
             1,
             1
         ],
         "focus": "> 返回主界面",
-        "pre_delay": 400,
+        "pre_delay": 800,
         "__yamaape": {
             "position": {
                 "x": 1460,
@@ -120,7 +123,24 @@
         },
         "next": [
             "领取邮件_确认返回主页"
+        ],
+        "interrupt": [
+            "领取邮件_确定返回主界面"
         ]
+    },
+    "领取邮件_确认返回主页": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "城市探索"
+        ],
+        "post_delay": 3000,
+        "__yamaape": {
+            "position": {
+                "x": 1720,
+                "y": -58
+            }
+        }
     },
     "领取邮件_删除已读": {
         "recognition": "OCR",
@@ -152,17 +172,32 @@
             "领取邮件_领取邮件"
         ]
     },
-    "领取邮件_确认返回主页": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "城市探索"
+    "领取邮件_确定返回主界面": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            2,
+            2,
+            1,
+            1
         ],
-        "post_delay": 3000,
         "__yamaape": {
             "position": {
-                "x": 1720,
-                "y": -58
+                "x": 1717,
+                "y": 145
+            }
+        }
+    },
+    "领取邮件_确认获取邮件奖励": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击以继续"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1171,
+                "y": -177
             }
         }
     }
