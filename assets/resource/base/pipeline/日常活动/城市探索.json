@@ -550,6 +550,45 @@
             "城市探索_城市事件"
         ]
     },
+    "城市探索_选择新事件": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "0%"
+        ],
+        "roi": [
+            427,
+            152,
+            622,
+            325
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 376,
+                "y": 2296
+            }
+        },
+        "next": [
+            "城市探索_开始调查"
+        ]
+    },
+    "城市探索_切换自由调查": {
+        "recognition": "OCR",
+        "action": "Click",
+        "post_delay": 800,
+        "expected": [
+            "自由调查"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 503,
+                "y": 2503
+            }
+        },
+        "next": [
+            "城市探索_安排特工自由调查"
+        ]
+    },
     "城市探索_城市事件": {
         "recognition": "DirectHit",
         "action": "DoNothing",
@@ -1141,16 +1180,17 @@
                 "y": 94
             }
         },
+        "next": [
+            "城市探索_确认回到城市探索"
+        ],
         "interrupt": [
             "城市探索_重新唤出事件列表",
             "城市探索_跳过战后剧情",
             "城市探索_自动跳过战后剧情",
             "城市探索_检测恢复体力界面",
             "城市探索_新战后剧情选项",
+            "城市探索_确认获取事件奖励",
             "城市探索_新战后剧情"
-        ],
-        "next": [
-            "城市探索_确认回到城市探索"
         ]
     },
     "城市探索_跳过剧情": {
@@ -1383,6 +1423,26 @@
             "城市探索_识别下一区域"
         ]
     },
+    "城市探索_确认回到城市探索": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "事件回顾"
+        ],
+        "post_delay": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 5580,
+                "y": -95
+            }
+        },
+        "next": [
+            "城市探索_检查事件面板"
+        ],
+        "interrupt": [
+            "城市探索_重新唤出事件列表"
+        ]
+    },
     "城市探索_重新唤出事件列表": {
         "recognition": "TemplateMatch",
         "action": "Click",
@@ -1456,29 +1516,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 5886,
-                "y": 488
-            }
-        }
-    },
-    "城市探索_新战后剧情": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "pre_delay": 1,
-        "post_delay": 30,
-        "target": [
-            25,
-            200,
-            1,
-            1
-        ],
-        "template": [
-            "log.png"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 5885,
-                "y": 648
+                "x": 5883,
+                "y": 503
             }
         }
     },
@@ -1774,6 +1813,20 @@
             "城市探索_回到主页"
         ]
     },
+    "城市探索_开启自动战斗": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "cycle_outlined.png"
+        ],
+        "post_delay": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 4666,
+                "y": 1109
+            }
+        }
+    },
     "城市探索_选择特工3": {
         "recognition": "DirectHit",
         "action": "Click",
@@ -2050,45 +2103,6 @@
             "城市探索_资源收取"
         ]
     },
-    "城市探索_选择新事件": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "0%"
-        ],
-        "roi": [
-            427,
-            152,
-            622,
-            325
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 376,
-                "y": 2296
-            }
-        },
-        "next": [
-            "城市探索_开始调查"
-        ]
-    },
-    "城市探索_切换自由调查": {
-        "recognition": "OCR",
-        "action": "Click",
-        "post_delay": 800,
-        "expected": [
-            "自由调查"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 503,
-                "y": 2503
-            }
-        },
-        "next": [
-            "城市探索_安排特工自由调查"
-        ]
-    },
     "城市探索_开始调查": {
         "recognition": "OCR",
         "action": "Click",
@@ -2121,39 +2135,39 @@
             "城市探索_开始调查"
         ]
     },
-    "城市探索_开启自动战斗": {
-        "recognition": "TemplateMatch",
+    "城市探索_确认获取事件奖励": {
+        "recognition": "OCR",
         "action": "Click",
-        "template": [
-            "cycle_outlined.png"
+        "expected": [
+            "点击以继续"
         ],
-        "post_delay": 1000,
         "__yamaape": {
             "position": {
-                "x": 4666,
-                "y": 1109
+                "x": 5884,
+                "y": 678
             }
         }
     },
-    "城市探索_确认回到城市探索": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "事件回顾"
+    "城市探索_新战后剧情": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "pre_delay": 1,
+        "post_delay": 30,
+        "target": [
+            25,
+            200,
+            1,
+            1
         ],
-        "post_delay": 1000,
+        "template": [
+            "log.png"
+        ],
         "__yamaape": {
             "position": {
-                "x": 5580,
-                "y": -95
+                "x": 5884,
+                "y": 840
             }
-        },
-        "next": [
-            "城市探索_检查事件面板"
-        ],
-        "interrupt": [
-            "城市探索_重新唤出事件列表"
-        ]
+        }
     },
     "城市探索_点击奖励选项": {
         "recognition": "DirectHit",
