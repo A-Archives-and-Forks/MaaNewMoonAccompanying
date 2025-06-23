@@ -8,7 +8,7 @@
     "每日采购_采购中心": {
         "recognition": "OCR",
         "action": "Click",
-        "post_delay": 2000,
+        "post_delay": 3000,
         "expected": [
             "采购中心"
         ],
@@ -29,8 +29,9 @@
         "expected": [
             "补给包"
         ],
-        "post_delay": 500,
         "focus": "> 采购每日免费补给包",
+        "pre_delay": 400,
+        "post_delay": 1000,
         "__yamaape": {
             "position": {
                 "x": 451,
@@ -47,8 +48,9 @@
         "expected": [
             "特惠活动"
         ],
-        "post_delay": 500,
+        "post_delay": 400,
         "timeout": 2000,
+        "pre_delay": 400,
         "__yamaape": {
             "position": {
                 "x": 702,
@@ -68,8 +70,9 @@
         "expected": [
             "免费"
         ],
-        "post_delay": 500,
-        "timeout": 2500,
+        "post_delay": 800,
+        "timeout": 3000,
+        "pre_delay": 400,
         "__yamaape": {
             "position": {
                 "x": 961,
@@ -89,8 +92,8 @@
         "focus": "> 今日已购买",
         "__yamaape": {
             "position": {
-                "x": 1213,
-                "y": -247
+                "x": 1214,
+                "y": -224
             }
         },
         "next": [
@@ -103,7 +106,8 @@
         "expected": [
             "免费购买"
         ],
-        "post_delay": 500,
+        "post_delay": 800,
+        "pre_delay": 400,
         "__yamaape": {
             "position": {
                 "x": 1212,
@@ -133,7 +137,7 @@
         "expected": [
             "点击以继续"
         ],
-        "pre_delay": 300,
+        "pre_delay": 800,
         "__yamaape": {
             "position": {
                 "x": 1462,
