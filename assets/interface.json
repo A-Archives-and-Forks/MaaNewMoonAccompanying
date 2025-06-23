@@ -1,10 +1,10 @@
 {
     "name": "MaaNewMoonAccompanying",
     "url": "https://github.com/kqcoxn/MaaNewMoonAccompanying",
-    "custom_title": "MNMA新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v1.2.8 - MFAA | 游戏版本：乐园不妙夜·上",
+    "custom_title": "MNMA新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v1.2.9 - MFAA | 游戏版本：乐园不妙夜·上",
     "mirrorchyan_rid": "MNMA",
     "mirrorchyan_multiplatform": true,
-    "version": "v1.2.8",
+    "version": "v1.2.9",
     "mfa_min_version": "v1.3.10",
     "message": "- 新 月 同 行 -",
     "controller": [
@@ -135,12 +135,6 @@
             "check": true
         },
         {
-            "name": "「乐园不妙夜」领取每日代币",
-            "entry": "活动日活_开始",
-            "doc": "**「乐园不妙夜」领取每日代币**：\n\n领取乐园不妙夜活动每日任务奖励\n\n**注意：版本更新后请先进入活动过完开场动画！**\n\n开始界面：主界面\n\n结束界面：主界面",
-            "check": true
-        },
-        {
             "name": "「世纪拘束塔」领取每周奖励",
             "entry": "拘束塔奖励_开始",
             "option": [
@@ -173,6 +167,12 @@
                 "指定升级特工"
             ],
             "doc": "**领取奖励**：\n\n领取每日任务与手册奖励\n\n- 特工升一级：在领取奖励前先升级一下特工，用于完成任务，需要在“高级-指定升级特工”选项中指定特工，请确保该特工仍能升级，每日仅执行一次，当特工需要认证或已满级时会跳过升级\n- 指定升级特工：可输入多个特工名称，特工以“,”或“ ”(空格)或“、”隔开，例如“千秋、恒沙,夜来 错误的地球仪头”，当前面的特工无法升级时，会自动切换到下一个特工\n\n开始界面：主界面\n\n结束界面：主界面",
+            "check": true
+        },
+        {
+            "name": "「乐园不妙夜」领取每日代币",
+            "entry": "活动日活_开始",
+            "doc": "**「乐园不妙夜」领取每日代币**：\n\n领取乐园不妙夜活动每日任务奖励\n\n**注意：版本更新后请先进入活动过完开场动画！**\n\n开始界面：主界面\n\n结束界面：主界面",
             "check": true
         },
         {
