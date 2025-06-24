@@ -140,6 +140,8 @@
             "物资类"
         ],
         "focus": "> 进入物资类",
+        "post_delay": 1000,
+        "pre_delay": 400,
         "__yamaape": {
             "position": {
                 "x": 117,
@@ -148,6 +150,9 @@
         },
         "next": [
             "城市探索_矢量创品"
+        ],
+        "interrupt": [
+            "城市探索_确认进入物资类"
         ]
     },
     "城市探索_获取制造物品": {
@@ -231,8 +236,8 @@
         "focus": "> 设施加速",
         "__yamaape": {
             "position": {
-                "x": 149,
-                "y": 776
+                "x": 129,
+                "y": 906
             }
         },
         "next": [
@@ -247,8 +252,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 402,
-                "y": 772
+                "x": 382,
+                "y": 902
             }
         },
         "next": [
@@ -263,8 +268,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 650,
-                "y": 768
+                "x": 630,
+                "y": 898
             }
         },
         "next": [
@@ -283,8 +288,8 @@
         "timeout": 2000,
         "__yamaape": {
             "position": {
-                "x": 890,
-                "y": 767
+                "x": 870,
+                "y": 897
             }
         },
         "next": [
@@ -303,8 +308,8 @@
         "focus": "> 收取加速后物资",
         "__yamaape": {
             "position": {
-                "x": 174,
-                "y": 993
+                "x": 154,
+                "y": 1123
             }
         },
         "next": [
@@ -321,8 +326,8 @@
         "focus": "> 结束物资加速",
         "__yamaape": {
             "position": {
-                "x": 684,
-                "y": 978
+                "x": 664,
+                "y": 1108
             }
         },
         "next": [
@@ -338,8 +343,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 427,
-                "y": 993
+                "x": 407,
+                "y": 1123
             }
         },
         "next": [
@@ -355,8 +360,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 942,
-                "y": 975
+                "x": 922,
+                "y": 1105
             }
         },
         "next": [
@@ -602,6 +607,38 @@
             "城市探索_初始化配队计数"
         ]
     },
+    "城市探索_开始调查": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "开始调查"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 899,
+                "y": 2268
+            }
+        },
+        "next": [
+            "城市探索_从调查返回"
+        ]
+    },
+    "城市探索_安排特工自由调查": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "安排特工自由调查"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 770,
+                "y": 2503
+            }
+        },
+        "next": [
+            "城市探索_开始调查"
+        ]
+    },
     "城市探索_初始化配队计数": {
         "recognition": "DirectHit",
         "action": "Custom",
@@ -723,8 +760,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 3412,
-                "y": -146
+                "x": 3409,
+                "y": -149
             }
         },
         "next": [
@@ -857,8 +894,8 @@
         "post_delay": 3000,
         "__yamaape": {
             "position": {
-                "x": 3673,
-                "y": -146
+                "x": 3670,
+                "y": -149
             }
         }
     },
@@ -1222,8 +1259,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 3645,
-                "y": 494
+                "x": 3381,
+                "y": 809
             }
         }
     },
@@ -1521,6 +1558,40 @@
             }
         }
     },
+    "城市探索_确认获取事件奖励": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击以继续"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 5884,
+                "y": 678
+            }
+        }
+    },
+    "城市探索_新战后剧情": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "pre_delay": 1,
+        "post_delay": 30,
+        "target": [
+            25,
+            200,
+            1,
+            1
+        ],
+        "template": [
+            "log.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 5884,
+                "y": 840
+            }
+        }
+    },
     "城市探索_自动跳过剧情": {
         "recognition": "OCR",
         "action": "Click",
@@ -1530,8 +1601,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 3654,
-                "y": 318
+                "x": 3641,
+                "y": 355
             }
         },
         "next": [
@@ -1579,7 +1650,7 @@
             "结束行动"
         ],
         "pre_delay": 400,
-        "focus": "> 战斗结束",
+        "focus": "> 作战失败！",
         "__yamaape": {
             "position": {
                 "x": 4636,
@@ -1736,8 +1807,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 3973,
-                "y": 338
+                "x": 3885,
+                "y": 357
             }
         }
     },
@@ -2103,69 +2174,16 @@
             "城市探索_资源收取"
         ]
     },
-    "城市探索_开始调查": {
+    "城市探索_确认进入物资类": {
         "recognition": "OCR",
         "action": "Click",
         "expected": [
-            "开始调查"
+            "物资类"
         ],
         "__yamaape": {
             "position": {
-                "x": 899,
-                "y": 2268
-            }
-        },
-        "next": [
-            "城市探索_从调查返回"
-        ]
-    },
-    "城市探索_安排特工自由调查": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "安排特工自由调查"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 770,
-                "y": 2503
-            }
-        },
-        "next": [
-            "城市探索_开始调查"
-        ]
-    },
-    "城市探索_确认获取事件奖励": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "点击以继续"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 5884,
-                "y": 678
-            }
-        }
-    },
-    "城市探索_新战后剧情": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "pre_delay": 1,
-        "post_delay": 30,
-        "target": [
-            25,
-            200,
-            1,
-            1
-        ],
-        "template": [
-            "log.png"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 5884,
-                "y": 840
+                "x": 372,
+                "y": 744
             }
         }
     },
