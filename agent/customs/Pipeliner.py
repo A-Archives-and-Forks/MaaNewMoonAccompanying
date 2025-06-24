@@ -33,6 +33,14 @@ class SetStrNodeAttrs(CustomAction):
                     value = []
                 context.override_pipeline({node: {key: value}})
 
-            return CustomAction.RunResult(success=True)
+            return True
         except Exception as e:
             return Prompt.error("设置节点字符串类型属性", e)
+
+
+@AgentServer.custom_action("break")
+class Break(CustomAction):
+    def run(
+        self, context: Context, argv: CustomAction.RunArg
+    ) -> CustomAction.RunResult | bool:
+        return False
