@@ -5,7 +5,7 @@
 
 ## 使用方式
 
-[使用文档](https://docs.codax.site/mnma/)
+[使用文档](https://docs.codax.site/mnma/guide/users/start.html)
 
 **第一次使用 MNMA 建议先单独尝试每一个功能，再尝试串行使用！**
 

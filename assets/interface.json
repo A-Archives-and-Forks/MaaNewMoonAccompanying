@@ -52,7 +52,7 @@
         {
             "name": "说明",
             "entry": "说明_说明",
-            "doc": "**- 新 月 同 行 -**\n\n欢迎使用新月同行小助手 ── MNMA!\n\n![loading...](https://s21.ax1x.com/2025/04/15/pEf0CDA.png)\n\n图像技术 + 模拟控制，解放双手！由 MaaFramework 强力驱动！\n\n**注意：第一次使用请配合[使用文档](https://docs.codax.site/mnma/)**\n\n**请不要在任何官方讨论区底下提及本软件！**\n\n更多相关信息请查阅项目 [Github](https://github.com/kqcoxn/MaaNewMoonAccompanying) 主页，Bug反馈/功能需求请提交 issue，或在 MNMA 交流群（993245868）内提问，感谢您的使用！\n\n**声明：本软件为开源项目，本体不以任何形式收取任何费用，若为付费下载皆是诈骗行为，请立刻退回！**\n\n开源地址：https://github.com/kqcoxn/MaaNewMoonAccompanying"
+            "doc": "**- 新 月 同 行 -**\n\n欢迎使用新月同行小助手 ── MNMA!\n\n![loading...](https://s21.ax1x.com/2025/04/15/pEf0CDA.png)\n\n图像技术 + 模拟控制，解放双手！由 MaaFramework 强力驱动！\n\n**注意：第一次使用请配合[使用文档](https://docs.codax.site/mnma/guide/users/start.html)**\n\n**请不要在任何官方讨论区底下提及本软件！**\n\n更多相关信息请查阅项目 [Github](https://github.com/kqcoxn/MaaNewMoonAccompanying) 主页，Bug反馈/功能需求请提交 issue，或在 MNMA 交流群（993245868）内提问，感谢您的使用！\n\n**声明：本软件为开源项目，本体不以任何形式收取任何费用，若为付费下载皆是诈骗行为，请立刻退回！**\n\n开源地址：[https://github.com/kqcoxn/MaaNewMoonAccompanying](https://github.com/kqcoxn/MaaNewMoonAccompanying)"
         },
         {
             "name": "启动游戏",
@@ -225,7 +225,7 @@
                     ]
                 }
             },
-            "doc": "**「蓝色站台」自动肉鸽**：\n\n**提示：蓝色站台为独立功能，不推荐与其他功能连续使用；为了尽可能适配各种情况，10s以内的卡顿皆在可接受范围内。**\n\n**请先自行配置好一次队伍，MNMA仅可使用默认配队直接进入战斗。**\n\n- 一层循环速刷：每次仅打第一层，直到本周分数刷满（一层循环一般比完整打满快一倍，强制检测1800分，请先解锁满奖励再开启此选项）\n\n建议不要太关注 MNMA 在局内做了什么，决策非常降智（当乐子看也行\n\n开始界面：蓝色站台入口界面/站台内任意有可选节点的界面\n\n结束界面：蓝色站台界面"
+            "doc": "**「蓝色站台」自动肉鸽**：\n\n**提示：蓝色站台为独立功能，不推荐与其他功能连续使用；为了尽可能适配各种情况，10s以内的卡顿皆在可接受范围内。**\n\n**请先自行配置好一次队伍，MNMA仅可使用默认配队直接进入战斗。**\n\n- 一层循环速刷：每次仅打第一层，直到本周分数刷满（一层循环一般比完整打满快一倍，且可能出现的问题更少，建议优先使用此方案；强制检测1800分，请先解锁满奖励再使用此选项）\n\n建议不要太关注 MNMA 在局内做了什么，决策非常降智（当乐子看也行\n\n开始界面：蓝色站台入口界面/站台内任意有可选节点的界面\n\n结束界面：蓝色站台界面"
         },
         {
             "name": "卡带升级",

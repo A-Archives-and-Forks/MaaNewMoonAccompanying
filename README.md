@@ -101,9 +101,6 @@
   - [x] 好友批量换新
   - [x] 剧情阅读器
 
-相关说明：
-
-- [功能说明](https://docs.codax.site/mnma/docs/users/funcs.html#%E4%BB%BB%E5%8A%A1%E8%AF%B4%E6%98%8E)
 - [更新记录](/docs/zh_cn/更新记录.md)
 
 \* 若有其他功能需求请提交 [issue](https://github.com/kqcoxn/MaaNewMoonAccompanying/issues?q=is%3Aissue)
@@ -112,7 +109,7 @@
 
 **每次版本更新后请手动把仅第一次出现的界面过一遍！**
 
-- [文图教程](https://docs.codax.site/mnma/docs/users/start.html)
+- [文图教程](https://docs.codax.site/mnma/guide/users/start.html)
 
 ## 加入我们
 
@@ -130,7 +127,7 @@
 
 请确保现有 [issue](https://github.com/kqcoxn/MaaNewMoonAccompanying/issues?q=is%3Aissue) 中还没有与您遇到的类似的问题
 
-- [文档站-用户手册-问题排查](https://docs.codax.site/mnma/docs/users/errors.html)
+- [文档站-用户手册-问题排查](https://docs.codax.site/mnma/guide/users/errors.html)
 
 特别感谢 [@Yakir-George](https://github.com/Yakir-George) 在项目开发时期的测试与反馈！
 
