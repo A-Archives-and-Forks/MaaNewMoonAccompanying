@@ -8,12 +8,12 @@ from datetime import datetime, date, timedelta
 from .utils import parse_query_args, LocalStorage, Prompt
 
 # 全局刷新时间配置
-refresh_hour = 3
+REFRESH_HOUR = 3
 
 
 class Inspector:
     @staticmethod
-    def _adjust_datetime(refresh_hour: int = refresh_hour) -> datetime:
+    def _adjust_datetime(refresh_hour: int = REFRESH_HOUR) -> datetime:
         """
         根据刷新时间调整日期
         如果当前时间小于刷新时间，则认为是前一天
@@ -30,7 +30,7 @@ class Inspector:
 
     # 是否在同一周
     @staticmethod
-    def same_week(task: str, refresh_hour: int = refresh_hour) -> bool:
+    def same_week(task: str, refresh_hour: int = REFRESH_HOUR) -> bool:
         current_datetime = Inspector._adjust_datetime(refresh_hour)
         last_date_str: Optional[str] = LocalStorage.get(task, "last_date")
 
@@ -49,7 +49,7 @@ class Inspector:
 
     # 是否在同一天
     @staticmethod
-    def same_day(task: str, refresh_hour: int = refresh_hour) -> bool:
+    def same_day(task: str, refresh_hour: int = REFRESH_HOUR) -> bool:
         current_datetime = Inspector._adjust_datetime(refresh_hour)
         last_date_str: Optional[str] = LocalStorage.get(task, "last_date")
 
@@ -96,7 +96,7 @@ class PeriodicCheck(CustomAction):
             args = parse_query_args(argv)
             periodic = args.get("p")
             task = args.get("t")
-            refresh_hour = int(args.get("r", refresh_hour))
+            refresh_hour = int(args.get("r", REFRESH_HOUR))
 
             flag = False
             if periodic == "week":

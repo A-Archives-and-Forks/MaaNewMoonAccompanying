@@ -40,19 +40,6 @@
             "退出游戏_检测每日任务"
         ]
     },
-    "退出游戏_开始": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "__yamaape": {
-            "position": {
-                "x": -54,
-                "y": -18
-            }
-        },
-        "next": [
-            "退出游戏_检测主界面"
-        ]
-    },
     "退出游戏_不在主界面": {
         "recognition": "DirectHit",
         "action": "Custom",
@@ -79,6 +66,19 @@
             "退出游戏_任务面板"
         ]
     },
+    "退出游戏_开始": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": -54,
+                "y": -18
+            }
+        },
+        "next": [
+            "退出游戏_检测主界面"
+        ]
+    },
     "退出游戏_任务面板": {
         "recognition": "OCR",
         "action": "Click",
@@ -102,6 +102,7 @@
             "每日任务"
         ],
         "pre_delay": 800,
+        "timeout": 3000,
         "__yamaape": {
             "position": {
                 "x": 519,
@@ -110,6 +111,9 @@
         },
         "next": [
             "退出游戏_奖励已全部领取"
+        ],
+        "on_error": [
+            "退出游戏_阻断任务"
         ]
     },
     "退出游戏_奖励已全部领取": {
@@ -118,7 +122,6 @@
         "expected": [
             "奖励已全部领取"
         ],
-        "timeout": 3000,
         "focus": "> 每日奖励已全部领取",
         "__yamaape": {
             "position": {
@@ -126,24 +129,9 @@
                 "y": 210
             }
         },
-        "on_error": [
-            "退出游戏_阻断任务"
-        ],
         "next": [
             "退出游戏_退出游戏"
         ]
-    },
-    "退出游戏_阻断任务": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "break",
-        "focus": "> 每日任务未完成！",
-        "__yamaape": {
-            "position": {
-                "x": 1058,
-                "y": 378
-            }
-        }
     },
     "退出游戏_退出游戏": {
         "recognition": "DirectHit",
@@ -153,6 +141,18 @@
             "position": {
                 "x": 1058,
                 "y": 209
+            }
+        }
+    },
+    "退出游戏_阻断任务": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "break",
+        "focus": "> 每日任务未完成！",
+        "__yamaape": {
+            "position": {
+                "x": 780,
+                "y": 404
             }
         }
     }
