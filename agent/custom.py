@@ -10,3 +10,5 @@ import customs.Pipeliner
 import customs.CityWalk
 import customs.IceDrink
 import customs.AgentTraining
+import customs.MatrixScheduling
+import customs.Activities

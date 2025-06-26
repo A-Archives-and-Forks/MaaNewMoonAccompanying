@@ -17,4 +17,5 @@ def main():
 
 
 if __name__ == "__main__":
+    print("调试模式")
     main()
