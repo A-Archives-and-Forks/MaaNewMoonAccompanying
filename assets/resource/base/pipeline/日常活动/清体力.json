@@ -715,6 +715,46 @@
             "清体力_1X"
         ]
     },
+    "清体力_确认回到主页": {
+        "recognition": "OCR",
+        "action": "Custom",
+        "expected": [
+            "城市探索"
+        ],
+        "post_delay": 3000,
+        "custom_action": "record_periodic_check",
+        "custom_action_param": "t=auto_fight",
+        "__yamaape": {
+            "position": {
+                "x": 5184,
+                "y": 1163
+            }
+        }
+    },
+    "清体力_1X": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "x1",
+            "×1"
+        ],
+        "order_by": "Vertical",
+        "roi": [
+            848,
+            416,
+            118,
+            175
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3433,
+                "y": 1026
+            }
+        },
+        "next": [
+            "清体力_开始挑战1"
+        ]
+    },
     "清体力_4X助战": {
         "recognition": "DirectHit",
         "action": "Custom",
@@ -874,55 +914,16 @@
             "刷新列表"
         ],
         "pre_delay": 400,
+        "post_delay": 1200,
         "__yamaape": {
             "position": {
-                "x": 3272,
-                "y": 2233
+                "x": 3270,
+                "y": 2206
             }
         },
         "next": [
             "清体力_选择助战"
         ]
-    },
-    "清体力_1X": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "x1",
-            "×1"
-        ],
-        "order_by": "Vertical",
-        "roi": [
-            848,
-            416,
-            118,
-            175
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 3433,
-                "y": 1026
-            }
-        },
-        "next": [
-            "清体力_开始挑战1"
-        ]
-    },
-    "清体力_确认回到主页": {
-        "recognition": "OCR",
-        "action": "Custom",
-        "expected": [
-            "城市探索"
-        ],
-        "post_delay": 3000,
-        "custom_action": "record_periodic_check",
-        "custom_action_param": "t=auto_fight",
-        "__yamaape": {
-            "position": {
-                "x": 5184,
-                "y": 1163
-            }
-        }
     },
     "清体力_开始挑战1": {
         "recognition": "OCR",
