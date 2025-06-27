@@ -230,6 +230,8 @@
         "expected": [
             "进入"
         ],
+        "order_by": "Vertical",
+        "pre_delay": 400,
         "__yamaape": {
             "position": {
                 "x": 632,
@@ -247,10 +249,11 @@
             "加速"
         ],
         "focus": "> 设施加速",
+        "pre_delay": 800,
         "__yamaape": {
             "position": {
                 "x": 129,
-                "y": 906
+                "y": 873
             }
         },
         "next": [
@@ -293,8 +296,8 @@
         "recognition": "DirectHit",
         "action": "Click",
         "target": [
-            25,
-            200,
+            5,
+            5,
             1,
             1
         ],
@@ -332,11 +335,12 @@
     "城市探索_从设施返回1": {
         "recognition": "TemplateMatch",
         "action": "Click",
-        "post_delay": 1000,
         "template": [
             "back.png"
         ],
         "focus": "> 结束物资加速",
+        "pre_delay": 800,
+        "post_delay": 1000,
         "__yamaape": {
             "position": {
                 "x": 664,
@@ -367,10 +371,10 @@
     "城市探索_从设施返回2": {
         "recognition": "TemplateMatch",
         "action": "Click",
-        "post_delay": 500,
         "template": [
             "back.png"
         ],
+        "pre_delay": 800,
         "__yamaape": {
             "position": {
                 "x": 922,
@@ -464,8 +468,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 289,
-                "y": 1363
+                "x": 239,
+                "y": 1365
             }
         }
     },
@@ -1303,6 +1307,18 @@
         "next": [
             "城市探索_设置倍速"
         ]
+    },
+    "城市探索_诱发中断": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "break",
+        "focus": "> 新剧情，将中断任务",
+        "__yamaape": {
+            "position": {
+                "x": 3368,
+                "y": 808
+            }
+        }
     },
     "城市探索_检查配队计数": {
         "recognition": "DirectHit",
@@ -2189,18 +2205,6 @@
         "next": [
             "城市探索_资源收取"
         ]
-    },
-    "城市探索_诱发中断": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "break",
-        "focus": "> 新剧情，将中断任务",
-        "__yamaape": {
-            "position": {
-                "x": 3368,
-                "y": 808
-            }
-        }
     },
     "城市探索_点击奖励选项": {
         "recognition": "DirectHit",
