@@ -1296,6 +1296,86 @@
                             "next": "环线调度_1-10"
                         }
                     }
+                },
+                {
+                    "name": "2-1",
+                    "pipeline_override": {
+                        "环线调度_开始": {
+                            "next": "环线调度_2-1"
+                        }
+                    }
+                },
+                {
+                    "name": "2-2",
+                    "pipeline_override": {
+                        "环线调度_开始": {
+                            "next": "环线调度_2-2"
+                        }
+                    }
+                },
+                {
+                    "name": "2-3",
+                    "pipeline_override": {
+                        "环线调度_开始": {
+                            "next": "环线调度_2-3"
+                        }
+                    }
+                },
+                {
+                    "name": "2-4",
+                    "pipeline_override": {
+                        "环线调度_开始": {
+                            "next": "环线调度_2-4"
+                        }
+                    }
+                },
+                {
+                    "name": "2-5",
+                    "pipeline_override": {
+                        "环线调度_开始": {
+                            "next": "环线调度_2-5"
+                        }
+                    }
+                },
+                {
+                    "name": "2-6",
+                    "pipeline_override": {
+                        "环线调度_开始": {
+                            "next": "环线调度_2-6"
+                        }
+                    }
+                },
+                {
+                    "name": "2-7",
+                    "pipeline_override": {
+                        "环线调度_开始": {
+                            "next": "环线调度_2-7"
+                        }
+                    }
+                },
+                {
+                    "name": "2-8",
+                    "pipeline_override": {
+                        "环线调度_开始": {
+                            "next": "环线调度_2-8"
+                        }
+                    }
+                },
+                {
+                    "name": "2-9",
+                    "pipeline_override": {
+                        "环线调度_开始": {
+                            "next": "环线调度_2-9"
+                        }
+                    }
+                },
+                {
+                    "name": "2-10",
+                    "pipeline_override": {
+                        "环线调度_开始": {
+                            "next": "环线调度_2-10"
+                        }
+                    }
                 }
             ]
         },

@@ -60,11 +60,10 @@
         "recognition": "DirectHit",
         "action": "DoNothing",
         "focus": "> 发车结束，若失败可能是由于卡顿导致，可以重新尝试",
-        "post_delay": 6000,
         "__yamaape": {
             "position": {
-                "x": 4364,
-                "y": 102
+                "x": 4885,
+                "y": 5943
             }
         }
     },
@@ -546,22 +545,6 @@
             "环线调度_1-4car4"
         ]
     },
-    "环线调度_1-4car7": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "loop_dispatching",
-        "custom_action_param": "row=5&col=2",
-        "pre_delay": 0,
-        "__yamaape": {
-            "position": {
-                "x": 2689,
-                "y": 1012
-            }
-        },
-        "next": [
-            "环线调度_完成"
-        ]
-    },
     "环线调度_1-4car4": {
         "recognition": "DirectHit",
         "action": "Custom",
@@ -611,6 +594,22 @@
         },
         "next": [
             "环线调度_1-4car7"
+        ]
+    },
+    "环线调度_1-4car7": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=5&col=2",
+        "pre_delay": 0,
+        "__yamaape": {
+            "position": {
+                "x": 2689,
+                "y": 1012
+            }
+        },
+        "next": [
+            "环线调度_完成"
         ]
     },
     "环线调度_1-5": {
@@ -700,6 +699,57 @@
             "环线调度_1-5car4"
         ]
     },
+    "环线调度_1-5car4": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=2&col=4",
+        "post_delay": 2000,
+        "pre_delay": 0,
+        "__yamaape": {
+            "position": {
+                "x": 1910,
+                "y": 1323
+            }
+        },
+        "next": [
+            "环线调度_1-5car5"
+        ]
+    },
+    "环线调度_1-5car5": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=1&col=2",
+        "post_delay": 2000,
+        "pre_delay": 0,
+        "__yamaape": {
+            "position": {
+                "x": 2170,
+                "y": 1323
+            }
+        },
+        "next": [
+            "环线调度_1-5car6"
+        ]
+    },
+    "环线调度_1-5car6": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=2&col=2",
+        "post_delay": 1500,
+        "pre_delay": 0,
+        "__yamaape": {
+            "position": {
+                "x": 2430,
+                "y": 1323
+            }
+        },
+        "next": [
+            "环线调度_1-5car7"
+        ]
+    },
     "环线调度_1-5car7": {
         "recognition": "DirectHit",
         "action": "Custom",
@@ -732,57 +782,6 @@
         },
         "next": [
             "环线调度_完成"
-        ]
-    },
-    "环线调度_1-5car6": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "loop_dispatching",
-        "custom_action_param": "row=2&col=2",
-        "post_delay": 1500,
-        "pre_delay": 0,
-        "__yamaape": {
-            "position": {
-                "x": 2430,
-                "y": 1323
-            }
-        },
-        "next": [
-            "环线调度_1-5car7"
-        ]
-    },
-    "环线调度_1-5car5": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "loop_dispatching",
-        "custom_action_param": "row=1&col=2",
-        "post_delay": 2000,
-        "pre_delay": 0,
-        "__yamaape": {
-            "position": {
-                "x": 2170,
-                "y": 1323
-            }
-        },
-        "next": [
-            "环线调度_1-5car6"
-        ]
-    },
-    "环线调度_1-5car4": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "loop_dispatching",
-        "custom_action_param": "row=2&col=4",
-        "post_delay": 2000,
-        "pre_delay": 0,
-        "__yamaape": {
-            "position": {
-                "x": 1910,
-                "y": 1323
-            }
-        },
-        "next": [
-            "环线调度_1-5car5"
         ]
     },
     "环线调度_1-6": {
@@ -1027,6 +1026,57 @@
             "环线调度_1-7car4"
         ]
     },
+    "环线调度_1-7car4": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=4&col=1",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1916,
+                "y": 1942
+            }
+        },
+        "next": [
+            "环线调度_1-7car5"
+        ]
+    },
+    "环线调度_1-7car5": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=5&col=3",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 2176,
+                "y": 1942
+            }
+        },
+        "next": [
+            "环线调度_1-7car6"
+        ]
+    },
+    "环线调度_1-7car6": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=4&col=4",
+        "post_delay": 0,
+        "pre_delay": 2500,
+        "__yamaape": {
+            "position": {
+                "x": 2436,
+                "y": 1942
+            }
+        },
+        "next": [
+            "环线调度_1-7car7"
+        ]
+    },
     "环线调度_1-7car7": {
         "recognition": "DirectHit",
         "action": "Custom",
@@ -1059,57 +1109,6 @@
         },
         "next": [
             "环线调度_完成"
-        ]
-    },
-    "环线调度_1-7car6": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "loop_dispatching",
-        "custom_action_param": "row=4&col=4",
-        "post_delay": 0,
-        "pre_delay": 2500,
-        "__yamaape": {
-            "position": {
-                "x": 2436,
-                "y": 1942
-            }
-        },
-        "next": [
-            "环线调度_1-7car7"
-        ]
-    },
-    "环线调度_1-7car5": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "loop_dispatching",
-        "custom_action_param": "row=5&col=3",
-        "post_delay": 0,
-        "pre_delay": 400,
-        "__yamaape": {
-            "position": {
-                "x": 2176,
-                "y": 1942
-            }
-        },
-        "next": [
-            "环线调度_1-7car6"
-        ]
-    },
-    "环线调度_1-7car4": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "loop_dispatching",
-        "custom_action_param": "row=4&col=1",
-        "post_delay": 0,
-        "pre_delay": 400,
-        "__yamaape": {
-            "position": {
-                "x": 1916,
-                "y": 1942
-            }
-        },
-        "next": [
-            "环线调度_1-7car5"
         ]
     },
     "环线调度_1-8": {
@@ -1199,6 +1198,74 @@
             "环线调度_1-8car4"
         ]
     },
+    "环线调度_1-8car4": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=2&col=1",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1916,
+                "y": 2246
+            }
+        },
+        "next": [
+            "环线调度_1-8car5"
+        ]
+    },
+    "环线调度_1-8car5": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=4&col=3",
+        "post_delay": 0,
+        "pre_delay": 2500,
+        "__yamaape": {
+            "position": {
+                "x": 2176,
+                "y": 2246
+            }
+        },
+        "next": [
+            "环线调度_1-8car6"
+        ]
+    },
+    "环线调度_1-8car6": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=2&col=4",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 2436,
+                "y": 2246
+            }
+        },
+        "next": [
+            "环线调度_1-8car7"
+        ]
+    },
+    "环线调度_1-8car7": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=4&col=2",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 2696,
+                "y": 2246
+            }
+        },
+        "next": [
+            "环线调度_1-8car8"
+        ]
+    },
     "环线调度_1-8car8": {
         "recognition": "DirectHit",
         "action": "Custom",
@@ -1231,74 +1298,6 @@
         },
         "next": [
             "环线调度_完成"
-        ]
-    },
-    "环线调度_1-8car7": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "loop_dispatching",
-        "custom_action_param": "row=4&col=2",
-        "post_delay": 0,
-        "pre_delay": 400,
-        "__yamaape": {
-            "position": {
-                "x": 2696,
-                "y": 2246
-            }
-        },
-        "next": [
-            "环线调度_1-8car8"
-        ]
-    },
-    "环线调度_1-8car6": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "loop_dispatching",
-        "custom_action_param": "row=2&col=4",
-        "post_delay": 0,
-        "pre_delay": 400,
-        "__yamaape": {
-            "position": {
-                "x": 2436,
-                "y": 2246
-            }
-        },
-        "next": [
-            "环线调度_1-8car7"
-        ]
-    },
-    "环线调度_1-8car5": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "loop_dispatching",
-        "custom_action_param": "row=4&col=3",
-        "post_delay": 0,
-        "pre_delay": 2500,
-        "__yamaape": {
-            "position": {
-                "x": 2176,
-                "y": 2246
-            }
-        },
-        "next": [
-            "环线调度_1-8car6"
-        ]
-    },
-    "环线调度_1-8car4": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "loop_dispatching",
-        "custom_action_param": "row=2&col=1",
-        "post_delay": 0,
-        "pre_delay": 400,
-        "__yamaape": {
-            "position": {
-                "x": 1916,
-                "y": 2246
-            }
-        },
-        "next": [
-            "环线调度_1-8car5"
         ]
     },
     "环线调度_1-9": {
@@ -1388,6 +1387,91 @@
             "环线调度_1-9car4"
         ]
     },
+    "环线调度_1-9car4": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=2&col=4",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1915,
+                "y": 2552
+            }
+        },
+        "next": [
+            "环线调度_1-9car5"
+        ]
+    },
+    "环线调度_1-9car5": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=4&col=5",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 2175,
+                "y": 2552
+            }
+        },
+        "next": [
+            "环线调度_1-9car6"
+        ]
+    },
+    "环线调度_1-9car6": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=4&col=3",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 2435,
+                "y": 2552
+            }
+        },
+        "next": [
+            "环线调度_1-9car7"
+        ]
+    },
+    "环线调度_1-9car7": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=3&col=3",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 2695,
+                "y": 2552
+            }
+        },
+        "next": [
+            "环线调度_1-9car8"
+        ]
+    },
+    "环线调度_1-9car8": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=3&col=1",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 2955,
+                "y": 2552
+            }
+        },
+        "next": [
+            "环线调度_1-9car9"
+        ]
+    },
     "环线调度_1-9car9": {
         "recognition": "DirectHit",
         "action": "Custom",
@@ -1420,91 +1504,6 @@
         },
         "next": [
             "环线调度_完成"
-        ]
-    },
-    "环线调度_1-9car8": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "loop_dispatching",
-        "custom_action_param": "row=3&col=1",
-        "post_delay": 0,
-        "pre_delay": 400,
-        "__yamaape": {
-            "position": {
-                "x": 2955,
-                "y": 2552
-            }
-        },
-        "next": [
-            "环线调度_1-9car9"
-        ]
-    },
-    "环线调度_1-9car7": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "loop_dispatching",
-        "custom_action_param": "row=3&col=3",
-        "post_delay": 0,
-        "pre_delay": 400,
-        "__yamaape": {
-            "position": {
-                "x": 2695,
-                "y": 2552
-            }
-        },
-        "next": [
-            "环线调度_1-9car8"
-        ]
-    },
-    "环线调度_1-9car6": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "loop_dispatching",
-        "custom_action_param": "row=4&col=3",
-        "post_delay": 0,
-        "pre_delay": 400,
-        "__yamaape": {
-            "position": {
-                "x": 2435,
-                "y": 2552
-            }
-        },
-        "next": [
-            "环线调度_1-9car7"
-        ]
-    },
-    "环线调度_1-9car5": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "loop_dispatching",
-        "custom_action_param": "row=4&col=5",
-        "post_delay": 0,
-        "pre_delay": 400,
-        "__yamaape": {
-            "position": {
-                "x": 2175,
-                "y": 2552
-            }
-        },
-        "next": [
-            "环线调度_1-9car6"
-        ]
-    },
-    "环线调度_1-9car4": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "loop_dispatching",
-        "custom_action_param": "row=2&col=4",
-        "post_delay": 0,
-        "pre_delay": 400,
-        "__yamaape": {
-            "position": {
-                "x": 1915,
-                "y": 2552
-            }
-        },
-        "next": [
-            "环线调度_1-9car5"
         ]
     },
     "环线调度_1-10car11": {
@@ -1728,6 +1727,2372 @@
         },
         "next": [
             "环线调度_1-10棋盘"
+        ]
+    },
+    "环线调度_2-1": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "重玩本关",
+            "道具使用"
+        ],
+        "focus": "> 2-1",
+        "post_delay": 2000,
+        "order_by": "Vertical",
+        "index": -1,
+        "__yamaape": {
+            "position": {
+                "x": 627,
+                "y": 3342
+            }
+        },
+        "next": [
+            "环线调度_2-1棋盘"
+        ]
+    },
+    "环线调度_2-1棋盘": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "init_step_matrix",
+        "custom_action_param": "ox=576&oy=240&sx=60&sy=60",
+        "__yamaape": {
+            "position": {
+                "x": 882,
+                "y": 3345
+            }
+        },
+        "next": [
+            "环线调度_2-1car1"
+        ]
+    },
+    "环线调度_2-1car1": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=1&col=3",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1136,
+                "y": 3344
+            }
+        },
+        "next": [
+            "环线调度_2-1car2"
+        ]
+    },
+    "环线调度_2-1car2": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=3&col=3",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1396,
+                "y": 3344
+            }
+        },
+        "next": [
+            "环线调度_2-1car3"
+        ]
+    },
+    "环线调度_2-1car3": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=3&col=1",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1656,
+                "y": 3344
+            }
+        },
+        "next": [
+            "环线调度_2-1car4"
+        ]
+    },
+    "环线调度_2-1car4": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=4&col=2",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1916,
+                "y": 3344
+            }
+        },
+        "next": [
+            "环线调度_2-1car5"
+        ]
+    },
+    "环线调度_2-1car5": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=2&col=1",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 2176,
+                "y": 3344
+            }
+        },
+        "next": [
+            "环线调度_2-1car6"
+        ]
+    },
+    "环线调度_2-1car6": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=2&col=4",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 2436,
+                "y": 3344
+            }
+        },
+        "next": [
+            "环线调度_2-1car7"
+        ]
+    },
+    "环线调度_2-1car7": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=5&col=5",
+        "post_delay": 0,
+        "pre_delay": 1200,
+        "__yamaape": {
+            "position": {
+                "x": 2696,
+                "y": 3344
+            }
+        },
+        "next": [
+            "环线调度_2-1car8"
+        ]
+    },
+    "环线调度_2-1car8": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=4&col=3",
+        "post_delay": 0,
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 2956,
+                "y": 3344
+            }
+        },
+        "next": [
+            "环线调度_2-1car9"
+        ]
+    },
+    "环线调度_2-1car9": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=5&col=4",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 3216,
+                "y": 3346
+            }
+        },
+        "next": [
+            "环线调度_完成"
+        ]
+    },
+    "环线调度_2-2": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "重玩本关",
+            "道具使用"
+        ],
+        "focus": "> 2-2",
+        "post_delay": 2000,
+        "order_by": "Vertical",
+        "index": -1,
+        "__yamaape": {
+            "position": {
+                "x": 630,
+                "y": 3652
+            }
+        },
+        "next": [
+            "环线调度_2-2棋盘"
+        ]
+    },
+    "环线调度_2-2棋盘": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "init_step_matrix",
+        "custom_action_param": "ox=576&oy=240&sx=60&sy=60",
+        "__yamaape": {
+            "position": {
+                "x": 886,
+                "y": 3650
+            }
+        },
+        "next": [
+            "环线调度_2-2car1"
+        ]
+    },
+    "环线调度_2-2car1": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=4&col=5",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1140,
+                "y": 3653
+            }
+        },
+        "next": [
+            "环线调度_2-2car2"
+        ]
+    },
+    "环线调度_2-2car2": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=3&col=5",
+        "post_delay": 0,
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 1396,
+                "y": 3650
+            }
+        },
+        "next": [
+            "环线调度_2-2car3"
+        ]
+    },
+    "环线调度_2-2car3": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=2&col=5",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1660,
+                "y": 3653
+            }
+        },
+        "next": [
+            "环线调度_2-2car4"
+        ]
+    },
+    "环线调度_2-2car4": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=1&col=1",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1920,
+                "y": 3653
+            }
+        },
+        "next": [
+            "环线调度_2-2car5"
+        ]
+    },
+    "环线调度_2-2car11": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=4&col=2",
+        "post_delay": 0,
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 3740,
+                "y": 3653
+            }
+        },
+        "next": [
+            "环线调度_完成"
+        ]
+    },
+    "环线调度_2-2car10": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=4&col=1",
+        "post_delay": 0,
+        "pre_delay": 1800,
+        "__yamaape": {
+            "position": {
+                "x": 3480,
+                "y": 3653
+            }
+        },
+        "next": [
+            "环线调度_2-2car11"
+        ]
+    },
+    "环线调度_2-2car9": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=5&col=1",
+        "post_delay": 0,
+        "pre_delay": 2500,
+        "__yamaape": {
+            "position": {
+                "x": 3220,
+                "y": 3653
+            }
+        },
+        "next": [
+            "环线调度_2-2car10"
+        ]
+    },
+    "环线调度_2-2car8": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=5&col=3",
+        "post_delay": 0,
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 2960,
+                "y": 3653
+            }
+        },
+        "next": [
+            "环线调度_2-2car9"
+        ]
+    },
+    "环线调度_2-2car7": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=5&col=4",
+        "post_delay": 0,
+        "pre_delay": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 2700,
+                "y": 3653
+            }
+        },
+        "next": [
+            "环线调度_2-2car8"
+        ]
+    },
+    "环线调度_2-2car6": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=2&col=3",
+        "post_delay": 0,
+        "pre_delay": 2000,
+        "__yamaape": {
+            "position": {
+                "x": 2440,
+                "y": 3653
+            }
+        },
+        "next": [
+            "环线调度_2-2car7"
+        ]
+    },
+    "环线调度_2-2car5": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=2&col=1",
+        "post_delay": 0,
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 2180,
+                "y": 3653
+            }
+        },
+        "next": [
+            "环线调度_2-2car6"
+        ]
+    },
+    "环线调度_2-3": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "重玩本关",
+            "道具使用"
+        ],
+        "focus": "> 2-3",
+        "post_delay": 2000,
+        "order_by": "Vertical",
+        "index": -1,
+        "__yamaape": {
+            "position": {
+                "x": 631,
+                "y": 3953
+            }
+        },
+        "next": [
+            "环线调度_2-3棋盘"
+        ]
+    },
+    "环线调度_2-3棋盘": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "init_step_matrix",
+        "custom_action_param": "ox=576&oy=240&sx=60&sy=60",
+        "__yamaape": {
+            "position": {
+                "x": 887,
+                "y": 3951
+            }
+        },
+        "next": [
+            "环线调度_2-3car1"
+        ]
+    },
+    "环线调度_2-3car1": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=2&col=5",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1141,
+                "y": 3952
+            }
+        },
+        "next": [
+            "环线调度_2-3car2"
+        ]
+    },
+    "环线调度_2-3car2": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=4&col=5",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1401,
+                "y": 3952
+            }
+        },
+        "next": [
+            "环线调度_2-3car3"
+        ]
+    },
+    "环线调度_2-3car3": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=1&col=5",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1661,
+                "y": 3952
+            }
+        },
+        "next": [
+            "环线调度_2-3car4"
+        ]
+    },
+    "环线调度_2-3car4": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=1&col=4",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1921,
+                "y": 3952
+            }
+        },
+        "next": [
+            "环线调度_2-3car5"
+        ]
+    },
+    "环线调度_2-3car12": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=5&col=4",
+        "post_delay": 0,
+        "pre_delay": 3600,
+        "__yamaape": {
+            "position": {
+                "x": 4005,
+                "y": 3954
+            }
+        },
+        "next": [
+            "环线调度_完成"
+        ]
+    },
+    "环线调度_2-3car11": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=5&col=2",
+        "post_delay": 0,
+        "pre_delay": 3500,
+        "__yamaape": {
+            "position": {
+                "x": 3743,
+                "y": 3952
+            }
+        },
+        "next": [
+            "环线调度_2-3car12"
+        ]
+    },
+    "环线调度_2-3car10": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=4&col=2",
+        "post_delay": 0,
+        "pre_delay": 600,
+        "__yamaape": {
+            "position": {
+                "x": 3481,
+                "y": 3952
+            }
+        },
+        "next": [
+            "环线调度_2-3car11"
+        ]
+    },
+    "环线调度_2-3car9": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=5&col=3",
+        "post_delay": 0,
+        "pre_delay": 6000,
+        "__yamaape": {
+            "position": {
+                "x": 3221,
+                "y": 3952
+            }
+        },
+        "next": [
+            "环线调度_2-3car10"
+        ]
+    },
+    "环线调度_2-3car8": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=4&col=3",
+        "post_delay": 0,
+        "pre_delay": 1200,
+        "__yamaape": {
+            "position": {
+                "x": 2960,
+                "y": 3952
+            }
+        },
+        "next": [
+            "环线调度_2-3car9"
+        ]
+    },
+    "环线调度_2-3car7": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=3&col=3",
+        "post_delay": 0,
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 2701,
+                "y": 3952
+            }
+        },
+        "next": [
+            "环线调度_2-3car8"
+        ]
+    },
+    "环线调度_2-3car6": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=3&col=1",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 2441,
+                "y": 3952
+            }
+        },
+        "next": [
+            "环线调度_2-3car7"
+        ]
+    },
+    "环线调度_2-3car5": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=1&col=2",
+        "post_delay": 0,
+        "pre_delay": 1800,
+        "__yamaape": {
+            "position": {
+                "x": 2181,
+                "y": 3952
+            }
+        },
+        "next": [
+            "环线调度_2-3car6"
+        ]
+    },
+    "环线调度_2-4": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "重玩本关",
+            "道具使用"
+        ],
+        "focus": "> 2-4",
+        "post_delay": 2000,
+        "order_by": "Vertical",
+        "index": -1,
+        "__yamaape": {
+            "position": {
+                "x": 635,
+                "y": 4252
+            }
+        },
+        "next": [
+            "环线调度_2-4棋盘"
+        ]
+    },
+    "环线调度_2-4棋盘": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "init_step_matrix",
+        "custom_action_param": "ox=576&oy=240&sx=60&sy=60",
+        "__yamaape": {
+            "position": {
+                "x": 888,
+                "y": 4255
+            }
+        },
+        "next": [
+            "环线调度_2-4car1"
+        ]
+    },
+    "环线调度_2-4car1": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=1&col=5",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1148,
+                "y": 4254
+            }
+        },
+        "next": [
+            "环线调度_2-4car2"
+        ]
+    },
+    "环线调度_2-4car2": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=2&col=1",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1408,
+                "y": 4254
+            }
+        },
+        "next": [
+            "环线调度_2-4car3"
+        ]
+    },
+    "环线调度_2-4car3": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=5&col=4",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1668,
+                "y": 4254
+            }
+        },
+        "next": [
+            "环线调度_2-4car4"
+        ]
+    },
+    "环线调度_2-4car4": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=3&col=5",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1923,
+                "y": 4254
+            }
+        },
+        "next": [
+            "环线调度_2-4car5"
+        ]
+    },
+    "环线调度_2-4car12": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=2&col=3",
+        "post_delay": 0,
+        "pre_delay": 1800,
+        "__yamaape": {
+            "position": {
+                "x": 4008,
+                "y": 4254
+            }
+        },
+        "next": [
+            "环线调度_完成"
+        ]
+    },
+    "环线调度_2-4car11": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=2&col=2",
+        "post_delay": 0,
+        "pre_delay": 6000,
+        "__yamaape": {
+            "position": {
+                "x": 3748,
+                "y": 4254
+            }
+        },
+        "next": [
+            "环线调度_2-4car12"
+        ]
+    },
+    "环线调度_2-4car10": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=5&col=2",
+        "post_delay": 0,
+        "pre_delay": 1600,
+        "__yamaape": {
+            "position": {
+                "x": 3488,
+                "y": 4255
+            }
+        },
+        "next": [
+            "环线调度_2-4car11"
+        ]
+    },
+    "环线调度_2-4car9": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=4&col=1",
+        "post_delay": 0,
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 3228,
+                "y": 4254
+            }
+        },
+        "next": [
+            "环线调度_2-4car10"
+        ]
+    },
+    "环线调度_2-4car8": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=3&col=1",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 2968,
+                "y": 4254
+            }
+        },
+        "next": [
+            "环线调度_2-4car9"
+        ]
+    },
+    "环线调度_2-4car7": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=4&col=3",
+        "post_delay": 0,
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 2708,
+                "y": 4254
+            }
+        },
+        "next": [
+            "环线调度_2-4car8"
+        ]
+    },
+    "环线调度_2-4car6": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=5&col=3",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 2448,
+                "y": 4254
+            }
+        },
+        "next": [
+            "环线调度_2-4car7"
+        ]
+    },
+    "环线调度_2-4car5": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=5&col=5",
+        "post_delay": 0,
+        "pre_delay": 1500,
+        "__yamaape": {
+            "position": {
+                "x": 2188,
+                "y": 4254
+            }
+        },
+        "next": [
+            "环线调度_2-4car6"
+        ]
+    },
+    "环线调度_2-5": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "重玩本关",
+            "道具使用"
+        ],
+        "focus": "> 2-5",
+        "post_delay": 2000,
+        "order_by": "Vertical",
+        "index": -1,
+        "__yamaape": {
+            "position": {
+                "x": 632,
+                "y": 4559
+            }
+        },
+        "next": [
+            "环线调度_2-5棋盘"
+        ]
+    },
+    "环线调度_2-5棋盘": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "init_step_matrix",
+        "custom_action_param": "ox=576&oy=240&sx=60&sy=60",
+        "__yamaape": {
+            "position": {
+                "x": 892,
+                "y": 4559
+            }
+        },
+        "next": [
+            "环线调度_2-5car1"
+        ]
+    },
+    "环线调度_2-5car1": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=5&col=5",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1151,
+                "y": 4560
+            }
+        },
+        "next": [
+            "环线调度_2-5car2"
+        ]
+    },
+    "环线调度_2-5car2": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=1&col=1",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1411,
+                "y": 4560
+            }
+        },
+        "next": [
+            "环线调度_2-5car3"
+        ]
+    },
+    "环线调度_2-5car3": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=4&col=5",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1671,
+                "y": 4560
+            }
+        },
+        "next": [
+            "环线调度_2-5car4"
+        ]
+    },
+    "环线调度_2-5car4": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=2&col=2",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1931,
+                "y": 4560
+            }
+        },
+        "next": [
+            "环线调度_2-5car5"
+        ]
+    },
+    "环线调度_2-5car5": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=3&col=3",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 2191,
+                "y": 4560
+            }
+        },
+        "next": [
+            "环线调度_2-5car6"
+        ]
+    },
+    "环线调度_2-5car11": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=5&col=2",
+        "post_delay": 0,
+        "pre_delay": 2600,
+        "__yamaape": {
+            "position": {
+                "x": 3751,
+                "y": 4560
+            }
+        },
+        "next": [
+            "环线调度_完成"
+        ]
+    },
+    "环线调度_2-5car10": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=5&col=1",
+        "post_delay": 0,
+        "pre_delay": 3000,
+        "__yamaape": {
+            "position": {
+                "x": 3491,
+                "y": 4560
+            }
+        },
+        "next": [
+            "环线调度_2-5car11"
+        ]
+    },
+    "环线调度_2-5car9": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=2&col=1",
+        "post_delay": 0,
+        "pre_delay": 2800,
+        "__yamaape": {
+            "position": {
+                "x": 3231,
+                "y": 4560
+            }
+        },
+        "next": [
+            "环线调度_2-5car10"
+        ]
+    },
+    "环线调度_2-5car8": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=2&col=4",
+        "post_delay": 0,
+        "pre_delay": 2500,
+        "__yamaape": {
+            "position": {
+                "x": 2971,
+                "y": 4560
+            }
+        },
+        "next": [
+            "环线调度_2-5car9"
+        ]
+    },
+    "环线调度_2-5car7": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=4&col=4",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 2711,
+                "y": 4560
+            }
+        },
+        "next": [
+            "环线调度_2-5car8"
+        ]
+    },
+    "环线调度_2-5car6": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=3&col=5",
+        "post_delay": 0,
+        "pre_delay": 1400,
+        "__yamaape": {
+            "position": {
+                "x": 2451,
+                "y": 4560
+            }
+        },
+        "next": [
+            "环线调度_2-5car7"
+        ]
+    },
+    "环线调度_2-6": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "重玩本关",
+            "道具使用"
+        ],
+        "focus": "> 2-6",
+        "post_delay": 2000,
+        "order_by": "Vertical",
+        "index": -1,
+        "__yamaape": {
+            "position": {
+                "x": 633,
+                "y": 4860
+            }
+        },
+        "next": [
+            "环线调度_2-6棋盘"
+        ]
+    },
+    "环线调度_2-6棋盘": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "init_step_matrix",
+        "custom_action_param": "ox=576&oy=240&sx=60&sy=60",
+        "__yamaape": {
+            "position": {
+                "x": 897,
+                "y": 4863
+            }
+        },
+        "next": [
+            "环线调度_2-6car1"
+        ]
+    },
+    "环线调度_2-6car1": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=1&col=3",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1156,
+                "y": 4866
+            }
+        },
+        "next": [
+            "环线调度_2-6car2"
+        ]
+    },
+    "环线调度_2-6car2": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=5&col=1",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1416,
+                "y": 4866
+            }
+        },
+        "next": [
+            "环线调度_2-6car3"
+        ]
+    },
+    "环线调度_2-6car3": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=1&col=2",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1676,
+                "y": 4866
+            }
+        },
+        "next": [
+            "环线调度_2-6car4"
+        ]
+    },
+    "环线调度_2-6car4": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=2&col=2",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1936,
+                "y": 4866
+            }
+        },
+        "next": [
+            "环线调度_2-6car5"
+        ]
+    },
+    "环线调度_2-6car11": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=4&col=3",
+        "post_delay": 0,
+        "pre_delay": 100,
+        "__yamaape": {
+            "position": {
+                "x": 3756,
+                "y": 4866
+            }
+        },
+        "next": [
+            "环线调度_完成"
+        ]
+    },
+    "环线调度_2-6car10": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=3&col=5",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 3496,
+                "y": 4866
+            }
+        },
+        "next": [
+            "环线调度_2-6car11"
+        ]
+    },
+    "环线调度_2-6car9": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=2&col=5",
+        "post_delay": 0,
+        "pre_delay": 1800,
+        "__yamaape": {
+            "position": {
+                "x": 3236,
+                "y": 4866
+            }
+        },
+        "next": [
+            "环线调度_2-6car10"
+        ]
+    },
+    "环线调度_2-6car8": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=2&col=3",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 2976,
+                "y": 4866
+            }
+        },
+        "next": [
+            "环线调度_2-6car9"
+        ]
+    },
+    "环线调度_2-6car7": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=4&col=4",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 2716,
+                "y": 4866
+            }
+        },
+        "next": [
+            "环线调度_2-6car8"
+        ]
+    },
+    "环线调度_2-6car6": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=3&col=3",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 2456,
+                "y": 4866
+            }
+        },
+        "next": [
+            "环线调度_2-6car7"
+        ]
+    },
+    "环线调度_2-6car5": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=5&col=4",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 2196,
+                "y": 4866
+            }
+        },
+        "next": [
+            "环线调度_2-6car6"
+        ]
+    },
+    "环线调度_2-7": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "重玩本关",
+            "道具使用"
+        ],
+        "focus": "> 2-7",
+        "post_delay": 2000,
+        "order_by": "Vertical",
+        "index": -1,
+        "__yamaape": {
+            "position": {
+                "x": 636,
+                "y": 5167
+            }
+        },
+        "next": [
+            "环线调度_2-7棋盘"
+        ]
+    },
+    "环线调度_2-7棋盘": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "init_step_matrix",
+        "custom_action_param": "ox=576&oy=240&sx=60&sy=60",
+        "__yamaape": {
+            "position": {
+                "x": 902,
+                "y": 5170
+            }
+        },
+        "next": [
+            "环线调度_2-7car1"
+        ]
+    },
+    "环线调度_2-7car1": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=1&col=5",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1157,
+                "y": 5174
+            }
+        },
+        "next": [
+            "环线调度_2-7car2"
+        ]
+    },
+    "环线调度_2-7car2": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=1&col=4",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1417,
+                "y": 5174
+            }
+        },
+        "next": [
+            "环线调度_2-7car3"
+        ]
+    },
+    "环线调度_2-7car3": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=5&col=5",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1677,
+                "y": 5174
+            }
+        },
+        "next": [
+            "环线调度_2-7car4"
+        ]
+    },
+    "环线调度_2-7car4": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=3&col=1",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1937,
+                "y": 5174
+            }
+        },
+        "next": [
+            "环线调度_2-7car5"
+        ]
+    },
+    "环线调度_2-7car12": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=2&col=2",
+        "post_delay": 0,
+        "pre_delay": 3500,
+        "__yamaape": {
+            "position": {
+                "x": 4017,
+                "y": 5174
+            }
+        },
+        "next": [
+            "环线调度_完成"
+        ]
+    },
+    "环线调度_2-7car11": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=2&col=1",
+        "post_delay": 0,
+        "pre_delay": 4000,
+        "__yamaape": {
+            "position": {
+                "x": 3757,
+                "y": 5174
+            }
+        },
+        "next": [
+            "环线调度_2-7car12"
+        ]
+    },
+    "环线调度_2-7car10": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=5&col=2",
+        "post_delay": 0,
+        "pre_delay": 1200,
+        "__yamaape": {
+            "position": {
+                "x": 3497,
+                "y": 5174
+            }
+        },
+        "next": [
+            "环线调度_2-7car11"
+        ]
+    },
+    "环线调度_2-7car9": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=3&col=3",
+        "post_delay": 0,
+        "pre_delay": 5000,
+        "__yamaape": {
+            "position": {
+                "x": 3237,
+                "y": 5174
+            }
+        },
+        "next": [
+            "环线调度_2-7car10"
+        ]
+    },
+    "环线调度_2-7car8": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=4&col=3",
+        "post_delay": 0,
+        "pre_delay": 1200,
+        "__yamaape": {
+            "position": {
+                "x": 2977,
+                "y": 5174
+            }
+        },
+        "next": [
+            "环线调度_2-7car9"
+        ]
+    },
+    "环线调度_2-7car7": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=4&col=4",
+        "post_delay": 0,
+        "pre_delay": 1200,
+        "__yamaape": {
+            "position": {
+                "x": 2717,
+                "y": 5174
+            }
+        },
+        "next": [
+            "环线调度_2-7car8"
+        ]
+    },
+    "环线调度_2-7car6": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=2&col=4",
+        "post_delay": 0,
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 2457,
+                "y": 5174
+            }
+        },
+        "next": [
+            "环线调度_2-7car7"
+        ]
+    },
+    "环线调度_2-7car5": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=2&col=5",
+        "post_delay": 0,
+        "pre_delay": 1200,
+        "__yamaape": {
+            "position": {
+                "x": 2197,
+                "y": 5174
+            }
+        },
+        "next": [
+            "环线调度_2-7car6"
+        ]
+    },
+    "环线调度_2-8": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "重玩本关",
+            "道具使用"
+        ],
+        "focus": "> 2-8",
+        "post_delay": 2000,
+        "order_by": "Vertical",
+        "index": -1,
+        "__yamaape": {
+            "position": {
+                "x": 637,
+                "y": 5465
+            }
+        },
+        "next": [
+            "环线调度_2-8棋盘"
+        ]
+    },
+    "环线调度_2-8棋盘": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "init_step_matrix",
+        "custom_action_param": "ox=576&oy=240&sx=60&sy=60",
+        "__yamaape": {
+            "position": {
+                "x": 904,
+                "y": 5467
+            }
+        },
+        "next": [
+            "环线调度_2-8car1"
+        ]
+    },
+    "环线调度_2-8car1": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=2&col=5",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1160,
+                "y": 5468
+            }
+        },
+        "next": [
+            "环线调度_2-8car2"
+        ]
+    },
+    "环线调度_2-8car2": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=4&col=5",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1420,
+                "y": 5468
+            }
+        },
+        "next": [
+            "环线调度_2-8car3"
+        ]
+    },
+    "环线调度_2-8car3": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=1&col=1",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1680,
+                "y": 5468
+            }
+        },
+        "next": [
+            "环线调度_2-8car4"
+        ]
+    },
+    "环线调度_2-8car4": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=3&col=5",
+        "post_delay": 0,
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 1940,
+                "y": 5468
+            }
+        },
+        "next": [
+            "环线调度_2-8car5"
+        ]
+    },
+    "环线调度_2-8car5": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=2&col=3",
+        "post_delay": 0,
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 2200,
+                "y": 5468
+            }
+        },
+        "next": [
+            "环线调度_2-8car6"
+        ]
+    },
+    "环线调度_2-8car6": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=3&col=4",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 2460,
+                "y": 5468
+            }
+        },
+        "next": [
+            "环线调度_2-8car7"
+        ]
+    },
+    "环线调度_2-8car7": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=2&col=4",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 2720,
+                "y": 5468
+            }
+        },
+        "next": [
+            "环线调度_2-8car8"
+        ]
+    },
+    "环线调度_2-8car8": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=1&col=3",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 2980,
+                "y": 5468
+            }
+        },
+        "next": [
+            "环线调度_2-8car9"
+        ]
+    },
+    "环线调度_2-8car9": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=3&col=3",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 3240,
+                "y": 5468
+            }
+        },
+        "next": [
+            "环线调度_2-8car10"
+        ]
+    },
+    "环线调度_2-8car10": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=5&col=3",
+        "post_delay": 0,
+        "pre_delay": 1600,
+        "__yamaape": {
+            "position": {
+                "x": 3498,
+                "y": 5469
+            }
+        },
+        "next": [
+            "环线调度_2-8car11"
+        ]
+    },
+    "环线调度_2-8car11": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=3&col=2",
+        "post_delay": 0,
+        "pre_delay": 1200,
+        "__yamaape": {
+            "position": {
+                "x": 3760,
+                "y": 5468
+            }
+        },
+        "next": [
+            "环线调度_2-8car12"
+        ]
+    },
+    "环线调度_2-8car12": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=4&col=1",
+        "post_delay": 0,
+        "pre_delay": 3700,
+        "__yamaape": {
+            "position": {
+                "x": 4020,
+                "y": 5468
+            }
+        },
+        "next": [
+            "环线调度_2-8car13"
+        ]
+    },
+    "环线调度_2-8car13": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=4&col=2",
+        "post_delay": 0,
+        "pre_delay": 1600,
+        "__yamaape": {
+            "position": {
+                "x": 4280,
+                "y": 5468
+            }
+        },
+        "next": [
+            "环线调度_完成"
+        ]
+    },
+    "环线调度_2-9": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "重玩本关",
+            "道具使用"
+        ],
+        "focus": "> 2-9",
+        "post_delay": 2000,
+        "order_by": "Vertical",
+        "index": -1,
+        "__yamaape": {
+            "position": {
+                "x": 636,
+                "y": 5764
+            }
+        },
+        "next": [
+            "环线调度_2-9棋盘"
+        ]
+    },
+    "环线调度_2-9棋盘": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "init_step_matrix",
+        "custom_action_param": "ox=576&oy=240&sx=60&sy=60",
+        "__yamaape": {
+            "position": {
+                "x": 907,
+                "y": 5764
+            }
+        },
+        "next": [
+            "环线调度_2-9car1"
+        ]
+    },
+    "环线调度_2-9car1": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=5&col=1",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1162,
+                "y": 5770
+            }
+        },
+        "next": [
+            "环线调度_2-9car2"
+        ]
+    },
+    "环线调度_2-9car2": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=1&col=5",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1422,
+                "y": 5770
+            }
+        },
+        "next": [
+            "环线调度_2-9car3"
+        ]
+    },
+    "环线调度_2-9car3": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=4&col=5",
+        "post_delay": 0,
+        "pre_delay": 1200,
+        "__yamaape": {
+            "position": {
+                "x": 1683,
+                "y": 5773
+            }
+        },
+        "next": [
+            "环线调度_2-9car4"
+        ]
+    },
+    "环线调度_2-9car4": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=5&col=5",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1942,
+                "y": 5770
+            }
+        },
+        "next": [
+            "环线调度_2-9car5"
+        ]
+    },
+    "环线调度_2-9car5": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=4&col=4",
+        "post_delay": 0,
+        "pre_delay": 1200,
+        "__yamaape": {
+            "position": {
+                "x": 2202,
+                "y": 5770
+            }
+        },
+        "next": [
+            "环线调度_2-9car6"
+        ]
+    },
+    "环线调度_2-9car6": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=5&col=3",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 2462,
+                "y": 5770
+            }
+        },
+        "next": [
+            "环线调度_2-9car7"
+        ]
+    },
+    "环线调度_2-9car7": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=4&col=2",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 2717,
+                "y": 5772
+            }
+        },
+        "next": [
+            "环线调度_2-9car8"
+        ]
+    },
+    "环线调度_2-9car8": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=3&col=2",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 2982,
+                "y": 5770
+            }
+        },
+        "next": [
+            "环线调度_2-9car9"
+        ]
+    },
+    "环线调度_2-9car9": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=3&col=3",
+        "post_delay": 0,
+        "pre_delay": 200,
+        "__yamaape": {
+            "position": {
+                "x": 3242,
+                "y": 5770
+            }
+        },
+        "next": [
+            "环线调度_2-9car10"
+        ]
+    },
+    "环线调度_2-9car10": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=2&col=3",
+        "post_delay": 0,
+        "pre_delay": 2800,
+        "__yamaape": {
+            "position": {
+                "x": 3502,
+                "y": 5770
+            }
+        },
+        "next": [
+            "环线调度_2-9car11"
+        ]
+    },
+    "环线调度_2-9car11": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=2&col=2",
+        "post_delay": 0,
+        "pre_delay": 2400,
+        "__yamaape": {
+            "position": {
+                "x": 3762,
+                "y": 5770
+            }
+        },
+        "next": [
+            "环线调度_2-9car12"
+        ]
+    },
+    "环线调度_2-9car12": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=1&col=2",
+        "post_delay": 0,
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 4022,
+                "y": 5770
+            }
+        },
+        "next": [
+            "环线调度_2-9car13"
+        ]
+    },
+    "环线调度_2-9car13": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=1&col=1",
+        "post_delay": 0,
+        "pre_delay": 100,
+        "__yamaape": {
+            "position": {
+                "x": 4283,
+                "y": 5773
+            }
+        },
+        "next": [
+            "环线调度_完成"
+        ]
+    },
+    "环线调度_2-10": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "重玩本关",
+            "道具使用"
+        ],
+        "focus": "> 2-10",
+        "post_delay": 2000,
+        "order_by": "Vertical",
+        "index": -1,
+        "__yamaape": {
+            "position": {
+                "x": 638,
+                "y": 6061
+            }
+        },
+        "next": [
+            "环线调度_2-10棋盘"
+        ]
+    },
+    "环线调度_2-10棋盘": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "init_step_matrix",
+        "custom_action_param": "ox=576&oy=240&sx=60&sy=60",
+        "__yamaape": {
+            "position": {
+                "x": 894,
+                "y": 6067
+            }
+        },
+        "next": [
+            "环线调度_2-10car1"
+        ]
+    },
+    "环线调度_2-10car1": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=5&col=5",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1163,
+                "y": 6069
+            }
+        },
+        "next": [
+            "环线调度_2-10car2"
+        ]
+    },
+    "环线调度_2-10car2": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=2&col=5",
+        "post_delay": 0,
+        "pre_delay": 50,
+        "__yamaape": {
+            "position": {
+                "x": 1423,
+                "y": 6069
+            }
+        },
+        "next": [
+            "环线调度_2-10car3"
+        ]
+    },
+    "环线调度_2-10car3": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=4&col=5",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1683,
+                "y": 6069
+            }
+        },
+        "next": [
+            "环线调度_2-10car4"
+        ]
+    },
+    "环线调度_2-10car4": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=3&col=4",
+        "post_delay": 0,
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 1943,
+                "y": 6069
+            }
+        },
+        "next": [
+            "环线调度_2-10car5"
+        ]
+    },
+    "环线调度_2-10car5": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=1&col=5",
+        "post_delay": 0,
+        "pre_delay": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 2201,
+                "y": 6069
+            }
+        },
+        "next": [
+            "环线调度_2-10car6"
+        ]
+    },
+    "环线调度_2-10car6": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=1&col=4",
+        "post_delay": 0,
+        "pre_delay": 50,
+        "__yamaape": {
+            "position": {
+                "x": 2463,
+                "y": 6069
+            }
+        },
+        "next": [
+            "环线调度_2-10car7"
+        ]
+    },
+    "环线调度_2-10car7": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=1&col=1",
+        "post_delay": 0,
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 2723,
+                "y": 6069
+            }
+        },
+        "next": [
+            "环线调度_2-10car8"
+        ]
+    },
+    "环线调度_2-10car8": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=2&col=1",
+        "post_delay": 0,
+        "pre_delay": 3600,
+        "__yamaape": {
+            "position": {
+                "x": 2983,
+                "y": 6069
+            }
+        },
+        "next": [
+            "环线调度_2-10car9"
+        ]
+    },
+    "环线调度_2-10car9": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=4&col=1",
+        "post_delay": 0,
+        "pre_delay": 50,
+        "__yamaape": {
+            "position": {
+                "x": 3243,
+                "y": 6069
+            }
+        },
+        "next": [
+            "环线调度_2-10car10"
+        ]
+    },
+    "环线调度_2-10car10": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=5&col=2",
+        "post_delay": 0,
+        "pre_delay": 4000,
+        "__yamaape": {
+            "position": {
+                "x": 3503,
+                "y": 6069
+            }
+        },
+        "next": [
+            "环线调度_2-10car11"
+        ]
+    },
+    "环线调度_2-10car11": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=4&col=2",
+        "post_delay": 0,
+        "pre_delay": 50,
+        "__yamaape": {
+            "position": {
+                "x": 3763,
+                "y": 6069
+            }
+        },
+        "next": [
+            "环线调度_2-10car12"
+        ]
+    },
+    "环线调度_2-10car12": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=2&col=3",
+        "post_delay": 0,
+        "pre_delay": 2000,
+        "__yamaape": {
+            "position": {
+                "x": 4023,
+                "y": 6069
+            }
+        },
+        "next": [
+            "环线调度_2-10car13"
+        ]
+    },
+    "环线调度_2-10car13": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=2&col=2",
+        "post_delay": 0,
+        "pre_delay": 3000,
+        "__yamaape": {
+            "position": {
+                "x": 4283,
+                "y": 6069
+            }
+        },
+        "next": [
+            "环线调度_2-10car14"
+        ]
+    },
+    "环线调度_2-10car14": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "loop_dispatching",
+        "custom_action_param": "row=3&col=2",
+        "post_delay": 0,
+        "pre_delay": 3000,
+        "__yamaape": {
+            "position": {
+                "x": 4541,
+                "y": 6069
+            }
+        },
+        "next": [
+            "环线调度_完成"
         ]
     },
     "环线调度_点击": {
