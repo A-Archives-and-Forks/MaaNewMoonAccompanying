@@ -154,9 +154,10 @@
 
 ### 依赖
 
-- **本项目由 **[MaaFramework](https://github.com/MaaXYZ/MaaFramework)** 强力驱动！**
-- Pipeline 编辑器：[YAMaaPE](https://github.com/kqcoxn/YAMaaPE)
-- GUI：[MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia/tree/master)
-- 分发：[Mirror 酱](https://mirrorchyan.com/zh/get-start&source=mnma-github-code)
+- **本项目由 [MaaXYZ](https://github.com/MaaXYZ)/[MaaFramework](https://github.com/MaaXYZ/MaaFramework) 强力驱动！**
+- 项目模板：[MaaXYZ](https://github.com/MaaXYZ)/[MaaPracticeBoilerplate](https://github.com/MaaXYZ/MaaPracticeBoilerplate)
+- GUI：[SweetSmellFox](https://github.com/SweetSmellFox)/[MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia/tree/master)
+- Pipeline 编辑器：[kqcoxn](https://github.com/kqcoxn)/[YAMaaPE](https://github.com/kqcoxn/YAMaaPE)
+- 分发：[MirrorChyan](https://github.com/MirrorChyan)/[Mirror 酱](https://mirrorchyan.com/zh/get-start?source=mnma-github-code)
 
 游戏官网：[烛薪网络-新月同行](https://xytx.firewick.net/home)
