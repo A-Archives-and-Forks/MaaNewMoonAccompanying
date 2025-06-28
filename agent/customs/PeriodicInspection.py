@@ -8,7 +8,7 @@ from datetime import datetime, date, timedelta
 from .utils import parse_query_args, LocalStorage, Prompt
 
 # 全局刷新时间配置
-REFRESH_HOUR = 3
+REFRESH_HOUR = 4
 
 
 class Inspector:
