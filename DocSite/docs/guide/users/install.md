@@ -31,13 +31,13 @@
 
 ## \*Mirror 酱支持
 
-在 [玛丽佬](https://github.com/MistEO)（方舟 MAA 开发者）的帮助下， MNMA 同样也接入了 [Mirror 酱](https://mirrorchyan.com/zh/projects?source=mnma-docsite) 的国内高速下载与更新服务，详情请见[【Bilibili】震惊！MAA 开启收费功能？！](https://www.bilibili.com/video/BV1cZFreLEja)
+在 [Mirror 酱](https://mirrorchyan.com/zh/projects?source=mnma-docsite) 官方的帮助下， MNMA 同样也接入了 Mirror 酱的国内高速下载与更新服务，详情请见[【Bilibili】震惊！MAA 开启收费功能？！](https://www.bilibili.com/video/BV1cZFreLEja)
 
 **您可以通过 [此链接](https://mirrorchyan.com/zh/projects?rid=MNMA&source=mnma-docsite) 获取带有 Mirror 酱服务的 MNMA**。
 
 简单来说，Mirror 酱（简称 mirrorc）是一个由开源社区维护的有偿分发平台，可以理解为一个中转站，从海外源获取一份最新版存至国内站点，当您需要时直接从国内站点下载。
 
-由于海内外下载、站点维护等需要，mirrorc 会产生大量开销，因此 mirrorc 的服务是有偿的，但这**并不代表 MNMA 是收费的**，您完全可以通过其他方式更新并无限制使用，仅在您需要 mirrorc 时才需要自行向 mirrorc 方付费，**MNMA 社区并不承担此过程中的一切责任**，当出现问题时您可以在 mirrorc 客户群联系客服解决。
+由于海内外下载、站点维护等需要，mirrorc 会产生大量开销，因此 mirrorc 的服务是有偿的，但这**并不代表 MNMA 是收费的，您完全可以通过其他方式更新并无限制使用，仅在您需要 mirrorc 时才需要自行向 mirrorc 方付费，MNMA 社区并不承担此过程中的一切责任，当出现问题时您可以在 mirrorc 客户群联系客服解决。**
 
 ## 解压 MNMA
 

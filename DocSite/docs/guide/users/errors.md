@@ -31,6 +31,15 @@
 3. 将打包好的 `反馈日志.zip` 同视频与截图发送至群内，并描述问题情况
 4. 若群友无法帮忙解决，在群内@群主或私聊群主
 
+## 远程协助
+
+若您需要远程协助，请按如下方式进行准备：
+
+1. 下载并安装 [ToDesk](https://www.todesk.com/) 远程控制软件
+2. **关闭您电脑不希望被看到的程序或文件**
+3. 打开 MNMA 文件夹根目录与模拟器，若在游戏内可以先完成当前事情
+4. 准备好被远控后，将 ToDesk 设备码与临时密码**复制粘贴文字**并**私聊**发送，等待连接
+
 ## 下载安装类
 
 ### Github 页面打不开/下载缓慢
@@ -43,28 +52,26 @@
 
 ### 更新失败/速度缓慢
 
-MNMA 的默认下载源为 Github。国内对于 Github 的防火墙时有时无，且速度非常不稳定。如果条件允许，请在网络代理或加速器环境下更新。
+若您的下载源为 Github，国内对于 Github 的防火墙时有时无，且速度非常不稳定。如果条件允许，请在网络代理或加速器环境下更新。
 
 或者，您可以在设置页面切换 [Mirror 酱](../users/install.md#mirror-酱支持) 作为国内镜像源更新。（需要自备 CDK）
 
-如果您不希望通过其他途径更新，您可以在[QQ 群](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=VMC132QhbMDLi5U62MlDRvtCMj9WOXRr&authKey=yJNKO4sQ%2BBFHpBCLSSEvVOAyz%2FPjknNSl70W3ugg2%2BpELnKmEiHamj1emJMWcLwQ&noverify=0&group_code=993245868) **群文件**内下载最新版本的 MNMA 压缩包并重新安装。
-
-如果您希望保留配置，可以将旧版本的`/config`文件夹覆盖至新版本。
+如果您不希望通过其他途径更新，您可以在[QQ 群](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=VMC132QhbMDLi5U62MlDRvtCMj9WOXRr&authKey=yJNKO4sQ%2BBFHpBCLSSEvVOAyz%2FPjknNSl70W3ugg2%2BpELnKmEiHamj1emJMWcLwQ&noverify=0&group_code=993245868) **群文件**内下载最新版本的 MNMA 压缩包并重新安装，**切勿直接覆盖！如果您希望在重装更新后保留配置，可以将旧版本的`/config`文件夹覆盖至新版本。**
 
 ### 获取最新版本信息失败
 
 若描述为 CDK 无效，请在设置内将下载源调整为 Github，或关闭自动检查/更新。
 
-也可以输入 mirrorc CDK，详情参考 [Mirror 酱支持](./install.md#mirror-酱支持)
+也可以输入 mirrorc CDK，详情请参考 [Mirror 酱支持](./install.md#mirror-酱支持)
 
 ## 程序运行类
 
 ### SSL Error
 
-尝试关闭代理/梯子，并重启 MNMA
+大多数情况下并不影响正常使用，关闭弹窗即可。若不希望再次弹出可以关闭代理/梯子
 
 ::: tip
-此问题并非由于 MNMA 导致，出现了此提示代表您可能使用了未配置安全凭证的梯子，或代理通道识别异常。
+此问题并非由于 MNMA 或 MFAA 导致，出现了此提示代表您可能使用了未配置安全凭证的梯子，或代理通道识别异常。
 :::
 
 ### Agent 加载失败
@@ -105,4 +112,6 @@ winget install Microsoft.VCRedist.2017.x64 Microsoft.DotNet.DesktopRuntime.8
 
 ### 目标计算机积极拒绝
 
-情况很多，在群里问吧（
+若非上述几种，可以尝试在重启后使用管理员权限打开 MNMA
+
+若仍然弹出，情况很多，在群里问吧（

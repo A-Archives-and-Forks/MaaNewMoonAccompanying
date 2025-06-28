@@ -68,11 +68,23 @@ MNMA 使用 MFAAvalonia 作为 GUI。MFAAvalonia 是 MaaFw 系列的 GUI 开源�
 
 如果在双击应用后弹出报错或无法运行，请加入 [交流群](./start.md#加入我们) 请求帮助。
 
+## 选择更新源
+
+在打开 MNMA 后，**您可能会看到弹出的检查更新失败提示，可以先忽略**，并选择合适的更新源。
+
+您可以在 Github 与 Mirror 酱两种更新源中选择，首先，打开 MFAA（GUI） 设置界面，并下划至更新设置部分：
+
+![图片加载中，请稍等...](/users/update.png)
+
+在资源下载源配置中，选择 `Github` 或 `Mirror 酱`
+
+MFAA 的默认下载源为`Mirror 酱`，详情可参考：[下载与安装-Mirror 酱支持](../users/install.md#mirror-酱支持)。**若您没有 Mirror 酱服务，请选择 `Github`作为更新源**，但更新速度可能较慢，详情请参考：[问题排查-更新失败/速度缓慢](../users/errors.md#更新失败速度缓慢)
+
 ## 连接模拟器
 
-在 MNMA 启动后，MNMA 需要连接模拟器，以获取模拟器 ADB 支持。
+点击左侧任务图标回到主界面，MNMA 需要连接模拟器，以获取模拟器 ADB 支持。
 
-打开 MNMA 后，面板右侧日志将会提示目前的状态：
+面板右侧日志将会提示目前的状态：
 
 ![图片加载中，请稍等...](/users/init.png)
 
@@ -84,9 +96,9 @@ MNMA 使用 MFAAvalonia 作为 GUI。MFAAvalonia 是 MaaFw 系列的 GUI 开源�
 
 ## 加载 Agent
 
-第一次启动 MNMA 时，Agent 将会调用程序自带的 Python 环境与 pip 下载 MNMA 运行所需的依赖库，因此等待时间可能较久。（但要是超过 5 分钟没动静那估计就是寄了）
+第一次启动 MNMA 时，Agent 将会调用程序自带的 Python 环境与 pip 下载 MNMA 运行所需的依赖库，因此等待时间可能较久（但要是超过 5 分钟没动静那估计就是寄了），并会输出大量下载日志，若无 `Error` 等字样则正常。
 
-待启动 Agent 完毕并没有出现报错后，系统会提示任务已全部完成，此时您可以开始使用 MNMA 了。
+待启动 Agent 完毕并没有出现报错后，系统会提示任务已全部完成。
 
 :::tip
 

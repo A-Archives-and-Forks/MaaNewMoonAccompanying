@@ -5,7 +5,7 @@
 
 <div align="center">
 
-# MNMA - 新月同行小助手</br>MaaNewMoonAccompanying</br>✨ 组长们的超级秋千人✨ 
+# MNMA - 新月同行小助手</br>MaaNewMoonAccompanying</br>✨ 组长们的超级秋千人 ✨
 
 基于全新架构的 [**新月同行**](https://xytx.firewick.net/home) 小助手<br/>图像技术 + 模拟控制，解放双手，由 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 与 [MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia) 强力驱动！
 
@@ -102,7 +102,7 @@
   - [x] 好友批量换新
   - [x] 剧情阅读器
 
-- [更新记录](/docs/zh_cn/更新记录.md)
+具体更新日志可参考[更新记录](/docs/zh_cn/更新记录.md)
 
 \* 若有其他功能需求请提交 [issue](https://github.com/kqcoxn/MaaNewMoonAccompanying/issues?q=is%3Aissue)
 
@@ -117,6 +117,16 @@
 🐧~~吹水~~交流群：[993245868](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=VMC132QhbMDLi5U62MlDRvtCMj9WOXRr&authKey=yJNKO4sQ%2BBFHpBCLSSEvVOAyz%2FPjknNSl70W3ugg2%2BpELnKmEiHamj1emJMWcLwQ&noverify=0&group_code=993245868)
 
 如果您在使用过程中遇到了问题、有更好的想法、希望参与开发，或是单纯想要聊天吹水，欢迎加入 MNMA 交流群！
+
+## Mirror 酱支持
+
+在 [Mirrorc 官方](https://mirrorchyan.com/zh/projects?source=mnma-github-code) 的帮助下， MNMA 同样也接入了 Mirror 酱 的国内高速下载与更新服务，详情请见[【Bilibili】震惊！MAA 开启收费功能？！](https://www.bilibili.com/video/BV1cZFreLEja/)
+
+您可以通过 [此链接](https://mirrorchyan.com/zh/projects?rid=MNMA&source=mnma-github-code) 获取带有 Mirror 酱服务的 MNMA。
+
+简单来说，Mirror 酱（简称 mirrorc）是一个由开源社区维护的有偿分发平台，可以理解为一个中转站，从海外源获取一份最新版存至国内站点，当您需要时直接从国内站点下载。
+
+由于海内外下载、站点维护等需要，mirrorc 会产生大量开销，因此 mirrorc 的服务是有偿的，但这**并不代表 MNMA 是收费的，您完全可以通过其他方式更新并无限制使用，仅在您需要 mirrorc 时才需要自行向 mirrorc 方付费，MNMA 社区并不承担此过程中的一切责任，当出现问题时您可以在 mirrorc 客户群联系客服解决。**
 
 ## 免责声明
 
@@ -147,6 +157,6 @@
 - **本项目由 **[MaaFramework](https://github.com/MaaXYZ/MaaFramework)** 强力驱动！**
 - Pipeline 编辑器：[YAMaaPE](https://github.com/kqcoxn/YAMaaPE)
 - GUI：[MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia/tree/master)
-- 分发：[Mirror酱](https://mirrorchyan.com/zh/get-start&source=mnma-github-code)
+- 分发：[Mirror 酱](https://mirrorchyan.com/zh/get-start&source=mnma-github-code)
 
 游戏官网：[烛薪网络-新月同行](https://xytx.firewick.net/home)
