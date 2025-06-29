@@ -29,8 +29,16 @@ const sidebar = {
       text: "开发者文档",
       items: [
         {
-          text: "开发协议",
+          text: "开发须知",
           link: "/guide/developers/agreement",
+        },
+        {
+          text: "参与开发",
+          link: "/guide/developers/init",
+        },
+        {
+          text: "项目结构",
+          link: "/guide/developers/structure",
         },
       ],
     },

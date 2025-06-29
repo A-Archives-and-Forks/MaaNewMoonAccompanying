@@ -152,12 +152,14 @@
 
 [![Contributors](https://contrib.rocks/image?repo=kqcoxn/MaaNewMoonAccompanying&max=1000)](https://github.com/kqcoxn/MaaNewMoonAccompanying/graphs/contributors)
 
-### 依赖
+### 依赖与工具
 
 - **本项目由 [MaaXYZ](https://github.com/MaaXYZ)/[MaaFramework](https://github.com/MaaXYZ/MaaFramework) 强力驱动！**
 - 项目模板：[MaaXYZ](https://github.com/MaaXYZ)/[MaaPracticeBoilerplate](https://github.com/MaaXYZ/MaaPracticeBoilerplate)
 - GUI：[SweetSmellFox](https://github.com/SweetSmellFox)/[MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia/tree/master)
 - Pipeline 编辑器：[kqcoxn](https://github.com/kqcoxn)/[YAMaaPE](https://github.com/kqcoxn/YAMaaPE)
+- 截图小工具：[SweetSmellFox](https://github.com/SweetSmellFox)/[MFATools](https://github.com/SweetSmellFox/MFATools)
+- 测试：[MaaXYZ](https://github.com/MaaXYZ)/[MaaDebugger](https://github.com/MaaXYZ/MaaDebugger)
 - 分发：[MirrorChyan](https://github.com/MirrorChyan)/[Mirror 酱](https://mirrorchyan.com/zh/get-start?source=mnma-github-code)
 
 游戏官网：[烛薪网络-新月同行](https://xytx.firewick.net/home)
