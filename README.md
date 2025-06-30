@@ -163,3 +163,7 @@
 - 分发：[MirrorChyan](https://github.com/MirrorChyan)/[Mirror 酱](https://mirrorchyan.com/zh/get-start?source=mnma-github-code)
 
 游戏官网：[烛薪网络-新月同行](https://xytx.firewick.net/home)
+
+## 统计
+
+[![Star History Chart](https://api.star-history.com/svg?repos=kqcoxn/MaaNewMoonAccompanying&type=Date)](https://www.star-history.com/#kqcoxn/MaaNewMoonAccompanying&Date)
