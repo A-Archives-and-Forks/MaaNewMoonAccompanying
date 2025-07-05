@@ -145,14 +145,6 @@ jobs:
           python -m pip install pyinstaller
           pyinstaller --onefile --icon=../logo.ico --windowed MNMA.py
 
-      - name: Packing Feedbacker
-        if: ${{matrix.os == 'win' }}
-        working-directory: feedbacker
-        shell: bash
-        run: |
-          python -m pip install pyinstaller tqdm
-          pyinstaller --onefile --icon=./feedbacker.ico 反馈打包小工具.py
-
       - name: Packing GC
         if: ${{matrix.os == 'win' }}
         working-directory: gc
@@ -166,7 +158,6 @@ jobs:
         shell: bash
         run: |
           cp launcher/dist/MNMA.exe install/MNMA.exe
-          cp feedbacker/dist/反馈打包小工具.exe install/反馈打包小工具.exe
           cp gc/dist/安全清理小工具.exe install/安全清理小工具.exe
 
       - uses: actions/upload-artifact@v4
