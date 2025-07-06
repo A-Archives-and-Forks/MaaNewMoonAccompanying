@@ -1,5 +1,7 @@
 from pathlib import Path
 from pypinyin import lazy_pinyin
+import sys
+import io
 
 working_dir = Path(__file__).parent.parent
 resource_path = working_dir / "assets" / "resource"
@@ -7,16 +9,22 @@ pipeline_paths = [
     (file / "pipeline") for file in resource_path.iterdir() if file.is_dir()
 ]
 
+# 设置 stdout 编码为 UTF-8
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
+
 
 def encode_dir(dir):
     count = 1
     for file in dir.iterdir():
         if file.is_dir():
             encode_dir(file)
-        new_name = f"{count:02d}{file.suffix}"
-        file.rename(file.with_name(new_name))
-        count += 1
-        print(f"{file.name} -> {new_name}")
+        try:
+            new_name = f"{count:02d}{file.suffix}"
+            file.rename(file.with_name(new_name))
+            print(f"{file.name} -> {new_name}", flush=True)
+            count += 1
+        except Exception as e:
+            print(f"处理文件 {file.name} 时出错: {e}", flush=True)
 
 
 if __name__ == "__main__":

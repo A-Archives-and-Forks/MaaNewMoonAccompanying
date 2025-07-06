@@ -136,7 +136,7 @@ jobs:
         shell: bash
         run: |
           python -m pip install pypinyin
-          python ./ci/encode_pipeline_name.py
+          python -u ./ci/encode_pipeline_name.py
 
       - name: Replace Icon
         shell: bash
