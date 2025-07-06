@@ -1,6 +1,8 @@
 import sys
 import os
+import io
 
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from agent.setup import check_and_install_dependencies

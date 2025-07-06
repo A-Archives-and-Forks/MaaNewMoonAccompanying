@@ -53,12 +53,15 @@
         "focus": "> 进入游戏",
         "__yamaape": {
             "position": {
-                "x": 1037,
-                "y": -125
+                "x": 1043,
+                "y": -127
             }
         },
         "next": [
             "启动游戏_初始化检测计数"
+        ],
+        "interrupt": [
+            "启动游戏_确认校准现实"
         ]
     },
     "启动游戏_已在主界面": {
@@ -82,7 +85,7 @@
         "recognition": "DirectHit",
         "action": "StartApp",
         "package": "com.firewick.p42",
-        "post_delay": 10000,
+        "post_delay": 6000,
         "__yamaape": {
             "position": {
                 "x": 517,
@@ -125,6 +128,22 @@
             "启动游戏_检测当前界面"
         ]
     },
+    "启动游戏_短计数": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "init_counter",
+        "custom_action_param": "max=3&exceed=false",
+        "pre_delay": 0,
+        "__yamaape": {
+            "position": {
+                "x": 1349,
+                "y": 270
+            }
+        },
+        "next": [
+            "启动游戏_检测当前界面"
+        ]
+    },
     "启动游戏_检测当前界面": {
         "recognition": "DirectHit",
         "action": "DoNothing",
@@ -143,35 +162,6 @@
             "启动游戏_关闭弹出面板",
             "启动游戏_关闭提示界面",
             "启动游戏_盲目点击"
-        ]
-    },
-    "启动游戏_关闭游戏": {
-        "recognition": "DirectHit",
-        "action": "StopApp",
-        "package": "com.firewick.p42",
-        "post_delay": 2000,
-        "focus": "> 尝试结束游戏运行",
-        "__yamaape": {
-            "position": {
-                "x": 192,
-                "y": -259
-            }
-        },
-        "next": [
-            "启动游戏_检测界面"
-        ]
-    },
-    "启动游戏_开始": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "__yamaape": {
-            "position": {
-                "x": -18,
-                "y": -31
-            }
-        },
-        "next": [
-            "启动游戏_检测界面"
         ]
     },
     "启动游戏_主界面": {
@@ -255,6 +245,35 @@
             "启动游戏_重置计数"
         ]
     },
+    "启动游戏_关闭游戏": {
+        "recognition": "DirectHit",
+        "action": "StopApp",
+        "package": "com.firewick.p42",
+        "post_delay": 2000,
+        "focus": "> 尝试结束游戏运行",
+        "__yamaape": {
+            "position": {
+                "x": 192,
+                "y": -259
+            }
+        },
+        "next": [
+            "启动游戏_检测界面"
+        ]
+    },
+    "启动游戏_开始": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": -18,
+                "y": -31
+            }
+        },
+        "next": [
+            "启动游戏_检测界面"
+        ]
+    },
     "启动游戏_检测计数": {
         "recognition": "DirectHit",
         "action": "Custom",
@@ -296,20 +315,19 @@
             }
         }
     },
-    "启动游戏_短计数": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "init_counter",
-        "custom_action_param": "max=3&exceed=false",
-        "pre_delay": 0,
+    "启动游戏_确认校准现实": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "校准现实"
+        ],
+        "focus": "> 进入游戏",
+        "post_delay": 3000,
         "__yamaape": {
             "position": {
-                "x": 1349,
-                "y": 270
+                "x": 1348,
+                "y": -197
             }
-        },
-        "next": [
-            "启动游戏_检测当前界面"
-        ]
+        }
     }
 }

@@ -3,9 +3,6 @@ import sys
 import json
 import subprocess
 from pathlib import Path
-import io
-
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 
 current_file_path = os.path.abspath(__file__)
 current_dir = os.path.dirname(current_file_path)
