@@ -2,8 +2,8 @@ name: install
 
 on:
   push:
-    # tags:
-    #   - "v*"
+    tags:
+      - "v*"
     branches:
       - "**"
     paths:
@@ -172,8 +172,8 @@ jobs:
           path: "install"
 
   release:
-    if: ${{ needs.meta.outputs.is_release == 'true' || github.event_name == 'workflow_dispatch' }}
-    # if: ${{ needs.meta.outputs.is_release == 'true'}}
+    # if: ${{ needs.meta.outputs.is_release == 'true' || github.event_name == 'workflow_dispatch' }}
+    if: ${{ needs.meta.outputs.is_release == 'true'}}
     needs: [meta, install]
     runs-on: ubuntu-latest
     steps:
