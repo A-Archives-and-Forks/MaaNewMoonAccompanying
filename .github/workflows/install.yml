@@ -6,10 +6,10 @@ on:
       - "v*"
     # branches:
     #   - "**"
-    # paths:
-      # - ".github/workflows/install.yml"
-      # - "assets/**"
-      # - "**.py"
+    paths:
+    - ".github/workflows/install.yml"
+    - "assets/**.json"
+    - "ci/**"
   pull_request:
     branches:
       - "**"
@@ -56,7 +56,7 @@ jobs:
       matrix:
         # os: [win, macos, linux, android]
         # arch: [x86_64, aarch64]
-        include: 
+        include:
           - os: win
             arch: x86_64
           - os: macos
@@ -66,12 +66,12 @@ jobs:
           # - os: android
           #   arch: aarch64
       fail-fast: false
-      
+
     steps:
       - uses: actions/checkout@v4
         with:
           submodules: true
-        
+
       - name: Download MaaFramework
         uses: robinraju/release-downloader@v1
         with:
@@ -85,14 +85,14 @@ jobs:
         shell: powershell
         run: |
           ./ci/setup_embed_python.ps1
-        
+
       - name: Install Python
         shell: bash
         env:
           TARGET_OS: ${{ matrix.os }}
         run: |
           python ./ci/install.py ${{ needs.meta.outputs.tag }}
-        
+
       - name: Set up MFAAvalonia naming
         id: mfa_naming
         shell: bash
@@ -106,7 +106,7 @@ jobs:
           else
             echo "mfa_os=unknown" >> $GITHUB_OUTPUT
           fi
-          
+
           if [ "${{ matrix.arch }}" = "x86_64" ]; then
             echo "mfa_arch=x64" >> $GITHUB_OUTPUT
           elif [ "${{ matrix.arch }}" = "aarch64" ]; then
@@ -114,7 +114,7 @@ jobs:
           else
             echo "mfa_arch=unknown" >> $GITHUB_OUTPUT
           fi
-        
+
       - name: Download MFA
         if: ${{ matrix.os != 'android' && steps.mfa_naming.outputs.mfa_os != 'unknown' && steps.mfa_naming.outputs. mfa_arch != 'unknown' }}
         uses: robinraju/release-downloader@v1
@@ -124,13 +124,18 @@ jobs:
           latest: true
           out-file-path: "MFAAvalonia"
           extract: true
-        
+
       - name: Install MFAAvalonia
         if: ${{ matrix.os != 'android' }}
         shell: bash
         run: |
           rm -rf MFAAvalonia/resource/base/model
-          cp -r MFAAvalonia/* install           
+          cp -r MFAAvalonia/* install
+
+      - name: Encode Pipeline Name
+        shell: bash
+        run: |
+          python ./ci/encode_pipeline_name.py
 
       - name: Replace Icon
         shell: bash
