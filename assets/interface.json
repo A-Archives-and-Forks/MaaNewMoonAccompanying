@@ -1,11 +1,11 @@
 {
     "name": "MaaNewMoonAccompanying",
     "url": "https://github.com/kqcoxn/MaaNewMoonAccompanying",
-    "custom_title": "MNMA新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v1.2.15 - MFAA | 游戏版本：乐园不妙夜·中",
+    "custom_title": "MNMA新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v1.2.16 - MFAA | 游戏版本：乐园不妙夜·中",
     "mirrorchyan_rid": "MNMA",
     "mirrorchyan_multiplatform": true,
-    "version": "v1.2.15",
-    "mfa_min_version": "v1.5.0",
+    "version": "v1.2.16",
+    "mfa_min_version": "v1.5.1",
     "message": "- 新 月 同 行 -",
     "controller": [
         {
