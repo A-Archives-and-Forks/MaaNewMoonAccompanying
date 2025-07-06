@@ -9,7 +9,7 @@
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "乐园不妙夜/entry.png"
+            "ngnight/entry.png"
         ],
         "pre_delay": 400,
         "focus": "> 进入活动界面",
