@@ -1,5 +1,5 @@
 from pathlib import Path
-import os
+from pypinyin import lazy_pinyin
 
 working_dir = Path(__file__).parent.parent
 resource_path = working_dir / "assets" / "resource"
