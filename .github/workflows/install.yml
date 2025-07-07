@@ -86,11 +86,13 @@ jobs:
         run: |
           ./ci/setup_embed_python.ps1
 
-      - name: Install Python
+      - name: Install 
         shell: bash
         env:
           TARGET_OS: ${{ matrix.os }}
         run: |
+          python -m pip install pypinyin
+          python -u ./ci/encode_pipeline_name.py
           python ./ci/install.py ${{ needs.meta.outputs.tag }}
 
       - name: Set up MFAAvalonia naming
@@ -131,12 +133,6 @@ jobs:
         run: |
           rm -rf MFAAvalonia/resource/base/model
           cp -r MFAAvalonia/* install
-
-      - name: Encode Pipeline Name
-        shell: bash
-        run: |
-          python -m pip install pypinyin
-          python -u ./ci/encode_pipeline_name.py
 
       - name: Replace Icon
         shell: bash
