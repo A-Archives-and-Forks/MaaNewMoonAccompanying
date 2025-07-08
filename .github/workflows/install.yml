@@ -133,11 +133,7 @@ jobs:
         run: |
           rm -rf MFAAvalonia/resource/base/model
           cp -r MFAAvalonia/* install
-
-      - name: Clean up MFAAvalonia zip
-        shell: bash
-        run: |
-          rm -f MFAAvalonia/MFAAvalonia-*.zip
+          rm -f install/MFAAvalonia-*.zip
 
       - name: Replace Icon
         shell: bash
