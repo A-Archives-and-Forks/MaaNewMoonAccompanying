@@ -1,0 +1,177 @@
+{
+    "__yamaape_config_自动战斗": {
+        "filename": "自动战斗",
+        "version": "v0.3.4",
+        "prefix": "自动战斗"
+    },
+    "自动战斗_开始": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": 453,
+                "y": 476
+            }
+        },
+        "next": [
+            "自动战斗_等待调度",
+            "自动战斗_等待进入图像",
+            "自动战斗_等待进入文字",
+            "自动战斗_结束战斗"
+        ]
+    },
+    "自动战斗_等待调度": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "瞬时调度"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 713,
+                "y": 476
+            }
+        },
+        "next": [
+            "自动战斗_开大",
+            "自动战斗_等待进入图像",
+            "自动战斗_等待进入文字"
+        ]
+    },
+    "自动战斗_开大": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "battle/skill-2.png",
+            "battle/skill-1.png",
+            "close.png"
+        ],
+        "target_offset": [
+            0,
+            -40,
+            0,
+            0
+        ],
+        "index": -1,
+        "post_delay": 0,
+        "__yamaape": {
+            "position": {
+                "x": 973,
+                "y": 476
+            }
+        },
+        "next": [
+            "自动战斗_确定开大",
+            "自动战斗_无需再次点击"
+        ]
+    },
+    "自动战斗_确定开大": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "battle/skill-2.png",
+            "battle/skill-1.png"
+        ],
+        "target_offset": [
+            0,
+            -40,
+            0,
+            0
+        ],
+        "index": -1,
+        "pre_delay": 50,
+        "__yamaape": {
+            "position": {
+                "x": 1233,
+                "y": 476
+            }
+        },
+        "next": [
+            "自动战斗_再次检测"
+        ]
+    },
+    "自动战斗_再次检测": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "post_delay": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 1543,
+                "y": 311
+            }
+        },
+        "next": [
+            "自动战斗_开始"
+        ]
+    },
+    "自动战斗_无需再次点击": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "瞬时调度"
+        ],
+        "inverse": true,
+        "__yamaape": {
+            "position": {
+                "x": 1235,
+                "y": 735
+            }
+        },
+        "next": [
+            "自动战斗_再次检测"
+        ]
+    },
+    "自动战斗_等待进入图像": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "close.png"
+        ],
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 850,
+                "y": 282
+            }
+        },
+        "next": [
+            "自动战斗_再次检测"
+        ]
+    },
+    "自动战斗_等待进入文字": {
+        "recognition": "OCR",
+        "action": "Click",
+        "pre_delay": 800,
+        "expected": [
+            "开始试用",
+            "行动开始"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 856,
+                "y": 93
+            }
+        },
+        "next": [
+            "自动战斗_再次检测"
+        ]
+    },
+    "自动战斗_结束战斗": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "成功",
+            "失败",
+            "结束",
+            "确定",
+            "继续"
+        ],
+        "focus": "> 战斗结束",
+        "__yamaape": {
+            "position": {
+                "x": 659,
+                "y": 647
+            }
+        }
+    }
+}
