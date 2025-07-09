@@ -468,8 +468,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 239,
-                "y": 1365
+                "x": 7,
+                "y": 1617
             }
         }
     },
@@ -508,11 +508,12 @@
             "点击以继续"
         ],
         "timeout": 2000,
-        "pre_delay": 400,
+        "pre_delay": 800,
+        "post_delay": 1000,
         "__yamaape": {
             "position": {
-                "x": 433,
-                "y": 1557
+                "x": 437,
+                "y": 1534
             }
         },
         "next": [
@@ -520,6 +521,9 @@
         ],
         "on_error": [
             "城市探索_完成情报收取"
+        ],
+        "interrupt": [
+            "城市探索_确认获取调查情报"
         ]
     },
     "城市探索_新档案提示": {
@@ -1400,6 +1404,23 @@
             "城市探索_获取事件奖励"
         ]
     },
+    "城市探索_已关闭聊天": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "点击以继续"
+        ],
+        "focus": "> 水群结束",
+        "__yamaape": {
+            "position": {
+                "x": 5053,
+                "y": 2090
+            }
+        },
+        "next": [
+            "城市探索_获取事件奖励"
+        ]
+    },
     "城市探索_确保结束讨论": {
         "recognition": "OCR",
         "action": "Click",
@@ -2234,22 +2255,19 @@
             "城市探索_资源收取"
         ]
     },
-    "城市探索_已关闭聊天": {
+    "城市探索_确认获取调查情报": {
         "recognition": "OCR",
-        "action": "DoNothing",
+        "action": "Click",
         "expected": [
             "点击以继续"
         ],
-        "focus": "> 水群结束",
+        "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 5053,
-                "y": 2090
+                "x": 689,
+                "y": 1589
             }
-        },
-        "next": [
-            "城市探索_获取事件奖励"
-        ]
+        }
     },
     "城市探索_点击奖励选项": {
         "recognition": "DirectHit",
