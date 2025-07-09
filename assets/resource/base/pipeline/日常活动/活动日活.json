@@ -99,13 +99,35 @@
             "活动日活_回到主页"
         ]
     },
-    "活动日活_回到主页": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "home.png"
+    "活动日活_未全部完成": {
+        "recognition": "OCR",
+        "action": "Custom",
+        "expected": [
+            "领取"
         ],
-        "pre_delay": 800,
+        "roi": [
+            997,
+            170,
+            215,
+            478
+        ],
+        "custom_action": "delay_focus_hook",
+        "custom_action_param": "key=活动日活&focus=今日活动任务未全部完成！",
+        "__yamaape": {
+            "position": {
+                "x": 1582,
+                "y": -178
+            }
+        },
+        "next": [
+            "活动日活_回到主页"
+        ]
+    },
+    "活动日活_回到主页": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "run",
+        "custom_action_param": "key=返回主页",
         "__yamaape": {
             "position": {
                 "x": 1857,
@@ -113,16 +135,12 @@
             }
         },
         "next": [
-            "活动日活_确定回到主页"
+            "活动日活_结束"
         ]
     },
-    "活动日活_确定回到主页": {
-        "recognition": "OCR",
+    "活动日活_结束": {
+        "recognition": "DirectHit",
         "action": "DoNothing",
-        "expected": [
-            "城市探索"
-        ],
-        "post_delay": 3000,
         "__yamaape": {
             "position": {
                 "x": 2117,
@@ -525,30 +543,6 @@
         },
         "next": [
             "活动日活_进入抽取奖励界面"
-        ]
-    },
-    "活动日活_未全部完成": {
-        "recognition": "OCR",
-        "action": "Custom",
-        "expected": [
-            "领取"
-        ],
-        "roi": [
-            997,
-            170,
-            215,
-            478
-        ],
-        "custom_action": "delay_focus_hook",
-        "custom_action_param": "key=活动日活&focus=今日活动任务未全部完成！",
-        "__yamaape": {
-            "position": {
-                "x": 1582,
-                "y": -178
-            }
-        },
-        "next": [
-            "活动日活_回到主页"
         ]
     }
 }

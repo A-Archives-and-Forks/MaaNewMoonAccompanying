@@ -203,12 +203,10 @@
         ]
     },
     "拘束塔奖励_返回主页": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "home.png"
-        ],
-        "pre_delay": 400,
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "run",
+        "custom_action_param": "key=返回主页",
         "__yamaape": {
             "position": {
                 "x": 2845,
@@ -216,20 +214,16 @@
             }
         },
         "next": [
-            "拘束塔奖励_确认返回主页"
+            "拘束塔奖励_结束"
         ]
     },
-    "拘束塔奖励_确认返回主页": {
-        "recognition": "OCR",
+    "拘束塔奖励_结束": {
+        "recognition": "DirectHit",
         "action": "DoNothing",
-        "expected": [
-            "城市探索"
-        ],
-        "post_delay": 3000,
         "__yamaape": {
             "position": {
-                "x": 3105,
-                "y": 1445
+                "x": 3106,
+                "y": 1439
             }
         }
     }

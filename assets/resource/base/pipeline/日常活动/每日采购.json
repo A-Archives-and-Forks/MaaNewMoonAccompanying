@@ -396,13 +396,10 @@
         ]
     },
     "每日采购_返回主界面": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "home.png"
-        ],
-        "focus": "> 返回主界面",
-        "pre_delay": 400,
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "run",
+        "custom_action_param": "key=返回主页",
         "__yamaape": {
             "position": {
                 "x": 3882,
@@ -410,7 +407,7 @@
             }
         },
         "next": [
-            "每日采购_确认返回主页"
+            "每日采购_结束"
         ]
     },
     "每日采购_检测是否在白名单": {
@@ -455,13 +452,9 @@
             "每日采购_检查下个节点"
         ]
     },
-    "每日采购_确认返回主页": {
-        "recognition": "OCR",
+    "每日采购_结束": {
+        "recognition": "DirectHit",
         "action": "DoNothing",
-        "expected": [
-            "城市探索"
-        ],
-        "post_delay": 3000,
         "__yamaape": {
             "position": {
                 "x": 4142,

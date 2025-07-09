@@ -193,21 +193,17 @@
         ]
     },
     "领取奖励_从任务返回": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "back.png"
-        ],
+        "recognition": "DirectHit",
+        "action": "Custom",
         "pre_delay": 400,
+        "custom_action": "run",
+        "custom_action_param": "key=返回主页",
         "__yamaape": {
             "position": {
                 "x": 2458,
                 "y": 202
             }
-        },
-        "next": [
-            "领取奖励_组长手册"
-        ]
+        }
     },
     "领取奖励_获取每周任务奖励": {
         "recognition": "OCR",
@@ -461,8 +457,8 @@
         "timeout": 2000,
         "__yamaape": {
             "position": {
-                "x": 1739,
-                "y": 804
+                "x": 1740,
+                "y": 790
             }
         },
         "next": [
@@ -493,36 +489,19 @@
         ]
     },
     "领取奖励_从手册返回": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "back.png"
-        ],
-        "focus": "> 返回主页",
-        "pre_delay": 400,
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "run",
+        "custom_action_param": "key=返回主页",
         "__yamaape": {
             "position": {
-                "x": 2307,
-                "y": 834
+                "x": 2312,
+                "y": 833
             }
         },
         "next": [
             "领取奖励_结束"
         ]
-    },
-    "领取奖励_结束": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "post_delay": 3000,
-        "expected": [
-            "城市探索"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 2586,
-                "y": 836
-            }
-        }
     },
     "领取奖励_特工管理": {
         "recognition": "OCR",
@@ -1022,5 +1001,15 @@
         "next": [
             "领取奖励_任务奖励"
         ]
+    },
+    "领取奖励_结束": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": 2576,
+                "y": 832
+            }
+        }
     }
 }

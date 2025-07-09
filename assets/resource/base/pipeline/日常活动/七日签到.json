@@ -19,19 +19,14 @@
             }
         },
         "next": [
-            "七日签到_关闭签到界面"
+            "七日签到_返回主页"
         ]
     },
-    "七日签到_关闭签到界面": {
+    "七日签到_返回主页": {
         "recognition": "DirectHit",
-        "action": "Click",
-        "target": [
-            25,
-            200,
-            1,
-            1
-        ],
-        "pre_delay": 400,
+        "action": "Custom",
+        "custom_action": "run",
+        "custom_action_param": "key=返回主页",
         "__yamaape": {
             "position": {
                 "x": 1082,
@@ -39,16 +34,12 @@
             }
         },
         "next": [
-            "七日签到_确认返回主页"
+            "七日签到_结束"
         ]
     },
-    "七日签到_确认返回主页": {
-        "recognition": "OCR",
+    "七日签到_结束": {
+        "recognition": "DirectHit",
         "action": "DoNothing",
-        "expected": [
-            "城市探索"
-        ],
-        "post_delay": 3000,
         "__yamaape": {
             "position": {
                 "x": 1342,
@@ -74,7 +65,7 @@
             "七日签到_领取今日奖励"
         ],
         "on_error": [
-            "七日签到_关闭签到界面"
+            "七日签到_返回主页"
         ]
     },
     "七日签到_开始": {
@@ -149,7 +140,7 @@
             "七日签到_前六天"
         ],
         "on_error": [
-            "七日签到_关闭签到界面"
+            "七日签到_返回主页"
         ]
     }
 }
