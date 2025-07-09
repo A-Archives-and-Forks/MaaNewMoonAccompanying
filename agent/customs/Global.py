@@ -35,6 +35,11 @@ class DelayFocus(CustomAction):
     ) -> CustomAction.RunResult | bool:
         global delay_focus
         try:
+            args = parse_query_args(argv)
+            is_block = args.get("block", False)
+            if is_block:
+                is_block = True
+
             if len(delay_focus) > 0:
                 print("——————————")
                 print("注意：", flush=True)
@@ -44,7 +49,7 @@ class DelayFocus(CustomAction):
                     time.sleep(0.1)
                 print("——————————")
                 delay_focus = {}
-                return False
+                return not is_block
             else:
                 print("> 无需提醒项")
                 delay_focus = {}

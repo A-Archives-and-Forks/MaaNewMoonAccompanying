@@ -1,7 +1,7 @@
 {
     "name": "MaaNewMoonAccompanying",
     "url": "https://github.com/kqcoxn/MaaNewMoonAccompanying",
-    "custom_title": "MNMA新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v1.2.20 - MFAA | 游戏版本：乐园不妙夜·中",
+    "custom_title": "MNMA新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v1.2.20 - MFAA | 游戏版本：乐园不妙夜·下",
     "mirrorchyan_rid": "MNMA",
     "mirrorchyan_multiplatform": true,
     "version": "v1.2.20",
@@ -182,7 +182,8 @@
             "entry": "延迟提醒_开始",
             "option": [
                 "每日任务未完成",
-                "活动日活未完成"
+                "活动日活未完成",
+                "有提醒项时阻断后续任务"
             ],
             "doc": "**监测提醒**：\n\n在执行任务时检查相关项，在执行此任务时统一提醒\n\n**注意：请将此任务放在所有可执行任务的最后**",
             "check": true
@@ -1234,6 +1235,22 @@
                             "next": "活动日活_回到主页",
                             "on_error": [],
                             "timeout": 20000
+                        }
+                    }
+                }
+            ]
+        },
+        "有提醒项时阻断后续任务": {
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {}
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "延迟提醒_提醒": {
+                            "custom_action_param": ""
                         }
                     }
                 }
