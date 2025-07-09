@@ -26,13 +26,11 @@ def parse_query_args(argv: CustomAction.RunArg) -> dict[str, Any]:
 
 
 # 解析列表输入
-def parse_list_input(input: str) -> list[str]:
+def parse_list_input(input: str, split_regex=r",\s*|，\s*|、\s*|\s+") -> list[str]:
     if not input:
         return []
 
-    list_split_regex = r",\s*|，\s*|、\s*|\s+"
-
-    items = re.split(list_split_regex, input)
+    items = re.split(split_regex, input)
     items = [item for item in items if item]
 
     return items

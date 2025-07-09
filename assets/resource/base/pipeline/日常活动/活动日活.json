@@ -85,13 +85,17 @@
     "活动日活_领取奖励完成": {
         "recognition": "DirectHit",
         "action": "DoNothing",
+        "timeout": 1000,
         "__yamaape": {
             "position": {
-                "x": 1320,
-                "y": 22
+                "x": 1316,
+                "y": 5
             }
         },
         "next": [
+            "活动日活_未全部完成"
+        ],
+        "on_error": [
             "活动日活_回到主页"
         ]
     },
@@ -104,8 +108,8 @@
         "pre_delay": 800,
         "__yamaape": {
             "position": {
-                "x": 1610,
-                "y": -33
+                "x": 1857,
+                "y": 22
             }
         },
         "next": [
@@ -121,8 +125,8 @@
         "post_delay": 3000,
         "__yamaape": {
             "position": {
-                "x": 1870,
-                "y": -33
+                "x": 2117,
+                "y": 22
             }
         }
     },
@@ -340,8 +344,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 721,
-                "y": 333
+                "x": 780,
+                "y": 430
             }
         },
         "next": [
@@ -361,8 +365,8 @@
         "index": -1,
         "__yamaape": {
             "position": {
-                "x": 981,
-                "y": 333
+                "x": 1040,
+                "y": 430
             }
         },
         "next": [
@@ -380,8 +384,8 @@
         "pre_delay": 800,
         "__yamaape": {
             "position": {
-                "x": 1532,
-                "y": 294
+                "x": 1591,
+                "y": 391
             }
         },
         "next": [
@@ -397,8 +401,8 @@
         "pre_delay": 800,
         "__yamaape": {
             "position": {
-                "x": 1249,
-                "y": 433
+                "x": 1308,
+                "y": 530
             }
         },
         "next": [
@@ -413,8 +417,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 457,
-                "y": 706
+                "x": 516,
+                "y": 803
             }
         },
         "next": [
@@ -426,8 +430,8 @@
         "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": 1771,
-                "y": 195
+                "x": 1830,
+                "y": 292
             }
         },
         "next": [
@@ -446,8 +450,8 @@
         "post_delay": 3000,
         "__yamaape": {
             "position": {
-                "x": 727,
-                "y": 708
+                "x": 786,
+                "y": 805
             }
         },
         "next": [
@@ -463,8 +467,8 @@
         "pre_delay": 800,
         "__yamaape": {
             "position": {
-                "x": 2035,
-                "y": 266
+                "x": 2094,
+                "y": 363
             }
         }
     },
@@ -478,8 +482,8 @@
         "focus": "> 我的回合，抽卡！",
         "__yamaape": {
             "position": {
-                "x": 990,
-                "y": 708
+                "x": 1049,
+                "y": 805
             }
         },
         "next": [
@@ -497,8 +501,8 @@
         "focus": "> 燃尽力",
         "__yamaape": {
             "position": {
-                "x": 1299,
-                "y": 730
+                "x": 1358,
+                "y": 827
             }
         },
         "next": [
@@ -515,12 +519,36 @@
         "focus": "> 进入捕捞界面",
         "__yamaape": {
             "position": {
-                "x": 469,
-                "y": 331
+                "x": 528,
+                "y": 428
             }
         },
         "next": [
             "活动日活_进入抽取奖励界面"
+        ]
+    },
+    "活动日活_未全部完成": {
+        "recognition": "OCR",
+        "action": "Custom",
+        "expected": [
+            "领取"
+        ],
+        "roi": [
+            997,
+            170,
+            215,
+            478
+        ],
+        "custom_action": "delay_focus_hook",
+        "custom_action_param": "key=活动日活&focus=今日活动任务未全部完成！",
+        "__yamaape": {
+            "position": {
+                "x": 1582,
+                "y": -178
+            }
+        },
+        "next": [
+            "活动日活_回到主页"
         ]
     }
 }

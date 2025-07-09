@@ -1000,9 +1000,7 @@
     },
     "城市探索_未行动提示": {
         "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "log",
-        "custom_action_param": "t=您需要自行通过第一次线索行动类事件！",
+        "action": "DoNothing",
         "__yamaape": {
             "position": {
                 "x": 3140,
@@ -1011,7 +1009,8 @@
         },
         "next": [
             "城市探索_回到主页"
-        ]
+        ],
+        "focus": "> 您需要自行通过第一次线索行动类事件！"
     },
     "城市探索_进入剧情": {
         "recognition": "OCR",

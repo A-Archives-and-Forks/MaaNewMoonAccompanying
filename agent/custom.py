@@ -1,4 +1,3 @@
-import customs.Logger
 import customs.ConsumptiveRealism
 import customs.Platform
 import customs.PeriodicInspection
@@ -12,3 +11,4 @@ import customs.IceDrink
 import customs.AgentTraining
 import customs.MatrixScheduling
 import customs.Activities
+import customs.Global

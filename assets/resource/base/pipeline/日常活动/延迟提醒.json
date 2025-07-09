@@ -1,0 +1,31 @@
+{
+    "__yamaape_config_延迟提醒": {
+        "filename": "延迟提醒",
+        "version": "v0.3.4",
+        "prefix": "延迟提醒"
+    },
+    "延迟提醒_开始": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": 1722,
+                "y": 195
+            }
+        },
+        "next": [
+            "延迟提醒_提醒"
+        ]
+    },
+    "延迟提醒_提醒": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "delay_focus",
+        "__yamaape": {
+            "position": {
+                "x": 1979,
+                "y": 194
+            }
+        }
+    }
+}
