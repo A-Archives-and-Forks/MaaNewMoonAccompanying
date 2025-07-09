@@ -25,8 +25,12 @@ class Inspector:
 
     # 记录检查
     @staticmethod
-    def record(task: str) -> None:
-        LocalStorage.set(task, "last_date", str(date.today()))
+    def record(task: str, refresh_hour: int = REFRESH_HOUR) -> None:
+        """
+        记录任务的最后日期，根据刷新时间调整日期
+        """
+        current_datetime = Inspector._adjust_datetime(refresh_hour)
+        LocalStorage.set(task, "last_date", str(current_datetime.date()))
 
     # 是否在同一周
     @staticmethod
@@ -73,8 +77,9 @@ class SetLastPeriodicCheck(CustomAction):
         try:
             args = parse_query_args(argv)
             task = args.get("t")
+            refresh_hour = int(args.get("r", REFRESH_HOUR))
 
-            Inspector.record(task)
+            Inspector.record(task, refresh_hour)
 
             return CustomAction.RunResult(success=True)
 
