@@ -78,11 +78,8 @@
         "recognition": "OCR",
         "action": "DoNothing",
         "expected": [
-            "成功",
-            "失败",
-            "结束",
-            "确定",
-            "继续"
+            "行动成功",
+            "行动失败"
         ],
         "focus": "> 战斗结束",
         "__yamaape": {
@@ -120,6 +117,20 @@
         "next": [
             "自动战斗_确定开大",
             "自动战斗_无需再次点击"
+        ]
+    },
+    "自动战斗_再次检测": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "post_delay": 1250,
+        "__yamaape": {
+            "position": {
+                "x": 1543,
+                "y": 311
+            }
+        },
+        "next": [
+            "自动战斗_开始"
         ]
     },
     "自动战斗_确定开大": {
@@ -166,20 +177,6 @@
         },
         "next": [
             "自动战斗_再次检测"
-        ]
-    },
-    "自动战斗_再次检测": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "post_delay": 1650,
-        "__yamaape": {
-            "position": {
-                "x": 1543,
-                "y": 311
-            }
-        },
-        "next": [
-            "自动战斗_开始"
         ]
     }
 }
