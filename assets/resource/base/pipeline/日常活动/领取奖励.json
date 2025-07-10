@@ -230,8 +230,8 @@
         "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": 584,
-                "y": 503
+                "x": 2769,
+                "y": 497
             }
         },
         "next": [
@@ -248,8 +248,8 @@
         "focus": "> 进入组长手册面板",
         "__yamaape": {
             "position": {
-                "x": 854,
-                "y": 505
+                "x": 3039,
+                "y": 499
             }
         },
         "next": [
@@ -275,8 +275,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 1136,
-                "y": 504
+                "x": 3321,
+                "y": 498
             }
         },
         "next": [
@@ -292,8 +292,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 900,
-                "y": 728
+                "x": 3085,
+                "y": 722
             }
         }
     },
@@ -306,8 +306,8 @@
         "focus": "> 进入组长手册面板",
         "__yamaape": {
             "position": {
-                "x": 905,
-                "y": 925
+                "x": 3090,
+                "y": 919
             }
         }
     },
@@ -321,8 +321,8 @@
         "post_delay": 1000,
         "__yamaape": {
             "position": {
-                "x": 1405,
-                "y": 503
+                "x": 3590,
+                "y": 497
             }
         },
         "next": [
@@ -347,8 +347,8 @@
         "focus": "> 领取手册奖励",
         "__yamaape": {
             "position": {
-                "x": 1196,
-                "y": 795
+                "x": 3381,
+                "y": 789
             }
         },
         "next": [
@@ -357,29 +357,6 @@
         "interrupt": [
             "领取奖励_手册升级",
             "领取奖励_确认手册升级"
-        ]
-    },
-    "领取奖励_领取手册奖励": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "领取全部"
-        ],
-        "pre_delay": 1000,
-        "post_delay": 800,
-        "__yamaape": {
-            "position": {
-                "x": 1469,
-                "y": 791
-            }
-        },
-        "interrupt": [
-            "领取奖励_手册升级",
-            "领取奖励_确保无需再次领取",
-            "领取奖励_确认手册升级"
-        ],
-        "next": [
-            "领取奖励_获取手册奖励"
         ]
     },
     "领取奖励_手册升级": {
@@ -391,10 +368,51 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 2025,
-                "y": 958
+                "x": 4028,
+                "y": 321
             }
         }
+    },
+    "领取奖励_确认手册升级": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            2,
+            2,
+            1,
+            1
+        ],
+        "post_delay": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 4034,
+                "y": 517
+            }
+        }
+    },
+    "领取奖励_领取手册奖励": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "领取全部"
+        ],
+        "pre_delay": 1000,
+        "post_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 3654,
+                "y": 785
+            }
+        },
+        "next": [
+            "领取奖励_获取手册奖励",
+            "领取奖励_无奖励"
+        ],
+        "interrupt": [
+            "领取奖励_手册升级",
+            "领取奖励_确保无需再次领取",
+            "领取奖励_确认手册升级"
+        ]
     },
     "领取奖励_获取手册奖励": {
         "recognition": "OCR",
@@ -405,13 +423,26 @@
         "pre_delay": 800,
         "__yamaape": {
             "position": {
-                "x": 1789,
-                "y": 757
+                "x": 3974,
+                "y": 751
             }
         },
         "next": [
             "领取奖励_从手册返回"
         ]
+    },
+    "领取奖励_确保无需再次领取": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "领取全部"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3972,
+                "y": 1134
+            }
+        }
     },
     "领取奖励_从手册返回": {
         "recognition": "DirectHit",
@@ -420,8 +451,8 @@
         "custom_action_param": "key=返回主页",
         "__yamaape": {
             "position": {
-                "x": 2052,
-                "y": 754
+                "x": 4237,
+                "y": 748
             }
         },
         "next": [
@@ -433,8 +464,8 @@
         "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": 2309,
-                "y": 752
+                "x": 4494,
+                "y": 746
             }
         }
     },
@@ -937,34 +968,20 @@
             "领取奖励_任务奖励"
         ]
     },
-    "领取奖励_确认手册升级": {
-        "recognition": "DirectHit",
-        "action": "Click",
-        "target": [
-            2,
-            2,
-            1,
-            1
-        ],
-        "post_delay": 1000,
-        "__yamaape": {
-            "position": {
-                "x": 1849,
-                "y": 523
-            }
-        }
-    },
-    "领取奖励_确保无需再次领取": {
+    "领取奖励_无奖励": {
         "recognition": "OCR",
-        "action": "Click",
+        "action": "DoNothing",
         "expected": [
-            "领取全部"
+            "当前暂无"
         ],
         "__yamaape": {
             "position": {
-                "x": 1765,
-                "y": 1062
+                "x": 3974,
+                "y": 951
             }
-        }
+        },
+        "next": [
+            "领取奖励_从手册返回"
+        ]
     }
 }
