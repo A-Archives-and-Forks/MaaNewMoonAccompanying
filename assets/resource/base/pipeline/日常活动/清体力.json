@@ -717,8 +717,8 @@
         "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": 5184,
-                "y": 1163
+                "x": 5172,
+                "y": 1165
             }
         }
     },
@@ -761,6 +761,24 @@
         "next": [
             "清体力_体力耗尽",
             "清体力_3X及以下行动前检测1"
+        ]
+    },
+    "清体力_体力耗尽": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "close.png"
+        ],
+        "focus": "> 体力耗尽",
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 4017,
+                "y": 1194
+            }
+        },
+        "next": [
+            "清体力_回到主页"
         ]
     },
     "清体力_4X助战": {
@@ -931,23 +949,6 @@
         },
         "next": [
             "清体力_选择助战"
-        ]
-    },
-    "清体力_体力耗尽": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "close.png"
-        ],
-        "focus": "> 体力耗尽",
-        "__yamaape": {
-            "position": {
-                "x": 3987,
-                "y": 1060
-            }
-        },
-        "next": [
-            "清体力_回到主页"
         ]
     },
     "清体力_3X助战": {
@@ -1879,11 +1880,11 @@
         "custom_action": "set_str_node_attrs",
         "post_delay": 0,
         "focus": "> 今日已使用过合剂，将跳过自动消耗",
-        "custom_action_param": "node=清体力_开始&keys=next&values=清体力_设定指定队伍",
+        "custom_action_param": "node=清体力_判断合剂余量&keys=on_error&values=[]",
         "__yamaape": {
             "position": {
-                "x": -808,
-                "y": 152
+                "x": -807,
+                "y": 149
             }
         },
         "next": [
@@ -1898,8 +1899,8 @@
         "custom_action_param": "node=清体力_判断合剂余量&keys=next&values=清体力_返回倍率选择3",
         "__yamaape": {
             "position": {
-                "x": -543,
-                "y": 182
+                "x": -542,
+                "y": 179
             }
         },
         "next": [

@@ -1,11 +1,11 @@
 {
     "name": "MaaNewMoonAccompanying",
     "url": "https://github.com/kqcoxn/MaaNewMoonAccompanying",
-    "custom_title": "MNMA新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v1.2.20 - MFAA | 游戏版本：乐园不妙夜·下",
+    "custom_title": "MNMA新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v2.0.0 - MFAA | 游戏版本：乐园不妙夜·下",
     "mirrorchyan_rid": "MNMA",
     "mirrorchyan_multiplatform": true,
-    "version": "v1.2.20",
-    "mfa_min_version": "v1.5.2",
+    "version": "v2.0.0",
+    "mfa_min_version": "v1.5.3",
     "message": "- 新 月 同 行 -",
     "controller": [
         {
@@ -1246,11 +1246,8 @@
             ]
         },
         "有提醒项时阻断后续任务": {
+            "doc": "需要在运行设置中配合修改“运行设置-任务运行失败后是否继续运行其他任务”为否",
             "cases": [
-                {
-                    "name": "Yes",
-                    "pipeline_override": {}
-                },
                 {
                     "name": "No",
                     "pipeline_override": {
@@ -1258,6 +1255,10 @@
                             "custom_action_param": ""
                         }
                     }
+                },
+                {
+                    "name": "Yes",
+                    "pipeline_override": {}
                 }
             ]
         },

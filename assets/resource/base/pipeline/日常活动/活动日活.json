@@ -14,8 +14,9 @@
         "pre_delay": 400,
         "focus": "> 进入活动界面",
         "threshold": [
-            0.5
+            0.6
         ],
+        "index": -1,
         "__yamaape": {
             "position": {
                 "x": 243,
@@ -103,6 +104,7 @@
         "recognition": "OCR",
         "action": "Custom",
         "expected": [
+            "前往",
             "领取"
         ],
         "roi": [
@@ -115,8 +117,8 @@
         "custom_action_param": "key=活动日活&focus=今日活动任务未全部完成！",
         "__yamaape": {
             "position": {
-                "x": 1582,
-                "y": -178
+                "x": 1589,
+                "y": -169
             }
         },
         "next": [

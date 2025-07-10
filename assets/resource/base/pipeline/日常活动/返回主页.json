@@ -109,10 +109,11 @@
         "timeout": 1000,
         "pre_delay": 0,
         "post_delay": 1000,
+        "custom_action_param": "key=return_home",
         "__yamaape": {
             "position": {
-                "x": 1135,
-                "y": -265
+                "x": 1134,
+                "y": -298
             }
         },
         "next": [
@@ -154,7 +155,7 @@
         "recognition": "DirectHit",
         "action": "Custom",
         "custom_action": "init_counter",
-        "custom_action_param": "max=3",
+        "custom_action_param": "key=return_home&max=4",
         "__yamaape": {
             "position": {
                 "x": -64,

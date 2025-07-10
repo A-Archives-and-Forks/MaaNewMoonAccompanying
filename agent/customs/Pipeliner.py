@@ -56,7 +56,7 @@ class Run(CustomAction):
 
             if type == "task":
                 context.run_task(key)
-            if type == "node":
+            elif type == "node":
                 context.run_action(key)
 
             return True
