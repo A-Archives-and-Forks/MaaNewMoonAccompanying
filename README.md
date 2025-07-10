@@ -1,4 +1,3 @@
-<!-- markdownlint-disable MD033 MD041 -->
 <p align="center">
   <img alt="LOGO" src="./logo.png" width="256" height="256" />
 </p>
@@ -101,6 +100,9 @@
   - [x] 特工批量谈话
   - [x] 好友批量换新
   - [x] 剧情阅读器
+  - [x] 自动战斗
+  - [x] 危局演练
+  - [x] 自动爬塔
 
 具体更新日志可参考[更新记录](/docs/zh_cn/更新记录.md)
 
