@@ -77,9 +77,8 @@ class SetLastPeriodicCheck(CustomAction):
         try:
             args = parse_query_args(argv)
             task = args.get("t")
-            refresh_hour = int(args.get("r", REFRESH_HOUR))
 
-            Inspector.record(task, refresh_hour)
+            Inspector.record(task)
 
             return CustomAction.RunResult(success=True)
 
@@ -99,15 +98,22 @@ class PeriodicCheck(CustomAction):
     ) -> CustomAction.RunResult | bool:
         try:
             args = parse_query_args(argv)
-            periodic = args.get("p")
             task = args.get("t")
-            refresh_hour = int(args.get("r", REFRESH_HOUR))
+            periodic = args.get("p", "day")
+            record_immediately = args.get("r", False)
+            if record_immediately == "true":
+                record_immediately = True
+            else:
+                record_immediately = False
 
             flag = False
             if periodic == "week":
-                flag = Inspector.same_week(task, refresh_hour)
+                flag = Inspector.same_week(task)
             elif periodic == "day":
-                flag = Inspector.same_day(task, refresh_hour)
+                flag = Inspector.same_day(task)
+
+            if record_immediately:
+                Inspector.record(task)
 
             return not flag
 

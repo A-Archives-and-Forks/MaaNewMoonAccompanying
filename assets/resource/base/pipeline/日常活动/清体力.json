@@ -304,7 +304,7 @@
             }
         },
         "next": [
-            "清体力_关闭合剂界面"
+            "清体力_记录使用合剂"
         ]
     },
     "清体力_4X行动": {
@@ -354,22 +354,6 @@
         },
         "next": [
             "清体力_开始挑战3"
-        ]
-    },
-    "清体力_关闭合剂界面": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "取消"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 3690,
-                "y": 356
-            }
-        },
-        "next": [
-            "清体力_开始挑战4"
         ]
     },
     "清体力_4X升级": {
@@ -452,6 +436,22 @@
         "next": [
             "清体力_返回倍率选择2",
             "清体力_3X及以下行动前检测1"
+        ]
+    },
+    "清体力_关闭合剂界面": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "取消"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3935,
+                "y": 411
+            }
+        },
+        "next": [
+            "清体力_开始挑战4"
         ]
     },
     "清体力_自动战斗": {
@@ -781,21 +781,6 @@
             "清体力_回到主页"
         ]
     },
-    "清体力_4X助战": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "set_str_node_attrs",
-        "custom_action_param": "node=清体力_设置助战结束&keys=next&values=清体力_4X行动",
-        "__yamaape": {
-            "position": {
-                "x": 2975,
-                "y": 2333
-            }
-        },
-        "next": [
-            "清体力_设置助战"
-        ]
-    },
     "清体力_设置助战": {
         "recognition": "OCR",
         "action": "Click",
@@ -805,8 +790,8 @@
         "focus": "> 设置助战",
         "__yamaape": {
             "position": {
-                "x": 3249,
-                "y": 2427
+                "x": 3747,
+                "y": 2446
             }
         },
         "next": [
@@ -823,8 +808,8 @@
         "focus": "> 今日助战次数已耗尽",
         "__yamaape": {
             "position": {
-                "x": 3514,
-                "y": 2649
+                "x": 4012,
+                "y": 2668
             }
         },
         "next": [
@@ -841,8 +826,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 3516,
-                "y": 2425
+                "x": 4014,
+                "y": 2444
             }
         },
         "next": [
@@ -854,8 +839,8 @@
         "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": 3773,
-                "y": 2648
+                "x": 4810,
+                "y": 2842
             }
         }
     },
@@ -871,15 +856,15 @@
         "timeout": 2000,
         "__yamaape": {
             "position": {
-                "x": 3770,
-                "y": 2421
+                "x": 4268,
+                "y": 2440
             }
         },
         "next": [
             "清体力_已存在相同特工"
         ],
         "on_error": [
-            "清体力_设置助战结束"
+            "清体力_助战周期记录"
         ]
     },
     "清体力_已存在相同特工": {
@@ -891,8 +876,8 @@
         "focus": "> 已存在相同特工，尝试重新选择助战",
         "__yamaape": {
             "position": {
-                "x": 4030,
-                "y": 2421
+                "x": 4528,
+                "y": 2440
             }
         },
         "next": [
@@ -908,8 +893,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 4278,
-                "y": 2414
+                "x": 4776,
+                "y": 2433
             }
         },
         "next": [
@@ -925,8 +910,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 4538,
-                "y": 2281
+                "x": 5036,
+                "y": 2300
             }
         },
         "next": [
@@ -943,27 +928,12 @@
         "post_delay": 1200,
         "__yamaape": {
             "position": {
-                "x": 3270,
-                "y": 2206
+                "x": 3768,
+                "y": 2225
             }
         },
         "next": [
             "清体力_选择助战"
-        ]
-    },
-    "清体力_3X助战": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "set_str_node_attrs",
-        "custom_action_param": "node=清体力_设置助战结束&keys=next&values=清体力_3X及以下行动",
-        "__yamaape": {
-            "position": {
-                "x": 2975,
-                "y": 2531
-            }
-        },
-        "next": [
-            "清体力_设置助战"
         ]
     },
     "清体力_数构银本": {
@@ -1660,6 +1630,21 @@
             "清体力_战略行动"
         ]
     },
+    "清体力_执行前返回主页": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "run",
+        "custom_action_param": "type=task&key=全局前置返回主页",
+        "__yamaape": {
+            "position": {
+                "x": -36,
+                "y": -190
+            }
+        },
+        "next": [
+            "清体力_战略行动"
+        ]
+    },
     "清体力_指定作战队伍": {
         "recognition": "DirectHit",
         "action": "DoNothing",
@@ -1933,7 +1918,7 @@
         "action": "Custom",
         "custom_action": "periodic_check",
         "post_delay": 0,
-        "custom_action_param": "p=day&t=auto_fight",
+        "custom_action_param": "t=eat",
         "__yamaape": {
             "position": {
                 "x": -1108,
@@ -1944,19 +1929,111 @@
             "清体力_设定合剂消耗"
         ]
     },
-    "清体力_执行前返回主页": {
+    "清体力_4X助战": {
         "recognition": "DirectHit",
         "action": "Custom",
-        "custom_action": "run",
-        "custom_action_param": "type=task&key=全局前置返回主页",
+        "custom_action": "set_str_node_attrs",
+        "custom_action_param": "node=清体力_设置助战结束&keys=next&values=清体力_4X行动",
         "__yamaape": {
             "position": {
-                "x": -36,
-                "y": -190
+                "x": 2952,
+                "y": 2375
             }
         },
         "next": [
-            "清体力_战略行动"
+            "清体力_助战"
+        ]
+    },
+    "清体力_助战": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "pre_delay": 0,
+        "post_delay": 0,
+        "__yamaape": {
+            "position": {
+                "x": 3222,
+                "y": 2444
+            }
+        },
+        "next": [
+            "清体力_助战周期检查"
+        ],
+        "on_error": [
+            "清体力_今日已助战"
+        ]
+    },
+    "清体力_3X助战": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "set_str_node_attrs",
+        "custom_action_param": "node=清体力_设置助战结束&keys=next&values=清体力_3X及以下行动",
+        "__yamaape": {
+            "position": {
+                "x": 2952,
+                "y": 2573
+            }
+        },
+        "next": [
+            "清体力_助战"
+        ]
+    },
+    "清体力_助战周期检查": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "periodic_check",
+        "custom_action_param": "t=assistance",
+        "__yamaape": {
+            "position": {
+                "x": 3482,
+                "y": 2444
+            }
+        },
+        "next": [
+            "清体力_设置助战"
+        ]
+    },
+    "清体力_今日已助战": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "focus": "> 今日已助战",
+        "__yamaape": {
+            "position": {
+                "x": 3482,
+                "y": 2642
+            }
+        },
+        "next": [
+            "清体力_设置助战结束"
+        ]
+    },
+    "清体力_助战周期记录": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "record_periodic_check",
+        "custom_action_param": "t=assistance",
+        "__yamaape": {
+            "position": {
+                "x": 4530,
+                "y": 2640
+            }
+        },
+        "next": [
+            "清体力_设置助战结束"
+        ]
+    },
+    "清体力_记录使用合剂": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "record_periodic_check",
+        "custom_action_param": "t=eat",
+        "__yamaape": {
+            "position": {
+                "x": 3679,
+                "y": 353
+            }
+        },
+        "next": [
+            "清体力_关闭合剂界面"
         ]
     }
 }
