@@ -1,11 +1,11 @@
 {
     "name": "MaaNewMoonAccompanying",
     "url": "https://github.com/kqcoxn/MaaNewMoonAccompanying",
-    "custom_title": "MNMA新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v2.0.2 - MFAA | 游戏版本：乐园不妙夜·下",
+    "custom_title": "MNMA新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v2.0.3 - MFAA | 游戏版本：乐园不妙夜·下",
     "mirrorchyan_rid": "MNMA",
     "mirrorchyan_multiplatform": true,
-    "version": "v2.0.2",
-    "mfa_min_version": "v1.5.4",
+    "version": "v2.0.3",
+    "mfa_min_version": "v1.5.5",
     "message": "- 新 月 同 行 -",
     "controller": [
         {
@@ -96,7 +96,8 @@
                 "数构银物资黑白名单"
             ],
             "option": [
-                "数构银物资购买策略"
+                "数构银物资购买策略",
+                "每日仅采购一次"
             ],
             "doc": "**每日采购**：\n\n购买每日免费礼包与数构银物资\n\n- 数构银物资黑白名单：在购买策略范围内，控制详细的物资品类，可检测多种，支持模糊搜索；不同物资以“,”或“ ”(空格)或“、”隔开，例如“演练券、高级,理 高级作战教材”；黑白名单同时生效，若白名单非空则只买白名单内物资，若黑名单非空则跳过黑名单内物资\n\n**注意事项：请确保有充足数构银**\n\n开始界面：主界面\n\n结束界面：主界面",
             "check": true
@@ -628,6 +629,22 @@
                                 "每日采购_检查是否已购买",
                                 "每日采购_检测是否为超值"
                             ]
+                        }
+                    }
+                }
+            ]
+        },
+        "每日仅采购一次": {
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {}
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "每日采购_开始": {
+                            "next": "每日采购_设置黑白名单"
                         }
                     }
                 }

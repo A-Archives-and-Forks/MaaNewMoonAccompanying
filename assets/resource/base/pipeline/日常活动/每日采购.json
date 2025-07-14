@@ -365,15 +365,15 @@
         "post_delay": 1,
         "__yamaape": {
             "position": {
-                "x": 3595,
-                "y": 30
+                "x": 3302,
+                "y": 14
             }
         },
         "next": [
             "每日采购_设置识别位置"
         ],
         "on_error": [
-            "每日采购_返回主界面"
+            "每日采购_周期记录"
         ]
     },
     "每日采购_检测黑白名单": {
@@ -393,21 +393,6 @@
         ],
         "on_error": [
             "每日采购_非白名单"
-        ]
-    },
-    "每日采购_返回主界面": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "run",
-        "custom_action_param": "key=返回主页",
-        "__yamaape": {
-            "position": {
-                "x": 3882,
-                "y": 29
-            }
-        },
-        "next": [
-            "每日采购_结束"
         ]
     },
     "每日采购_检测是否在白名单": {
@@ -452,13 +437,28 @@
             "每日采购_检查下个节点"
         ]
     },
+    "每日采购_返回主界面": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "run",
+        "custom_action_param": "key=返回主页",
+        "__yamaape": {
+            "position": {
+                "x": 3819,
+                "y": 12
+            }
+        },
+        "next": [
+            "每日采购_结束"
+        ]
+    },
     "每日采购_结束": {
         "recognition": "DirectHit",
         "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": 4142,
-                "y": 29
+                "x": 4079,
+                "y": 12
             }
         }
     },
@@ -562,19 +562,6 @@
             "每日采购_检查下个节点"
         ]
     },
-    "每日采购_开始": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "__yamaape": {
-            "position": {
-                "x": -612,
-                "y": -401
-            }
-        },
-        "next": [
-            "每日采购_设置黑白名单"
-        ]
-    },
     "每日采购_设置黑白名单": {
         "recognition": "DirectHit",
         "action": "Custom",
@@ -609,5 +596,66 @@
         "next": [
             "每日采购_采购中心"
         ]
+    },
+    "每日采购_开始": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": -888,
+                "y": -487
+            }
+        },
+        "next": [
+            "每日采购_周期检查"
+        ],
+        "on_error": [
+            "每日采购_今日已购买"
+        ]
+    },
+    "每日采购_周期检查": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "periodic_check",
+        "custom_action_param": "t=procurement",
+        "pre_delay": 1,
+        "post_delay": 1,
+        "__yamaape": {
+            "position": {
+                "x": -621,
+                "y": -488
+            }
+        },
+        "next": [
+            "每日采购_设置黑白名单"
+        ]
+    },
+    "每日采购_周期记录": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "record_periodic_check",
+        "custom_action_param": "t=procurement",
+        "pre_delay": 1,
+        "post_delay": 1,
+        "__yamaape": {
+            "position": {
+                "x": 3560,
+                "y": 13
+            }
+        },
+        "next": [
+            "每日采购_返回主界面"
+        ]
+    },
+    "每日采购_今日已购买": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "focus": "> 今日已采购",
+        "__yamaape": {
+            "position": {
+                "x": -621,
+                "y": -230
+            }
+        }
     }
 }
