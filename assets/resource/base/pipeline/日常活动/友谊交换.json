@@ -201,19 +201,6 @@
             }
         }
     },
-    "友谊交换_开始": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "__yamaape": {
-            "position": {
-                "x": -268,
-                "y": -91
-            }
-        },
-        "next": [
-            "友谊交换_进入友谊界面"
-        ]
-    },
     "友谊交换_进入友谊界面": {
         "recognition": "TemplateMatch",
         "action": "Click",
@@ -238,6 +225,37 @@
         ],
         "interrupt": [
             "友谊交换_情报点数收取"
+        ]
+    },
+    "友谊交换_开始": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": -549,
+                "y": -35
+            }
+        },
+        "on_error": [
+            "友谊交换_进入友谊界面"
+        ],
+        "next": [
+            "友谊交换_执行前返回主页"
+        ]
+    },
+    "友谊交换_执行前返回主页": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "run",
+        "custom_action_param": "type=task&key=全局前置返回主页",
+        "__yamaape": {
+            "position": {
+                "x": -280,
+                "y": -172
+            }
+        },
+        "next": [
+            "友谊交换_进入友谊界面"
         ]
     }
 }

@@ -431,6 +431,22 @@
             "领取奖励_从手册返回"
         ]
     },
+    "领取奖励_无奖励": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "当前暂无"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3974,
+                "y": 951
+            }
+        },
+        "next": [
+            "领取奖励_从手册返回"
+        ]
+    },
     "领取奖励_确保无需再次领取": {
         "recognition": "OCR",
         "action": "Click",
@@ -857,19 +873,6 @@
             "领取奖励_确保进入特工界面"
         ]
     },
-    "领取奖励_开始": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "__yamaape": {
-            "position": {
-                "x": -546,
-                "y": -86
-            }
-        },
-        "next": [
-            "领取奖励_角色升级开始"
-        ]
-    },
     "领取奖励_角色升级开始": {
         "recognition": "DirectHit",
         "action": "DoNothing",
@@ -877,8 +880,8 @@
         "post_delay": 1,
         "__yamaape": {
             "position": {
-                "x": -285,
-                "y": -89
+                "x": -293,
+                "y": 59
             }
         },
         "next": [
@@ -968,20 +971,35 @@
             "领取奖励_任务奖励"
         ]
     },
-    "领取奖励_无奖励": {
-        "recognition": "OCR",
+    "领取奖励_开始": {
+        "recognition": "DirectHit",
         "action": "DoNothing",
-        "expected": [
-            "当前暂无"
-        ],
         "__yamaape": {
             "position": {
-                "x": 3974,
-                "y": 951
+                "x": -844,
+                "y": 63
+            }
+        },
+        "on_error": [
+            "领取奖励_角色升级开始"
+        ],
+        "next": [
+            "领取奖励_执行前返回主页"
+        ]
+    },
+    "领取奖励_执行前返回主页": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "run",
+        "custom_action_param": "type=task&key=全局前置返回主页",
+        "__yamaape": {
+            "position": {
+                "x": -572,
+                "y": -89
             }
         },
         "next": [
-            "领取奖励_从手册返回"
+            "领取奖励_角色升级开始"
         ]
     }
 }

@@ -260,6 +260,53 @@
             "冰饮_没有老金"
         ]
     },
+    "冰饮_进入个人挑战": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "前往"
+        ],
+        "order_by": "Vertical",
+        "__yamaape": {
+            "position": {
+                "x": 3673,
+                "y": 1163
+            }
+        },
+        "next": [
+            "冰饮_开始个人挑战"
+        ]
+    },
+    "冰饮_个人挑战已完成": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "1/1"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3679,
+                "y": 1614
+            }
+        },
+        "next": [
+            "冰饮_检查是否已领奖"
+        ]
+    },
+    "冰饮_个人挑战未完成": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "focus": "> 个人挑战未刷新",
+        "__yamaape": {
+            "position": {
+                "x": 3676,
+                "y": 1776
+            }
+        },
+        "next": [
+            "冰饮_检查协助作战记录"
+        ]
+    },
     "冰饮_开始协助挑战": {
         "recognition": "OCR",
         "action": "Click",
@@ -318,21 +365,53 @@
             "冰饮_冰饮检查完成"
         ]
     },
-    "冰饮_进入个人挑战": {
+    "冰饮_结束协助行动": {
         "recognition": "OCR",
         "action": "Click",
         "expected": [
-            "前往"
+            "确定"
         ],
-        "order_by": "Vertical",
+        "pre_delay": 800,
+        "focus": "> 行动结束",
         "__yamaape": {
             "position": {
-                "x": 3673,
-                "y": 1163
+                "x": 4749,
+                "y": 2140
             }
         },
         "next": [
-            "冰饮_开始个人挑战"
+            "冰饮_从协助挑战返回"
+        ]
+    },
+    "冰饮_等待指令": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "瞬时调度"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 5047,
+                "y": 1860
+            }
+        },
+        "next": [
+            "冰饮_自动战斗"
+        ]
+    },
+    "冰饮_冰饮检查完成": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "run",
+        "custom_action_param": "key=返回主页",
+        "__yamaape": {
+            "position": {
+                "x": 3969,
+                "y": 2898
+            }
+        },
+        "next": [
+            "冰饮_结束"
         ]
     },
     "冰饮_开始个人挑战": {
@@ -410,34 +489,43 @@
             "冰饮_挑战冷却中"
         ]
     },
-    "冰饮_个人挑战已完成": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "1/1"
+    "冰饮_从个人挑战返回": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "back.png"
         ],
+        "pre_delay": 400,
+        "timeout": 2000,
         "__yamaape": {
             "position": {
-                "x": 3679,
-                "y": 1614
+                "x": 5303,
+                "y": 1382
             }
         },
         "next": [
-            "冰饮_检查是否已领奖"
+            "冰饮_检查个人挑战情况"
+        ],
+        "on_error": [
+            "冰饮_个人挑战完成"
         ]
     },
-    "冰饮_个人挑战未完成": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "focus": "> 个人挑战未刷新",
+    "冰饮_结束个人行动": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "确定"
+        ],
+        "pre_delay": 800,
+        "focus": "> 行动结束",
         "__yamaape": {
             "position": {
-                "x": 3676,
-                "y": 1776
+                "x": 4475,
+                "y": 1168
             }
         },
         "next": [
-            "冰饮_检查协助作战记录"
+            "冰饮_领取行动奖励"
         ]
     },
     "冰饮_检查是否已领奖": {
@@ -528,94 +616,6 @@
         ],
         "on_error": [
             "冰饮_协助挑战完成"
-        ]
-    },
-    "冰饮_冰饮检查完成": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "run",
-        "custom_action_param": "key=返回主页",
-        "__yamaape": {
-            "position": {
-                "x": 3969,
-                "y": 2898
-            }
-        },
-        "next": [
-            "冰饮_结束"
-        ]
-    },
-    "冰饮_结束协助行动": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "确定"
-        ],
-        "pre_delay": 800,
-        "focus": "> 行动结束",
-        "__yamaape": {
-            "position": {
-                "x": 4749,
-                "y": 2140
-            }
-        },
-        "next": [
-            "冰饮_从协助挑战返回"
-        ]
-    },
-    "冰饮_等待指令": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "瞬时调度"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 5047,
-                "y": 1860
-            }
-        },
-        "next": [
-            "冰饮_自动战斗"
-        ]
-    },
-    "冰饮_从个人挑战返回": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "back.png"
-        ],
-        "pre_delay": 400,
-        "timeout": 2000,
-        "__yamaape": {
-            "position": {
-                "x": 5303,
-                "y": 1382
-            }
-        },
-        "next": [
-            "冰饮_检查个人挑战情况"
-        ],
-        "on_error": [
-            "冰饮_个人挑战完成"
-        ]
-    },
-    "冰饮_结束个人行动": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "确定"
-        ],
-        "pre_delay": 800,
-        "focus": "> 行动结束",
-        "__yamaape": {
-            "position": {
-                "x": 4475,
-                "y": 1168
-            }
-        },
-        "next": [
-            "冰饮_领取行动奖励"
         ]
     },
     "冰饮_确认领奖": {
@@ -823,36 +823,6 @@
             "冰饮_从个人挑战返回"
         ]
     },
-    "冰饮_检测是否完成-协助": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "periodic_check",
-        "custom_action_param": "p=week&t=ice_drink_assist",
-        "__yamaape": {
-            "position": {
-                "x": 1477,
-                "y": 1200
-            }
-        },
-        "next": [
-            "冰饮_城市探索"
-        ]
-    },
-    "冰饮_检测是否完成-个人": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "periodic_check",
-        "custom_action_param": "p=week&t=ice_drink_self",
-        "__yamaape": {
-            "position": {
-                "x": 1475,
-                "y": 987
-            }
-        },
-        "next": [
-            "冰饮_城市探索"
-        ]
-    },
     "冰饮_检查历史记录": {
         "recognition": "DirectHit",
         "action": "DoNothing",
@@ -860,8 +830,8 @@
         "post_delay": 0,
         "__yamaape": {
             "position": {
-                "x": 1175,
-                "y": 984
+                "x": 573,
+                "y": 942
             }
         },
         "next": [
@@ -871,13 +841,28 @@
             "冰饮_确认开始"
         ]
     },
+    "冰饮_检测是否完成-个人": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "periodic_check",
+        "custom_action_param": "p=week&t=ice_drink_self",
+        "__yamaape": {
+            "position": {
+                "x": 873,
+                "y": 945
+            }
+        },
+        "next": [
+            "冰饮_检查历史记录完成"
+        ]
+    },
     "冰饮_确认开始": {
         "recognition": "DirectHit",
         "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": 1197,
-                "y": 1255
+                "x": 595,
+                "y": 1213
             }
         },
         "next": [
@@ -887,14 +872,29 @@
             "冰饮_本周已完成"
         ]
     },
+    "冰饮_检测是否完成-协助": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "periodic_check",
+        "custom_action_param": "p=week&t=ice_drink_assist",
+        "__yamaape": {
+            "position": {
+                "x": 875,
+                "y": 1158
+            }
+        },
+        "next": [
+            "冰饮_检查历史记录完成"
+        ]
+    },
     "冰饮_本周已完成": {
         "recognition": "DirectHit",
         "action": "DoNothing",
         "focus": "> 本周冰饮已完成",
         "__yamaape": {
             "position": {
-                "x": 1478,
-                "y": 1409
+                "x": 876,
+                "y": 1367
             }
         }
     },
@@ -1124,8 +1124,8 @@
         "custom_action_param": "key=check_squad&max=1",
         "__yamaape": {
             "position": {
-                "x": 922,
-                "y": 986
+                "x": 320,
+                "y": 944
             }
         },
         "next": [
@@ -1137,8 +1137,8 @@
         "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": 408,
-                "y": 986
+                "x": -194,
+                "y": 944
             }
         },
         "next": [
@@ -1151,12 +1151,45 @@
         "custom_action": "set_ice_squad",
         "__yamaape": {
             "position": {
-                "x": 668,
-                "y": 986
+                "x": 66,
+                "y": 944
             }
         },
         "next": [
             "冰饮_初始化配队计数"
+        ]
+    },
+    "冰饮_检查历史记录完成": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "pre_delay": 0,
+        "post_delay": 0,
+        "__yamaape": {
+            "position": {
+                "x": 1164,
+                "y": 1018
+            }
+        },
+        "next": [
+            "冰饮_执行前返回主页"
+        ],
+        "on_error": [
+            "冰饮_城市探索"
+        ]
+    },
+    "冰饮_执行前返回主页": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "run",
+        "custom_action_param": "type=task&key=全局前置返回主页",
+        "__yamaape": {
+            "position": {
+                "x": 1457,
+                "y": 903
+            }
+        },
+        "next": [
+            "冰饮_城市探索"
         ]
     }
 }

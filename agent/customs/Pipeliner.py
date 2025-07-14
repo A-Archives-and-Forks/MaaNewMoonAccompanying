@@ -50,7 +50,7 @@ class Run(CustomAction):
             args = parse_query_args(argv)
             type = args.get("type", "node")
             key = args.get("key", "")
-
+            
             if type == "" or key == "":
                 return False
 
@@ -61,7 +61,7 @@ class Run(CustomAction):
 
             return True
         except Exception as e:
-            return Prompt.error("设置节点字符串类型属性", e)
+            return Prompt.error("运行节点", e)
 
 
 # 阻断

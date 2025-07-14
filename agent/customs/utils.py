@@ -4,6 +4,7 @@ from typing import Dict, Any
 import os
 import json
 import re
+import random
 
 
 # 解析查询字符串
@@ -39,10 +40,24 @@ def parse_list_input(input: str, split_regex=r",\s*|，\s*|、\s*|\s+") -> list[
 # 提示
 class Prompt:
     @staticmethod
-    def error(str: str, e: Exception = None):
-        print(f"{str}失败，请立即停止运行程序！")
+    def log(
+        content: str, use_default_prefix=True, pre_devider=False, post_devider=False
+    ):
+        if pre_devider:
+            print("——" * 5)
+        if use_default_prefix and not (pre_devider or post_devider):
+            content = f"> {content}"
+        print(f"{content}")
+        if post_devider:
+            print("——" * 5)
+
+    @staticmethod
+    def error(content: str, e: Exception = None, use_defult_postfix=True):
+        if use_defult_postfix:
+            content += "失败，请立即停止运行程序！"
         if e is not None:
             print(e)
+        print(f"{content}")
         return CustomAction.RunResult(success=False)
 
 
@@ -107,3 +122,25 @@ class LocalStorage:
         storage[task][key] = value
 
         return cls.write(storage)
+
+
+class Configs:
+    configs = {}
+
+    @classmethod
+    def set(cls, key: str, value: str):
+        # 转义类型
+        if value == "true":
+            value = True
+        elif value == "false":
+            value = False
+        elif value.isdigit():
+            value = int(value)
+
+        cls.configs[key] = value
+
+    @classmethod
+    def get(cls, key: str, default=None) -> str | bool | int | None:
+        if (key not in cls.configs) and (default is not None):
+            cls.configs[key] = default
+        return cls.configs.get(key, default)

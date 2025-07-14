@@ -1617,8 +1617,8 @@
         "post_delay": 0,
         "__yamaape": {
             "position": {
-                "x": -548,
-                "y": -50
+                "x": -838,
+                "y": -139
             }
         },
         "next": [
@@ -1632,8 +1632,8 @@
         "post_delay": 0,
         "__yamaape": {
             "position": {
-                "x": -288,
-                "y": -50
+                "x": -578,
+                "y": -139
             }
         },
         "next": [
@@ -1645,13 +1645,18 @@
         "action": "Custom",
         "custom_action": "init_counter",
         "custom_action_param": "key=check_squad&max=1",
+        "pre_delay": 1,
+        "post_delay": 1,
         "__yamaape": {
             "position": {
-                "x": -28,
-                "y": -47
+                "x": -318,
+                "y": -136
             }
         },
         "next": [
+            "清体力_执行前返回主页"
+        ],
+        "on_error": [
             "清体力_战略行动"
         ]
     },
@@ -1883,8 +1888,8 @@
         "custom_action_param": "node=清体力_判断合剂余量&keys=on_error&values=[]",
         "__yamaape": {
             "position": {
-                "x": -807,
-                "y": 149
+                "x": -1097,
+                "y": 60
             }
         },
         "next": [
@@ -1899,8 +1904,8 @@
         "custom_action_param": "node=清体力_判断合剂余量&keys=next&values=清体力_返回倍率选择3",
         "__yamaape": {
             "position": {
-                "x": -542,
-                "y": 179
+                "x": -832,
+                "y": 90
             }
         },
         "next": [
@@ -1912,8 +1917,8 @@
         "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": -816,
-                "y": -48
+                "x": -1363,
+                "y": -84
             }
         },
         "next": [
@@ -1931,12 +1936,27 @@
         "custom_action_param": "p=day&t=auto_fight",
         "__yamaape": {
             "position": {
-                "x": -815,
-                "y": -291
+                "x": -1108,
+                "y": -306
             }
         },
         "next": [
             "清体力_设定合剂消耗"
+        ]
+    },
+    "清体力_执行前返回主页": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "run",
+        "custom_action_param": "type=task&key=全局前置返回主页",
+        "__yamaape": {
+            "position": {
+                "x": -36,
+                "y": -190
+            }
+        },
+        "next": [
+            "清体力_战略行动"
         ]
     }
 }

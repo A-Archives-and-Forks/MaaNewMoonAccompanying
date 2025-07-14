@@ -1,4 +1,8 @@
 {
+    "null": {
+        "pre_delay": 0,
+        "post_delay": 0
+    },
     "日志": {
         "focus": [],
         "pre_delay": 0,
@@ -7,6 +11,16 @@
     "返回主页": {
         "action": "Custom",
         "custom_action": "run",
-        "custom_action_param": "type=task&key=返回主页_开始"
+        "custom_action_param": "type=task&key=返回主页_开始",
+        "pre_delay": 0,
+        "post_delay": 0
+    },
+    "全局前置返回主页": {
+        "action": "Custom",
+        "custom_action": "judge_config",
+        "custom_action_param": "key=pre_back_home",
+        "next": "返回主页",
+        "pre_delay": 0,
+        "post_delay": 0
     }
 }

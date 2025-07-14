@@ -10,8 +10,8 @@
         "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": 1408,
-                "y": 1015
+                "x": 1383,
+                "y": 934
             }
         },
         "next": [
@@ -28,11 +28,14 @@
         "custom_action_param": "p=week&t=detention_tower",
         "__yamaape": {
             "position": {
-                "x": 1681,
-                "y": 1013
+                "x": 1668,
+                "y": 879
             }
         },
         "next": [
+            "拘束塔奖励_执行前返回主页"
+        ],
+        "on_error": [
             "拘束塔奖励_战略行动"
         ]
     },
@@ -42,8 +45,8 @@
         "focus": "> 本周已领取过拘束塔奖励",
         "__yamaape": {
             "position": {
-                "x": 1675,
-                "y": 853
+                "x": 1669,
+                "y": 1073
             }
         }
     },
@@ -56,8 +59,8 @@
         "focus": "> 进入拘束塔界面",
         "__yamaape": {
             "position": {
-                "x": 1955,
-                "y": 1010
+                "x": 2231,
+                "y": 922
             }
         },
         "next": [
@@ -73,8 +76,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 2215,
-                "y": 1010
+                "x": 2491,
+                "y": 922
             }
         },
         "next": [
@@ -92,8 +95,8 @@
         "post_delay": 800,
         "__yamaape": {
             "position": {
-                "x": 2475,
-                "y": 1008
+                "x": 2751,
+                "y": 920
             }
         },
         "next": [
@@ -226,5 +229,20 @@
                 "y": 1439
             }
         }
+    },
+    "拘束塔奖励_执行前返回主页": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "run",
+        "custom_action_param": "type=task&key=全局前置返回主页",
+        "__yamaape": {
+            "position": {
+                "x": 1957,
+                "y": 793
+            }
+        },
+        "next": [
+            "拘束塔奖励_战略行动"
+        ]
     }
 }

@@ -564,13 +564,46 @@
     },
     "每日采购_开始": {
         "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": -612,
+                "y": -401
+            }
+        },
+        "next": [
+            "每日采购_设置黑白名单"
+        ]
+    },
+    "每日采购_设置黑白名单": {
+        "recognition": "DirectHit",
         "action": "Custom",
         "custom_action": "set_procurement_list",
         "custom_action_param": "white=&black=",
+        "pre_delay": 1,
+        "post_delay": 1,
         "__yamaape": {
             "position": {
-                "x": -104,
-                "y": -412
+                "x": -347,
+                "y": -488
+            }
+        },
+        "next": [
+            "每日采购_执行前返回主页"
+        ],
+        "on_error": [
+            "每日采购_采购中心"
+        ]
+    },
+    "每日采购_执行前返回主页": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "run",
+        "custom_action_param": "type=task&key=全局前置返回主页",
+        "__yamaape": {
+            "position": {
+                "x": -89,
+                "y": -529
             }
         },
         "next": [

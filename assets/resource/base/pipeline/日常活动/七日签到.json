@@ -68,19 +68,6 @@
             "七日签到_返回主页"
         ]
     },
-    "七日签到_开始": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "__yamaape": {
-            "position": {
-                "x": -522,
-                "y": -228
-            }
-        },
-        "next": [
-            "七日签到_开始签到"
-        ]
-    },
     "七日签到_开始签到": {
         "recognition": "DirectHit",
         "action": "DoNothing",
@@ -141,6 +128,37 @@
         ],
         "on_error": [
             "七日签到_返回主页"
+        ]
+    },
+    "七日签到_开始": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": -782,
+                "y": -243
+            }
+        },
+        "on_error": [
+            "七日签到_开始签到"
+        ],
+        "next": [
+            "七日签到_执行前返回主页"
+        ]
+    },
+    "七日签到_执行前返回主页": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "run",
+        "custom_action_param": "type=task&key=全局前置返回主页",
+        "__yamaape": {
+            "position": {
+                "x": -528,
+                "y": -379
+            }
+        },
+        "next": [
+            "七日签到_开始签到"
         ]
     }
 }

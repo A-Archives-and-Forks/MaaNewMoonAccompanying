@@ -150,19 +150,6 @@
             }
         }
     },
-    "活动日活_开始": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "__yamaape": {
-            "position": {
-                "x": -27,
-                "y": -69
-            }
-        },
-        "next": [
-            "活动日活_活动入口"
-        ]
-    },
     "活动日活_前往试炼": {
         "recognition": "OCR",
         "action": "Click",
@@ -173,8 +160,8 @@
         "order_by": "Vertical",
         "__yamaape": {
             "position": {
-                "x": -446,
-                "y": 317
+                "x": -475,
+                "y": 521
             }
         },
         "next": [
@@ -193,8 +180,8 @@
         "pre_delay": 800,
         "__yamaape": {
             "position": {
-                "x": -186,
-                "y": 317
+                "x": -215,
+                "y": 521
             }
         },
         "next": [
@@ -210,8 +197,8 @@
         "order_by": "Vertical",
         "__yamaape": {
             "position": {
-                "x": -189,
-                "y": 123
+                "x": -218,
+                "y": 327
             }
         }
     },
@@ -223,8 +210,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 74,
-                "y": 317
+                "x": 45,
+                "y": 521
             }
         },
         "next": [
@@ -243,8 +230,8 @@
         "focus": "> 开始行动",
         "__yamaape": {
             "position": {
-                "x": -639,
-                "y": 561
+                "x": -668,
+                "y": 765
             }
         },
         "next": [
@@ -264,8 +251,8 @@
         "focus": "> 作战结束",
         "__yamaape": {
             "position": {
-                "x": -390,
-                "y": 560
+                "x": -419,
+                "y": 764
             }
         },
         "next": [
@@ -280,8 +267,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": -389,
-                "y": 788
+                "x": -418,
+                "y": 992
             }
         }
     },
@@ -294,8 +281,8 @@
         "pre_delay": 800,
         "__yamaape": {
             "position": {
-                "x": -130,
-                "y": 560
+                "x": -159,
+                "y": 764
             }
         },
         "next": [
@@ -311,8 +298,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 129,
-                "y": 559
+                "x": 100,
+                "y": 763
             }
         },
         "next": [
@@ -329,8 +316,8 @@
         "focus": "> 每日作战",
         "__yamaape": {
             "position": {
-                "x": -959,
-                "y": 317
+                "x": -988,
+                "y": 521
             }
         },
         "next": [
@@ -347,8 +334,8 @@
         "post_delay": 1000,
         "__yamaape": {
             "position": {
-                "x": -699,
-                "y": 317
+                "x": -728,
+                "y": 521
             }
         },
         "next": [
@@ -545,6 +532,37 @@
         },
         "next": [
             "活动日活_进入抽取奖励界面"
+        ]
+    },
+    "活动日活_执行前返回主页": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "run",
+        "custom_action_param": "type=task&key=全局前置返回主页",
+        "__yamaape": {
+            "position": {
+                "x": -31,
+                "y": -174
+            }
+        },
+        "next": [
+            "活动日活_活动入口"
+        ]
+    },
+    "活动日活_开始": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": -318,
+                "y": -20
+            }
+        },
+        "on_error": [
+            "活动日活_活动入口"
+        ],
+        "next": [
+            "活动日活_执行前返回主页"
         ]
     }
 }
