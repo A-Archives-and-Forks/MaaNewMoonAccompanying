@@ -13,6 +13,8 @@ pipeline_paths = [
 
 
 def encode_dir(dir):
+    if not dir.exists():
+        return
     count = 1
     for file in dir.iterdir():
         if file.is_dir():
