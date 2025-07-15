@@ -1,4 +1,5 @@
 from maa.custom_action import CustomAction
+from maa.custom_recognition import CustomRecognition
 
 from typing import Dict, Any
 import os
@@ -52,13 +53,24 @@ class Prompt:
             print("——" * 5)
 
     @staticmethod
-    def error(content: str, e: Exception = None, use_defult_postfix=True):
+    def error(
+        content: str, e: Exception = None, reco_detail=None, use_defult_postfix=True
+    ):
         if use_defult_postfix:
             content += "失败，请立即停止运行程序！"
-        if e is not None:
-            print(e)
+        print("——" * 5)
         print(f"{content}")
-        return CustomAction.RunResult(success=False)
+        if e is not None:
+            print("错误详情：")
+            print(e)
+        print("——" * 5)
+        return (
+            CustomAction.RunResult(success=False)
+            if reco_detail == None
+            else CustomRecognition.AnalyzeResult(
+                box=None, detail="程序错误" if reco_detail == True else reco_detail
+            )
+        )
 
 
 # 本地存储
@@ -124,6 +136,7 @@ class LocalStorage:
         return cls.write(storage)
 
 
+# 全局设置
 class Configs:
     configs = {}
 

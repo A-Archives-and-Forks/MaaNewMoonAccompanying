@@ -48,7 +48,7 @@ class Run(CustomAction):
     ) -> CustomAction.RunResult | bool:
         try:
             args = parse_query_args(argv)
-            type = args.get("type", "node")
+            type = args.get("type", "task")
             key = args.get("key", "")
             
             if type == "" or key == "":

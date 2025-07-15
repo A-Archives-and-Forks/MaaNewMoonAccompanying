@@ -136,7 +136,7 @@
         "recognition": "DirectHit",
         "action": "Custom",
         "custom_action": "run",
-        "custom_action_param": "type=task&key=跳过剧情_已点击跳过键",
+        "custom_action_param": "key=跳过剧情_已点击跳过键",
         "__yamaape": {
             "position": {
                 "x": 1911,

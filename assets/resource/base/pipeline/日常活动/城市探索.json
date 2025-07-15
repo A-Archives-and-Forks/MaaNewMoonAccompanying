@@ -2271,7 +2271,7 @@
         "recognition": "DirectHit",
         "action": "Custom",
         "custom_action": "run",
-        "custom_action_param": "type=task&key=全局前置返回主页",
+        "custom_action_param": "key=全局前置返回主页",
         "__yamaape": {
             "position": {
                 "x": -1449,
