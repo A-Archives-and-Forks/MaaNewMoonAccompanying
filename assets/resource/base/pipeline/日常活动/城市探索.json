@@ -1713,14 +1713,17 @@
         ]
     },
     "城市探索_检查配队": {
-        "recognition": "DirectHit",
+        "recognition": "OCR",
         "action": "DoNothing",
         "focus": "> 检查配队",
         "timeout": 1000,
+        "expected": [
+            "设置助战"
+        ],
         "__yamaape": {
             "position": {
-                "x": 3901,
-                "y": 1250
+                "x": 3899,
+                "y": 1242
             }
         },
         "next": [
@@ -2244,11 +2247,11 @@
                 "y": 537
             }
         },
-        "on_error": [
-            "城市探索_进入城市探索"
-        ],
         "next": [
             "城市探索_执行前返回主页"
+        ],
+        "on_error": [
+            "城市探索_进入城市探索"
         ]
     },
     "城市探索_城市界面": {
@@ -2262,6 +2265,21 @@
         },
         "next": [
             "城市探索_资源收取"
+        ]
+    },
+    "城市探索_执行前返回主页": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "run",
+        "custom_action_param": "type=task&key=全局前置返回主页",
+        "__yamaape": {
+            "position": {
+                "x": -1449,
+                "y": 469
+            }
+        },
+        "next": [
+            "城市探索_进入城市探索"
         ]
     },
     "城市探索_进入城市探索": {
@@ -2280,21 +2298,6 @@
         },
         "next": [
             "城市探索_城市界面"
-        ]
-    },
-    "城市探索_执行前返回主页": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "run",
-        "custom_action_param": "type=task&key=全局前置返回主页",
-        "__yamaape": {
-            "position": {
-                "x": -1449,
-                "y": 469
-            }
-        },
-        "next": [
-            "城市探索_进入城市探索"
         ]
     },
     "城市探索_点击奖励选项": {
