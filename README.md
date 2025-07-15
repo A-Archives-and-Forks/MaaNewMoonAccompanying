@@ -104,7 +104,7 @@
   - [x] 危局演练
   - [x] 自动爬塔
 
-具体更新日志可参考[更新记录](/docs/zh_cn/更新记录.md)
+具体更新日志可参考[更新记录](/assets/resource/Announcement/3.更新记录.md)
 
 \* 若有其他功能需求请提交 [issue](https://github.com/kqcoxn/MaaNewMoonAccompanying/issues?q=is%3Aissue)
 

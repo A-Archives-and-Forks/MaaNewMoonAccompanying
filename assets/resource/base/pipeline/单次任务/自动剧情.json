@@ -19,7 +19,7 @@
         "__yamaape": {
             "position": {
                 "x": 1649,
-                "y": 393
+                "y": 365
             }
         },
         "next": [
@@ -37,7 +37,7 @@
             1,
             1
         ],
-        "timeout": 1000,
+        "timeout": 3000,
         "__yamaape": {
             "position": {
                 "x": 1944,
@@ -80,6 +80,70 @@
             }
         }
     },
+    "自动剧情_对话节点": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "pre_delay": 0,
+        "post_delay": 0,
+        "__yamaape": {
+            "position": {
+                "x": 1359,
+                "y": 111
+            }
+        },
+        "next": [
+            "自动剧情_跳过剧情",
+            "自动剧情_对话选项",
+            "自动剧情_推进剧情"
+        ]
+    },
+    "自动剧情_跳过剧情": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "jump.png"
+        ],
+        "pre_delay": 800,
+        "post_delay": 0,
+        "order_by": "Random",
+        "__yamaape": {
+            "position": {
+                "x": 1651,
+                "y": -178
+            }
+        },
+        "next": [
+            "自动剧情_确认跳过"
+        ]
+    },
+    "自动剧情_对话选项": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "pre_delay": 800,
+        "post_delay": 0,
+        "order_by": "Random",
+        "__yamaape": {
+            "position": {
+                "x": 1650,
+                "y": 107
+            }
+        },
+        "next": [
+            "自动剧情_阅读剧情"
+        ]
+    },
+    "自动剧情_确认跳过": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "run",
+        "custom_action_param": "type=task&key=跳过剧情_已点击跳过键",
+        "__yamaape": {
+            "position": {
+                "x": 1911,
+                "y": -178
+            }
+        }
+    },
     "自动剧情_自动阅读剧情": {
         "recognition": "TemplateMatch",
         "action": "DoNothing",
@@ -95,42 +159,6 @@
         },
         "next": [
             "自动剧情_对话节点"
-        ]
-    },
-    "自动剧情_对话节点": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "pre_delay": 0,
-        "post_delay": 0,
-        "__yamaape": {
-            "position": {
-                "x": 1359,
-                "y": 111
-            }
-        },
-        "next": [
-            "自动剧情_对话选项",
-            "自动剧情_推进剧情"
-        ]
-    },
-    "自动剧情_对话选项": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "chat_option.png"
-        ],
-        "pre_delay": 800,
-        "post_delay": 0,
-        "order_by": "Random",
-        "focus": "> 随机对话选项",
-        "__yamaape": {
-            "position": {
-                "x": 1652,
-                "y": 107
-            }
-        },
-        "next": [
-            "自动剧情_阅读剧情"
         ]
     },
     "自动剧情_开始": {
