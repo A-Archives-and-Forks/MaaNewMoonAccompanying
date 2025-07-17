@@ -1,11 +1,18 @@
 from maa.custom_action import CustomAction
 from maa.custom_recognition import CustomRecognition
+from maa.context import Context
 
 from typing import Dict, Any
 import os
 import json
 import re
-import random
+import time
+
+
+def cprint(*args, **kwargs):
+    time.sleep(0.05)
+    print(*args, **kwargs)
+    time.sleep(0.05)
 
 
 # 解析查询字符串
@@ -44,26 +51,29 @@ class Prompt:
     def log(
         content: str, use_default_prefix=True, pre_devider=False, post_devider=False
     ):
-        if pre_devider:
-            print("——" * 5)
         if use_default_prefix and not (pre_devider or post_devider):
             content = f"> {content}"
+        if pre_devider:
+            cprint("——" * 5)
         print(f"{content}")
         if post_devider:
-            print("——" * 5)
+            cprint("——" * 5)
 
     @staticmethod
     def error(
-        content: str, e: Exception = None, reco_detail=None, use_defult_postfix=True
+        content: str,
+        e: Exception = None,
+        reco_detail: str = None,
+        use_defult_postfix=True,
     ):
         if use_defult_postfix:
             content += "失败，请立即停止运行程序！"
-        print("——" * 5)
-        print(f"{content}")
+        cprint("——" * 5)
+        cprint(f"{content}")
         if e is not None:
-            print("错误详情：")
-            print(e)
-        print("——" * 5)
+            cprint("错误详情：")
+            cprint(e)
+        cprint("——" * 5)
         return (
             CustomAction.RunResult(success=False)
             if reco_detail == None
@@ -157,3 +167,33 @@ class Configs:
         if (key not in cls.configs) and (default is not None):
             cls.configs[key] = default
         return cls.configs.get(key, default)
+
+
+# 判断器
+class Judge:
+    @staticmethod
+    def equal_process(
+        context: Context,
+        analyze_arg: CustomRecognition.AnalyzeArg,
+        carrier_node: str,
+        split_key="/",
+        return_analyze_result=False,
+    ) -> CustomRecognition.AnalyzeResult | bool:
+        reco_detail = context.run_recognition(carrier_node, analyze_arg.image)
+        for res in reco_detail.all_results:
+            scores = res.text.split(split_key)
+            if len(scores) == 2:
+                if scores[0] == scores[1]:
+                    return (
+                        CustomRecognition.AnalyzeResult(
+                            box=res.box,
+                            detail=res.text,
+                        )
+                        if return_analyze_result
+                        else True
+                    )
+        return (
+            CustomRecognition.AnalyzeResult(box=None, detail="无目标")
+            if return_analyze_result
+            else False
+        )

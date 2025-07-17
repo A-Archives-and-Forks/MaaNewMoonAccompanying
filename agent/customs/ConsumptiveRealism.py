@@ -57,8 +57,8 @@ class SetEatTimes(CustomAction):
             return Prompt.error("检查合剂次数", e)
 
 
-@AgentServer.custom_action("set_squad")
-class SetSquad(CustomAction):
+@AgentServer.custom_action("cr_set_squad")
+class CRSetSquad(CustomAction):
     def run(
         self, context: Context, argv: CustomAction.RunArg
     ) -> CustomAction.RunResult | bool:

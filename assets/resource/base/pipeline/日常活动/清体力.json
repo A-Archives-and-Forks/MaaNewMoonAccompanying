@@ -1628,7 +1628,7 @@
     "清体力_设定指定队伍": {
         "recognition": "DirectHit",
         "action": "Custom",
-        "custom_action": "set_squad",
+        "custom_action": "cr_set_squad",
         "post_delay": 0,
         "__yamaape": {
             "position": {
