@@ -475,6 +475,9 @@
                 ""
             ],
             "pipeline_override": {
+                "险境复现_检查是否填写编队": {
+                    "custom_action_param": "a={上半队伍（首领战）}&b={下半队伍（群体战）}"
+                },
                 "险境复现_设置上半编队": {
                     "custom_action_param": "e={上半队伍（首领战）}"
                 },
