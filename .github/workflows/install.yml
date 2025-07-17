@@ -118,12 +118,12 @@ jobs:
           fi
 
       - name: Download MFA
-        if: ${{ matrix.os != 'android' && steps.mfa_naming.outputs.mfa_os != 'unknown' && steps.mfa_naming.outputs. mfa_arch != 'unknown' }}
+        if: ${{ matrix.os != 'android' && steps.mfa_naming.outputs.mfa_os != 'unknown' && steps.mfa_naming.outputs.mfa_arch != 'unknown' }}
         uses: robinraju/release-downloader@v1
         with:
           repository: SweetSmellFox/MFAAvalonia
           fileName: "MFAAvalonia-*-${{ steps.mfa_naming.outputs.mfa_os }}-${{ steps.mfa_naming.outputs.mfa_arch }}*"
-          latest: true
+          tag: v1.6.0
           out-file-path: "MFAAvalonia"
           extract: true
 
