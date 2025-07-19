@@ -99,7 +99,7 @@ class LocalStorage:
 
         # 确保存储文件存在
         if not os.path.exists(cls.storage_path):
-            with open(cls.storage_path, "w") as f:
+            with open(cls.storage_path, "w", encoding="utf-8") as f:
                 json.dump({}, f)
 
     # 读取存储数据
@@ -107,11 +107,11 @@ class LocalStorage:
     def read(cls) -> dict:
         cls.ensure_storage_file()
         try:
-            with open(cls.storage_path, "r") as f:
+            with open(cls.storage_path, "r", encoding="utf-8") as f:
                 return json.load(f)
         except json.JSONDecodeError:
             # 存储文件格式错误时重置为空对象
-            with open(cls.storage_path, "w") as f:
+            with open(cls.storage_path, "w", encoding="utf-8") as f:
                 json.dump({}, f)
             return {}
 
@@ -128,7 +128,7 @@ class LocalStorage:
     @classmethod
     def write(cls, storage: dict) -> bool:
         try:
-            with open(cls.storage_path, "w") as f:
+            with open(cls.storage_path, "w", encoding="utf-8") as f:
                 json.dump(storage, f)
             return True
         except Exception as e:

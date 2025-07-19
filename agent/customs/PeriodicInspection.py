@@ -43,7 +43,7 @@ class Inspector:
 
         try:
             last_date = date.fromisoformat(last_date_str)
-        except (ValueError, TypeError):
+        except Exception as e:
             return False
 
         return (

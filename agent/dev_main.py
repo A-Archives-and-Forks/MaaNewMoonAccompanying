@@ -1,5 +1,8 @@
 import sys
 
+sys.stdout.reconfigure(encoding="gbk")
+sys.stderr.reconfigure(encoding="gbk")
+
 from maa.agent.agent_server import AgentServer
 from maa.toolkit import Toolkit
 
