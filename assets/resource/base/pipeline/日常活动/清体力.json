@@ -453,6 +453,22 @@
             "清体力_3X及以下行动前检测1"
         ]
     },
+    "清体力_关闭合剂界面": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "取消"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3935,
+                "y": 411
+            }
+        },
+        "next": [
+            "清体力_开始挑战4"
+        ]
+    },
     "清体力_自动战斗": {
         "recognition": "TemplateMatch",
         "action": "Click",
@@ -497,22 +513,6 @@
         },
         "next": [
             "清体力_3X及以下行动前检测2"
-        ]
-    },
-    "清体力_关闭合剂界面": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "取消"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 3935,
-                "y": 411
-            }
-        },
-        "next": [
-            "清体力_开始挑战4"
         ]
     },
     "清体力_倍率选择2": {
@@ -1676,16 +1676,14 @@
         ]
     },
     "清体力_指定作战队伍": {
-        "recognition": "OCR",
+        "recognition": "DirectHit",
         "action": "DoNothing",
         "post_delay": 0,
-        "expected": [
-            "设置助战"
-        ],
+        "pre_delay": 0,
         "__yamaape": {
             "position": {
-                "x": 3250,
-                "y": 1593
+                "x": 3468,
+                "y": 1742
             }
         },
         "next": [
@@ -1700,181 +1698,55 @@
         "action": "Custom",
         "custom_action": "count",
         "custom_action_param": "key=check_squad",
-        "timeout": 1000,
         "focus": "> 检查配队",
         "__yamaape": {
             "position": {
-                "x": 3522,
-                "y": 1470
+                "x": 3739,
+                "y": 1611
             }
         },
         "next": [
-            "清体力_检测配队是否正确"
-        ],
-        "on_error": [
-            "清体力_切换行动队"
+            "清体力_调整配队"
         ]
     },
     "清体力_结束配队": {
         "recognition": "DirectHit",
         "action": "DoNothing",
-        "__yamaape": {
-            "position": {
-                "x": 3519,
-                "y": 1728
-            }
-        }
-    },
-    "清体力_检测配队是否正确": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            ""
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 3772,
-                "y": 1470
-            }
-        },
-        "next": [
-            "清体力_结束配队"
-        ]
-    },
-    "清体力_切换行动队": {
-        "recognition": "DirectHit",
-        "action": "Click",
-        "focus": "> 更正配队",
-        "target": [
-            1237,
-            544,
-            1,
-            1
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 3772,
-                "y": 1637
-            }
-        },
-        "next": [
-            "清体力_划至配队顶部"
-        ]
-    },
-    "清体力_划至配队顶部": {
-        "recognition": "OCR",
-        "action": "Swipe",
-        "begin": [
-            1215,
-            181,
-            1,
-            1
-        ],
-        "end": [
-            1215,
-            435,
-            1,
-            1
-        ],
-        "duration": 50,
-        "post_delay": 1000,
-        "focus": "> 查找指定队伍",
-        "expected": [
-            "当前队伍"
-        ],
-        "pre_delay": 800,
-        "__yamaape": {
-            "position": {
-                "x": 4032,
-                "y": 1637
-            }
-        },
-        "next": [
-            "清体力_查找指定队伍"
-        ],
-        "interrupt": [
-            "清体力_配队下划"
-        ]
-    },
-    "清体力_查找指定队伍": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "指定行动队"
-        ],
-        "post_delay": 800,
-        "__yamaape": {
-            "position": {
-                "x": 4290,
-                "y": 1597
-            }
-        },
-        "next": [
-            "清体力_结束配队"
-        ]
-    },
-    "清体力_配队下划": {
-        "recognition": "DirectHit",
-        "action": "Swipe",
-        "begin": [
-            1215,
-            435,
-            1,
-            1
-        ],
-        "end": [
-            1215,
-            180,
-            1,
-            1
-        ],
-        "duration": 600,
-        "pre_delay": 1,
+        "pre_delay": 0,
         "post_delay": 0,
         "__yamaape": {
             "position": {
-                "x": 4292,
-                "y": 1806
+                "x": 4287,
+                "y": 1786
+            }
+        }
+    },
+    "清体力_调整配队": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "run_set_squad",
+        "custom_action_param": "e=",
+        "__yamaape": {
+            "position": {
+                "x": 3989,
+                "y": 1611
             }
         },
         "next": [
-            "清体力_配队点停"
+            "清体力_结束配队"
         ]
-    },
-    "清体力_配队点停": {
-        "recognition": "DirectHit",
-        "action": "Swipe",
-        "pre_delay": 0,
-        "post_delay": 400,
-        "begin": [
-            1215,
-            180,
-            1,
-            1
-        ],
-        "end": [
-            1215,
-            180,
-            1,
-            1
-        ],
-        "duration": 50,
-        "__yamaape": {
-            "position": {
-                "x": 4552,
-                "y": 1806
-            }
-        }
     },
     "清体力_4X队伍": {
         "recognition": "DirectHit",
         "action": "Custom",
         "custom_action": "set_str_node_attrs",
         "custom_action_param": "node=清体力_结束配队&keys=next&values=清体力_4x行动前检测2",
+        "pre_delay": 0,
+        "post_delay": 0,
         "__yamaape": {
             "position": {
-                "x": 2967,
-                "y": 1509
+                "x": 3184,
+                "y": 1619
             }
         },
         "next": [
@@ -1886,10 +1758,12 @@
         "action": "Custom",
         "custom_action": "set_str_node_attrs",
         "custom_action_param": "node=清体力_结束配队&keys=next&values=清体力_3X及以下行动前检测2",
+        "pre_delay": 0,
+        "post_delay": 0,
         "__yamaape": {
             "position": {
-                "x": 2969,
-                "y": 1726
+                "x": 3187,
+                "y": 1875
             }
         },
         "next": [

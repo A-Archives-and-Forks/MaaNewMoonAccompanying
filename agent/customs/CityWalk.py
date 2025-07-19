@@ -35,10 +35,10 @@ entrustment_etter_reward = None  # 次级选项
 
 def calculate_roi(index: int) -> list[int]:
     """计算委托事件选项的ROI区域
-    
+
     Args:
         index: ROI索引位置
-        
+
     Returns:
         list[int]: ROI区域坐标 [x, y, width, height]
     """
@@ -47,7 +47,7 @@ def calculate_roi(index: int) -> list[int]:
 
 def set_reward_pipeline(context: Context, roi: list[int]) -> None:
     """设置委托事件选项的pipeline
-    
+
     Args:
         context: 上下文对象
         roi: ROI区域坐标
@@ -104,7 +104,6 @@ class SelectNextReward(CustomAction):
             return CustomAction.RunResult(success=True)
         except Exception as e:
             return Prompt.error("设置委托事件选项", e)
-        
 
 
 # 判断当前选项 找出最佳奖励
@@ -134,14 +133,14 @@ class CompareReward(CustomAction):
             elif result == "normal":
                 if normal_first == "true":
                     entrustment_etter_reward = entrustment_roi_index
-            
+
             return CustomAction.RunResult(success=True)
         except Exception as e:
             return Prompt.error("判断委托事件选项结果", e)
 
 
 # 循环满三次/已找到最佳选项 则中断循环
-@AgentServer.custom_action("break_loop")
+@AgentServer.custom_action("end_reward_loop")
 class BreakLoop(CustomAction):
     def run(
         self, context: Context, argv: CustomAction.RunArg
@@ -161,7 +160,7 @@ class BreakLoop(CustomAction):
             if entrustment_roi_index == 2 or final_index == entrustment_best_reward:
                 # print(f'> 循环完三次 决定选 {final_index}')
                 set_reward_pipeline(context, roi)
-            # 循环超过三次仍未识别到，则选择第一个选项 
+            # 循环超过三次仍未识别到，则选择第一个选项
             elif entrustment_roi_index > 2:
                 # print(f'> 超过三次仍未识别到 只好选第一个了')
                 set_reward_pipeline(context, calculate_roi(0))

@@ -19,8 +19,8 @@ class RunSetSquad(CustomAction):
             context.run_task(
                 "选择编队_开始",
                 {
-                    "选择编队_检测配队是否正确": {"expected": expected},
-                    "选择编队_查找指定队伍": {"expected": expected},
+                    "选择编队_检测当前编队": {"expected": expected},
+                    "选择编队_找到指定编队": {"expected": expected},
                 },
             )
             return True
