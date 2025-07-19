@@ -1,10 +1,10 @@
 {
     "name": "MaaNewMoonAccompanying",
     "url": "https://github.com/kqcoxn/MaaNewMoonAccompanying",
-    "custom_title": "MNMA新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v2.0.4 - MFAA | 游戏版本：乐园不妙夜·下",
+    "custom_title": "MNMA新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v2.0.5 - MFAA | 游戏版本：乐园不妙夜·下",
     "mirrorchyan_rid": "MNMA",
     "mirrorchyan_multiplatform": true,
-    "version": "v2.0.4",
+    "version": "v2.0.5",
     "mfa_min_version": "v1.6.0",
     "mfa_max_version": "v1.6.0",
     "message": "- 新 月 同 行 -",
@@ -441,7 +441,7 @@
             }
         },
         "主界面连续静止时间": {
-            "doc": "连续检测n秒是否在主界面（无其他弹窗面板），检测到则尝试关闭并重置连续检测时间。\n时长请根据个人网速等情况调节，若任务结束后仍然没有关闭所有面板请尝试增加此选项的时长",
+            "doc": "连续检测n秒是否在主界面（无其他弹窗面板），检测到则尝试关闭并重置连续检测时间。\n时长请根据个人网速等情况调节，若任务结束后仍然没有关闭所有面板请尝试增加此选项的时长\n最长时间：10秒",
             "field": [
                 "主界面连续静止时间"
             ],
@@ -449,11 +449,11 @@
                 "string"
             ],
             "default": [
-                "5"
+                "3"
             ],
             "pipeline_override": {
                 "返回主页_初始化计数": {
-                    "custom_action_param": "max={主界面连续静止时间}"
+                    "custom_action_param": "key=return_home&max={主界面连续静止时间}"
                 }
             }
         },
@@ -1371,16 +1371,16 @@
             "doc": "若本周已完成一次险境复现则直接跳过",
             "cases": [
                 {
-                    "name": "Yes",
-                    "pipeline_override": {}
-                },
-                {
                     "name": "No",
                     "pipeline_override": {
                         "险境复现_开始": {
                             "next": "险境复现_周期检测结束"
                         }
                     }
+                },
+                {
+                    "name": "Yes",
+                    "pipeline_override": {}
                 }
             ]
         },

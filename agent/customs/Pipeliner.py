@@ -50,7 +50,7 @@ class Run(CustomAction):
             args = parse_query_args(argv)
             type = args.get("type", "task")
             key = args.get("key", "")
-            
+
             if type == "" or key == "":
                 return False
 
