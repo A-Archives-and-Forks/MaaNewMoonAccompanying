@@ -665,6 +665,27 @@
             "蓝色站台_确定少人作战"
         ]
     },
+    "蓝色站台_自动战斗": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "cycle_outlined.png"
+        ],
+        "roi": [
+            1200,
+            70,
+            60,
+            200
+        ],
+        "threshold": 0.4,
+        "post_delay": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 2310,
+                "y": 811
+            }
+        }
+    },
     "蓝色站台_物品更替": {
         "recognition": "OCR",
         "action": "DoNothing",
@@ -725,27 +746,6 @@
             "蓝色站台_点击空白处关闭",
             "蓝色站台_加速事件剧情"
         ]
-    },
-    "蓝色站台_自动战斗": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "cycle_outlined.png"
-        ],
-        "roi": [
-            1200,
-            70,
-            60,
-            200
-        ],
-        "threshold": 0.4,
-        "post_delay": 1000,
-        "__yamaape": {
-            "position": {
-                "x": 2310,
-                "y": 811
-            }
-        }
     },
     "蓝色站台_确定事件选项": {
         "recognition": "TemplateMatch",
@@ -980,6 +980,28 @@
             "蓝色站台_跳过交易环节",
             "蓝色站台_确定跳过交易环节",
             "蓝色站台_温控变化-交易"
+        ]
+    },
+    "蓝色站台_蓝色站台界面": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "focus": "> 检测评分进度",
+        "timeout": 1000,
+        "expected": [
+            "评分进度"
+        ],
+        "pre_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": -1326,
+                "y": 672
+            }
+        },
+        "next": [
+            "蓝色站台_监测分数上限"
+        ],
+        "on_error": [
+            "蓝色站台_新的探索"
         ]
     },
     "蓝色站台_确认放弃": {
@@ -1266,6 +1288,21 @@
             "蓝色站台_确认离开商店"
         ]
     },
+    "蓝色站台_重新开始": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "pre_delay": 0,
+        "post_delay": 0,
+        "__yamaape": {
+            "position": {
+                "x": 5175,
+                "y": -393
+            }
+        },
+        "next": [
+            "蓝色站台_重新探索"
+        ]
+    },
     "蓝色站台_检测助战": {
         "recognition": "DirectHit",
         "action": "Custom",
@@ -1327,42 +1364,6 @@
                 "y": 2600
             }
         }
-    },
-    "蓝色站台_蓝色站台界面": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "focus": "> 检测评分进度",
-        "timeout": 1000,
-        "expected": [
-            "评分进度"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": -1312,
-                "y": 459
-            }
-        },
-        "next": [
-            "蓝色站台_监测分数上限"
-        ],
-        "on_error": [
-            "蓝色站台_新的探索"
-        ]
-    },
-    "蓝色站台_监测分数上限": {
-        "recognition": "Custom",
-        "action": "Click",
-        "focus": "> 分数已达到最大值",
-        "custom_recognition": "check_platform_process",
-        "__yamaape": {
-            "position": {
-                "x": -1055,
-                "y": 459
-            }
-        },
-        "next": [
-            "蓝色站台_领取评分奖励"
-        ]
     },
     "蓝色站台_选择特工": {
         "recognition": "OCR",
@@ -1427,6 +1428,38 @@
             "蓝色站台_前往下层"
         ]
     },
+    "蓝色站台_监测分数上限": {
+        "recognition": "Custom",
+        "action": "Click",
+        "focus": "> 分数已达到最大值",
+        "custom_recognition": "check_platform_process",
+        "__yamaape": {
+            "position": {
+                "x": -1069,
+                "y": 672
+            }
+        },
+        "next": [
+            "蓝色站台_领取评分奖励"
+        ]
+    },
+    "蓝色站台_新的探索": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "开始探索"
+        ],
+        "focus": "> 开始探索",
+        "__yamaape": {
+            "position": {
+                "x": -1329,
+                "y": 1118
+            }
+        },
+        "next": [
+            "蓝色站台_选择难度"
+        ]
+    },
     "蓝色站台_领取评分奖励": {
         "recognition": "OCR",
         "action": "Click",
@@ -1437,8 +1470,8 @@
         "post_delay": 800,
         "__yamaape": {
             "position": {
-                "x": -795,
-                "y": 459
+                "x": -809,
+                "y": 672
             }
         },
         "next": [
@@ -1446,36 +1479,6 @@
         ],
         "interrupt": [
             "蓝色站台_确认领取评分奖励"
-        ]
-    },
-    "蓝色站台_重新开始": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "pre_delay": 0,
-        "post_delay": 0,
-        "__yamaape": {
-            "position": {
-                "x": 5175,
-                "y": -393
-            }
-        },
-        "next": [
-            "蓝色站台_重新探索"
-        ]
-    },
-    "蓝色站台_重新探索": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "pre_delay": 0,
-        "post_delay": 0,
-        "__yamaape": {
-            "position": {
-                "x": -1630,
-                "y": -760
-            }
-        },
-        "next": [
-            "蓝色站台_蓝色站台界面"
         ]
     },
     "蓝色站台_选择夜来": {
@@ -1592,8 +1595,8 @@
         "custom_action_param": "t=rogue",
         "__yamaape": {
             "position": {
-                "x": -533,
-                "y": 458
+                "x": -547,
+                "y": 671
             }
         },
         "next": [
@@ -1610,10 +1613,25 @@
         "focus": "> 领取评分奖励",
         "__yamaape": {
             "position": {
-                "x": -533,
-                "y": 646
+                "x": -547,
+                "y": 859
             }
         }
+    },
+    "蓝色站台_重新探索": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "pre_delay": 0,
+        "post_delay": 0,
+        "__yamaape": {
+            "position": {
+                "x": -1630,
+                "y": -760
+            }
+        },
+        "next": [
+            "蓝色站台_蓝色站台界面"
+        ]
     },
     "蓝色站台_确定选择夜来": {
         "recognition": "OCR",
@@ -1749,6 +1767,18 @@
             }
         }
     },
+    "蓝色站台_返回主界面": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "run",
+        "custom_action_param": "key=返回主页",
+        "__yamaape": {
+            "position": {
+                "x": -289,
+                "y": 675
+            }
+        }
+    },
     "蓝色站台_确定选择主题": {
         "recognition": "OCR",
         "action": "Click",
@@ -1790,43 +1820,6 @@
             "蓝色站台_防止主题多次提示"
         ]
     },
-    "蓝色站台_选择难度": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "下一步"
-        ],
-        "focus": "> 选择难度",
-        "pre_delay": 400,
-        "__yamaape": {
-            "position": {
-                "x": -1057,
-                "y": 904
-            }
-        },
-        "next": [
-            "蓝色站台_选择可移植现实"
-        ]
-    },
-    "蓝色站台_选择可移植现实": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "掠食獠牙",
-            "掠食撩牙"
-        ],
-        "pre_delay": 600,
-        "focus": "> 选择可移植现实",
-        "__yamaape": {
-            "position": {
-                "x": -797,
-                "y": 904
-            }
-        },
-        "next": [
-            "蓝色站台_确认可移植现实"
-        ]
-    },
     "蓝色站台_防止主题多次提示": {
         "recognition": "DirectHit",
         "action": "Click",
@@ -1844,6 +1837,43 @@
             }
         }
     },
+    "蓝色站台_选择难度": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "下一步"
+        ],
+        "focus": "> 选择难度",
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": -1071,
+                "y": 1117
+            }
+        },
+        "next": [
+            "蓝色站台_选择可移植现实"
+        ]
+    },
+    "蓝色站台_选择可移植现实": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "掠食獠牙",
+            "掠食撩牙"
+        ],
+        "pre_delay": 600,
+        "focus": "> 选择可移植现实",
+        "__yamaape": {
+            "position": {
+                "x": -811,
+                "y": 1117
+            }
+        },
+        "next": [
+            "蓝色站台_确认可移植现实"
+        ]
+    },
     "蓝色站台_确认可移植现实": {
         "recognition": "OCR",
         "action": "Click",
@@ -1854,8 +1884,8 @@
         "timeout": 5000,
         "__yamaape": {
             "position": {
-                "x": -529,
-                "y": 902
+                "x": -543,
+                "y": 1115
             }
         },
         "next": [
@@ -1876,8 +1906,8 @@
         "post_delay": 8000,
         "__yamaape": {
             "position": {
-                "x": -269,
-                "y": 902
+                "x": -283,
+                "y": 1115
             }
         },
         "next": [
@@ -1890,8 +1920,8 @@
         "focus": "> 请先自行配置好一次队伍，MNMA仅可使用默认配队直接进入战斗！",
         "__yamaape": {
             "position": {
-                "x": -269,
-                "y": 1167
+                "x": -283,
+                "y": 1380
             }
         }
     },
@@ -1899,10 +1929,11 @@
         "recognition": "DirectHit",
         "action": "Custom",
         "custom_action": "platform_init",
+        "timeout": 8000,
         "__yamaape": {
             "position": {
                 "x": -1650,
-                "y": 137
+                "y": 119
             }
         },
         "next": [
@@ -1910,7 +1941,11 @@
             "蓝色站台_已在站台内",
             "蓝色站台_战略行动",
             "蓝色站台_蓝色站台界面",
-            "蓝色站台_已在编队界面"
+            "蓝色站台_已在编队界面",
+            "蓝色站台_边缘涉险"
+        ],
+        "on_error": [
+            "蓝色站台_未知开始界面"
         ]
     },
     "蓝色站台_继续探索": {
@@ -1925,8 +1960,8 @@
         "timeout": 3000,
         "__yamaape": {
             "position": {
-                "x": -373,
-                "y": 52
+                "x": -344,
+                "y": 49
             }
         },
         "next": [
@@ -1944,12 +1979,45 @@
         ],
         "__yamaape": {
             "position": {
-                "x": -372,
-                "y": -106
+                "x": -343,
+                "y": -113
             }
         },
         "next": [
             "蓝色站台_节点判断"
+        ]
+    },
+    "蓝色站台_战略行动": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "战略行动"
+        ],
+        "focus": "> 进入蓝色站台",
+        "__yamaape": {
+            "position": {
+                "x": -1156,
+                "y": 231
+            }
+        },
+        "next": [
+            "蓝色站台_边缘涉险"
+        ]
+    },
+    "蓝色站台_已在编队界面": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "快捷编队"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": -1309,
+                "y": 939
+            }
+        },
+        "next": [
+            "蓝色站台_选择拟态"
         ]
     },
     "蓝色站台_已在休息节点": {
@@ -1968,23 +2036,6 @@
             "蓝色站台_前往下层"
         ]
     },
-    "蓝色站台_战略行动": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "战略行动"
-        ],
-        "focus": "> 进入蓝色站台",
-        "__yamaape": {
-            "position": {
-                "x": -1163,
-                "y": 241
-            }
-        },
-        "next": [
-            "蓝色站台_边缘涉险"
-        ]
-    },
     "蓝色站台_边缘涉险": {
         "recognition": "OCR",
         "action": "Click",
@@ -1994,8 +2045,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": -908,
-                "y": 240
+                "x": -901,
+                "y": 230
             }
         },
         "next": [
@@ -2011,13 +2062,14 @@
         "order_by": "Vertical",
         "__yamaape": {
             "position": {
-                "x": -648,
-                "y": 240
+                "x": -641,
+                "y": 230
             }
         },
         "next": [
             "蓝色站台_继续探索",
-            "蓝色站台_蓝色站台界面"
+            "蓝色站台_蓝色站台界面",
+            "蓝色站台_本期评分"
         ]
     },
     "蓝色站台_跳过休息室": {
@@ -2087,18 +2139,6 @@
             "蓝色站台_初始化"
         ]
     },
-    "蓝色站台_返回主界面": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "run",
-        "custom_action_param": "key=返回主页",
-        "__yamaape": {
-            "position": {
-                "x": -275,
-                "y": 462
-            }
-        }
-    },
     "蓝色站台_开始": {
         "recognition": "DirectHit",
         "action": "DoNothing",
@@ -2139,41 +2179,58 @@
         "__yamaape": {
             "position": {
                 "x": -2447,
-                "y": 357
+                "y": 333
             }
         }
     },
-    "蓝色站台_新的探索": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "开始探索"
-        ],
-        "focus": "> 开始探索",
+    "蓝色站台_未知开始界面": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "focus": "启动界面不符合要求，请检查任务说明！",
         "__yamaape": {
             "position": {
-                "x": -1315,
-                "y": 905
+                "x": -1635,
+                "y": 316
+            }
+        }
+    },
+    "蓝色站台_本期评分": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "领取全部"
+        ],
+        "roi": [
+            960,
+            583,
+            252,
+            90
+        ],
+        "__yamaape": {
+            "position": {
+                "x": -1114,
+                "y": 453
             }
         },
         "next": [
-            "蓝色站台_选择难度"
+            "蓝色站台_关闭本期评分"
         ]
     },
-    "蓝色站台_已在编队界面": {
-        "recognition": "OCR",
+    "蓝色站台_关闭本期评分": {
+        "recognition": "TemplateMatch",
         "action": "Click",
-        "expected": [
-            "快捷编队"
+        "template": [
+            "back.png"
         ],
+        "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": -1277,
-                "y": 722
+                "x": -854,
+                "y": 453
             }
         },
         "next": [
-            "蓝色站台_选择拟态"
+            "蓝色站台_蓝色站台界面"
         ]
     },
     "蓝色站台_识别分数": {
@@ -2190,8 +2247,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": -1026,
-                "y": 643
+                "x": -1055,
+                "y": 867
             }
         }
     }
