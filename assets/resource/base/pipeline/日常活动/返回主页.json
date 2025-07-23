@@ -23,7 +23,7 @@
         "interrupt": [
             "返回主页_图像类",
             "返回主页_文本类",
-            "返回主页_盲目尝试1"
+            "返回主页_盲目尝试"
         ]
     },
     "返回主页_主界面": {
@@ -60,11 +60,11 @@
         ],
         "post_delay": 600,
         "threshold": [
-            0.86,
-            0.86,
-            0.86,
-            0.86,
-            0.86
+            0.9,
+            0.9,
+            0.9,
+            0.9,
+            0.9
         ],
         "pre_delay": 400,
         "index": -1,
@@ -95,22 +95,6 @@
         },
         "next": [
             "返回主页_失败后检查超时"
-        ]
-    },
-    "返回主页_盲目尝试1": {
-        "recognition": "DirectHit",
-        "action": "Key",
-        "key": [
-            111
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 521,
-                "y": 592
-            }
-        },
-        "next": [
-            "返回主页_盲目尝试2"
         ]
     },
     "返回主页_计数": {
@@ -154,32 +138,12 @@
         "post_delay": 0,
         "__yamaape": {
             "position": {
-                "x": 1061,
-                "y": 298
+                "x": 888,
+                "y": 293
             }
         },
         "next": [
             "返回主页_停止任务"
-        ]
-    },
-    "返回主页_盲目尝试2": {
-        "recognition": "DirectHit",
-        "action": "Click",
-        "target": [
-            2,
-            2,
-            1,
-            1
-        ],
-        "post_delay": 400,
-        "__yamaape": {
-            "position": {
-                "x": 777,
-                "y": 594
-            }
-        },
-        "next": [
-            "返回主页_失败后检查超时"
         ]
     },
     "返回主页_成功后检查超时": {
@@ -200,6 +164,37 @@
         ],
         "on_error": [
             "返回主页_初始化计数"
+        ]
+    },
+    "返回主页_停止任务": {
+        "recognition": "DirectHit",
+        "action": "StopTask",
+        "focus": "返回主界面失败，请立即停止任务！",
+        "__yamaape": {
+            "position": {
+                "x": 1163,
+                "y": 293
+            }
+        }
+    },
+    "返回主页_盲目尝试": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            1,
+            1,
+            1,
+            1
+        ],
+        "post_delay": 800,
+        "__yamaape": {
+            "position": {
+                "x": 521,
+                "y": 594
+            }
+        },
+        "next": [
+            "返回主页_失败后检查超时"
         ]
     },
     "返回主页_初始化计数": {
@@ -238,7 +233,7 @@
         "recognition": "DirectHit",
         "action": "Custom",
         "custom_action": "init_timer",
-        "custom_action_param": "key=return_home&limit=20",
+        "custom_action_param": "key=return_home&limit=25",
         "pre_delay": 0,
         "post_delay": 0,
         "__yamaape": {
@@ -250,16 +245,5 @@
         "next": [
             "返回主页_初始化计数"
         ]
-    },
-    "返回主页_停止任务": {
-        "recognition": "DirectHit",
-        "action": "StopTask",
-        "focus": "返回主界面失败，请立即停止任务！",
-        "__yamaape": {
-            "position": {
-                "x": 1316,
-                "y": 298
-            }
-        }
     }
 }
