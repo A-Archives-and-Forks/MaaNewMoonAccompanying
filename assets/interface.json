@@ -599,17 +599,6 @@
                             "custom_action_param": "max=20&exceed=false"
                         }
                     }
-                },
-                {
-                    "name": "30s",
-                    "pipeline_override": {
-                        "启动游戏_初始化检测计数": {
-                            "custom_action_param": "max=30&exceed=false"
-                        },
-                        "启动游戏_重置计数": {
-                            "custom_action_param": "max=30&exceed=false"
-                        }
-                    }
                 }
             ]
         },
@@ -618,15 +607,15 @@
             "cases": [
                 {
                     "name": "No",
-                    "pipeline_override": {}
+                    "pipeline_override": {
+                        "启动游戏_开始": {
+                            "next": "启动游戏_启动游戏"
+                        }
+                    }
                 },
                 {
                     "name": "Yes",
-                    "pipeline_override": {
-                        "启动游戏_开始": {
-                            "next": "启动游戏_关闭游戏"
-                        }
-                    }
+                    "pipeline_override": {}
                 }
             ]
         },
