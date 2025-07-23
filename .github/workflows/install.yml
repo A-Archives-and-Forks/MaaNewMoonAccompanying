@@ -4,8 +4,8 @@ on:
   push:
     tags:
       - "v*"
-    branches:
-      - "**"
+    # branches:
+    #   - "**"
     # paths:
     #   - ".github/workflows/install.yml"
     #   - "assets/**.json"
