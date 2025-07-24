@@ -1,0 +1,265 @@
+{
+    "__yamaape_config_自动炒菜": {
+        "filename": "自动炒菜",
+        "version": "v0.3.4",
+        "prefix": "自动炒菜"
+    },
+    "自动炒菜_开始": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "timeout": 3000,
+        "__yamaape": {
+            "position": {
+                "x": 416,
+                "y": 235
+            }
+        },
+        "next": [
+            "自动炒菜_检测界面"
+        ],
+        "on_error": [
+            "自动炒菜_界面错误提醒"
+        ]
+    },
+    "自动炒菜_检测界面": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "当前口碑"
+        ],
+        "focus": "> 开始炒菜",
+        "__yamaape": {
+            "position": {
+                "x": 676,
+                "y": 235
+            }
+        },
+        "next": [
+            "自动炒菜_初始化算法"
+        ]
+    },
+    "自动炒菜_初始化算法": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "init_cook",
+        "custom_action_param": "type_num=1",
+        "pre_delay": 0,
+        "post_delay": 0,
+        "__yamaape": {
+            "position": {
+                "x": 936,
+                "y": 235
+            }
+        },
+        "next": [
+            "自动炒菜_循环"
+        ]
+    },
+    "自动炒菜_界面错误提醒": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "focus": "> 请在指定界面执行此任务！",
+        "__yamaape": {
+            "position": {
+                "x": 674,
+                "y": 442
+            }
+        }
+    },
+    "自动炒菜_使用": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": 1799,
+                "y": 763
+            }
+        },
+        "next": [
+            "自动炒菜_使用清单"
+        ],
+        "interrupt": [
+            "自动炒菜_点击清单"
+        ]
+    },
+    "自动炒菜_使用清单": {
+        "recognition": "OCR",
+        "action": "Click",
+        "pre_delay": 400,
+        "expected": [
+            "使用"
+        ],
+        "index": -1,
+        "__yamaape": {
+            "position": {
+                "x": 2339,
+                "y": 694
+            }
+        }
+    },
+    "自动炒菜_点击清单": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "pre_delay": 400,
+        "template": [
+            "activity/order.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 2073,
+                "y": 835
+            }
+        }
+    },
+    "自动炒菜_循环": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "pre_delay": 0,
+        "post_delay": 0,
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 1196,
+                "y": 235
+            }
+        },
+        "on_error": [
+            "自动炒菜_结束"
+        ],
+        "next": [
+            "自动炒菜_做饭"
+        ]
+    },
+    "自动炒菜_做饭": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "auto_cook",
+        "pre_delay": 0,
+        "post_delay": 0,
+        "__yamaape": {
+            "position": {
+                "x": 1465,
+                "y": 123
+            }
+        },
+        "next": [
+            "自动炒菜_循环"
+        ],
+        "on_error": [
+            "自动炒菜_结束"
+        ]
+    },
+    "自动炒菜_结束": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "focus": "> 挑战完成！",
+        "expected": [
+            "挑战完成"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1731,
+                "y": 296
+            }
+        }
+    },
+    "自动炒菜_提交菜品": {
+        "recognition": "OCR",
+        "action": "Click",
+        "post_delay": 1000,
+        "target": [
+            313,
+            203,
+            912,
+            76
+        ],
+        "expected": [
+            "完成订单"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1002,
+                "y": 505
+            }
+        }
+    },
+    "自动炒菜_识别菜品": {
+        "recognition": "TemplateMatch",
+        "action": "DoNothing",
+        "template": [
+            "activity/carbs/13.png"
+        ],
+        "roi": [
+            306,
+            167,
+            827,
+            63
+        ],
+        "threshold": [
+            0.6
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1262,
+                "y": 505
+            }
+        }
+    },
+    "自动炒菜_挑战完成": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "挑战完成"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1522,
+                "y": 505
+            }
+        }
+    },
+    "自动炒菜_回收": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "回收"
+        ],
+        "pre_delay": 400,
+        "index": -1,
+        "__yamaape": {
+            "position": {
+                "x": 1782,
+                "y": 505
+            }
+        }
+    },
+    "自动炒菜_识别采购单": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "activity/order.png"
+        ],
+        "threshold": [
+            0.75
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1264,
+                "y": 738
+            }
+        }
+    },
+    "自动炒菜_材料数量不足": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "材料数量不足"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1523,
+                "y": 673
+            }
+        }
+    }
+}

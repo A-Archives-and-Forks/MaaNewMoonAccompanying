@@ -1,12 +1,14 @@
 from maa.custom_action import CustomAction
-from maa.custom_recognition import CustomRecognition
+from maa.custom_recognition import CustomRecognition, RecognitionResult
 from maa.context import Context
+from maa.controller import Controller
 
 from typing import Dict, Any
 import os
 import json
 import re
 import time
+import numpy as np
 
 
 def cprint(*args, **kwargs):
@@ -167,6 +169,53 @@ class Configs:
         if (key not in cls.configs) and (default is not None):
             cls.configs[key] = default
         return cls.configs.get(key, default)
+
+
+# 获取控制器
+def get_controller(context: Context) -> Controller:
+    return context.tasker.controller
+
+
+# 识别器
+class RecoHelper:
+    def __init__(self, context: Context):
+        self.context = context
+
+    # 截图
+    def get_screencap(self) -> np.ndarray:
+        self.screencap = get_controller(self.context).post_screencap().wait().get()
+        return self.screencap
+
+    # 识别结果
+    def recognize(self, node: str, override_key_value: dict = {}):
+        self.reco = self.context.run_recognition(
+            node, self.get_screencap(), {node: override_key_value}
+        )
+        return self.reco
+
+    # 是否识别到结果
+    def hit(self):
+        return self.reco is not None
+
+    # 获取最佳结果中心坐标
+    def get_target(self):
+        if not self.reco:
+            return None
+        self.target = self.get_reco_center(self.reco.best_result)
+        return self.target
+
+    # 计算识别结果中心坐标
+    @staticmethod
+    def get_reco_center(reco: RecognitionResult):
+        box = reco.box
+        x = round(box[0] + box[2] / 2)
+        y = round(box[1] + box[3] / 2)
+        return (x, y)
+
+    # 统一可信度过滤
+    @staticmethod
+    def filter_reco(recos: list, threshold: float = 0.7):
+        return [reco for reco in recos if reco.score >= threshold]
 
 
 # 判断器
