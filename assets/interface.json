@@ -240,9 +240,9 @@
             "check": true
         },
         {
-            "name": "「未来记忆」领取每日奖励",
-            "entry": "未来记忆_开始",
-            "doc": "**「未来记忆」领取每日奖励**：\n\n领取未来记忆活动每日任务奖励\n\n开始界面：主界面\n\n结束界面：主界面",
+            "name": "「缤纷纪念卡」领取每日票据",
+            "entry": "缤纷纪念卡_开始",
+            "doc": "**「缤纷纪念卡」领取每日票据**：\n\n领取缤纷纪念卡活动每日票据\n\n开始界面：主界面\n\n结束界面：主界面",
             "check": true
         },
         {
@@ -1600,8 +1600,12 @@
             "doc": "尝试刷新n次添加列表后结束任务",
             "cases": [
                 {
-                    "name": "3轮",
-                    "pipeline_override": {}
+                    "name": "2轮",
+                    "pipeline_override": {
+                        "好友换新_初始化轮次计数": {
+                            "custom_action_param": "key=friend_round&max=2"
+                        }
+                    }
                 },
                 {
                     "name": "1轮（不刷新）",
@@ -1612,12 +1616,8 @@
                     }
                 },
                 {
-                    "name": "5轮",
-                    "pipeline_override": {
-                        "好友换新_初始化轮次计数": {
-                            "custom_action_param": "key=friend_round&max=5"
-                        }
-                    }
+                    "name": "3轮",
+                    "pipeline_override": {}
                 }
             ]
         },
