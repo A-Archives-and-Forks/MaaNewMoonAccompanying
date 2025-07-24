@@ -33,6 +33,26 @@
             "缤纷纪念卡_> 检查登录票据"
         ]
     },
+    "缤纷纪念卡_> 检查登录票据": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "timeout": 1500,
+        "focus": "> 检查登录票据",
+        "pre_delay": 0,
+        "post_delay": 0,
+        "__yamaape": {
+            "position": {
+                "x": 1740,
+                "y": 389
+            }
+        },
+        "next": [
+            "缤纷纪念卡_登录票据"
+        ],
+        "on_error": [
+            "缤纷纪念卡_检查任务票据"
+        ]
+    },
     "缤纷纪念卡_登录票据": {
         "recognition": "TemplateMatch",
         "action": "Click",
@@ -61,7 +81,7 @@
     },
     "缤纷纪念卡_确认领取登录票据": {
         "recognition": "TemplateMatch",
-        "action": "DoNothing",
+        "action": "Click",
         "template": [
             "close.png"
         ],
@@ -74,6 +94,26 @@
         },
         "next": [
             "缤纷纪念卡_检查任务票据"
+        ]
+    },
+    "缤纷纪念卡_检查任务票据": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "pre_delay": 0,
+        "post_delay": 0,
+        "timeout": 1500,
+        "focus": "> 检查任务票据",
+        "__yamaape": {
+            "position": {
+                "x": 2546,
+                "y": 447
+            }
+        },
+        "next": [
+            "缤纷纪念卡_任务票据"
+        ],
+        "on_error": [
+            "缤纷纪念卡_返回主界面"
         ]
     },
     "缤纷纪念卡_任务票据": {
@@ -134,26 +174,6 @@
             "缤纷纪念卡_结束"
         ]
     },
-    "缤纷纪念卡_检查任务票据": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "pre_delay": 0,
-        "post_delay": 0,
-        "timeout": 1500,
-        "focus": "> 检查任务票据",
-        "__yamaape": {
-            "position": {
-                "x": 2546,
-                "y": 447
-            }
-        },
-        "next": [
-            "缤纷纪念卡_任务票据"
-        ],
-        "on_error": [
-            "缤纷纪念卡_返回主界面"
-        ]
-    },
     "缤纷纪念卡_结束": {
         "recognition": "DirectHit",
         "action": "DoNothing",
@@ -163,25 +183,5 @@
                 "y": 537
             }
         }
-    },
-    "缤纷纪念卡_> 检查登录票据": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "timeout": 1500,
-        "focus": "> 检查登录票据",
-        "pre_delay": 0,
-        "post_delay": 0,
-        "__yamaape": {
-            "position": {
-                "x": 1740,
-                "y": 389
-            }
-        },
-        "next": [
-            "缤纷纪念卡_登录票据"
-        ],
-        "on_error": [
-            "缤纷纪念卡_检查任务票据"
-        ]
     }
 }
