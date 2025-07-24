@@ -8,6 +8,7 @@ from .utils import parse_query_args, parse_list_input, Prompt
 upgrade_list = []
 
 
+# 切换升级特工
 def switch_upgrade_target(context: Context) -> bool:
     global upgrade_list
 
@@ -40,6 +41,7 @@ class SetUpgradeList(CustomAction):
             return Prompt.error("设置升级名单", e)
 
 
+# 切换升级特工
 @AgentServer.custom_action("switch_upgrade_target")
 class SwitchUpgradeTarget(CustomAction):
     def run(
