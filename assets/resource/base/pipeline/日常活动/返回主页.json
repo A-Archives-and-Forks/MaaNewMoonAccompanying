@@ -58,7 +58,6 @@
             "jump.png",
             "chat_room/close.png"
         ],
-        "post_delay": 600,
         "threshold": [
             0.9,
             0.9,
@@ -66,7 +65,7 @@
             0.9,
             0.9
         ],
-        "pre_delay": 400,
+        "pre_delay": 0,
         "index": -1,
         "__yamaape": {
             "position": {
@@ -85,12 +84,31 @@
             "点击",
             "取消"
         ],
-        "post_delay": 600,
-        "pre_delay": 400,
+        "pre_delay": 0,
         "__yamaape": {
             "position": {
-                "x": 521,
-                "y": 356
+                "x": 523,
+                "y": 318
+            }
+        },
+        "next": [
+            "返回主页_失败后检查超时"
+        ]
+    },
+    "返回主页_盲目尝试": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            1,
+            1,
+            1,
+            1
+        ],
+        "pre_delay": 0,
+        "__yamaape": {
+            "position": {
+                "x": 523,
+                "y": 510
             }
         },
         "next": [
@@ -135,7 +153,7 @@
         "custom_action": "check_time",
         "custom_action_param": "key=return_home&end=true",
         "pre_delay": 0,
-        "post_delay": 0,
+        "post_delay": 800,
         "__yamaape": {
             "position": {
                 "x": 888,
@@ -176,26 +194,6 @@
                 "y": 293
             }
         }
-    },
-    "返回主页_盲目尝试": {
-        "recognition": "DirectHit",
-        "action": "Click",
-        "target": [
-            1,
-            1,
-            1,
-            1
-        ],
-        "post_delay": 800,
-        "__yamaape": {
-            "position": {
-                "x": 521,
-                "y": 594
-            }
-        },
-        "next": [
-            "返回主页_失败后检查超时"
-        ]
     },
     "返回主页_初始化计数": {
         "recognition": "DirectHit",
