@@ -78,6 +78,9 @@
         {
             "name": "七日签到",
             "entry": "七日签到_开始",
+            "option": [
+                "每日仅检测一次七日签到"
+            ],
             "doc": "**七日签到**：\n\n紧张刺激的七日签到！若不存在会自动跳过。\n\n开始界面：主界面\n\n结束界面：主界面",
             "check": true
         },
@@ -616,6 +619,22 @@
                 {
                     "name": "Yes",
                     "pipeline_override": {}
+                }
+            ]
+        },
+        "每日仅检测一次七日签到": {
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {}
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "七日签到_开始": {
+                            "next": "七日签到_周期检查结束"
+                        }
+                    }
                 }
             ]
         },
