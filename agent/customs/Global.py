@@ -8,6 +8,7 @@ from .utils import parse_query_args, Prompt, Configs
 
 
 delay_focus = {}
+focus_wl = set()
 
 
 # 添加延迟提醒
@@ -27,32 +28,57 @@ class DelayFocusHook(CustomAction):
             return Prompt.error("添加延迟提醒", e)
 
 
+# 添加延迟提醒
+@AgentServer.custom_action("set_focus_wl")
+class SetFocusBlackList(CustomAction):
+    def run(
+        self, context: Context, argv: CustomAction.RunArg
+    ) -> CustomAction.RunResult | bool:
+        global delay_focus, focus_wl
+        try:
+            args = parse_query_args(argv)
+            key = args.get("key", "")
+            if key != "":
+                focus_wl.add(key)
+            return True
+        except Exception as e:
+            return Prompt.error("添加延迟提醒黑名单", e)
+
+
 # 延迟提醒
 @AgentServer.custom_action("delay_focus")
 class DelayFocus(CustomAction):
     def run(
         self, context: Context, argv: CustomAction.RunArg
     ) -> CustomAction.RunResult | bool:
-        global delay_focus
+        global delay_focus, focus_wl
         try:
             args = parse_query_args(argv)
             is_block = args.get("block", False)
             if is_block:
                 is_block = True
 
-            if len(delay_focus) > 0:
+            focuses = []
+
+            for key, focus in delay_focus.items():
+                if key in focus_wl:
+                    focuses.append(focus)
+
+            if len(focuses) > 0:
                 print("——————————")
                 print("注意：", flush=True)
-                for key, focus in delay_focus.items():
+                for focus in focuses:
                     time.sleep(0.1)
                     print(f" * {focus}", flush=True)
                     time.sleep(0.1)
                 print("——————————")
                 delay_focus = {}
+                focus_wl = set()
                 return not is_block
             else:
                 print("> 无需提醒项")
                 delay_focus = {}
+                focus_wl = set()
                 return True
 
         except Exception as e:
