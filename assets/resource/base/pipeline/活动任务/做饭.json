@@ -2,7 +2,8 @@
     "__yamaape_config_自动炒菜": {
         "filename": "自动炒菜",
         "version": "v0.3.4",
-        "prefix": "自动炒菜"
+        "prefix": "自动炒菜",
+        "export": ""
     },
     "自动炒菜_开始": {
         "recognition": "DirectHit",
@@ -38,6 +39,17 @@
             "自动炒菜_初始化算法"
         ]
     },
+    "自动炒菜_界面错误提醒": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "focus": "> 请在指定界面执行此任务！",
+        "__yamaape": {
+            "position": {
+                "x": 674,
+                "y": 442
+            }
+        }
+    },
     "自动炒菜_初始化算法": {
         "recognition": "DirectHit",
         "action": "Custom",
@@ -55,20 +67,30 @@
             "自动炒菜_循环"
         ]
     },
-    "自动炒菜_界面错误提醒": {
+    "自动炒菜_循环": {
         "recognition": "DirectHit",
         "action": "DoNothing",
-        "focus": "> 请在指定界面执行此任务！",
+        "pre_delay": 0,
+        "post_delay": 0,
+        "timeout": 1000,
         "__yamaape": {
             "position": {
-                "x": 674,
-                "y": 442
+                "x": 1196,
+                "y": 235
             }
-        }
+        },
+        "next": [
+            "自动炒菜_做饭"
+        ],
+        "on_error": [
+            "自动炒菜_结束"
+        ]
     },
     "自动炒菜_使用": {
         "recognition": "DirectHit",
         "action": "DoNothing",
+        "pre_delay": 0,
+        "post_delay": 0,
         "__yamaape": {
             "position": {
                 "x": 1799,
@@ -92,8 +114,8 @@
         "index": -1,
         "__yamaape": {
             "position": {
-                "x": 2339,
-                "y": 694
+                "x": 2340,
+                "y": 709
             }
         }
     },
@@ -104,31 +126,13 @@
         "template": [
             "activity/order.png"
         ],
+        "post_delay": 200,
         "__yamaape": {
             "position": {
                 "x": 2073,
                 "y": 835
             }
         }
-    },
-    "自动炒菜_循环": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "pre_delay": 0,
-        "post_delay": 0,
-        "timeout": 1000,
-        "__yamaape": {
-            "position": {
-                "x": 1196,
-                "y": 235
-            }
-        },
-        "on_error": [
-            "自动炒菜_结束"
-        ],
-        "next": [
-            "自动炒菜_做饭"
-        ]
     },
     "自动炒菜_做饭": {
         "recognition": "DirectHit",
@@ -187,16 +191,16 @@
         "recognition": "TemplateMatch",
         "action": "DoNothing",
         "template": [
-            "activity/carbs/13.png"
+            "activity/dessert/11.png"
         ],
         "roi": [
-            306,
-            167,
-            827,
-            63
+            292,
+            278,
+            917,
+            340
         ],
         "threshold": [
-            0.6
+            0.9
         ],
         "__yamaape": {
             "position": {
@@ -224,7 +228,6 @@
         "expected": [
             "回收"
         ],
-        "pre_delay": 400,
         "index": -1,
         "__yamaape": {
             "position": {
@@ -245,7 +248,7 @@
         "__yamaape": {
             "position": {
                 "x": 1264,
-                "y": 738
+                "y": 953
             }
         }
     },
@@ -259,6 +262,46 @@
             "position": {
                 "x": 1523,
                 "y": 673
+            }
+        }
+    },
+    "自动炒菜_半盖": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "activity/half.png"
+        ],
+        "pre_delay": 400,
+        "green_mask": true,
+        "threshold": [
+            0.9
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 2042,
+                "y": 505
+            }
+        }
+    },
+    "自动炒菜_识别需求": {
+        "recognition": "TemplateMatch",
+        "action": "DoNothing",
+        "template": [
+            "activity/dessert/21.png"
+        ],
+        "roi": [
+            271,
+            138,
+            987,
+            122
+        ],
+        "threshold": [
+            0.9
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1264,
+                "y": 728
             }
         }
     }

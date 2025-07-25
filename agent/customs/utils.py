@@ -216,6 +216,11 @@ class RecoHelper:
     @staticmethod
     def filter_reco(recos: list, threshold: float = 0.7):
         return [reco for reco in recos if reco.score >= threshold]
+    
+    # 排序
+    @staticmethod
+    def sort_reco(recos: list):
+        return sorted(recos, key=lambda reco: reco.score, reverse=True)
 
 
 # 判断器
