@@ -528,7 +528,7 @@
         "recognition": "OCR",
         "action": "Click",
         "expected": [
-            "夜来"
+            "雨"
         ],
         "roi": [
             739,
@@ -536,6 +536,7 @@
             475,
             624
         ],
+        "order_by": "Vertical",
         "__yamaape": {
             "position": {
                 "x": -607,
