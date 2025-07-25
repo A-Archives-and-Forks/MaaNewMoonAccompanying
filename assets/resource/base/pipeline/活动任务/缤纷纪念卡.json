@@ -69,14 +69,38 @@
             97
         ],
         "focus": "> 领取登录票据",
+        "pre_delay": 800,
         "__yamaape": {
             "position": {
-                "x": 1998,
-                "y": 303
+                "x": 2001,
+                "y": 262
             }
         },
         "next": [
             "缤纷纪念卡_确认领取登录票据"
+        ]
+    },
+    "缤纷纪念卡_检查任务票据": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "pre_delay": 0,
+        "post_delay": 0,
+        "timeout": 1500,
+        "focus": "> 检查任务票据",
+        "expected": [
+            "兑换礼包"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 2546,
+                "y": 426
+            }
+        },
+        "next": [
+            "缤纷纪念卡_任务票据"
+        ],
+        "on_error": [
+            "缤纷纪念卡_返回主界面"
         ]
     },
     "缤纷纪念卡_确认领取登录票据": {
@@ -88,37 +112,20 @@
         "pre_delay": 800,
         "__yamaape": {
             "position": {
-                "x": 2258,
-                "y": 303
+                "x": 2261,
+                "y": 262
             }
         },
         "next": [
             "缤纷纪念卡_检查任务票据"
-        ]
-    },
-    "缤纷纪念卡_检查任务票据": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "pre_delay": 0,
-        "post_delay": 0,
-        "timeout": 1500,
-        "focus": "> 检查任务票据",
-        "__yamaape": {
-            "position": {
-                "x": 2546,
-                "y": 447
-            }
-        },
-        "next": [
-            "缤纷纪念卡_任务票据"
         ],
-        "on_error": [
-            "缤纷纪念卡_返回主界面"
+        "interrupt": [
+            "缤纷纪念卡_确保关闭"
         ]
     },
     "缤纷纪念卡_任务票据": {
         "recognition": "TemplateMatch",
-        "action": "DoNothing",
+        "action": "Click",
         "template": [
             "activity/ticket.png"
         ],
@@ -132,14 +139,33 @@
             105
         ],
         "focus": "> 领取任务票据",
+        "pre_delay": 800,
         "__yamaape": {
             "position": {
-                "x": 2808,
-                "y": 344
+                "x": 2819,
+                "y": 308
             }
         },
         "next": [
             "缤纷纪念卡_确认领取任务票据"
+        ]
+    },
+    "缤纷纪念卡_返回主界面": {
+        "recognition": "OCR",
+        "action": "Custom",
+        "custom_action": "run",
+        "custom_action_param": "key=返回主页",
+        "expected": [
+            "兑换礼包"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3352,
+                "y": 517
+            }
+        },
+        "next": [
+            "缤纷纪念卡_结束"
         ]
     },
     "缤纷纪念卡_确认领取任务票据": {
@@ -151,27 +177,15 @@
         "pre_delay": 800,
         "__yamaape": {
             "position": {
-                "x": 3068,
-                "y": 344
+                "x": 3067,
+                "y": 309
             }
         },
         "next": [
             "缤纷纪念卡_返回主界面"
-        ]
-    },
-    "缤纷纪念卡_返回主界面": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "run",
-        "custom_action_param": "key=返回主页",
-        "__yamaape": {
-            "position": {
-                "x": 3351,
-                "y": 537
-            }
-        },
-        "next": [
-            "缤纷纪念卡_结束"
+        ],
+        "interrupt": [
+            "缤纷纪念卡_确保关闭"
         ]
     },
     "缤纷纪念卡_结束": {
@@ -180,7 +194,20 @@
         "__yamaape": {
             "position": {
                 "x": 3611,
-                "y": 537
+                "y": 517
+            }
+        }
+    },
+    "缤纷纪念卡_确保关闭": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "close.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3348,
+                "y": 55
             }
         }
     }
