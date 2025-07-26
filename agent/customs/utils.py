@@ -171,9 +171,15 @@ class Configs:
         return cls.configs.get(key, default)
 
 
-# 获取控制器
-def get_controller(context: Context) -> Controller:
-    return context.tasker.controller
+# 控制器
+class Tasker:
+    @staticmethod
+    def get_controller(context: Context) -> Controller:
+        return context.tasker.controller
+
+    @staticmethod
+    def is_stopping(context: Context):
+        return context.tasker.stopping
 
 
 # 识别器
@@ -183,7 +189,9 @@ class RecoHelper:
 
     # 截图
     def get_screencap(self) -> np.ndarray:
-        self.screencap = get_controller(self.context).post_screencap().wait().get()
+        self.screencap = (
+            Tasker.get_controller(self.context).post_screencap().wait().get()
+        )
         return self.screencap
 
     # 识别结果
@@ -216,7 +224,7 @@ class RecoHelper:
     @staticmethod
     def filter_reco(recos: list, threshold: float = 0.7):
         return [reco for reco in recos if reco.score >= threshold]
-    
+
     # 排序
     @staticmethod
     def sort_reco(recos: list):

@@ -54,7 +54,6 @@
         "recognition": "DirectHit",
         "action": "Custom",
         "custom_action": "init_cook",
-        "custom_action_param": "type_num=1",
         "pre_delay": 0,
         "post_delay": 0,
         "__yamaape": {
@@ -85,6 +84,39 @@
         "on_error": [
             "自动炒菜_结束"
         ]
+    },
+    "自动炒菜_做饭": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "auto_cook",
+        "pre_delay": 0,
+        "post_delay": 0,
+        "__yamaape": {
+            "position": {
+                "x": 1465,
+                "y": 123
+            }
+        },
+        "next": [
+            "自动炒菜_循环"
+        ],
+        "on_error": [
+            "自动炒菜_结束"
+        ]
+    },
+    "自动炒菜_结束": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "focus": "> 挑战完成！",
+        "expected": [
+            "挑战完成"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1731,
+                "y": 296
+            }
+        }
     },
     "自动炒菜_使用": {
         "recognition": "DirectHit",
@@ -131,39 +163,6 @@
             "position": {
                 "x": 2073,
                 "y": 835
-            }
-        }
-    },
-    "自动炒菜_做饭": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "auto_cook",
-        "pre_delay": 0,
-        "post_delay": 0,
-        "__yamaape": {
-            "position": {
-                "x": 1465,
-                "y": 123
-            }
-        },
-        "next": [
-            "自动炒菜_循环"
-        ],
-        "on_error": [
-            "自动炒菜_结束"
-        ]
-    },
-    "自动炒菜_结束": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "focus": "> 挑战完成！",
-        "expected": [
-            "挑战完成"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 1731,
-                "y": 296
             }
         }
     },
@@ -287,7 +286,7 @@
         "recognition": "TemplateMatch",
         "action": "DoNothing",
         "template": [
-            "activity/dessert/21.png"
+            "activity/carbs/21d.png"
         ],
         "roi": [
             271,
@@ -296,12 +295,31 @@
             122
         ],
         "threshold": [
-            0.9
+            0.8
         ],
         "__yamaape": {
             "position": {
                 "x": 1264,
                 "y": 728
+            }
+        }
+    },
+    "自动炒菜_检测品类数量": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "尚未解锁"
+        ],
+        "roi": [
+            26,
+            271,
+            209,
+            419
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 934,
+                "y": 42
             }
         }
     }

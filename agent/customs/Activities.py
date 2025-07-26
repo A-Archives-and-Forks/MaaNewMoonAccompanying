@@ -4,7 +4,7 @@ from maa.context import Context
 
 import time
 
-from .utils import parse_query_args, Prompt, RecoHelper, get_controller
+from .utils import parse_query_args, Prompt, RecoHelper, Tasker
 
 
 # 自动炒菜
@@ -23,11 +23,14 @@ class InitCook(CustomAction):
     ) -> CustomAction.RunResult | bool:
         global type_num, current_type
         try:
-            args = parse_query_args(argv)
-            num = args.get("type_num", "1")
-            type_num = int(num)
+            reco_helper = RecoHelper(context)
+            reco_helper.recognize("自动炒菜_检测品类数量")
+            type_num = 3
+            if reco_helper.hit():
+                results = reco_helper.reco.filterd_results
+                type_num = 3 - len(results)
 
-            num_tip = f"> 菜品种类：{num}种（主菜"
+            num_tip = f"> 检测到菜品种类：{type_num}种（主菜"
             if type_num >= 2:
                 num_tip += "、主食"
             if type_num >= 3:
@@ -62,19 +65,29 @@ class AutoCook(CustomAction):
             zh_name = zh_food_types[current_type - 1]
             en_name = en_food_types[current_type - 1]
 
+            if Tasker.is_stopping(context):
+                return False
+
             # 检测最高需求
             biggest_dish = {1: 0, 2: 0}
+            dish_need_num = {1: 0, 2: 0}
             for i in range(1, 3):
                 for j in range(1, 6):
-                    if reco_demand(context, en_name, i, j).hit():
+                    if Tasker.is_stopping(context):
+                        return False
+                    reco_helper = reco_demand(context, en_name, i, j)
+                    if reco_helper.hit():
                         biggest_dish[i] = j
+                        dish_need_num[i] += len(reco_helper.reco.filterd_results)
             max_biggest_dish = max(biggest_dish[1], biggest_dish[2])
             print(f"> 当前最高{zh_name}需求：{max_biggest_dish}级")
+            print(f"> 当前总{zh_name}需求量：{dish_need_num[1]+dish_need_num[2]}份")
 
             if max_biggest_dish == 0:
                 print("> 无当前菜品需求，跳过当前菜品")
                 change_dish()
                 return True
+            serve_num = round(max_biggest_dish * 1.5)
 
             # 检测最高菜品
             count = 0
@@ -82,9 +95,15 @@ class AutoCook(CustomAction):
                 if biggest_dish[i] == 0:
                     count += 1
                     continue
+                elif dish_need_num[i] >= 2:
+                    continue
                 reco_helper = reco_dish(context, en_name, i, biggest_dish[i])
                 if reco_helper.hit():
                     count += 1
+
+            if Tasker.is_stopping(context):
+                return False
+
             if count == 2:
                 print("> 已满足当前菜品需求，跳过当前菜品")
                 change_dish()
@@ -92,8 +111,10 @@ class AutoCook(CustomAction):
 
             # 烹饪
             print("> 正在烹饪：" + zh_name)
-            for i in range(round(max_biggest_dish * 1.5)):
-                get_controller(context).post_click(
+            for i in range(serve_num):
+                if Tasker.is_stopping(context):
+                    return False
+                Tasker.get_controller(context).post_click(
                     130, 330 + 140 * (current_type - 1)
                 ).wait()
                 if is_cook_end(context):
@@ -115,7 +136,9 @@ class AutoCook(CustomAction):
                 for j in range(1, target_dish[i]):
                     is_synthesis = False
                     reco_times = 0
-                    while reco_times < 5:
+                    while reco_times < serve_num:
+                        if Tasker.is_stopping(context):
+                            return False
                         # 检测是否有此菜品
                         reco_helper = reco_dish(context, en_name, i, j)
                         reco = reco_helper.reco
@@ -131,7 +154,7 @@ class AutoCook(CustomAction):
                         results = RecoHelper.sort_reco(results)
                         target_1 = reco_helper.get_reco_center(results[0])
                         target_2 = reco_helper.get_reco_center(results[1])
-                        get_controller(context).post_swipe(
+                        Tasker.get_controller(context).post_swipe(
                             target_1[0],
                             target_1[1],
                             target_2[0],
@@ -148,9 +171,9 @@ class AutoCook(CustomAction):
 
             # 过剩菜品
             for i in range(1, 3):
-                if biggest_dish[i] >= 4:
-                    continue
-                for j in range(4, 6):
+                for j in range(max(biggest_dish[i] + 1, 4), 6):
+                    if Tasker.is_stopping(context):
+                        return False
                     reco_helper = reco_dish(context, en_name, i, j)
                     if not reco_helper.hit():
                         continue
@@ -200,6 +223,9 @@ def reco_demand(context: Context, en_name, i, j):
 # 上菜
 def serve_dish(context: Context):
     while True:
+        if Tasker.is_stopping(context):
+            return True
+
         # 识别是否可提交
         reco_helper = RecoHelper(context)
         reco_helper.recognize("自动炒菜_提交菜品")
@@ -209,7 +235,7 @@ def serve_dish(context: Context):
         # 提交菜品
         print("> 豪赤！")
         target = reco_helper.get_target()
-        get_controller(context).post_click(target[0], target[1]).wait()
+        Tasker.get_controller(context).post_click(target[0], target[1]).wait()
         time.sleep(2)
 
         # 检测是否完成
@@ -226,7 +252,7 @@ def recycle_food(context: Context, results: list):
     context.run_task("自动炒菜_半盖")
     for res in results:
         target = RecoHelper.get_reco_center(res)
-        get_controller(context).post_click(target[0], target[1]).wait()
+        Tasker.get_controller(context).post_click(target[0], target[1]).wait()
         time.sleep(0.2)
         context.run_task("自动炒菜_回收")
 
