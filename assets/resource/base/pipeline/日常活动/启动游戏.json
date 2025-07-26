@@ -79,6 +79,23 @@
             "启动游戏_短计数"
         ]
     },
+    "启动游戏_尝试检测游戏内界面": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "pre_delay": 0,
+        "post_delay": 0,
+        "__yamaape": {
+            "position": {
+                "x": 1638,
+                "y": 741
+            }
+        },
+        "next": [
+            "启动游戏_关闭弹出面板",
+            "启动游戏_关闭提示界面",
+            "启动游戏_盲目点击"
+        ]
+    },
     "启动游戏_确定更新": {
         "recognition": "OCR",
         "action": "Click",
@@ -130,6 +147,63 @@
             "启动游戏_检测当前界面"
         ]
     },
+    "启动游戏_关闭弹出面板": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "close.png",
+            "home.png",
+            "back.png",
+            "jump.png"
+        ],
+        "focus": "> 关闭弹出面板",
+        "__yamaape": {
+            "position": {
+                "x": 1942,
+                "y": 563
+            }
+        },
+        "next": [
+            "启动游戏_重置计数"
+        ]
+    },
+    "启动游戏_关闭提示界面": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击以继续"
+        ],
+        "focus": "> 关闭提示界面",
+        "__yamaape": {
+            "position": {
+                "x": 1941,
+                "y": 758
+            }
+        },
+        "next": [
+            "启动游戏_重置计数"
+        ]
+    },
+    "启动游戏_盲目点击": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            25,
+            200,
+            1,
+            1
+        ],
+        "post_delay": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 1945,
+                "y": 1142
+            }
+        },
+        "next": [
+            "启动游戏_重置计数"
+        ]
+    },
     "启动游戏_检测当前界面": {
         "recognition": "DirectHit",
         "action": "DoNothing",
@@ -142,7 +216,8 @@
             }
         },
         "next": [
-            "启动游戏_主界面"
+            "启动游戏_主界面",
+            "启动游戏_更新游戏"
         ],
         "interrupt": [
             "启动游戏_关闭弹出面板",
@@ -172,34 +247,17 @@
             "启动游戏_检测结束"
         ]
     },
-    "启动游戏_关闭弹出面板": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "close.png",
-            "home.png",
-            "back.png"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 1942,
-                "y": 563
-            }
-        },
-        "next": [
-            "启动游戏_重置计数"
-        ]
-    },
-    "启动游戏_关闭提示界面": {
+    "启动游戏_确认校准现实": {
         "recognition": "OCR",
         "action": "Click",
         "expected": [
-            "点击以继续"
+            "校准现实"
         ],
+        "post_delay": 3000,
         "__yamaape": {
             "position": {
-                "x": 1943,
-                "y": 730
+                "x": 1942,
+                "y": 947
             }
         },
         "next": [
@@ -248,26 +306,6 @@
             }
         }
     },
-    "启动游戏_盲目点击": {
-        "recognition": "DirectHit",
-        "action": "Click",
-        "target": [
-            25,
-            200,
-            1,
-            1
-        ],
-        "post_delay": 1000,
-        "__yamaape": {
-            "position": {
-                "x": 1947,
-                "y": 1101
-            }
-        },
-        "next": [
-            "启动游戏_重置计数"
-        ]
-    },
     "启动游戏_启动游戏": {
         "recognition": "DirectHit",
         "action": "StartApp",
@@ -311,40 +349,6 @@
         },
         "next": [
             "启动游戏_关闭游戏"
-        ]
-    },
-    "启动游戏_尝试检测游戏内界面": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "pre_delay": 0,
-        "post_delay": 0,
-        "__yamaape": {
-            "position": {
-                "x": 1638,
-                "y": 741
-            }
-        },
-        "next": [
-            "启动游戏_关闭弹出面板",
-            "启动游戏_关闭提示界面",
-            "启动游戏_盲目点击"
-        ]
-    },
-    "启动游戏_确认校准现实": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "校准现实"
-        ],
-        "post_delay": 3000,
-        "__yamaape": {
-            "position": {
-                "x": 1945,
-                "y": 901
-            }
-        },
-        "next": [
-            "启动游戏_重置计数"
         ]
     }
 }
