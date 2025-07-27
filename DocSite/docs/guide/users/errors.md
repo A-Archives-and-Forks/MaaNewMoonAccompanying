@@ -56,7 +56,7 @@
 
 或者，您可以在设置页面切换 [Mirror 酱](../users/install.md#mirror-酱支持) 作为国内镜像源更新。（需要自备 CDK）
 
-如果您不希望通过其他途径更新，您可以在[QQ 群](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=VMC132QhbMDLi5U62MlDRvtCMj9WOXRr&authKey=yJNKO4sQ%2BBFHpBCLSSEvVOAyz%2FPjknNSl70W3ugg2%2BpELnKmEiHamj1emJMWcLwQ&noverify=0&group_code=993245868) **群文件**内下载最新版本的 MNMA 压缩包并重新安装，**切勿直接覆盖！如果您希望在重装更新后保留配置，可以将旧版本根目录的`/config`文件夹覆盖至新版本，再删除覆盖后的`/config/pip_config.json`文件**
+如果您不希望通过其他途径更新，您可以在[QQ 群](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=VMC132QhbMDLi5U62MlDRvtCMj9WOXRr&authKey=yJNKO4sQ%2BBFHpBCLSSEvVOAyz%2FPjknNSl70W3ugg2%2BpELnKmEiHamj1emJMWcLwQ&noverify=0&group_code=993245868) **群文件**内下载最新版本的 MNMA 压缩包并重新安装，**此时您需要按[全量更新](./trick.md#全量更新)方法更新，而不是直接覆盖**
 
 ### 获取最新版本信息失败
 
@@ -92,6 +92,10 @@ Python 包的默认下载源是国内，如果您配置了代理或加速器，�
 
 如果您的模拟器没有此选项，请在 mumu12 官网重新下载最新版模拟器。
 
+### 资源加载失败
+
+若报错中含有“资源加载失败”并伴随“模拟器连接失败”，则可能由于文件占用或部分软件版本的更新器 bug 导致，**请直接重新下载安装包解压在新路径后使用**。
+
 ### 缺少 xxx.dll/运行库
 
 对于 Windows/MacOS 用户，需要在运行前安装运行库。
@@ -109,6 +113,12 @@ winget install Microsoft.VCRedist.2017.x64 Microsoft.DotNet.DesktopRuntime.8
 ```
 
 在安装时，依次点下一步即可，建议不要随意更改环境运行库的安装路径。
+
+### 程序无法运行
+
+先尝试重新安装上述依赖，并确保自身系统满足[运行要求](./install.md#下载前须知)
+
+若仍无法使用，请进群请求全程协助
 
 ### 目标计算机积极拒绝
 

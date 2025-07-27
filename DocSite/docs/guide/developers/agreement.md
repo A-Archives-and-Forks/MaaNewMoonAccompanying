@@ -21,7 +21,7 @@ MNMA 是一款基于 MaaFramework 框架 （由明日方舟 MAA 开发组维护�
 
 - 项目框架：[MaaFramework](https://github.com/MaaXYZ/MaaFramework)
 - GUI Interface 规范：[MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia/tree/master)
-- Pipeline 编辑器：[YAMaaPE](https://github.com/kqcoxn/YAMaaPE)
+- Pipeline 编辑器：[MaaPipelineEditor](https://github.com/kqcoxn/MaaPipelineEditor)
 - Python 基础
 
 ## 解决问题

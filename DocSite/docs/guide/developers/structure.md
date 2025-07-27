@@ -1,7 +1,7 @@
 # 项目结构
 
 ::: tip 注意
-编写时基于 MNMA `v1.2.12` 版本
+编写时基于 MNMA `v2.1.3` 版本
 :::
 
 ## 项目目录
@@ -32,14 +32,15 @@ MNMA 目前仅在 action 中调用 Custom
   - `setup.py`：本地环境更新器，在开发时无需关心
   - `custom.py`：导入相关子模块，在添加文件时需要在此处 import
   - `/customs`
-    - `Activities.py`：活动相关，一般用完就删
+    - `Abyss.py`：险境复现相关
+    - `Activities.py`：活动相关
     - `AgentTraining.py`：特工界面相关
     - `CityWalk.py`：城市探索界面相关
     - `ConsumptiveRealism.py`：清体力相关
     - `Counter.py`：通用计数器
     - `IceDrink.py`：冰饮相关
-    - `Logger.py`：通用日志，旧版本兼容用，若需输出日志请使用`focus`字段
     - `MatrixScheduling.py`：通用矩阵排布解决方案，一般用于需要矩阵分布点击的界面
+    - `PipeLauncher.py`：需设置参数的 Pipeline 启动器
     - `Pipeliner.py`：通用 Pipeline 调度器
     - `Platform.py`：蓝色站台相关
     - `Procurement.py`：采购相关
