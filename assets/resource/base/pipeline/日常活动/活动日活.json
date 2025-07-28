@@ -104,21 +104,21 @@
         "recognition": "OCR",
         "action": "Custom",
         "expected": [
-            "前往",
-            "领取"
+            "已领取"
         ],
         "roi": [
-            997,
-            170,
-            215,
-            478
+            1023,
+            153,
+            196,
+            88
         ],
         "custom_action": "delay_focus_hook",
         "custom_action_param": "key=活动日活&focus=今日活动任务未全部完成！",
+        "inverse": true,
         "__yamaape": {
             "position": {
-                "x": 1589,
-                "y": -169
+                "x": 1580,
+                "y": -192
             }
         },
         "next": [
