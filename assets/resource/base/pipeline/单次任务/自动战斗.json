@@ -5,13 +5,16 @@
         "prefix": "自动战斗",
         "export": ""
     },
-    "自动战斗_开始": {
+    "自动战斗_循环": {
         "recognition": "DirectHit",
         "action": "DoNothing",
+        "pre_delay": 0,
+        "post_delay": 0,
+        "timeout": 30000,
         "__yamaape": {
             "position": {
-                "x": 453,
-                "y": 476
+                "x": 302,
+                "y": 485
             }
         },
         "next": [
@@ -25,18 +28,26 @@
         "recognition": "OCR",
         "action": "DoNothing",
         "expected": [
-            "瞬时调度"
+            "瞬时调度",
+            "快速充能"
+        ],
+        "roi": [
+            1171,
+            412,
+            90,
+            105
         ],
         "__yamaape": {
             "position": {
-                "x": 713,
-                "y": 476
+                "x": 562,
+                "y": 485
             }
         },
         "next": [
+            "自动战斗_瞬时调度",
             "自动战斗_开大",
-            "自动战斗_等待进入图像",
-            "自动战斗_等待进入文字"
+            "自动战斗_等待进入文字",
+            "自动战斗_等待进入图像"
         ]
     },
     "自动战斗_等待进入图像": {
@@ -84,40 +95,10 @@
         "focus": "> 战斗结束",
         "__yamaape": {
             "position": {
-                "x": 711,
-                "y": 649
+                "x": 558,
+                "y": 694
             }
         }
-    },
-    "自动战斗_开大": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "battle/skill-2.png",
-            "battle/skill-1.png"
-        ],
-        "target_offset": [
-            0,
-            -45,
-            0,
-            0
-        ],
-        "index": -1,
-        "post_delay": 0,
-        "threshold": [
-            0.8,
-            0.8
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 973,
-                "y": 476
-            }
-        },
-        "next": [
-            "自动战斗_确定开大",
-            "自动战斗_无需再次点击"
-        ]
     },
     "自动战斗_再次检测": {
         "recognition": "DirectHit",
@@ -125,54 +106,134 @@
         "post_delay": 1250,
         "__yamaape": {
             "position": {
-                "x": 1543,
-                "y": 311
+                "x": 1753,
+                "y": 303
             }
         },
         "next": [
-            "自动战斗_开始"
+            "自动战斗_循环"
         ]
     },
-    "自动战斗_确定开大": {
-        "recognition": "TemplateMatch",
+    "自动战斗_开大": {
+        "recognition": "DirectHit",
         "action": "Click",
-        "template": [
-            "battle/skill-2.png",
-            "battle/skill-1.png"
-        ],
-        "target_offset": [
-            0,
-            -45,
-            0,
-            0
-        ],
-        "index": -1,
-        "pre_delay": 30,
-        "threshold": [
-            0.8,
-            0.8
+        "post_delay": 0,
+        "focus": "> 使用角色技能",
+        "target": [
+            1115,
+            632,
+            1,
+            1
         ],
         "__yamaape": {
             "position": {
-                "x": 1233,
-                "y": 476
+                "x": 853,
+                "y": 773
+            }
+        },
+        "next": [
+            "自动战斗_确定开大"
+        ]
+    },
+    "自动战斗_确定开大": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "pre_delay": 50,
+        "target": [
+            1115,
+            632,
+            1,
+            1
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1113,
+                "y": 773
             }
         },
         "next": [
             "自动战斗_再次检测"
         ]
     },
-    "自动战斗_无需再次点击": {
-        "recognition": "OCR",
+    "自动战斗_开始": {
+        "recognition": "DirectHit",
         "action": "DoNothing",
-        "expected": [
-            "瞬时调度"
-        ],
-        "inverse": true,
         "__yamaape": {
             "position": {
-                "x": 1235,
-                "y": 775
+                "x": 41,
+                "y": 486
+            }
+        },
+        "next": [
+            "自动战斗_循环"
+        ]
+    },
+    "自动战斗_瞬时调度": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "battle/leader.png"
+        ],
+        "roi": [
+            1171,
+            412,
+            90,
+            105
+        ],
+        "threshold": [
+            0.8
+        ],
+        "post_delay": 2000,
+        "focus": "> 使用瞬时调度",
+        "__yamaape": {
+            "position": {
+                "x": 851,
+                "y": 484
+            }
+        },
+        "next": [
+            "自动战斗_快速充能"
+        ]
+    },
+    "自动战斗_快速充能": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "快速充能"
+        ],
+        "roi": [
+            915,
+            400,
+            351,
+            136
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1111,
+                "y": 484
+            }
+        },
+        "next": [
+            "自动战斗_确定快速充能"
+        ]
+    },
+    "自动战斗_确定快速充能": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "快速充能"
+        ],
+        "roi": [
+            915,
+            400,
+            351,
+            136
+        ],
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1371,
+                "y": 484
             }
         },
         "next": [
