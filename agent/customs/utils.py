@@ -1,5 +1,5 @@
 from maa.custom_action import CustomAction
-from maa.custom_recognition import CustomRecognition, RecognitionResult
+from maa.custom_recognition import CustomRecognition, RecognitionResult, RectType
 from maa.context import Context
 from maa.controller import Controller
 
@@ -184,6 +184,61 @@ class Tasker:
 
 # 识别器
 class RecoHelper:
+    NoResult = CustomRecognition.AnalyzeResult(box=None, detail="无目标")
+
+    def __init__(self, context: Context, argv: CustomRecognition.AnalyzeArg = None):
+        self.context = context
+        self.argv = argv
+
+    # 截图
+    def get_screencap(self) -> np.ndarray:
+        self.screencap = (
+            Tasker.get_controller(self.context).post_screencap().wait().get()
+        )
+        return self.screencap
+
+    # 识别结果
+    def recognize(self, node: str, override_key_value: dict = {}):
+        image = self.get_screencap() if self.argv is None else self.argv.image
+        self.reco_detail = self.context.run_recognition(
+            node, image, {node: override_key_value}
+        )
+        return self
+
+    # 是否识别到结果
+    def hit(self):
+        return self.reco_detail is not None
+
+    # 获取最佳结果中心坐标
+    def get_target(self):
+        if not self.hit():
+            return None
+        return self.get_reco_center(self.reco_detail.best_result)
+
+    # 计算识别结果中心坐标
+    @staticmethod
+    def get_reco_center(result: RecognitionResult):
+        box = result.box
+        return {"x": round(box[0] + box[2] / 2), "y": round(box[1] + box[3] / 2)}
+
+    # 统一可信度过滤
+    @staticmethod
+    def filter_reco(results: list[RecognitionResult], threshold: float = 0.7):
+        return [r for r in results if r.score >= threshold]
+
+    # 排序
+    @staticmethod
+    def sort_reco(results: list[RecognitionResult]):
+        return sorted(results, key=lambda r: r.score, reverse=True)
+
+    # 返回结果
+    @staticmethod
+    def rt(box: RectType = (1, 1, 1, 1), text: str = ""):
+        return CustomRecognition.AnalyzeResult(box, text)
+
+
+# 旧版本识别器（错航成旅版本后删除）
+class RecoHelperOld:
     def __init__(self, context: Context):
         self.context = context
 
@@ -259,3 +314,14 @@ class Judge:
             if return_analyze_result
             else False
         )
+
+    @staticmethod
+    # 精准数值匹配
+    def exact_number(text: str, target_value: str) -> bool:
+        # 整数
+        int_pattern = r"(?<!\d|\.)" + re.escape(target_value) + r"(?!\d|\.)"
+        # 小数
+        decimal_pattern = r"(?<!\d|\.)" + re.escape(target_value) + r"\.0+(?!\d)"
+        # 检测
+        pattern = f"({int_pattern}|{decimal_pattern})"
+        return bool(re.search(pattern, text))

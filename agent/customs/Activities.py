@@ -4,7 +4,7 @@ from maa.context import Context
 
 import time
 
-from .utils import parse_query_args, Prompt, RecoHelper, Tasker
+from .utils import parse_query_args, Prompt, RecoHelperOld, Tasker
 
 
 # 自动炒菜
@@ -23,7 +23,7 @@ class InitCook(CustomAction):
     ) -> CustomAction.RunResult | bool:
         global type_num, current_type
         try:
-            reco_helper = RecoHelper(context)
+            reco_helper = RecoHelperOld(context)
             reco_helper.recognize("自动炒菜_检测品类数量")
             type_num = 3
             if reco_helper.hit():
@@ -53,7 +53,7 @@ class AutoCook(CustomAction):
         global type_num, current_type, en_food_types, zh_food_types
         try:
             # 识别采购单
-            reco_helper = RecoHelper(context)
+            reco_helper = RecoHelperOld(context)
             reco_helper.recognize("自动炒菜_识别采购单")
             if reco_helper.hit():
                 print("> 尝试使用采购单")
@@ -145,13 +145,13 @@ class AutoCook(CustomAction):
                         if not reco:
                             break
                         results = reco.all_results
-                        results = RecoHelper.filter_reco(results, 0.91)
+                        results = RecoHelperOld.filter_reco(results, 0.91)
                         if len(results) < 2:
                             break
 
                         # 合成
                         print(f"> oi，拼好饭！({zh_name}{i}-{j+1})")
-                        results = RecoHelper.sort_reco(results)
+                        results = RecoHelperOld.sort_reco(results)
                         target_1 = reco_helper.get_reco_center(results[0])
                         target_2 = reco_helper.get_reco_center(results[1])
                         Tasker.get_controller(context).post_swipe(
@@ -177,7 +177,9 @@ class AutoCook(CustomAction):
                     reco_helper = reco_dish(context, en_name, i, j)
                     if not reco_helper.hit():
                         continue
-                    results = RecoHelper.filter_reco(reco_helper.reco.all_results, 0.91)
+                    results = RecoHelperOld.filter_reco(
+                        reco_helper.reco.all_results, 0.91
+                    )
                     if len(results) > 0:
                         print(f"> 回收过剩{zh_name}：{i}-{j}")
                         recycle_food(context, results)
@@ -201,7 +203,7 @@ def change_dish():
 def reco_dish(context: Context, en_name, i, j):
     dish_template = f"activity/{en_name}/{i}{j}.png"
     checked_dish_template = f"activity/{en_name}/{i}{j}c.png"
-    reco_helper = RecoHelper(context)
+    reco_helper = RecoHelperOld(context)
     reco_helper.recognize(
         "自动炒菜_识别菜品",
         {"template": [dish_template, checked_dish_template]},
@@ -212,7 +214,7 @@ def reco_dish(context: Context, en_name, i, j):
 # 识别需求
 def reco_demand(context: Context, en_name, i, j):
     dish_template = f"activity/{en_name}/{i}{j}d.png"
-    reco_helper = RecoHelper(context)
+    reco_helper = RecoHelperOld(context)
     reco_helper.recognize(
         "自动炒菜_识别需求",
         {"template": dish_template},
@@ -227,7 +229,7 @@ def serve_dish(context: Context):
             return True
 
         # 识别是否可提交
-        reco_helper = RecoHelper(context)
+        reco_helper = RecoHelperOld(context)
         reco_helper.recognize("自动炒菜_提交菜品")
         if reco_helper.reco is None:
             break
@@ -239,7 +241,7 @@ def serve_dish(context: Context):
         time.sleep(2)
 
         # 检测是否完成
-        reco_helper = RecoHelper(context)
+        reco_helper = RecoHelperOld(context)
         reco_helper.recognize("自动炒菜_挑战完成")
         if reco_helper.reco is not None:
             return True
@@ -251,7 +253,7 @@ def serve_dish(context: Context):
 def recycle_food(context: Context, results: list):
     context.run_task("自动炒菜_半盖")
     for res in results:
-        target = RecoHelper.get_reco_center(res)
+        target = RecoHelperOld.get_reco_center(res)
         Tasker.get_controller(context).post_click(target[0], target[1]).wait()
         time.sleep(0.2)
         context.run_task("自动炒菜_回收")
@@ -260,7 +262,7 @@ def recycle_food(context: Context, results: list):
 # 检查结束
 def is_cook_end(context: Context):
     global en_food_types
-    reco_helper = RecoHelper(context)
+    reco_helper = RecoHelperOld(context)
     reco_helper.recognize("自动炒菜_材料数量不足")
     if not reco_helper.hit():
         return False
@@ -272,12 +274,12 @@ def is_cook_end(context: Context):
         for i in range(1, 3):
             for j in range(1, 6):
                 templates.append(f"activity/{food_type}/{i}{j}.png")
-    reco_helper = RecoHelper(context)
+    reco_helper = RecoHelperOld(context)
     reco_helper.recognize(
         "自动炒菜_识别菜品", {"template": templates, "roi": [292, 278, 917, 340]}
     )
     results = reco_helper.reco.all_results
-    results = RecoHelper.filter_reco(results, 0.91)
+    results = RecoHelperOld.filter_reco(results, 0.91)
     if len(results) < 3:
         return True
 

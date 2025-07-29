@@ -290,13 +290,13 @@
         {
             "name": "卡带再激活",
             "entry": "卡带词条_开始",
-            "advanced": [
-                "激活属性"
-            ],
             "option": [
-                "使用属性组"
+                "特征属性要求",
+                "目标特征属性",
+                "或匹配特征属性1",
+                "或匹配特征属性2"
             ],
-            "doc": "**卡带再激活**：\n\n自动将卡带激活至指定属性\n\n卡带特征属性汇总：[wiki](https://www.gamekee.com/xytx/639220.html)\n\n**注意：对于百分比类的词条，百分号应放在属性栏。例如想要“属性为「攻击%」值为「7.5%」”的词条，则应分别填写“攻击”、“7.5%”，百分号不出现在属性类型栏内**\n\n**由于卡带激活界面不提供特征名称，MNMA仅对属性描述进行识别，可能有小部分重叠识别情况，可尝试重复执行以锁定目标效果**\n\n**请确保拥有充足的数构银与整流元件**\n\n- 激活属性：可检测多种，不同属性以“,”或“ ”(空格)或“、”隔开，例如“暴击率、暴击伤害,效果命中 攻击”\n- 属性值：格式同上，同时作用上设所有属性，留空表示无属性值要求\n\n开始界面：卡带再激活界面\n\n结束界面：卡带再激活界面"
+            "doc": "**卡带再激活**：\n\n循环激活当前位置属性，匹配到任务选项中目标特征属性、或匹配特征属性1/2之一后停止\n\n相关wiki：\n\n- [卡带特征属性汇总](https://wiki.biligame.com/xytx/%E5%8D%A1%E5%B8%A6%E5%9B%BE%E9%89%B4)\n- [通用词条属性汇总](https://wiki.biligame.com/xytx/%E5%8D%A1%E5%B8%A6%E7%89%B9%E5%BE%81%E5%B1%9E%E6%80%A7%E6%95%B4%E7%90%86)\n\n开始界面：卡带再激活界面\n\n结束界面：卡带再激活界面"
         },
         {
             "name": "好友换新",
@@ -484,51 +484,6 @@
                 },
                 "险境复现_设置下半编队": {
                     "custom_action_param": "e={下半队伍（群体战）}"
-                }
-            }
-        },
-        "激活属性": {
-            "doc": [
-                "详见下方任务说明",
-                "详见下方任务说明",
-                "详见下方任务说明",
-                "详见下方任务说明",
-                "详见下方任务说明",
-                "详见下方任务说明"
-            ],
-            "field": [
-                "组1_属性类型",
-                "组1_属性值",
-                "组2_属性类型",
-                "组2_属性值",
-                "组3_属性类型",
-                "组3_属性值"
-            ],
-            "type": [
-                "string",
-                "string",
-                "string",
-                "string",
-                "string",
-                "string"
-            ],
-            "default": [
-                "攻击",
-                "7.5%",
-                "暴击率",
-                "6%",
-                "暴击伤害",
-                "6%"
-            ],
-            "pipeline_override": {
-                "卡带词条_设定激活属性1": {
-                    "custom_action_param": "attr={组1_属性类型}&value={组1_属性值}"
-                },
-                "卡带词条_设定激活属性2": {
-                    "custom_action_param": "attr={组2_属性类型}&value={组2_属性值}"
-                },
-                "卡带词条_设定激活属性3": {
-                    "custom_action_param": "attr={组3_属性类型}&value={组3_属性值}"
                 }
             }
         },
@@ -1560,26 +1515,433 @@
                 }
             ]
         },
-        "使用属性组": {
-            "doc": "请在高级选项中配置相关属性，将执行对应编号",
+        "特征属性要求": {
+            "doc": "每个特征属性有两个值，详见wiki",
             "cases": [
                 {
-                    "name": "属性组1",
+                    "name": "无要求",
                     "pipeline_override": {}
                 },
                 {
-                    "name": "属性组2",
+                    "name": "仅较高值",
                     "pipeline_override": {
-                        "卡带词条_开始": {
-                            "next": "卡带词条_设定激活属性2"
+                        "卡带词条_设置词条值": {
+                            "custom_action_param": "level=high"
+                        }
+                    }
+                }
+            ]
+        },
+        "目标特征属性": {
+            "doc": "详见下方任务说明",
+            "cases": [
+                {
+                    "name": "生命",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条1": {
+                            "custom_action_param": "attr=生命"
                         }
                     }
                 },
                 {
-                    "name": "属性组3",
+                    "name": "生命%",
                     "pipeline_override": {
-                        "卡带词条_开始": {
-                            "next": "卡带词条_设定激活属性3"
+                        "卡带词条_设置卡带词条1": {
+                            "custom_action_param": "attr=生命%"
+                        }
+                    }
+                },
+                {
+                    "name": "攻击",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条1": {
+                            "custom_action_param": "attr=攻击"
+                        }
+                    }
+                },
+                {
+                    "name": "攻击%",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条1": {
+                            "custom_action_param": "attr=攻击%"
+                        }
+                    }
+                },
+                {
+                    "name": "行动速度",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条1": {
+                            "custom_action_param": "attr=行动速度"
+                        }
+                    }
+                },
+                {
+                    "name": "物理防御%",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条1": {
+                            "custom_action_param": "attr=物理防御%"
+                        }
+                    }
+                },
+                {
+                    "name": "特殊防御%",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条1": {
+                            "custom_action_param": "attr=特殊防御%"
+                        }
+                    }
+                },
+                {
+                    "name": "效果抵抗",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条1": {
+                            "custom_action_param": "attr=效果抵抗"
+                        }
+                    }
+                },
+                {
+                    "name": "受疗率",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条1": {
+                            "custom_action_param": "attr=受疗率"
+                        }
+                    }
+                },
+                {
+                    "name": "初始能级",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条1": {
+                            "custom_action_param": "attr=初始能级"
+                        }
+                    }
+                },
+                {
+                    "name": "暴击率",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条1": {
+                            "custom_action_param": "attr=暴击率"
+                        }
+                    }
+                },
+                {
+                    "name": "暴击伤害",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条1": {
+                            "custom_action_param": "attr=暴击伤害"
+                        }
+                    }
+                },
+                {
+                    "name": "效果命中",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条1": {
+                            "custom_action_param": "attr=效果命中"
+                        }
+                    }
+                },
+                {
+                    "name": "治疗率",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条1": {
+                            "custom_action_param": "attr=治疗率"
+                        }
+                    }
+                },
+                {
+                    "name": "特殊词条1",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条1": {
+                            "custom_action_param": "attr=特殊词条1"
+                        }
+                    }
+                },
+                {
+                    "name": "特殊词条2",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条1": {
+                            "custom_action_param": "attr=特殊词条2"
+                        }
+                    }
+                }
+            ]
+        },
+        "或匹配特征属性1": {
+            "doc": "详见下方任务说明",
+            "cases": [
+                {
+                    "name": "不额外匹配",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条2": {
+                            "custom_action_param": "attr="
+                        }
+                    }
+                },
+                {
+                    "name": "生命",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条2": {
+                            "custom_action_param": "attr=生命"
+                        }
+                    }
+                },
+                {
+                    "name": "生命%",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条2": {
+                            "custom_action_param": "attr=生命%"
+                        }
+                    }
+                },
+                {
+                    "name": "攻击",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条2": {
+                            "custom_action_param": "attr=攻击"
+                        }
+                    }
+                },
+                {
+                    "name": "攻击%",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条2": {
+                            "custom_action_param": "attr=攻击%"
+                        }
+                    }
+                },
+                {
+                    "name": "行动速度",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条2": {
+                            "custom_action_param": "attr=行动速度"
+                        }
+                    }
+                },
+                {
+                    "name": "物理防御%",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条2": {
+                            "custom_action_param": "attr=物理防御%"
+                        }
+                    }
+                },
+                {
+                    "name": "特殊防御%",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条2": {
+                            "custom_action_param": "attr=特殊防御%"
+                        }
+                    }
+                },
+                {
+                    "name": "效果抵抗",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条2": {
+                            "custom_action_param": "attr=效果抵抗"
+                        }
+                    }
+                },
+                {
+                    "name": "受疗率",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条2": {
+                            "custom_action_param": "attr=受疗率"
+                        }
+                    }
+                },
+                {
+                    "name": "初始能级",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条2": {
+                            "custom_action_param": "attr=初始能级"
+                        }
+                    }
+                },
+                {
+                    "name": "暴击率",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条2": {
+                            "custom_action_param": "attr=暴击率"
+                        }
+                    }
+                },
+                {
+                    "name": "暴击伤害",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条2": {
+                            "custom_action_param": "attr=暴击伤害"
+                        }
+                    }
+                },
+                {
+                    "name": "效果命中",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条2": {
+                            "custom_action_param": "attr=效果命中"
+                        }
+                    }
+                },
+                {
+                    "name": "治疗率",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条2": {
+                            "custom_action_param": "attr=治疗率"
+                        }
+                    }
+                },
+                {
+                    "name": "特殊词条1",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条2": {
+                            "custom_action_param": "attr=特殊词条1"
+                        }
+                    }
+                },
+                {
+                    "name": "特殊词条2",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条2": {
+                            "custom_action_param": "attr=特殊词条2"
+                        }
+                    }
+                }
+            ]
+        },
+        "或匹配特征属性2": {
+            "doc": "详见下方任务说明",
+            "cases": [
+                {
+                    "name": "不额外匹配",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条3": {
+                            "custom_action_param": "attr="
+                        }
+                    }
+                },
+                {
+                    "name": "生命",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条3": {
+                            "custom_action_param": "attr=生命"
+                        }
+                    }
+                },
+                {
+                    "name": "生命%",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条3": {
+                            "custom_action_param": "attr=生命%"
+                        }
+                    }
+                },
+                {
+                    "name": "攻击",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条3": {
+                            "custom_action_param": "attr=攻击"
+                        }
+                    }
+                },
+                {
+                    "name": "攻击%",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条3": {
+                            "custom_action_param": "attr=攻击%"
+                        }
+                    }
+                },
+                {
+                    "name": "行动速度",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条3": {
+                            "custom_action_param": "attr=行动速度"
+                        }
+                    }
+                },
+                {
+                    "name": "物理防御%",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条3": {
+                            "custom_action_param": "attr=物理防御%"
+                        }
+                    }
+                },
+                {
+                    "name": "特殊防御%",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条3": {
+                            "custom_action_param": "attr=特殊防御%"
+                        }
+                    }
+                },
+                {
+                    "name": "效果抵抗",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条3": {
+                            "custom_action_param": "attr=效果抵抗"
+                        }
+                    }
+                },
+                {
+                    "name": "受疗率",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条3": {
+                            "custom_action_param": "attr=受疗率"
+                        }
+                    }
+                },
+                {
+                    "name": "初始能级",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条3": {
+                            "custom_action_param": "attr=初始能级"
+                        }
+                    }
+                },
+                {
+                    "name": "暴击率",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条3": {
+                            "custom_action_param": "attr=暴击率"
+                        }
+                    }
+                },
+                {
+                    "name": "暴击伤害",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条3": {
+                            "custom_action_param": "attr=暴击伤害"
+                        }
+                    }
+                },
+                {
+                    "name": "效果命中",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条3": {
+                            "custom_action_param": "attr=效果命中"
+                        }
+                    }
+                },
+                {
+                    "name": "治疗率",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条3": {
+                            "custom_action_param": "attr=治疗率"
+                        }
+                    }
+                },
+                {
+                    "name": "特殊词条1",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条3": {
+                            "custom_action_param": "attr=特殊词条1"
+                        }
+                    }
+                },
+                {
+                    "name": "特殊词条2",
+                    "pipeline_override": {
+                        "卡带词条_设置卡带词条3": {
+                            "custom_action_param": "attr=特殊词条2"
                         }
                     }
                 }
