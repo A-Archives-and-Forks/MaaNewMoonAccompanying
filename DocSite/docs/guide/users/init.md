@@ -4,15 +4,13 @@
 
 **在解压文件后，首先不要着急打开 MNMA，请优先打开模拟器。**
 
-对于模拟器的支持情况，请参考 [模拟器和设备支持](https://maa.plus/docs/zh-cn/manual/device/)。
-
-虽然 MaaFramework 框架支持大多数模拟器，但 MNMA 仍然**推荐使用 [mumu12](https://mumu.163.com/) 作为游戏载体。MNMA 在测试时使用 mumu12 官方版，使用其他模拟器环境遇到的问题开发组将不会被解决。**
+虽然 MaaFramework 框架支持[大多数模拟器](https://maa.plus/docs/zh-cn/manual/device/)，但 MNMA 仍然推荐**使用 [mumu12](https://mumu.163.com/) 作为游戏载体。MNMA 在测试时使用 mumu12 官方版，使用其他模拟器环境遇到的问题开发组将不会被解决。**
 
 在打开模拟器后，请在模拟器设置界面正确设置分辨率。**模拟器分辨率应为 `16:9` 比例（mumu12 的平板预设均为此比例），最低分辨率为 `1280x720`，最低帧率为 `30hz`，不符合要求造成的运行报错将不会被解决。**
 
 ## 启动 MNMA
 
-> 本节为 `MaaNewMoonAccompany-win-x86_64-vx.x.x.zip` 文件相关说明，mac 与 linux 用户请自行尝试。
+> 本节为 `MaaNewMoonAccompanying-win-x86_64-vx.x.x.zip` 文件（Windows 环境）相关说明，Mac 与 Linux 用户请自行尝试。
 
 在配置好模拟器后，返回解压的文件夹，可以在文件夹内找到如下两个文件：
 
@@ -35,7 +33,7 @@ MNMA 使用 MFAAvalonia 作为 GUI。MFAAvalonia 是 MaaFw 系列的 GUI 开源�
 您可以右键 `MNMA.exe`，并依次选择`(->win11:显示更多选项)`->`发送到`->`桌面快捷方式`在桌面创建一个快捷方式，方便以后在桌面直接启动。
 :::
 
-如果在双击应用后弹出报错，请参考 [问题排查-程序运行类](../users/errors.md#程序运行类)
+如果在双击应用后无法运行或弹出报错，请参考 [问题排查-程序运行类](../users/errors.md#程序运行类)
 
 ## 选择更新源
 
@@ -47,7 +45,7 @@ MNMA 使用 MFAAvalonia 作为 GUI。MFAAvalonia 是 MaaFw 系列的 GUI 开源�
 
 在资源下载源配置中，选择 `Github` 或 `Mirror 酱`
 
-MFAA 的默认下载源为`Mirror 酱`，详情可参考：[下载与安装-Mirror 酱支持](../users/install.md#mirror-酱支持)。**若您没有 Mirror 酱服务，请选择 `Github`作为更新源**，但更新速度可能较慢，详情请参考：[问题排查-更新失败/速度缓慢](../users/errors.md#更新失败速度缓慢)
+MFAA 的默认下载源为`Mirror 酱`，详情可参考：[下载与安装-Mirror 酱支持](../users/install.md#mirror-酱支持可选)。**若您没有 Mirror 酱服务，请选择 `Github`作为更新源**，但更新速度可能较慢，详情请参考：[问题排查-更新失败/速度缓慢](../users/errors.md#更新失败速度缓慢)
 
 ## 连接模拟器
 
@@ -77,8 +75,8 @@ MFAA 的默认下载源为`Mirror 酱`，详情可参考：[下载与安装-Mirr
 
 ## 接下来
 
-接下来，推荐您先阅读[使用技巧](./trick.md)，这里包含了在使用过程中可能出现的需求及其方案
+接下来，推荐您先阅读 [使用技巧](./trick.md)，这里包含了在使用过程中可能出现的需求及其方案
 
 在这之后您可以查看手册的 [功能说明](./funcs.md) 并尝试使用 MNMA 提供的功能，或自行探索
 
-在遇到问题时，您可以查阅[问题排查](./errors.md)，或在群内向群友提问
+在遇到问题时，您可以查阅 [问题排查](./errors.md)，或在群内向群友提问
