@@ -8,10 +8,10 @@ import re
 from tqdm import tqdm
 
 
-version = "v1.2"
+version = "v1.3"
 
 
-def filter_recent_logs_optimized(input_file, output_file="", days=2, max_len=2800000):
+def filter_recent_logs_optimized(input_file, output_file="", days=2, max_len=5000000):
     if not os.path.exists(input_file):
         return
 
@@ -179,8 +179,8 @@ def zip():
     output_filename = f"反馈日志.zip"
     source_paths = [
         "debug/maa.log",
-        f"logs/log-{datetime.now().date()}.txt",
-        f"logs/log-{datetime.now().date() - timedelta(days=1)}.txt",
+        f"logs/log-{datetime.now().strftime('%Y%m%d')}.txt",
+        f"logs/log-{(datetime.now() - timedelta(days=1)).strftime('%Y%m%d')}.txt",
         "config",
     ]
 
