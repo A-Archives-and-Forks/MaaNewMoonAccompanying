@@ -37,15 +37,12 @@
         "post_delay": 1,
         "__yamaape": {
             "position": {
-                "x": 830,
-                "y": -71
+                "x": 838,
+                "y": -69
             }
         },
         "next": [
             "返回主页_计数"
-        ],
-        "on_error": [
-            "返回主页_撤离成功"
         ]
     },
     "返回主页_图像类": {
@@ -119,7 +116,6 @@
         "recognition": "DirectHit",
         "action": "Custom",
         "custom_action": "count",
-        "timeout": 1000,
         "pre_delay": 0,
         "post_delay": 1000,
         "custom_action_param": "key=return_home",
@@ -136,17 +132,6 @@
             "返回主页_撤离成功"
         ]
     },
-    "返回主页_撤离成功": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "focus": "> 已回到主界面",
-        "__yamaape": {
-            "position": {
-                "x": 1401,
-                "y": 11
-            }
-        }
-    },
     "返回主页_失败后检查超时": {
         "recognition": "DirectHit",
         "action": "Custom",
@@ -156,8 +141,8 @@
         "post_delay": 800,
         "__yamaape": {
             "position": {
-                "x": 888,
-                "y": 293
+                "x": 837,
+                "y": 248
             }
         },
         "next": [
@@ -178,22 +163,52 @@
             }
         },
         "next": [
+            "返回主页_再次检查"
+        ],
+        "on_error": [
+            "返回主页_撤离成功"
+        ]
+    },
+    "返回主页_撤离成功": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "focus": "> 已回到主界面",
+        "__yamaape": {
+            "position": {
+                "x": 1637,
+                "y": -19
+            }
+        }
+    },
+    "返回主页_停止任务": {
+        "recognition": "DirectHit",
+        "action": "StopTask",
+        "focus": "返回主界面失败，请立即停止后续任务！",
+        "__yamaape": {
+            "position": {
+                "x": 1085,
+                "y": 249
+            }
+        }
+    },
+    "返回主页_再次检查": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "pre_delay": 0,
+        "post_delay": 0,
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 553,
+                "y": -439
+            }
+        },
+        "next": [
             "返回主页_主界面"
         ],
         "on_error": [
             "返回主页_初始化计数"
         ]
-    },
-    "返回主页_停止任务": {
-        "recognition": "DirectHit",
-        "action": "StopTask",
-        "focus": "返回主界面失败，请立即停止任务！",
-        "__yamaape": {
-            "position": {
-                "x": 1163,
-                "y": 293
-            }
-        }
     },
     "返回主页_初始化计数": {
         "recognition": "DirectHit",

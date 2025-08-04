@@ -69,7 +69,7 @@ class InitCounter(CustomAction):
             maxCount = int(maxCount) if maxCount is not None else 0
             exceed = str(exceed).lower() != "false" if exceed is not None else True
             counter_manager.reset(key, maxCount, exceed)
-            return CustomAction.RunResult(success=True)
+            return True
         except Exception as e:
             return Prompt.error("初始化计数", e)
 
@@ -88,7 +88,7 @@ class Count(CustomAction):
             if text:
                 print(f"> 第{counter.get_count()}次{text}")
             if counter.is_max():
-                return CustomAction.RunResult(success=False)
-            return CustomAction.RunResult(success=True)
+                return False
+            return True
         except Exception as e:
             return Prompt.error("计数", e)

@@ -12,6 +12,7 @@
         "template": [
             "card/max.png"
         ],
+        "pre_delay": 0,
         "__yamaape": {
             "position": {
                 "x": 1025,
@@ -93,8 +94,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 2019,
-                "y": 503
+                "x": 2006,
+                "y": 519
             }
         }
     },
@@ -104,16 +105,35 @@
         "focus": "> 卡带不足！",
         "__yamaape": {
             "position": {
-                "x": 2028,
-                "y": 918
+                "x": 2008,
+                "y": 743
             }
         }
+    },
+    "卡带升级_检查返还材料": {
+        "recognition": "OCR",
+        "action": "Click",
+        "pre_delay": 400,
+        "expected": [
+            "获得物品"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 2304,
+                "y": 98
+            }
+        },
+        "next": [
+            "卡带升级_检测当前等级"
+        ]
     },
     "卡带升级_检测当前等级": {
         "recognition": "DirectHit",
         "action": "DoNothing",
         "focus": "> 检测当前等级",
         "timeout": 1000,
+        "pre_delay": 0,
+        "post_delay": 0,
         "__yamaape": {
             "position": {
                 "x": 201,
@@ -153,6 +173,8 @@
         "recognition": "DirectHit",
         "action": "DoNothing",
         "focus": "> 检测当前状态",
+        "pre_delay": 0,
+        "post_delay": 0,
         "__yamaape": {
             "position": {
                 "x": 491,
@@ -168,17 +190,16 @@
         "recognition": "DirectHit",
         "action": "DoNothing",
         "focus": "> 已提升至指定等级",
+        "pre_delay": 0,
+        "post_delay": 0,
         "__yamaape": {
             "position": {
-                "x": 775,
-                "y": -46
+                "x": 777,
+                "y": -175
             }
         },
         "next": [
             "卡带升级_更新卡带位置"
-        ],
-        "on_error": [
-            "卡带升级_切换结束"
         ]
     },
     "卡带升级_升级状态": {
@@ -191,6 +212,8 @@
             0.94
         ],
         "focus": "> 卡带升级",
+        "pre_delay": 0,
+        "post_delay": 0,
         "__yamaape": {
             "position": {
                 "x": 765,
@@ -211,6 +234,8 @@
             0.94
         ],
         "focus": "> 卡带突破",
+        "pre_delay": 0,
+        "post_delay": 0,
         "__yamaape": {
             "position": {
                 "x": 773,
@@ -225,26 +250,20 @@
         "recognition": "DirectHit",
         "action": "Custom",
         "custom_action": "select_next_strap",
+        "pre_delay": 0,
+        "post_delay": 0,
         "__yamaape": {
             "position": {
-                "x": 1033,
-                "y": -43
+                "x": 1031,
+                "y": -175
             }
         },
         "next": [
             "卡带升级_切换卡带"
+        ],
+        "on_error": [
+            "卡带升级_切换结束"
         ]
-    },
-    "卡带升级_切换结束": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "focus": "> 卡带全部升级完成",
-        "__yamaape": {
-            "position": {
-                "x": 1032,
-                "y": -194
-            }
-        }
     },
     "卡带升级_选择卡带": {
         "recognition": "DirectHit",
@@ -256,6 +275,7 @@
             60
         ],
         "focus": "> 选择卡带",
+        "pre_delay": 0,
         "__yamaape": {
             "position": {
                 "x": 1033,
@@ -280,8 +300,8 @@
         "post_delay": 1000,
         "__yamaape": {
             "position": {
-                "x": 1335,
-                "y": 14
+                "x": 1289,
+                "y": -176
             }
         },
         "next": [
@@ -332,6 +352,7 @@
         ],
         "focus": "> 卡带不足，使用模块组突破",
         "timeout": 2000,
+        "pre_delay": 0,
         "__yamaape": {
             "position": {
                 "x": 1031,
@@ -411,21 +432,15 @@
             "卡带升级_已升级至指定等级"
         ]
     },
-    "卡带升级_检查返还材料": {
-        "recognition": "OCR",
-        "action": "Click",
-        "pre_delay": 400,
-        "expected": [
-            "获得物品"
-        ],
+    "卡带升级_切换结束": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "focus": "> 卡带全部升级完成",
         "__yamaape": {
             "position": {
-                "x": 2304,
-                "y": 98
+                "x": 1287,
+                "y": 46
             }
-        },
-        "next": [
-            "卡带升级_检测当前等级"
-        ]
+        }
     }
 }

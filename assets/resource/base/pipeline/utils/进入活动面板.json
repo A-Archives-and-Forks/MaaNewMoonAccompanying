@@ -18,9 +18,6 @@
         },
         "next": [
             "进入活动面板_执行前返回主页"
-        ],
-        "on_error": [
-            "进入活动面板_进入活动界面"
         ]
     },
     "进入活动面板_执行前返回主页": {
@@ -30,10 +27,13 @@
         "custom_action_param": "key=全局前置返回主页",
         "__yamaape": {
             "position": {
-                "x": 309,
-                "y": 76
+                "x": 296,
+                "y": 83
             }
         },
+        "on_error": [
+            "进入活动面板_直接开始"
+        ],
         "next": [
             "进入活动面板_进入活动界面"
         ]
@@ -78,7 +78,7 @@
         "recognition": "DirectHit",
         "action": "Custom",
         "custom_action": "init_timer",
-        "custom_action_param": "key=find_activity&limit=25",
+        "custom_action_param": "key=find_activity&limit=20",
         "pre_delay": 0,
         "post_delay": 0,
         "__yamaape": {
@@ -103,13 +103,8 @@
             }
         },
         "next": [
-            "进入活动面板_识别到指定活动"
-        ],
-        "interrupt": [
+            "进入活动面板_识别到指定活动",
             "进入活动面板_检查时间"
-        ],
-        "on_error": [
-            "进入活动面板_识别超时"
         ]
     },
     "进入活动面板_识别到指定活动": {
@@ -135,6 +130,18 @@
             "进入活动面板_结束"
         ]
     },
+    "进入活动面板_结束": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "pre_delay": 0,
+        "post_delay": 0,
+        "__yamaape": {
+            "position": {
+                "x": 1873,
+                "y": 189
+            }
+        }
+    },
     "进入活动面板_检查时间": {
         "recognition": "DirectHit",
         "action": "Custom",
@@ -150,31 +157,10 @@
         },
         "next": [
             "进入活动面板_向下滑动"
+        ],
+        "on_error": [
+            "进入活动面板_识别超时"
         ]
-    },
-    "进入活动面板_识别超时": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "focus": "> 未找到指定活动！",
-        "custom_action": "break",
-        "__yamaape": {
-            "position": {
-                "x": 1616,
-                "y": 689
-            }
-        }
-    },
-    "进入活动面板_结束": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "pre_delay": 0,
-        "post_delay": 0,
-        "__yamaape": {
-            "position": {
-                "x": 1873,
-                "y": 189
-            }
-        }
     },
     "进入活动面板_向下滑动": {
         "recognition": "DirectHit",
@@ -226,6 +212,36 @@
             "position": {
                 "x": 2124,
                 "y": 414
+            }
+        },
+        "next": [
+            "进入活动面板_识别活动"
+        ]
+    },
+    "进入活动面板_直接开始": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "pre_delay": 0,
+        "post_delay": 0,
+        "__yamaape": {
+            "position": {
+                "x": 323,
+                "y": 272
+            }
+        },
+        "next": [
+            "进入活动面板_进入活动界面"
+        ]
+    },
+    "进入活动面板_识别超时": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "focus": "> 未找到指定活动！",
+        "custom_action": "break",
+        "__yamaape": {
+            "position": {
+                "x": 1864,
+                "y": 703
             }
         }
     }

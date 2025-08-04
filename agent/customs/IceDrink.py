@@ -23,6 +23,6 @@ class SetIceSquad(CustomAction):
                 )
                 print(f"> 行动将使用队伍：{squad}")
 
-            return CustomAction.RunResult(success=True)
+            return True
         except Exception as e:
             return Prompt.error("设定指定队伍", e)

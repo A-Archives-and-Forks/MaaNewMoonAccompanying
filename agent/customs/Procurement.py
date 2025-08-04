@@ -40,7 +40,7 @@ class SetProcurementList(CustomAction):
                 {"每日采购_检测是否在黑名单": {"expected": black_list}}
             )
 
-            return CustomAction.RunResult(success=True)
+            return True
 
         except Exception as e:
             return Prompt.error("设置物资黑白名单", e)
@@ -55,7 +55,7 @@ class SelectNextProcurement(CustomAction):
 
         try:
             if index > 3:
-                return CustomAction.RunResult(success=False)
+                return False
 
             roi = [320 + index * 228, 380, 200, 230]
             context.override_pipeline(
@@ -72,7 +72,7 @@ class SelectNextProcurement(CustomAction):
             index += 1
             print(f"> 检测物资[2, {index}]")
 
-            return CustomAction.RunResult(success=True)
+            return True
 
         except Exception as e:
             return Prompt.error("设置物资检测区域", e)

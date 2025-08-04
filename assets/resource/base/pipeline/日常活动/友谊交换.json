@@ -240,9 +240,6 @@
         },
         "next": [
             "友谊交换_执行前返回主页"
-        ],
-        "on_error": [
-            "友谊交换_进入友谊界面"
         ]
     },
     "友谊交换_执行前返回主页": {
@@ -252,8 +249,26 @@
         "custom_action_param": "key=全局前置返回主页",
         "__yamaape": {
             "position": {
-                "x": -280,
-                "y": -172
+                "x": -292,
+                "y": -168
+            }
+        },
+        "next": [
+            "友谊交换_进入友谊界面"
+        ],
+        "on_error": [
+            "友谊交换_直接友谊交换"
+        ]
+    },
+    "友谊交换_直接友谊交换": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "pre_delay": 0,
+        "post_delay": 0,
+        "__yamaape": {
+            "position": {
+                "x": -257,
+                "y": 23
             }
         },
         "next": [

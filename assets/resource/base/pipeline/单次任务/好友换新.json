@@ -327,6 +327,53 @@
         },
         "next": [
             "好友换新_刷新名单"
+        ],
+        "on_error": [
+            "好友换新_结束"
+        ]
+    },
+    "好友换新_刷新名单": {
+        "recognition": "OCR",
+        "action": "Click",
+        "focus": "> 刷新推荐名单",
+        "expected": [
+            "换一批"
+        ],
+        "index": -1,
+        "__yamaape": {
+            "position": {
+                "x": 1399,
+                "y": 1172
+            }
+        },
+        "next": [
+            "好友换新_初始化添加计数"
+        ]
+    },
+    "好友换新_结束": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "focus": "> 添加好友结束",
+        "__yamaape": {
+            "position": {
+                "x": 1400,
+                "y": 1399
+            }
+        }
+    },
+    "好友换新_初始化添加计数": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "init_counter",
+        "custom_action_param": "key=add_friend&max=9",
+        "__yamaape": {
+            "position": {
+                "x": 1663,
+                "y": 1169
+            }
+        },
+        "next": [
+            "好友换新_添加计数"
         ]
     },
     "好友换新_向下滑动": {
@@ -349,8 +396,8 @@
         "pre_delay": 1,
         "__yamaape": {
             "position": {
-                "x": 2757,
-                "y": 1163
+                "x": 3014,
+                "y": 1167
             }
         },
         "next": [
@@ -369,8 +416,8 @@
         "pre_delay": 0,
         "__yamaape": {
             "position": {
-                "x": 3017,
-                "y": 1163
+                "x": 3274,
+                "y": 1167
             }
         },
         "next": [
@@ -382,15 +429,12 @@
         "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": 3276,
-                "y": 1046
+                "x": 3533,
+                "y": 1050
             }
         },
         "next": [
             "好友换新_添加计数"
-        ],
-        "on_error": [
-            "好友换新_轮次结束"
         ]
     },
     "好友换新_添加计数": {
@@ -406,27 +450,28 @@
             }
         },
         "next": [
+            "好友换新_识别检测"
+        ],
+        "on_error": [
+            "好友换新_轮次计数"
+        ]
+    },
+    "好友换新_识别检测": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "pre_delay": 0,
+        "post_delay": 0,
+        "__yamaape": {
+            "position": {
+                "x": 2195,
+                "y": 1174
+            }
+        },
+        "next": [
             "好友换新_检测时间"
         ],
         "on_error": [
             "好友换新_向下滑动"
-        ]
-    },
-    "好友换新_轮次结束": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "focus": "> 本轮添加结束",
-        "__yamaape": {
-            "position": {
-                "x": 3565,
-                "y": 932
-            }
-        },
-        "next": [
-            "好友换新_轮次计数"
-        ],
-        "on_error": [
-            "好友换新_结束"
         ]
     },
     "好友换新_检测时间": {
@@ -447,8 +492,8 @@
         "timeout": 1000,
         "__yamaape": {
             "position": {
-                "x": 2204,
-                "y": 1167
+                "x": 2461,
+                "y": 1171
             }
         },
         "next": [
@@ -458,50 +503,6 @@
         ],
         "on_error": [
             "好友换新_向下滑动"
-        ]
-    },
-    "好友换新_结束": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "focus": "> 添加好友结束",
-        "__yamaape": {
-            "position": {
-                "x": 3839,
-                "y": 1185
-            }
-        }
-    },
-    "好友换新_刷新名单": {
-        "recognition": "OCR",
-        "action": "Click",
-        "focus": "> 刷新推荐名单",
-        "expected": [
-            "换一批"
-        ],
-        "index": -1,
-        "__yamaape": {
-            "position": {
-                "x": 1399,
-                "y": 1172
-            }
-        },
-        "next": [
-            "好友换新_初始化添加计数"
-        ]
-    },
-    "好友换新_初始化添加计数": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "init_counter",
-        "custom_action_param": "key=add_friend&max=9",
-        "__yamaape": {
-            "position": {
-                "x": 1663,
-                "y": 1169
-            }
-        },
-        "next": [
-            "好友换新_添加计数"
         ]
     },
     "好友换新_添加提示": {
@@ -515,8 +516,8 @@
         "post_delay": 1,
         "__yamaape": {
             "position": {
-                "x": 2482,
-                "y": 1170
+                "x": 2739,
+                "y": 1174
             }
         },
         "next": [
@@ -532,8 +533,8 @@
         "focus": "> 申请添加好友次数已满！",
         "__yamaape": {
             "position": {
-                "x": 2482,
-                "y": 1432
+                "x": 2739,
+                "y": 1436
             }
         }
     },
@@ -547,8 +548,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 2482,
-                "y": 1630
+                "x": 2739,
+                "y": 1634
             }
         },
         "next": [

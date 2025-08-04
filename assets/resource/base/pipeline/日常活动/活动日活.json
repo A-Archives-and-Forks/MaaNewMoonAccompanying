@@ -157,12 +157,15 @@
         "custom_action_param": "key=全局前置返回主页",
         "__yamaape": {
             "position": {
-                "x": -31,
+                "x": -56,
                 "y": -174
             }
         },
         "next": [
             "错航成旅_活动入口"
+        ],
+        "on_error": [
+            "错航成旅_直接进入活动"
         ]
     },
     "错航成旅_开始": {
@@ -170,14 +173,26 @@
         "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": -318,
-                "y": -20
+                "x": -344,
+                "y": -27
             }
         },
         "next": [
             "错航成旅_执行前返回主页"
-        ],
-        "on_error": [
+        ]
+    },
+    "错航成旅_直接进入活动": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "pre_delay": 0,
+        "post_delay": 0,
+        "__yamaape": {
+            "position": {
+                "x": -6,
+                "y": 24
+            }
+        },
+        "next": [
             "错航成旅_活动入口"
         ]
     }

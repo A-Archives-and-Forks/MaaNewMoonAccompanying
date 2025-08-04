@@ -23,7 +23,7 @@ class SetEventSquad(CustomAction):
                     }
                 )
 
-            return CustomAction.RunResult(success=True)
+            return True
         except Exception as e:
             return Prompt.error("设定指定队伍", e)
 
@@ -77,7 +77,7 @@ class InitReward(CustomAction):
             entrustment_roi_index = 0
             entrustment_best_reward = None
             entrustment_etter_reward = None
-            return CustomAction.RunResult(success=True)
+            return True
 
         except Exception as e:
             return Prompt.error("初始化委托事件选项", e)
@@ -92,7 +92,7 @@ class SelectNextReward(CustomAction):
         global entrustment_roi_index
         try:
             if entrustment_roi_index > 2:
-                return CustomAction.RunResult(success=True)
+                return True
             entrustment_roi_index += 1
             roi = calculate_roi(entrustment_roi_index)
             context.override_pipeline(
@@ -101,7 +101,7 @@ class SelectNextReward(CustomAction):
                     "城市探索_识别非指定高收益": {"roi": roi},
                 }
             )
-            return CustomAction.RunResult(success=True)
+            return True
         except Exception as e:
             return Prompt.error("设置委托事件选项", e)
 
@@ -134,7 +134,7 @@ class CompareReward(CustomAction):
                 if normal_first == "true":
                     entrustment_etter_reward = entrustment_roi_index
 
-            return CustomAction.RunResult(success=True)
+            return True
         except Exception as e:
             return Prompt.error("判断委托事件选项结果", e)
 
@@ -164,6 +164,6 @@ class BreakLoop(CustomAction):
             elif entrustment_roi_index > 2:
                 # print(f'> 超过三次仍未识别到 只好选第一个了')
                 set_reward_pipeline(context, calculate_roi(0))
-            return CustomAction.RunResult(success=True)
+            return True
         except Exception as e:
             return Prompt.error("中断委托事件循环", e)

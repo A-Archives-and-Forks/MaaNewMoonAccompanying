@@ -10,15 +10,12 @@
         "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": 1383,
-                "y": 934
+                "x": 1398,
+                "y": 879
             }
         },
         "next": [
             "拘束塔奖励_检查拘束塔"
-        ],
-        "on_error": [
-            "拘束塔奖励_已领取提示"
         ]
     },
     "拘束塔奖励_检查拘束塔": {
@@ -36,19 +33,26 @@
             "拘束塔奖励_执行前返回主页"
         ],
         "on_error": [
-            "拘束塔奖励_战略行动"
+            "拘束塔奖励_已领取提示"
         ]
     },
-    "拘束塔奖励_已领取提示": {
+    "拘束塔奖励_执行前返回主页": {
         "recognition": "DirectHit",
-        "action": "DoNothing",
-        "focus": "> 本周已领取过拘束塔奖励",
+        "action": "Custom",
+        "custom_action": "run",
+        "custom_action_param": "key=全局前置返回主页",
         "__yamaape": {
             "position": {
-                "x": 1669,
-                "y": 1073
+                "x": 1931,
+                "y": 788
             }
-        }
+        },
+        "next": [
+            "拘束塔奖励_战略行动"
+        ],
+        "on_error": [
+            "拘束塔奖励_直接开始"
+        ]
     },
     "拘束塔奖励_战略行动": {
         "recognition": "OCR",
@@ -112,8 +116,8 @@
         "pre_delay": 800,
         "__yamaape": {
             "position": {
-                "x": 1486,
-                "y": 1272
+                "x": 1474,
+                "y": 1326
             }
         },
         "next": [
@@ -129,8 +133,8 @@
         "timeout": 3000,
         "__yamaape": {
             "position": {
-                "x": 1738,
-                "y": 1271
+                "x": 1726,
+                "y": 1325
             }
         },
         "next": [
@@ -150,8 +154,8 @@
         "focus": "> 领取奖励",
         "__yamaape": {
             "position": {
-                "x": 1998,
-                "y": 1271
+                "x": 1986,
+                "y": 1325
             }
         },
         "next": [
@@ -164,8 +168,8 @@
         "focus": "> 修复次数不足",
         "__yamaape": {
             "position": {
-                "x": 1995,
-                "y": 1505
+                "x": 1983,
+                "y": 1559
             }
         },
         "next": [
@@ -179,8 +183,8 @@
         "custom_action_param": "t=detention_tower",
         "__yamaape": {
             "position": {
-                "x": 2258,
-                "y": 1271
+                "x": 2246,
+                "y": 1325
             }
         },
         "next": [
@@ -197,8 +201,8 @@
         "focus": "> 返回主界面",
         "__yamaape": {
             "position": {
-                "x": 2585,
-                "y": 1445
+                "x": 2526,
+                "y": 1481
             }
         },
         "next": [
@@ -212,8 +216,8 @@
         "custom_action_param": "key=返回主页",
         "__yamaape": {
             "position": {
-                "x": 2845,
-                "y": 1445
+                "x": 2786,
+                "y": 1481
             }
         },
         "next": [
@@ -225,24 +229,35 @@
         "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": 3106,
-                "y": 1439
+                "x": 3047,
+                "y": 1475
             }
         }
     },
-    "拘束塔奖励_执行前返回主页": {
+    "拘束塔奖励_直接开始": {
         "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "run",
-        "custom_action_param": "key=全局前置返回主页",
+        "action": "DoNothing",
+        "pre_delay": 0,
+        "post_delay": 0,
         "__yamaape": {
             "position": {
-                "x": 1957,
-                "y": 793
+                "x": 1963,
+                "y": 981
             }
         },
         "next": [
             "拘束塔奖励_战略行动"
         ]
+    },
+    "拘束塔奖励_已领取提示": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "focus": "> 本周已领取过拘束塔奖励",
+        "__yamaape": {
+            "position": {
+                "x": 1700,
+                "y": 1077
+            }
+        }
     }
 }

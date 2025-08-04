@@ -20,7 +20,7 @@ class PlatformInit(CustomAction):
 
         try:
             isMimicryAid = False
-            return CustomAction.RunResult(success=True)
+            return True
 
         except Exception as e:
             return Prompt.error("初始化蓝色站台", e)

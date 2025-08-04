@@ -93,9 +93,6 @@
         },
         "next": [
             "选择编队_检查时间"
-        ],
-        "on_error": [
-            "选择编队_查找指定队伍"
         ]
     },
     "选择编队_检查时间": {
@@ -113,7 +110,24 @@
         },
         "next": [
             "选择编队_超时"
+        ],
+        "on_error": [
+            "选择编队_查找指定队伍"
         ]
+    },
+    "选择编队_超时": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "focus": "> 未找到指定编队，将使用现有配队",
+        "template": [
+            "back.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 4337,
+                "y": 2211
+            }
+        }
     },
     "选择编队_查找指定队伍": {
         "recognition": "DirectHit",
@@ -131,17 +145,18 @@
             "选择编队_配队下划"
         ]
     },
-    "选择编队_超时": {
-        "recognition": "TemplateMatch",
+    "选择编队_找到指定编队": {
+        "recognition": "OCR",
         "action": "Click",
-        "focus": "> 未找到指定编队，将使用现有配队",
-        "template": [
-            "back.png"
+        "expected": [
+            "指定行动队"
         ],
+        "post_delay": 800,
+        "focus": "> 已查找到指定编队！",
         "__yamaape": {
             "position": {
-                "x": 4337,
-                "y": 2211
+                "x": 3550,
+                "y": 1988
             }
         }
     },
@@ -257,20 +272,5 @@
         "next": [
             "选择编队_查找指定队伍"
         ]
-    },
-    "选择编队_找到指定编队": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "指定行动队"
-        ],
-        "post_delay": 800,
-        "focus": "> 已查找到指定编队！",
-        "__yamaape": {
-            "position": {
-                "x": 3550,
-                "y": 1988
-            }
-        }
     }
 }

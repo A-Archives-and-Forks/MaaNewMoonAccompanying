@@ -195,7 +195,6 @@
         "expected": [
             "是否消耗1个"
         ],
-        "timeout": 1,
         "__yamaape": {
             "position": {
                 "x": 2930,
@@ -204,9 +203,6 @@
         },
         "next": [
             "清体力_判断设定余量"
-        ],
-        "on_error": [
-            "清体力_返回倍率选择3"
         ]
     },
     "清体力_4x行动前检测1": {
@@ -245,10 +241,12 @@
         "recognition": "DirectHit",
         "action": "Custom",
         "custom_action": "check_eat_times",
+        "pre_delay": 0,
+        "post_delay": 0,
         "__yamaape": {
             "position": {
-                "x": 3180,
-                "y": 359
+                "x": 3177,
+                "y": 341
             }
         },
         "next": [
@@ -805,8 +803,8 @@
         "focus": "> 设置助战",
         "__yamaape": {
             "position": {
-                "x": 3747,
-                "y": 2446
+                "x": 3834,
+                "y": 2459
             }
         },
         "next": [
@@ -823,8 +821,8 @@
         "focus": "> 今日助战次数已耗尽",
         "__yamaape": {
             "position": {
-                "x": 4012,
-                "y": 2668
+                "x": 4099,
+                "y": 2681
             }
         },
         "next": [
@@ -841,8 +839,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 4014,
-                "y": 2444
+                "x": 4101,
+                "y": 2457
             }
         },
         "next": [
@@ -854,8 +852,8 @@
         "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": 4810,
-                "y": 2842
+                "x": 4897,
+                "y": 2855
             }
         }
     },
@@ -871,8 +869,8 @@
         "timeout": 2000,
         "__yamaape": {
             "position": {
-                "x": 4268,
-                "y": 2440
+                "x": 4355,
+                "y": 2453
             }
         },
         "next": [
@@ -891,8 +889,8 @@
         "focus": "> 已存在相同特工，尝试重新选择助战",
         "__yamaape": {
             "position": {
-                "x": 4528,
-                "y": 2440
+                "x": 4615,
+                "y": 2453
             }
         },
         "next": [
@@ -906,8 +904,8 @@
         "custom_action_param": "t=assistance",
         "__yamaape": {
             "position": {
-                "x": 4530,
-                "y": 2640
+                "x": 4617,
+                "y": 2653
             }
         },
         "next": [
@@ -923,8 +921,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 4776,
-                "y": 2433
+                "x": 4863,
+                "y": 2446
             }
         },
         "next": [
@@ -940,8 +938,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 5036,
-                "y": 2300
+                "x": 5123,
+                "y": 2313
             }
         },
         "next": [
@@ -958,8 +956,8 @@
         "post_delay": 1200,
         "__yamaape": {
             "position": {
-                "x": 3768,
-                "y": 2225
+                "x": 3855,
+                "y": 2238
             }
         },
         "next": [
@@ -1655,9 +1653,6 @@
         },
         "next": [
             "清体力_执行前返回主页"
-        ],
-        "on_error": [
-            "清体力_战略行动"
         ]
     },
     "清体力_执行前返回主页": {
@@ -1673,6 +1668,9 @@
         },
         "next": [
             "清体力_战略行动"
+        ],
+        "on_error": [
+            "清体力_无需返回主页"
         ]
     },
     "清体力_指定作战队伍": {
@@ -1682,15 +1680,12 @@
         "pre_delay": 0,
         "__yamaape": {
             "position": {
-                "x": 3468,
-                "y": 1742
+                "x": 3757,
+                "y": 1686
             }
         },
         "next": [
             "清体力_检测是否已检测"
-        ],
-        "on_error": [
-            "清体力_结束配队"
         ]
     },
     "清体力_检测是否已检测": {
@@ -1699,14 +1694,34 @@
         "custom_action": "count",
         "custom_action_param": "key=check_squad",
         "focus": "> 检查配队",
+        "pre_delay": 0,
+        "post_delay": 0,
         "__yamaape": {
             "position": {
-                "x": 3739,
-                "y": 1611
+                "x": 4017,
+                "y": 1638
             }
         },
         "next": [
             "清体力_调整配队"
+        ],
+        "on_error": [
+            "清体力_结束配队"
+        ]
+    },
+    "清体力_调整配队": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "run_set_squad",
+        "custom_action_param": "e=",
+        "__yamaape": {
+            "position": {
+                "x": 4275,
+                "y": 1620
+            }
+        },
+        "next": [
+            "清体力_结束配队"
         ]
     },
     "清体力_结束配队": {
@@ -1716,25 +1731,10 @@
         "post_delay": 0,
         "__yamaape": {
             "position": {
-                "x": 4287,
-                "y": 1786
+                "x": 4538,
+                "y": 1748
             }
         }
-    },
-    "清体力_调整配队": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "run_set_squad",
-        "custom_action_param": "e=",
-        "__yamaape": {
-            "position": {
-                "x": 3989,
-                "y": 1611
-            }
-        },
-        "next": [
-            "清体力_结束配队"
-        ]
     },
     "清体力_4X队伍": {
         "recognition": "DirectHit",
@@ -1745,8 +1745,8 @@
         "post_delay": 0,
         "__yamaape": {
             "position": {
-                "x": 3184,
-                "y": 1619
+                "x": 3473,
+                "y": 1563
             }
         },
         "next": [
@@ -1762,8 +1762,8 @@
         "post_delay": 0,
         "__yamaape": {
             "position": {
-                "x": 3187,
-                "y": 1875
+                "x": 3476,
+                "y": 1819
             }
         },
         "next": [
@@ -1808,15 +1808,12 @@
         "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": -1363,
+                "x": -1674,
                 "y": -84
             }
         },
         "next": [
             "清体力_设定合剂消耗"
-        ],
-        "on_error": [
-            "清体力_跳过使用合剂节点1"
         ]
     },
     "清体力_是否仅首次使用合剂": {
@@ -1827,12 +1824,15 @@
         "custom_action_param": "t=eat",
         "__yamaape": {
             "position": {
-                "x": -1108,
-                "y": -306
+                "x": -1362,
+                "y": 57
             }
         },
         "next": [
             "清体力_设定合剂消耗"
+        ],
+        "on_error": [
+            "清体力_跳过使用合剂节点1"
         ]
     },
     "清体力_4X助战": {
@@ -1840,10 +1840,12 @@
         "action": "Custom",
         "custom_action": "set_str_node_attrs",
         "custom_action_param": "node=清体力_设置助战结束&keys=next&values=清体力_4X行动",
+        "pre_delay": 0,
+        "post_delay": 0,
         "__yamaape": {
             "position": {
-                "x": 2952,
-                "y": 2375
+                "x": 3031,
+                "y": 2334
             }
         },
         "next": [
@@ -1857,15 +1859,12 @@
         "post_delay": 0,
         "__yamaape": {
             "position": {
-                "x": 3222,
-                "y": 2444
+                "x": 3309,
+                "y": 2457
             }
         },
         "next": [
             "清体力_助战周期检查"
-        ],
-        "on_error": [
-            "清体力_今日已助战"
         ]
     },
     "清体力_助战周期检查": {
@@ -1873,14 +1872,19 @@
         "action": "Custom",
         "custom_action": "periodic_check",
         "custom_action_param": "t=assistance",
+        "pre_delay": 0,
+        "post_delay": 0,
         "__yamaape": {
             "position": {
-                "x": 3482,
-                "y": 2444
+                "x": 3569,
+                "y": 2457
             }
         },
         "next": [
             "清体力_设置助战"
+        ],
+        "on_error": [
+            "清体力_今日已助战"
         ]
     },
     "清体力_今日已助战": {
@@ -1889,8 +1893,8 @@
         "focus": "> 今日已助战",
         "__yamaape": {
             "position": {
-                "x": 3482,
-                "y": 2642
+                "x": 3638,
+                "y": 2736
             }
         },
         "next": [
@@ -1902,10 +1906,12 @@
         "action": "Custom",
         "custom_action": "set_str_node_attrs",
         "custom_action_param": "node=清体力_设置助战结束&keys=next&values=清体力_3X及以下行动",
+        "pre_delay": 0,
+        "post_delay": 0,
         "__yamaape": {
             "position": {
-                "x": 2952,
-                "y": 2573
+                "x": 3033,
+                "y": 2594
             }
         },
         "next": [
@@ -1946,6 +1952,21 @@
         },
         "next": [
             "清体力_准备战斗"
+        ]
+    },
+    "清体力_无需返回主页": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "pre_delay": 0,
+        "post_delay": 0,
+        "__yamaape": {
+            "position": {
+                "x": -8,
+                "y": 11
+            }
+        },
+        "next": [
+            "清体力_战略行动"
         ]
     }
 }

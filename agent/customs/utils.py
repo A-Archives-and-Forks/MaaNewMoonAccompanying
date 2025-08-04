@@ -77,7 +77,7 @@ class Prompt:
             cprint(e)
         cprint("——" * 5)
         return (
-            CustomAction.RunResult(success=False)
+            False
             if reco_detail == None
             else CustomRecognition.AnalyzeResult(
                 box=None, detail="程序错误" if reco_detail == True else reco_detail

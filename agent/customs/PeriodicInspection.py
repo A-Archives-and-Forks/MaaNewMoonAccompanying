@@ -80,7 +80,7 @@ class SetLastPeriodicCheck(CustomAction):
 
             Inspector.record(task)
 
-            return CustomAction.RunResult(success=True)
+            return True
 
         except Exception as e:
             return Prompt.error("记录检查时间", e)
