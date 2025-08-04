@@ -88,7 +88,7 @@
         "timeout": 1500,
         "focus": "> 检查任务票据",
         "expected": [
-            "兑换礼包"
+            "缤纷卡"
         ],
         "__yamaape": {
             "position": {
@@ -156,7 +156,7 @@
         "custom_action": "run",
         "custom_action_param": "key=返回主页",
         "expected": [
-            "兑换礼包"
+            "缤纷卡"
         ],
         "__yamaape": {
             "position": {
@@ -167,6 +167,19 @@
         "next": [
             "缤纷纪念卡_结束"
         ]
+    },
+    "缤纷纪念卡_确保关闭": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "close.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3348,
+                "y": 55
+            }
+        }
     },
     "缤纷纪念卡_确认领取任务票据": {
         "recognition": "TemplateMatch",
@@ -195,19 +208,6 @@
             "position": {
                 "x": 3611,
                 "y": 517
-            }
-        }
-    },
-    "缤纷纪念卡_确保关闭": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "close.png"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 3348,
-                "y": 55
             }
         }
     }
