@@ -4,7 +4,7 @@ from maa.custom_recognition import CustomRecognition
 from maa.context import Context
 
 
-from .utils import Prompt
+from .utils import Prompt, Judge
 
 isMimicryAid = False
 
@@ -53,18 +53,8 @@ class CheckPlatformProcess(CustomRecognition):
         argv: CustomRecognition.AnalyzeArg,
     ) -> CustomRecognition.AnalyzeResult:
         try:
-            reco_detail = context.run_recognition("蓝色站台_识别分数", argv.image)
-
-            for res in reco_detail.all_results:
-                scores = res.text.split("/")
-                if len(scores) == 2:
-                    if scores[0] == scores[1]:
-                        return CustomRecognition.AnalyzeResult(
-                            box=res.box,
-                            detail=res.text,
-                        )
-
-            return CustomRecognition.AnalyzeResult(box=None, detail="无目标")
-
+            return Judge.equal_process(
+                context, argv, "蓝色站台_识别分数", return_analyze_result=True
+            )
         except Exception as e:
             return Prompt.error("识别蓝色站台分数", e, reco_detail=True)

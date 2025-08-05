@@ -1417,6 +1417,55 @@
             }
         }
     },
+    "蓝色站台_周期记录": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "record_periodic_check",
+        "custom_action_param": "t=rogue",
+        "__yamaape": {
+            "position": {
+                "x": -547,
+                "y": 671
+            }
+        },
+        "next": [
+            "蓝色站台_返回主界面"
+        ]
+    },
+    "蓝色站台_确认领取评分奖励": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "点击以继续"
+        ],
+        "pre_delay": 800,
+        "focus": "> 领取评分奖励",
+        "__yamaape": {
+            "position": {
+                "x": -547,
+                "y": 859
+            }
+        }
+    },
+    "蓝色站台_选择可移植现实": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "掠食獠牙",
+            "掠食撩牙"
+        ],
+        "pre_delay": 600,
+        "focus": "> 选择可移植现实",
+        "__yamaape": {
+            "position": {
+                "x": -811,
+                "y": 1117
+            }
+        },
+        "next": [
+            "蓝色站台_确认可移植现实"
+        ]
+    },
     "蓝色站台_重新探索": {
         "recognition": "DirectHit",
         "action": "DoNothing",
@@ -1472,48 +1521,6 @@
         ],
         "on_error": [
             "蓝色站台_结束升级"
-        ]
-    },
-    "蓝色站台_选择物品": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "platform/fragments.png"
-        ],
-        "order_by": "Vertical",
-        "threshold": [
-            0.9
-        ],
-        "pre_delay": 400,
-        "focus": "> 检测到可升级物品",
-        "__yamaape": {
-            "position": {
-                "x": 990,
-                "y": 4048
-            }
-        },
-        "next": [
-            "蓝色站台_确定升级"
-        ],
-        "on_error": [
-            "蓝色站台_结束升级"
-        ]
-    },
-    "蓝色站台_结束升级": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "back.png"
-        ],
-        "focus": "> 结束物品升级",
-        "__yamaape": {
-            "position": {
-                "x": 1796,
-                "y": 4046
-            }
-        },
-        "next": [
-            "蓝色站台_前往下层"
         ]
     },
     "蓝色站台_选择夜来": {
@@ -1580,6 +1587,48 @@
         },
         "next": [
             "蓝色站台_停止滑动"
+        ]
+    },
+    "蓝色站台_选择物品": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "platform/fragments.png"
+        ],
+        "order_by": "Vertical",
+        "threshold": [
+            0.9
+        ],
+        "pre_delay": 400,
+        "focus": "> 检测到可升级物品",
+        "__yamaape": {
+            "position": {
+                "x": 990,
+                "y": 4048
+            }
+        },
+        "next": [
+            "蓝色站台_确定升级"
+        ],
+        "on_error": [
+            "蓝色站台_结束升级"
+        ]
+    },
+    "蓝色站台_结束升级": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "back.png"
+        ],
+        "focus": "> 结束物品升级",
+        "__yamaape": {
+            "position": {
+                "x": 1796,
+                "y": 4046
+            }
+        },
+        "next": [
+            "蓝色站台_前往下层"
         ]
     },
     "蓝色站台_确定升级": {
@@ -1757,67 +1806,6 @@
             }
         }
     },
-    "蓝色站台_周期记录": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "record_periodic_check",
-        "custom_action_param": "t=rogue",
-        "__yamaape": {
-            "position": {
-                "x": -547,
-                "y": 671
-            }
-        },
-        "next": [
-            "蓝色站台_返回主界面"
-        ]
-    },
-    "蓝色站台_确认领取评分奖励": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "点击以继续"
-        ],
-        "pre_delay": 800,
-        "focus": "> 领取评分奖励",
-        "__yamaape": {
-            "position": {
-                "x": -547,
-                "y": 859
-            }
-        }
-    },
-    "蓝色站台_选择可移植现实": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "掠食獠牙",
-            "掠食撩牙"
-        ],
-        "pre_delay": 600,
-        "focus": "> 选择可移植现实",
-        "__yamaape": {
-            "position": {
-                "x": -811,
-                "y": 1117
-            }
-        },
-        "next": [
-            "蓝色站台_确认可移植现实"
-        ]
-    },
-    "蓝色站台_返回主界面": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "run",
-        "custom_action_param": "key=返回主页",
-        "__yamaape": {
-            "position": {
-                "x": -289,
-                "y": 675
-            }
-        }
-    },
     "蓝色站台_确定选择主题": {
         "recognition": "OCR",
         "action": "Click",
@@ -1859,20 +1847,15 @@
             "蓝色站台_防止主题多次提示"
         ]
     },
-    "蓝色站台_防止主题多次提示": {
+    "蓝色站台_返回主界面": {
         "recognition": "DirectHit",
-        "action": "Click",
-        "target": [
-            25,
-            200,
-            1,
-            1
-        ],
-        "post_delay": 8000,
+        "action": "Custom",
+        "custom_action": "run",
+        "custom_action_param": "key=返回主页",
         "__yamaape": {
             "position": {
-                "x": 2865,
-                "y": 4229
+                "x": -289,
+                "y": 675
             }
         }
     },
@@ -1896,6 +1879,23 @@
         "on_error": [
             "蓝色站台_未配队提示"
         ]
+    },
+    "蓝色站台_防止主题多次提示": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            25,
+            200,
+            1,
+            1
+        ],
+        "post_delay": 8000,
+        "__yamaape": {
+            "position": {
+                "x": 2865,
+                "y": 4229
+            }
+        }
     },
     "蓝色站台_选择拟态": {
         "recognition": "OCR",
@@ -2254,10 +2254,10 @@
         "recognition": "OCR",
         "action": "DoNothing",
         "roi": [
-            938,
-            270,
-            187,
-            48
+            928,
+            262,
+            337,
+            108
         ],
         "expected": [
             "/"
