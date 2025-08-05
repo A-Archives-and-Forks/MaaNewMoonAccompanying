@@ -4,7 +4,7 @@ from maa.context import Context
 
 import re
 
-from .utils import parse_query_args, parse_list_input, Prompt
+from .utils import parse_query_args, parse_list_input, Prompt, RecoHelper
 
 index = 0
 
@@ -76,3 +76,23 @@ class SelectNextProcurement(CustomAction):
 
         except Exception as e:
             return Prompt.error("设置物资检测区域", e)
+
+
+# 检测数构银是否充足
+@AgentServer.custom_action("check_silver_sufficient")
+class CheckSilverSufficient(CustomAction):
+    def run(
+        self, context: Context, argv: CustomAction.RunArg
+    ) -> CustomAction.RunResult | bool:
+        try:
+            rest = int(
+                RecoHelper(context)
+                .recognize("每日采购_数构银区域")
+                .reco_detail.all_results[0]
+                .text
+            )
+            if rest > 100000:
+                return True
+            return False
+        except Exception as e:
+            return Prompt.error("检测数构银是否充足", e)

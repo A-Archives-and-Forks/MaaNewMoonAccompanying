@@ -198,7 +198,7 @@ class RecoHelper:
         return self.screencap
 
     # 识别结果
-    def recognize(self, node: str, override_key_value: dict = {}):
+    def recognize(self, node: str = "识别", override_key_value: dict = {}):
         image = self.get_screencap() if self.argv is None else self.argv.image
         self.reco_detail = self.context.run_recognition(
             node, image, {node: override_key_value}
