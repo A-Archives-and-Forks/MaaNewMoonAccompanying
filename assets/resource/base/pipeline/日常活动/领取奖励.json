@@ -7,7 +7,7 @@
     },
     "领取奖励_任务": {
         "recognition": "OCR",
-        "action": "Click",
+        "action": "Swipe",
         "expected": [
             "任务"
         ],
@@ -15,6 +15,7 @@
         "focus": "> 进入任务面板",
         "pre_delay": 800,
         "rate_limit": 2000,
+        "duration": 400,
         "__yamaape": {
             "position": {
                 "x": 236,
@@ -801,8 +802,8 @@
     "领取奖励_任务奖励": {
         "recognition": "DirectHit",
         "action": "DoNothing",
-        "pre_delay": 1,
-        "post_delay": 1,
+        "pre_delay": 0,
+        "post_delay": 0,
         "__yamaape": {
             "position": {
                 "x": -28,
@@ -877,8 +878,8 @@
     "领取奖励_角色升级开始": {
         "recognition": "DirectHit",
         "action": "DoNothing",
-        "pre_delay": 1,
-        "post_delay": 1,
+        "pre_delay": 0,
+        "post_delay": 0,
         "__yamaape": {
             "position": {
                 "x": -293,
