@@ -30,15 +30,20 @@
         "recognition": "OCR",
         "action": "DoNothing",
         "expected": [
-            "城市探索",
             "招募热线"
         ],
-        "pre_delay": 1,
-        "post_delay": 1,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "roi": [
+            19,
+            624,
+            195,
+            78
+        ],
         "__yamaape": {
             "position": {
-                "x": 838,
-                "y": -69
+                "x": 839,
+                "y": -84
             }
         },
         "next": [
@@ -175,8 +180,8 @@
         "focus": "> 已回到主界面",
         "__yamaape": {
             "position": {
-                "x": 1637,
-                "y": -19
+                "x": 1641,
+                "y": -20
             }
         }
     },
@@ -196,7 +201,7 @@
         "action": "DoNothing",
         "pre_delay": 0,
         "post_delay": 0,
-        "timeout": 1000,
+        "timeout": 500,
         "__yamaape": {
             "position": {
                 "x": 553,
