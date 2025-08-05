@@ -771,6 +771,8 @@
             58
         ],
         "post_delay": 1500,
+        "pre_delay": 800,
+        "rate_limit": 2000,
         "__yamaape": {
             "position": {
                 "x": 2483,
@@ -783,6 +785,9 @@
             "城市探索_委托事件",
             "城市探索_线索行动事件",
             "城市探索_剧情事件"
+        ],
+        "interrupt": [
+            "城市探索_确保展示详情"
         ]
     },
     "城市探索_回到主页": {
@@ -1735,53 +1740,6 @@
             "城市探索_等待指令"
         ]
     },
-    "城市探索_作战失败": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "结束行动"
-        ],
-        "pre_delay": 400,
-        "focus": "> 作战失败！",
-        "__yamaape": {
-            "position": {
-                "x": 4636,
-                "y": 884
-            }
-        },
-        "next": [
-            "城市探索_结束失败作战"
-        ]
-    },
-    "城市探索_确认开始战斗": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "行动开始"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 4486,
-                "y": 1134
-            }
-        }
-    },
-    "城市探索_等待指令": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "瞬时调度"
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 4489,
-                "y": 1310
-            }
-        },
-        "next": [
-            "城市探索_开启自动战斗"
-        ]
-    },
     "城市探索_选择特工2": {
         "recognition": "DirectHit",
         "action": "Click",
@@ -1922,6 +1880,53 @@
         },
         "next": [
             "城市探索_四倍速"
+        ]
+    },
+    "城市探索_作战失败": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "结束行动"
+        ],
+        "pre_delay": 400,
+        "focus": "> 作战失败！",
+        "__yamaape": {
+            "position": {
+                "x": 4636,
+                "y": 884
+            }
+        },
+        "next": [
+            "城市探索_结束失败作战"
+        ]
+    },
+    "城市探索_确认开始战斗": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "行动开始"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 4486,
+                "y": 1134
+            }
+        }
+    },
+    "城市探索_等待指令": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "瞬时调度"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 4489,
+                "y": 1310
+            }
+        },
+        "next": [
+            "城市探索_开启自动战斗"
         ]
     },
     "城市探索_结束失败作战": {
@@ -2085,19 +2090,6 @@
             "城市探索_城市界面"
         ]
     },
-    "城市探索_城市界面": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "__yamaape": {
-            "position": {
-                "x": -758,
-                "y": 492
-            }
-        },
-        "next": [
-            "城市探索_资源收取"
-        ]
-    },
     "城市探索_执行前返回主页": {
         "recognition": "DirectHit",
         "action": "Custom",
@@ -2114,6 +2106,19 @@
         ],
         "on_error": [
             "城市探索_直接进入城市探索"
+        ]
+    },
+    "城市探索_城市界面": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": -758,
+                "y": 492
+            }
+        },
+        "next": [
+            "城市探索_资源收取"
         ]
     },
     "城市探索_进入城市探索": {
@@ -2148,6 +2153,26 @@
         "next": [
             "城市探索_进入城市探索"
         ]
+    },
+    "城市探索_确保展示详情": {
+        "recognition": "OCR",
+        "action": "Click",
+        "target": [
+            465,
+            440,
+            58,
+            58
+        ],
+        "post_delay": 1500,
+        "expected": [
+            "事件回顾"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 2515,
+                "y": 523
+            }
+        }
     },
     "城市探索_点击奖励选项": {
         "recognition": "DirectHit",
