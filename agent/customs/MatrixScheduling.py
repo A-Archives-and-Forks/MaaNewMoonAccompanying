@@ -10,10 +10,10 @@ class StepMatrix:
         self.origin = origin
         self.step_size = step_size
 
-    def get_point(self, index: tuple) -> tuple:
+    def get_point(self, row: int = 1, col: int = 1) -> tuple:
         return (
-            self.origin[0] + self.step_size[0] * (index[0] - 1),
-            self.origin[1] + self.step_size[1] * (index[1] - 1),
+            self.origin[0] + self.step_size[0] * (col - 1),
+            self.origin[1] + self.step_size[1] * (row - 1),
         )
 
 
@@ -26,7 +26,7 @@ class StepMatrixManager:
         return cls.step_matrixes[key]
 
     @classmethod
-    def get(cls, key="default"):
+    def get(cls, key="default") -> StepMatrix:
         return cls.step_matrixes[key]
 
 

@@ -1,0 +1,280 @@
+{
+    "__yamaape_config_码头": {
+        "filename": "码头",
+        "version": "v0.3.4",
+        "prefix": "码头"
+    },
+    "码头_开始": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": -21,
+                "y": -24
+            }
+        },
+        "next": [
+            "码头_设置码头"
+        ]
+    },
+    "码头_设置码头": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "set_pier",
+        "pre_delay": 0,
+        "post_delay": 0,
+        "custom_action_param": "name=码头一",
+        "__yamaape": {
+            "position": {
+                "x": 244,
+                "y": -25
+            }
+        },
+        "next": [
+            "码头_开始调度",
+            "码头_检查关卡名"
+        ],
+        "interrupt": [
+            "码头_关闭提示"
+        ]
+    },
+    "码头_开始调度": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "开始调度",
+            "继续挑战"
+        ],
+        "focus": "> 开始调度",
+        "__yamaape": {
+            "position": {
+                "x": 497,
+                "y": -175
+            }
+        },
+        "next": [
+            "码头_检查关卡名"
+        ],
+        "interrupt": [
+            "码头_关闭提示"
+        ]
+    },
+    "码头_检查关卡名": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "activity/pier/stop.png"
+        ],
+        "pre_delay": 800,
+        "focus": "> 识别当前关卡",
+        "__yamaape": {
+            "position": {
+                "x": 760,
+                "y": -66
+            }
+        },
+        "next": [
+            "码头_识别关卡名"
+        ]
+    },
+    "码头_识别关卡名": {
+        "recognition": "OCR",
+        "action": "Custom",
+        "expected": [
+            "暂停中"
+        ],
+        "custom_action": "set_pier_level",
+        "pre_delay": 800,
+        "post_delay": 0,
+        "__yamaape": {
+            "position": {
+                "x": 1020,
+                "y": -66
+            }
+        },
+        "next": [
+            "码头_继续挑战"
+        ]
+    },
+    "码头_继续挑战": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "继续挑战"
+        ],
+        "post_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 1280,
+                "y": -66
+            }
+        },
+        "next": [
+            "码头_初始化矩阵"
+        ]
+    },
+    "码头_初始化矩阵": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "init_step_matrix",
+        "post_delay": 0,
+        "pre_delay": 0,
+        "custom_action_param": "ox=524&oy=118&sx=53&sy=53",
+        "__yamaape": {
+            "position": {
+                "x": 1547,
+                "y": -68
+            }
+        },
+        "next": [
+            "码头_开始操作"
+        ]
+    },
+    "码头_开始操作": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "auto_pier",
+        "post_delay": 0,
+        "pre_delay": 0,
+        "timeout": 8000,
+        "__yamaape": {
+            "position": {
+                "x": 1805,
+                "y": -67
+            }
+        },
+        "next": [
+            "码头_挑战完成"
+        ],
+        "on_error": [
+            "码头_挑战失败"
+        ],
+        "interrupt": [
+            "码头_关闭提示"
+        ]
+    },
+    "码头_挑战完成": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "挑战完成"
+        ],
+        "focus": "> 通关成功",
+        "__yamaape": {
+            "position": {
+                "x": 2067,
+                "y": -66
+            }
+        },
+        "next": [
+            "码头_下一关",
+            "码头_已通关"
+        ]
+    },
+    "码头_挑战失败": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "focus": "> 挑战失败，请尝试重新运行",
+        "__yamaape": {
+            "position": {
+                "x": 2070,
+                "y": 137
+            }
+        }
+    },
+    "码头_关闭提示": {
+        "recognition": "TemplateMatch",
+        "action": "DoNothing",
+        "pre_delay": 400,
+        "template": [
+            "close.png"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 2251,
+                "y": -425
+            }
+        }
+    },
+    "码头_下一关": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "下一关"
+        ],
+        "pre_delay": 800,
+        "focus": "> 进入下一关",
+        "__yamaape": {
+            "position": {
+                "x": 2329,
+                "y": -199
+            }
+        },
+        "next": [
+            "码头_检查关卡名"
+        ]
+    },
+    "码头_已通关": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "第10关"
+        ],
+        "focus": "> 已完成当前码头所有关卡",
+        "__yamaape": {
+            "position": {
+                "x": 2331,
+                "y": 33
+            }
+        },
+        "next": [
+            "码头_返回"
+        ]
+    },
+    "码头_返回": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "返回选关"
+        ],
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 2591,
+                "y": 33
+            }
+        },
+        "next": [
+            "码头_结束任务"
+        ]
+    },
+    "码头_结束任务": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": 2851,
+                "y": 33
+            }
+        }
+    },
+    "码头_关卡识别": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "关"
+        ],
+        "roi": [
+            524,
+            185,
+            235,
+            99
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1018,
+                "y": -257
+            }
+        }
+    }
+}

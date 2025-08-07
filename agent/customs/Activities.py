@@ -4,7 +4,241 @@ from maa.context import Context
 
 import time
 
-from .utils import parse_query_args, Prompt, RecoHelperOld, Tasker
+from .MatrixScheduling import StepMatrixManager
+from .utils import parse_query_args, Prompt, RecoHelperOld, RecoHelper, Tasker
+
+
+# 码头八点半
+pier_name = "码头一"
+pier_level = "第1关"
+
+pier_schedule = {
+    "码头一": {
+        "第1关": [
+            (4, 6),
+            (4, 7),
+            (5, 2),
+            (6, 6),
+            (7, 3),
+            (7, 7),
+            (5, 3),
+            (4, 5),
+            (3, 5),
+        ],
+        "第2关": [
+            (1, 3),
+            (3, 9),
+            (3, 3),
+            (8, 3),
+            (2, 5),
+            (5, 7),
+            (6, 7),
+            (7, 5),
+            (6, 2),
+        ],
+        "第3关": [
+            (1, 6),
+            (5, 7),
+            (3, 1),
+            (2, 3),
+            (6, 6),
+            (5, 6),
+            (4, 5),
+            (6, 4),
+            (7, 3),
+            (6, 1),
+            (5, 2, 2),
+        ],
+        "第4关": [
+            (1, 6),
+            (2, 3),
+            (7, 2),
+            (3, 2),
+            (4, 3),
+            (7, 7),
+            (6, 2),
+            (5, 6),
+            (6, 5),
+            (2, 8),
+        ],
+        "第5关": [
+            (2, 9),
+            (6, 1),
+            (7, 5),
+            (7, 7),
+            (1, 8),
+            (3, 6),
+            (3, 5),
+            (4, 7),
+            (2, 4),
+            (3, 2),
+            (5, 4),
+            (4, 3),
+        ],
+        "第6关": [
+            (1, 1),
+            (4, 6),
+            (4, 9),
+            (7, 5),
+            (3, 1),
+            (2, 3),
+            (1, 4),
+            (8, 7),
+            (7, 8),
+            (3, 2),
+            (6, 1),
+            (5, 2),
+            (8, 4),
+            (4, 3),
+        ],
+        "第7关": [
+            (4, 8),
+            (2, 7),
+            (3, 1),
+            (3, 8),
+            (1, 5),
+            (4, 6),
+            (3, 2),
+            (5, 7),
+            (8, 2),
+            (7, 4),
+            (2, 4),
+            (7, 3),
+            (1, 3),
+            (6, 3),
+        ],
+        "第8关": [
+            (1, 9),
+            (2, 4),
+            (3, 2),
+            (5, 5),
+            (3, 7),
+            (8, 1),
+            (7, 8),
+            (8, 5),
+            (7, 2),
+            (4, 1),
+            (6, 6),
+            (5, 7),
+            (1, 7),
+            (6, 4),
+        ],
+        "第9关": [
+            (1, 2),
+            (1, 6),
+            (2, 3),
+            (2, 1),
+            (4, 1),
+            (2, 5),
+            (4, 6),
+            (6, 7),
+            (5, 1),
+            (5, 2),
+            (5, 5),
+            (7, 5),
+            (8, 4),
+            (7, 4),
+        ],
+        "第10关": [
+            (1, 1),
+            (3, 7),
+            (4, 8),
+            (8, 5),
+            (2, 1),
+            (7, 7),
+            (7, 4),
+            (5, 6),
+            (2, 2),
+            (4, 5),
+            (8, 1),
+            (3, 2),
+            (7, 1),
+            (6, 3),
+            (7, 2),
+        ],
+    }
+}
+
+
+# 设置码头
+@AgentServer.custom_action("set_pier")
+class SetPier(CustomAction):
+    def run(
+        self, context: Context, argv: CustomAction.RunArg
+    ) -> CustomAction.RunResult | bool:
+        global pier_name
+        try:
+            args = parse_query_args(argv)
+            pier_name = args.get("name", "码头一")
+            Prompt.log(f"设置码头：{pier_name}")
+            return True
+        except Exception as e:
+            return Prompt.error("设置码头", e)
+
+
+# 设置码头关卡
+@AgentServer.custom_action("set_pier_level")
+class SetPierLevel(CustomAction):
+    def run(
+        self, context: Context, argv: CustomAction.RunArg
+    ) -> CustomAction.RunResult | bool:
+        global pier_level
+        try:
+            result = (
+                RecoHelper(context).recognize("码头_关卡识别").reco_detail.best_result
+            )
+            if not result:
+                return Prompt.error("关卡识别失败", use_defult_postfix=False)
+            pier_level = result.text
+            Prompt.log(f"当前关卡：{pier_level}")
+            return True
+        except Exception as e:
+            return Prompt.error("设置关卡", e)
+
+
+# 自动驾驶
+@AgentServer.custom_action("auto_pier")
+class AutoPier(CustomAction):
+    def run(
+        self, context: Context, argv: CustomAction.RunArg
+    ) -> CustomAction.RunResult | bool:
+        global pier_name, pier_level, pier_schedule
+        try:
+            # 初始化棋盘
+            schedule = pier_schedule[pier_name][pier_level]
+            if not schedule:
+                return Prompt.error("关卡识别错误！", use_defult_postfix=False)
+            matrix = StepMatrixManager.get()
+
+            # 发船
+            sleep_count = 0
+            for coordinate in schedule:
+                if Tasker.is_stopping(context):
+                    return False
+
+                # 等待上船
+                if sleep_count >= 4:
+                    Prompt.log("你上来啊！")
+                    time.sleep(2)
+                    sleep_count = 1
+                else:
+                    sleep_count += 1
+
+                # 延时等待
+                if len(coordinate) > 2:
+                    Prompt.log("你上来啊！")
+                    time.sleep(coordinate[2])
+
+                # 发船
+                Prompt.log(f"发船：{coordinate}")
+                target = matrix.get_point(coordinate[0], coordinate[1])
+                Tasker.get_controller(context).post_click(*target)
+                time.sleep(1)
+
+            Prompt.log("发船结束")
+            return True
+        except Exception as e:
+            return Prompt.error("自动驾驶", e)
 
 
 # 自动炒菜
