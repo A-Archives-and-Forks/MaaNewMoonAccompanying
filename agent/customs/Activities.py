@@ -67,11 +67,11 @@ pier_schedule = {
             (7, 5),
             (7, 7),
             (1, 8),
-            (3, 6),
-            (3, 5),
             (4, 7),
+            (3, 5),
             (2, 4),
             (3, 2),
+            (3, 6),
             (5, 4),
             (4, 3),
         ],
@@ -231,8 +231,7 @@ class AutoPier(CustomAction):
 
                 # 发船
                 Prompt.log(f"发船：{coordinate}")
-                target = matrix.get_point(coordinate[0], coordinate[1])
-                Tasker.get_controller(context).post_click(*target)
+                matrix.click(context, coordinate[0], coordinate[1])
                 time.sleep(1)
 
             Prompt.log("发船结束")
