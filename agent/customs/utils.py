@@ -209,17 +209,21 @@ class RecoHelper:
     def hit(self):
         return self.reco_detail is not None
 
-    # 获取最佳结果中心坐标
-    def get_target(self):
+    # 点击
+    def click(self, context: Context, offset: tuple[int, int] = (0, 0)):
         if not self.hit():
             return None
-        return self.get_reco_center(self.reco_detail.best_result)
+        res = self.reco_detail.best_result
+        target = RecoHelper.get_res_center(res)
+        target = (target[0] + offset[0], target[1] + offset[1])
+        Tasker.get_controller(context).post_click(*target).wait()
+        return target
 
     # 计算识别结果中心坐标
     @staticmethod
-    def get_reco_center(result: RecognitionResult):
+    def get_res_center(result: RecognitionResult) -> tuple[int, int]:
         box = result.box
-        return {"x": round(box[0] + box[2] / 2), "y": round(box[1] + box[3] / 2)}
+        return (round(box[0] + box[2] / 2), round(box[1] + box[3] / 2))
 
     # 统一可信度过滤
     @staticmethod

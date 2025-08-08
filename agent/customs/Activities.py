@@ -9,171 +9,254 @@ from .utils import parse_query_args, Prompt, RecoHelperOld, RecoHelper, Tasker
 
 
 # 码头八点半
-pier_name = "码头一"
 pier_level = "第1关"
 
 pier_schedule = {
-    "码头一": {
-        "第1关": [
-            (4, 6),
-            (4, 7),
-            (5, 2),
-            (6, 6),
-            (7, 3),
-            (7, 7),
-            (5, 3),
-            (4, 5),
-            (3, 5),
-        ],
-        "第2关": [
-            (1, 3),
-            (3, 9),
-            (3, 3),
-            (8, 3),
-            (2, 5),
-            (5, 7),
-            (6, 7),
-            (7, 5),
-            (6, 2),
-        ],
-        "第3关": [
-            (1, 6),
-            (5, 7),
-            (3, 1),
-            (2, 3),
-            (6, 6),
-            (5, 6),
-            (4, 5),
-            (6, 4),
-            (7, 3),
-            (6, 1),
-            (5, 2, 2),
-        ],
-        "第4关": [
-            (1, 6),
-            (2, 3),
-            (7, 2),
-            (3, 2),
-            (4, 3),
-            (7, 7),
-            (6, 2),
-            (5, 6),
-            (6, 5),
-            (2, 8),
-        ],
-        "第5关": [
-            (2, 9),
-            (6, 1),
-            (7, 5),
-            (7, 7),
-            (1, 8),
-            (4, 7),
-            (3, 5),
-            (2, 4),
-            (3, 2),
-            (3, 6),
-            (5, 4),
-            (4, 3),
-        ],
-        "第6关": [
-            (1, 1),
-            (4, 6),
-            (4, 9),
-            (7, 5),
-            (3, 1),
-            (2, 3),
-            (1, 4),
-            (8, 7),
-            (7, 8),
-            (3, 2),
-            (6, 1),
-            (5, 2),
-            (8, 4),
-            (4, 3),
-        ],
-        "第7关": [
-            (4, 8),
-            (2, 7),
-            (3, 1),
-            (3, 8),
-            (1, 5),
-            (4, 6),
-            (3, 2),
-            (5, 7),
-            (8, 2),
-            (7, 4),
-            (2, 4),
-            (7, 3),
-            (1, 3),
-            (6, 3),
-        ],
-        "第8关": [
-            (1, 9),
-            (2, 4),
-            (3, 2),
-            (5, 5),
-            (3, 7),
-            (8, 1),
-            (7, 8),
-            (8, 5),
-            (7, 2),
-            (4, 1),
-            (6, 6),
-            (5, 7),
-            (1, 7),
-            (6, 4),
-        ],
-        "第9关": [
-            (1, 2),
-            (1, 6),
-            (2, 3),
-            (2, 1),
-            (4, 1),
-            (2, 5),
-            (4, 6),
-            (6, 7),
-            (5, 1),
-            (5, 2),
-            (5, 5),
-            (7, 5),
-            (8, 4),
-            (7, 4),
-        ],
-        "第10关": [
-            (1, 1),
-            (3, 7),
-            (4, 8),
-            (8, 5),
-            (2, 1),
-            (7, 7),
-            (7, 4),
-            (5, 6),
-            (2, 2),
-            (4, 5),
-            (8, 1),
-            (3, 2),
-            (7, 1),
-            (6, 3),
-            (7, 2),
-        ],
-    }
+    "第1关": [
+        (4, 6),
+        (4, 7),
+        (5, 2),
+        (6, 6),
+        (7, 3),
+        (7, 7),
+        (5, 3),
+        (4, 5),
+        (3, 5),
+    ],
+    "第2关": [
+        (1, 3),
+        (3, 9),
+        (3, 3),
+        (8, 3),
+        (2, 5),
+        (5, 7),
+        (6, 7),
+        (7, 5),
+        (6, 2),
+    ],
+    "第3关": [
+        (1, 6),
+        (5, 7),
+        (3, 1),
+        (2, 3),
+        (6, 6),
+        (5, 6),
+        (4, 5),
+        (6, 4),
+        (7, 3),
+        (6, 1),
+        (5, 2, 2),
+    ],
+    "第4关": [
+        (1, 6),
+        (2, 3),
+        (7, 2),
+        (3, 2),
+        (4, 3),
+        (7, 7),
+        (6, 2),
+        (5, 6),
+        (6, 5),
+        (2, 8),
+    ],
+    "第5关": [
+        (2, 9),
+        (6, 1),
+        (7, 5),
+        (7, 7),
+        (1, 8),
+        (4, 7),
+        (3, 5),
+        (2, 4),
+        (3, 2),
+        (3, 6),
+        (5, 4),
+        (4, 3),
+    ],
+    "第6关": [
+        (1, 1),
+        (4, 6),
+        (4, 9),
+        (7, 5),
+        (3, 1),
+        (2, 3),
+        (1, 4),
+        (8, 7),
+        (7, 8),
+        (3, 2),
+        (6, 1),
+        (5, 2),
+        (8, 4),
+        (4, 3),
+    ],
+    "第7关": [
+        (4, 8),
+        (2, 7),
+        (3, 1),
+        (3, 8),
+        (1, 5),
+        (4, 6),
+        (3, 2),
+        (5, 7),
+        (8, 2),
+        (7, 4),
+        (2, 4),
+        (7, 3),
+        (1, 3),
+        (6, 3),
+    ],
+    "第8关": [
+        (1, 9),
+        (2, 4),
+        (3, 2),
+        (5, 5),
+        (3, 7),
+        (8, 1),
+        (7, 8),
+        (8, 5),
+        (7, 2),
+        (4, 1),
+        (6, 6),
+        (5, 7),
+        (1, 7),
+        (6, 4),
+    ],
+    "第9关": [
+        (1, 2),
+        (1, 6),
+        (2, 3),
+        (2, 1),
+        (4, 1),
+        (2, 5),
+        (4, 6),
+        (6, 7),
+        (5, 1),
+        (5, 2),
+        (5, 5),
+        (7, 5),
+        (8, 4),
+        (7, 4),
+    ],
+    "第10关": [
+        (1, 1),
+        (3, 7),
+        (4, 8),
+        (8, 5),
+        (2, 1),
+        (7, 7),
+        (7, 4),
+        (5, 6),
+        (2, 2),
+        (4, 5),
+        (8, 1),
+        (3, 2),
+        (7, 1),
+        (6, 3),
+        (7, 2),
+    ],
+    "第11关": [
+        (2, 5),
+        (5, 6),
+        (8, 3),
+        (6, 4),
+        (2, 9),
+        (8, 8),
+        (7, 6),
+        (3, 8),
+        (4, 6),
+        (4, 4),
+        (1, 4),
+        (2, 3),
+        (3, 4),
+        (3, 2),
+    ],
+    "第12关": [
+        (1, 4),
+        (1, 6),
+        (5, 7),
+        (8, 1),
+        (2, 3),
+        (3, 3),
+        (5, 6),
+        (7, 2),
+        (3, 1),
+        (8, 5),
+        (5, 4),
+        (6, 3),
+        (4, 3),
+    ],
+    "第13关": [
+        (8, 7),
+        (1, 4),
+        (2, 5),
+        (4, 1),
+        (1, 1),
+        (2, 4),
+        (4, 5),
+        (8, 4),
+        (2, 2),
+        (5, 1),
+        (7, 7),
+        (8, 3),
+        (6, 3),
+        (2, 6),
+        (7, 2),
+    ],
+    "第14关": [
+        (5, 6),
+        (2, 2),
+        (3, 1),
+        (3, 5),
+        (1, 4),
+        (8, 7),
+        (4, 2),
+        (7, 7),
+        (5, 3),
+        (6, 4),
+        (6, 3, 2),
+        (7, 3),
+        (7, 2),
+        (7, 4),
+    ],
+    "第15关": [
+        (1, 2),
+        (1, 6),
+        (3, 1),
+        (5, 1),
+        (2, 4),
+        (6, 1),
+        (8, 3),
+        (8, 2),
+        (8, 9),
+        (3, 6),
+        (3, 5),
+        (4, 5),
+        (6, 7),
+        (5, 4),
+        (5, 6),
+        (6, 5),
+        (6, 5),
+    ],
+    "第16关": [
+        (5, 9),
+        (2, 1),
+        (1, 5),
+        (6, 7),
+        (5, 4),
+        (4, 1),
+        (7, 1),
+        (4, 7),
+        (6, 3),
+        (8, 4),
+        (8, 3),
+        (3, 2),
+        (3, 4),
+        (4, 6),
+        (5, 2),
+        (3, 2, 2),
+        (2, 3),
+    ],
 }
-
-
-# 设置码头
-@AgentServer.custom_action("set_pier")
-class SetPier(CustomAction):
-    def run(
-        self, context: Context, argv: CustomAction.RunArg
-    ) -> CustomAction.RunResult | bool:
-        global pier_name
-        try:
-            args = parse_query_args(argv)
-            pier_name = args.get("name", "码头一")
-            Prompt.log(f"设置码头：{pier_name}")
-            return True
-        except Exception as e:
-            return Prompt.error("设置码头", e)
 
 
 # 设置码头关卡
@@ -202,12 +285,12 @@ class AutoPier(CustomAction):
     def run(
         self, context: Context, argv: CustomAction.RunArg
     ) -> CustomAction.RunResult | bool:
-        global pier_name, pier_level, pier_schedule
+        global pier_level, pier_schedule
         try:
             # 初始化棋盘
-            schedule = pier_schedule[pier_name][pier_level]
+            schedule = pier_schedule.get(pier_level)
             if not schedule:
-                return Prompt.error("关卡识别错误！", use_defult_postfix=False)
+                return Prompt.error("MNMA仅可完成前16关！", use_defult_postfix=False)
             matrix = StepMatrixManager.get()
 
             # 发船
@@ -215,6 +298,11 @@ class AutoPier(CustomAction):
             for coordinate in schedule:
                 if Tasker.is_stopping(context):
                     return False
+
+                if type(coordinate[0]) == int:
+                    delivery_type = "matrix"
+                elif type(coordinate[0]) == str:
+                    delivery_type = "belt"
 
                 # 等待上船
                 if sleep_count >= 4:
@@ -225,19 +313,59 @@ class AutoPier(CustomAction):
                     sleep_count += 1
 
                 # 延时等待
-                if len(coordinate) > 2:
+                if delivery_type == "matrix" and len(coordinate) > 2:
                     Prompt.log("你上来啊！")
                     time.sleep(coordinate[2])
 
                 # 发船
                 Prompt.log(f"发船：{coordinate}")
-                matrix.click(context, coordinate[0], coordinate[1])
+                if delivery_type == "matrix":
+                    matrix.click(context, coordinate[0], coordinate[1])
+                elif delivery_type == "belt":
+                    if not belt_delivery(context, coordinate):
+                        return Prompt.error("传送带发船失败")
+
                 time.sleep(1)
 
             Prompt.log("发船结束")
             return True
         except Exception as e:
             return Prompt.error("自动驾驶", e)
+
+
+# 传送带发船
+def belt_delivery(context: Context, coordinate: tuple[str, int, int]):
+    Prompt.log("等待传送带轮换")
+    for i in range(20):
+        # 左侧
+        template = f"activity/pier/{coordinate[0]}.png"
+        left_expand = coordinate[1] * 53
+        reco_helper = RecoHelper(context).recognize(
+            "码头_传送带左侧识别",
+            {
+                "template": template,
+                "roi": [381 - left_expand, 521, 115 + left_expand, 157],
+            },
+        )
+        if reco_helper.hit():
+            reco_helper.click(context, offset=(-6, 0))
+            return True
+
+        # 右侧
+        right_expand = coordinate[2] * 53
+        reco_helper = RecoHelper(context).recognize(
+            "码头_传送带右侧识别",
+            {
+                "template": template,
+                "roi": [978 - right_expand, 522, 75 + right_expand, 158],
+            },
+        )
+        if reco_helper.hit():
+            reco_helper.click(context, offset=(-6, 0))
+            return True
+
+        time.sleep(1)
+    return False
 
 
 # 自动炒菜
