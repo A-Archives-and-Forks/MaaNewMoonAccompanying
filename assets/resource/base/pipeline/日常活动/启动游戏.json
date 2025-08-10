@@ -294,6 +294,18 @@
             "启动游戏_检测结束"
         ]
     },
+    "启动游戏_检测结束": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "focus": "> 已进入主界面",
+        "pre_delay": 0,
+        "__yamaape": {
+            "position": {
+                "x": 2501,
+                "y": 366
+            }
+        }
+    },
     "启动游戏_启动游戏": {
         "recognition": "DirectHit",
         "action": "StartApp",
@@ -338,17 +350,5 @@
         "next": [
             "启动游戏_关闭游戏"
         ]
-    },
-    "启动游戏_检测结束": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "focus": "> 已进入主界面",
-        "pre_delay": 0,
-        "__yamaape": {
-            "position": {
-                "x": 2501,
-                "y": 366
-            }
-        }
     }
 }

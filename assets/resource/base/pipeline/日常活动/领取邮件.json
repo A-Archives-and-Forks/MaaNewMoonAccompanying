@@ -17,8 +17,8 @@
         "focus": "> 进入邮件面板",
         "timeout": 2000,
         "threshold": [
-            0.6,
-            0.6
+            0.8,
+            0.8
         ],
         "__yamaape": {
             "position": {

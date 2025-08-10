@@ -60,15 +60,15 @@
             "jump.png",
             "chat_room/close.png"
         ],
-        "threshold": [
-            0.9,
-            0.9,
-            0.9,
-            0.9,
-            0.9
-        ],
         "pre_delay": 0,
         "index": -1,
+        "threshold": [
+            0.8,
+            0.8,
+            0.8,
+            0.8,
+            0.9
+        ],
         "__yamaape": {
             "position": {
                 "x": 522,
@@ -89,8 +89,8 @@
         "pre_delay": 0,
         "__yamaape": {
             "position": {
-                "x": 523,
-                "y": 318
+                "x": 522,
+                "y": 311
             }
         },
         "next": [
@@ -109,8 +109,8 @@
         "pre_delay": 0,
         "__yamaape": {
             "position": {
-                "x": 523,
-                "y": 510
+                "x": 521,
+                "y": 497
             }
         },
         "next": [
@@ -146,8 +146,8 @@
         "post_delay": 800,
         "__yamaape": {
             "position": {
-                "x": 837,
-                "y": 248
+                "x": 820,
+                "y": 241
             }
         },
         "next": [
@@ -191,8 +191,8 @@
         "focus": "返回主界面失败，请立即停止后续任务！",
         "__yamaape": {
             "position": {
-                "x": 1085,
-                "y": 249
+                "x": 1068,
+                "y": 242
             }
         }
     },
