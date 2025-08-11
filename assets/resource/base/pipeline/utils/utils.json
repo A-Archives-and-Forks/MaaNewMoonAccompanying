@@ -20,6 +20,7 @@
         "custom_action": "judge_config",
         "custom_action_param": "key=pre_back_home",
         "next": "返回主页",
+        "on_error": "null",
         "pre_delay": 0,
         "post_delay": 0
     }

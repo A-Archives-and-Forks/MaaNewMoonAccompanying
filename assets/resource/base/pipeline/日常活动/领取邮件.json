@@ -169,8 +169,8 @@
         "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": -200,
-                "y": -6
+                "x": -194,
+                "y": -64
             }
         },
         "next": [
@@ -184,26 +184,8 @@
         "custom_action_param": "key=全局前置返回主页",
         "__yamaape": {
             "position": {
-                "x": 66,
-                "y": -166
-            }
-        },
-        "next": [
-            "领取邮件_领取邮件"
-        ],
-        "on_error": [
-            "领取邮件_直接领取"
-        ]
-    },
-    "领取邮件_直接领取": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "pre_delay": 0,
-        "post_delay": 0,
-        "__yamaape": {
-            "position": {
-                "x": 92,
-                "y": 31
+                "x": 80,
+                "y": -66
             }
         },
         "next": [

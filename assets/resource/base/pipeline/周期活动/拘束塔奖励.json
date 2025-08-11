@@ -43,16 +43,24 @@
         "custom_action_param": "key=全局前置返回主页",
         "__yamaape": {
             "position": {
-                "x": 1931,
-                "y": 788
+                "x": 1946,
+                "y": 894
             }
         },
         "next": [
             "拘束塔奖励_战略行动"
-        ],
-        "on_error": [
-            "拘束塔奖励_直接开始"
         ]
+    },
+    "拘束塔奖励_已领取提示": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "focus": "> 本周已领取过拘束塔奖励",
+        "__yamaape": {
+            "position": {
+                "x": 1700,
+                "y": 1077
+            }
+        }
     },
     "拘束塔奖励_战略行动": {
         "recognition": "OCR",
@@ -231,32 +239,6 @@
             "position": {
                 "x": 3047,
                 "y": 1475
-            }
-        }
-    },
-    "拘束塔奖励_直接开始": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "pre_delay": 0,
-        "post_delay": 0,
-        "__yamaape": {
-            "position": {
-                "x": 1963,
-                "y": 981
-            }
-        },
-        "next": [
-            "拘束塔奖励_战略行动"
-        ]
-    },
-    "拘束塔奖励_已领取提示": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "focus": "> 本周已领取过拘束塔奖励",
-        "__yamaape": {
-            "position": {
-                "x": 1700,
-                "y": 1077
             }
         }
     }

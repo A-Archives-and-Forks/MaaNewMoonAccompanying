@@ -234,8 +234,8 @@
         "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": -549,
-                "y": -35
+                "x": -542,
+                "y": -99
             }
         },
         "next": [
@@ -249,26 +249,8 @@
         "custom_action_param": "key=全局前置返回主页",
         "__yamaape": {
             "position": {
-                "x": -292,
-                "y": -168
-            }
-        },
-        "next": [
-            "友谊交换_进入友谊界面"
-        ],
-        "on_error": [
-            "友谊交换_直接友谊交换"
-        ]
-    },
-    "友谊交换_直接友谊交换": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "pre_delay": 0,
-        "post_delay": 0,
-        "__yamaape": {
-            "position": {
-                "x": -257,
-                "y": 23
+                "x": -277,
+                "y": -97
             }
         },
         "next": [

@@ -1663,14 +1663,11 @@
         "__yamaape": {
             "position": {
                 "x": -36,
-                "y": -190
+                "y": -110
             }
         },
         "next": [
             "清体力_战略行动"
-        ],
-        "on_error": [
-            "清体力_无需返回主页"
         ]
     },
     "清体力_指定作战队伍": {
@@ -1952,21 +1949,6 @@
         },
         "next": [
             "清体力_准备战斗"
-        ]
-    },
-    "清体力_无需返回主页": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "pre_delay": 0,
-        "post_delay": 0,
-        "__yamaape": {
-            "position": {
-                "x": -8,
-                "y": 11
-            }
-        },
-        "next": [
-            "清体力_战略行动"
         ]
     }
 }

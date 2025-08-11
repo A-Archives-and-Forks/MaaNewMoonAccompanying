@@ -5,19 +5,6 @@
         "prefix": "缤纷纪念卡",
         "export": ""
     },
-    "缤纷纪念卡_开始": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "__yamaape": {
-            "position": {
-                "x": 1223,
-                "y": 390
-            }
-        },
-        "next": [
-            "缤纷纪念卡_进入活动界面"
-        ]
-    },
     "缤纷纪念卡_进入活动界面": {
         "recognition": "DirectHit",
         "action": "Custom",
@@ -210,5 +197,33 @@
                 "y": 517
             }
         }
+    },
+    "缤纷纪念卡_开始": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": 952,
+                "y": 387
+            }
+        },
+        "next": [
+            "缤纷纪念卡_执行前返回主页"
+        ]
+    },
+    "缤纷纪念卡_执行前返回主页": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "run",
+        "custom_action_param": "key=全局前置返回主页",
+        "__yamaape": {
+            "position": {
+                "x": 1212,
+                "y": 387
+            }
+        },
+        "next": [
+            "缤纷纪念卡_进入活动界面"
+        ]
     }
 }

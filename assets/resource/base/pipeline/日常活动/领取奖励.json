@@ -976,8 +976,8 @@
         "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": -844,
-                "y": 63
+                "x": -840,
+                "y": 60
             }
         },
         "next": [
@@ -991,26 +991,8 @@
         "custom_action_param": "key=全局前置返回主页",
         "__yamaape": {
             "position": {
-                "x": -572,
-                "y": -89
-            }
-        },
-        "next": [
-            "领取奖励_角色升级开始"
-        ],
-        "on_error": [
-            "领取奖励_直接开始"
-        ]
-    },
-    "领取奖励_直接开始": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "pre_delay": 0,
-        "post_delay": 0,
-        "__yamaape": {
-            "position": {
-                "x": -547,
-                "y": 112
+                "x": -569,
+                "y": 60
             }
         },
         "next": [

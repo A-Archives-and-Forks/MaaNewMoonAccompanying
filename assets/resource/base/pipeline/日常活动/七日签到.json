@@ -70,6 +70,18 @@
             "七日签到_结束"
         ]
     },
+    "七日签到_结束": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "pre_delay": 0,
+        "post_delay": 0,
+        "__yamaape": {
+            "position": {
+                "x": 1923,
+                "y": 191
+            }
+        }
+    },
     "七日签到_活动签到": {
         "recognition": "OCR",
         "action": "Click",
@@ -157,18 +169,6 @@
             "七日签到_周期记录"
         ]
     },
-    "七日签到_结束": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "pre_delay": 0,
-        "post_delay": 0,
-        "__yamaape": {
-            "position": {
-                "x": 1923,
-                "y": 191
-            }
-        }
-    },
     "七日签到_周期检查结束": {
         "recognition": "DirectHit",
         "action": "DoNothing",
@@ -191,15 +191,12 @@
         "custom_action_param": "key=全局前置返回主页",
         "__yamaape": {
             "position": {
-                "x": -317,
-                "y": 50
+                "x": -297,
+                "y": 147
             }
         },
         "next": [
             "七日签到_开始签到"
-        ],
-        "on_error": [
-            "七日签到_直接签到"
         ]
     },
     "七日签到_开始": {
@@ -235,21 +232,6 @@
         ],
         "on_error": [
             "七日签到_今日已执行"
-        ]
-    },
-    "七日签到_直接签到": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "pre_delay": 0,
-        "post_delay": 0,
-        "__yamaape": {
-            "position": {
-                "x": -281,
-                "y": 240
-            }
-        },
-        "next": [
-            "七日签到_开始签到"
         ]
     },
     "七日签到_今日已执行": {
