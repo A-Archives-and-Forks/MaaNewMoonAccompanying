@@ -71,10 +71,12 @@ class SummaryLiaisonRecord(CustomAction):
             if len(records) == 0 and count == 0:
                 return False
             if not is_pre_quit:
-                records.append({"name": six_name if six_name else "已垫抽", "count": count})
+                records.append(
+                    {"name": six_name if six_name else "已垫抽", "count": count}
+                )
             Prompt.log("当前系列卡池情况：", use_pre_devider=True)
             for record in records:
-                Prompt.log(f"{record['name']}：{record['count']}抽")
+                Prompt.log(f"{record['name']}：{record['count']}抽", is_continuous=True)
             Prompt.log(use_post_devider=True)
 
             return True

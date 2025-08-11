@@ -51,13 +51,17 @@ def parse_list_input(input: str, split_regex=r",\s*|，\s*|、\s*|\s+") -> list[
 class Prompt:
     @staticmethod
     def log(
-        content: str="", use_default_prefix=True, use_pre_devider=False, use_post_devider=False
+        content: str = "",
+        is_continuous=False,
+        use_default_prefix=True,
+        use_pre_devider=False,
+        use_post_devider=False,
     ):
         if use_default_prefix and not (use_pre_devider or use_post_devider):
             content = f"> {content}"
         if use_pre_devider:
             cprint("——" * 5)
-        print(f"{content}")
+        cprint(content) if is_continuous else print(content)
         if use_post_devider:
             cprint("——" * 5)
 
