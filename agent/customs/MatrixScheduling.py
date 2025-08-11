@@ -18,7 +18,7 @@ class StepMatrix:
 
     def click(self, context: Context, row: int = 1, col: int = 1) -> bool:
         target = self.get_point(row, col)
-        Tasker.get_controller(context).post_click(*target).wait()
+        Tasker.click(context, *target)
 
 
 class StepMatrixManager:

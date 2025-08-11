@@ -51,14 +51,14 @@ def parse_list_input(input: str, split_regex=r",\s*|，\s*|、\s*|\s+") -> list[
 class Prompt:
     @staticmethod
     def log(
-        content: str, use_default_prefix=True, pre_devider=False, post_devider=False
+        content: str="", use_default_prefix=True, use_pre_devider=False, use_post_devider=False
     ):
-        if use_default_prefix and not (pre_devider or post_devider):
+        if use_default_prefix and not (use_pre_devider or use_post_devider):
             content = f"> {content}"
-        if pre_devider:
+        if use_pre_devider:
             cprint("——" * 5)
         print(f"{content}")
-        if post_devider:
+        if use_post_devider:
             cprint("——" * 5)
 
     @staticmethod
@@ -173,13 +173,29 @@ class Configs:
 
 # 控制器
 class Tasker:
+    # 获取控制器
+    def _ctrler(context: Context):
+        return context.tasker.controller
+
+    # 是否正在停止
+    @staticmethod
+    def is_stopping(context: Context):
+        return context.tasker.stopping
+
+    # 获取控制器（错航成旅版本后删除）
     @staticmethod
     def get_controller(context: Context) -> Controller:
         return context.tasker.controller
 
+    # 截图
     @staticmethod
-    def is_stopping(context: Context):
-        return context.tasker.stopping
+    def screenshot(context: Context) -> np.ndarray:
+        return Tasker._ctrler(context).post_screencap().wait().get()
+
+    # 点击
+    @staticmethod
+    def click(context: Context, x: int, y: int):
+        return Tasker._ctrler(context).post_click(x, y).wait()
 
 
 # 识别器
@@ -189,17 +205,21 @@ class RecoHelper:
     def __init__(self, context: Context, argv: CustomRecognition.AnalyzeArg = None):
         self.context = context
         self.argv = argv
+        self.screencap: np.ndarray | None = None
 
     # 截图
     def get_screencap(self) -> np.ndarray:
-        self.screencap = (
-            Tasker.get_controller(self.context).post_screencap().wait().get()
-        )
+        self.screencap = Tasker.screenshot(self.context)
         return self.screencap
 
     # 识别结果
     def recognize(self, node: str = "识别", override_key_value: dict = {}):
-        image = self.get_screencap() if self.argv is None else self.argv.image
+        if self.screencap is not None:
+            image = self.screencap
+        elif self.argv:
+            image = self.argv.image
+        else:
+            image = self.get_screencap()
         self.reco_detail = self.context.run_recognition(
             node, image, {node: override_key_value}
         )
@@ -216,7 +236,7 @@ class RecoHelper:
         res = self.reco_detail.best_result
         target = RecoHelper.get_res_center(res)
         target = (target[0] + offset[0], target[1] + offset[1])
-        Tasker.get_controller(context).post_click(*target).wait()
+        Tasker.click(context, *target)
         return target
 
     # 计算识别结果中心坐标
