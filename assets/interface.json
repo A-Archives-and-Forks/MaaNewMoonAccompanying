@@ -1,10 +1,10 @@
 {
     "name": "MaaNewMoonAccompanying",
     "url": "https://github.com/kqcoxn/MaaNewMoonAccompanying",
-    "custom_title": "MNMA新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v2.1.10 - MFAA | 游戏版本：错航成旅·下",
+    "custom_title": "MNMA新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v2.1.11 - MFAA | 游戏版本：错航成旅·下",
     "mirrorchyan_rid": "MNMA",
     "mirrorchyan_multiplatform": true,
-    "version": "v2.1.10",
+    "version": "v2.1.11",
     "mfa_min_version": "v1.6.2",
     "mfa_max_version": "v1.6.2",
     "message": "- 新 月 同 行 -",
