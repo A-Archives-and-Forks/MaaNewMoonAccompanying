@@ -7,6 +7,7 @@
     "agent": "python ./agent/dev_main.py",
     "debug": "python -m MaaDebugger",
     "check": "python ./dev/install.py",
-    "dev": "python ./dev/build.py"
+    "dev": "python ./dev/build.py",
+    "release": "git tag -a v2.1.13 -m 'release v2.1.13' && git push origin v2.1.13"
   }
 }
