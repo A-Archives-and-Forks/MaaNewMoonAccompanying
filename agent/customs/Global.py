@@ -17,18 +17,27 @@ class DelayFocusHook(CustomAction):
     def run(
         self, context: Context, argv: CustomAction.RunArg
     ) -> CustomAction.RunResult | bool:
-        global delay_focus
+        global delay_focus, focus_wl
         try:
             args = parse_query_args(argv)
             key = args.get("key", "")
             focus = args.get("focus", "")
+            wl = args.get("wl", False)
+            if wl == "true":
+                wl = True
+            else:
+                wl = False
+
             delay_focus[key] = focus
+            if wl:
+                focus_wl.add(key)
+
             return True
         except Exception as e:
             return Prompt.error("添加延迟提醒", e)
 
 
-# 添加延迟提醒
+# 添加延迟提醒白名单
 @AgentServer.custom_action("set_focus_wl")
 class SetFocusBlackList(CustomAction):
     def run(
@@ -42,7 +51,7 @@ class SetFocusBlackList(CustomAction):
                 focus_wl.add(key)
             return True
         except Exception as e:
-            return Prompt.error("添加延迟提醒黑名单", e)
+            return Prompt.error("添加延迟提醒白名单", e)
 
 
 # 延迟提醒

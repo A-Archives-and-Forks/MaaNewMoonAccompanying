@@ -28,7 +28,7 @@ class RunSetSquad(CustomAction):
             return Prompt.error("选择编队", e)
 
 
-# 选择编队
+# 进入活动面板
 @AgentServer.custom_action("run_enter_activity")
 class RunSetSquad(CustomAction):
     def run(

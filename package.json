@@ -1,5 +1,12 @@
 {
   "devDependencies": {
     "prettier-plugin-multiline-arrays": "^3.0.6"
+  },
+  "scripts": {
+    "tool": "python ./dev/openMFATools.py",
+    "agent": "python ./agent/dev_main.py",
+    "debug": "python -m MaaDebugger",
+    "check": "python ./dev/install.py",
+    "dev": "python ./dev/build.py"
   }
 }
