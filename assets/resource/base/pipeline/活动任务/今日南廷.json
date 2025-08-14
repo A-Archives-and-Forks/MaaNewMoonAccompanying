@@ -13,8 +13,8 @@
         "timeout": 2000,
         "__yamaape": {
             "position": {
-                "x": 1896,
-                "y": 605
+                "x": 2083,
+                "y": 1084
             }
         },
         "next": [
@@ -42,12 +42,12 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 2156,
-                "y": 605
+                "x": 2358,
+                "y": 1353
             }
         },
         "next": [
-            "今日南廷_确保进入选关界面"
+            "今日南廷_延迟提醒"
         ]
     },
     "今日南廷_签阅": {
@@ -105,146 +105,12 @@
         "focus": "> 活动已完成",
         "__yamaape": {
             "position": {
-                "x": 2155,
-                "y": 864
+                "x": 2355,
+                "y": 1627
             }
         },
         "next": [
             "今日南廷_返回主页"
-        ]
-    },
-    "今日南廷_确保进入选关界面": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "车厢清理奖励"
-        ],
-        "post_delay": 400,
-        "focus": "> 前往双倍关卡",
-        "__yamaape": {
-            "position": {
-                "x": 2419,
-                "y": 604
-            }
-        },
-        "next": [
-            "今日南廷_双倍单元"
-        ]
-    },
-    "今日南廷_双倍单元": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "双倍"
-        ],
-        "target_offset": [
-            -111,
-            -18,
-            0,
-            0
-        ],
-        "order_by": "Vertical",
-        "pre_delay": 400,
-        "post_delay": 1000,
-        "roi": [
-            14,
-            72,
-            274,
-            374
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 2676,
-                "y": 605
-            }
-        },
-        "next": [
-            "今日南廷_双倍关卡"
-        ]
-    },
-    "今日南廷_双倍关卡": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "双倍"
-        ],
-        "target_offset": [
-            -86,
-            -22,
-            0,
-            0
-        ],
-        "order_by": "Vertical",
-        "pre_delay": 400,
-        "roi": [
-            1013,
-            60,
-            258,
-            586
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 2936,
-                "y": 605
-            }
-        },
-        "next": [
-            "今日南廷_战斗"
-        ]
-    },
-    "今日南廷_战斗": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "run",
-        "custom_action_param": "key=清体力_准备战斗",
-        "__yamaape": {
-            "position": {
-                "x": 3196,
-                "y": 605
-            }
-        },
-        "next": [
-            "今日南廷_重新进入活动面板"
-        ]
-    },
-    "今日南廷_重新进入活动面板": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "run_enter_activity",
-        "custom_action_param": "title=南廷大事",
-        "focus": "> 重新进入活动面板",
-        "__yamaape": {
-            "position": {
-                "x": 2066,
-                "y": 1087
-            }
-        },
-        "next": [
-            "今日南廷_签阅",
-            "今日南廷_仍未完成"
-        ]
-    },
-    "今日南廷_仍未完成": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "前往获得"
-        ],
-        "focus": "> 条件未达成",
-        "roi": [
-            1003,
-            600,
-            175,
-            58
-        ],
-        "__yamaape": {
-            "position": {
-                "x": 2357,
-                "y": 1351
-            }
-        },
-        "next": [
-            "今日南廷_延迟提醒"
         ]
     },
     "今日南廷_领取奖励": {
@@ -271,6 +137,21 @@
             "今日南廷_返回主页"
         ]
     },
+    "今日南廷_返回主页": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "run",
+        "custom_action_param": "key=返回主页",
+        "__yamaape": {
+            "position": {
+                "x": 3154,
+                "y": 1081
+            }
+        },
+        "next": [
+            "今日南廷_结束任务"
+        ]
+    },
     "今日南廷_确保已领取奖励": {
         "recognition": "OCR",
         "action": "Click",
@@ -284,25 +165,13 @@
             }
         }
     },
-    "今日南廷_返回主页": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "run",
-        "custom_action_param": "key=返回主页",
-        "__yamaape": {
-            "position": {
-                "x": 3153,
-                "y": 1081
-            }
-        }
-    },
     "今日南廷_开始": {
         "recognition": "DirectHit",
         "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": 1377,
-                "y": 602
+                "x": 1564,
+                "y": 1081
             }
         },
         "next": [
@@ -316,8 +185,8 @@
         "custom_action_param": "key=全局前置返回主页",
         "__yamaape": {
             "position": {
-                "x": 1636,
-                "y": 605
+                "x": 1823,
+                "y": 1084
             }
         },
         "next": [
@@ -340,5 +209,15 @@
         "next": [
             "今日南廷_返回主页"
         ]
+    },
+    "今日南廷_结束任务": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": 3414,
+                "y": 1081
+            }
+        }
     }
 }
