@@ -50,12 +50,16 @@ class Run(CustomAction):
             args = parse_query_args(argv)
             type = args.get("type", "task")
             key = args.get("key", "")
+            stop_node = args.get("stop", "")
 
             if type == "" or key == "":
                 return False
 
             if type == "task":
-                context.run_task(key)
+                override = {}
+                if stop_node != "":
+                    override[stop_node] = {"next": []}
+                context.run_task(key, override)
             elif type == "node":
                 context.run_action(key)
 
