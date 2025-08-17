@@ -49,19 +49,19 @@ class Run(CustomAction):
         try:
             args = parse_query_args(argv)
             type = args.get("type", "task")
-            key = args.get("key", "")
+            entry = args.get("key", "")
             stop_node = args.get("stop", "")
 
-            if type == "" or key == "":
+            if type == "" or entry == "":
                 return False
 
             if type == "task":
                 override = {}
                 if stop_node != "":
                     override[stop_node] = {"next": []}
-                context.run_task(key, override)
+                context.run_task(entry, override)
             elif type == "node":
-                context.run_action(key)
+                context.run_action(entry)
 
             return True
         except Exception as e:

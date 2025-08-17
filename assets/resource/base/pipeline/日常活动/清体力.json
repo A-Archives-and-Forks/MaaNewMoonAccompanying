@@ -229,8 +229,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 2932,
-                "y": 564
+                "x": 3165,
+                "y": 816
             }
         },
         "next": [
@@ -253,7 +253,7 @@
             "清体力_使用稳定合剂"
         ],
         "on_error": [
-            "清体力_返回倍率选择3"
+            "清体力_检查将过期合剂"
         ]
     },
     "清体力_4x行动前检测2": {
@@ -280,8 +280,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 3187,
-                "y": 563
+                "x": 3420,
+                "y": 815
             }
         },
         "next": [
@@ -346,8 +346,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 3439,
-                "y": 564
+                "x": 3672,
+                "y": 816
             }
         },
         "next": [
@@ -442,8 +442,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 3692,
-                "y": 565
+                "x": 3925,
+                "y": 817
             }
         },
         "next": [
@@ -489,8 +489,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 2927,
-                "y": 785
+                "x": 3160,
+                "y": 1037
             }
         },
         "next": [
@@ -505,8 +505,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 4040,
-                "y": 734
+                "x": 4273,
+                "y": 986
             }
         },
         "next": [
@@ -521,8 +521,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 3172,
-                "y": 782
+                "x": 3405,
+                "y": 1034
             }
         },
         "next": [
@@ -537,8 +537,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 4074,
-                "y": 891
+                "x": 4307,
+                "y": 1143
             }
         },
         "next": [
@@ -561,8 +561,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 3434,
-                "y": 781
+                "x": 3667,
+                "y": 1033
             }
         },
         "next": [
@@ -581,8 +581,8 @@
         "focus": "> 开始行动",
         "__yamaape": {
             "position": {
-                "x": 4346,
-                "y": 764
+                "x": 4579,
+                "y": 1016
             }
         },
         "next": [
@@ -602,8 +602,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 3709,
-                "y": 797
+                "x": 3942,
+                "y": 1049
             }
         },
         "next": [
@@ -621,8 +621,8 @@
         "focus": "> 玩家升级",
         "__yamaape": {
             "position": {
-                "x": 4635,
-                "y": 764
+                "x": 4868,
+                "y": 1016
             }
         },
         "next": [
@@ -639,8 +639,8 @@
         "focus": "> 体力耗尽",
         "__yamaape": {
             "position": {
-                "x": 4633,
-                "y": 987
+                "x": 4866,
+                "y": 1239
             }
         },
         "next": [
@@ -655,8 +655,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 4372,
-                "y": 1043
+                "x": 4605,
+                "y": 1295
             }
         }
     },
@@ -668,8 +668,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 2931,
-                "y": 1022
+                "x": 3164,
+                "y": 1274
             }
         },
         "next": [
@@ -686,8 +686,8 @@
         "focus": "> 作战结束，使用升级体力再次作战",
         "__yamaape": {
             "position": {
-                "x": 4924,
-                "y": 676
+                "x": 5157,
+                "y": 928
             }
         },
         "next": [
@@ -701,8 +701,8 @@
         "custom_action_param": "key=返回主页",
         "__yamaape": {
             "position": {
-                "x": 4924,
-                "y": 1163
+                "x": 5157,
+                "y": 1415
             }
         },
         "next": [
@@ -717,8 +717,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 3175,
-                "y": 1027
+                "x": 3408,
+                "y": 1279
             }
         },
         "next": [
@@ -730,8 +730,8 @@
         "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": 5172,
-                "y": 1165
+                "x": 5405,
+                "y": 1417
             }
         }
     },
@@ -751,8 +751,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 3433,
-                "y": 1026
+                "x": 3666,
+                "y": 1278
             }
         },
         "next": [
@@ -767,8 +767,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 3710,
-                "y": 1026
+                "x": 3943,
+                "y": 1278
             }
         },
         "next": [
@@ -786,8 +786,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 4017,
-                "y": 1194
+                "x": 4250,
+                "y": 1446
             }
         },
         "next": [
@@ -803,8 +803,8 @@
         "focus": "> 设置助战",
         "__yamaape": {
             "position": {
-                "x": 3834,
-                "y": 2459
+                "x": 3890,
+                "y": 2705
             }
         },
         "next": [
@@ -821,8 +821,8 @@
         "focus": "> 今日助战次数已耗尽",
         "__yamaape": {
             "position": {
-                "x": 4099,
-                "y": 2681
+                "x": 4155,
+                "y": 2927
             }
         },
         "next": [
@@ -839,8 +839,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 4101,
-                "y": 2457
+                "x": 4157,
+                "y": 2703
             }
         },
         "next": [
@@ -852,8 +852,8 @@
         "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": 4897,
-                "y": 2855
+                "x": 4953,
+                "y": 3101
             }
         }
     },
@@ -869,8 +869,8 @@
         "timeout": 2000,
         "__yamaape": {
             "position": {
-                "x": 4355,
-                "y": 2453
+                "x": 4411,
+                "y": 2699
             }
         },
         "next": [
@@ -889,8 +889,8 @@
         "focus": "> 已存在相同特工，尝试重新选择助战",
         "__yamaape": {
             "position": {
-                "x": 4615,
-                "y": 2453
+                "x": 4671,
+                "y": 2699
             }
         },
         "next": [
@@ -904,8 +904,8 @@
         "custom_action_param": "t=assistance",
         "__yamaape": {
             "position": {
-                "x": 4617,
-                "y": 2653
+                "x": 4673,
+                "y": 2899
             }
         },
         "next": [
@@ -921,8 +921,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 4863,
-                "y": 2446
+                "x": 4919,
+                "y": 2692
             }
         },
         "next": [
@@ -938,8 +938,8 @@
         "pre_delay": 400,
         "__yamaape": {
             "position": {
-                "x": 5123,
-                "y": 2313
+                "x": 5179,
+                "y": 2559
             }
         },
         "next": [
@@ -956,8 +956,8 @@
         "post_delay": 1200,
         "__yamaape": {
             "position": {
-                "x": 3855,
-                "y": 2238
+                "x": 3911,
+                "y": 2484
             }
         },
         "next": [
@@ -1677,8 +1677,8 @@
         "pre_delay": 0,
         "__yamaape": {
             "position": {
-                "x": 3757,
-                "y": 1686
+                "x": 3753,
+                "y": 1932
             }
         },
         "next": [
@@ -1695,8 +1695,8 @@
         "post_delay": 0,
         "__yamaape": {
             "position": {
-                "x": 4017,
-                "y": 1638
+                "x": 4013,
+                "y": 1884
             }
         },
         "next": [
@@ -1713,8 +1713,8 @@
         "custom_action_param": "e=",
         "__yamaape": {
             "position": {
-                "x": 4275,
-                "y": 1620
+                "x": 4271,
+                "y": 1866
             }
         },
         "next": [
@@ -1728,8 +1728,8 @@
         "post_delay": 0,
         "__yamaape": {
             "position": {
-                "x": 4538,
-                "y": 1748
+                "x": 4534,
+                "y": 1994
             }
         }
     },
@@ -1742,8 +1742,8 @@
         "post_delay": 0,
         "__yamaape": {
             "position": {
-                "x": 3473,
-                "y": 1563
+                "x": 3469,
+                "y": 1809
             }
         },
         "next": [
@@ -1759,37 +1759,20 @@
         "post_delay": 0,
         "__yamaape": {
             "position": {
-                "x": 3476,
-                "y": 1819
+                "x": 3472,
+                "y": 2065
             }
         },
         "next": [
             "清体力_指定作战队伍"
         ]
     },
-    "清体力_跳过使用合剂节点1": {
+    "清体力_跳过使用合剂节点": {
         "recognition": "DirectHit",
         "action": "Custom",
         "custom_action": "set_str_node_attrs",
         "post_delay": 0,
-        "focus": "> 今日已使用过合剂，将跳过自动消耗",
-        "custom_action_param": "node=清体力_判断合剂余量&keys=on_error&values=[]",
-        "__yamaape": {
-            "position": {
-                "x": -1097,
-                "y": 60
-            }
-        },
-        "next": [
-            "清体力_跳过使用合剂节点2"
-        ]
-    },
-    "清体力_跳过使用合剂节点2": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "set_str_node_attrs",
-        "post_delay": 0,
-        "custom_action_param": "node=清体力_判断合剂余量&keys=next&values=清体力_返回倍率选择3",
+        "custom_action_param": "node=清体力_判断合剂余量&keys=next&values=清体力_检查将过期合剂",
         "__yamaape": {
             "position": {
                 "x": -832,
@@ -1805,8 +1788,8 @@
         "action": "DoNothing",
         "__yamaape": {
             "position": {
-                "x": -1674,
-                "y": -84
+                "x": -1378,
+                "y": -82
             }
         },
         "next": [
@@ -1821,15 +1804,15 @@
         "custom_action_param": "t=eat",
         "__yamaape": {
             "position": {
-                "x": -1362,
-                "y": 57
+                "x": -1113,
+                "y": 40
             }
         },
         "next": [
             "清体力_设定合剂消耗"
         ],
         "on_error": [
-            "清体力_跳过使用合剂节点1"
+            "清体力_跳过使用合剂节点"
         ]
     },
     "清体力_4X助战": {
@@ -1841,8 +1824,8 @@
         "post_delay": 0,
         "__yamaape": {
             "position": {
-                "x": 3031,
-                "y": 2334
+                "x": 3087,
+                "y": 2580
             }
         },
         "next": [
@@ -1856,8 +1839,8 @@
         "post_delay": 0,
         "__yamaape": {
             "position": {
-                "x": 3309,
-                "y": 2457
+                "x": 3365,
+                "y": 2703
             }
         },
         "next": [
@@ -1873,8 +1856,8 @@
         "post_delay": 0,
         "__yamaape": {
             "position": {
-                "x": 3569,
-                "y": 2457
+                "x": 3625,
+                "y": 2703
             }
         },
         "next": [
@@ -1890,8 +1873,8 @@
         "focus": "> 今日已助战",
         "__yamaape": {
             "position": {
-                "x": 3638,
-                "y": 2736
+                "x": 3694,
+                "y": 2982
             }
         },
         "next": [
@@ -1907,8 +1890,8 @@
         "post_delay": 0,
         "__yamaape": {
             "position": {
-                "x": 3033,
-                "y": 2594
+                "x": 3089,
+                "y": 2840
             }
         },
         "next": [
@@ -1949,6 +1932,48 @@
         },
         "next": [
             "清体力_准备战斗"
+        ]
+    },
+    "清体力_检查将过期合剂": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "pre_delay": 0,
+        "post_delay": 0,
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 2910,
+                "y": 578
+            }
+        },
+        "on_error": [
+            "清体力_返回倍率选择3"
+        ],
+        "next": [
+            "清体力_存在将过期合剂"
+        ]
+    },
+    "清体力_存在将过期合剂": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "时"
+        ],
+        "roi": [
+            484,
+            301,
+            547,
+            151
+        ],
+        "focus": "> 存在即将过期合剂",
+        "__yamaape": {
+            "position": {
+                "x": 3171,
+                "y": 580
+            }
+        },
+        "next": [
+            "清体力_使用稳定合剂"
         ]
     }
 }

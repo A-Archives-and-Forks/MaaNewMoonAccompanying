@@ -16,6 +16,7 @@
   <br/>
   <a href="https://github.com/kqcoxn/MaaNewMoonAccompanying/commits/main/" target="_blank"><img alt="committs" src="https://img.shields.io/github/commit-activity/m/kqcoxn/MaaNewMoonAccompanying?color=%23ff69b4"></a>
   <a href="https://github.com/kqcoxn/MaaNewMoonAccompanying/stargazers" target="_blank"><img alt="stars" src="https://img.shields.io/github/stars/kqcoxn/MaaNewMoonAccompanying?style=social"></a>
+  <a href="https://github.com/kqcoxn/MaaNewMoonAccompanying/releases" target="_blank"><img alt="stars" src="https://img.shields.io/github/downloads/kqcoxn/MaaNewMoonAccompanying/total?style=social"></a>
   <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=VMC132QhbMDLi5U62MlDRvtCMj9WOXRr&authKey=yJNKO4sQ%2BBFHpBCLSSEvVOAyz%2FPjknNSl70W3ugg2%2BpELnKmEiHamj1emJMWcLwQ&noverify=0&group_code=993245868" target="_blank"><img alt="QQ交流群" src="https://img.shields.io/badge/QGroup-993245868-0e80c1?logo=qq&logoColor=white"></a>
 </p>
 
@@ -31,6 +32,7 @@
 - [x] 「缤纷纪念卡」领取每日票据
 - [x] 「血橙与餐厅」自动炒菜机
 - [x] 「码头八点半」自动驾驶（1-1 至 1-10）
+- [x] 「列车长的见面礼」领取体力
 - [x] 「今日南廷」获取奖励
 
 <details>
