@@ -178,6 +178,7 @@ class Configs:
 # 控制器
 class Tasker:
     # 获取控制器
+    @staticmethod
     def _ctrler(context: Context):
         return context.tasker.controller
 
@@ -185,11 +186,6 @@ class Tasker:
     @staticmethod
     def is_stopping(context: Context):
         return context.tasker.stopping
-
-    # 获取控制器（错航成旅版本后删除）
-    @staticmethod
-    def get_controller(context: Context) -> Controller:
-        return context.tasker.controller
 
     # 截图
     @staticmethod
@@ -211,19 +207,22 @@ class RecoHelper:
         self.argv = argv
         self.screencap: np.ndarray | None = None
 
-    # 截图
-    def get_screencap(self) -> np.ndarray:
+    def refresh_screencap(self) -> np.ndarray:
         self.screencap = Tasker.screenshot(self.context)
         return self.screencap
 
     # 识别结果
-    def recognize(self, node: str = "识别", override_key_value: dict = {}):
-        if self.screencap is not None:
+    def recognize(
+        self, node: str = "识别", override_key_value: dict = {}, refresh_image=False
+    ):
+        if refresh_image:
+            image = self.refresh_screencap()
+        elif self.screencap is not None:
             image = self.screencap
         elif self.argv:
             image = self.argv.image
         else:
-            image = self.get_screencap()
+            image = self.refresh_screencap()
         self.reco_detail = self.context.run_recognition(
             node, image, {node: override_key_value}
         )
@@ -234,14 +233,28 @@ class RecoHelper:
         return self.reco_detail is not None
 
     # 点击
-    def click(self, context: Context, offset: tuple[int, int] = (0, 0)):
+    def click(
+        self, context: Context = None, offset: tuple[int, int] = (0, 0)
+    ) -> tuple[int, int] | None:
         if not self.hit():
             return None
         res = self.reco_detail.best_result
         target = RecoHelper.get_res_center(res)
         target = (target[0] + offset[0], target[1] + offset[1])
+        if context is None:
+            context = self.context
         Tasker.click(context, *target)
         return target
+
+    # 结果拼接
+    def concat(self) -> str:
+        if not self.hit():
+            return None
+        results = self.reco_detail.filterd_results
+        text = ""
+        for res in results:
+            text += res.text
+        return text
 
     # 计算识别结果中心坐标
     @staticmethod
@@ -263,55 +276,6 @@ class RecoHelper:
     @staticmethod
     def rt(box: RectType = (1, 1, 1, 1), text: str = ""):
         return CustomRecognition.AnalyzeResult(box, text)
-
-
-# 旧版本识别器（错航成旅版本后删除）
-class RecoHelperOld:
-    def __init__(self, context: Context):
-        self.context = context
-
-    # 截图
-    def get_screencap(self) -> np.ndarray:
-        self.screencap = (
-            Tasker.get_controller(self.context).post_screencap().wait().get()
-        )
-        return self.screencap
-
-    # 识别结果
-    def recognize(self, node: str, override_key_value: dict = {}):
-        self.reco = self.context.run_recognition(
-            node, self.get_screencap(), {node: override_key_value}
-        )
-        return self.reco
-
-    # 是否识别到结果
-    def hit(self):
-        return self.reco is not None
-
-    # 获取最佳结果中心坐标
-    def get_target(self):
-        if not self.reco:
-            return None
-        self.target = self.get_reco_center(self.reco.best_result)
-        return self.target
-
-    # 计算识别结果中心坐标
-    @staticmethod
-    def get_reco_center(reco: RecognitionResult):
-        box = reco.box
-        x = round(box[0] + box[2] / 2)
-        y = round(box[1] + box[3] / 2)
-        return (x, y)
-
-    # 统一可信度过滤
-    @staticmethod
-    def filter_reco(recos: list, threshold: float = 0.7):
-        return [reco for reco in recos if reco.score >= threshold]
-
-    # 排序
-    @staticmethod
-    def sort_reco(recos: list):
-        return sorted(recos, key=lambda reco: reco.score, reverse=True)
 
 
 # 判断器

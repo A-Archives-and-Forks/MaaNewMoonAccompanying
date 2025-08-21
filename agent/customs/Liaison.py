@@ -26,7 +26,6 @@ class SummaryLiaisonRecord(CustomAction):
 
                 # 识别列表
                 reco_helper = RecoHelper(context)
-                reco_helper.get_screencap()
                 index = 1
                 while index < 6:
                     if not reco_helper.recognize(f"抽卡记录_识别列表{index}").hit():

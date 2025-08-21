@@ -1,0 +1,326 @@
+{
+    "__yamaape_config_遗迹寻获": {
+        "filename": "遗迹寻获",
+        "version": "v0.3.4",
+        "prefix": "遗迹寻获",
+        "export": ""
+    },
+    "遗迹寻获_开始挖掘": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "开始挖掘"
+        ],
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 3435,
+                "y": 503
+            }
+        },
+        "next": [
+            "遗迹寻获_关闭提示",
+            "遗迹寻获_游戏界面"
+        ]
+    },
+    "遗迹寻获_关闭提示": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "close.png"
+        ],
+        "pre_delay": 400,
+        "__yamaape": {
+            "position": {
+                "x": 3692,
+                "y": 352
+            }
+        },
+        "next": [
+            "遗迹寻获_游戏界面"
+        ]
+    },
+    "遗迹寻获_游戏界面": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "游戏进度"
+        ],
+        "pre_delay": 0,
+        "__yamaape": {
+            "position": {
+                "x": 3963,
+                "y": 624
+            }
+        },
+        "next": [
+            "遗迹寻获_自动寻获"
+        ]
+    },
+    "遗迹寻获_自动寻获": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "auto_search",
+        "__yamaape": {
+            "position": {
+                "x": 4227,
+                "y": 624
+            }
+        },
+        "next": [
+            "遗迹寻获_考察成功",
+            "遗迹寻获_继续挖掘",
+            "遗迹寻获_挑战失败",
+            "遗迹寻获_完成提醒"
+        ]
+    },
+    "遗迹寻获_开始": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "__yamaape": {
+            "position": {
+                "x": 3179,
+                "y": 677
+            }
+        },
+        "next": [
+            "遗迹寻获_开始挖掘",
+            "遗迹寻获_游戏界面"
+        ]
+    },
+    "遗迹寻获_考察成功": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "考察完毕"
+        ],
+        "focus": "> 考察成功！",
+        "__yamaape": {
+            "position": {
+                "x": 4498,
+                "y": 129
+            }
+        },
+        "next": [
+            "遗迹寻获_下一关",
+            "遗迹寻获_完成提醒"
+        ]
+    },
+    "遗迹寻获_继续挖掘": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "继续挖掘"
+        ],
+        "post_delay": 1000,
+        "order_by": "Vertical",
+        "index": -1,
+        "__yamaape": {
+            "position": {
+                "x": 4503,
+                "y": 327
+            }
+        },
+        "next": [
+            "遗迹寻获_额外辅助工具",
+            "遗迹寻获_自动寻获"
+        ]
+    },
+    "遗迹寻获_下一关": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "下一关"
+        ],
+        "focus": "> 自动进入下一关",
+        "post_delay": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 4771,
+                "y": 71
+            }
+        },
+        "next": [
+            "遗迹寻获_关闭提示",
+            "遗迹寻获_游戏界面"
+        ]
+    },
+    "遗迹寻获_额外辅助工具": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "确认"
+        ],
+        "post_delay": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 4762,
+                "y": 327
+            }
+        },
+        "next": [
+            "遗迹寻获_自动寻获"
+        ]
+    },
+    "遗迹寻获_挑战失败": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "挑战失败"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 4502,
+                "y": 590
+            }
+        },
+        "next": [
+            "遗迹寻获_重新挖掘"
+        ]
+    },
+    "遗迹寻获_重新挖掘": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "重新挖掘"
+        ],
+        "post_delay": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 4762,
+                "y": 590
+            }
+        },
+        "next": [
+            "遗迹寻获_自动寻获"
+        ]
+    },
+    "遗迹寻获_完成提醒": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "第20关"
+        ],
+        "focus": "> 已完成所有关卡！（目前仅适配到前20关）",
+        "roi": [
+            356,
+            101,
+            630,
+            207
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 4492,
+                "y": -104
+            }
+        }
+    },
+    "遗迹寻获_底部识别": {
+        "recognition": "TemplateMatch",
+        "action": "DoNothing",
+        "template": [
+            "activity/block/red.png"
+        ],
+        "roi": [
+            496,
+            269,
+            369,
+            60
+        ],
+        "threshold": [
+            0.9
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3432,
+                "y": 1011
+            }
+        }
+    },
+    "遗迹寻获_第一排水龙头识别": {
+        "recognition": "TemplateMatch",
+        "action": "DoNothing",
+        "template": [
+            "activity/faucet/orange-l2.png"
+        ],
+        "roi": [
+            405,
+            463,
+            537,
+            143
+        ],
+        "threshold": [
+            0.9
+        ],
+        "order_by": "Random",
+        "__yamaape": {
+            "position": {
+                "x": 3695,
+                "y": 1010
+            }
+        }
+    },
+    "遗迹寻获_检测空位": {
+        "recognition": "TemplateMatch",
+        "action": "DoNothing",
+        "template": [
+            "activity/groove.png"
+        ],
+        "roi": [
+            512,
+            389,
+            530,
+            110
+        ],
+        "threshold": [
+            0.9
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 3955,
+                "y": 1010
+            }
+        }
+    },
+    "遗迹寻获_考察结束": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            "考察完毕",
+            "暂停挖掘",
+            "继续挖掘",
+            "第20关"
+        ],
+        "roi": [
+            151,
+            129,
+            934,
+            422
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 4465,
+                "y": 1010
+            }
+        }
+    },
+    "遗迹寻获_检测当前剩余水量": {
+        "recognition": "OCR",
+        "action": "DoNothing",
+        "expected": [
+            ""
+        ],
+        "roi": [
+            414,
+            460,
+            525,
+            35
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 4215,
+                "y": 1010
+            }
+        }
+    }
+}

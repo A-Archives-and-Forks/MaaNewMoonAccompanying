@@ -1,548 +1,183 @@
 from maa.agent.agent_server import AgentServer
 from maa.custom_action import CustomAction
+from maa.custom_recognition import RecognitionResult
 from maa.context import Context
 
 import time
+import random
 
-from .MatrixScheduling import StepMatrixManager
-from .utils import parse_query_args, Prompt, RecoHelperOld, RecoHelper, Tasker
+from .utils import Prompt, Tasker, RecoHelper
 
-
-# 码头八点半
-pier_level = "第1关"
-
-pier_schedule = {
-    "第1关": [
-        (4, 6),
-        (4, 7),
-        (5, 2),
-        (6, 6),
-        (7, 3),
-        (7, 7),
-        (5, 3),
-        (4, 5),
-        (3, 5),
-    ],
-    "第2关": [
-        (1, 3),
-        (3, 9),
-        (3, 3),
-        (8, 3),
-        (2, 5),
-        (5, 7),
-        (6, 7),
-        (7, 5),
-        (6, 2),
-    ],
-    "第3关": [
-        (1, 6),
-        (5, 7),
-        (3, 1),
-        (2, 3),
-        (6, 6),
-        (5, 6),
-        (4, 5),
-        (6, 4),
-        (7, 3),
-        (6, 1),
-        (5, 2, 2),
-    ],
-    "第4关": [
-        (1, 6),
-        (2, 3),
-        (7, 2),
-        (3, 2),
-        (4, 3),
-        (7, 7),
-        (6, 2),
-        (5, 6),
-        (6, 5),
-        (2, 8),
-    ],
-    "第5关": [
-        (2, 9),
-        (6, 1),
-        (7, 5),
-        (7, 7),
-        (1, 8),
-        (4, 7),
-        (3, 5),
-        (2, 4),
-        (3, 2),
-        (3, 6),
-        (5, 4),
-        (4, 3),
-    ],
-    "第6关": [
-        (1, 1),
-        (4, 6),
-        (4, 9),
-        (7, 5),
-        (3, 1),
-        (2, 3),
-        (1, 4),
-        (8, 7),
-        (7, 8),
-        (3, 2),
-        (6, 1),
-        (5, 2),
-        (8, 4),
-        (4, 3),
-    ],
-    "第7关": [
-        (4, 8),
-        (2, 7),
-        (3, 1),
-        (3, 8),
-        (1, 5),
-        (4, 6),
-        (3, 2),
-        (5, 7),
-        (8, 2),
-        (7, 4),
-        (2, 4),
-        (7, 3),
-        (1, 3),
-        (6, 3),
-    ],
-    "第8关": [
-        (1, 9),
-        (2, 4),
-        (3, 2),
-        (5, 5),
-        (3, 7),
-        (8, 1),
-        (7, 8),
-        (8, 5),
-        (7, 2),
-        (4, 1),
-        (6, 6),
-        (5, 7),
-        (1, 7),
-        (6, 4),
-    ],
-    "第9关": [
-        (1, 2),
-        (1, 6),
-        (2, 3),
-        (2, 1),
-        (4, 1),
-        (2, 5),
-        (4, 6),
-        (6, 7),
-        (5, 1),
-        (5, 2),
-        (5, 5),
-        (7, 5),
-        (8, 4),
-        (7, 4),
-    ],
-    "第10关": [
-        (1, 1),
-        (3, 7),
-        (4, 8),
-        (8, 5),
-        (2, 1),
-        (7, 7),
-        (7, 4),
-        (5, 6),
-        (2, 2),
-        (4, 5),
-        (8, 1),
-        (3, 2),
-        (7, 1),
-        (6, 3),
-        (7, 2),
-    ],
-}
+# 自动挖掘
+colors = ["red", "yellow", "blue", "green", "orange"]
 
 
-# 设置码头关卡
-@AgentServer.custom_action("set_pier_level")
-class SetPierLevel(CustomAction):
+@AgentServer.custom_action("auto_search")
+class AutoSearch(CustomAction):
     def run(
         self, context: Context, argv: CustomAction.RunArg
     ) -> CustomAction.RunResult | bool:
-        global pier_level
+        global colors
+        last_deploy = "-1"
+        same_counter = 0
         try:
-            result = (
-                RecoHelper(context).recognize("码头_关卡识别").reco_detail.best_result
-            )
-            if not result:
-                return Prompt.error("关卡识别失败", use_defult_postfix=False)
-            pier_level = result.text
-            Prompt.log(f"当前关卡：{pier_level}")
-            return True
-        except Exception as e:
-            return Prompt.error("设置关卡", e)
-
-
-# 自动驾驶
-@AgentServer.custom_action("auto_pier")
-class AutoPier(CustomAction):
-    def run(
-        self, context: Context, argv: CustomAction.RunArg
-    ) -> CustomAction.RunResult | bool:
-        global pier_level, pier_schedule
-        try:
-            # 初始化棋盘
-            schedule = pier_schedule.get(pier_level)
-            if not schedule:
-                return Prompt.error("MNMA仅可完成前10关！", use_defult_postfix=False)
-            matrix = StepMatrixManager.get()
-
-            # 发船
-            sleep_count = 0
-            for coordinate in schedule:
+            while True:
+                # 结束
                 if Tasker.is_stopping(context):
                     return False
+                if check_end(context):
+                    return True
+                # 检测剩余槽位
+                groove_num = check_groove(context)
+                if groove_num == 0:
+                    time.sleep(1)
+                    continue
 
-                if type(coordinate[0]) == int:
-                    delivery_type = "matrix"
-                elif type(coordinate[0]) == str:
-                    delivery_type = "belt"
+                # 勘探
+                pairs = exploration(context)
 
-                # 等待上船
-                if sleep_count >= 4:
-                    Prompt.log("你上来啊！")
-                    time.sleep(2)
-                    sleep_count = 1
+                # 挖掘
+                color = ""
+                for pair in pairs:
+                    if (
+                        pair["bottom_block"] > 0
+                        and pair["first_faucet"] > 0
+                        and pair["cur_faucet"] < 1
+                    ):
+                        color = pair["color"]
+                        excavation(context, pair["color"])
+                        Prompt.log(f"勘探到 {cnColor(color)}色 可开采岩层")
+                        break
+
+                # 二位部署
+                if color == "" and same_counter > 2:
+                    random.shuffle(pairs)
+                    for pair in pairs:
+                        if (
+                            pair["bottom_block"] > 0
+                            and pair["first_faucet"] > 0
+                            and pair["cur_faucet"] == 1
+                        ):
+                            color = pair["color"]
+                            Prompt.log(f"勘探到 {cnColor(color)}色 可开采岩层")
+                            excavation(context, pair["color"])
+                            same_counter = 0
+                            break
+
+                # 临时喷口
+                if color == "" and same_counter > 2:
+                    random.shuffle(pairs)
+                    for pair in pairs:
+                        if pair["first_faucet"] > 0:
+                            color = pair["color"]
+                            Prompt.log(f"部署临时喷口({cnColor(color)})")
+                            excavation(context, pair["color"])
+                            break
+
+                if color == last_deploy:
+                    same_counter += 1
                 else:
-                    sleep_count += 1
-
-                # 延时等待
-                if delivery_type == "matrix" and len(coordinate) > 2:
-                    Prompt.log("你上来啊！")
-                    time.sleep(coordinate[2])
-
-                # 发船
-                Prompt.log(f"发船：{coordinate}")
-                if delivery_type == "matrix":
-                    matrix.click(context, coordinate[0], coordinate[1])
-                elif delivery_type == "belt":
-                    if not belt_delivery(context, coordinate):
-                        return Prompt.error("传送带发船失败")
-
+                    same_counter = 0
+                last_deploy = color
                 time.sleep(1)
-
-            Prompt.log("发船结束")
-            return True
         except Exception as e:
-            return Prompt.error("自动驾驶", e)
+            return Prompt.error("自动挖掘", e)
 
 
-# 传送带发船
-def belt_delivery(context: Context, coordinate: tuple[str, int, int]):
-    Prompt.log("等待传送带轮换")
-    for i in range(20):
-        # 左侧
-        template = f"activity/pier/{coordinate[0]}.png"
-        left_expand = coordinate[1] * 53
-        reco_helper = RecoHelper(context).recognize(
-            "码头_传送带左侧识别",
-            {
-                "template": template,
-                "roi": [381 - left_expand, 521, 115 + left_expand, 157],
-            },
+# 识别数量
+def exploration(context: Context):
+    reco_helper = RecoHelper(context)
+    pairs = []
+
+    # 识别数量
+    for color in colors:
+        pair = {"color": color}
+        # 底部砖块数量
+        reco_helper.recognize(
+            "遗迹寻获_底部识别", {"template": f"activity/block/{color}.png"}
         )
-        if reco_helper.hit():
-            reco_helper.click(context, offset=(-6, 0))
-            return True
-
-        # 右侧
-        right_expand = coordinate[2] * 53
-        reco_helper = RecoHelper(context).recognize(
-            "码头_传送带右侧识别",
-            {
-                "template": template,
-                "roi": [978 - right_expand, 522, 75 + right_expand, 158],
-            },
+        pair["bottom_block"] = (
+            len(reco_helper.reco_detail.filterd_results) if reco_helper.hit() else 0
         )
-        if reco_helper.hit():
-            reco_helper.click(context, offset=(-6, 0))
-            return True
+        reco_helper.recognize(
+            "遗迹寻获_底部识别", {"template": f"activity/block/{color}-l.png"}
+        )
+        pair["bottom_block"] += (
+            len(reco_helper.reco_detail.filterd_results) * 20
+            if reco_helper.hit()
+            else 0
+        )
+        # 顶部水龙头数量
+        reco_helper.recognize(
+            "遗迹寻获_第一排水龙头识别",
+            {"template": get_faucet_path_list(color)},
+        )
+        pair["first_faucet"] = (
+            len(reco_helper.reco_detail.filterd_results) if reco_helper.hit() else 0
+        )
+        # 现有数量
+        reco_helper.recognize(
+            "遗迹寻获_检测空位",
+            {"template": get_faucet_path_list(color)},
+        )
+        pair["cur_faucet"] = (
+            len(reco_helper.reco_detail.filterd_results) if reco_helper.hit() else 0
+        )
 
-        time.sleep(1)
-    return False
+        pairs.append(pair)
 
-
-# 自动炒菜
-type_num = 1
-current_type = 1
-
-zh_food_types = ["主菜", "主食", "甜品"]
-en_food_types = ["entree", "carbs", "dessert"]
-
-
-# 初始化
-@AgentServer.custom_action("init_cook")
-class InitCook(CustomAction):
-    def run(
-        self, context: Context, argv: CustomAction.RunArg
-    ) -> CustomAction.RunResult | bool:
-        global type_num, current_type
-        try:
-            reco_helper = RecoHelperOld(context)
-            reco_helper.recognize("自动炒菜_检测品类数量")
-            type_num = 3
-            if reco_helper.hit():
-                results = reco_helper.reco.filterd_results
-                type_num = 3 - len(results)
-
-            num_tip = f"> 检测到菜品种类：{type_num}种（主菜"
-            if type_num >= 2:
-                num_tip += "、主食"
-            if type_num >= 3:
-                num_tip += "、甜品"
-            num_tip += "）"
-            print(num_tip)
-
-            current_type = 1
-            return True
-        except Exception as e:
-            return Prompt.error("初始化自动炒菜", e)
+    # 排序
+    random.shuffle(pairs)
+    pairs.sort(key=lambda x: x["bottom_block"], reverse=True)
+    return pairs
 
 
-# 点击位置
-@AgentServer.custom_action("auto_cook")
-class AutoCook(CustomAction):
-    def run(
-        self, context: Context, argv: CustomAction.RunArg
-    ) -> CustomAction.RunResult | bool:
-        global type_num, current_type, en_food_types, zh_food_types
-        try:
-            # 识别采购单
-            reco_helper = RecoHelperOld(context)
-            reco_helper.recognize("自动炒菜_识别采购单")
-            if reco_helper.hit():
-                print("> 尝试使用采购单")
-                context.run_task("自动炒菜_使用")
-
-            # 菜品名称
-            if current_type > 3:
-                return Prompt.error("未知的菜品！", use_defult_postfix=False)
-            zh_name = zh_food_types[current_type - 1]
-            en_name = en_food_types[current_type - 1]
-
-            if Tasker.is_stopping(context):
-                return False
-
-            # 检测最高需求
-            biggest_dish = {1: 0, 2: 0}
-            dish_need_num = {1: 0, 2: 0}
-            for i in range(1, 3):
-                for j in range(1, 6):
-                    if Tasker.is_stopping(context):
-                        return False
-                    reco_helper = reco_demand(context, en_name, i, j)
-                    if reco_helper.hit():
-                        biggest_dish[i] = j
-                        dish_need_num[i] += len(reco_helper.reco.filterd_results)
-            max_biggest_dish = max(biggest_dish[1], biggest_dish[2])
-            print(f"> 当前最高{zh_name}需求：{max_biggest_dish}级")
-            print(f"> 当前总{zh_name}需求量：{dish_need_num[1]+dish_need_num[2]}份")
-
-            if max_biggest_dish == 0:
-                print("> 无当前菜品需求，跳过当前菜品")
-                change_dish()
-                return True
-            serve_num = round(max_biggest_dish * 1.5)
-
-            # 检测最高菜品
-            count = 0
-            for i in range(1, 3):
-                if biggest_dish[i] == 0:
-                    count += 1
-                    continue
-                elif dish_need_num[i] >= 2:
-                    continue
-                reco_helper = reco_dish(context, en_name, i, biggest_dish[i])
-                if reco_helper.hit():
-                    count += 1
-
-            if Tasker.is_stopping(context):
-                return False
-
-            if count == 2:
-                print("> 已满足当前菜品需求，跳过当前菜品")
-                change_dish()
-                return True
-
-            # 烹饪
-            print("> 正在烹饪：" + zh_name)
-            for i in range(serve_num):
-                if Tasker.is_stopping(context):
-                    return False
-                Tasker.get_controller(context).post_click(
-                    130, 330 + 140 * (current_type - 1)
-                ).wait()
-                if is_cook_end(context):
-                    return False
-                time.sleep(0.4)
-
-            # 直接提交
-            if serve_dish(context):
-                return False
-
-            # 过滤低等级菜品
-            target_dish = {1: 5, 2: 5}
-            for i in range(1, 3):
-                if biggest_dish[i] > 2:
-                    target_dish[i] = biggest_dish[i]
-
-            # 合成菜品
-            for i in range(1, 3):
-                for j in range(1, target_dish[i]):
-                    is_synthesis = False
-                    reco_times = 0
-                    while reco_times < serve_num:
-                        if Tasker.is_stopping(context):
-                            return False
-                        # 检测是否有此菜品
-                        reco_helper = reco_dish(context, en_name, i, j)
-                        reco = reco_helper.reco
-                        if not reco:
-                            break
-                        results = reco.all_results
-                        results = RecoHelperOld.filter_reco(results, 0.91)
-                        if len(results) < 2:
-                            break
-
-                        # 合成
-                        print(f"> oi，拼好饭！({zh_name}{i}-{j+1})")
-                        results = RecoHelperOld.sort_reco(results)
-                        target_1 = reco_helper.get_reco_center(results[0])
-                        target_2 = reco_helper.get_reco_center(results[1])
-                        Tasker.get_controller(context).post_swipe(
-                            target_1[0],
-                            target_1[1],
-                            target_2[0],
-                            target_2[1],
-                            100,
-                        ).wait()
-                        is_synthesis = True
-                        reco_times += 1
-                        time.sleep(0.1)
-                    if is_synthesis:
-                        time.sleep(0.2)
-                        if serve_dish(context):
-                            return False
-
-            # 过剩菜品
-            for i in range(1, 3):
-                for j in range(max(biggest_dish[i] + 1, 4), 6):
-                    if Tasker.is_stopping(context):
-                        return False
-                    reco_helper = reco_dish(context, en_name, i, j)
-                    if not reco_helper.hit():
-                        continue
-                    results = RecoHelperOld.filter_reco(
-                        reco_helper.reco.all_results, 0.91
-                    )
-                    if len(results) > 0:
-                        print(f"> 回收过剩{zh_name}：{i}-{j}")
-                        recycle_food(context, results)
-
-            # 换菜
-            change_dish()
-            return True
-        except Exception as e:
-            return Prompt.error("自动炒菜", e)
+def get_faucet_path_list(color: str):
+    return [
+        # f"activity/faucet/{color}.png",
+        f"activity/faucet/{color}-l2.png",
+    ]
 
 
-# 换菜
-def change_dish():
-    global current_type, type_num
-    current_type += 1
-    if current_type > type_num:
-        current_type = 1
-
-
-# 识别菜品
-def reco_dish(context: Context, en_name, i, j):
-    dish_template = f"activity/{en_name}/{i}{j}.png"
-    checked_dish_template = f"activity/{en_name}/{i}{j}c.png"
-    reco_helper = RecoHelperOld(context)
-    reco_helper.recognize(
-        "自动炒菜_识别菜品",
-        {"template": [dish_template, checked_dish_template]},
+# 点击
+def excavation(context: Context, color: str):
+    reco_helper = RecoHelper(context).recognize(
+        "遗迹寻获_第一排水龙头识别", {"template": get_faucet_path_list(color)}
     )
-    return reco_helper
-
-
-# 识别需求
-def reco_demand(context: Context, en_name, i, j):
-    dish_template = f"activity/{en_name}/{i}{j}d.png"
-    reco_helper = RecoHelperOld(context)
-    reco_helper.recognize(
-        "自动炒菜_识别需求",
-        {"template": dish_template},
-    )
-    return reco_helper
-
-
-# 上菜
-def serve_dish(context: Context):
-    while True:
-        if Tasker.is_stopping(context):
-            return True
-
-        # 识别是否可提交
-        reco_helper = RecoHelperOld(context)
-        reco_helper.recognize("自动炒菜_提交菜品")
-        if reco_helper.reco is None:
-            break
-
-        # 提交菜品
-        print("> 豪赤！")
-        target = reco_helper.get_target()
-        Tasker.get_controller(context).post_click(target[0], target[1]).wait()
-        time.sleep(2)
-
-        # 检测是否完成
-        reco_helper = RecoHelperOld(context)
-        reco_helper.recognize("自动炒菜_挑战完成")
-        if reco_helper.reco is not None:
-            return True
-
-    return False
-
-
-# 回收菜品
-def recycle_food(context: Context, results: list):
-    context.run_task("自动炒菜_半盖")
-    for res in results:
-        target = RecoHelperOld.get_reco_center(res)
-        Tasker.get_controller(context).post_click(target[0], target[1]).wait()
-        time.sleep(0.2)
-        context.run_task("自动炒菜_回收")
-
-
-# 检查结束
-def is_cook_end(context: Context):
-    global en_food_types
-    reco_helper = RecoHelperOld(context)
-    reco_helper.recognize("自动炒菜_材料数量不足")
     if not reco_helper.hit():
-        return False
+        return
+    results = reco_helper.reco_detail.filterd_results
+    res = random.choice(results)
+    Tasker.click(context, res.box[0] + 5, res.box[1] + 5)
 
-    # 识别剩余菜品
-    print("> 已无剩余材料")
-    templates = []
-    for food_type in en_food_types:
-        for i in range(1, 3):
-            for j in range(1, 6):
-                templates.append(f"activity/{food_type}/{i}{j}.png")
-    reco_helper = RecoHelperOld(context)
-    reco_helper.recognize(
-        "自动炒菜_识别菜品", {"template": templates, "roi": [292, 278, 917, 340]}
+
+# 检测是否还有空位
+def check_groove(context: Context):
+    reco_helper = RecoHelper(context).recognize(
+        "遗迹寻获_检测空位", {"template": "activity/groove.png"}
     )
-    results = reco_helper.reco.all_results
-    results = RecoHelperOld.filter_reco(results, 0.91)
-    if len(results) < 3:
-        return True
+    return len(reco_helper.reco_detail.filterd_results) if reco_helper.hit() else 0
 
-    # 清仓
-    print("> 回收菜品")
-    recycle_food(context, results)
-    return False
+
+# 检测是否在输出
+def check_left(context: Context) -> str:
+    reco_helper = RecoHelper(context).recognize("遗迹寻获_检测当前剩余水量")
+    return reco_helper.concat() if reco_helper.hit() else "0"
+
+
+# 考察完毕
+def check_end(context: Context):
+    return RecoHelper(context).recognize("遗迹寻获_考察结束").hit()
+
+
+def cnColor(color: str):
+    if color == "red":
+        return "红"
+    if color == "yellow":
+        return "黄"
+    if color == "blue":
+        return "蓝"
+    if color == "green":
+        return "绿"
+    if color == "orange":
+        return "橙"
