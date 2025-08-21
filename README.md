@@ -26,9 +26,9 @@
 
 ### 活动功能
 
-> 当前活动：错航成旅（2025.7.24 - 2025.9.18）
+> 当前活动：雨中徐行（2025.8.21 - 2025.9.18）
 
-- [x] 「错航成旅」领取每日弹壳
+- [x] 「雨中徐行」领取每日痕迹
 
 <details>
 <summary>往期活动</summary>
@@ -142,7 +142,7 @@
 
 如果您在使用过程中遇到了问题、有更好的想法、希望参与开发，或是单纯想要聊天吹水，欢迎加入 MNMA 交流群！
 
-## Mirror 酱支持
+## \*Mirror 酱支持
 
 在 [Mirrorc 官方](https://mirrorchyan.com/zh/projects?source=mnma-github-code) 的帮助下， MNMA 同样也接入了 Mirror 酱 的国内高速下载与更新服务，详情请见[【Bilibili】震惊！MAA 开启收费功能？！](https://www.bilibili.com/video/BV1cZFreLEja/)
 

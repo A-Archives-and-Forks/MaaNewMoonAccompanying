@@ -305,6 +305,25 @@
             "清体力_记录使用合剂"
         ]
     },
+    "清体力_检查将过期合剂": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "pre_delay": 0,
+        "post_delay": 0,
+        "timeout": 1000,
+        "__yamaape": {
+            "position": {
+                "x": 2910,
+                "y": 578
+            }
+        },
+        "next": [
+            "清体力_存在将过期合剂"
+        ],
+        "on_error": [
+            "清体力_返回倍率选择3"
+        ]
+    },
     "清体力_4X行动": {
         "recognition": "OCR",
         "action": "Click",
@@ -1309,8 +1328,8 @@
         ],
         "__yamaape": {
             "position": {
-                "x": 2231,
-                "y": 2258
+                "x": 2222,
+                "y": 2088
             }
         },
         "next": [
@@ -1333,6 +1352,7 @@
             1
         ],
         "duration": 200,
+        "post_delay": 400,
         "__yamaape": {
             "position": {
                 "x": 1375,
@@ -1359,7 +1379,7 @@
             }
         }
     },
-    "清体力_逆转合作": {
+    "清体力_承压者": {
         "recognition": "OCR",
         "action": "Click",
         "expected": [
@@ -1934,25 +1954,6 @@
             "清体力_准备战斗"
         ]
     },
-    "清体力_检查将过期合剂": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "pre_delay": 0,
-        "post_delay": 0,
-        "timeout": 1000,
-        "__yamaape": {
-            "position": {
-                "x": 2910,
-                "y": 578
-            }
-        },
-        "on_error": [
-            "清体力_返回倍率选择3"
-        ],
-        "next": [
-            "清体力_存在将过期合剂"
-        ]
-    },
     "清体力_存在将过期合剂": {
         "recognition": "OCR",
         "action": "Click",
@@ -1974,6 +1975,22 @@
         },
         "next": [
             "清体力_使用稳定合剂"
+        ]
+    },
+    "清体力_冒险者": {
+        "recognition": "OCR",
+        "action": "Click",
+        "expected": [
+            "冒险者产线"
+        ],
+        "__yamaape": {
+            "position": {
+                "x": 1903,
+                "y": 2090
+            }
+        },
+        "next": [
+            "清体力_确认卡带"
         ]
     }
 }
