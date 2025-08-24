@@ -9,7 +9,24 @@ import random
 from .utils import Prompt, Tasker, RecoHelper
 
 # 自动挖掘
-colors = ["red", "yellow", "blue", "green", "orange"]
+colors = ["red", "yellow", "blue", "green", "orange", "purple", "white"]
+
+
+def cnColor(color: str):
+    if color == "red":
+        return "红"
+    if color == "yellow":
+        return "黄"
+    if color == "blue":
+        return "蓝"
+    if color == "green":
+        return "绿"
+    if color == "orange":
+        return "橙"
+    if color == "purple":
+        return "紫"
+    if color == "white":
+        return "白"
 
 
 @AgentServer.custom_action("auto_search")
@@ -50,7 +67,7 @@ class AutoSearch(CustomAction):
                         break
 
                 # 二位部署
-                if color == "" and same_counter > 2:
+                if color == "" and same_counter > 1:
                     random.shuffle(pairs)
                     for pair in pairs:
                         if (
@@ -65,7 +82,7 @@ class AutoSearch(CustomAction):
                             break
 
                 # 临时喷口
-                if color == "" and same_counter > 2:
+                if color == "" and same_counter > 1:
                     random.shuffle(pairs)
                     for pair in pairs:
                         if pair["first_faucet"] > 0:
@@ -94,13 +111,21 @@ def exploration(context: Context):
         pair = {"color": color}
         # 底部砖块数量
         reco_helper.recognize(
-            "遗迹寻获_底部识别", {"template": f"activity/block/{color}.png"}
+            "遗迹寻获_底部识别",
+            {"template": f"activity/block/{color}.png", "threshold": 0.82},
         )
         pair["bottom_block"] = (
             len(reco_helper.reco_detail.filterd_results) if reco_helper.hit() else 0
         )
         reco_helper.recognize(
-            "遗迹寻获_底部识别", {"template": f"activity/block/{color}-l.png"}
+            "遗迹寻获_底部识别",
+            {
+                "template": [
+                    f"activity/block/{color}-l.png",
+                    f"activity/block/{color}-l2.png",
+                ],
+                "threshold": [0.95, 0.96],
+            },
         )
         pair["bottom_block"] += (
             len(reco_helper.reco_detail.filterd_results) * 20
@@ -148,7 +173,7 @@ def excavation(context: Context, color: str):
         return
     results = reco_helper.reco_detail.filterd_results
     res = random.choice(results)
-    Tasker.click(context, res.box[0] + 5, res.box[1] + 5)
+    Tasker.click(context, res.box[0] + 2, res.box[1] + 2)
 
 
 # 检测是否还有空位
@@ -168,16 +193,3 @@ def check_left(context: Context) -> str:
 # 考察完毕
 def check_end(context: Context):
     return RecoHelper(context).recognize("遗迹寻获_考察结束").hit()
-
-
-def cnColor(color: str):
-    if color == "red":
-        return "红"
-    if color == "yellow":
-        return "黄"
-    if color == "blue":
-        return "蓝"
-    if color == "green":
-        return "绿"
-    if color == "orange":
-        return "橙"

@@ -1,18 +1,26 @@
 {
-    "__yamaape_config_遗迹寻获": {
-        "filename": "遗迹寻获",
-        "version": "v0.3.4",
-        "prefix": "遗迹寻获",
-        "export": ""
+    "__mpe_config_遗迹寻获": {
+        "__mpe_code": {
+            "prefix": "遗迹寻获",
+            "filename": "遗迹寻获",
+            "version": "v0.5.0"
+        }
     },
     "遗迹寻获_开始挖掘": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "开始挖掘"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "开始挖掘"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "pre_delay": 400,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 3435,
                 "y": 503
@@ -24,13 +32,20 @@
         ]
     },
     "遗迹寻获_关闭提示": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "close.png"
-        ],
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "close.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "pre_delay": 400,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 3692,
                 "y": 352
@@ -41,13 +56,20 @@
         ]
     },
     "遗迹寻获_游戏界面": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "游戏进度"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "游戏进度"
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
         "pre_delay": 0,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 3963,
                 "y": 624
@@ -58,10 +80,17 @@
         ]
     },
     "遗迹寻获_自动寻获": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "auto_search",
-        "__yamaape": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "auto_search"
+            }
+        },
+        "__mpe_code": {
             "position": {
                 "x": 4227,
                 "y": 624
@@ -75,9 +104,15 @@
         ]
     },
     "遗迹寻获_开始": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "__yamaape": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "__mpe_code": {
             "position": {
                 "x": 3179,
                 "y": 677
@@ -89,13 +124,20 @@
         ]
     },
     "遗迹寻获_考察成功": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "考察完毕"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "考察完毕"
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
         "focus": "> 考察成功！",
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 4498,
                 "y": 129
@@ -107,15 +149,22 @@
         ]
     },
     "遗迹寻获_继续挖掘": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "继续挖掘"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "继续挖掘"
+                ],
+                "order_by": "Vertical",
+                "index": -1
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "post_delay": 1000,
-        "order_by": "Vertical",
-        "index": -1,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 4503,
                 "y": 327
@@ -127,14 +176,21 @@
         ]
     },
     "遗迹寻获_下一关": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "下一关"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "下一关"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "focus": "> 自动进入下一关",
         "post_delay": 1000,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 4771,
                 "y": 71
@@ -146,13 +202,20 @@
         ]
     },
     "遗迹寻获_额外辅助工具": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "确认"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "确认"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "post_delay": 1000,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 4762,
                 "y": 327
@@ -163,12 +226,19 @@
         ]
     },
     "遗迹寻获_挑战失败": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "挑战失败"
-        ],
-        "__yamaape": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "挑战失败"
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "__mpe_code": {
             "position": {
                 "x": 4502,
                 "y": 590
@@ -179,13 +249,20 @@
         ]
     },
     "遗迹寻获_重新挖掘": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "重新挖掘"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "重新挖掘"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "post_delay": 1000,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 4762,
                 "y": 590
@@ -196,19 +273,26 @@
         ]
     },
     "遗迹寻获_完成提醒": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "第20关"
-        ],
-        "focus": "> 已完成所有关卡！（目前仅适配到前20关）",
-        "roi": [
-            356,
-            101,
-            630,
-            207
-        ],
-        "__yamaape": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "第30关"
+                ],
+                "roi": [
+                    356,
+                    101,
+                    630,
+                    207
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "focus": "> 已完成所有关卡！",
+        "__mpe_code": {
             "position": {
                 "x": 4492,
                 "y": -104
@@ -216,21 +300,28 @@
         }
     },
     "遗迹寻获_底部识别": {
-        "recognition": "TemplateMatch",
-        "action": "DoNothing",
-        "template": [
-            "activity/block/red.png"
-        ],
-        "roi": [
-            496,
-            269,
-            369,
-            60
-        ],
-        "threshold": [
-            0.9
-        ],
-        "__yamaape": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "activity/block/green-l2.png"
+                ],
+                "roi": [
+                    335,
+                    265,
+                    741,
+                    75
+                ],
+                "threshold": [
+                    0.82
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "__mpe_code": {
             "position": {
                 "x": 3432,
                 "y": 1011
@@ -238,22 +329,29 @@
         }
     },
     "遗迹寻获_第一排水龙头识别": {
-        "recognition": "TemplateMatch",
-        "action": "DoNothing",
-        "template": [
-            "activity/faucet/orange-l2.png"
-        ],
-        "roi": [
-            405,
-            463,
-            537,
-            143
-        ],
-        "threshold": [
-            0.9
-        ],
-        "order_by": "Random",
-        "__yamaape": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "activity/faucet/white-l2.png"
+                ],
+                "roi": [
+                    405,
+                    463,
+                    537,
+                    143
+                ],
+                "threshold": [
+                    0.93
+                ],
+                "order_by": "Random"
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "__mpe_code": {
             "position": {
                 "x": 3695,
                 "y": 1010
@@ -261,21 +359,28 @@
         }
     },
     "遗迹寻获_检测空位": {
-        "recognition": "TemplateMatch",
-        "action": "DoNothing",
-        "template": [
-            "activity/groove.png"
-        ],
-        "roi": [
-            512,
-            389,
-            530,
-            110
-        ],
-        "threshold": [
-            0.9
-        ],
-        "__yamaape": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "activity/groove.png"
+                ],
+                "roi": [
+                    335,
+                    395,
+                    741,
+                    103
+                ],
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "__mpe_code": {
             "position": {
                 "x": 3955,
                 "y": 1010
@@ -283,21 +388,29 @@
         }
     },
     "遗迹寻获_考察结束": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "考察完毕",
-            "暂停挖掘",
-            "继续挖掘",
-            "第20关"
-        ],
-        "roi": [
-            151,
-            129,
-            934,
-            422
-        ],
-        "__yamaape": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "考察完毕",
+                    "暂停挖掘",
+                    "继续挖掘",
+                    "第20关",
+                    "挑战失败"
+                ],
+                "roi": [
+                    151,
+                    129,
+                    934,
+                    422
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "__mpe_code": {
             "position": {
                 "x": 4465,
                 "y": 1010
@@ -305,18 +418,25 @@
         }
     },
     "遗迹寻获_检测当前剩余水量": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            ""
-        ],
-        "roi": [
-            414,
-            460,
-            525,
-            35
-        ],
-        "__yamaape": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    ""
+                ],
+                "roi": [
+                    414,
+                    460,
+                    525,
+                    35
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "__mpe_code": {
             "position": {
                 "x": 4215,
                 "y": 1010

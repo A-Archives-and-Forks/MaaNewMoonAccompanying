@@ -1,10 +1,10 @@
 {
     "name": "MaaNewMoonAccompanying",
     "url": "https://github.com/kqcoxn/MaaNewMoonAccompanying",
-    "custom_title": "MNMA新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v2.2.1 - MFAA | 游戏版本：雨中徐行·上",
+    "custom_title": "MNMA新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v2.2.2 - MFAA | 游戏版本：雨中徐行·上",
     "mirrorchyan_rid": "MNMA",
     "mirrorchyan_multiplatform": true,
-    "version": "v2.2.1",
+    "version": "v2.2.2",
     "mfa_min_version": "v1.6.5",
     "mfa_max_version": "v1.6.5",
     "message": "- 新 月 同 行 -",
@@ -271,7 +271,7 @@
         {
             "name": "「遗迹寻获」自动挖掘",
             "entry": "遗迹寻获_开始",
-            "doc": "**「遗迹寻获」自动挖掘**：\n\n**自动连续过关，摆完挂机！**\n\n**（部署底层未出现颜色的喷口时会有3s等待，15s以内的等待皆非异常；由于随机性，小概率可能仅A级通关，重试即可）**\n\n在小小的新月里面哇口牙哇口牙哇\n\n开始界面：选关界面/游戏内界面\n\n结束界面：结算界面/选关界面"
+            "doc": "**「遗迹寻获」自动挖掘**：\n\n自动连续过关，摆完挂机！\n\n**注意：由于随机性，小概率可能仅A级通关或失败，第28-30关失败概率较大，但会自动重试，若多次失败请手动完成；少量操作单步可能长达5s，随颜色变多10s以内等待皆在可接受范围。**\n\n**（任务结束后可能产生大量日志，建议即时清理）**\n\n在小小的新月里面哇口牙哇口牙哇\n\n开始界面：选关界面/游戏内界面\n\n结束界面：结算界面/选关界面"
         },
         {
             "name": "卡带升级",
