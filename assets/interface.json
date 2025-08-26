@@ -1,10 +1,10 @@
 {
     "name": "MaaNewMoonAccompanying",
     "url": "https://github.com/kqcoxn/MaaNewMoonAccompanying",
-    "custom_title": "MNMA新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v2.2.2 - MFAA | 游戏版本：雨中徐行·上",
+    "custom_title": "MNMA新月同行小助手(kqcoxn/MaaNewMoonAccompanying) v2.2.3 - MFAA | 游戏版本：雨中徐行·上",
     "mirrorchyan_rid": "MNMA",
     "mirrorchyan_multiplatform": true,
-    "version": "v2.2.2",
+    "version": "v2.2.3",
     "mfa_min_version": "v1.6.5",
     "mfa_max_version": "v1.6.5",
     "message": "- 新 月 同 行 -",
@@ -292,7 +292,7 @@
                 "或匹配特征属性1",
                 "或匹配特征属性2"
             ],
-            "doc": "**卡带再激活**：\n\n循环激活当前位置属性，匹配到任务选项中目标特征属性、或匹配特征属性1/2之一后停止\n\n相关wiki：\n\n- [卡带特征属性汇总](https://wiki.biligame.com/xytx/%E5%8D%A1%E5%B8%A6%E5%9B%BE%E9%89%B4)\n- [通用词条属性汇总](https://wiki.biligame.com/xytx/%E5%8D%A1%E5%B8%A6%E7%89%B9%E5%BE%81%E5%B1%9E%E6%80%A7%E6%95%B4%E7%90%86)\n\n开始界面：卡带再激活界面\n\n结束界面：卡带再激活界面"
+            "doc": "**卡带再激活**：\n\n循环激活当前位置属性，匹配到任务选项中“目标特征属性”、“或匹配特征属性”之一后停止\n\n- 特殊词条：再激活词条面板左下角从上至下分别为1与2\n\n相关wiki：\n\n- [卡带特征属性汇总](https://wiki.biligame.com/xytx/%E5%8D%A1%E5%B8%A6%E5%9B%BE%E9%89%B4)\n- [通用词条属性汇总](https://wiki.biligame.com/xytx/%E5%8D%A1%E5%B8%A6%E7%89%B9%E5%BE%81%E5%B1%9E%E6%80%A7%E6%95%B4%E7%90%86)\n\n开始界面：卡带再激活界面\n\n结束界面：卡带再激活界面"
         },
         {
             "name": "自动战斗",
