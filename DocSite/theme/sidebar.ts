@@ -16,12 +16,12 @@ const sidebar = {
           link: "/guide/users/init",
         },
         {
-          text: "使用技巧",
-          link: "/guide/users/trick",
-        },
-        {
           text: "功能说明",
           link: "/guide/users/funcs",
+        },
+        {
+          text: "使用技巧",
+          link: "/guide/users/trick",
         },
         {
           text: "问题排查",
