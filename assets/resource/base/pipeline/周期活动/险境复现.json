@@ -1,19 +1,27 @@
 {
-    "__yamaape_config_险境复现": {
-        "filename": "险境复现",
-        "version": "v0.3.4",
-        "prefix": "险境复现",
-        "export": ""
+    "__mpe_config_险境复现": {
+        "__mpe_code": {
+            "prefix": "险境复现",
+            "filename": "险境复现",
+            "version": "v0.5.1"
+        }
     },
     "险境复现_执行前返回主界面": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "run",
-        "custom_action_param": "key=全局前置返回主页",
-        "__yamaape": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "run",
+                "custom_action_param": "key=全局前置返回主页"
+            }
+        },
+        "__mpe_code": {
             "position": {
-                "x": 1652,
-                "y": 44
+                "x": 1719,
+                "y": 49
             }
         },
         "next": [
@@ -21,17 +29,24 @@
         ]
     },
     "险境复现_战略行动": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "战略行动"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "战略行动"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "pre_delay": 400,
         "focus": "> 进入险境复现",
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
-                "x": 1933,
-                "y": 63
+                "x": 2000,
+                "y": 68
             }
         },
         "next": [
@@ -39,16 +54,23 @@
         ]
     },
     "险境复现_边缘涉险": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "边缘涉险"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "边缘涉险"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "pre_delay": 800,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
-                "x": 2193,
-                "y": 63
+                "x": 2260,
+                "y": 68
             }
         },
         "next": [
@@ -56,18 +78,25 @@
         ]
     },
     "险境复现_险境复现": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "前往"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "前往"
+                ],
+                "order_by": "Vertical",
+                "index": 1
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "pre_delay": 800,
-        "order_by": "Vertical",
-        "index": 1,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
-                "x": 2453,
-                "y": 63
+                "x": 2520,
+                "y": 68
             }
         },
         "next": [
@@ -76,33 +105,51 @@
         ]
     },
     "险境复现_已进入险境": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "当前积分排名"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "当前积分排名"
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
         "focus": "> 已进入险境界面",
-        "timeout": 1500,
-        "__yamaape": {
+        "timeout": 500,
+        "__mpe_code": {
             "position": {
-                "x": 2790,
-                "y": 329
+                "x": 2780,
+                "y": 330
             }
         },
         "next": [
-            "险境复现_判断是否已完成"
+            "险境复现_判断是否已完成",
+            "险境复现_奖励已打满"
+        ],
+        "on_error": [
+            "险境复现_进入配队"
         ]
     },
     "险境复现_上期结算": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "结束时间"
-        ],
-        "__yamaape": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "结束时间"
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "__mpe_code": {
             "position": {
-                "x": 2183,
-                "y": 321
+                "x": 2250,
+                "y": 326
             }
         },
         "next": [
@@ -110,12 +157,19 @@
         ]
     },
     "险境复现_判断是否已完成": {
-        "recognition": "Custom",
-        "action": "DoNothing",
-        "custom_recognition": "check_abyss_process",
+        "recognition": {
+            "type": "Custom",
+            "param": {
+                "custom_recognition": "check_abyss_process"
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
         "pre_delay": 0,
         "post_delay": 0,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 3038,
                 "y": 330
@@ -123,21 +177,25 @@
         },
         "next": [
             "险境复现_已完成"
-        ],
-        "on_error": [
-            "险境复现_进入配队"
         ]
     },
     "险境复现_从结算返回": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "back.png"
-        ],
-        "__yamaape": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "back.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "__mpe_code": {
             "position": {
-                "x": 2443,
-                "y": 321
+                "x": 2510,
+                "y": 326
             }
         },
         "next": [
@@ -148,10 +206,16 @@
         ]
     },
     "险境复现_已完成": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
         "focus": "> 本周险境已完成",
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 3298,
                 "y": 330
@@ -162,16 +226,23 @@
         ]
     },
     "险境复现_进入配队": {
-        "recognition": "DirectHit",
-        "action": "Click",
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    622,
+                    319,
+                    1,
+                    1
+                ]
+            }
+        },
         "focus": "> 进入配队",
-        "target": [
-            622,
-            319,
-            1,
-            1
-        ],
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 872,
                 "y": 882
@@ -183,14 +254,21 @@
         ]
     },
     "险境复现_领取奖励": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "周期奖励"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "周期奖励"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "pre_delay": 800,
         "focus": "> 领取周期奖励",
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 3618,
                 "y": 522
@@ -201,14 +279,21 @@
         ]
     },
     "险境复现_前往上半编队": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "前往编队"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "前往编队"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "pre_delay": 800,
         "focus": "> 设置上半编队",
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 1132,
                 "y": 882
@@ -222,13 +307,20 @@
         ]
     },
     "险境复现_已作战": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "进入险境"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "进入险境"
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
         "focus": "> 本周已作战",
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 1134,
                 "y": 671
@@ -239,11 +331,18 @@
         ]
     },
     "险境复现_设置上半编队": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "run_set_squad",
-        "custom_action_param": "e=",
-        "__yamaape": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "run_set_squad",
+                "custom_action_param": "e="
+            }
+        },
+        "__mpe_code": {
             "position": {
                 "x": 1392,
                 "y": 882
@@ -254,13 +353,20 @@
         ]
     },
     "险境复现_关闭说明": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "close.png"
-        ],
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "close.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "pre_delay": 400,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 1391,
                 "y": 1077
@@ -268,13 +374,20 @@
         }
     },
     "险境复现_周期记录": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "record_periodic_check",
-        "custom_action_param": "t=abyss",
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "record_periodic_check",
+                "custom_action_param": "t=abyss"
+            }
+        },
         "pre_delay": 0,
         "post_delay": 0,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 4441,
                 "y": 374
@@ -285,14 +398,21 @@
         ]
     },
     "险境复现_领取全部奖励": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "领取全部"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "领取全部"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "pre_delay": 800,
         "timeout": 3000,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 3878,
                 "y": 522
@@ -306,14 +426,21 @@
         ]
     },
     "险境复现_前往下半编队": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "下一编队"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "下一编队"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "pre_delay": 800,
         "focus": "> 设置下半编队",
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 1652,
                 "y": 882
@@ -324,11 +451,18 @@
         ]
     },
     "险境复现_返回主界面": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "run",
-        "custom_action_param": "key=返回主页",
-        "__yamaape": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "run",
+                "custom_action_param": "key=返回主页"
+            }
+        },
+        "__mpe_code": {
             "position": {
                 "x": 4701,
                 "y": 374
@@ -336,13 +470,20 @@
         }
     },
     "险境复现_确认领取奖励": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "点击以继续"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "点击以继续"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "pre_delay": 800,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 4139,
                 "y": 531
@@ -353,11 +494,18 @@
         ]
     },
     "险境复现_设置下半编队": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "run_set_squad",
-        "custom_action_param": "e=",
-        "__yamaape": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "run_set_squad",
+                "custom_action_param": "e="
+            }
+        },
+        "__mpe_code": {
             "position": {
                 "x": 1907,
                 "y": 883
@@ -368,16 +516,23 @@
         ]
     },
     "险境复现_开始上半行动": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "行动开始"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "行动开始"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "pre_delay": 800,
         "timeout": 1200000,
         "rate_limit": 5000,
         "focus": "> 进入险境1",
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 2167,
                 "y": 883
@@ -391,16 +546,23 @@
         ]
     },
     "险境复现_开始下半行动": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "进入险境2"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "进入险境2"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "pre_delay": 800,
         "timeout": 1200000,
         "rate_limit": 5000,
         "focus": "> 进入险境2",
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 2440,
                 "y": 883
@@ -414,12 +576,19 @@
         ]
     },
     "险境复现_确保行动开始1": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "行动开始"
-        ],
-        "__yamaape": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "行动开始"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "__mpe_code": {
             "position": {
                 "x": 2442,
                 "y": 1207
@@ -427,14 +596,21 @@
         }
     },
     "险境复现_结束战斗": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "结算"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "结算"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "focus": "作战结束",
         "pre_delay": 800,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 2700,
                 "y": 883
@@ -445,12 +621,19 @@
         ]
     },
     "险境复现_确保行动开始2": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "进入险境2"
-        ],
-        "__yamaape": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "进入险境2"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "__mpe_code": {
             "position": {
                 "x": 2702,
                 "y": 1207
@@ -458,19 +641,27 @@
         }
     },
     "险境复现_确认结算": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "target": [
-            5,
-            5,
-            1,
-            1
-        ],
-        "template": [
-            "battle/share.png"
-        ],
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "battle/share.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    5,
+                    5,
+                    1,
+                    1
+                ]
+            }
+        },
         "pre_delay": 1500,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 2960,
                 "y": 883
@@ -481,12 +672,18 @@
         ]
     },
     "险境复现_开始": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "__yamaape": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "__mpe_code": {
             "position": {
-                "x": 295,
-                "y": -149
+                "x": 362,
+                "y": -144
             }
         },
         "next": [
@@ -494,16 +691,23 @@
         ]
     },
     "险境复现_周期检测": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "periodic_check",
-        "custom_action_param": "t=abyss&p=week",
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "periodic_check",
+                "custom_action_param": "t=abyss&p=week"
+            }
+        },
         "pre_delay": 0,
         "post_delay": 0,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
-                "x": 565,
-                "y": -149
+                "x": 632,
+                "y": -144
             }
         },
         "next": [
@@ -514,14 +718,20 @@
         ]
     },
     "险境复现_周期检测结束": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
         "pre_delay": 0,
         "post_delay": 0,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
-                "x": 838,
-                "y": -148
+                "x": 905,
+                "y": -143
             }
         },
         "next": [
@@ -529,27 +739,40 @@
         ]
     },
     "险境复现_已执行提醒": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
         "focus": "> 本周已完成",
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
-                "x": 823,
-                "y": 49
+                "x": 890,
+                "y": 54
             }
         }
     },
     "险境复现_检查是否填写编队": {
-        "recognition": "DirectHit",
-        "action": "Custom",
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "check_abyss_squad",
+                "custom_action_param": "a=&b="
+            }
+        },
         "pre_delay": 0,
         "post_delay": 0,
-        "custom_action": "check_abyss_squad",
-        "custom_action_param": "a=&b=",
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
-                "x": 1098,
-                "y": -148
+                "x": 1165,
+                "y": -143
             }
         },
         "next": [
@@ -560,15 +783,21 @@
         ]
     },
     "险境复现_判断当前位置": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
         "timeout": 1500,
         "pre_delay": 0,
         "post_delay": 0,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
-                "x": 1363,
-                "y": -144
+                "x": 1430,
+                "y": -139
             }
         },
         "next": [
@@ -579,46 +808,91 @@
         ]
     },
     "险境复现_未指定行动队": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
         "focus": "> 未指定行动队！",
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
-                "x": 1126,
-                "y": 103
+                "x": 1193,
+                "y": 108
             }
         }
     },
     "险境复现_领取上期徽章": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "点击以继续"
-        ],
-        "__yamaape": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "点击以继续"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "__mpe_code": {
             "position": {
-                "x": 2760,
-                "y": 554
+                "x": 2529,
+                "y": 494
             }
         }
     },
     "险境复现_检测进度": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "/"
-        ],
-        "roi": [
-            180,
-            632,
-            68,
-            40
-        ],
-        "__yamaape": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "/"
+                ],
+                "roi": [
+                    180,
+                    632,
+                    68,
+                    40
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "__mpe_code": {
             "position": {
                 "x": 3038,
-                "y": 132
+                "y": 127
             }
         }
+    },
+    "险境复现_奖励已打满": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    ""
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "pre_delay": 0,
+        "post_delay": 0,
+        "__mpe_code": {
+            "position": {
+                "x": 3039,
+                "y": 562
+            }
+        },
+        "next": [
+            "险境复现_已完成"
+        ]
     }
 }

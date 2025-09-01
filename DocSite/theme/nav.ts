@@ -25,6 +25,10 @@ const nav = [
     text: "友情链接",
     items: [
       {
+        text: "Mirror酱",
+        link: "https://mirrorchyan.com/zh/get-start",
+      },
+      {
         text: "MaaFramework",
         link: "https://github.com/MaaXYZ/MaaFramework",
       },
@@ -33,8 +37,8 @@ const nav = [
         link: "https://github.com/SweetSmellFox/MFAAvalonia",
       },
       {
-        text: "YAMaaPE",
-        link: "https://github.com/kqcoxn/YAMaaPE",
+        text: "MaaPipelineEditor",
+        link: "https://github.com/kqcoxn/MaaPipelineEditor",
       },
     ],
   },
