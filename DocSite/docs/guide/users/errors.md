@@ -128,9 +128,13 @@ winget install Microsoft.VCRedist.2017.x64 Microsoft.DotNet.DesktopRuntime.8
 
 ### Agent 加载失败
 
-基本是 Python 环境的问题。
+#### 日志模块报错
 
 Python 包的默认下载源是国内，如果您配置了代理或加速器，可能是由于被拦截导致的，请关闭 MNMA 后关闭代理或加速器，再重新启动 MNMA 尝试。
+
+#### 无任何日志提示
+
+您可能使用了 `XOS` 等定制系统，此类系统缺少 MNMA 运行所需环境，请使用官方系统运行 MNMA。
 
 如果仍然无法解决，请进群询问。
 

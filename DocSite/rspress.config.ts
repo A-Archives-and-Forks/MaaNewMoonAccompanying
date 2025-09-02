@@ -15,6 +15,7 @@ export default defineConfig({
   themeConfig: {
     nav,
     sidebar,
+    
     enableScrollToTop: true,
     socialLinks: [
       {
