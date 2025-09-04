@@ -2,7 +2,7 @@
 
 ## 简介
 
-MNMA 是一款基于 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 与 [MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia) 的**新月同行**小助手，基于图像识别技术，一键完成全部日常任务。
+MNMA 是一款基于 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 与 [MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia) 的**新月同行**小助手，基于图像识别技术，一键完成全部日常任务，旨在帮您完成重复的日常。
 
 ## 加入我们
 

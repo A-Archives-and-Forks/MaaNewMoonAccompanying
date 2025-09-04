@@ -8,6 +8,8 @@
 
 MNMA 是一款基于 MaaFramework 框架 （由明日方舟 MAA 开发组维护的开源框架）与 MFAAvalonia GUI 的开源辅助工具，可以实现自动化完成新月同行游戏日常等功能。作为开源项目，我们欢迎各位组长加入开发组参与贡献，这将会帮助到更多组长！
 
+请注意，MNMA 的定位仅在于完成重复日常，而非开荒、刷分等，此类功能将不会在主仓库被合并分发。
+
 本项目采用 [AGPL-3.0](https://github.com/kqcoxn/MaaNewMoonAccompanying/blob/main/LICENSE) 协议进行开源。
 
 ## 基础知识
@@ -17,12 +19,12 @@ MNMA 是一款基于 MaaFramework 框架 （由明日方舟 MAA 开发组维护�
 - JSON 文件格式
 - Github 基本操作
 
-在深度参与项目时，您应了解以下内容：
+在深度参与项目时，您还应了解以下内容：
 
+- Python 基础
 - 项目框架：[MaaFramework](https://github.com/MaaXYZ/MaaFramework)
 - GUI Interface 规范：[MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia/tree/master)
 - Pipeline 编辑器：[MaaPipelineEditor](https://github.com/kqcoxn/MaaPipelineEditor)
-- Python 基础
 
 ## 解决问题
 
