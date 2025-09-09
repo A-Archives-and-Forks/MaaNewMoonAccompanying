@@ -5,6 +5,7 @@ from maa.context import Context
 import re
 
 from .utils import parse_query_args, Prompt, RecoHelper, Judge
+from .Counter import counter_manager
 
 index = 0
 
@@ -81,6 +82,7 @@ class SetStrapAttr(CustomAction):
 
             if attr:
                 target_attr.add(attr)
+                Prompt.log(f"将选择卡带属性：{attr}")
 
             return True
         except Exception as e:
@@ -100,6 +102,8 @@ class SetStrapValue(CustomAction):
             level = args.get("level")
 
             is_only_high = level == "high"
+            if is_only_high:
+                Prompt.log("将仅选择较高值")
 
             return True
         except Exception as e:
@@ -241,3 +245,26 @@ class CheckStrapAttr(CustomRecognition):
             return RecoHelper.NoResult
         except Exception as e:
             return Prompt.error("检测属性词条", e, reco_detail=True)
+
+
+# 总结卡带消耗
+@AgentServer.custom_action("summary_strap_value")
+class SummaryStrapValue(CustomAction):
+    def run(
+        self, context: Context, argv: CustomAction.RunArg
+    ) -> CustomAction.RunResult | bool:
+        try:
+            args = parse_query_args(argv)
+            is_hit = True if args.get("hit") == "true" else False
+
+            count = counter_manager.get().get_count()
+            if not is_hit:
+                count -= 1
+            Prompt.log(
+                f"共消耗 {count*10} 个整流元件与 {count*0.5:.1f}w 数构银".replace(
+                    ".0w", "w"
+                )
+            )
+            return True
+        except Exception as e:
+            return Prompt.error("总结卡带消耗", e)

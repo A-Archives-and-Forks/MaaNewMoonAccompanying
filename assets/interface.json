@@ -290,7 +290,8 @@
                 "特征属性要求",
                 "目标特征属性",
                 "或匹配特征属性1",
-                "或匹配特征属性2"
+                "或匹配特征属性2",
+                "单次最多尝试次数"
             ],
             "doc": "**卡带再激活**：\n\n循环激活当前位置属性，匹配到任务选项中“目标特征属性”、“或匹配特征属性”之一后停止\n\n- 特殊词条：再激活词条面板左下角从上至下分别为1与2\n\n相关wiki：\n\n- [卡带特征属性汇总](https://wiki.biligame.com/xytx/%E5%8D%A1%E5%B8%A6%E5%9B%BE%E9%89%B4)\n- [通用词条属性汇总](https://wiki.biligame.com/xytx/%E5%8D%A1%E5%B8%A6%E7%89%B9%E5%BE%81%E5%B1%9E%E6%80%A7%E6%95%B4%E7%90%86)\n\n开始界面：卡带再激活界面\n\n结束界面：卡带再激活界面"
         },
@@ -1986,6 +1987,105 @@
                     "pipeline_override": {
                         "卡带词条_设置卡带词条3": {
                             "custom_action_param": "attr=特殊词条2"
+                        }
+                    }
+                }
+            ]
+        },
+        "单次最多尝试次数": {
+            "doc": "尝试n次后若仍未激活到指定词条则停止尝试",
+            "cases": [
+                {
+                    "name": "不限制",
+                    "pipeline_override": {}
+                },
+                {
+                    "name": "5次",
+                    "pipeline_override": {
+                        "卡带词条_初始化计数器": {
+                            "custom_action_param": "max=5",
+                            "focus": "> 最大尝试次数：5次"
+                        }
+                    }
+                },
+                {
+                    "name": "10次",
+                    "pipeline_override": {
+                        "卡带词条_初始化计数器": {
+                            "custom_action_param": "max=10",
+                            "focus": "> 最大尝试次数：10次"
+                        }
+                    }
+                },
+                {
+                    "name": "15次",
+                    "pipeline_override": {
+                        "卡带词条_初始化计数器": {
+                            "custom_action_param": "max=15",
+                            "focus": "> 最大尝试次数：15次"
+                        }
+                    }
+                },
+                {
+                    "name": "20次",
+                    "pipeline_override": {
+                        "卡带词条_初始化计数器": {
+                            "custom_action_param": "max=20",
+                            "focus": "> 最大尝试次数：20次"
+                        }
+                    }
+                },
+                {
+                    "name": "25次",
+                    "pipeline_override": {
+                        "卡带词条_初始化计数器": {
+                            "custom_action_param": "max=25",
+                            "focus": "> 最大尝试次数：25次"
+                        }
+                    }
+                },
+                {
+                    "name": "30次",
+                    "pipeline_override": {
+                        "卡带词条_初始化计数器": {
+                            "custom_action_param": "max=30",
+                            "focus": "> 最大尝试次数：30次"
+                        }
+                    }
+                },
+                {
+                    "name": "40次",
+                    "pipeline_override": {
+                        "卡带词条_初始化计数器": {
+                            "custom_action_param": "max=40",
+                            "focus": "> 最大尝试次数：40次"
+                        }
+                    }
+                },
+                {
+                    "name": "50次",
+                    "pipeline_override": {
+                        "卡带词条_初始化计数器": {
+                            "custom_action_param": "max=50",
+                            "focus": "> 最大尝试次数：50次"
+                        }
+                    }
+                },
+                {
+                    "name": "75次",
+                    "pipeline_override": {
+                        "卡带词条_初始化计数器": {
+                            "custom_action_param": "max=75",
+                            "focus": "> 最大尝试次数：75次"
+                        }
+                    }
+                },
+                {
+                    "name": "100次",
+                    "pipeline_override": {
+                        "卡带词条_初始化计数器": {
+                            "custom_action_param": "max=100",
+                            "focus": "> 最大尝试次数：100次"
                         }
                     }
                 }

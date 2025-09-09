@@ -40,7 +40,7 @@ class CounterManager:
     def __init__(self):
         self.counters = {}
 
-    def get(self, key: str) -> Counter:
+    def get(self, key: str = "default") -> Counter:
         if key not in self.counters:
             self.counters[key] = Counter()
         return self.counters[key]
@@ -85,10 +85,10 @@ class Count(CustomAction):
             text = args.get("t", "")
             counter = counter_manager.get(key)
             counter.increment()
-            if text:
-                print(f"> 第{counter.get_count()}次{text}")
             if counter.is_max():
                 return False
+            if text:
+                print(f"> 第{counter.get_count()}次{text}")
             return True
         except Exception as e:
             return Prompt.error("计数", e)

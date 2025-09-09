@@ -1,39 +1,30 @@
 {
-    "__yamaape_config_卡带词条": {
-        "filename": "卡带词条",
-        "version": "v0.3.4",
-        "export": "",
-        "prefix": "卡带词条"
+    "__mpe_config_卡带词条": {
+        "__mpe_code": {
+            "prefix": "卡带词条",
+            "filename": "卡带词条",
+            "version": "v0.5.1"
+        }
     },
     "卡带词条_再激活": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "再激活"
-        ],
-        "order_by": "Vertical",
-        "index": -1,
-        "pre_delay": 400,
-        "__yamaape": {
-            "position": {
-                "x": 518,
-                "y": 679
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "再激活"
+                ],
+                "order_by": "Vertical",
+                "index": -1
             }
         },
-        "next": [
-            "卡带词条_计数"
-        ]
-    },
-    "卡带词条_计数": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "count",
-        "custom_action_param": "t=再激活",
-        "pre_delay": 0,
-        "post_delay": 0,
-        "__yamaape": {
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "pre_delay": 400,
+        "__mpe_code": {
             "position": {
-                "x": 790,
+                "x": 783,
                 "y": 679
             }
         },
@@ -41,22 +32,56 @@
             "卡带词条_激活成功"
         ]
     },
+    "卡带词条_计数": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "count",
+                "custom_action_param": "t=再激活"
+            }
+        },
+        "pre_delay": 0,
+        "post_delay": 0,
+        "__mpe_code": {
+            "position": {
+                "x": 514,
+                "y": 679
+            }
+        },
+        "on_error": [
+            "卡带词条_尝试上限"
+        ],
+        "next": [
+            "卡带词条_再激活"
+        ]
+    },
     "卡带词条_激活成功": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "新特征属性"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "新特征属性"
+                ],
+                "roi": [
+                    773,
+                    262,
+                    116,
+                    37
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
         "timeout": 500,
-        "roi": [
-            773,
-            262,
-            116,
-            37
-        ],
         "pre_delay": 0,
         "post_delay": 100,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 1052,
                 "y": 678
@@ -70,12 +95,19 @@
         ]
     },
     "卡带词条_检测是否为目标属性": {
-        "recognition": "Custom",
-        "action": "DoNothing",
-        "custom_recognition": "check_strap_attr",
+        "recognition": {
+            "type": "Custom",
+            "param": {
+                "custom_recognition": "check_strap_attr"
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
         "pre_delay": 0,
         "post_delay": 0,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 1317,
                 "y": 613
@@ -89,14 +121,21 @@
         ]
     },
     "卡带词条_保留原特征": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "保留原特征"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "保留原特征"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "pre_delay": 0,
         "post_delay": 0,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 1596,
                 "y": 775
@@ -107,41 +146,63 @@
         ]
     },
     "卡带词条_使用新特征": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "使用新特征"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "使用新特征"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "focus": "> 已激活到指定属性！",
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
-                "x": 1595,
+                "x": 1601,
                 "y": 580
             }
-        }
+        },
+        "next": [
+            "卡带词条_总结卡带消耗"
+        ]
     },
     "卡带词条_重新激活": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
         "pre_delay": 0,
         "post_delay": 0,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 1861,
                 "y": 1034
             }
         },
         "next": [
-            "卡带词条_再激活"
+            "卡带词条_计数"
         ]
     },
     "卡带词条_开始": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "__yamaape": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "__mpe_code": {
             "position": {
-                "x": -1477,
-                "y": 407
+                "x": -1318,
+                "y": 677
             }
         },
         "next": [
@@ -149,15 +210,23 @@
         ]
     },
     "卡带词条_初始化计数器": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "init_counter",
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "init_counter"
+            }
+        },
         "pre_delay": 0,
         "post_delay": 0,
-        "__yamaape": {
+        "focus": "> 不设置最大尝试次数",
+        "__mpe_code": {
             "position": {
-                "x": -1216,
-                "y": 407
+                "x": -1057,
+                "y": 677
             }
         },
         "next": [
@@ -165,15 +234,22 @@
         ]
     },
     "卡带词条_初始化卡带设置": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "set_strap_entry",
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "set_strap_entry"
+            }
+        },
         "pre_delay": 0,
         "post_delay": 0,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
-                "x": -957,
-                "y": 408
+                "x": -798,
+                "y": 678
             }
         },
         "next": [
@@ -181,16 +257,23 @@
         ]
     },
     "卡带词条_设置卡带词条1": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "set_strap_attr",
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "set_strap_attr",
+                "custom_action_param": "attr="
+            }
+        },
         "pre_delay": 0,
         "post_delay": 0,
-        "custom_action_param": "attr=",
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
-                "x": -697,
-                "y": 408
+                "x": -538,
+                "y": 678
             }
         },
         "next": [
@@ -198,16 +281,23 @@
         ]
     },
     "卡带词条_设置卡带词条2": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "set_strap_attr",
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "set_strap_attr",
+                "custom_action_param": "attr="
+            }
+        },
         "pre_delay": 0,
         "post_delay": 0,
-        "custom_action_param": "attr=",
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
-                "x": -437,
-                "y": 408
+                "x": -278,
+                "y": 678
             }
         },
         "next": [
@@ -215,16 +305,23 @@
         ]
     },
     "卡带词条_设置卡带词条3": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "set_strap_attr",
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "set_strap_attr",
+                "custom_action_param": "attr="
+            }
+        },
         "pre_delay": 0,
         "post_delay": 0,
-        "custom_action_param": "attr=",
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
-                "x": -177,
-                "y": 408
+                "x": -18,
+                "y": 678
             }
         },
         "next": [
@@ -232,39 +329,91 @@
         ]
     },
     "卡带词条_设置词条值": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "set_strap_value",
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "set_strap_value",
+                "custom_action_param": "level="
+            }
+        },
         "pre_delay": 0,
         "post_delay": 0,
-        "custom_action_param": "level=",
         "timeout": 500,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
-                "x": 83,
-                "y": 408
+                "x": 242,
+                "y": 678
             }
         },
         "next": [
-            "卡带词条_再激活"
+            "卡带词条_计数"
         ]
     },
     "卡带词条_识别区域": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "roi": [
-            668,
-            300,
-            321,
-            81
-        ],
-        "expected": [
-            ""
-        ],
-        "__yamaape": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    668,
+                    300,
+                    321,
+                    81
+                ],
+                "expected": [
+                    ""
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "__mpe_code": {
             "position": {
                 "x": 1322,
                 "y": 407
+            }
+        }
+    },
+    "卡带词条_尝试上限": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "summary_strap_value"
+            }
+        },
+        "focus": "> 已达到设定的尝试上限！",
+        "__mpe_code": {
+            "position": {
+                "x": 781,
+                "y": 948
+            }
+        }
+    },
+    "卡带词条_总结卡带消耗": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "summary_strap_value",
+                "custom_action_param": "hit=true"
+            }
+        },
+        "__mpe_code": {
+            "position": {
+                "x": 1851,
+                "y": 583
             }
         }
     }
