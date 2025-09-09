@@ -123,7 +123,7 @@ jobs:
         with:
           repository: SweetSmellFox/MFAAvalonia
           fileName: "MFAAvalonia-*-${{ steps.mfa_naming.outputs.mfa_os }}-${{ steps.mfa_naming.outputs.mfa_arch }}*"
-          tag: v1.6.5
+          tag: v1.6.9
           out-file-path: "MFAAvalonia"
           extract: true
 
