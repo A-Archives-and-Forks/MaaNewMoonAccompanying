@@ -1,22 +1,31 @@
 {
-    "__yamaape_config_领取奖励": {
-        "filename": "领取奖励",
-        "version": "v0.3.4",
-        "export": "",
-        "prefix": "领取奖励"
+    "__mpe_config_领取奖励": {
+        "__mpe_code": {
+            "prefix": "领取奖励",
+            "filename": "领取奖励",
+            "version": "v0.5.1"
+        }
     },
     "领取奖励_任务": {
-        "recognition": "OCR",
-        "action": "Swipe",
-        "expected": [
-            "任务"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "任务"
+                ]
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "duration": 400
+            }
+        },
         "post_delay": 2000,
         "focus": "> 进入任务面板",
         "pre_delay": 800,
         "rate_limit": 2000,
-        "duration": 400,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 236,
                 "y": -223
@@ -30,15 +39,22 @@
         ]
     },
     "领取奖励_每日任务": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "每日任务"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "每日任务"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "timeout": 2000,
         "focus": "> 领取每日任务奖励",
         "pre_delay": 400,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 510,
                 "y": -224
@@ -52,12 +68,19 @@
         ]
     },
     "领取奖励_确保进入任务界面": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "任务"
-        ],
-        "__yamaape": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "任务"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "__mpe_code": {
             "position": {
                 "x": 518,
                 "y": 32
@@ -65,14 +88,21 @@
         }
     },
     "领取奖励_领取每日任务奖励": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "receive_all.png"
-        ],
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "receive_all.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "timeout": 3000,
         "pre_delay": 400,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 757,
                 "y": -224
@@ -86,10 +116,16 @@
         ]
     },
     "领取奖励_每日任务结束": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
         "timeout": 1000,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 1013,
                 "y": 95
@@ -103,13 +139,20 @@
         ]
     },
     "领取奖励_获取每日任务奖励": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "点击以继续"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "点击以继续"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "pre_delay": 800,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 1033,
                 "y": -224
@@ -120,12 +163,19 @@
         ]
     },
     "领取奖励_检查每日奖励是否领取": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "奖励已全部领取"
-        ],
-        "__yamaape": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "奖励已全部领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "__mpe_code": {
             "position": {
                 "x": 1308,
                 "y": 6
@@ -136,11 +186,18 @@
         ]
     },
     "领取奖励_记录每日奖励未完成": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "delay_focus_hook",
-        "custom_action_param": "key=每日任务&focus=今日任务未全部完成！",
-        "__yamaape": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "delay_focus_hook",
+                "custom_action_param": "key=每日任务&focus=今日任务未全部完成！"
+            }
+        },
+        "__mpe_code": {
             "position": {
                 "x": 1309,
                 "y": 168
@@ -151,15 +208,22 @@
         ]
     },
     "领取奖励_每周任务": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "每周任务"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "每周任务"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "timeout": 2000,
         "focus": "> 领取每周任务奖励",
         "pre_delay": 400,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 1617,
                 "y": 132
@@ -173,14 +237,21 @@
         ]
     },
     "领取奖励_领取每周任务奖励": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "receive_all.png"
-        ],
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "receive_all.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "timeout": 3000,
         "pre_delay": 400,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 1904,
                 "y": 64
@@ -194,12 +265,19 @@
         ]
     },
     "领取奖励_从任务返回": {
-        "recognition": "DirectHit",
-        "action": "Custom",
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "run",
+                "custom_action_param": "key=返回主页"
+            }
+        },
         "pre_delay": 400,
-        "custom_action": "run",
-        "custom_action_param": "key=返回主页",
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 2458,
                 "y": 202
@@ -210,13 +288,20 @@
         ]
     },
     "领取奖励_获取每周任务奖励": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "点击以继续"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "点击以继续"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "pre_delay": 800,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 2198,
                 "y": 31
@@ -227,9 +312,15 @@
         ]
     },
     "领取奖励_组长手册": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "__yamaape": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "__mpe_code": {
             "position": {
                 "x": 2769,
                 "y": 497
@@ -240,14 +331,21 @@
         ]
     },
     "领取奖励_进入组长手册": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "组长手册"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "组长手册"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "pre_delay": 800,
         "focus": "> 进入组长手册面板",
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 3039,
                 "y": 499
@@ -262,19 +360,26 @@
         ]
     },
     "领取奖励_手册经验": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "manual_task_selected.png",
-            "manual_task.png"
-        ],
-        "threshold": [
-            0.9,
-            0.9
-        ],
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "manual_task_selected.png",
+                    "manual_task.png"
+                ],
+                "threshold": [
+                    0.9,
+                    0.9
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "focus": "> 领取手册经验",
         "pre_delay": 400,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 3321,
                 "y": 498
@@ -285,13 +390,20 @@
         ]
     },
     "领取奖励_检测扩展手册推销": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "解锁本期进阶扩展手册"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "解锁本期进阶扩展手册"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "pre_delay": 400,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 3064,
                 "y": 915
@@ -302,12 +414,19 @@
         ]
     },
     "领取奖励_确认进入组长手册": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "组长手册"
-        ],
-        "__yamaape": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "组长手册"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "__mpe_code": {
             "position": {
                 "x": 3064,
                 "y": 743
@@ -315,14 +434,21 @@
         }
     },
     "领取奖励_领取手册经验": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "领取全部"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "领取全部"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "pre_delay": 1000,
         "post_delay": 1000,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 3590,
                 "y": 497
@@ -337,18 +463,25 @@
         ]
     },
     "领取奖励_手册奖励": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "manual_reward_selected.png",
-            "manual_reward.png"
-        ],
-        "threshold": [
-            0.9,
-            0.9
-        ],
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "manual_reward_selected.png",
+                    "manual_reward.png"
+                ],
+                "threshold": [
+                    0.9,
+                    0.9
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "focus": "> 领取手册奖励",
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 3381,
                 "y": 789
@@ -363,13 +496,20 @@
         ]
     },
     "领取奖励_手册升级": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "close.png"
-        ],
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "close.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "pre_delay": 400,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 4028,
                 "y": 321
@@ -377,16 +517,23 @@
         }
     },
     "领取奖励_确认手册升级": {
-        "recognition": "DirectHit",
-        "action": "Click",
-        "target": [
-            2,
-            2,
-            1,
-            1
-        ],
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    2,
+                    2,
+                    1,
+                    1
+                ]
+            }
+        },
         "post_delay": 1000,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 4034,
                 "y": 517
@@ -394,14 +541,21 @@
         }
     },
     "领取奖励_领取手册奖励": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "领取全部"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "领取全部"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "pre_delay": 1000,
         "post_delay": 800,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 3654,
                 "y": 785
@@ -418,13 +572,20 @@
         ]
     },
     "领取奖励_获取手册奖励": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "点击以继续"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "点击以继续"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "pre_delay": 800,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": 3974,
                 "y": 751
@@ -435,12 +596,19 @@
         ]
     },
     "领取奖励_无奖励": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "当前暂无"
-        ],
-        "__yamaape": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "当前暂无"
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "__mpe_code": {
             "position": {
                 "x": 3974,
                 "y": 951
@@ -451,12 +619,19 @@
         ]
     },
     "领取奖励_确保无需再次领取": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "领取全部"
-        ],
-        "__yamaape": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "领取全部"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "__mpe_code": {
             "position": {
                 "x": 3972,
                 "y": 1134
@@ -464,11 +639,18 @@
         }
     },
     "领取奖励_从手册返回": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "run",
-        "custom_action_param": "key=返回主页",
-        "__yamaape": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "run",
+                "custom_action_param": "key=返回主页"
+            }
+        },
+        "__mpe_code": {
             "position": {
                 "x": 4237,
                 "y": 748
@@ -479,9 +661,15 @@
         ]
     },
     "领取奖励_结束": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "__yamaape": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "__mpe_code": {
             "position": {
                 "x": 4494,
                 "y": 746
@@ -489,13 +677,20 @@
         }
     },
     "领取奖励_特工管理": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "特工管理"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "特工管理"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "focus": "> 进入特工管理界面",
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": -1127,
                 "y": -962
@@ -506,44 +701,55 @@
         ]
     },
     "领取奖励_确保进入特工界面": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "基础"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "基础"
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
         "post_delay": 800,
         "focus": "> 查找目标特工",
         "timeout": 12000,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
-                "x": -868,
-                "y": -964
+                "x": -852,
+                "y": -1023
             }
         },
         "next": [
-            "领取奖励_选择角色"
-        ],
-        "interrupt": [
-            "领取奖励_下滑角色列表"
+            "领取奖励_初始化下滑计数"
         ]
     },
     "领取奖励_选择角色": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "雨"
-        ],
-        "roi": [
-            739,
-            66,
-            475,
-            624
-        ],
-        "order_by": "Vertical",
-        "__yamaape": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "雨"
+                ],
+                "roi": [
+                    739,
+                    66,
+                    475,
+                    624
+                ],
+                "order_by": "Vertical"
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "__mpe_code": {
             "position": {
-                "x": -607,
-                "y": -906
+                "x": -32,
+                "y": -1000
             }
         },
         "next": [
@@ -551,27 +757,34 @@
         ]
     },
     "领取奖励_下滑角色列表": {
-        "recognition": "DirectHit",
-        "action": "Swipe",
-        "begin": [
-            1054,
-            613,
-            1,
-            1
-        ],
-        "end": [
-            1054,
-            157,
-            1,
-            1
-        ],
-        "duration": 600,
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    1054,
+                    613,
+                    1,
+                    1
+                ],
+                "end": [
+                    1054,
+                    157,
+                    1,
+                    1
+                ],
+                "duration": 600
+            }
+        },
         "post_delay": 0,
         "pre_delay": 100,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
-                "x": -605,
-                "y": -1191
+                "x": -30,
+                "y": -1285
             }
         },
         "next": [
@@ -579,16 +792,23 @@
         ]
     },
     "领取奖励_进入基础界面": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "基础"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "基础"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "focus": "> 进入升级界面",
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
-                "x": -352,
-                "y": -901
+                "x": 223,
+                "y": -995
             }
         },
         "next": [
@@ -596,31 +816,48 @@
         ]
     },
     "领取奖励_角色列表点停": {
-        "recognition": "DirectHit",
-        "action": "Click",
-        "target": [
-            1054,
-            157,
-            1,
-            1
-        ],
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1054,
+                    157,
+                    1,
+                    1
+                ]
+            }
+        },
         "pre_delay": 0,
         "post_delay": 1000,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
-                "x": -361,
-                "y": -1192
+                "x": 214,
+                "y": -1286
             }
-        }
+        },
+        "next": [
+            "领取奖励_角色滑动计数"
+        ]
     },
     "领取奖励_进入等级界面": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "character/grade_entry.png"
-        ],
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "character/grade_entry.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "pre_delay": 400,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": -1372,
                 "y": -687
@@ -633,14 +870,21 @@
         ]
     },
     "领取奖励_角色等级加一": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "character/add_grade.png"
-        ],
-        "index": -1,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "character/add_grade.png"
+                ],
+                "index": -1
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "focus": "> 升级",
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": -1095,
                 "y": -685
@@ -651,13 +895,20 @@
         ]
     },
     "领取奖励_需要认证": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "资格认证条件"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "资格认证条件"
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
         "focus": "> 指定特工需要认证",
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": -1080,
                 "y": -455
@@ -668,13 +919,20 @@
         ]
     },
     "领取奖励_已满级": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "expected": [
-            "已达到最高"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "已达到最高"
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
         "focus": "> 指定特工已满级",
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": -1346,
                 "y": -457
@@ -685,13 +943,20 @@
         ]
     },
     "领取奖励_确认升级": {
-        "recognition": "OCR",
-        "action": "Click",
-        "expected": [
-            "升级"
-        ],
-        "index": -1,
-        "__yamaape": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "升级"
+                ],
+                "index": -1
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "__mpe_code": {
             "position": {
                 "x": -849,
                 "y": -683
@@ -702,13 +967,20 @@
         ]
     },
     "领取奖励_取消升级": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "back.png"
-        ],
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "back.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "post_delay": 1000,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": -830,
                 "y": -456
@@ -719,11 +991,18 @@
         ]
     },
     "领取奖励_记录升级": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "record_periodic_check",
-        "custom_action_param": "t=character_upgrade",
-        "__yamaape": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "record_periodic_check",
+                "custom_action_param": "t=character_upgrade"
+            }
+        },
+        "__mpe_code": {
             "position": {
                 "x": -594,
                 "y": -680
@@ -734,11 +1013,18 @@
         ]
     },
     "领取奖励_切换特工": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "switch_upgrade_target",
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "switch_upgrade_target"
+            }
+        },
         "pre_delay": 0,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": -1939,
                 "y": -1297
@@ -752,13 +1038,20 @@
         ]
     },
     "领取奖励_从角色升级返回主界面": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "home.png"
-        ],
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "home.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "focus": "> 返回主界面",
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": -342,
                 "y": -678
@@ -769,12 +1062,19 @@
         ]
     },
     "领取奖励_从角色返回列表": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "back.png"
-        ],
-        "__yamaape": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "back.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "__mpe_code": {
             "position": {
                 "x": -1668,
                 "y": -1299
@@ -785,13 +1085,20 @@
         ]
     },
     "领取奖励_列表已空": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "home.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "focus": "> 列表内无可升级特工！",
-        "template": [
-            "home.png"
-        ],
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": -1602,
                 "y": -282
@@ -802,11 +1109,17 @@
         ]
     },
     "领取奖励_任务奖励": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
         "pre_delay": 0,
         "post_delay": 0,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": -28,
                 "y": -223
@@ -817,27 +1130,35 @@
         ]
     },
     "领取奖励_列表划至顶端1": {
-        "recognition": "OCR",
-        "action": "Swipe",
-        "begin": [
-            1060,
-            92,
-            1,
-            1
-        ],
-        "end": [
-            1060,
-            668,
-            1,
-            1
-        ],
-        "duration": 100,
-        "expected": [
-            "基础"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "基础"
+                ]
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    1060,
+                    92,
+                    1,
+                    1
+                ],
+                "end": [
+                    1060,
+                    668,
+                    1,
+                    1
+                ],
+                "duration": 100
+            }
+        },
         "pre_delay": 800,
         "post_delay": 1000,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": -1404,
                 "y": -1299
@@ -848,29 +1169,37 @@
         ]
     },
     "领取奖励_列表划至顶端2": {
-        "recognition": "OCR",
-        "action": "Swipe",
-        "begin": [
-            1060,
-            92,
-            1,
-            1
-        ],
-        "end": [
-            1060,
-            668,
-            1,
-            1
-        ],
-        "duration": 100,
-        "expected": [
-            "基础"
-        ],
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "基础"
+                ]
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    1060,
+                    92,
+                    1,
+                    1
+                ],
+                "end": [
+                    1060,
+                    668,
+                    1,
+                    1
+                ],
+                "duration": 100
+            }
+        },
         "post_delay": 1000,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
-                "x": -1144,
-                "y": -1299
+                "x": -1127,
+                "y": -1296
             }
         },
         "next": [
@@ -878,11 +1207,17 @@
         ]
     },
     "领取奖励_角色升级开始": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
         "pre_delay": 0,
         "post_delay": 0,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": -293,
                 "y": 59
@@ -893,10 +1228,16 @@
         ]
     },
     "领取奖励_今日角色已升级": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
         "focus": "> 今日角色已升级",
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": -356,
                 "y": -476
@@ -907,11 +1248,17 @@
         ]
     },
     "领取奖励_角色升一级": {
-        "recognition": "DirectHit",
-        "action": "Click",
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
         "pre_delay": 1,
         "post_delay": 1,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": -1915,
                 "y": -964
@@ -922,12 +1269,19 @@
         ]
     },
     "领取奖励_检查是否已升级": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "periodic_check",
-        "custom_action_param": "t=character_upgrade&p=day",
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "periodic_check",
+                "custom_action_param": "t=character_upgrade&p=day"
+            }
+        },
         "pre_delay": 0,
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": -1653,
                 "y": -962
@@ -941,13 +1295,20 @@
         ]
     },
     "领取奖励_设置角色列表": {
-        "recognition": "DirectHit",
-        "action": "Custom",
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "set_upgrade_list",
+                "custom_action_param": "list=夜来"
+            }
+        },
         "focus": "> 角色升级",
         "pre_delay": 0,
-        "custom_action": "set_upgrade_list",
-        "custom_action_param": "list=夜来",
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": -1388,
                 "y": -963
@@ -961,10 +1322,16 @@
         ]
     },
     "领取奖励_列表为空": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
         "focus": "> 特工名单为空",
-        "__yamaape": {
+        "__mpe_code": {
             "position": {
                 "x": -1048,
                 "y": -182
@@ -975,9 +1342,15 @@
         ]
     },
     "领取奖励_开始": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "__yamaape": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "__mpe_code": {
             "position": {
                 "x": -840,
                 "y": 60
@@ -988,11 +1361,18 @@
         ]
     },
     "领取奖励_执行前返回主页": {
-        "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "run",
-        "custom_action_param": "key=全局前置返回主页",
-        "__yamaape": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "run",
+                "custom_action_param": "key=全局前置返回主页"
+            }
+        },
+        "__mpe_code": {
             "position": {
                 "x": -569,
                 "y": 60
@@ -1003,16 +1383,121 @@
         ]
     },
     "领取奖励_关闭扩展手册推销": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "back.png"
-        ],
-        "__yamaape": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "back.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "__mpe_code": {
             "position": {
                 "x": 3328,
                 "y": 1021
             }
         }
+    },
+    "领取奖励_初始化下滑计数": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "init_counter",
+                "custom_action_param": "key=find_agent&max=18"
+            }
+        },
+        "pre_delay": 0,
+        "post_delay": 0,
+        "__mpe_code": {
+            "position": {
+                "x": -585,
+                "y": -1023
+            }
+        },
+        "next": [
+            "领取奖励_检测"
+        ]
+    },
+    "领取奖励_检测": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "pre_delay": 0,
+        "post_delay": 0,
+        "__mpe_code": {
+            "position": {
+                "x": -321,
+                "y": -1022
+            }
+        },
+        "next": [
+            "领取奖励_选择角色",
+            "领取奖励_下滑角色列表"
+        ]
+    },
+    "领取奖励_角色滑动计数": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "count",
+                "custom_action_param": "key=find_agent"
+            }
+        },
+        "pre_delay": 0,
+        "post_delay": 0,
+        "__mpe_code": {
+            "position": {
+                "x": 486,
+                "y": -1599
+            }
+        },
+        "next": [
+            "领取奖励_检测"
+        ],
+        "on_error": [
+            "领取奖励_未找到角色切换特工"
+        ]
+    },
+    "领取奖励_未找到角色切换特工": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "switch_upgrade_target"
+            }
+        },
+        "pre_delay": 0,
+        "__mpe_code": {
+            "position": {
+                "x": -1939,
+                "y": -1514
+            }
+        },
+        "on_error": [
+            "领取奖励_列表已空"
+        ],
+        "next": [
+            "领取奖励_列表划至顶端1"
+        ]
     }
 }
